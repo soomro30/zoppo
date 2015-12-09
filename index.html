@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Portfolio</h1>
+
+  <ul class="case-list">
+    {% for case in site.case %}
+      <li>
+        <span class="case-meta">{{ case.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="case-link" href="{{ case.url | prepend: site.baseurl }}">{{ case.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
