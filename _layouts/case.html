@@ -2,14 +2,34 @@
 layout: default
 ---
 <article class="case" itemscope itemtype="http://schema.org/BlogPosting">
+	
+	<img src="{{ site.url }}/assets/sketch/case-image.svg" class="case-hero">
+	
+	<header class="case-header">
+		<h1 class="case-title" itemprop="name headline">{{ page.title }}</h1>
+		<p class="case-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} 
+		<span class="categories">{{ page.categories }}<span></p>
+	</header>
 
-  <header class="case-header">
-    <h1 class="case-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="case-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
-
-  <div class="case-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+	<div class="case-content" itemprop="articleBody">
+		{{ content }}
+	</div>
 
 </article>
+
+
+<ul class="case-list case-list">
+	{% for case in site.case %}
+		{% if case.title == page.title %}
+			{% continue %}
+		{% endif %}
+		<li class="case-list__item">
+			<!-- <span class="case-meta">{{ case.date | date: "%b %-d, %Y" }}</span> -->
+			<a class="case-link" href="{{ case.url | prepend: site.baseurl }}">
+				<h2 class="case-list__header">
+					{{ case.title }}
+				</h2>
+			</a>
+		</li>
+	{% endfor %}
+</ul>
