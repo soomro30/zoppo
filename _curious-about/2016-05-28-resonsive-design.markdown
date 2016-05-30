@@ -1,9 +1,9 @@
 ---
-layout: case
-title:  "Lorem ipsum Case 1"
-date:   2015-12-09 08:41:20 +0100
-categories: motion, web
-slug: lorem-ipsum-case-1
+layout: curious
+title:  "Resonsive Design"
+date:   2016-05-28 08:41:20 +0100
+categories: respnsive design, web, CSS
+slug: resonsive-design
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis nesciunt repellat rem, consequuntur explicabo laboriosam sunt quod quidem sit quas ipsam eligendi quisquam, architecto provident laudantium id ut! Mollitia, labore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsa dolorem, minima sunt maiores a ducimus sed atque, similique, molestias labore. Tempora, obcaecati repellat eius corporis laudantium. Fugit, dolorem qui?
 
@@ -11,7 +11,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum animi nisi 
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsa dolorem, minima sunt maiores a ducimus sed atque, similique, molestias labore. Tempora, obcaecati repellat eius corporis laudantium. Fugit, dolorem qui?
 
-[Launch site][case-link]
+[Launch site][motion-link]
 
-[case-link]: http://fullydigital.se
+[motion-link]: http://fullydigital.se
 
