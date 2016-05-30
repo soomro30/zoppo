@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Lab
-permalink: /about/
+permalink: /lab/
 ---
 
 Fully Lab Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis saepe eius sint quasi soluta, sed, perspiciatis, doloremque ad blanditiis recusandae natus libero rerum? Minima dolor, blanditiis similique earum maiores accusamus.
