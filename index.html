@@ -2,22 +2,26 @@
 layout: default
 ---
 
-<div class="home">
+<section class="curious">
+</section>
 
-  <h1 class="page-heading">Portfolio</h1>
+<div class="cases">
+
+  <h1 class="page-heading">Cases</h1>
 
   <ul class="case-list">
     {% for case in site.case %}
-      <li>
-        <span class="case-meta">{{ case.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="case-link" href="{{ case.url | prepend: site.baseurl }}">{{ case.title }}</a>
-        </h2>
+      <li class="case-list__item">
+        <!-- <span class="case-meta">{{ case.date | date: "%b %-d, %Y" }}</span> -->
+        <a class="case-link" href="{{ case.url | prepend: site.baseurl }}">
+          <h2 class="case-list__header">
+           {{ case.title }}
+          </h2>
+        </a>
       </li>
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
 
 </div>
