@@ -3,6 +3,7 @@ layout: case
 title:  "Lorem ipsum Case 2"
 date:   2015-12-09 08:41:20 +0100
 categories: web, design
+slug: lorem-ipsum-case-2
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis nesciunt repellat rem, consequuntur explicabo laboriosam sunt quod quidem sit quas ipsam eligendi quisquam, architecto provident laudantium id ut! Mollitia, labore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsa dolorem, minima sunt maiores a ducimus sed atque, similique, molestias labore. Tempora, obcaecati repellat eius corporis laudantium. Fugit, dolorem qui?
 

@@ -3,7 +3,7 @@ layout: default
 ---
 <article class="case" itemscope itemtype="http://schema.org/BlogPosting">
 	
-	<img src="{{ site.url }}/assets/sketch/case-image.svg" class="case-hero">
+	<img src="{{ site.baseurl }}/assets/sketch/case-image.svg" class="case-hero">
 	
 	<header class="case-header">
 		<h1 class="case-title" itemprop="name headline">{{ page.title }}</h1>
@@ -18,7 +18,7 @@ layout: default
 </article>
 
 
-<ul class="case-list case-list">
+<ul class="case-list case-list--small">
 	{% for case in site.case %}
 		{% if case.title == page.title %}
 			{% continue %}

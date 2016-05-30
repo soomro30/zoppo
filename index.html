@@ -2,7 +2,23 @@
 layout: default
 ---
 
-<section class="curious">
+<section class="curious-current">
+  <ul class="case-list">
+    <!-- Get all curious-about posts and revers them -->
+    {% assign items = site.curious-about | sort: 'date' | reverse %}
+    <!-- Get only the latest post -->
+    {% for curious in items limit:1 %}
+      <li class="curious-list__item">
+        <!-- <span class="curious-meta">{{ curious.date | date: "%b %-d, %Y" }}</span> -->
+        <a class="curious-link" href="{{ curious.url | prepend: site.baseurl }}">
+          <h1 class="curious__header">
+          <span class="curious__subheader">Curently curious about</span> 
+           {{ curious.title }}
+          </h1>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 </section>
 
 <div class="cases">

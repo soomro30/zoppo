@@ -11,8 +11,7 @@ email: info@fullydigital.se
 description: > 
   Fully Digital - This site is under construction.
 baseurl: "" # the subpath of your site, e.g. /blog
-# url: "http://fullydigital.se" # the base hostname & protocol for your site
-url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
+url: "http://fullydigital.se" # the base hostname & protocol for your site
 twitter_username: fullyflared_se
 github_username:  fullydigital
 
@@ -22,4 +21,7 @@ markdown: kramdown
 collections:
   case:
     output: true
-    permalink: /cases/:path/
+    permalink: /:collection/:title/
+  curious-about:
+    output: true
+    permalink: /:collection/:title/
