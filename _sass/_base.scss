@@ -1,3 +1,4 @@
+
 /**
  * Reset some basic elements
  */
@@ -25,7 +26,12 @@ body {
     font-kerning: normal;
 }
 
-
+p {
+    line-height: 2;
+    @include media-query($on-laptop) {
+        line-height: 3;
+    }
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -38,6 +44,15 @@ ul, ol, dl, figure,
 }
 
 
+.header {
+    font-size: 3em;
+    font-size: 9vw;
+    line-height: 1.3;
+    @include media-query($on-laptop) {
+        font-size: 6vw;
+        line-height: 1;
+    }
+}
 
 /**
  * Images
@@ -82,7 +97,9 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
+    font-family: $header-font-family;
+    font-weight: 700;
+    font-style: italic;
 }
 
 h2 {

@@ -1,42 +1,52 @@
 <footer class="site-footer">
 
-  <h1>[ List on all staff and contact info ]</h1>
+    <h1>[ List on all staff and contact info ]</h1>
 
-<!--   <div class="wrapper">
+    <!--   <div class="wrapper">
 
     <h2 class="footer-heading">{{ site.title }}</h2>
 
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
+    <div class="footer-col footer-col-1">
+    <ul class="contact-list">
+    <li>{{ site.title }}</li>
+    <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+    </ul>
     </div>
 
-  </div> -->
+    <div class="footer-col footer-col-2">
+    <ul class="social-media-list">
+    {% if site.github_username %}
+    <li>
+    {% include icon-github.html username=site.github_username %}
+    </li>
+    {% endif %}
 
-        <p>{{ site.description }}</p>
+    {% if site.twitter_username %}
+    <li>
+    {% include icon-twitter.html username=site.twitter_username %}
+    </li>
+    {% endif %}
+    </ul>
+    </div>
+
+    <div class="footer-col footer-col-3">
+    <p>{{ site.description }}</p>
+    </div>
+    </div>
+
+    </div> -->
+
+    <p>{{ site.description }}</p>
+
+    <nav class="site-nav">
+        <a class="page-link" href="{{ site.url }}">Home</a>
+        {% for my_page in site.pages %}
+        {% if my_page.title %}
+        <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+        {% endif %}
+        {% endfor %}
+
+    </nav>
 
 </footer>

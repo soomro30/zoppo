@@ -1,9 +1,9 @@
 ---
 layout: case
-title:  "Lorem ipsum Case 1"
+title:  "Kundzonen"
 date:   2015-12-09 08:41:20 +0100
-categories: motion, web
-slug: lorem-ipsum-case-1
+categories: back-end, ui, web
+slug: kundzonen
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis nesciunt repellat rem, consequuntur explicabo laboriosam sunt quod quidem sit quas ipsam eligendi quisquam, architecto provident laudantium id ut! Mollitia, labore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsa dolorem, minima sunt maiores a ducimus sed atque, similique, molestias labore. Tempora, obcaecati repellat eius corporis laudantium. Fugit, dolorem qui?
 

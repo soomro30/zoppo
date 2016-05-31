@@ -3,41 +3,48 @@ layout: default
 ---
 
 <section class="curious-current">
-  <ul class="case-list">
-    <!-- Get all curious-about posts and revers them -->
-    {% assign items = site.curious-about | sort: 'date' | reverse %}
-    <!-- Get only the latest post -->
-    {% for curious in items limit:1 %}
-      <li class="curious-list__item">
-        <!-- <span class="curious-meta">{{ curious.date | date: "%b %-d, %Y" }}</span> -->
-        <a class="curious-link" href="{{ curious.url | prepend: site.baseurl }}">
-          <h1 class="curious__header">
-          <span class="curious__subheader">Curently curious about</span> 
-           {{ curious.title }}
-          </h1>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+    <ul class="curious-list">
+        <!-- Get all curious-about posts and revers them -->
+        {% assign items = site.curious-about | sort: 'date' | reverse %}
+        <!-- Get only the latest post -->
+        {% for curious in items limit:1 %}
+        <li class="curious-list__item">
+            <!-- <span class="curious-meta">{{ curious.date | date: "%b %-d, %Y" }}</span> -->
+
+            <h1 class="header">
+                <span class="curious__subheader">Current curiosity</span> 
+                {{ curious.title }}
+            </h1>
+            <a class="button button--inverted" href="{{ curious.url | prepend: site.baseurl }}">Explore</a>
+            <div class="pagination">
+                <div class="pagination__counter">1<span>/3</span></div>
+                <a class="pagination__arrow pagination__next" href="#">→</a>
+                <a class="pagination__arrow pagination__previous disabled" href="#">←</a>
+            </div>
+
+
+
+        </li>
+        {% endfor %}
+    </ul>
 </section>
 
 <div class="cases">
 
-  <h1 class="page-heading">Cases</h1>
+    <ul class="case-list">
+        {% for case in site.case %}
+        <li class="case-list__item">
+            <!-- <span class="case-meta">{{ case.date | date: "%b %-d, %Y" }}</span> -->
+            <a class="case-link" href="{{ case.url | prepend: site.baseurl }}">
+                <h2 class="case-list__header">
+                    {{ case.title }}
+                </h2>
+                <div class="button">See case</div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
 
-  <ul class="case-list">
-    {% for case in site.case %}
-      <li class="case-list__item">
-        <!-- <span class="case-meta">{{ case.date | date: "%b %-d, %Y" }}</span> -->
-        <a class="case-link" href="{{ case.url | prepend: site.baseurl }}">
-          <h2 class="case-list__header">
-           {{ case.title }}
-          </h2>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
 
 </div>

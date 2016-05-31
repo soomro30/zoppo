@@ -11,7 +11,7 @@ email: info@fullydigital.se
 description: > 
   Fully Digital - This site is under construction.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://fullydigital.se" # the base hostname & protocol for your site
+url: "http://fullydigital.github.io" # the base hostname & protocol for your site
 twitter_username: fullyflared_se
 github_username:  fullydigital
 
