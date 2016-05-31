@@ -366,9 +366,9 @@
 /**
  * pages
  */
-.page-header {
-    margin-bottom: $spacing-unit;
-}
+// .page-header {
+//     margin-bottom: $spacing-unit;
+// }
 
 .page-title {
     font-size: 36px;
@@ -379,29 +379,26 @@
         font-size: 42px;
     }
 }
-.page {
-    padding: $spacing-unit * 2 $spacing-unit $spacing-unit;
-    max-width: $content-width;
-    margin: 0 auto;
-}
+// .page {
+//     padding: $spacing-unit * 2 $spacing-unit $spacing-unit;
+//     max-width: $content-width;
+//     margin: 0 auto;
+// }
 
 
-// Case
-
-
-.case-header {
+.page-header {
     padding: $spacing-unit $spacing-unit $spacing-unit/2;
     max-width: $content-width;
     margin: 0 auto;
 }
 
-.case-content {
+.text-content {
     padding: $spacing-unit/2 $spacing-unit $spacing-unit;
     max-width: $content-width;
     margin: 0 auto;
 }
 
-.case-hero {
+.hero {
     margin-bottom: $spacing-unit;
     width: 100%;
     height: 50vh;

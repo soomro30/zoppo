@@ -1,18 +1,17 @@
 ---
 layout: default
 ---
-<article class="case" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="page" itemscope itemtype="http://schema.org/BlogPosting">
 	
-	<div class="case-hero" style="background-image: url({{ site.baseurl }}/assets/sketch/case-image.svg)"></div>
+	<div class="hero" style="background-image: url({{ site.baseurl }}/assets/sketch/case-image.svg)"></div>
 	
-	
-	<header class="case-header">
-		<h1 class="case-title" itemprop="name headline">{{ page.title }}</h1>
-		<p class="case-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} 
+	<header class="page-header">
+		<h1 class="page-title" itemprop="name headline">{{ page.title }}</h1>
+		<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} 
 		<span class="categories">{{ page.categories }}<span></p>
 	</header>
 
-	<div class="case-content" itemprop="articleBody">
+	<div class="text-content" itemprop="articleBody">
 		{{ content }}
 	</div>
 
