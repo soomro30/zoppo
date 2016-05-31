@@ -6,11 +6,29 @@
     width: 100%;
 
     // Positioning context for the mobile navigation icon
-    position: fixed;
+    position: absolute;
+    z-index: 10;
     .wrapper {
-        padding: $spacing-unit;
-        max-width: $content-width;
-        margin: 0 auto;
+        padding: 1em $spacing-unit*0.5 0;
+        // max-width: 80%;
+        margin: 0 4%;
+    }
+    // mix-blend-mode: multiply;
+}
+.logo {
+    fill: #fff;
+    opacity: 1;
+    &:hover {
+        opacity: 0.5;
+    }
+    width: 2em;
+    height: 2em;
+    // background: url(../assets/sketch/logo-2.svg) no-repeat;
+    background-size: 97% 97%;
+    @include media-query($on-laptop) {
+        width: 4em;
+        height: 4em;
+        margin-top: 2em;
     }
 }
 
@@ -23,7 +41,6 @@
     float: left;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    text-shadow: 2px 1px 0 #fff;
     &,
     &:visited {
         color: $text-color;
@@ -31,18 +48,19 @@
 }
 
 .site-nav {
-    float: right;
+    display: block;
+    text-align: center;
     line-height: 56px;
+    margin-bottom: 3em;
 
     .menu-icon {
         display: none;
     }
 
     .page-link {
-        color: $text-color;
+        color: $brand-color;
         line-height: $base-line-height;
 
-        text-shadow: 2px 1px 0 #fff;
 
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
@@ -51,42 +69,9 @@
     }
 
     @media only screen and (max-width: $on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
 
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
+        margin-top: 0;
 
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
 
         .page-link {
             display: block;
@@ -123,24 +108,36 @@
  * Cases section
  */
 .cases {
-    padding-top: $spacing-unit;
+
+    // padding-top: $spacing-unit;
 }
 .case-list {
-    margin-left: 0;
+    margin: 0;
+
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba($secondary-color,0.2) 100%);
+
     list-style-type: none;
     color: $brand-color-invert;
-    a {
+    .case-list__item  {
         color: $brand-color-invert;
-        padding: 0.5em 1em;
         display: block;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: $brand-color;
-        min-height: 40vh;
-        @include media-query($on-laptop) {
-            min-height: 80vh;
+        // background: $brand-color;
+        .case-link {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5em; 
+            min-height: 30vh;
+
+            @include media-query($on-laptop) {
+                min-height: 50vh;
+            }
         }
     }
     &.case-list--small {
@@ -151,22 +148,113 @@
                 border-right: 1px solid #fff;
             }
         }
-        a {
-            justify-content: flex-start;
-            min-height: auto;
-            height: 0;
-            padding-bottom: 50%;
-            // @include media-query($on-laptop) {
-            //     min-height: 40vh;
-            // }
+        .case-link {
+            min-height: 10vh;
+
+            @include media-query($on-laptop) {
+                min-height: 20vh;
+            }
         }
     }
 }
-.case-list__header { margin: 0 }
+.case-list__header { margin: 0; text-align: center; }
 .case-list__item { 
     border-bottom: 1px solid transparent;
 }
 
+.case-link {
+    display: block;
+}
+
+// Sketcheing
+
+.curious-list {
+    background: linear-gradient(to bottom, rgba($secondary-color,1) 0%,rgba($brand-color,1) 100%);
+    min-height: 20vh;
+    margin: 0;
+    position: relative;
+    color: $brand-color-invert;
+    a { color: $brand-color-invert }
+
+    .curious-list__item {
+        padding: 0.5em 1em;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // background: $brand-color;
+        min-height: 40vh;
+        @include media-query($on-laptop) {
+            min-height: 60vh;
+        }
+    }
+
+    .header {
+        margin-top: 2em;
+        @include media-query($on-laptop) {
+            margin-top: 0;
+        }
+    }
+}
+
+.curious-list__item {
+    background: url(../assets/sketch/dots.svg);
+    // background-size: 50%
+    // -webkit-filter: grayscale(100%);
+    // background-size: cover;
+    // mix-blend-mode: lighten;
+}
+
+.curious__header {
+}
+
+
+// Pagination
+.pagination {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    @include media-query($on-laptop) {
+        bottom: 2em;
+        right: 2em;  
+    }
+}
+.pagination__counter {
+    display: block;
+    letter-spacing: 0.3em;
+    span {
+        // font-weight: bold;
+        opacity: 0.5
+    }
+}
+
+.pagination__arrow {
+    display: none; 
+    @include media-query($on-laptop) {
+        width: 2em;
+        height: 2em;
+        border-radius: 2em;
+        overflow: hidden;
+        display: block;
+        line-height: 1.8;
+        border: 3px solid #fff;
+        margin: 0.4em 0 0.6em;
+        transition: background 0.1s, color 0.1s;
+        mix-blend-mode: lighten;
+        &:hover {
+            background: #fff;
+            color: #000;
+        }
+        &.disabled {
+            opacity: 0.5;
+            &:hover {
+                background: inherit;
+                color: inherit;
+            }
+        }
+    }
+}
 
 /**
  * Site footer
@@ -316,5 +404,7 @@
 .case-hero {
     margin-bottom: $spacing-unit;
     width: 100%;
-    height: auto;
+    height: 50vh;
+    background-size: cover;
+    background-position: center center;
 }
