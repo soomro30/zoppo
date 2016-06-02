@@ -32,3 +32,13 @@
 		color: #000;
 	}
 }
+
+.button--inv-color {
+	border: 3px solid $brand-color;
+	color: $brand-color;
+	mix-blend-mode: lighten;
+	&:hover {
+		background: $brand-color;
+		color: #000;
+	}
+}
