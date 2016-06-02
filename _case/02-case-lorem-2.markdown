@@ -1,6 +1,7 @@
 ---
 layout: case
-title:  "Lorem ipsum Case 2"
+title:  "Matbaren Kundzon"
+start:  "Matbaren</br>Kundzon"
 date:   2015-12-09 08:41:20 +0100
 categories: web, design
 slug: lorem-ipsum-case-2

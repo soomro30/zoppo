@@ -12,7 +12,7 @@ layout: default
             <!-- <span class="curious-meta">{{ curious.date | date: "%b %-d, %Y" }}</span> -->
 
             <h1 class="header">
-                <span class="curious__subheader">Current curiosity</span> 
+                <span class="curious__subheader">Current curiosity:</span> 
                 {{ curious.title }}
             </h1>
             <a class="button button--inverted" href="{{ curious.url | prepend: site.baseurl }}">Explore</a>
@@ -37,7 +37,7 @@ layout: default
             <!-- <span class="case-meta">{{ case.date | date: "%b %-d, %Y" }}</span> -->
             <a class="case-link" href="{{ case.url | prepend: site.baseurl }}">
                 <h2 class="case-list__header">
-                    {{ case.title }}
+                    {{ case.start }}
                 </h2>
                 <div class="button">See case</div>
             </a>
