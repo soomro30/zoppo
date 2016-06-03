@@ -1,6 +1,7 @@
 ---
 layout: case
 title:  "Lorem ipsum Case 3"
+start:  "Lorem ipsum</br>Case no 3"
 date:   2015-12-09 08:41:20 +0100
 categories: web, design
 slug: lorem-ipsum-case-3
