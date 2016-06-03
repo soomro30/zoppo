@@ -176,9 +176,6 @@
         line-height: 1;
         margin-bottom: 20px
     }
-    .button {
-        @extend .button--inv-color;
-    }
 }
 
 .case-list__item:nth-child(2) {
@@ -191,6 +188,9 @@
         font-size: 9vw;
         line-height: 1;
         margin-bottom: 20px
+    }
+    .button {
+        @extend .button--inv-color;
     }
 }
 

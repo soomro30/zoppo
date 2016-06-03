@@ -2,43 +2,87 @@
  * Buttons
  */
 
+//Default button for use on dark background
 .button {
 	display: inline-block;
-	padding: 0.5em 1em 0.6em;
-	margin: 0.4em 0;
+	position: relative;
 	font-size: 1.5em;
-	border: 3px solid $brand-color;
+	margin: 0.4em 0;
 	color: $brand-color;
-	border-radius: 1.5em;
 	font-style: italic;
 	line-height: 1;
 	font-family: $header-font-family;
 	font-weight: 700;
     font-style: italic;
-	transition: background 0.1s, color 0.1s;
-	mix-blend-mode: darken;
+    transition: transform 0.3s cubic-bezier(0,.3,.19,.99);
+	mix-blend-mode: lighten;
+	span {
+		display: block;
+		padding: 0.5em 1em 0.6em;
+		transition: background 0.1s, color 0.1s;
+		background: #000;
+		border: 3px solid $brand-color;
+		border-radius: 1.5em;
+	}
 	&:hover {
-		background: $brand-color;
-		color: #fff;
+		span {
+			background: $brand-color;
+			color: #fff;
+		}
+	}
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0; left: 0; right: 0;
+		height: 1.3em;
+		transform: translateY(0.4em);
+		border: 3px solid $brand-color;
+		border-bottom-left-radius: 1.3em;
+		border-bottom-right-radius: 1.3em;
+		z-index: -1;
+		transition: transform 0.3s cubic-bezier(0,.3,.19,.99);
+	}
+	&:active {
+		transform: translateY(0.4em);
+		&:before {
+			transform: translateY(0) scaleY(0.6);
+
+		}
 	}
 }
 
+//Wite button
 .button--inverted {
-	border: 3px solid #fff;
-	color: #fff;
-	mix-blend-mode: lighten;
+	span {
+		border: 3px solid #fff;
+		color: #fff;
+		
+	}
+	&:before {
+		border: 3px solid #fff;
+	}
 	&:hover {
-		background: #fff;
-		color: #000;
+		span {
+			background: #fff;
+			color: #000;
+		}
 	}
 }
 
+//Colored button on light background
 .button--inv-color {
-	border: 3px solid $brand-color;
-	color: $brand-color;
-	mix-blend-mode: lighten;
+	mix-blend-mode: darken;
+	span {
+		background: #fff;
+		border: 3px solid $brand-color;
+		color: $brand-color;
+		
+	}
 	&:hover {
-		background: $brand-color;
-		color: #000;
+		span {
+			background: $brand-color;
+			color: #fff;
+		}
 	}
 }
