@@ -2,9 +2,19 @@
  * Buttons
  */
 
+@mixin button_active($background: $brand-color, $color: rgba(0,0,0,1)) {
+	span {
+		background: $background;
+		color: $color;
+	}	
+}
+
+
 //Default button for use on dark background
 .button {
 	display: inline-block;
+	cursor: pointer;
+	user-select: none;
 	position: relative;
 	font-size: 1.5em;
 	margin: 0.4em 0;
@@ -20,28 +30,27 @@
 		display: block;
 		padding: 0.5em 1em 0.6em;
 		transition: background 0.1s, color 0.1s;
-		background: #000;
+		background: rgba(0,0,0,0);
 		border: 3px solid $brand-color;
 		border-radius: 1.5em;
 	}
-	&:hover {
-		span {
-			background: $brand-color;
-			color: #000;
-		}
+	&:hover, &:focus {
+		@include button_active();
 	}
+
 	&:before {
 		content: "";
 		display: block;
 		position: absolute;
 		bottom: 0; left: 0; right: 0;
-		height: 1.3em;
+		height: 1.35em;
 		transform: translateY(0.4em);
 		transform-origin: bottom;
 		border: 3px solid $brand-color;
+		border-top: none;
 		border-bottom-left-radius: 1.3em;
 		border-bottom-right-radius: 1.3em;
-		z-index: -1;
+		// z-index: -1;
 		transition: transform 0.3s cubic-bezier(0,.3,.19,.99);
 	}
 	&:active {
@@ -51,10 +60,23 @@
 
 		}
 	}
+	&:active, &:focus {
+		-webkit-tap-highlight-color: none;
+		outline: none;
+	}
 }
 
+// .case-link:focus {
+// 	.button {
+// 		@include button_active();
+// 	}
+// 	.button--inv-color {
+// 		@include button_active($brand-color, #fff);
+// 	}
+// }
+
 //Wite button
-.button--inverted {
+.button--inv {
 	span {
 		border: 3px solid #fff;
 		color: #fff;
@@ -62,12 +84,10 @@
 	}
 	&:before {
 		border: 3px solid #fff;
+		border-top: none;
 	}
-	&:hover {
-		span {
-			background: #fff;
-			color: #000;
-		}
+	&:hover, &:focus {
+		@include button_active(#fff, #000);
 	}
 }
 
@@ -75,15 +95,12 @@
 .button--inv-color {
 	mix-blend-mode: darken;
 	span {
-		background: #fff;
+		background: rgba(255,255,255,0);
 		border: 3px solid $brand-color;
 		color: $brand-color;
 		
 	}
-	&:hover {
-		span {
-			background: $brand-color;
-			color: #fff;
-		}
+	&:hover, &:focus {
+		@include button_active($brand-color, #fff);
 	}
 }
