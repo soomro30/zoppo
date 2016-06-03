@@ -15,6 +15,7 @@
 	font-family: $header-font-family;
 	font-weight: 700;
     font-style: italic;
+    cursor: pointer;
 	transition: background 0.1s, color 0.1s;
 	mix-blend-mode: darken;
 	&:hover {
