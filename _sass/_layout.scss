@@ -264,12 +264,13 @@
 .pagination__arrow {
     display: none; 
     @include media-query($on-laptop) {
-        width: 2em;
-        height: 2em;
-        border-radius: 2em;
+        width: 2.4em;
+        height: 2.4em;
+        border-radius: 2.4em;
+        text-align: center;
         overflow: hidden;
         display: block;
-        line-height: 1.8;
+        line-height: 1.9;
         border: 3px solid #fff;
         margin: 0.4em 0 0.6em;
         transition: background 0.1s, color 0.1s;
