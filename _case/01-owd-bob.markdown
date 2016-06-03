@@ -1,6 +1,6 @@
 ---
 layout: case
-title:  "Own Bob"
+title:  "Owd Bob"
 start:	"Cumbrian dialect</br>with speedbumps."
 date:   2015-12-09 08:41:20 +0100
 categories: back-end, ui, web

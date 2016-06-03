@@ -18,18 +18,17 @@ layout: default
 </article>
 
 
-<ul class="case-list case-list--small">
+<div class="case-list case-list--small">
 	{% for case in site.case %}
 		{% if case.title == page.title %}
 			{% continue %}
 		{% endif %}
-		<li class="case-list__item">
-			<!-- <span class="case-meta">{{ case.date | date: "%b %-d, %Y" }}</span> -->
-			<a class="case-link" href="{{ case.url | prepend: site.baseurl }}">
-				<h2 class="case-list__header">
-					{{ case.title }}
-				</h2>
-			</a>
-		</li>
+		<a class="case-list__item" href="{{ case.url | prepend: site.baseurl }}">
+		<!-- <span class="case-meta">{{ case.date | date: "%b %-d, %Y" }}</span> -->
+			<h2 class="case-list__header">
+				{{ case.title }}
+			</h2>
+		</a>
+		
 	{% endfor %}
-</ul>
+</div>

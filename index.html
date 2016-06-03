@@ -15,7 +15,7 @@ layout: default
                 <span class="curious__subheader">Current curiosity:</span> 
                 {{ curious.title }}
             </h1>
-            <a class="button button--inverted" href="{{ curious.url | prepend: site.baseurl }}"><span>Explore</span></a>
+            <a class="button button--inv" href="{{ curious.url | prepend: site.baseurl }}"><span>Explore</span></a>
             <div class="pagination">
                 <div class="pagination__counter">1<span>/3</span></div>
                 <a class="pagination__arrow pagination__next" href="#">→</a>
@@ -35,11 +35,11 @@ layout: default
         {% for case in site.case %}
         <li class="case-list__item">
             <!-- <span class="case-meta">{{ case.date | date: "%b %-d, %Y" }}</span> -->
-            <a class="case-link" href="{{ case.url | prepend: site.baseurl }}">
-                <h2 class="case-list__header">
-                    {{ case.start }}
-                </h2>
-                <div class="button"><span>See case</span></div>
+            <h2 class="case-list__header">
+                {{ case.start }}
+            </h2>
+            <a class="button" href="{{ case.url | prepend: site.baseurl }}">
+                <span>See case</span>
             </a>
         </li>
         {% endfor %}
