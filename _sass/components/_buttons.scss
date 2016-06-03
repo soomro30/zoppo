@@ -37,6 +37,7 @@
 		bottom: 0; left: 0; right: 0;
 		height: 1.3em;
 		transform: translateY(0.4em);
+		transform-origin: bottom;
 		border: 3px solid $brand-color;
 		border-bottom-left-radius: 1.3em;
 		border-bottom-right-radius: 1.3em;
@@ -46,7 +47,7 @@
 	&:active {
 		transform: translateY(0.4em);
 		&:before {
-			transform: translateY(0) scaleY(0.6);
+			transform: translateY(0) scaleY(0.8);
 
 		}
 	}
