@@ -15,7 +15,7 @@ layout: default
                 <span class="curious__subheader">Current curiosity:</span> 
                 {{ curious.title }}
             </h1>
-            <a class="button button--inverted" href="{{ curious.url | prepend: site.baseurl }}">Explore</a>
+            <a class="button button--inverted" href="{{ curious.url | prepend: site.baseurl }}"><span>Explore</span></a>
             <div class="pagination">
                 <div class="pagination__counter">1<span>/3</span></div>
                 <a class="pagination__arrow pagination__next" href="#">→</a>
@@ -39,7 +39,7 @@ layout: default
                 <h2 class="case-list__header">
                     {{ case.start }}
                 </h2>
-                <div class="button">See case</div>
+                <div class="button"><span>See case</span></div>
             </a>
         </li>
         {% endfor %}
