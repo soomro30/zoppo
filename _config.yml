@@ -26,5 +26,5 @@ collections:
     output: true
     permalink: /:collection/:title/
 
-gems:
-  - octopress-autoprefixer
+# gems:
+#   - octopress-autoprefixer
