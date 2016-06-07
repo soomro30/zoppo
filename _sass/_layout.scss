@@ -123,10 +123,30 @@
         justify-content: center;
         align-items: center;
         // background: $brand-color;
-        min-height: 80vh;
+        // min-height: 80vh;
+        
+        // Hacky way to prevent page from scrolling when URL-bar disapears.
+        // -9vw is the magic number for the URL-bar
+        @media (max-device-aspect-ratio: 3/4) {
+            min-height: (70vw * 1.333 - 9vw);
+        }
+        @media (max-device-aspect-ratio: 2/3) {
+            min-height: (70vw * 1.5 - 9vw);
+        }
+        //ex iPhone 5
+        @media (max-device-aspect-ratio: 10/16) {
+            min-height: (70vw * 1.6 - 9vw);
+        }
+        //ex iPhone 6, Nexus 5X, Galaxy S5
+        @media (max-device-aspect-ratio: 9/16) {
+            min-height: (70vw * 1.778 - 9vw);
+        }
         // @include media-query($on-laptop) {
         //     min-height: 100vh;
         // }
+        @include media-query($on-laptop) {
+            min-height: 80vh;
+        }
     }
 
     .header {
@@ -159,6 +179,7 @@
 $golden-ratio: 61.8%;
 
 .case-list {
+    user-select: none;
     margin: 0;
     // margin: -1em 0;
     // padding: 1em 0.5em;
@@ -177,8 +198,25 @@ $golden-ratio: 61.8%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 50vh;
+        padding: 2em 0;
         position: relative;
+        // min-height: 50vh;
+        // Hacky way to prevent page from scrolling when URL-bar disapears.
+        // -9vw is the magic number for the URL-bar
+        @media (max-device-aspect-ratio: 3/4) {
+            min-height: (50vw * 1.333 - 9vw);
+        }
+        @media (max-device-aspect-ratio: 2/3) {
+            min-height: (50vw * 1.5 - 9vw);
+        }
+        //ex iPhone 5
+        @media (max-device-aspect-ratio: 10/16) {
+            min-height: (50vw * 1.6 - 9vw);
+        }
+        //ex iPhone 6, Nexus 5X, Galaxy S5
+        @media (max-device-aspect-ratio: 9/16) {
+            min-height: (50vw * 1.778 - 9vw);
+        }
     }
     .case-list__item:nth-child(1) {
         @include media-query($on-laptop) {
@@ -277,8 +315,8 @@ $golden-ratio: 61.8%;
 ////////////////////
 // Case 1
 .case1__image {
-    position: absolute;
-    top: 0;
+    // position: absolute;
+    // top: 0;
     width: 100%;
     height: auto;
 }
@@ -296,13 +334,17 @@ $golden-ratio: 61.8%;
 $cubic-bezier   : cubic-bezier(0.2,2,.3,.8); 
 
 .case2__image {
-    width: 30vw;
-    height: 15vw;
+    width: 100vw;
+    height: 100vw * 0.5;
+    @include media-query($on-laptop) {
+        width: 30vw;
+        height: 30vw * 0.5;
+    }
 
     perspective: 1000px;
 }
 #mbkz_bg, #mbkz_menu, #mbkz_side, #mbkz_content {
-    transition: transform 1.6s $cubic-bezier;
+    // transition: transform 1.6s $cubic-bezier;
     transform-origin: 50% 50%;
 }
 
