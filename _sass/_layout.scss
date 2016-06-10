@@ -1,7 +1,11 @@
 
 $golden-ratio: 61.8%;
 
-.l-side {
+.l-column-main {
+    flex: 0 0 $golden-ratio;
+}
+
+.l-column-side {
     flex: 0 0 100 - $golden-ratio;
 }
 
@@ -318,7 +322,8 @@ $golden-ratio: 61.8%;
 .case1__image {
     // position: absolute;
     // top: 0;
-    width: 100%;
+    width: 50%;
+    margin-bottom: 2em;
     height: auto;
 }
 
