@@ -11,15 +11,41 @@ layout: default
 		<span class="categories">{{ page.categories }}<span></p>
 	</header>
 
-	<div class="text-content" itemprop="articleBody">
-		{{ content }}
+	<div class="section section--1">
+		<div class="text-content" itemprop="articleBody">
+			{{ content }}
+		</div>
 	</div>
+
+	{% ifhascontent section2 %}
+	<div class="section section--2">
+		<div class="text-content">
+			{% contentblock section2 %}
+		</div>
+	</div>
+	{% endifhascontent %}
+
+	{% ifhascontent section3 %}
+	<div class="section section--3">
+		<div class="text-content">
+			{% contentblock section3 %}
+		</div>
+	</div>
+	{% endifhascontent %}
+
+	{% ifhascontent section4 %}
+	<div class="section section--4">
+		<div class="text-content">
+			{% contentblock section4 %}
+		</div>
+	</div>
+	{% endifhascontent %}
 
 </article>
 
 
 <header class="text-content">
-	<h2>Older curiousities:</h2>
+	<h2>Other curiousities:</h2>
 </header>
 <ul class="case-list case-list--small">
 	{% for curious in site.curious-about %}

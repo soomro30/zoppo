@@ -1,8 +1,3 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-@charset "utf-8";
-
 // @import url(https://fonts.googleapis.com/css?family=Playfair+Display:900italic,700italic);
 
 @font-face {
@@ -57,11 +52,11 @@ $on-laptop:        40em;
 }
 
 
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+		"reset",
         "base",
         "layout",
+        "curious",
         "syntax-highlighting",
-        "components/buttons"
-;
+        "components/buttons";
