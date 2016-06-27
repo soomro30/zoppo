@@ -6,7 +6,7 @@ categories: mobile, web, CSS
 slug: speed-bumps
 ---
 ## Ode, owed?
-Owd Bob was created entirely in the Fully lab. We wanted to experiment with speed bumps on the web, and test the general truth that the web is always open. What if it’s not? What if a web store has opening hours? How will that affect traffic, and sales. The name came from an old childrens book from the late 19th century. The title is in Cumbrian dialect and actually means Old Bob. And making the title pretty much impossible to understand is a quite daring speed bump in our opinion. Hats of to the author, Alfred Ollivant.
+Test Owd Bob was created entirely in the Fully lab. We wanted to experiment with speed bumps on the web, and test the general truth that the web is always open. What if it’s not? What if a web store has opening hours? How will that affect traffic, and sales. The name came from an old childrens book from the late 19th century. The title is in Cumbrian dialect and actually means Old Bob. And making the title pretty much impossible to understand is a quite daring speed bump in our opinion. Hats of to the author, Alfred Ollivant.
 
 Anyway. The Owd Bob store is basically a print store that is open for 48 hours hours at a time. During this period we sell an art print by an carefully selected artist. We only present one artist at a time. The number of copies that is sold during the time limit gets signed numbered and printed. The store simply offers time limited editions of wall art.
 
