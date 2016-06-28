@@ -1,5 +1,15 @@
 // Speed Bumps
-.section--2 {
-	background: $brand-color;
-	color: #fff;
+.cc-speed-bumps {
+	.section--2, .section--4 {
+		background: $brand-color;
+		color: #fff;
+	}
+}
+
+//Mobile first
+.cc-mobile-first {
+	.section--2 {
+		background: $secondary-color;
+		color: #fff;
+	}
 }

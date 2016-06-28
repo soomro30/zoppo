@@ -8,7 +8,6 @@ twitter_username: fullyflared_se
 github_username:  fullydigital
 
 
-markdown: kramdown
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 

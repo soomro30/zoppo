@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="page" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="page cc-{{ page.slug }}" itemscope itemtype="http://schema.org/BlogPosting">
 	
 	<div class="hero" style="background-image: url({{ site.baseurl }}/assets/sketch/curious.svg)"></div>
 	
@@ -11,35 +11,44 @@ layout: default
 		<span class="categories">{{ page.categories }}<span></p>
 	</header>
 
-	<div class="section section--1">
-		<div class="text-content" itemprop="articleBody">
-			{{ content }}
-		</div>
-	</div>
+	<div class="content" itemprop="articleBody">
 
-	{% ifhascontent section2 %}
-	<div class="section section--2">
-		<div class="text-content">
-			{% contentblock section2 %}
-		</div>
-	</div>
-	{% endifhascontent %}
+		<!-- Summary: 
+		{{ content }} -->
 
-	{% ifhascontent section3 %}
-	<div class="section section--3">
-		<div class="text-content">
-			{% contentblock section3 %}
+		{% unless page.section1 == nil %}
+		<div class="section section--1">
+			<div class="text-content">
+				{{ page.section1 | markdownify }}
+			</div>
 		</div>
-	</div>
-	{% endifhascontent %}
+		{% endunless %}
 
-	{% ifhascontent section4 %}
-	<div class="section section--4">
-		<div class="text-content">
-			{% contentblock section4 %}
+		{% unless page.section2 == nil %}
+		<div class="section section--2">
+			<div class="text-content">
+				{{ page.section2 | markdownify }}
+			</div>
 		</div>
+		{% endunless %}
+
+		{% unless page.section3 == nil %}
+		<div class="section section--3">
+			<div class="text-content">
+				{{ page.section3 | markdownify }}
+			</div>
+		</div>
+		{% endunless %}
+
+		{% unless page.section4 == nil %}
+		<div class="section section--4">
+			<div class="text-content">
+				{{ page.section4 | markdownify }}
+			</div>
+		</div>
+		{% endunless %}
+
 	</div>
-	{% endifhascontent %}
 
 </article>
 
