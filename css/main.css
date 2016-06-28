@@ -535,6 +535,9 @@ pre {
 .case-link {
   display: block; }
 
+.case-list {
+  list-style-type: none; }
+
 .case1__image {
   width: 50%;
   margin-bottom: 2em;
@@ -693,8 +696,12 @@ pre {
   background-size: cover;
   background-position: center center; }
 
-.section--2 {
+.cc-speed-bumps .section--2, .cc-speed-bumps .section--4 {
   background: #ae5afd;
+  color: #fff; }
+
+.cc-mobile-first .section--2 {
+  background: #34aac7;
   color: #fff; }
 
 /**
