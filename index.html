@@ -22,13 +22,22 @@ layout: default
                 <a class="pagination__arrow pagination__next" href="#">→</a>
                 <a class="pagination__arrow pagination__previous disabled" href="#">←</a>
             </div>
-
+            <!-- 
+            ###############################
+            ## Get code for the background
+            ## set in current post
+            -->
             {% unless cc.background == nil %}
             <div class="cc__background">
                 {{ cc.background }}
             </div>
             {% endunless %}
-
+            
+            <!-- 
+            ####################
+            ## Get scripts from
+            ## current post
+            -->
             {% for js in cc.scripts %}
                 <script type="text/javascript">
                 {% include {{ js }} %}
@@ -40,7 +49,10 @@ layout: default
     </ul>
 </section>
 
-
+    <!-- 
+    ####################
+    ## List all cases
+    -->
     <div class="cases">
         
         <div class="l-column-main cases__item cases__item--1">
@@ -51,12 +63,6 @@ layout: default
             
             <script>
             {% include js/vivus.js %}
-            /*
-            
-            Chrome cannot access SVG elements without server.
-            More info: http://stackoverflow.com/questions/24644657/receive-uncaught-securityerror-when-accessing-svg-objects-from-javascript
-
-             */
                 if(document.getElementById('lettering2')) {
                     // var filepath = '/assets/owd-bob/feb27.svg';
                     var filepath = '/assets/owd-bob/apr12.svg';

@@ -44,3 +44,16 @@ As this is just a Jekyll project, you can use any of the commands listed in thei
 ## Deploy with Gulp and GitHub Pages
 
 Just run `gulp deploy`.
+
+
+## Struture
+The rendered site is in _site
+
+### Templates
+...
+
+### CSS
+...
+
+### JS
+...
