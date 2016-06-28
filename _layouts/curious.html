@@ -3,13 +3,39 @@ layout: default
 ---
 <article class="page cc-{{ page.slug }}" itemscope itemtype="http://schema.org/BlogPosting">
 	
-	<div class="hero" style="background-image: url({{ site.baseurl }}/assets/sketch/curious.svg)"></div>
-	
-	<header class="page-header">
-		<h1 class="page-title" itemprop="name headline">{{ page.title }}</h1>
-		<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} 
-		<span class="categories">{{ page.categories }}<span></p>
-	</header>
+	<div class="cc">
+        <div class="cc__item cc__item--{{ page.slug }} ">
+            <!-- <span class="cc-meta">{{ page.date | date: "%b %-d, %Y" }}</span> -->
+            <header class="cc__overlay">
+                <h1 class="header" itemprop="name headline">
+                    <span class="cc__subheader">Current curiosity:</span> 
+                    {{ page.title }}
+                </h1>
+				<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} 
+				<span class="categories">{{ page.categories }}<span></p>
+            </header>
+      <!--       <div class="pagination">
+                <div class="pagination__counter">1<span>/3</span></div>
+                <a class="pagination__arrow pagination__next" href="#">→</a>
+                <a class="pagination__arrow pagination__previous disabled" href="#">←</a>
+            </div> -->
+
+            {% unless page.background == nil %}
+            <div class="cc__background">
+                {{ page.background }}
+            </div>
+            {% endunless %}
+			
+            {% for js in page.scripts %}
+                <script type="text/javascript">
+                {% include {{ js }} %}
+                </script>
+            {% endfor %}	
+       
+
+
+        </div>
+    </div>
 
 	<div class="content" itemprop="articleBody">
 

@@ -54,9 +54,10 @@ $on-laptop:        40em;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-		"reset",
-        "base",
-        "layout",
-        "curious",
-        "syntax-highlighting",
-        "components/buttons";
+	"reset",
+  "animations",
+  "base",
+  "layout",
+  "curious",
+  "syntax-highlighting",
+  "components/buttons";

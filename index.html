@@ -2,27 +2,38 @@
 layout: default
 ---
 
-<section class="curious-current">
-    <ul class="curious-list">
-        <!-- Get all curious-about posts and revers them -->
+<section class="cc__wrap">
+    <ul class="cc">
+        <!-- Get all cc-about posts and revers them -->
         {% assign items = site.curious-about | sort: 'date' | reverse %}
         <!-- Get only the latest post -->
-        {% for curious in items limit:1 %}
-        <li class="curious-list__item">
-            <!-- <span class="curious-meta">{{ curious.date | date: "%b %-d, %Y" }}</span> -->
-
-            <h1 class="header">
-                <span class="curious__subheader">Current curiosity:</span> 
-                {{ curious.title }}
-            </h1>
-            <a class="button button--inv" href="{{ curious.url | prepend: site.baseurl }}"><span>Explore</span></a>
+        {% for cc in items limit:1 %}
+        <li class="cc__item cc__item--{{ cc.slug }} ">
+            <!-- <span class="cc-meta">{{ cc.date | date: "%b %-d, %Y" }}</span> -->
+            <div class="cc__overlay">
+                <h1 class="header">
+                    <span class="cc__subheader">Current curiosity:</span> 
+                    {{ cc.title }}
+                </h1>
+                <a class="button button--inv" href="{{ cc.url | prepend: site.baseurl }}"><span>Explore</span></a>
+            </div>
             <div class="pagination">
                 <div class="pagination__counter">1<span>/3</span></div>
                 <a class="pagination__arrow pagination__next" href="#">→</a>
                 <a class="pagination__arrow pagination__previous disabled" href="#">←</a>
             </div>
 
+            {% unless cc.background == nil %}
+            <div class="cc__background">
+                {{ cc.background }}
+            </div>
+            {% endunless %}
 
+            {% for js in cc.scripts %}
+                <script type="text/javascript">
+                {% include {{ js }} %}
+                </script>
+            {% endfor %}
 
         </li>
         {% endfor %}
@@ -35,21 +46,21 @@ layout: default
         <div class="l-column-main cases__item cases__item--1">
 
             
-            <div class="case1__image" id="lettering"></div>
+            <div class="case1__image" id="lettering2"></div>
             
             
             <script>
-            {% include_relative _js/vivus.js %}
+            {% include js/vivus.js %}
             /*
             
             Chrome cannot access SVG elements without server.
             More info: http://stackoverflow.com/questions/24644657/receive-uncaught-securityerror-when-accessing-svg-objects-from-javascript
 
              */
-                if(document.getElementById('lettering')) {
+                if(document.getElementById('lettering2')) {
                     // var filepath = '/assets/owd-bob/feb27.svg';
                     var filepath = '/assets/owd-bob/apr12.svg';
-                    new Vivus('lettering', {
+                    new Vivus('lettering2', {
                         duration: 250, 
                         file: filepath,
                         type: 'delayed',

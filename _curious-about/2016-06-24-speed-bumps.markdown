@@ -27,6 +27,11 @@ section3: |
 section4: |
   ## Alive and growing
   The Owd Bob store is constantly evolving. We always look at new possibilities to present and sell the prints. And new ways to market the site. At the same time. Fully is steadily improving and finding new tools in how to market on the web, with an extremely low budget.
+background: |
+  <div class="cc__image" id="lettering"></div>
+scripts: 
+- js/vivus.js
+- js/curious/speed-bumps.js
 
 ---
 

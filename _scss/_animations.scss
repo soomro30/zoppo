@@ -1,0 +1,13 @@
+
+@keyframes moveBack {
+	100% {
+		transform: translate3D(0,0,0);
+	}
+}
+
+
+@keyframes fadeIn {
+	100% {
+		opacity: 1;
+	}
+}

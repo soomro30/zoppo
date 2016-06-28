@@ -1,9 +1,35 @@
 // Speed Bumps
+$speed-bumps-color: #232b40;
+
+.cc__item--speed-bumps {
+    background: $speed-bumps-color;
+    // background: linear-gradient(to bottom, rgba(#232b40,1) 0%,rgba(#304270,1) 100%);
+    position: relative;
+
+    .cc__image {
+        width: 50%;
+        opacity: 0.2;
+    }
+}
+
 .cc-speed-bumps {
 	.section--2, .section--4 {
-		background: $brand-color;
+		background: $speed-bumps-color;
 		color: #fff;
 	}
+	.cc__overlay {
+		transform: translate3D(0, -10px,0);
+		@include media-query($on-laptop) {
+			transform: translate3D(0, -2px,0);
+		}
+		animation: moveBack 0.7s forwards;
+	}
+	.page-meta {
+		opacity: 0;
+		animation: fadeIn 0.7s forwards;
+	}
+
+	color: $speed-bumps-color;
 }
 
 //Mobile first
