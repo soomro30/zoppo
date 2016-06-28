@@ -1,3 +1,64 @@
+//Single curious pages
+.content {
+    background: rgb(245,245,245);
+}
+$moveContent: 50px; 
+.section--1 {
+    position: relative;
+    z-index: 10;
+    top: -$moveContent;
+    transform: translate3D(0,$moveContent,0);
+    max-width: 60em;
+    width: 90%;
+    background: #fff;
+    // border: 3px solid #ddd;
+    // border-radius: 1.5em;
+    // mix-blend-mode: exclusion;
+    // color: #ddd;
+
+    margin: 0 auto;
+    animation: moveBack 0.7s forwards cubic-bezier(0.3,0,.1,1);
+    // box-shadow: 0 5px 10px rgba(#000, 0.05);
+    @include media-query($on-laptop) {
+        $moveContent: 100px;
+        top: -$moveContent;
+        transform: translate3D(0,$moveContent,0);
+    }
+}
+
+.wrapper--1 {
+	position: relative;
+	padding-bottom: 5em;
+	@include media-query($on-laptop) {
+		padding-bottom: 0;
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url(../assets/owd-bob/owd-bob_signed.jpg) no-repeat;
+		@include media-query($on-laptop) {
+			background-image: url(../assets/owd-bob/owd-bob_signed-2.jpg);
+		}
+		background-size: cover;
+		background-position: right;
+		// background-size: auto 100%;
+		// background-position: 0% 40%;
+		opacity: 0;
+	}
+}
+.ready .wrapper--1:before {
+	animation: fadeIn 1s forwards;
+}
+
+
+// Art Directed posts
+
 // Speed Bumps
 $speed-bumps-color: #232b40;
 
@@ -8,15 +69,13 @@ $speed-bumps-color: #232b40;
 
     .cc__image {
         width: 50%;
-        opacity: 0.2;
+        opacity: 0.3;
     }
 }
 
 .cc-speed-bumps {
-	.section--2, .section--4 {
-		background: $speed-bumps-color;
-		color: #fff;
-	}
+	color: $speed-bumps-color;
+
 	.cc__overlay {
 		transform: translate3D(0, -10px,0);
 		@include media-query($on-laptop) {
@@ -29,7 +88,52 @@ $speed-bumps-color: #232b40;
 		animation: fadeIn 0.7s forwards;
 	}
 
-	color: $speed-bumps-color;
+
+	// Section 2
+	
+	.section--2 {
+		width: 90%;
+		max-width: 60em;
+		margin: 0 2% 0 auto;
+		position: relative;
+		top: -$moveContent*2;
+		padding-top: $moveContent;
+		@include media-query($on-laptop) {
+			width: 80%;
+			margin: 0 2% 0 auto;
+			$moveContent: 100px;
+			top: -$moveContent*2;
+			padding-top: $moveContent;
+		}
+	}
+	.section--2 , .section--4 {
+		background: $speed-bumps-color;
+		color: #fff;
+	}
+
+
+	// Section 3
+
+	.section--3 {
+		.text-content {
+			@include media-query($on-laptop) {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+	.section--3__image {
+		width: 80%;
+		margin: 0 auto;
+		@include media-query($on-laptop) {
+			flex: 15em 0 0;
+			margin: 0 $spacing-unit $spacing-unit/2 0;
+		}
+		path {
+			stroke: $speed-bumps-color;
+		}
+	}
+
 }
 
 //Mobile first

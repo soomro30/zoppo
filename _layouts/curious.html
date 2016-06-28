@@ -30,7 +30,7 @@ layout: default
                 <script type="text/javascript">
                 {% include {{ js }} %}
                 </script>
-            {% endfor %}	
+            {% endfor %}
        
 
 
@@ -38,30 +38,55 @@ layout: default
     </div>
 
 	<div class="content" itemprop="articleBody">
+		<!-- Get all content (sections) from the current curious-about post -->
 
-		<!-- Summary: 
+		<!-- Summary - could be loaded in some SEO description: 
 		{{ content }} -->
-
-		{% unless page.section1 == nil %}
-		<div class="section section--1">
-			<div class="text-content">
-				{{ page.section1 | markdownify }}
+		<div class="wrapper wrapper--1">
+			{% unless page.section1 == nil %}
+			<div class="section section--1">
+				<div class="text-content">
+					{{ page.section1 | markdownify }}
+				</div>
 			</div>
-		</div>
-		{% endunless %}
+			{% endunless %}
 
-		{% unless page.section2 == nil %}
-		<div class="section section--2">
-			<div class="text-content">
-				{{ page.section2 | markdownify }}
+			{% unless page.section2 == nil %}
+			<div class="section section--2">
+				<div class="text-content">
+					{{ page.section2 | markdownify }}
+				</div>
 			</div>
+			{% endunless %}
 		</div>
-		{% endunless %}
 
 		{% unless page.section3 == nil %}
 		<div class="section section--3">
+
 			<div class="text-content">
+				<div class="section--3__image" id="lettering2"></div>
+				<script type="text/javascript">
+				var lettering2 = document.getElementById('lettering2');
+				if( lettering2 ) {
+				    var filepath = '/assets/owd-bob/feb27.svg';
+				    //var filepath = '/assets/owd-bob/apr12.svg';
+				    var lettering2_v = new Vivus('lettering2', {
+				        duration: 250, 
+				        file: filepath,
+				        type: 'delayed',
+				        animTimingFunction: Vivus.EASE_OUT,
+				        onReady: function(e){
+				        	setInterval(function(){ e.play(-1); }, 3000);
+				        	setInterval(function(){ e.play(); }, 4000);
+				        }
+				    });
+
+
+				}
+				</script>
+				<div>
 				{{ page.section3 | markdownify }}
+				</div>
 			</div>
 		</div>
 		{% endunless %}

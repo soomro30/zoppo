@@ -194,18 +194,24 @@ body {
           font-kerning: normal; }
 
 p {
-  line-height: 2; }
+  line-height: 1.75; }
   @media screen and (min-width: 40em) {
     p {
-      line-height: 3; } }
+      line-height: 2.5; } }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2; }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
 h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
+blockquote, pre,
 ul, ol, dl, figure,
 .highlight {
+  margin-bottom: 15px; }
+
+p {
   margin-bottom: 30px; }
 
 .header {
@@ -470,27 +476,6 @@ pre {
   -ms-flex-align: center;
       align-items: center; }
 
-.content {
-  background: whitesmoke; }
-
-.section--1 {
-  position: relative;
-  z-index: 10;
-  top: -50px;
-  -webkit-transform: translate3D(0, 50px, 0);
-          transform: translate3D(0, 50px, 0);
-  max-width: 60em;
-  width: 90%;
-  background: #fff;
-  margin: 0 auto;
-  -webkit-animation: moveBack 0.7s forwards;
-          animation: moveBack 0.7s forwards; }
-  @media screen and (min-width: 40em) {
-    .section--1 {
-      top: -100px;
-      -webkit-transform: translate3D(0, 100px, 0);
-              transform: translate3D(0, 100px, 0); } }
-
 /**
  * Cases section
  */
@@ -738,10 +723,13 @@ pre {
   margin: 0 auto; }
 
 .text-content {
-  padding: 30px 60px 60px;
+  padding: 30px 30px 30px;
   max-width: 60em;
   margin: 0 auto;
   text-align: left; }
+  @media screen and (min-width: 40em) {
+    .text-content {
+      padding: 60px 60px 60px; } }
 
 .hero {
   margin-bottom: 60px;
@@ -750,18 +738,62 @@ pre {
   background-size: cover;
   background-position: center center; }
 
+.content {
+  background: whitesmoke; }
+
+.section--1 {
+  position: relative;
+  z-index: 10;
+  top: -50px;
+  -webkit-transform: translate3D(0, 50px, 0);
+          transform: translate3D(0, 50px, 0);
+  max-width: 60em;
+  width: 90%;
+  background: #fff;
+  margin: 0 auto;
+  -webkit-animation: moveBack 0.7s forwards cubic-bezier(0.3, 0, 0.1, 1);
+          animation: moveBack 0.7s forwards cubic-bezier(0.3, 0, 0.1, 1); }
+  @media screen and (min-width: 40em) {
+    .section--1 {
+      top: -100px;
+      -webkit-transform: translate3D(0, 100px, 0);
+              transform: translate3D(0, 100px, 0); } }
+
+.wrapper--1 {
+  position: relative;
+  padding-bottom: 5em; }
+  @media screen and (min-width: 40em) {
+    .wrapper--1 {
+      padding-bottom: 0; } }
+  .wrapper--1:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../assets/owd-bob/owd-bob_signed.jpg) no-repeat;
+    background-size: cover;
+    background-position: right;
+    opacity: 0; }
+    @media screen and (min-width: 40em) {
+      .wrapper--1:before {
+        background-image: url(../assets/owd-bob/owd-bob_signed-2.jpg); } }
+
+.ready .wrapper--1:before {
+  -webkit-animation: fadeIn 1s forwards;
+          animation: fadeIn 1s forwards; }
+
 .cc__item--speed-bumps {
   background: #232b40;
   position: relative; }
   .cc__item--speed-bumps .cc__image {
     width: 50%;
-    opacity: 0.2; }
+    opacity: 0.3; }
 
 .cc-speed-bumps {
   color: #232b40; }
-  .cc-speed-bumps .section--2, .cc-speed-bumps .section--4 {
-    background: #232b40;
-    color: #fff; }
   .cc-speed-bumps .cc__overlay {
     -webkit-transform: translate3D(0, -10px, 0);
             transform: translate3D(0, -10px, 0);
@@ -775,6 +807,38 @@ pre {
     opacity: 0;
     -webkit-animation: fadeIn 0.7s forwards;
             animation: fadeIn 0.7s forwards; }
+  .cc-speed-bumps .section--2 {
+    width: 90%;
+    max-width: 60em;
+    margin: 0 2% 0 auto;
+    position: relative;
+    top: -100px;
+    padding-top: 50px; }
+    @media screen and (min-width: 40em) {
+      .cc-speed-bumps .section--2 {
+        width: 80%;
+        margin: 0 2% 0 auto;
+        top: -200px;
+        padding-top: 100px; } }
+  .cc-speed-bumps .section--2, .cc-speed-bumps .section--4 {
+    background: #232b40;
+    color: #fff; }
+  @media screen and (min-width: 40em) {
+    .cc-speed-bumps .section--3 .text-content {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+          align-items: center; } }
+  .cc-speed-bumps .section--3__image {
+    width: 80%;
+    margin: 0 auto; }
+    @media screen and (min-width: 40em) {
+      .cc-speed-bumps .section--3__image {
+        -ms-flex: 15em 0 0;
+            flex: 15em 0 0;
+        margin: 0 60px 30px 0; } }
+    .cc-speed-bumps .section--3__image path {
+      stroke: #232b40; }
 
 .cc-mobile-first .section--2 {
   background: #34aac7;

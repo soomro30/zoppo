@@ -195,34 +195,6 @@ $golden-ratio: 61.8%;
     align-items: center;
 }
 
-//Single curious pages
-.content {
-    background: rgb(245,245,245);
-}
-$moveContent: 50px; 
-.section--1 {
-    position: relative;
-    z-index: 10;
-    top: -$moveContent;
-    transform: translate3D(0,$moveContent,0);
-    max-width: 60em;
-    width: 90%;
-    background: #fff;
-    // border: 3px solid #ddd;
-    // border-radius: 1.5em;
-    // mix-blend-mode: exclusion;
-    // color: #ddd;
-
-    margin: 0 auto;
-    animation: moveBack 0.7s forwards;
-    // box-shadow: 0 5px 10px rgba(#000, 0.05);
-    @include media-query($on-laptop) {
-        $moveContent: 100px;
-        top: -$moveContent;
-        transform: translate3D(0,$moveContent,0);
-    }
-}
-
 
 
 /**
@@ -612,10 +584,13 @@ $rotZ: 15deg;
 }
 
 .text-content {
-    padding: $spacing-unit/2 $spacing-unit $spacing-unit;
+    padding: $spacing-unit/2 $spacing-unit/2 $spacing-unit/2;
     max-width: $content-width;
     margin: 0 auto;
     text-align: left;
+    @include media-query($on-laptop) {
+        padding: $spacing-unit $spacing-unit $spacing-unit;
+    }
 }
 
 .hero {
