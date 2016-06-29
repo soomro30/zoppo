@@ -8,7 +8,7 @@ twitter_username: fullyflared_se
 github_username:  fullydigital
 
 
-highlighter: pygments # or rouge or null
+highlighter: rouge
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 collections:
