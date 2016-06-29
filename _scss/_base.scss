@@ -50,7 +50,6 @@ p {
     margin-bottom: $spacing-unit / 2;
 }
 
-
 .header {
     font-size: 3em;
     font-size: 9vw;
@@ -180,6 +179,9 @@ code {
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eef;
+    text-align: left;
+    max-width: 60em;
+    margin: 0 auto;
 }
 
 code {
