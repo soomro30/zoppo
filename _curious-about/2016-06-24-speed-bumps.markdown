@@ -21,12 +21,16 @@ section3: |
 section4: |
   ## Mona Lisa used to smile  
   To establish the fact that we don’t crate the art itself we used a picture of the Mona Lisa on the landing page. And we put our logo on her face, sorry about that. We did this for two reasons. 1. The artwork is secret until the stores open. 2. We had to show people that it is in fact an art store.
+
+section5: |
   ## Secret clubhouse
   When it came to marketing, we didn’t go for range – we aimed at exclusivity. We started off, only using Instagram. And mainly promote the artist in our posts. This way we could focus on varied, quality content. We also only wanted to follow interesting artists, not people likely to follow us back, figuring that more followers could lower the sense of exclusivity. Every follower should be someone interested in art, not interested in getting followers of their own. 
 
   The opening hours was also revealed on Instagram only. If you missed it, you needed to go back and check. Otherwise the opportunity is gone. And the store is closed again. We hope this would get people to actively visit our profile. And hopefully see the opening as an event.
 
   Our plan worked. We gained a lot of interest and got contacted by several journalists who wanted to write about the project. For instance, My clever Lab named us Startup of the week. And the artists told us that they have sold more prints during the 48 hours than they had in a year when featured on some of the print on demand alternatives out there.
+
+section6: |
   ## Alive and growing
   The Owd Bob store is constantly evolving. We always look at new possibilities to present and sell the prints. And new ways to market the site. At the same time. Fully is steadily improving and finding new tools in how to market on the web, with an extremely low budget.
 

@@ -68,6 +68,33 @@ img {
     vertical-align: middle;
 }
 
+.image {
+    @extend .fadeIn;
+    width: 100%;
+}
+.image-container {
+    position: relative;
+    padding-bottom: 100%; /* ratio 1:1 */
+    height: 0;
+    overflow: hidden;
+
+    &--wide {
+        padding-bottom: 75%; /* ratio 4:3 */
+        @include media-query($on-laptop) {
+            padding-bottom: 33.333%; /* ratio 3:1 */
+        }
+    }
+}
+
+
+
+.image-container img, .image-container .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 
 
 /**
@@ -140,9 +167,9 @@ a {
     color: $brand-color;
     text-decoration: none;
 
-    // &:visited {
-    //     color: darken($brand-color, 15%);
-    // }
+    &:visited {
+        color: $brand-color;
+    }
 
     // &:hover {
     //     color: $text-color;
@@ -156,8 +183,8 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    color: $grey;
+    border-left: 4px solid $grey-light;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
     letter-spacing: -1px;
@@ -176,7 +203,7 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid $grey-light;
     border-radius: 3px;
     background-color: #eef;
     text-align: left;
@@ -249,7 +276,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: $grey;
         }
     }
 }

@@ -1,6 +1,6 @@
 //Single curious pages
 .content {
-    background: rgb(245,245,245);
+    background: $grey-light;
 }
 $moveContent: 50px; 
 .section--1 {
@@ -37,10 +37,7 @@ $moveContent: 50px;
 		content: "";
 		display: block;
 		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
+		top: 0; left: 0; right: 0; bottom: 0;
 		background: url(../assets/owd-bob/owd-bob_signed.jpg) no-repeat;
 		@include media-query($on-laptop) {
 			background-image: url(../assets/owd-bob/owd-bob_signed-2.jpg);
@@ -70,8 +67,14 @@ $speed-bumps-color: #232b40;
     .cc__image {
         width: 50%;
         opacity: 0.3;
+        transform: rotate3d(-21, 12, 0, 50deg) translate3d(50%,0,0);
+        transition: transform 3s $cubic-bezier;
+    }
+    &:hover .cc__image {
+    	transform: rotate3d(-15, 8, 0, 48deg) translate3d(50%,0,0);
     }
 }
+
 
 .cc-speed-bumps {
 	color: $speed-bumps-color;
@@ -98,6 +101,8 @@ $speed-bumps-color: #232b40;
 		position: relative;
 		top: -$moveContent*2;
 		padding-top: $moveContent;
+		background: $speed-bumps-color;
+		color: #fff;
 		@include media-query($on-laptop) {
 			width: 80%;
 			margin: 0 2% 0 auto;
@@ -106,35 +111,91 @@ $speed-bumps-color: #232b40;
 			padding-top: $moveContent;
 		}
 	}
-	.section--2 , .section--4 {
-		background: $speed-bumps-color;
-		color: #fff;
-	}
-
 
 	// Section 3
 
 	.section--3 {
 		.text-content {
-			@include media-query($on-laptop) {
-				display: flex;
-				align-items: center;
-			}
+			@extend .l-center;
 		}
 	}
 	.section--3__image {
 		width: 80%;
-		margin: 0 auto;
-		@include media-query($on-laptop) {
-			flex: 15em 0 0;
-			margin: 0 $spacing-unit $spacing-unit/2 0;
-		}
+		@extend .l-small-column;
 		path {
 			stroke: $speed-bumps-color;
 		}
 	}
 
+
+	// Section 4
+	
+	.section--4 {
+		.text-content {
+			background: $speed-bumps-color;
+			color: #fff;
+		}
+	}
+
+	.section--5 {
+		.text-content {
+			@extend .l-flex;
+		}
+		.keyhole__svg {
+		    width: 100%;
+		    height: auto;
+		    fill: $grey-light;
+		    position: absolute;
+		    top: 0; left: 0;
+		    z-index: 2;
+		    pointer-events: none;
+		}
+
+		.keyhole {
+			@extend .l-small-column;
+		    margin-bottom: $spacing-unit/2;
+		    width: 70%;
+		    height: 0;
+		    padding-bottom: 105%;
+		    @include media-query($on-laptop) {
+		    	padding-bottom: 42.8%;
+		    }
+		    overflow: hidden;
+		    background: #f3f3f3;
+		    position: relative;
+		    pointer-events: none;
+		}
+		.keyhole__content {
+		    position: absolute;
+		    top: 0; left: 0;
+		    width: 100%;
+		    height: 100%;
+		    overflow: scroll;
+		    img {
+		        width: 100%;
+		        height: auto;
+		        transition: transform 5s ease;
+		        transform: translate3D(0,-20px,0);
+		        animation: moveUpDown 15s infinite ease reverse;
+		    }
+		    &:hover img {
+		        animation-play-state: paused;
+		        //transform: translate3D(0,0,0);
+		    }
+		}
+	}
+	.section--6 {
+		background: $speed-bumps-color;
+		color: #fff;
+
+		.text-content {
+			@extend .l-center;
+			flex-direction: column;
+		}
+		
+	}
 }
+
 
 //Mobile first
 .cc-mobile-first {

@@ -11,3 +11,20 @@
 		opacity: 1;
 	}
 }
+
+@keyframes moveUpDown {
+    45% {
+        transform: translate3D(0,0,0)
+    }
+    55% {
+        transform: translate3D(0,0,0)
+    }
+}
+
+.fadeIn {
+	opacity: 0;
+}
+
+.ready .fadeIn {
+	animation: fadeIn 1s forwards;
+}
