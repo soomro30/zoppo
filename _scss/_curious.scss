@@ -141,48 +141,6 @@ $speed-bumps-color: #232b40;
 		.text-content {
 			@extend .l-flex;
 		}
-		.keyhole__svg {
-		    width: 100%;
-		    height: auto;
-		    fill: $grey-light;
-		    position: absolute;
-		    top: 0; left: 0;
-		    z-index: 2;
-		    pointer-events: none;
-		}
-
-		.keyhole {
-			@extend .l-small-column;
-		    margin-bottom: $spacing-unit/2;
-		    width: 70%;
-		    height: 0;
-		    padding-bottom: 105%;
-		    @include media-query($on-laptop) {
-		    	padding-bottom: 42.8%;
-		    }
-		    overflow: hidden;
-		    background: #f3f3f3;
-		    position: relative;
-		    pointer-events: none;
-		}
-		.keyhole__content {
-		    position: absolute;
-		    top: 0; left: 0;
-		    width: 100%;
-		    height: 100%;
-		    overflow: scroll;
-		    img {
-		        width: 100%;
-		        height: auto;
-		        transition: transform 5s ease;
-		        transform: translate3D(0,-20px,0);
-		        animation: moveUpDown 15s infinite ease reverse;
-		    }
-		    &:hover img {
-		        animation-play-state: paused;
-		        //transform: translate3D(0,0,0);
-		    }
-		}
 	}
 	.section--6 {
 		background: $speed-bumps-color;
@@ -194,6 +152,86 @@ $speed-bumps-color: #232b40;
 		}
 		
 	}
+	.keyhole__svg {
+	    width: 100%;
+	    height: auto;
+	    fill: $grey-light;
+	    position: absolute;
+	    top: 0; left: 0;
+	    z-index: 2;
+	    pointer-events: none;
+	}
+
+	.keyhole {
+		@extend .l-small-column;
+	    width: 25%;
+	    height: 0;
+	    padding-bottom: 37.5%;
+	    overflow: hidden;
+	    margin: 0 auto;
+	    background: #f3f3f3;
+	    position: relative;
+	}
+	.keyhole__content {
+	    position: absolute;
+	    top: 0; left: 0;
+	    width: 100%;
+	    height: 100%;
+	    overflow: scroll;
+	    img {
+	        width: 100%;
+	        height: auto;
+	        transition: transform 5s ease;
+	        animation: moveUpDown 15s infinite ease;
+	    }
+	    &:hover img {
+	        animation-play-state: paused;
+	        //transform: translate3D(0,0,0);
+	    }
+	}
+
+	// .keyhole__svg {
+	//     width: 100%;
+	//     height: auto;
+	//     fill: $grey-light;
+	//     position: absolute;
+	//     top: 0; left: 0;
+	//     z-index: 2;
+	//     pointer-events: none;
+	// }
+
+	// .keyhole {
+	// 	@extend .l-small-column;
+	//     margin-bottom: $spacing-unit/2;
+	//     width: 70%;
+	//     height: 0;
+	//     padding-bottom: 105%;
+	//     @include media-query($on-laptop) {
+	//     	padding-bottom: 42.8%;
+	//     }
+	//     overflow: hidden;
+	//     background: #f3f3f3;
+	//     position: relative;
+	//     pointer-events: none;
+	// }
+	// .keyhole__content {
+	//     position: absolute;
+	//     top: 0; left: 0;
+	//     width: 100%;
+	//     height: 100%;
+	//     overflow: scroll;
+	//     img {
+	//         width: 100%;
+	//         height: auto;
+	//         transition: transform 5s ease;
+	//         transform: translate3D(0,-20px,0);
+	//         animation: moveUpDown 15s infinite ease reverse;
+	//     }
+	//     &:hover img {
+	//         animation-play-state: paused;
+	//         //transform: translate3D(0,0,0);
+	//     }
+	// }
 }
 
 
