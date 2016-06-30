@@ -80,17 +80,14 @@ layout: default
 				<script type="text/javascript">
 				var lettering2 = document.getElementById('lettering2');
 				if( lettering2 ) {
-				    var filepath = '/assets/owd-bob/feb27.svg';
+				    // var filepath = '/assets/owd-bob/feb27.svg';
 				    //var filepath = '/assets/owd-bob/apr12.svg';
+				    var filepath = '/assets/owd-bob/june16.svg';
 				    var lettering2_v = new Vivus('lettering2', {
 				        duration: 250, 
 				        file: filepath,
 				        type: 'delayed',
 				        animTimingFunction: Vivus.EASE_OUT,
-				        onReady: function(e){
-				        	setInterval(function(){ e.play(-1); }, 3000);
-				        	setInterval(function(){ e.play(); }, 4000);
-				        }
 				    });
 
 
@@ -108,9 +105,9 @@ layout: default
 			<div class="l-offset">
 				<div class="image-container image-container--wide">
 					<picture class="image">
-						<source srcset="{{ "/assets/owd-bob/mona_with_logo_1200.jpg" | prepend: site.baseurl }}" media="(min-width: 641px)">
 						<source srcset="{{ "/assets/owd-bob/mona_with_logo_2300.jpg" | prepend: site.baseurl }}" media="(min-width: 1800px)">
-						<img src="{{ "/assets/owd-bob/mona_with_logo_1200.jpg" | prepend: site.baseurl }}" alt="Owd Bob's logo on top of Mona Lisa">
+						<source srcset="{{ "/assets/owd-bob/mona_with_logo_1200.jpg" | prepend: site.baseurl }}" media="(min-width: 641px)">
+						<img srcset="{{ "/assets/owd-bob/mona_with_logo_1200.jpg" | prepend: site.baseurl }}" alt="Owd Bob's logo on top of Mona Lisa">
 					</picture>
 				</div>
 			</div>
@@ -130,7 +127,8 @@ layout: default
 				    <div class="keyhole__content">
 				        <img src="{{ "/assets/owd-bob/instagram-feed_elin-johnsson.jpg" | prepend: site.baseurl }}" alt="Instagram feed from Owd Bob">
 				    </div>
-				    <svg class="keyhole__svg" xmlns="http://www.w3.org/2000/svg" width="200" height="300" viewBox="0 0 200 300"><title>keyhole</title><path d="M100,0a80,80,0,0,1,56.12,137l-2.43,2.39c-2.91,2.37-4.68,8.76-3.93,14.21l18.87,136.49A8.49,8.49,0,0,1,160,300h40V0H100Z"/><path d="M0,300H40a8.49,8.49,0,0,1-8.63-9.91L50.24,153.6c0.75-5.45-1-11.84-3.93-14.21L43.88,137A80,80,0,0,1,100,0H0V300Z"/></svg>
+				    <!-- <svg class="keyhole__svg" xmlns="http://www.w3.org/2000/svg" width="200" height="300" viewBox="0 0 200 300"><title>keyhole</title><path d="M100,0a80,80,0,0,1,56.12,137l-2.43,2.39c-2.91,2.37-4.68,8.76-3.93,14.21l18.87,136.49A8.49,8.49,0,0,1,160,300h40V0H100Z"/><path d="M0,300H40a8.49,8.49,0,0,1-8.63-9.91L50.24,153.6c0.75-5.45-1-11.84-3.93-14.21L43.88,137A80,80,0,0,1,100,0H0V300Z"/></svg> -->
+					<svg class="keyhole__svg" data-name="398d550c-2dd8-4e6d-b011-699f00888ff8" xmlns="http://www.w3.org/2000/svg" width="200" height="340" viewBox="0 0 200 340"><title>keyhole-invert</title><path d="M0-20V300H40a8.49,8.49,0,0,1-8.63-9.91L50.24,153.6c0.75-5.45-1-11.84-3.93-14.21L43.88,137a80,80,0,1,1,112.24,0l-2.43,2.39c-2.91,2.37-4.68,8.76-3.93,14.21l18.87,136.49A8.49,8.49,0,0,1,160,300h40V-20H0Z" transform="translate(0 20)"/><rect y="320" width="200" height="20"/></svg>
 
 				</div>
 

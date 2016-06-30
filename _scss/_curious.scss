@@ -164,13 +164,16 @@ $speed-bumps-color: #232b40;
 
 	.keyhole {
 		@extend .l-small-column;
-	    width: 25%;
-	    height: 0;
-	    padding-bottom: 37.5%;
+	    width: 190px;
+	    height: 285px;
+	    margin-bottom: 2em;
 	    overflow: hidden;
-	    margin: 0 auto;
 	    background: #f3f3f3;
 	    position: relative;
+	    @include media-query($on-laptop) {
+	    	width: 100px;
+		    height: 358px;
+		}
 	}
 	.keyhole__content {
 	    position: absolute;
@@ -178,15 +181,17 @@ $speed-bumps-color: #232b40;
 	    width: 100%;
 	    height: 100%;
 	    overflow: scroll;
+	    margin: 2px; //firefox fix to prevent spilling outside of container
 	    img {
 	        width: 100%;
 	        height: auto;
 	        transition: transform 5s ease;
+	        transform: translate3D(0,-40px,0);
 	        animation: moveUpDown 15s infinite ease;
 	    }
 	    &:hover img {
 	        animation-play-state: paused;
-	        //transform: translate3D(0,0,0);
+	        // transform: translate3D(0,20px,0);
 	    }
 	}
 

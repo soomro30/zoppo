@@ -25,6 +25,7 @@
 	font-weight: 700;
     font-style: italic;
     transition: transform 0.3s cubic-bezier(0,.3,.19,.99);
+	mix-blend-mode: lighten;
 	span {
 		display: block;
 		padding: 0.5em 1em 0.6em;
@@ -36,7 +37,6 @@
 	&:hover, &:focus {
 		@include button_active();
 		// TODO: Need to move this line to .button. But this prevent overflow scroll from working in keyhole att owd bob
-		mix-blend-mode: lighten;
 	}
 
 	&:before {
