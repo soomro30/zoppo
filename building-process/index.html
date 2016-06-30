@@ -6,22 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Lorem ipsum Case 3</title>
-  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis nesciunt repellat rem, consequuntur explicabo laboriosam sunt quod quidem sit quas ipsam elig...">
+  <title>The process of building this site</title>
+  <meta name="description" content="Fully Digital - This site is under construction.
+">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://fullydigital.github.io/case/lorem-ipsum-case-3/">
+  <link rel="canonical" href="http://fullydigital.github.io/building-process/">
   <link rel="alternate" type="application/rss+xml" title="Fully Digital" href="http://fullydigital.github.io/feed.xml">
 
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700italic' rel='stylesheet' type='text/css'>
 
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-  <script>
-    // Picture element HTML5 shiv
-    document.createElement( "picture" );
-  </script>
-  <script type="text/javascipt" src="/js/picturefill.min.js" async></script>
+  <!-- <script type="text/javascipt" src="/js/gsap-cubicbezier.js"></script> -->
 
 </head>
 
@@ -43,54 +40,76 @@
 
     <div class="page-content">
       
-        <article class="page" itemscope itemtype="http://schema.org/BlogPosting">
-	
-	<div class="hero" style="background-image: url(/assets/sketch/case-image.svg)"></div>
-	
-	<header class="page-header">
-		<h1 class="page-title" itemprop="name headline">Lorem ipsum Case 3</h1>
-		<p class="page-meta"><time datetime="2015-12-09T08:41:20+01:00" itemprop="datePublished">Dec 9, 2015</time> 
-		<span class="categories">web,design<span></p>
-	</header>
+        <article class="page">
 
-	<div class="text-content" itemprop="articleBody">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis nesciunt repellat rem, consequuntur explicabo laboriosam sunt quod quidem sit quas ipsam eligendi quisquam, architecto provident laudantium id ut! Mollitia, labore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsa dolorem, minima sunt maiores a ducimus sed atque, similique, molestias labore. Tempora, obcaecati repellat eius corporis laudantium. Fugit, dolorem qui?</p>
+  <header class="page-header">
+    <h1 class="page-title">The process of building this site</h1>
+  </header>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum animi nisi esse debitis dolores nemo ex, obcaecati ut odio nihil reprehenderit eveniet aliquam eum fuga, dolorem perferendis aperiam. Dolorem, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsa dolorem, minima sunt maiores a ducimus sed atque, similique, molestias labore. Tempora, obcaecati repellat eius corporis laudantium. Fugit, dolorem qui?</p>
+  <div class="page-content">
+    <h2 id="multiple-sections">Multiple Sections</h2>
+<p>To be able to style all posts differently, I hade to come up with a sollution to add multiple sections in a markdown file.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsa dolorem, minima sunt maiores a ducimus sed atque, similique, molestias labore. Tempora, obcaecati repellat eius corporis laudantium. Fugit, dolorem qui?</p>
+<p>First I tried to using an <a href="https://github.com/jekyll/jekyll/issues/246#issuecomment-1639375">variable-list-array</a>:</p>
 
-<p><a href="http://fullydigital.se">Launch site</a></p>
+<div class="language-markdown highlighter-rouge"><pre class="highlight"><code>sections:
+<span class="p">-</span> Lorem ipsum section 1.
+<span class="p">-</span> |
+  ## Headline for section 2
+  Lorem ipsum section 2 with multiple lines and markdown
+</code></pre>
+</div>
+<p>And then print out the sections in the layout:</p>
+
+<div class="language-liquid highlighter-rouge"><pre class="highlight"><code>&lt;div&gt;<span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">sections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">markdownify</span><span class="w"> </span><span class="p">}}</span>&lt;/div&gt;
+&lt;div&gt;<span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">sections</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">markdownify</span><span class="w"> </span><span class="p">}}</span>&lt;/div&gt;
+&lt;div&gt;<span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">sections</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">markdownify</span><span class="w"> </span><span class="p">}}</span>&lt;/div&gt;
+</code></pre>
+</div>
+
+<p>But it wasn’t possible to add the markdownify filter to the array items. So hade to break up the sections in individual variables. I also checked if the current variable wasn’t null (nil) to prevent the codeblock from executing in case the variable wasn’t set.</p>
+
+<div class="language-liquid highlighter-rouge"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="kr">unless</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">section1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">nil</span><span class="w"> </span><span class="p">%}</span>
+&lt;div class="section section--1"&gt;
+    &lt;div class="text-content"&gt;
+        <span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">section1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">markdownify</span><span class="w"> </span><span class="p">}}</span>
+    &lt;/div&gt;
+&lt;/div&gt;
+<span class="p">{%</span><span class="w"> </span><span class="kr">endunless</span><span class="w"> </span><span class="p">%}</span>
+</code></pre>
+</div>
+
+<h2 id="custom-js">Custom JS</h2>
+<p>To add custom javascript files to different post, I used <a href="http://etosch.github.io/2016/03/09/using-custom-javascript-in-jekyll-blogs.html">this sollution</a> described by Emma Tosch. First I addes the URL to the files in the post</p>
+
+<div class="language-markdown highlighter-rouge"><pre class="highlight"><code>scripts: 
+<span class="p">-</span> js/vivus.js
+<span class="p">-</span> js/curious/speed-bumps.js
+</code></pre>
+</div>
+
+<p>Then in the layout, I looped trough the files and inlined them:</p>
+
+<div class="language-liquid highlighter-rouge"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>js<span class="w"> </span>in<span class="w"> </span>page.scripts<span class="w"> </span><span class="p">%}</span>
+    &lt;script type="text/javascript"&gt;
+    <span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>{{<span class="w"> </span><span class="nv">js</span><span class="w"> </span>}}<span class="w"> </span><span class="p">%}</span>
+    &lt;/script&gt;
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+</code></pre>
+</div>
+
+<h3 id="resources">Resources:</h3>
+
+<ul>
+  <li><a href="https://github.com/jekyll/jekyll/issues/246#issuecomment-1639375">Multiple sections</a></li>
+  <li><a href="http://etosch.github.io/2016/03/09/using-custom-javascript-in-jekyll-blogs.html">Custom JS</a></li>
+</ul>
 
 
-	</div>
+  </div>
 
 </article>
 
-
-<div class="case-list case-list--small">
-	
-		
-			
-		
-		<a class="case-list__item" href="/case/lorem-ipsum-case-2/">
-		<!-- <span class="case-meta">Dec 9, 2015</span> -->
-			<h2 class="case-list__header">
-				Matbaren Kundzon
-			</h2>
-		</a>
-		
-	
-		
-		<a class="case-list__item" href="/case/owd-bob/">
-		<!-- <span class="case-meta">Dec 9, 2015</span> -->
-			<h2 class="case-list__header">
-				Owd Bob
-			</h2>
-		</a>
-		
-	
-</div>
       
     </div>
 
@@ -109,9 +128,9 @@
         
         
         
-        <a class="page-link" href="/contact/">Contact us</a>
         
         
+        <a class="page-link" href="/building-process/">The process of building this site</a>
         
         
 
