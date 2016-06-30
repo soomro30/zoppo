@@ -67,8 +67,8 @@ $speed-bumps-color: #232b40;
     .cc__image {
         width: 50%;
         opacity: 0.3;
+        transition: transform 3s $cb-ease_out;
         transform: rotate3d(-21, 12, 0, 50deg) translate3d(50%,0,0);
-        transition: transform 3s $cubic-bezier;
     }
     &:hover .cc__image {
     	transform: rotate3d(-15, 8, 0, 48deg) translate3d(50%,0,0);
@@ -159,7 +159,7 @@ $speed-bumps-color: #232b40;
 	    position: absolute;
 	    top: 0; left: 0;
 	    z-index: 2;
-	    pointer-events: none;
+	    // pointer-events: none;
 	}
 
 	.keyhole {
@@ -180,14 +180,13 @@ $speed-bumps-color: #232b40;
 	    top: 0; left: 0;
 	    width: 100%;
 	    height: 100%;
-	    overflow: scroll;
+	    // overflow: scroll;
 	    margin: 2px; //firefox fix to prevent spilling outside of container
 	    img {
 	        width: 100%;
 	        height: auto;
-	        transition: transform 5s ease;
-	        transform: translate3D(0,-40px,0);
-	        animation: moveUpDown 15s infinite ease;
+	        transform: translate3D(0,-50%,0);
+	        animation: moveUpDown 120s infinite ease;
 	    }
 	    &:hover img {
 	        animation-play-state: paused;

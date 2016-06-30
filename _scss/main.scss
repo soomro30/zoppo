@@ -11,31 +11,38 @@
 $base-font-family: "GT-Pressura-Mono-Regular", monospace;
 $header-font-family: "Playfair Display", serif;
 
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-font-size:    16px;
+$base-font-weight:  400;
+$small-font-size:   $base-font-size * 0.875;
+$base-line-height:  1.5;
 
-$spacing-unit:     60px;
+$spacing-unit:      60px;
 
-$text-color:       rgba(174,90,253,1);
-$background-color: #fdfdfd;
-$brand-color:      rgba(174,90,253,1);
-$brand-color-invert: #ffffff;
+$background-color:  #fdfdfd;
+$brand-color:       #e08f8f;
+$brand-color-invert:#ffffff;
 
-$secondary-color:  rgba(52,170,199,1);
+// $secondary-color:   rgba(52,170,199,1);
+$secondary-color:   rgb(195, 255, 220);
+$secondary-color-invert:   #333;
+
+$third-color:       rgba(174,90,253,1);
+$third-color-invert: #ffffff;
 
 $grey:       #828282;
 $grey-light: lighten($grey, 45%);
 $grey-dark:  darken($grey, 25%);
 
-$cubic-bezier:     cubic-bezier(0.2,2,.3,.8);
+$cubic-bezier:      cubic-bezier(0.2,2,.3,.8);
+$text-color:        $brand-color;
+$cb-ease_out:       cubic-bezier(0.2,1,.3,.8);
+
 
 // Width of the content area
-$content-width:    60em;
+$content-width:     60em;
 
-$on-palm:          600px;
-$on-laptop:        40em; //640px
+$on-palm:           600px;
+$on-laptop:         40em; //640px
 
 * { box-sizing: border-box }
 
