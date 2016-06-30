@@ -755,6 +755,7 @@ pre {
   color: #ffffff;
   position: relative; }
   .about-us h1 {
+    width: 90%;
     line-height: 1.5;
     transition: -webkit-transform 3s cubic-bezier(0.2, 1, 0.3, 0.8);
     transition: transform 3s cubic-bezier(0.2, 1, 0.3, 0.8);
