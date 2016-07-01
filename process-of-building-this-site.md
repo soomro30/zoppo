@@ -2,7 +2,7 @@
 layout: page
 title: The process of building this site
 permalink: /building-process/
-published: false
+published: true
 author: Jonas Sandstedt
 date: 2016-06-29
 ---
