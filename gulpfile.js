@@ -56,7 +56,9 @@ gulp.task('sass', function () {
 
 gulp.task("deploy", ["jekyll-build"], function () {
     return gulp.src("./_site/**/*")
-        .pipe(ghPages());
+        .pipe(ghPages({
+            branch: "master"
+        }));
 });
 
 
