@@ -36,9 +36,10 @@ layout: default
             ## Get scripts from
             ## current post
             -->
-            {% for js in page.scripts %}
+			{% for js in cc.scripts %}
+				{% assign root = 'js/' %}
                 <script type="text/javascript">
-                {% include {{ js }} %}
+                {% include {{ root | append: js }} %}
                 </script>
             {% endfor %}
        

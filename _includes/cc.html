@@ -1,0 +1,47 @@
+<section class="cc__wrap">
+    <ul class="cc">
+        <!-- Get all cc-about posts and revers them -->
+        {% assign items = site.curious-about | sort: 'date' | reverse %}
+        <!-- Get only the latest post -->
+        {% for cc in items limit:1 %}
+        <li class="cc__item cc__item--{{ cc.slug }} ">
+            <!-- <span class="cc-meta">{{ cc.date | date: "%b %-d, %Y" }}</span> -->
+            <div class="cc__overlay">
+                <h1 class="header">
+                    <span class="cc__subheader">Current curiosity:</span> 
+                    {{ cc.title }}
+                </h1>
+                <a class="button button--inv" href="{{ cc.url | prepend: site.baseurl }}"><span>Explore</span></a>
+            </div>
+            <div class="pagination">
+                <div class="pagination__counter">1<span>/3</span></div>
+                <a class="pagination__arrow pagination__next" href="#">→</a>
+                <a class="pagination__arrow pagination__previous disabled" href="#">←</a>
+            </div>
+            <!-- 
+            ###############################
+            ## Get code for the background
+            ## set in current post
+            -->
+            {% unless cc.background == nil %}
+            <div class="cc__background">
+                {{ cc.background }}
+            </div>
+            {% endunless %}
+            
+            <!-- 
+            ####################
+            ## Get scripts from
+            ## current post
+            -->
+            {% for js in cc.scripts %}
+                {% assign root = 'js/' %}
+                <script type="text/javascript">
+                {% include {{ root | append: js }} %}
+                </script>
+            {% endfor %}
+
+        </li>
+        {% endfor %}
+    </ul>
+</section>
