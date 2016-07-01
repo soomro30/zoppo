@@ -1,21 +1,63 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<section class="cc__wrap">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Fully Digital</title>
+  <meta name="description" content="Fully Digital - This site is under construction.
+">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://fullydigital.github.io/">
+  <link rel="alternate" type="application/rss+xml" title="Fully Digital" href="http://fullydigital.github.io/feed.xml">
+
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700italic' rel='stylesheet' type='text/css'>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script type="text/javascipt" src="/js/picturefill.min.js" async></script>
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">
+     <svg class="logo" width="500" height="500" viewBox="0 0 500 500"><title>Fully Digital</title><path class="fl-1" d="M392,488.5a2.5,2.5,0,0,1-1.08-.25c-6.25-3-4.94-8.69-4.07-12.45l0.09-.41c0.75-3.28,1.54-6.55,2.33-9.82,1.44-5.94,2.92-12.08,4.12-18.15,1.16-5.9,2.19-12,3.18-17.8,1.19-7,2.41-14.22,3.89-21.3,1-4.94,2.46-9.83,3.84-14.56,1-3.5,2.08-7.13,3-10.7a51.42,51.42,0,0,0,1-6.58,61.36,61.36,0,0,1,1-6.59c1.45-6.55,2.79-13.26,4.09-19.75,3.94-19.7,8-40.08,15.69-59.32,1.85-4.65,3.35-9.59,4.8-14.37,0.42-1.39.84-2.78,1.27-4.16a14.38,14.38,0,0,0-3.51,3.88c-0.31.44-.63,0.88-1,1.3C426.37,283.19,415.94,288,407.9,288a15.36,15.36,0,0,1-3.59-.39c-7.63-1.84-13.81-10-14.71-19.44-0.8-8.4-1.26-18.15,1-28.18-0.9,1.38-1.87,2.7-2.82,4-2.77,3.77-5.39,7.33-5.89,11.85a4.09,4.09,0,0,1-.8,1.94l-3.62,5.06c-6.21,8.69-12.64,17.68-19,26.46a6.54,6.54,0,0,1-3.06,2,16.62,16.62,0,0,0-1.53.69,2.5,2.5,0,0,1-2.34,0l-8.35-4.59a2.5,2.5,0,0,1-1.21-1.54c-3.76-14-1.57-27.19.56-39.91,0.52-3.09,1-6.24,1.48-9.41l-1.89,2.93a121,121,0,0,0-9,15.57c-7.69,17.07-22,27.57-35.75,37.72l-0.15.11a11.74,11.74,0,0,1-7,2.65c-3.24,0-6.23-1.84-8.86-5.46a31,31,0,0,1-2.72-4.82c-0.29-.59-0.56-1.16-0.84-1.67a2.5,2.5,0,0,1-.19-1.88,148,148,0,0,0,5.92-32c-1.88.81-2.79,2.49-3.75,4.62-5.65,12.53-12.38,22.57-20.58,30.69a44.93,44.93,0,0,0-4.79,6,64.84,64.84,0,0,1-3.95,5.17,67.09,67.09,0,0,1-6,5.77c-1,.87-2,1.78-3,2.77a2.5,2.5,0,0,1-2.75.44c-1.37-.63-2.82-1.17-4.21-1.69-3.38-1.26-6.58-2.45-8.87-4.9s-3.3-5.76-4.35-9.24l-0.51-1.67a9,9,0,0,0-1.88,1.28c-2.47,2.42-5,5.22-7.86,8.54-7.46,8.81-15.83,13.09-25.57,13.09a38.81,38.81,0,0,1-10.23-1.47,2.5,2.5,0,0,1-.69-0.31c-15.9-10.26-17.78-27.54-17.65-41.44a116.54,116.54,0,0,1,1.42-19.72c1.07-5.88,2.52-11.75,3.93-17.43,0.92-3.72,1.87-7.57,2.7-11.36a54.75,54.75,0,0,0,.89-7.08v-0.59c-5.67,1.7-9.22,4.88-11,9.84a2.5,2.5,0,0,1-2.34,1.64h-0.18c-3.79-.26-5.45-1.89-6.18-3.2a6,6,0,0,1,.23-5.8,32.5,32.5,0,0,1,7.18-9.27c5.32-4.61,10.75-8.94,16.49-13.53q3.42-2.73,6.94-5.57a2.5,2.5,0,0,1,3.42.26l8.45,9.3a2.5,2.5,0,0,1,.65,1.58c0.4,9.93-.9,20.34-4.1,32.75l-0.2.77c-4.24,16.49-8.63,33.54-6.43,50.9a33.89,33.89,0,0,0,6.17,16,15.6,15.6,0,0,0,3.34.38c4.18,0,8.14-1.83,12.85-5.93a88.34,88.34,0,0,0,21.09-27.09,37.23,37.23,0,0,0,2.66-9c0.36-1.69.73-3.44,1.2-5.15,3.89-14,8.73-31.37,13.47-48,0.9-3.15,1.95-6.3,3-9.35,0.48-1.43,1-2.86,1.42-4.31a2.5,2.5,0,0,1,2-1.7l8.5-1.29L259,181a2.5,2.5,0,0,1,3.26-.16,8.24,8.24,0,0,0,.7.49,5.53,5.53,0,0,1,2,2,6.25,6.25,0,0,1,.45,4.28q-1.37,4.95-2.75,9.9c-2.35,8.44-4.78,17.17-7.07,25.76l-1.17,4.53q-1.62,6.91-3.25,13.82c-0.12.52-.26,1-0.4,1.54a19.89,19.89,0,0,0-.55,2.35L250,247.81c-1.32,9.13-2.69,18.58-3.91,27.87a58.88,58.88,0,0,0-.35,6.06v0.34L246,282c1.63-1.71,3.33-3.4,5-5,4.38-4.36,8.91-8.86,12.26-13.88,12-18.06,24.5-36.73,32-57.72,0.3-.85.63-1.69,1-2.53a38.54,38.54,0,0,0,1.34-3.69c2.47-8.32,4.92-16.8,7.29-25,5.25-18.17,10.69-37,16.63-55.25,4.14-12.75,9.34-25.35,14.37-37.52,1.68-4.06,3.36-8.13,5-12.2a51.6,51.6,0,0,1,4-7.4c0.65-1.06,1.3-2.13,1.92-3.24A2.5,2.5,0,0,1,349,57.28h14.24a2.5,2.5,0,0,1,2.45,3c-0.37,1.82-.67,3.62-1,5.35a61.2,61.2,0,0,1-2.5,10.94c-2.42,6.68-5.08,13.38-7.65,19.86-2.44,6.16-5,12.52-7.27,18.83-1.85,5.08-3.45,10.39-5,15.53-1.08,3.61-2.21,7.34-3.41,11-1,3-2.12,5.91-3.22,8.76-1,2.57-2,5.24-2.91,7.87a89.26,89.26,0,0,0-2.3,8.71l-0.35,1.54a12.58,12.58,0,0,0-.21,1.79,12.52,12.52,0,0,1-.62,3.52c-6.65,17.88-10.12,36.93-13.48,55.35-1.28,7-2.61,14.34-4.1,21.48a72.12,72.12,0,0,0-1.2,11.71c0,0.89-.07,1.79-0.11,2.71a11.29,11.29,0,0,0,3.55-2.62c6.93-10.24,13.75-20.83,20.35-31.07l5-7.78c0.92-1.42,1.81-2.91,2.68-4.36s1.71-2.85,2.62-4.27c8.08-12.59,12.59-27.2,16.18-39.9,6.42-22.7,15.17-46.4,26.75-72.46C393.44,89.44,400.58,74,410.35,60a79.63,79.63,0,0,1,6.07-7.36c1-1.13,2-2.29,3.09-3.52a2.5,2.5,0,0,1,3.2-.52l9.75,5.9a2.5,2.5,0,0,1,1.19,2.5c-0.15,1.31-.23,2.63-0.32,4a39.16,39.16,0,0,1-1.41,9.55c-2.58,8-5.71,16-8.74,23.7l-1.29,3.28c-1.67,4.26-3.61,8.46-5.48,12.52l-1.91,4c-1.93,4.22-3.92,8.59-6.17,12.77-1.26,2.35-2.7,4.6-4.08,6.79-1.49,2.34-2.89,4.55-4.11,6.88-3.27,6.22-6.47,12.62-9.57,18.8q-2.85,5.7-5.73,11.38c-0.73,1.44-1.54,2.84-2.33,4.19a53.51,53.51,0,0,0-3.16,6c-3.34,8-6.6,16.13-9.74,24q-1.57,4-3.15,7.9c-4.84,12.09-6.51,25.21-8.12,37.9-0.29,2.32-.59,4.64-0.9,7-0.37,2.76-.62,5.52-0.88,8.44q-0.1,1.17-.21,2.36a1.57,1.57,0,0,0,.34,0c0.2,0,.82,0,2-1.83,1.6-2.39,3.27-4.77,4.89-7.07,2.35-3.35,4.79-6.81,7-10.31a479.26,479.26,0,0,0,33.15-63.22c0.51-1.16,1-2.37,1.43-3.55,1.7-4.41,3.46-9,7.62-12a2.5,2.5,0,0,1,1.47-.48h13.9a2.5,2.5,0,0,1,2.44,3c-0.28,1.29-.61,2.55-0.93,3.77a36,36,0,0,0-1.39,7.14c-0.57,11.34-4,22-7.28,32.22-1.12,3.47-2.27,7.07-3.29,10.61a123.71,123.71,0,0,0-3.25,18c-0.25,1.92-.5,3.84-0.77,5.75s-0.37,3.72-.48,5.7a61.64,61.64,0,0,1-.66,7c-0.65,3.78,0,6.58,2.06,9a8.08,8.08,0,0,0,1.89.23c2.83,0,5.47-1.66,8.07-5.08l1.24-1.63c8-10.43,16.19-21.21,22.4-32.74,4.59-8.52,8.16-17.87,11.61-26.91,1.59-4.16,3.23-8.46,5-12.65,2-4.83,4-9.62,6.16-14.69l3-7.18a2.5,2.5,0,0,1,1-1.15l6.86-4.3a2.5,2.5,0,0,1,2.28-.19c4,1.65,8.35,5.22,6.36,12.85l-0.14.54a27.65,27.65,0,0,1-2.64,7.28c-5.11,8.69-8.49,18.39-11.75,27.77a213.16,213.16,0,0,1-8.22,21.15c-3.44,7.26-5.7,15.07-7.89,22.63-1.55,5.35-3.15,10.89-5.17,16.26A265.26,265.26,0,0,0,446.75,301c-1.24,4.77-2.52,9.7-3.92,14.52-1,3.32-2.11,6.62-3.22,9.8-1.25,3.61-2.55,7.34-3.56,11-3.11,11.36-5.65,21.71-7.77,31.64-1.1,5.17-2,10.5-2.8,15.67-0.62,3.86-1.27,7.86-2,11.78-1.3,6.84-2.68,13.79-4,20.5-2.07,10.4-4.21,21.16-6.09,31.76-0.84,4.72-1.27,9.65-1.69,14.42-0.27,3.13-.56,6.36-1,9.55a57.77,57.77,0,0,1-1.44,7c-0.21.84-.41,1.64-0.58,2.39a2.5,2.5,0,0,1-1.56,1.79l-14.29,5.41A2.49,2.49,0,0,1,392,488.5Zm10.8-376.35c-0.87,1.8-1.72,3.63-2.56,5.47q1.26-2.72,2.55-5.47h0Z"/><path class="fl-1" d="M421.42,50.77l9.75,5.9c-0.5,4.38-.31,9-1.63,13.09-2.91,9.08-6.49,18-10,26.83-1.84,4.7-4,9.28-6.11,13.87-2.35,5.11-4.63,10.27-7.29,15.22-2.52,4.68-5.74,9-8.21,13.69-5.25,10-10.18,20.15-15.31,30.21-1.78,3.5-4,6.77-5.56,10.37-4.45,10.6-8.64,21.31-12.91,32-5.84,14.58-7.11,30.1-9.18,45.45-0.56,4.13-.84,8.29-1.27,12.66a5.79,5.79,0,0,0,3,1c1.67,0,2.93-1.16,4.12-2.94,3.91-5.85,8.16-11.48,11.91-17.44a479.23,479.23,0,0,0,33.33-63.55c2.37-5.43,3.64-11.18,8.23-14.53h13.9c-0.85,3.9-2.19,7.58-2.38,11.32-0.74,14.81-6.46,28.29-10.47,42.26-2.23,7.78-2.93,16-4.09,24.09-0.6,4.18-.42,8.47-1.13,12.63-0.78,4.53,0,8.34,3.17,11.61a10.85,10.85,0,0,0,3.21.49c4.45,0,7.76-3,10.06-6.07,8.51-11.16,17.22-22.4,23.85-34.69,6.79-12.6,11.19-26.49,16.68-39.79,2.9-7,5.9-14,9.18-21.86l6.87-4.3c5.16,2.13,6,5.64,4.89,9.91a28.1,28.1,0,0,1-2.51,7.18c-9,15.44-12.49,33.18-20,49.13-6,12.61-8.3,26.2-13.14,39.08-5,13.37-7.88,27.55-11.9,41.32-2,7-4.86,13.83-6.79,20.89-2.88,10.52-5.52,21.11-7.8,31.78-1.94,9.1-3.09,18.36-4.83,27.5-3.31,17.44-7,34.81-10.11,52.29-1.41,7.94-1.66,16.08-2.66,24.1a92.5,92.5,0,0,1-2,9.12L392,486c-4.62-2.22-3.51-6.21-2.63-10,2.14-9.35,4.62-18.64,6.47-28,2.55-13,4.37-26.12,7.06-39.07,1.77-8.49,4.71-16.74,6.78-25.18,1-4.31,1-8.88,2-13.23,5.83-26.41,9.55-53.34,19.65-78.69,2.48-6.21,4.27-12.71,6.26-19.1,0.31-1,0-2.16,0-3.8-4.9.54-6.78,4.17-9,7.12-3.89,5.15-13.76,9.57-20.79,9.57a12.84,12.84,0,0,1-3-.32c-6.56-1.59-12-8.89-12.81-17.24-1-10.73-1.12-21.4,2.06-31.87a28,28,0,0,0,.39-4.37c-2.06,1.62-3.55,2.2-4,3.25-3.26,7.12-10.23,12.23-11.16,20.61a1.75,1.75,0,0,1-.35.76c-7.52,10.52-15,21-22.64,31.5-0.59.8-1.93,1-3.7,2l-8.35-4.59c-5.37-20,1.88-38.24,3-57.24a35.25,35.25,0,0,0-3.63,4.25c-4.44,7.2-9.51,14.14-13,21.8-7.45,16.53-21.27,26.66-35.1,36.84a9.42,9.42,0,0,1-5.49,2.16c-2.48,0-4.72-1.51-6.84-4.43a48.89,48.89,0,0,1-3.38-6.2A148.94,148.94,0,0,0,286,246.78c-5.41.12-7.25,3.4-8.7,6.61-5,11.13-11.32,21.28-20.06,29.94-3.37,3.34-5.71,7.71-8.86,11.31-2.49,2.85-5.5,5.24-8.83,8.36-4.64-2.13-9.54-3.07-12.3-6s-3.43-8-5.31-12.86c-2,1.22-3.76,1.91-5,3.14-2.81,2.76-5.47,5.7-8,8.71-6.51,7.56-14.13,12-23.64,12a36.12,36.12,0,0,1-9.57-1.38c-13.83-8.93-16.66-23.54-16.5-39.32A114.29,114.29,0,0,1,160.6,248c1.76-9.65,4.51-19.12,6.61-28.71,0.76-3.47.84-7.1,1.31-11.43-8.37,1.52-13.69,5.38-16.21,12.21-4.53-.32-5.21-2.91-3.91-5.34a30.16,30.16,0,0,1,6.6-8.56c7.42-6.42,15.19-12.43,23.37-19l8.45,9.3c0.43,10.7-1.23,21.16-4,32-4.39,17.08-9,34.5-6.69,52.61A36.33,36.33,0,0,0,183.28,299a18.43,18.43,0,0,0,4.81.66c5.52,0,10.12-2.74,14.49-6.55a90.65,90.65,0,0,0,21.69-27.85c2.22-4.42,2.68-9.71,4-14.58q6.69-24,13.47-48c1.29-4.53,2.87-9,4.36-13.58l9.27-1.41,5.18-4.94c0.89,0.7,1.74,1.06,2.07,1.7a3.73,3.73,0,0,1,.27,2.47c-3.29,11.9-6.65,23.79-9.82,35.68q-2.17,9.26-4.35,18.51c-0.32,1.37-.79,2.72-1,4.1-1.46,10.05-2.92,20.1-4.24,30.17-0.39,3-.32,6-0.49,9.94,2.26-.69,3.89-0.69,4.66-1.5,6-6.32,12.8-12.17,17.59-19.34C277.63,246,290,227.38,297.5,206.17c0.75-2.12,1.7-4.19,2.34-6.34,7.93-26.74,15.29-53.67,23.9-80.19,5.47-16.84,12.68-33.12,19.32-49.56,1.44-3.57,3.74-6.8,5.74-10.34H363c-1.17,5.79-1.61,11.1-3.36,15.94-4.7,13-10.19,25.7-14.92,38.68-3.18,8.73-5.51,17.77-8.43,26.6-1.85,5.6-4.23,11-6.12,16.61-1.16,3.41-1.91,7-2.72,10.49-0.38,1.64-.17,3.45-0.75,5C317.5,198,314.5,224.4,309.09,250.23c-1.18,5.67-.93,11.64-1.48,19.6,3.84-2.59,6.92-3.66,8.38-5.83,8.68-12.82,17-25.89,25.4-38.89,1.83-2.84,3.48-5.79,5.3-8.63,8-12.49,12.51-26.51,16.49-40.57,7-24.77,16.17-48.59,26.63-72.13,6.56-14.77,13.39-29.12,22.6-42.32,2.54-3.64,5.73-6.83,9-10.69m-7.3,39.83c-13.47,13.85-17.64,32.93-27.38,48.88-1.86,3-2.13,7.07-3.13,10.65l2.33,0.83c10.32-19.66,21-39.12,28.19-60.36m-51-30.87h0M428.2,172.59h0M421.42,45.77a5,5,0,0,0-3.81,1.76c-1,1.2-2,2.36-3,3.48a81.54,81.54,0,0,0-6.25,7.59c-9.9,14.18-17.1,29.71-23.07,43.16-11.63,26.17-20.41,50-26.87,72.8-3.54,12.53-8,26.92-15.88,39.23-0.93,1.45-1.81,2.92-2.66,4.33s-1.74,2.9-2.63,4.28l-5,7.78c-6.19,9.6-12.57,19.51-19,29.15a52.33,52.33,0,0,1,.87-8.08c1.5-7.17,2.83-14.48,4.11-21.54,3.34-18.31,6.79-37.25,13.36-54.93a14.74,14.74,0,0,0,.77-4.2,11.21,11.21,0,0,1,.16-1.41l0.35-1.54a86.09,86.09,0,0,1,2.23-8.47c0.88-2.58,1.85-5.1,2.88-7.77,1.11-2.87,2.25-5.84,3.26-8.87,1.22-3.69,2.35-7.44,3.44-11.06,1.53-5.1,3.12-10.38,5-15.39,2.29-6.28,4.81-12.62,7.25-18.76,2.58-6.5,5.25-13.21,7.68-19.93A63,63,0,0,0,367,66c0.28-1.66.56-3.37,0.9-5.09a5,5,0,0,0-4.86-6.17H348.83a5,5,0,0,0-4.33,2.54c-0.59,1-1.22,2.08-1.88,3.16a53.48,53.48,0,0,0-4.12,7.77c-1.64,4.06-3.34,8.18-5,12.17-5,12.22-10.27,24.87-14.44,37.72-6,18.34-11.39,37.15-16.65,55.33-2.37,8.2-4.82,16.67-7.28,25-0.33,1.11-.78,2.26-1.27,3.48-0.33.84-.67,1.7-1,2.61-7.36,20.7-19.72,39.24-31.68,57.17-3.21,4.81-7.45,9-11.94,13.5l-0.68.67c1.21-9.22,2.57-18.59,3.88-27.66l0.33-2.28a18.25,18.25,0,0,1,.49-2c0.15-.54.3-1.08,0.43-1.63q1.65-7,3.29-14l1-4.45c2.28-8.55,4.7-17.25,7-25.66q1.38-5,2.75-9.9a8.76,8.76,0,0,0-.64-6.08,7.84,7.84,0,0,0-2.89-3,6.24,6.24,0,0,1-.55-0.39,5,5,0,0,0-6.53.32l-4,3.85-4.67.71-3.05.46a5,5,0,0,0-4,3.41c-0.47,1.44-.94,2.87-1.41,4.28-1,3.08-2.09,6.26-3,9.46-4.39,15.43-8.7,30.89-13.48,48-0.5,1.79-.88,3.58-1.24,5.31A35.53,35.53,0,0,1,219.8,263a85.85,85.85,0,0,1-20.5,26.33c-4.22,3.68-7.68,5.32-11.21,5.32a12.53,12.53,0,0,1-1.87-.15,31.58,31.58,0,0,1-5.15-14c-2.14-16.89,2.19-33.7,6.37-50l0.2-.77c3.26-12.65,4.58-23.29,4.17-33.47a5,5,0,0,0-1.29-3.16l-6-6.61-2.45-2.69a5,5,0,0,0-6.85-.53q-3.51,2.83-6.93,5.55c-5.77,4.61-11.21,9-16.58,13.6a35,35,0,0,0-7.75,10,8.47,8.47,0,0,0-.21,8.19c1,1.86,3.28,4.14,8.19,4.49h0.35a5,5,0,0,0,4.69-3.27,12.28,12.28,0,0,1,5.84-6.86,32.24,32.24,0,0,1-.52,3.28c-0.82,3.76-1.77,7.59-2.69,11.3-1.41,5.72-2.87,11.63-4,17.59a118.61,118.61,0,0,0-1.46,20.14c-0.14,14.55,1.87,32.64,18.79,43.57a5,5,0,0,0,1.39.62,41.32,41.32,0,0,0,11,1.53c10.52,0,19.51-4.57,27.47-14,2.32-2.73,4.46-5.1,6.52-7.19a21.24,21.24,0,0,0,4.35,8.37c2.69,2.89,6.32,4.24,9.82,5.54a41.76,41.76,0,0,1,4,1.62,5,5,0,0,0,5.5-.89c1-1,2-1.86,3-2.73a68.92,68.92,0,0,0,6.18-6,66.58,66.58,0,0,0,4.1-5.37,43.2,43.2,0,0,1,4.51-5.67,99.15,99.15,0,0,0,19-26.93A156.51,156.51,0,0,1,275.05,281a5,5,0,0,0,.39,3.76c0.25,0.46.51,1,.79,1.59a32.94,32.94,0,0,0,3,5.2c3.13,4.3,6.79,6.48,10.88,6.48a14.31,14.31,0,0,0,8.45-3.13l0.15-.11c14-10.34,28.59-21,36.55-38.71a76.87,76.87,0,0,1,4.26-8c-2,12.2-3.74,24.82-.08,38.43a5,5,0,0,0,2.42,3.09l8.35,4.59a5,5,0,0,0,4.68.07c0.45-.23.89-0.41,1.35-0.6a8.77,8.77,0,0,0,4.12-2.86c6.4-8.79,12.82-17.77,19-26.45l3.63-5.08a6.61,6.61,0,0,0,1.25-3.12,15,15,0,0,1,2.34-6.21,113.42,113.42,0,0,0,.45,18.51c1,10.45,8,19.54,16.61,21.63a17.83,17.83,0,0,0,4.17.46c7.1,0,15.94-3.51,21.53-8.2-0.83,2.57-1.7,5.09-2.69,7.57-7.76,19.46-11.85,40-15.81,59.76-1.3,6.48-2.63,13.17-4.08,19.7a63.31,63.31,0,0,0-1,6.86,49.68,49.68,0,0,1-1,6.26c-0.86,3.52-1.91,7.12-2.93,10.6-1.4,4.78-2.84,9.71-3.89,14.75-1.48,7.12-2.71,14.38-3.9,21.39-1,5.83-2,11.87-3.17,17.74s-2.66,12.13-4.09,18c-0.78,3.22-1.59,6.55-2.34,9.85l-0.09.4c-0.85,3.7-2.63,11.39,5.43,15.27a5,5,0,0,0,3.94.17l5.78-2.19,8.51-3.22a5,5,0,0,0,3.11-3.59c0.16-.7.35-1.49,0.56-2.32a59.68,59.68,0,0,0,1.49-7.27c0.4-3.23.69-6.49,1-9.64,0.43-4.93.84-9.59,1.66-14.2,1.88-10.58,4-21.32,6.08-31.71,1.34-6.72,2.72-13.67,4-20.52,0.75-4,1.4-8,2-11.85,0.83-5.13,1.69-10.44,2.78-15.55,2.11-9.89,4.64-20.19,7.73-31.5,1-3.62,2.21-7.15,3.51-10.88,1.12-3.22,2.27-6.54,3.26-9.92,1.42-4.85,2.7-9.8,3.94-14.59A263.3,263.3,0,0,1,457,275.34c2-5.46,3.67-11,5.24-16.45,2.26-7.81,4.4-15.18,7.75-22.26a215,215,0,0,0,8.32-21.4c3.37-9.69,6.56-18.85,11.55-27.32a30,30,0,0,0,2.9-7.91l0.14-.54c1.91-7.32-.87-12.93-7.83-15.79a5,5,0,0,0-4.56.39l-5.17,3.24-1.69,1.06a5,5,0,0,0-2,2.3l-3,7.21c-2.14,5.07-4.16,9.85-6.16,14.68-1.74,4.22-3.39,8.54-5,12.71-3.42,9-7,18.24-11.48,26.62-6.12,11.35-14.29,22.06-22.19,32.41l-1.24,1.63C419.5,270,417.27,270,416.5,270H416c-1.16-1.66-1.44-3.57-1-6.26a63.47,63.47,0,0,0,.69-7.28c0.11-1.92.21-3.74,0.46-5.48,0.28-1.93.53-3.89,0.78-5.79a120,120,0,0,1,3.17-17.64c1-3.51,2.16-7.08,3.27-10.54,3.35-10.42,6.81-21.19,7.39-32.86a34.23,34.23,0,0,1,1.31-6.63c0.31-1.18.63-2.4,0.92-3.68a5,5,0,0,0-4.84-6.26H414.3a5,5,0,0,0-3,1c-4.75,3.47-6.73,8.6-8.48,13.12-0.46,1.2-.9,2.34-1.39,3.45a476.75,476.75,0,0,1-33,62.85c-2.16,3.44-4.57,6.87-6.91,10.2l-2,2.88c0.11-1,.23-2,0.37-3q0.46-3.48.91-7c1.67-13.11,3.24-25.49,8-37.29q1.58-4,3.16-7.91c3.14-7.89,6.39-16,9.73-24a51.69,51.69,0,0,1,3-5.73c0.8-1.38,1.63-2.8,2.39-4.3,1.94-3.8,3.87-7.67,5.74-11.41,3.09-6.17,6.28-12.55,9.54-18.75,1.18-2.24,2.55-4.41,4-6.7s2.87-4.51,4.17-6.94c2.29-4.25,4.3-8.65,6.24-12.91l1.19-2.59,0.68-1.47c1.89-4.1,3.84-8.33,5.54-12.66l1.25-3.27c3-7.74,6.19-15.75,8.8-23.86a41.06,41.06,0,0,0,1.53-10.15c0.09-1.36.17-2.65,0.31-3.9a5,5,0,0,0-2.38-4.84L430,50.14l-6-3.63a5,5,0,0,0-2.59-.72h0v0Z"/><path class="fl-1" d="M64.6,405.26A16.54,16.54,0,0,1,58.5,404c-3.49-1.39-7.39-4.84-6.16-13.38q1.25-8.62,2.55-17.23c1.94-13,4-26.34,5.49-39.54,1.17-10,2-20.28,2.89-30.2S65,283.25,66.2,273.1c1.41-12.09,3.54-24.26,5.6-36q0.66-3.77,1.31-7.54C76,213,79,196.56,81.88,181.35c0.73-3.9,1.65-7.79,2.62-11.9l0.66-2.83c-0.77.07-1.39,0.14-2,.22a4,4,0,0,1-1.9.82c-6.52.77-12.67,3-19.18,5.3-8.23,2.95-16.74,6-26.21,6-0.81,0-1.64,0-2.44-.07a2.5,2.5,0,0,1-2.19-1.6,8.24,8.24,0,0,1,5.34-11.71l6-2.19c11.67-4.31,23.73-8.77,36.73-9.92,7.25-.64,9.51-2.24,11.66-12.3,4-18.79,8-37.92,11.84-56.42l2.9-14c0.47-2.27.89-4.58,1.37-7.26l0.21-1.19-0.54.06a23.57,23.57,0,0,0-5.43,1c-14.7,5.36-30,9.21-44.85,12.93l-0.85.21a92.51,92.51,0,0,0-15,5.76c-1.85.83-3.77,1.7-5.67,2.5-1.41.59-2.77,1.3-4.22,2a47,47,0,0,1-6.71,3,21.08,21.08,0,0,1-6.52,1.39,8.94,8.94,0,0,1-8.14-5,2.5,2.5,0,0,1-.28-1.73c1.23-6.1,6-8.44,10-9.79,23-7.81,47.24-15.89,72-24,4.92-1.62,9.86-3,15.09-4.49l6-1.7,2.55-15.71a2.5,2.5,0,0,1,.53-1.18l8.51-10.48a2.5,2.5,0,0,1,3.44-.42c6.38,4.8,6.44,10.54,5.78,15-0.43,2.9-1,5.81-1.64,8.63L131,41.94a18.2,18.2,0,0,0,4.77.62,35.9,35.9,0,0,0,8.16-1.2c2.32-.55,4.69-1.2,7-1.82,3.87-1.06,7.87-2.15,11.93-2.86l3.94-.69c12.95-2.28,26.33-4.64,39.64-6.1C217,28.7,227.93,28,238.5,27.25c6.27-.42,12.75-0.86,19.1-1.38,16.09-1.33,32.45-2.78,48.26-4.18l16.59-1.47c2.8-.25,5.59-0.51,8.39-0.78,4.13-.39,8.41-0.8,12.62-1.13q14.26-1.13,28.52-2.19l20.32-1.55,4.58-.35c10.61-.82,21.59-1.67,32.37-2.6,0.89-.08,1.79-0.12,2.66-0.12a28.75,28.75,0,0,1,16.37,5.17,2.5,2.5,0,0,1,1,2.87c-2.31,6.86-4.42,9.73-11.45,9.76a34.83,34.83,0,0,1-5.68-.59c-0.73-.12-1.46-0.24-2.19-0.33-1-.13-1.92-0.31-2.85-0.48a24.42,24.42,0,0,0-4.38-.57h-0.64c-24.24,1.71-46.54,3.41-68.18,5.18-10.14.83-20.44,1.75-30.4,2.64-11.27,1-22.91,2-34.38,3-8,.64-16.11,1.16-24,1.67-8.72.56-17.74,1.15-26.59,1.89a126.59,126.59,0,0,0-13.21,2.07c-1.91.37-3.82,0.74-5.73,1.07-0.65.11-1.34,0.3-2.08,0.5a16.52,16.52,0,0,1-4.39.77h-0.82c-1.45-.14-2.95-0.21-4.46-0.21-7.89,0-15.4,1.85-23.35,3.81-3.14.77-6.38,1.57-9.62,2.24-7.26,1.49-14.69,2.67-21.87,3.81-4.84.77-9.84,1.56-14.73,2.44-3,.55-6.05,1.37-9.25,2.25l-3.2.87Q125,65.73,124.14,70c-1.48,7.55-2.87,14.67-4.22,21.9-2.36,12.7-4.86,26.22-7.14,39.71-0.61,3.6-1,7.21-1.44,11.39-0.11,1.06-.23,2.15-0.35,3.28L126.07,144c13.59-2,26.43-3.82,39.39-5.85,11.74-1.84,23.66-3.85,35.19-5.8q10.67-1.8,21.34-3.57c13.06-2.15,26.12-4.26,39.47-6.41l17.63-2.85a2.5,2.5,0,0,1,2.83,1.89l1.47,6.2a2.5,2.5,0,0,1-.85,2.51c-6.61,5.43-12.63,8.19-19.52,9-22.39,2.5-44.71,5.53-63.6,8.16-4.73.66-9.54,1.62-14.19,2.55-4,.8-8.17,1.63-12.3,2.27-7.2,1.12-14.54,2.14-21.63,3.12C145,156.1,138.41,157,132,158c-5.42.83-10.79,1.83-16.46,2.89L109.31,162c-0.24,1.32-.49,2.58-0.74,3.82a71.17,71.17,0,0,0-1.51,9.87c-1.05,19.22-4.19,39.29-9.59,61.37q-1.19,4.83-2.42,9.66c-3.8,15-7.72,30.51-8.79,46.24a91.35,91.35,0,0,1-2.32,13.62c-0.48,2.13-1,4.34-1.36,6.49-0.71,3.87-1.49,7.78-2.25,11.57-1.78,8.94-3.63,18.18-4.66,27.31-1.22,10.77-1.79,21.52-2.4,32.92-0.26,5-.54,10.1-0.87,15.3a2.49,2.49,0,0,1-.39,1.19A8.39,8.39,0,0,1,64.6,405.26Z"/><path class="fl-1" d="M431.91,14a26.09,26.09,0,0,1,15,4.74c-2.21,6.54-3.78,8-9.09,8.06h-0.07a58.3,58.3,0,0,1-7.47-.91c-2.52-.33-5.06-1.07-7.55-1.07h-0.81Q387.76,27.26,353.66,30c-21.6,1.77-43.18,3.88-64.78,5.6-16.84,1.34-33.73,2.15-50.57,3.56-6.43.54-12.78,2.06-19.16,3.16-2,.35-4.07,1.24-6,1.24h-0.58c-1.58-.15-3.15-0.22-4.7-0.22-11.49,0-22.34,3.81-33.48,6.1-12.1,2.48-24.38,4-36.54,6.24-4.62.83-9.13,2.27-14.16,3.56-2.17,11.18-4.26,21.64-6.21,32.13-2.46,13.23-4.9,26.47-7.15,39.74-0.93,5.47-1.35,11-2.17,18,20.15-3,39-5.58,57.73-8.52s37.7-6.27,56.55-9.37,37.49-6.09,57.1-9.26l1.47,6.2c-5.52,4.53-11,7.61-18.21,8.41-21.26,2.37-42.48,5.21-63.67,8.17-8.89,1.24-17.65,3.44-26.53,4.82-13.62,2.12-27.3,3.81-40.93,5.89-8,1.22-15.9,2.83-24.48,4.37-1,5.88-2.31,10.76-2.58,15.7a331.9,331.9,0,0,1-9.52,60.91c-4.54,18.56-10,37-11.27,56.32-0.45,6.66-2.43,13.22-3.64,19.83-2.39,13-5.45,25.94-6.93,39C71.47,367.21,71.05,383,70,399.92a5.94,5.94,0,0,1-5.32,2.74,14.17,14.17,0,0,1-5.15-1c-4-1.59-5.39-5.31-4.61-10.71,2.72-18.94,5.83-37.84,8-56.84,2.35-20.19,3.47-40.52,5.82-60.7,1.69-14.55,4.4-29,6.89-43.43,2.77-16.08,5.75-32.13,8.77-48.17,1.07-5.69,2.53-11.32,4-18-2.88.28-4.4,0.37-5.9,0.61-0.52.08-1,.7-1.49,0.76C65.63,167,52.1,176.43,35.88,176.43c-0.76,0-1.53,0-2.3-.06-1.56-4.07-.3-7,3.85-8.47,13.75-5,27.25-10.67,42.08-12,8.92-.78,11.64-3.76,13.89-14.27,5-23.44,9.86-46.92,14.74-70.39,0.72-3.48,1.3-7,2.21-11.86-4.15.63-7.2,0.6-9.9,1.58-14.8,5.44-30.09,9.25-45.4,13.09C47.78,75.87,41,79.49,34,82.43c-3.63,1.53-7,3.75-10.74,5a19.19,19.19,0,0,1-5.74,1.22,6.47,6.47,0,0,1-6-3.71c1-4.83,4.62-6.67,8.3-7.92q35.94-12.19,72-24c7.17-2.36,14.49-4.27,22.49-6.6l2.8-17.27,8.51-10.48c5,3.76,5.49,8.07,4.81,12.64-0.6,4.09-1.57,8.13-2.41,12.32a20.58,20.58,0,0,0,7.67,1.45,37.68,37.68,0,0,0,8.73-1.27c6.27-1.49,12.43-3.54,18.76-4.65C177.59,36.63,192,34,206.57,32.39c17-1.87,34.15-2.59,51.21-4,21.63-1.78,43.25-3.75,64.87-5.65,7-.62,14-1.36,21-1.91,16.28-1.29,32.56-2.48,48.84-3.74,12.33-1,24.66-1.89,37-3Q430.7,14,431.91,14m0-5a21.43,21.43,0,0,0-2.88.13c-10.77.93-21.75,1.78-32.36,2.6l-4.57.35-20.33,1.55c-9.35.71-19,1.44-28.52,2.19-4.24.33-8.52,0.74-12.66,1.14q-4.19.4-8.38,0.78L305.68,19.2c-15.83,1.4-32.21,2.86-48.31,4.18-6.33.52-12.8,1-19.05,1.38-10.58.71-21.53,1.45-32.3,2.63-13.38,1.48-26.81,3.84-39.8,6.13l-3.93.69c-4.17.73-8.23,1.84-12.15,2.91-2.27.62-4.62,1.26-6.9,1.8A32.6,32.6,0,0,1,135.66,40a16.41,16.41,0,0,1-1.8-.1c0.55-2.59,1.09-5.25,1.49-7.94,0.7-4.75.77-11.72-6.75-17.37a5,5,0,0,0-6.89.85l-3.16,3.89L113.21,26a5,5,0,0,0-1.05,2.35l-2.29,14.14-4.44,1.26c-5.25,1.48-10.21,2.89-15.19,4.52-24.75,8.14-49,16.23-72,24C15.5,73.21,8.27,75.66,6.6,84a5,5,0,0,0,.56,3.46A11.43,11.43,0,0,0,17.5,93.65a23.5,23.5,0,0,0,7.34-1.5,49,49,0,0,0,7-3.15c1.41-.72,2.73-1.4,4-2,1.93-.82,3.86-1.69,5.73-2.53A89.24,89.24,0,0,1,56.27,78.9l0.85-.21c14.88-3.73,30.27-7.6,45.1-13a11.09,11.09,0,0,1,2.05-.49c-0.33,1.79-.63,3.44-1,5.05l-2.89,13.9c-3.85,18.52-7.83,37.66-11.85,56.46-2,9.3-3.6,9.82-9.44,10.34-13.34,1.17-25.56,5.69-37.38,10.06l-6,2.19c-4.17,1.51-6,4-6.9,5.86a11.45,11.45,0,0,0,.08,9.1,5,5,0,0,0,4.39,3.21c0.85,0,1.72.07,2.58,0.07,9.9,0,18.62-3.12,27-6.14,6.37-2.28,12.39-4.44,18.63-5.18h0.2c-0.87,3.69-1.68,7.21-2.35,10.77-2.87,15.27-5.93,31.69-8.78,48.24q-0.65,3.77-1.31,7.54c-2.07,11.8-4.2,24-5.62,36.16C62.44,283,61.56,293.38,60.7,303.4S59,323.54,57.81,333.53C56.41,346.67,54.4,360,52.5,373c-0.85,5.64-1.72,11.48-2.55,17.23-1.54,10.69,4.17,14.65,7.71,16.06a19,19,0,0,0,7,1.49,10.92,10.92,0,0,0,9.53-5A5,5,0,0,0,75,400.4c0.27-5.28.53-10.4,0.81-15.4,0.6-11.35,1.17-22.07,2.39-32.76,1-9,2.86-18.22,4.63-27.11,0.76-3.79,1.54-7.72,2.25-11.6,0.39-2.11.85-4.19,1.34-6.4a93.31,93.31,0,0,0,2.37-14c1.05-15.5,4.95-30.9,8.72-45.8,0.8-3.17,1.63-6.44,2.42-9.68,5.44-22.23,8.6-42.45,9.66-61.83A69.31,69.31,0,0,1,111,166.3c0.14-.71.28-1.43,0.43-2.16l4.57-.85c5.65-1.06,11-2.06,16.37-2.88,6.4-1,12.94-1.88,19.26-2.76,7.11-1,14.45-2,21.68-3.13,4.19-.65,8.36-1.49,12.4-2.29,4.61-.92,9.38-1.87,14-2.52,18.86-2.63,41.16-5.66,63.53-8.15,7.4-.83,13.83-3.76,20.83-9.51a5,5,0,0,0,1.69-5l-1.28-5.64-0.14-.58a5,5,0,0,0-5.66-3.78l-17.87,2.89c-13.5,2.18-26.26,4.24-39.24,6.38-7.12,1.17-14.36,2.39-21.35,3.57-11.52,1.94-23.43,4-35.16,5.79-12.93,2-25.75,3.88-39.32,5.84l-12,1.73v-0.07c0.44-4.14.82-7.72,1.42-11.24,2.29-13.5,4.78-27,7.14-39.67,1.34-7.2,2.73-14.31,4.2-21.83l1.4-7.18,1.7-.47c3.14-.86,6.11-1.68,9-2.2,4.86-.88,9.85-1.67,14.68-2.43,7.21-1.14,14.66-2.33,22-3.83,3.29-.68,6.56-1.48,9.72-2.26,7.8-1.92,15.16-3.74,22.75-3.73,1.43,0,2.85.07,4.22,0.2,0.35,0,.7,0,1.06,0a18.73,18.73,0,0,0,5.05-.86c0.67-.18,1.31-0.36,1.84-0.45,1.94-.34,3.89-0.71,5.77-1.07a122.78,122.78,0,0,1,13-2c8.83-.74,17.84-1.32,26.56-1.88,7.86-.51,16-1,24-1.67,11.48-.92,23.14-2,34.41-3,10-.89,20.26-1.81,30.39-2.64,21.63-1.77,43.92-3.46,68.16-5.18h0.46a22.79,22.79,0,0,1,3.92.53c1,0.18,1.94.37,3,.5,0.68,0.09,1.38.2,2.12,0.32a36.77,36.77,0,0,0,6,.63h0.1c8.41,0,11.25-3.89,13.8-11.46a5,5,0,0,0-1.93-5.74A31.21,31.21,0,0,0,431.91,9h0Z"/></svg>
+    </a>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      
+        <section class="cc__wrap">
     <ul class="cc">
         <!-- Get all cc-about posts and revers them -->
-        {% assign items = site.curious-about | sort: 'date' | reverse %}
+        
         <!-- Get only the latest post -->
-        {% for cc in items limit:1 %}
-        <li class="cc__item cc__item--{{ cc.slug }} ">
-            <!-- <span class="cc-meta">{{ cc.date | date: "%b %-d, %Y" }}</span> -->
+        
+        <li class="cc__item cc__item--speed-bumps ">
+            <!-- <span class="cc-meta">Jun 23, 2016</span> -->
             <div class="cc__overlay">
                 <h1 class="header">
                     <span class="cc__subheader">Current curiosity:</span> 
-                    {{ cc.title }}
+                    Speed Bumps
                 </h1>
-                <a class="button button--inv" href="{{ cc.url | prepend: site.baseurl }}"><span>Explore</span></a>
+                <a class="button button--inv" href="/curious-about/speed-bumps/"><span>Explore</span></a>
             </div>
             <div class="pagination">
                 <div class="pagination__counter">1<span>/3</span></div>
@@ -27,159 +69,395 @@ layout: default
             ## Get code for the background
             ## set in current post
             -->
-            {% unless cc.background == nil %}
+            
             <div class="cc__background">
-                {{ cc.background }}
+                <div class="cc__image" id="lettering"></div>
+
             </div>
-            {% endunless %}
+            
             
             <!-- 
             ####################
             ## Get scripts from
             ## current post
             -->
-            {% for js in cc.scripts %}
+            
+                
                 <script type="text/javascript">
-                {% include {{ js }} %}
+                /**
+ * vivus - JavaScript library to make drawing animation on SVG
+ * @version v0.3.0
+ * @link https://github.com/maxwellito/vivus
+ * @license MIT
+ */
+"use strict";!function(t,e){function r(r){if("undefined"==typeof r)throw new Error('Pathformer [constructor]: "element" parameter is required');if(r.constructor===String&&(r=e.getElementById(r),!r))throw new Error('Pathformer [constructor]: "element" parameter is not related to an existing ID');if(!(r.constructor instanceof t.SVGElement||/^svg$/i.test(r.nodeName)))throw new Error('Pathformer [constructor]: "element" parameter must be a string or a SVGelement');this.el=r,this.scan(r)}function n(t,e,r){this.isReady=!1,this.setElement(t,e),this.setOptions(e),this.setCallback(r),this.isReady&&this.init()}r.prototype.TYPES=["line","ellipse","circle","polygon","polyline","rect"],r.prototype.ATTR_WATCH=["cx","cy","points","r","rx","ry","x","x1","x2","y","y1","y2"],r.prototype.scan=function(t){for(var e,r,n,i,a=t.querySelectorAll(this.TYPES.join(",")),o=0;o<a.length;o++)r=a[o],e=this[r.tagName.toLowerCase()+"ToPath"],n=e(this.parseAttr(r.attributes)),i=this.pathMaker(r,n),r.parentNode.replaceChild(i,r)},r.prototype.lineToPath=function(t){var e={};return e.d="M"+t.x1+","+t.y1+"L"+t.x2+","+t.y2,e},r.prototype.rectToPath=function(t){var e={},r=parseFloat(t.x)||0,n=parseFloat(t.y)||0,i=parseFloat(t.width)||0,a=parseFloat(t.height)||0;return e.d="M"+r+" "+n+" ",e.d+="L"+(r+i)+" "+n+" ",e.d+="L"+(r+i)+" "+(n+a)+" ",e.d+="L"+r+" "+(n+a)+" Z",e},r.prototype.polylineToPath=function(t){var e,r,n={},i=t.points.trim().split(" ");if(-1===t.points.indexOf(",")){var a=[];for(e=0;e<i.length;e+=2)a.push(i[e]+","+i[e+1]);i=a}for(r="M"+i[0],e=1;e<i.length;e++)-1!==i[e].indexOf(",")&&(r+="L"+i[e]);return n.d=r,n},r.prototype.polygonToPath=function(t){var e=r.prototype.polylineToPath(t);return e.d+="Z",e},r.prototype.ellipseToPath=function(t){var e=t.cx-t.rx,r=t.cy,n=parseFloat(t.cx)+parseFloat(t.rx),i=t.cy,a={};return a.d="M"+e+","+r+"A"+t.rx+","+t.ry+" 0,1,1 "+n+","+i+"A"+t.rx+","+t.ry+" 0,1,1 "+e+","+i,a},r.prototype.circleToPath=function(t){var e={},r=t.cx-t.r,n=t.cy,i=parseFloat(t.cx)+parseFloat(t.r),a=t.cy;return e.d="M"+r+","+n+"A"+t.r+","+t.r+" 0,1,1 "+i+","+a+"A"+t.r+","+t.r+" 0,1,1 "+r+","+a,e},r.prototype.pathMaker=function(t,r){var n,i,a=e.createElementNS("http://www.w3.org/2000/svg","path");for(n=0;n<t.attributes.length;n++)i=t.attributes[n],-1===this.ATTR_WATCH.indexOf(i.name)&&a.setAttribute(i.name,i.value);for(n in r)a.setAttribute(n,r[n]);return a},r.prototype.parseAttr=function(t){for(var e,r={},n=0;n<t.length;n++){if(e=t[n],-1!==this.ATTR_WATCH.indexOf(e.name)&&-1!==e.value.indexOf("%"))throw new Error("Pathformer [parseAttr]: a SVG shape got values in percentage. This cannot be transformed into 'path' tags. Please use 'viewBox'.");r[e.name]=e.value}return r};var i,a,o;n.LINEAR=function(t){return t},n.EASE=function(t){return-Math.cos(t*Math.PI)/2+.5},n.EASE_OUT=function(t){return 1-Math.pow(1-t,3)},n.EASE_IN=function(t){return Math.pow(t,3)},n.EASE_OUT_BOUNCE=function(t){var e=-Math.cos(.5*t*Math.PI)+1,r=Math.pow(e,1.5),n=Math.pow(1-t,2),i=-Math.abs(Math.cos(2.5*r*Math.PI))+1;return 1-n+i*n},n.prototype.setElement=function(r,n){if("undefined"==typeof r)throw new Error('Vivus [constructor]: "element" parameter is required');if(r.constructor===String&&(r=e.getElementById(r),!r))throw new Error('Vivus [constructor]: "element" parameter is not related to an existing ID');if(this.parentEl=r,n&&n.file){var i=e.createElement("object");i.setAttribute("type","image/svg+xml"),i.setAttribute("data",n.file),i.setAttribute("built-by-vivus","true"),r.appendChild(i),r=i}switch(r.constructor){case t.SVGSVGElement:case t.SVGElement:this.el=r,this.isReady=!0;break;case t.HTMLObjectElement:var a,o;o=this,a=function(t){if(!o.isReady){if(o.el=r.contentDocument&&r.contentDocument.querySelector("svg"),!o.el&&t)throw new Error("Vivus [constructor]: object loaded does not contain any SVG");return o.el?(r.getAttribute("built-by-vivus")&&(o.parentEl.insertBefore(o.el,r),o.parentEl.removeChild(r),o.el.setAttribute("width","100%"),o.el.setAttribute("height","100%")),o.isReady=!0,o.init(),!0):void 0}},a()||r.addEventListener("load",a);break;default:throw new Error('Vivus [constructor]: "element" parameter is not valid (or miss the "file" attribute)')}},n.prototype.setOptions=function(e){var r=["delayed","async","oneByOne","scenario","scenario-sync"],i=["inViewport","manual","autostart"];if(void 0!==e&&e.constructor!==Object)throw new Error('Vivus [constructor]: "options" parameter must be an object');if(e=e||{},e.type&&-1===r.indexOf(e.type))throw new Error("Vivus [constructor]: "+e.type+" is not an existing animation `type`");if(this.type=e.type||r[0],e.start&&-1===i.indexOf(e.start))throw new Error("Vivus [constructor]: "+e.start+" is not an existing `start` option");if(this.start=e.start||i[0],this.isIE=-1!==t.navigator.userAgent.indexOf("MSIE")||-1!==t.navigator.userAgent.indexOf("Trident/")||-1!==t.navigator.userAgent.indexOf("Edge/"),this.duration=o(e.duration,120),this.delay=o(e.delay,null),this.dashGap=o(e.dashGap,1),this.forceRender=e.hasOwnProperty("forceRender")?!!e.forceRender:this.isIE,this.selfDestroy=!!e.selfDestroy,this.onReady=e.onReady,this.frameLength=this.currentFrame=this.map=this.delayUnit=this.speed=this.handle=null,this.ignoreInvisible=e.hasOwnProperty("ignoreInvisible")?!!e.ignoreInvisible:!1,this.animTimingFunction=e.animTimingFunction||n.LINEAR,this.pathTimingFunction=e.pathTimingFunction||n.LINEAR,this.delay>=this.duration)throw new Error("Vivus [constructor]: delay must be shorter than duration")},n.prototype.setCallback=function(t){if(t&&t.constructor!==Function)throw new Error('Vivus [constructor]: "callback" parameter must be a function');this.callback=t||function(){}},n.prototype.mapping=function(){var e,r,n,i,a,s,h,u;for(u=s=h=0,r=this.el.querySelectorAll("path"),e=0;e<r.length;e++)n=r[e],this.isInvisible(n)||(a={el:n,length:Math.ceil(n.getTotalLength())},isNaN(a.length)?t.console&&console.warn&&console.warn("Vivus [mapping]: cannot retrieve a path element length",n):(this.map.push(a),n.style.strokeDasharray=a.length+" "+(a.length+2*this.dashGap),n.style.strokeDashoffset=a.length+this.dashGap,a.length+=this.dashGap,s+=a.length,this.renderPath(e)));for(s=0===s?1:s,this.delay=null===this.delay?this.duration/3:this.delay,this.delayUnit=this.delay/(r.length>1?r.length-1:1),e=0;e<this.map.length;e++){switch(a=this.map[e],this.type){case"delayed":a.startAt=this.delayUnit*e,a.duration=this.duration-this.delay;break;case"oneByOne":a.startAt=h/s*this.duration,a.duration=a.length/s*this.duration;break;case"async":a.startAt=0,a.duration=this.duration;break;case"scenario-sync":n=r[e],i=this.parseAttr(n),a.startAt=u+(o(i["data-delay"],this.delayUnit)||0),a.duration=o(i["data-duration"],this.duration),u=void 0!==i["data-async"]?a.startAt:a.startAt+a.duration,this.frameLength=Math.max(this.frameLength,a.startAt+a.duration);break;case"scenario":n=r[e],i=this.parseAttr(n),a.startAt=o(i["data-start"],this.delayUnit)||0,a.duration=o(i["data-duration"],this.duration),this.frameLength=Math.max(this.frameLength,a.startAt+a.duration)}h+=a.length,this.frameLength=this.frameLength||this.duration}},n.prototype.drawer=function(){var t=this;this.currentFrame+=this.speed,this.currentFrame<=0?(this.stop(),this.reset(),this.callback(this)):this.currentFrame>=this.frameLength?(this.stop(),this.currentFrame=this.frameLength,this.trace(),this.selfDestroy&&this.destroy(),this.callback(this)):(this.trace(),this.handle=i(function(){t.drawer()}))},n.prototype.trace=function(){var t,e,r,n;for(n=this.animTimingFunction(this.currentFrame/this.frameLength)*this.frameLength,t=0;t<this.map.length;t++)r=this.map[t],e=(n-r.startAt)/r.duration,e=this.pathTimingFunction(Math.max(0,Math.min(1,e))),r.progress!==e&&(r.progress=e,r.el.style.strokeDashoffset=Math.floor(r.length*(1-e)),this.renderPath(t))},n.prototype.renderPath=function(t){if(this.forceRender&&this.map&&this.map[t]){var e=this.map[t],r=e.el.cloneNode(!0);e.el.parentNode.replaceChild(r,e.el),e.el=r}},n.prototype.init=function(){this.frameLength=0,this.currentFrame=0,this.map=[],new r(this.el),this.mapping(),this.starter(),this.onReady&&this.onReady(this)},n.prototype.starter=function(){switch(this.start){case"manual":return;case"autostart":this.play();break;case"inViewport":var e=this,r=function(){e.isInViewport(e.parentEl,1)&&(e.play(),t.removeEventListener("scroll",r))};t.addEventListener("scroll",r),r()}},n.prototype.getStatus=function(){return 0===this.currentFrame?"start":this.currentFrame===this.frameLength?"end":"progress"},n.prototype.reset=function(){return this.setFrameProgress(0)},n.prototype.finish=function(){return this.setFrameProgress(1)},n.prototype.setFrameProgress=function(t){return t=Math.min(1,Math.max(0,t)),this.currentFrame=Math.round(this.frameLength*t),this.trace(),this},n.prototype.play=function(t){if(t&&"number"!=typeof t)throw new Error("Vivus [play]: invalid speed");return this.speed=t||1,this.handle||this.drawer(),this},n.prototype.stop=function(){return this.handle&&(a(this.handle),this.handle=null),this},n.prototype.destroy=function(){var t,e;for(t=0;t<this.map.length;t++)e=this.map[t],e.el.style.strokeDashoffset=null,e.el.style.strokeDasharray=null,this.renderPath(t)},n.prototype.isInvisible=function(t){var e,r=t.getAttribute("data-ignore");return null!==r?"false"!==r:this.ignoreInvisible?(e=t.getBoundingClientRect(),!e.width&&!e.height):!1},n.prototype.parseAttr=function(t){var e,r={};if(t&&t.attributes)for(var n=0;n<t.attributes.length;n++)e=t.attributes[n],r[e.name]=e.value;return r},n.prototype.isInViewport=function(t,e){var r=this.scrollY(),n=r+this.getViewportH(),i=t.getBoundingClientRect(),a=i.height,o=r+i.top,s=o+a;return e=e||0,n>=o+a*e&&s>=r},n.prototype.docElem=t.document.documentElement,n.prototype.getViewportH=function(){var e=this.docElem.clientHeight,r=t.innerHeight;return r>e?r:e},n.prototype.scrollY=function(){return t.pageYOffset||this.docElem.scrollTop},i=function(){return t.requestAnimationFrame||t.webkitRequestAnimationFrame||t.mozRequestAnimationFrame||t.oRequestAnimationFrame||t.msRequestAnimationFrame||function(e){return t.setTimeout(e,1e3/60)}}(),a=function(){return t.cancelAnimationFrame||t.webkitCancelAnimationFrame||t.mozCancelAnimationFrame||t.oCancelAnimationFrame||t.msCancelAnimationFrame||function(e){return t.clearTimeout(e)}}(),o=function(t,e){var r=parseInt(t,10);return r>=0?r:e},"function"==typeof define&&define.amd?define([],function(){return n}):"object"==typeof exports?module.exports=n:t.Vivus=n}(window,document);
                 </script>
-            {% endfor %}
+            
+                
+                <script type="text/javascript">
+                if(document.getElementById('lettering')) {
+    // var filepath = '/assets/owd-bob/feb27.svg';
+    var filepath = '/assets/owd-bob/apr12.svg';
+    new Vivus('lettering', {
+        duration: 500, 
+        file: filepath,
+        type: 'delayed',
+        animTimingFunction: Vivus.EASE_OUT,
+    });
+}
+                </script>
+            
 
         </li>
-        {% endfor %}
+        
     </ul>
 </section>
+
 <section class="about-us">
     <!-- placeholder copy -->
     <h1>Fully Digital<br><span class="sub-header sub-header--1">a small digital shop</span> <span class="sub-header sub-header--2">with skewed minds</span><a href="/about/" class="button button--inv"><span>About Fully</span></a></h1>
 </section>
 
-    <!-- 
-    ####################
-    ## List all cases
-    -->
-    <div class="cases">
+<!-- 
+####################
+## Loop through the latest 3 cases
+## and print them out in thre places
+-->
+<div class="cases">
+    <!-- Get all cc-about posts and revers them -->
+    
+    
+    
+    <div class="l-column-main cases__item cases__item--1">    
+          
+            <!-- 
+###############################
+## Get code for the background
+## set in current post
+-->
+
+    <div class="case1__image" id="lettering2"></div>
+
+
+
+<!-- 
+####################
+## Get scripts from
+## current post
+-->
+
+    <script type="text/javascript">
+    /**
+ * vivus - JavaScript library to make drawing animation on SVG
+ * @version v0.3.0
+ * @link https://github.com/maxwellito/vivus
+ * @license MIT
+ */
+"use strict";!function(t,e){function r(r){if("undefined"==typeof r)throw new Error('Pathformer [constructor]: "element" parameter is required');if(r.constructor===String&&(r=e.getElementById(r),!r))throw new Error('Pathformer [constructor]: "element" parameter is not related to an existing ID');if(!(r.constructor instanceof t.SVGElement||/^svg$/i.test(r.nodeName)))throw new Error('Pathformer [constructor]: "element" parameter must be a string or a SVGelement');this.el=r,this.scan(r)}function n(t,e,r){this.isReady=!1,this.setElement(t,e),this.setOptions(e),this.setCallback(r),this.isReady&&this.init()}r.prototype.TYPES=["line","ellipse","circle","polygon","polyline","rect"],r.prototype.ATTR_WATCH=["cx","cy","points","r","rx","ry","x","x1","x2","y","y1","y2"],r.prototype.scan=function(t){for(var e,r,n,i,a=t.querySelectorAll(this.TYPES.join(",")),o=0;o<a.length;o++)r=a[o],e=this[r.tagName.toLowerCase()+"ToPath"],n=e(this.parseAttr(r.attributes)),i=this.pathMaker(r,n),r.parentNode.replaceChild(i,r)},r.prototype.lineToPath=function(t){var e={};return e.d="M"+t.x1+","+t.y1+"L"+t.x2+","+t.y2,e},r.prototype.rectToPath=function(t){var e={},r=parseFloat(t.x)||0,n=parseFloat(t.y)||0,i=parseFloat(t.width)||0,a=parseFloat(t.height)||0;return e.d="M"+r+" "+n+" ",e.d+="L"+(r+i)+" "+n+" ",e.d+="L"+(r+i)+" "+(n+a)+" ",e.d+="L"+r+" "+(n+a)+" Z",e},r.prototype.polylineToPath=function(t){var e,r,n={},i=t.points.trim().split(" ");if(-1===t.points.indexOf(",")){var a=[];for(e=0;e<i.length;e+=2)a.push(i[e]+","+i[e+1]);i=a}for(r="M"+i[0],e=1;e<i.length;e++)-1!==i[e].indexOf(",")&&(r+="L"+i[e]);return n.d=r,n},r.prototype.polygonToPath=function(t){var e=r.prototype.polylineToPath(t);return e.d+="Z",e},r.prototype.ellipseToPath=function(t){var e=t.cx-t.rx,r=t.cy,n=parseFloat(t.cx)+parseFloat(t.rx),i=t.cy,a={};return a.d="M"+e+","+r+"A"+t.rx+","+t.ry+" 0,1,1 "+n+","+i+"A"+t.rx+","+t.ry+" 0,1,1 "+e+","+i,a},r.prototype.circleToPath=function(t){var e={},r=t.cx-t.r,n=t.cy,i=parseFloat(t.cx)+parseFloat(t.r),a=t.cy;return e.d="M"+r+","+n+"A"+t.r+","+t.r+" 0,1,1 "+i+","+a+"A"+t.r+","+t.r+" 0,1,1 "+r+","+a,e},r.prototype.pathMaker=function(t,r){var n,i,a=e.createElementNS("http://www.w3.org/2000/svg","path");for(n=0;n<t.attributes.length;n++)i=t.attributes[n],-1===this.ATTR_WATCH.indexOf(i.name)&&a.setAttribute(i.name,i.value);for(n in r)a.setAttribute(n,r[n]);return a},r.prototype.parseAttr=function(t){for(var e,r={},n=0;n<t.length;n++){if(e=t[n],-1!==this.ATTR_WATCH.indexOf(e.name)&&-1!==e.value.indexOf("%"))throw new Error("Pathformer [parseAttr]: a SVG shape got values in percentage. This cannot be transformed into 'path' tags. Please use 'viewBox'.");r[e.name]=e.value}return r};var i,a,o;n.LINEAR=function(t){return t},n.EASE=function(t){return-Math.cos(t*Math.PI)/2+.5},n.EASE_OUT=function(t){return 1-Math.pow(1-t,3)},n.EASE_IN=function(t){return Math.pow(t,3)},n.EASE_OUT_BOUNCE=function(t){var e=-Math.cos(.5*t*Math.PI)+1,r=Math.pow(e,1.5),n=Math.pow(1-t,2),i=-Math.abs(Math.cos(2.5*r*Math.PI))+1;return 1-n+i*n},n.prototype.setElement=function(r,n){if("undefined"==typeof r)throw new Error('Vivus [constructor]: "element" parameter is required');if(r.constructor===String&&(r=e.getElementById(r),!r))throw new Error('Vivus [constructor]: "element" parameter is not related to an existing ID');if(this.parentEl=r,n&&n.file){var i=e.createElement("object");i.setAttribute("type","image/svg+xml"),i.setAttribute("data",n.file),i.setAttribute("built-by-vivus","true"),r.appendChild(i),r=i}switch(r.constructor){case t.SVGSVGElement:case t.SVGElement:this.el=r,this.isReady=!0;break;case t.HTMLObjectElement:var a,o;o=this,a=function(t){if(!o.isReady){if(o.el=r.contentDocument&&r.contentDocument.querySelector("svg"),!o.el&&t)throw new Error("Vivus [constructor]: object loaded does not contain any SVG");return o.el?(r.getAttribute("built-by-vivus")&&(o.parentEl.insertBefore(o.el,r),o.parentEl.removeChild(r),o.el.setAttribute("width","100%"),o.el.setAttribute("height","100%")),o.isReady=!0,o.init(),!0):void 0}},a()||r.addEventListener("load",a);break;default:throw new Error('Vivus [constructor]: "element" parameter is not valid (or miss the "file" attribute)')}},n.prototype.setOptions=function(e){var r=["delayed","async","oneByOne","scenario","scenario-sync"],i=["inViewport","manual","autostart"];if(void 0!==e&&e.constructor!==Object)throw new Error('Vivus [constructor]: "options" parameter must be an object');if(e=e||{},e.type&&-1===r.indexOf(e.type))throw new Error("Vivus [constructor]: "+e.type+" is not an existing animation `type`");if(this.type=e.type||r[0],e.start&&-1===i.indexOf(e.start))throw new Error("Vivus [constructor]: "+e.start+" is not an existing `start` option");if(this.start=e.start||i[0],this.isIE=-1!==t.navigator.userAgent.indexOf("MSIE")||-1!==t.navigator.userAgent.indexOf("Trident/")||-1!==t.navigator.userAgent.indexOf("Edge/"),this.duration=o(e.duration,120),this.delay=o(e.delay,null),this.dashGap=o(e.dashGap,1),this.forceRender=e.hasOwnProperty("forceRender")?!!e.forceRender:this.isIE,this.selfDestroy=!!e.selfDestroy,this.onReady=e.onReady,this.frameLength=this.currentFrame=this.map=this.delayUnit=this.speed=this.handle=null,this.ignoreInvisible=e.hasOwnProperty("ignoreInvisible")?!!e.ignoreInvisible:!1,this.animTimingFunction=e.animTimingFunction||n.LINEAR,this.pathTimingFunction=e.pathTimingFunction||n.LINEAR,this.delay>=this.duration)throw new Error("Vivus [constructor]: delay must be shorter than duration")},n.prototype.setCallback=function(t){if(t&&t.constructor!==Function)throw new Error('Vivus [constructor]: "callback" parameter must be a function');this.callback=t||function(){}},n.prototype.mapping=function(){var e,r,n,i,a,s,h,u;for(u=s=h=0,r=this.el.querySelectorAll("path"),e=0;e<r.length;e++)n=r[e],this.isInvisible(n)||(a={el:n,length:Math.ceil(n.getTotalLength())},isNaN(a.length)?t.console&&console.warn&&console.warn("Vivus [mapping]: cannot retrieve a path element length",n):(this.map.push(a),n.style.strokeDasharray=a.length+" "+(a.length+2*this.dashGap),n.style.strokeDashoffset=a.length+this.dashGap,a.length+=this.dashGap,s+=a.length,this.renderPath(e)));for(s=0===s?1:s,this.delay=null===this.delay?this.duration/3:this.delay,this.delayUnit=this.delay/(r.length>1?r.length-1:1),e=0;e<this.map.length;e++){switch(a=this.map[e],this.type){case"delayed":a.startAt=this.delayUnit*e,a.duration=this.duration-this.delay;break;case"oneByOne":a.startAt=h/s*this.duration,a.duration=a.length/s*this.duration;break;case"async":a.startAt=0,a.duration=this.duration;break;case"scenario-sync":n=r[e],i=this.parseAttr(n),a.startAt=u+(o(i["data-delay"],this.delayUnit)||0),a.duration=o(i["data-duration"],this.duration),u=void 0!==i["data-async"]?a.startAt:a.startAt+a.duration,this.frameLength=Math.max(this.frameLength,a.startAt+a.duration);break;case"scenario":n=r[e],i=this.parseAttr(n),a.startAt=o(i["data-start"],this.delayUnit)||0,a.duration=o(i["data-duration"],this.duration),this.frameLength=Math.max(this.frameLength,a.startAt+a.duration)}h+=a.length,this.frameLength=this.frameLength||this.duration}},n.prototype.drawer=function(){var t=this;this.currentFrame+=this.speed,this.currentFrame<=0?(this.stop(),this.reset(),this.callback(this)):this.currentFrame>=this.frameLength?(this.stop(),this.currentFrame=this.frameLength,this.trace(),this.selfDestroy&&this.destroy(),this.callback(this)):(this.trace(),this.handle=i(function(){t.drawer()}))},n.prototype.trace=function(){var t,e,r,n;for(n=this.animTimingFunction(this.currentFrame/this.frameLength)*this.frameLength,t=0;t<this.map.length;t++)r=this.map[t],e=(n-r.startAt)/r.duration,e=this.pathTimingFunction(Math.max(0,Math.min(1,e))),r.progress!==e&&(r.progress=e,r.el.style.strokeDashoffset=Math.floor(r.length*(1-e)),this.renderPath(t))},n.prototype.renderPath=function(t){if(this.forceRender&&this.map&&this.map[t]){var e=this.map[t],r=e.el.cloneNode(!0);e.el.parentNode.replaceChild(r,e.el),e.el=r}},n.prototype.init=function(){this.frameLength=0,this.currentFrame=0,this.map=[],new r(this.el),this.mapping(),this.starter(),this.onReady&&this.onReady(this)},n.prototype.starter=function(){switch(this.start){case"manual":return;case"autostart":this.play();break;case"inViewport":var e=this,r=function(){e.isInViewport(e.parentEl,1)&&(e.play(),t.removeEventListener("scroll",r))};t.addEventListener("scroll",r),r()}},n.prototype.getStatus=function(){return 0===this.currentFrame?"start":this.currentFrame===this.frameLength?"end":"progress"},n.prototype.reset=function(){return this.setFrameProgress(0)},n.prototype.finish=function(){return this.setFrameProgress(1)},n.prototype.setFrameProgress=function(t){return t=Math.min(1,Math.max(0,t)),this.currentFrame=Math.round(this.frameLength*t),this.trace(),this},n.prototype.play=function(t){if(t&&"number"!=typeof t)throw new Error("Vivus [play]: invalid speed");return this.speed=t||1,this.handle||this.drawer(),this},n.prototype.stop=function(){return this.handle&&(a(this.handle),this.handle=null),this},n.prototype.destroy=function(){var t,e;for(t=0;t<this.map.length;t++)e=this.map[t],e.el.style.strokeDashoffset=null,e.el.style.strokeDasharray=null,this.renderPath(t)},n.prototype.isInvisible=function(t){var e,r=t.getAttribute("data-ignore");return null!==r?"false"!==r:this.ignoreInvisible?(e=t.getBoundingClientRect(),!e.width&&!e.height):!1},n.prototype.parseAttr=function(t){var e,r={};if(t&&t.attributes)for(var n=0;n<t.attributes.length;n++)e=t.attributes[n],r[e.name]=e.value;return r},n.prototype.isInViewport=function(t,e){var r=this.scrollY(),n=r+this.getViewportH(),i=t.getBoundingClientRect(),a=i.height,o=r+i.top,s=o+a;return e=e||0,n>=o+a*e&&s>=r},n.prototype.docElem=t.document.documentElement,n.prototype.getViewportH=function(){var e=this.docElem.clientHeight,r=t.innerHeight;return r>e?r:e},n.prototype.scrollY=function(){return t.pageYOffset||this.docElem.scrollTop},i=function(){return t.requestAnimationFrame||t.webkitRequestAnimationFrame||t.mozRequestAnimationFrame||t.oRequestAnimationFrame||t.msRequestAnimationFrame||function(e){return t.setTimeout(e,1e3/60)}}(),a=function(){return t.cancelAnimationFrame||t.webkitCancelAnimationFrame||t.mozCancelAnimationFrame||t.oCancelAnimationFrame||t.msCancelAnimationFrame||function(e){return t.clearTimeout(e)}}(),o=function(t,e){var r=parseInt(t,10);return r>=0?r:e},"function"==typeof define&&define.amd?define([],function(){return n}):"object"==typeof exports?module.exports=n:t.Vivus=n}(window,document);
+    </script>
+
+    <script type="text/javascript">
+    if(document.getElementById('lettering2')) {
+    // var filepath = '/assets/owd-bob/feb27.svg';
+    // var filepath = '/assets/owd-bob/apr12.svg';
+    var filepath = '/assets/owd-bob/june16.svg';
+    new Vivus('lettering2', {
+        duration: 250, 
+        file: filepath,
+        type: 'delayed',
+        animTimingFunction: Vivus.EASE_OUT,
+    });
+}
+    </script>
+            
+
+<h2 class="cases__header">
+    Lorem ipsum</br>highlight case.
+</h2>
+
+<a class="button" href="/case/owd-bob/">
+    <span>See case</span>
+</a>
         
-        <div class="l-column-main cases__item cases__item--1">
-
-            
-            <div class="case1__image" id="lettering2"></div>
-            
-            
-            <script>
-            {% include js/vivus.js %}
-                if(document.getElementById('lettering2')) {
-                    // var filepath = '/assets/owd-bob/feb27.svg';
-                    var filepath = '/assets/owd-bob/apr12.svg';
-                    new Vivus('lettering2', {
-                        duration: 250, 
-                        file: filepath,
-                        type: 'delayed',
-                        animTimingFunction: Vivus.EASE_OUT,
-                    });
-                }
-            </script>
-
-            <h2 class="cases__header">
-                Cumbrian dialect<br>with speedbumps.
-            </h2>
-            <a class="button" href="/case/owd-bob/">
-                <span>See case</span>
-            </a>
-        </div>
-  
-
-        <div class="l-column-side">
-            <div class="cases__item cases__item--2">
-                <!-- matbaren gränssnitt.svg - 6kb -->
-                <svg class="case2__image" xmlns="http://www.w3.org/2000/svg" width="200" height="140" viewBox="0 30 200 140"><defs><style>.mbkz-2{fill:#f0f0f0;}.mbkz-3{fill:#222932;}.mbkz-4{fill:#fff;}.mbkz-5{fill:#f8f8f8;}.mbkz-6{fill:#7a8c99;}.mbkz-7{fill:#00824a;}.mbkz-8{fill:#aaa;}</style></defs><title>matbaren gränssnitt</title><rect id="mbkz_bg" class="mbkz-2" x="40" y="66" width="120" height="68"/><g id="mbkz_side"><rect id="mbkz_sidebg" class="mbkz-3" x="40" y="66" width="20" height="68"/><g id="mbkz_side1"><rect class="mbkz-2" x="42" y="79.5" width="1" height="1"/><rect class="mbkz-2" x="44" y="79.5" width="13" height="1"/></g><g id="mbkz_side2"><rect class="mbkz-2" x="42" y="83.5" width="1" height="1"/><rect class="mbkz-2" x="44" y="83.5" width="13" height="1"/></g><g id="mbkz_side3"><rect class="mbkz-2" x="42" y="90.5" width="1" height="1"/><rect class="mbkz-2" x="44" y="90.5" width="13" height="1"/></g><g id="mbkz_side4"><rect class="mbkz-2" x="42" y="94.5" width="1" height="1"/><rect class="mbkz-2" x="44" y="94.5" width="13" height="1"/></g><g id="mbkz_side5"><rect class="mbkz-2" x="42" y="98.5" width="1" height="1"/><rect class="mbkz-2" x="44" y="98.5" width="13" height="1"/></g><g id="mbkz_side6"><rect class="mbkz-2" x="42" y="102.5" width="1" height="1"/><rect class="mbkz-2" x="44" y="102.5" width="13" height="1"/></g><g id="mbkz_side7"><rect class="mbkz-2" x="42" y="106.5" width="1" height="1"/><rect class="mbkz-2" x="44" y="106.5" width="13" height="1"/></g></g><g id="mbkz_content"><rect id="mbkz_content_head" class="mbkz-4" x="70" y="77" width="80" height="6"/><rect id="mbkz_content_footer" class="mbkz-4" x="70" y="119" width="80" height="6"/><rect id="mbkz_content_body" class="mbkz-5" x="70" y="83" width="80" height="36"/><rect id="mbkz_content_text" class="mbkz-6" x="100" y="79.5" width="20" height="1"/><rect id="mbkz_content_button2" class="mbkz-7" x="111" y="121" width="12" height="2"/><rect id="mbkz_content_button1" class="mbkz-8" x="97" y="121" width="12" height="2"/><g id="mbkz_content_text-2" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-2" x="75" y="88.5" width="8" height="1"/><rect class="mbkz-2" x="90" y="88.5" width="4" height="1"/><rect class="mbkz-2" x="98" y="88.5" width="17" height="1"/><rect class="mbkz-2" x="121" y="88.5" width="6" height="1"/><rect class="mbkz-2" x="133" y="88.5" width="4" height="1"/><rect class="mbkz-2" x="141" y="88.5" width="4" height="1"/></g><g id="mbkz_content_text-3" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="73" y="90.5" width="1" height="1"/><rect class="mbkz-6" x="75" y="90.5" width="13" height="1"/><rect class="mbkz-6" x="90" y="90.5" width="6" height="1"/><rect class="mbkz-6" x="98" y="90.5" width="21" height="1"/><rect class="mbkz-6" x="121" y="90.5" width="10" height="1"/><rect class="mbkz-6" x="133" y="90.5" width="6" height="1"/><rect class="mbkz-6" x="141" y="90.5" width="6" height="1"/></g><g id="mbkz_content_text-4" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="73" y="93.5" width="1" height="1"/><rect class="mbkz-6" x="75" y="93.5" width="10" height="1"/><rect class="mbkz-6" x="90" y="93.5" width="6" height="1"/><rect class="mbkz-6" x="98" y="93.5" width="21" height="1"/><rect class="mbkz-6" x="121" y="93.5" width="10" height="1"/><rect class="mbkz-6" x="133" y="93.5" width="6" height="1"/><rect class="mbkz-6" x="141" y="93.5" width="6" height="1"/></g><g id="mbkz_content_text-5" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="73" y="96.5" width="1" height="1"/><rect class="mbkz-6" x="75" y="96.5" width="13" height="1"/><rect class="mbkz-6" x="90" y="96.5" width="6" height="1"/><rect class="mbkz-6" x="98" y="96.5" width="21" height="1"/><rect class="mbkz-6" x="121" y="96.5" width="10" height="1"/><rect class="mbkz-6" x="133" y="96.5" width="6" height="1"/><rect class="mbkz-6" x="141" y="96.5" width="6" height="1"/></g><g id="mbkz_content_text-6" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="73" y="99.5" width="1" height="1"/><rect class="mbkz-6" x="75" y="99.5" width="12" height="1"/><rect class="mbkz-6" x="90" y="99.5" width="6" height="1"/><rect class="mbkz-6" x="98" y="99.5" width="21" height="1"/><rect class="mbkz-6" x="121" y="99.5" width="10" height="1"/><rect class="mbkz-6" x="133" y="99.5" width="6" height="1"/><rect class="mbkz-6" x="141" y="99.5" width="6" height="1"/></g><g id="mbkz_content_text-7" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="73" y="102.5" width="1" height="1"/><rect class="mbkz-6" x="75" y="102.5" width="12" height="1"/><rect class="mbkz-6" x="90" y="102.5" width="6" height="1"/><rect class="mbkz-6" x="98" y="102.5" width="21" height="1"/><rect class="mbkz-6" x="121" y="102.5" width="10" height="1"/><rect class="mbkz-6" x="133" y="102.5" width="6" height="1"/><rect class="mbkz-6" x="141" y="102.5" width="6" height="1"/></g><g id="mbkz_content_text-8" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="133" y="107.5" width="6" height="1"/><rect class="mbkz-6" x="141" y="107.5" width="6" height="1"/></g><g id="mbkz_content_text-9" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="135" y="110.5" width="4" height="1"/><rect class="mbkz-6" x="141" y="110.5" width="4" height="1"/></g><g id="mbkz_content_text-10" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="133" y="113.5" width="6" height="1"/><rect class="mbkz-6" x="141" y="113.5" width="6" height="1"/></g></g><g id="mbkz_menu"><rect id="mbkz_menubg" class="mbkz-4" x="40" y="66" width="120" height="7"/><circle id="mbkz_menu4" class="mbkz-2" cx="155.5" cy="69.5" r="1.5"/><circle id="mbkz_menu3" class="mbkz-2" cx="53" cy="69.5" r="1.5"/><circle id="mbkz_menu2" class="mbkz-2" cx="48" cy="69.5" r="1.5"/><circle id="mbkz_menu1" class="mbkz-2" cx="43" cy="69.5" r="1.5"/></g></svg>
-               
-                <h2 class="cases__header">
-                    Matbaren Kundzon
-                </h2>
-                <a class="button" href="/case/lorem-ipsum-case-2/">
-                    <span>See case</span>
-                </a>
-            </div>
-
-
-            {% for case in site.case limit:1 %}
-            <div class="cases__item cases__item--3">
-                <!-- <span class="case-meta">{{ case.date | date: "%b %-d, %Y" }}</span> -->
-                <h2 class="cases__header">
-                    {{ case.start }}
-                </h2>
-                <a class="button" href="{{ case.url | prepend: site.baseurl }}">
-                    <span>See case</span>
-                </a>
-            </div>
-        </div>
-        {% endfor %}
     </div>
 
-    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
 
-  
+    <div class="l-column-side">
+        <div class="cases__item cases__item--2">
+            
+                <!-- 
+###############################
+## Get code for the background
+## set in current post
+-->
 
-<script>
+    <svg class="case2__image" xmlns="http://www.w3.org/2000/svg" width="200" height="140" viewBox="0 30 200 140"><defs><style>.mbkz-2{fill:#f0f0f0;}.mbkz-3{fill:#222932;}.mbkz-4{fill:#fff;}.mbkz-5{fill:#f8f8f8;}.mbkz-6{fill:#7a8c99;}.mbkz-7{fill:#00824a;}.mbkz-8{fill:#aaa;}</style></defs><title>matbaren gränssnitt</title><rect id="mbkz_bg" class="mbkz-2" x="40" y="66" width="120" height="68"/><g id="mbkz_side"><rect id="mbkz_sidebg" class="mbkz-3" x="40" y="66" width="20" height="68"/><g id="mbkz_side1"><rect class="mbkz-2" x="42" y="79.5" width="1" height="1"/><rect class="mbkz-2" x="44" y="79.5" width="13" height="1"/></g><g id="mbkz_side2"><rect class="mbkz-2" x="42" y="83.5" width="1" height="1"/><rect class="mbkz-2" x="44" y="83.5" width="13" height="1"/></g><g id="mbkz_side3"><rect class="mbkz-2" x="42" y="90.5" width="1" height="1"/><rect class="mbkz-2" x="44" y="90.5" width="13" height="1"/></g><g id="mbkz_side4"><rect class="mbkz-2" x="42" y="94.5" width="1" height="1"/><rect class="mbkz-2" x="44" y="94.5" width="13" height="1"/></g><g id="mbkz_side5"><rect class="mbkz-2" x="42" y="98.5" width="1" height="1"/><rect class="mbkz-2" x="44" y="98.5" width="13" height="1"/></g><g id="mbkz_side6"><rect class="mbkz-2" x="42" y="102.5" width="1" height="1"/><rect class="mbkz-2" x="44" y="102.5" width="13" height="1"/></g><g id="mbkz_side7"><rect class="mbkz-2" x="42" y="106.5" width="1" height="1"/><rect class="mbkz-2" x="44" y="106.5" width="13" height="1"/></g></g><g id="mbkz_content"><rect id="mbkz_content_head" class="mbkz-4" x="70" y="77" width="80" height="6"/><rect id="mbkz_content_footer" class="mbkz-4" x="70" y="119" width="80" height="6"/><rect id="mbkz_content_body" class="mbkz-5" x="70" y="83" width="80" height="36"/><rect id="mbkz_content_text" class="mbkz-6" x="100" y="79.5" width="20" height="1"/><rect id="mbkz_content_button2" class="mbkz-7" x="111" y="121" width="12" height="2"/><rect id="mbkz_content_button1" class="mbkz-8" x="97" y="121" width="12" height="2"/><g id="mbkz_content_text-2" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-2" x="75" y="88.5" width="8" height="1"/><rect class="mbkz-2" x="90" y="88.5" width="4" height="1"/><rect class="mbkz-2" x="98" y="88.5" width="17" height="1"/><rect class="mbkz-2" x="121" y="88.5" width="6" height="1"/><rect class="mbkz-2" x="133" y="88.5" width="4" height="1"/><rect class="mbkz-2" x="141" y="88.5" width="4" height="1"/></g><g id="mbkz_content_text-3" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="73" y="90.5" width="1" height="1"/><rect class="mbkz-6" x="75" y="90.5" width="13" height="1"/><rect class="mbkz-6" x="90" y="90.5" width="6" height="1"/><rect class="mbkz-6" x="98" y="90.5" width="21" height="1"/><rect class="mbkz-6" x="121" y="90.5" width="10" height="1"/><rect class="mbkz-6" x="133" y="90.5" width="6" height="1"/><rect class="mbkz-6" x="141" y="90.5" width="6" height="1"/></g><g id="mbkz_content_text-4" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="73" y="93.5" width="1" height="1"/><rect class="mbkz-6" x="75" y="93.5" width="10" height="1"/><rect class="mbkz-6" x="90" y="93.5" width="6" height="1"/><rect class="mbkz-6" x="98" y="93.5" width="21" height="1"/><rect class="mbkz-6" x="121" y="93.5" width="10" height="1"/><rect class="mbkz-6" x="133" y="93.5" width="6" height="1"/><rect class="mbkz-6" x="141" y="93.5" width="6" height="1"/></g><g id="mbkz_content_text-5" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="73" y="96.5" width="1" height="1"/><rect class="mbkz-6" x="75" y="96.5" width="13" height="1"/><rect class="mbkz-6" x="90" y="96.5" width="6" height="1"/><rect class="mbkz-6" x="98" y="96.5" width="21" height="1"/><rect class="mbkz-6" x="121" y="96.5" width="10" height="1"/><rect class="mbkz-6" x="133" y="96.5" width="6" height="1"/><rect class="mbkz-6" x="141" y="96.5" width="6" height="1"/></g><g id="mbkz_content_text-6" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="73" y="99.5" width="1" height="1"/><rect class="mbkz-6" x="75" y="99.5" width="12" height="1"/><rect class="mbkz-6" x="90" y="99.5" width="6" height="1"/><rect class="mbkz-6" x="98" y="99.5" width="21" height="1"/><rect class="mbkz-6" x="121" y="99.5" width="10" height="1"/><rect class="mbkz-6" x="133" y="99.5" width="6" height="1"/><rect class="mbkz-6" x="141" y="99.5" width="6" height="1"/></g><g id="mbkz_content_text-7" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="73" y="102.5" width="1" height="1"/><rect class="mbkz-6" x="75" y="102.5" width="12" height="1"/><rect class="mbkz-6" x="90" y="102.5" width="6" height="1"/><rect class="mbkz-6" x="98" y="102.5" width="21" height="1"/><rect class="mbkz-6" x="121" y="102.5" width="10" height="1"/><rect class="mbkz-6" x="133" y="102.5" width="6" height="1"/><rect class="mbkz-6" x="141" y="102.5" width="6" height="1"/></g><g id="mbkz_content_text-8" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="133" y="107.5" width="6" height="1"/><rect class="mbkz-6" x="141" y="107.5" width="6" height="1"/></g><g id="mbkz_content_text-9" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="135" y="110.5" width="4" height="1"/><rect class="mbkz-6" x="141" y="110.5" width="4" height="1"/></g><g id="mbkz_content_text-10" data-name="mbkz_content_text" class="mbkz_textrow"><rect class="mbkz-6" x="133" y="113.5" width="6" height="1"/><rect class="mbkz-6" x="141" y="113.5" width="6" height="1"/></g></g><g id="mbkz_menu"><rect id="mbkz_menubg" class="mbkz-4" x="40" y="66" width="120" height="7"/><circle id="mbkz_menu4" class="mbkz-2" cx="155.5" cy="69.5" r="1.5"/><circle id="mbkz_menu3" class="mbkz-2" cx="53" cy="69.5" r="1.5"/><circle id="mbkz_menu2" class="mbkz-2" cx="48" cy="69.5" r="1.5"/><circle id="mbkz_menu1" class="mbkz-2" cx="43" cy="69.5" r="1.5"/></g></svg>
 
-    {% include_relative _js/gsap-cubicbezier.js %}
 
-    $(document).ready(function() {
 
-        //////////////////
-        // CASE 2
-        
-        // Config
-        var easeBounce = CubicBezier.config(0.2, 2, .3, .8);
-        var t = 1.6;
+<!-- 
+####################
+## Get scripts from
+## current post
+-->
 
-        // Reset
-        var reset_case2 = function(){
-            TweenMax.set("#mbkz_bg", { rotationX:20, rotationZ:15, x:0, y:0, z:0 });
-            TweenMax.set("#mbkz_menu", { rotationX:20, rotationZ:15, x:-3, y:-10, z:40 }); 
-            TweenMax.set("#mbkz_side", { rotationX:20, rotationZ:15, x:-3, y:-20, z:60 });
-            TweenMax.set("#mbkz_content", { rotationX:20, rotationZ:15, x:-10, y:-2, z:15 });
-            TweenMax.set(".mbkz_textrow", { x:-5, y:-5 });
+    <script type="text/javascript">
+    /*!
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2016 by Blake Bowen (http://codepen.io/osublake/pen/OyPGEo)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ **/
+
+var CubicBezier = (function () {
+    function CubicBezier(p1x, p1y, p2x, p2y) {
+        if (p1x === void 0) { p1x = 0; }
+        if (p1y === void 0) { p1y = 0; }
+        if (p2x === void 0) { p2x = 1; }
+        if (p2y === void 0) { p2y = 1; }
+        this.p1x = p1x;
+        this.p1y = p1y;
+        this.p2x = p2x;
+        this.p2y = p2y;
+        this.cx = 3.0 * this.p1x;
+        this.cy = 3.0 * this.p1y;
+        this.bx = 3.0 * (this.p2x - this.p1x) - this.cx;
+        this.by = 3.0 * (this.p2y - this.p1y) - this.cy;
+        this.ax = 1.0 - this.cx - this.bx;
+        this.ay = 1.0 - this.cy - this.by;
+        this.ease = this.ease.bind(this);
+    }
+    CubicBezier.create = function (name, p1x, p1y, p2x, p2y) {
+        if (p1x === void 0) { p1x = 0; }
+        if (p1y === void 0) { p1y = 0; }
+        if (p2x === void 0) { p2x = 1; }
+        if (p2y === void 0) { p2y = 1; }
+        var easing = new CubicBezier(p1x, p1y, p2x, p2y);
+        if (typeof name === "string")
+            CubicBezier.easings[name] = easing;
+        return easing.ease;
+    };
+    CubicBezier.config = function (p1x, p1y, p2x, p2y) {
+        if (p1x === void 0) { p1x = 0; }
+        if (p1y === void 0) { p1y = 0; }
+        if (p2x === void 0) { p2x = 1; }
+        if (p2y === void 0) { p2y = 1; }
+        return new CubicBezier(p1x, p1y, p2x, p2y).ease;
+    };
+    CubicBezier.get = function (name) {
+        return CubicBezier.easings[name].ease;
+    };
+    CubicBezier.prototype.getEpsilon = function (duration) {
+        if (duration === void 0) { duration = 400; }
+        return 1 / (200 * duration);
+    };
+    CubicBezier.prototype.ease = function (time, start, change, duration) {
+        return this.solve(time, this.getEpsilon(duration));
+    };
+    CubicBezier.prototype.solve = function (x, epsilon) {
+        return this.sampleCurveY(this.solveCurveX(x, epsilon));
+    };
+    CubicBezier.prototype.sampleCurveX = function (t) {
+        return ((this.ax * t + this.bx) * t + this.cx) * t;
+    };
+    CubicBezier.prototype.sampleCurveY = function (t) {
+        return ((this.ay * t + this.by) * t + this.cy) * t;
+    };
+    CubicBezier.prototype.sampleDerivX = function (t) {
+        return (3.0 * this.ax * t + 2.0 * this.bx) * t + this.cx;
+    };
+    CubicBezier.prototype.solveCurveX = function (x, epsilon) {
+        var t0;
+        var t1;
+        var t2;
+        var x2;
+        var d2;
+        for (var i = 0, t2 = x; i < 8; i++) {
+            x2 = this.sampleCurveX(t2) - x;
+            if (Math.abs(x2) < epsilon)
+                return t2;
+            d2 = this.sampleDerivX(t2);
+            if (Math.abs(d2) < epsilon)
+                break;
+            t2 = t2 - x2 / d2;
         }
-        reset_case2();
+        t0 = 0.0;
+        t1 = 1.0;
+        t2 = x;
+        if (t2 < t0)
+            return t0;
+        if (t2 > t1)
+            return t1;
+        while (t0 < t1) {
+            x2 = this.sampleCurveX(t2);
+            if (Math.abs(x2 - x) < epsilon)
+                return t2;
+            if (x > x2)
+                t0 = t2;
+            else
+                t1 = t2;
+            t2 = (t1 - t0) * 0.5 + t0;
+        }
+        return t2;
+    };
+    CubicBezier.easings = {};
+    return CubicBezier;
+})();
 
-        var start_case2 = function(){
-            // console.log('start');
-            TweenMax.to("#mbkz_bg", t, { rotationX:0, rotationZ:0, x:0, y:0, z:0, ease: easeBounce });
-            TweenMax.to("#mbkz_menu", t, { rotationX:0, rotationZ:0, x:0, y:0, z:0, ease: easeBounce }); 
-            TweenMax.to("#mbkz_side", t, { rotationX:0, rotationZ:0, x:0, y:0, z:0, ease: easeBounce });
-            TweenMax.to("#mbkz_content", t, { rotationX:0, rotationZ:0, x:0, y:0, z:0, ease: easeBounce });
+$(document).ready(function() {
 
-            TweenMax.staggerTo(".mbkz_textrow", 0.5, {x:0, y:0, ease:Back.easeOut}, 0.05);
-            TweenMax.set("#mbkz_bg", { rotationX:20, rotationZ:15, x:0, y:0, z:0 });
+    //////////////////
+    // CASE 2
+    
+    // Config
+    var easeBounce = CubicBezier.config(0.2, 2, .3, .8);
+    var t = 1.6;
+
+    // Reset
+    var reset_case2 = function(){
+        TweenMax.set("#mbkz_bg", { rotationX:20, rotationZ:15, x:0, y:0, z:0 });
+        TweenMax.set("#mbkz_menu", { rotationX:20, rotationZ:15, x:-3, y:-10, z:40 }); 
+        TweenMax.set("#mbkz_side", { rotationX:20, rotationZ:15, x:-3, y:-20, z:60 });
+        TweenMax.set("#mbkz_content", { rotationX:20, rotationZ:15, x:-10, y:-2, z:15 });
+        TweenMax.set(".mbkz_textrow", { x:-5, y:-5 });
+    }
+    reset_case2();
+
+    var start_case2 = function(){
+        // console.log('start');
+        TweenMax.to("#mbkz_bg", t, { rotationX:0, rotationZ:0, x:0, y:0, z:0, ease: easeBounce });
+        TweenMax.to("#mbkz_menu", t, { rotationX:0, rotationZ:0, x:0, y:0, z:0, ease: easeBounce }); 
+        TweenMax.to("#mbkz_side", t, { rotationX:0, rotationZ:0, x:0, y:0, z:0, ease: easeBounce });
+        TweenMax.to("#mbkz_content", t, { rotationX:0, rotationZ:0, x:0, y:0, z:0, ease: easeBounce });
+
+        TweenMax.staggerTo(".mbkz_textrow", 0.5, {x:0, y:0, ease:Back.easeOut}, 0.05);
+        TweenMax.set("#mbkz_bg", { rotationX:20, rotationZ:15, x:0, y:0, z:0 });
+    }
+
+    var end_case2 = function() {
+        // console.log('end');
+        TweenMax.to("#mbkz_bg", t, { rotationX:20, rotationZ:15, x:0, y:0, z:0, ease: easeBounce });
+        TweenMax.to("#mbkz_menu", t, { rotationX:20, rotationZ:15, x:-3, y:-10, z:40, ease: easeBounce }); 
+        TweenMax.to("#mbkz_side", t, { rotationX:20, rotationZ:15, x:-3, y:-20, z:60, ease: easeBounce });
+        TweenMax.to("#mbkz_content", t, { rotationX:20, rotationZ:15, x:-10, y:-2, z:15, ease: easeBounce });
+
+        TweenMax.staggerTo(".mbkz_textrow", 0.5, {x:-5, y:-5, ease:Back.easeOut}, 0.05);
+    }
+
+    // Events
+    var hover_case2 = false; // prevent from start multiple hover animations
+
+    $('.cases__item--2').bind('touchstart mouseenter', function(e) {
+        if ( !hover_case2 ) {
+            start_case2();
+            hover_case2 = true;
         }
 
-        var end_case2 = function() {
-            // console.log('end');
-            TweenMax.to("#mbkz_bg", t, { rotationX:20, rotationZ:15, x:0, y:0, z:0, ease: easeBounce });
-            TweenMax.to("#mbkz_menu", t, { rotationX:20, rotationZ:15, x:-3, y:-10, z:40, ease: easeBounce }); 
-            TweenMax.to("#mbkz_side", t, { rotationX:20, rotationZ:15, x:-3, y:-20, z:60, ease: easeBounce });
-            TweenMax.to("#mbkz_content", t, { rotationX:20, rotationZ:15, x:-10, y:-2, z:15, ease: easeBounce });
-
-            TweenMax.staggerTo(".mbkz_textrow", 0.5, {x:-5, y:-5, ease:Back.easeOut}, 0.05);
-        }
-
-        // Events
-        var hover_case2 = false; // prevent from start multiple hover animations
-
-        $('.cases__item--2').bind('touchstart mouseenter', function(e) {
-            if ( !hover_case2 ) {
-                start_case2();
-                hover_case2 = true;
-            }
-
-        });
-
-        $('.cases__item--2').bind('touchend mouseleave', function(e) {
-            if ( hover_case2 ) {
-                end_case2();
-                hover_case2 = false;
-            }
-        });
     });
-</script>
+
+    $('.cases__item--2').bind('touchend mouseleave', function(e) {
+        if ( hover_case2 ) {
+            end_case2();
+            hover_case2 = false;
+        }
+    });
+});
+    </script>
+            
+
+<h2 class="cases__header">
+    Matbaren</br>loremsumn
+</h2>
+
+<a class="button" href="/case/lorem-ipsum-case-2/">
+    <span>See case</span>
+</a>
+            
+        </div>
+
+
+        
+        <div class="cases__item cases__item--3">
+            
+                <!-- 
+###############################
+## Get code for the background
+## set in current post
+-->
+
+
+<!-- 
+####################
+## Get scripts from
+## current post
+-->
+            
+
+<h2 class="cases__header">
+    Lorem ipsum</br>Case no 3
+</h2>
+
+<a class="button" href="/case/lorem-ipsum-case-3/">
+    <span>See case</span>
+</a>
+            
+        </div>
+    </div>
+    
+
+</div>
+
+<!-- <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p> -->
+      
+    </div>
+
+    <footer class="site-footer">
+
+    <h1>[ List on all staff and contact info ]</h1>
+
+    <p>Fully Digital - This site is under construction.
+</p>
+
+    <nav class="site-nav">
+        <a class="page-link" href="http://fullydigital.github.io">Home</a>
+        
+        
+        <a class="page-link" href="/about/">About</a>
+        
+        
+        
+        <a class="page-link" href="/contact/">Contact us</a>
+        
+        
+        
+        
+
+    </nav>
+
+</footer>
+
+<script src="/js/global.js" type="text/javascript"></script>
+
+<script type="text/javascipt" src="/assets/javascript/global.js"></script>
+
+
+  </body>
+
+</html>
