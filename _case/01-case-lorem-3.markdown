@@ -14,5 +14,5 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsa dolorem, mi
 
 [Launch site][case-link]
 
-[case-link]: http://fullydigital.se
+[case-link]: http://fullystudios.se
 
