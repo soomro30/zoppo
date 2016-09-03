@@ -1,6 +1,6 @@
-fullydigital.github.io
+fullystudios.github.io
 =============================
-Website for the Swedish agency Fully Digital
+Website for the Swedish agency Fully Studios
 
 Fully Digital site is based on Jekyll, GulpJS, SASS, AutoPrefixer &amp; BrowserSync
 

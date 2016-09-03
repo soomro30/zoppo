@@ -1,0 +1,35 @@
+<!-- 
+####################
+## Loop through the latest 3 cases
+## and print them out in thre places
+-->
+<div class="cases">
+    <!-- Get all cc-about posts and revers them -->
+    {% assign items = site.case | sort: 'date' | reverse %}
+    {% assign root = 'js/' %}
+    
+    <div class="l-column-main cases__item cases__item--1">    
+        {% for case in items limit:1 %}  
+            {% include case-item.html %}
+        {% endfor %}
+    </div>
+
+
+    <div class="l-column-side">
+        <div class="cases__item cases__item--2">
+            {% for case in items limit:1 offset:1 %}
+                {% include case-item.html %}
+            {% endfor %}
+        </div>
+
+
+        {% for case in items limit:1 offset:2 %}
+        <div class="cases__item cases__item--3">
+            {% for case in items limit:1 offset:2 %}
+                {% include case-item.html %}
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+
+</div>

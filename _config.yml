@@ -1,0 +1,20 @@
+title: Fully Studios
+email: info@fullydstudios.se
+description: > 
+  Fully Studios - This site is under construction.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://fullydstudios.github.io" # the base hostname & protocol for your site
+twitter_username: fullystudios_se
+github_username:  fullydstudios
+
+
+highlighter: rouge
+exclude: ["node_modules", "gulpfile.js", "package.json"] #like git-ignore for master?
+
+collections:
+  case:
+    output: true
+    permalink: /:collection/:title/
+  curious-about:
+    output: true
+    permalink: /:collection/:title/

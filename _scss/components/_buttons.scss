@@ -1,0 +1,120 @@
+/**
+ * Buttons
+ */
+
+@mixin button_active($background: $brand-color, $color: rgba(0,0,0,1)) {
+	span {
+		background: $background;
+		color: $color;
+	}	
+}
+
+
+//Default button for use on dark background
+.button {
+	display: inline-block;
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+	font-size: 1.5rem;
+	margin: 0.4em 0;
+	color: $brand-color;
+	font-style: italic;
+	line-height: 1;
+	font-family: $header-font-family;
+	font-weight: 700;
+    font-style: italic;
+    transition: transform 0.3s cubic-bezier(0,.3,.19,.99);
+	mix-blend-mode: lighten;
+	span {
+		display: block;
+		padding: 0.5em 1em 0.6em;
+		transition: background 0.1s, color 0.1s;
+		background: rgba(0,0,0,0);
+		border: 3px solid $brand-color;
+		border-radius: 1.5em;
+	}
+	&:hover, &:focus {
+		@include button_active();
+		// TODO: Need to move this line to .button. But this prevent overflow scroll from working in keyhole att owd bob
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0; left: 0; right: 0;
+		height: 1.35em;
+		transform: translateY(0.4em);
+		transform-origin: bottom;
+		border: 3px solid $brand-color;
+		border-top: none;
+		border-bottom-left-radius: 1.3em;
+		border-bottom-right-radius: 1.3em;
+		// z-index: -1;
+		transition: transform 0.3s cubic-bezier(0,.3,.19,.99);
+	}
+	&:active {
+		transform: translateY(0.4em);
+		&:before {
+			transform: translateY(0) scaleY(0.8);
+
+		}
+	}
+	&:active, &:focus {
+		-webkit-tap-highlight-color: none;
+		outline: none;
+	}
+	&--dark {
+		mix-blend-mode: darken;
+		span {
+			border: 3px solid $secondary-color-invert;
+			color: $secondary-color-invert;
+		}
+		&:before {
+			border: 3px solid $secondary-color-invert;
+			border-top: none;
+		}
+		&:hover, &:focus {
+			@include button_active($secondary-color-invert, #fff);
+		}
+	}
+}
+
+// .case-link:focus {
+// 	.button {
+// 		@include button_active();
+// 	}
+// 	.button--inv-color {
+// 		@include button_active($brand-color, #fff);
+// 	}
+// }
+
+//Wite button
+.button--inv {
+	span {
+		border: 3px solid #fff;
+		color: #fff;
+	}
+	&:before {
+		border: 3px solid #fff;
+		border-top: none;
+	}
+	&:hover, &:focus {
+		@include button_active(#fff, #000);
+	}
+}
+
+//Colored button on light background
+.button--inv-color {
+	mix-blend-mode: darken;
+	span {
+		background: rgba(255,255,255,0);
+		border: 3px solid $brand-color;
+		color: $brand-color;
+		
+	}
+	&:hover, &:focus {
+		@include button_active($brand-color, #fff);
+	}
+}
