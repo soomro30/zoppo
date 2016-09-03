@@ -37,9 +37,9 @@ section6: |
 background: |
   <div class="cc__image" id="lettering"></div>
 
-scripts: 
-- js/vivus.js
-- js/curious/speed-bumps.js
+scripts:
+- vivus.js
+- curious/speed-bumps.js
 
 ---
 

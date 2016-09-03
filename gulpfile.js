@@ -56,7 +56,9 @@ gulp.task('sass', function () {
 
 gulp.task("deploy", ["jekyll-build"], function () {
     return gulp.src("./_site/**/*")
-        .pipe(ghPages());
+        .pipe(ghPages({
+            branch: "master"
+        }));
 });
 
 
@@ -66,7 +68,7 @@ gulp.task("deploy", ["jekyll-build"], function () {
  */
 gulp.task('watch', function () {
     gulp.watch('_scss/*.scss', ['sass']);
-    gulp.watch(['*.html', '*.md', '_layouts/*.html', '_case/*', '_curious-about/*', '_js/**', 'js/**', '_includes/**', '_scss/**'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '*.md', '_layouts/*.html', '_case/*', '_curious-about/*', '_includes/**/**', 'js/**', '_scss/**'], ['jekyll-rebuild']);
 });
 
 /**

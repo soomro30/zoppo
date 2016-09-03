@@ -36,9 +36,10 @@ layout: default
             ## Get scripts from
             ## current post
             -->
-            {% for js in page.scripts %}
+			{% for js in cc.scripts %}
+				{% assign root = 'js/' %}
                 <script type="text/javascript">
-                {% include {{ js }} %}
+                {% include {{ root | append: js }} %}
                 </script>
             {% endfor %}
        
@@ -77,6 +78,7 @@ layout: default
 
 			<div class="text-content">
 				<div class="section--3__image" id="lettering2"></div>
+				{% comment %} move to scriptfile {% endcomment %}
 				<script type="text/javascript">
 				var lettering2 = document.getElementById('lettering2');
 				if( lettering2 ) {

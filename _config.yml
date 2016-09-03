@@ -9,7 +9,7 @@ github_username:  fullydstudios
 
 
 highlighter: rouge
-exclude: ["node_modules", "gulpfile.js", "package.json"]
+exclude: ["node_modules", "gulpfile.js", "package.json"] #like git-ignore for master?
 
 collections:
   case:

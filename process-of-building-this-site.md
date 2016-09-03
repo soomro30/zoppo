@@ -2,7 +2,7 @@
 layout: page
 title: The process of building this site
 permalink: /building-process/
-published: false
+published: true
 author: Jonas Sandstedt
 date: 2016-06-29
 ---
@@ -48,21 +48,24 @@ To add custom javascript files to different post, I used [this sollution][custom
 
 ```markdown
 scripts: 
-- js/vivus.js
-- js/curious/speed-bumps.js
+- vivus.js
+- curious/speed-bumps.js
 ```
 
 Then in the layout, I looped trough the files and inlined them:
 
 {% raw %}
 ```liquid
-{% for js in page.scripts %}
+{% for js in cc.scripts %}
+    {% assign root = 'js/' %}
     <script type="text/javascript">
-    {% include {{ js }} %}
+    {% include {{ root | append: js }} %}
     </script>
 {% endfor %}
 ```
 {% endraw %}
+
+The js files are located in the include/js folder
 
 
 ### Resources:
