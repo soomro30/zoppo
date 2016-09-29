@@ -11,39 +11,22 @@ ready(function(){
 	// Initialize barba.js
 	Barba.Pjax.start();
 
-	// //simple hide show animation
-	// var HideShowTransition = Barba.BaseTransition.extend({
-	//   start: function() {
-	//     this.newContainerLoading.then(this.finish.bind(this));
-	//     console.log('start');
-	//   },
-
-	//   finish: function() {
-	//     document.body.scrollTop = 0;
-	//     this.done();
-	//     console.log('finsh');
-	//   }
-	// });
-
-	// Barba.Pjax.getTransition = function() {
-	//   return HideShowTransition;
-	// };
-	// 
-	// 
 
 	// simple fade animation
 	var FadeTransition = Barba.BaseTransition.extend({
-		start: function() {
 		/**
-		* This function is automatically called as soon the Transition starts
-		* this.newContainerLoading is a Promise for the loading of the new container
-		* (Barba.js also comes with an handy Promise polyfill!)
-		*/
-
-		// As soon the loading is finished and the old page is faded out, let's fade the new page
-		Promise
-			.all([this.newContainerLoading, this.animOut()])
-			.then(this.animIn.bind(this));
+		 * [start function]
+		 *
+		 * This function is automatically called as soon the Transition starts
+		 * this.newContainerLoading is a Promise for the loading of the new container
+		 * (Barba.js also comes with an handy Promise polyfill!)
+	
+		 */
+		start: function() {
+			// As soon the loading is finished and the old page is faded out, let's fade the new page
+			Promise
+				.all([this.newContainerLoading, this.animOut()])
+				.then(this.animIn.bind(this));
 		},
 
 		/**
@@ -93,16 +76,15 @@ ready(function(){
 	});
 
 	/**
-	* Next step, you have to tell Barba to use the new Transition
-	*/
-
+	 * Tell Barba to use the FadeTransition
+	 */
 	Barba.Pjax.getTransition = function() {
-	/**
-	* Here you can use your own logic!
-	* For example you can use different Transition based on the current page or link...
-	*/
+		/**
+		* Here you can use your own logic!
+		* For example you can use different Transition based on the current page or link...
+		*/
 
-	return FadeTransition;
+		return FadeTransition;
 	};
 
 });
