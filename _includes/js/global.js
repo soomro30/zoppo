@@ -41,7 +41,7 @@ ready(function(){
 			 * Animate out the old container 
 			 * this.oldContainer is the HTMLElement of the old Container
 			 */
-			TweenMax.to(this.oldContainer, 0.4, {
+			TweenMax.to(this.oldContainer, 0.2, {
 				opacity: 0,
 				onComplete: function() {
 					deferred.resolve();
@@ -65,7 +65,7 @@ ready(function(){
 			TweenMax.set(newCont, { visibility: 'visible', opacity:0 });
 
 			// Animate in the new container
-			TweenMax.to(newCont, 0.4, {
+			TweenMax.to(newCont, 0.2, {
 				opacity: 1,
 				onComplete: function() {
 					// .done() will automatically remove the old Container from the DOM 
