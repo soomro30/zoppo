@@ -7,10 +7,10 @@
 
     {% include header.html %}
 
-    <div class="page-content">
-      
-        {{ content }}
-      
+ 	<div id="barba-wrapper">
+    	<div class="site-content barba-container" data-namespace="{% if page.slug %}{{ page.slug }}{% else %}home{% endif %}">
+        	{{ content }}
+    	</div>
     </div>
 
     {% include footer.html %}

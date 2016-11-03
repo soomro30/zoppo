@@ -16,6 +16,8 @@
 
 </footer>
 
-<script src="/js/global.js" type="text/javascript"></script>
-
-<script type="text/javascipt" src="{{ "/assets/javascript/global.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript">
+{% include {{ root | append: '/js/TweenMax.min.js' }} %}
+{% include {{ root | append: '/js/barba.min.js' }} %}
+{% include {{ root | append: 'js/global.js' }} %}
+</script>

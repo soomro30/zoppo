@@ -1,6 +1,15 @@
 {% include js/gsap-cubicbezier.js %}
 
-$(document).ready(function() {
+// Init all code on document eady
+function ready(fn) {
+    if (document.readyState != 'loading') {
+        fn();
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+}
+
+ready(function(){
 
     //////////////////
     // CASE 2
