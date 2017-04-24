@@ -24,7 +24,7 @@ body {
   background-color: black;
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
-  text-align: center; }
+  text-align: left; }
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
@@ -150,6 +150,22 @@ a:visited {
 .post pre.terminal code {
   background-color: #333; }
 
+.ds-dot {
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  border-radius: 100%;
+  background-color: #666; }
+  .ds-dot--shadow {
+    box-shadow: 0 0 2px rgba(10, 42, 79, 0.2); }
+
+.ds-header {
+  text-align: center;
+  background: #5F11E8;
+  color: #f8f8f8;
+  padding: 4em;
+  margin-bottom: 2em; }
+
 @-webkit-keyframes moveBack {
   100% {
     -webkit-transform: translate3D(0, 0, 0);
@@ -205,7 +221,7 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: 400 16px/1.5 "GT-Pressura-Mono-Regular", monospace;
-  color: #e08f8f;
+  color: #0A2A4F;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
@@ -226,16 +242,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2; }
 
 /**
- * Set `margin-bottom` to maintain vertical rhythm
+ * Set `margin-top` on a elements siblings
  */
-h1, h2, h3, h4, h5, h6,
-blockquote, pre,
-ul, ol, dl, figure,
-.highlight {
-  margin-bottom: 15px; }
-
-p {
-  margin-bottom: 30px; }
+* + * {
+  margin-top: 30px; }
 
 .header {
   font-size: 3em;
@@ -344,8 +354,6 @@ blockquote {
   font-size: 18px;
   letter-spacing: -1px;
   font-style: italic; }
-  blockquote > :last-child {
-    margin-bottom: 0; }
 
 /**
  * Code formatting
@@ -389,6 +397,57 @@ pre {
   vertical-align: middle; }
   .icon > svg path {
     fill: #828282; }
+
+/**
+ * Colors
+ */
+.c-signal {
+  color: #5F11E8; }
+
+.c-signal-bg {
+  background-color: #5F11E8; }
+
+.c-people {
+  color: #FEDDDD; }
+
+.c-people-bg {
+  background-color: #FEDDDD; }
+
+.c-business {
+  color: #96F07A; }
+
+.c-business-bg {
+  background-color: #96F07A; }
+
+.c-curiosites {
+  color: #FFDE7F; }
+
+.c-curiosites-bg {
+  background-color: #FFDE7F; }
+
+.c-metal {
+  color: #666666; }
+
+.c-metal-bg {
+  background-color: #666666; }
+
+.c-light {
+  color: #f8f8f8; }
+
+.c-light-bg {
+  background-color: #f8f8f8; }
+
+.c-white {
+  color: #ffffff; }
+
+.c-white-bg {
+  background-color: #ffffff; }
+
+.c-dark {
+  color: #0A2A4F; }
+
+.c-dark-bg {
+  background-color: #0A2A4F; }
 
 @media screen and (min-width: 40em) {
   .l-column-main {
@@ -468,7 +527,7 @@ pre {
   text-transform: uppercase;
   letter-spacing: 0.2em; }
   .site-title, .site-title:visited {
-    color: #e08f8f; }
+    color: #0A2A4F; }
 
 .site-nav {
   display: block;
