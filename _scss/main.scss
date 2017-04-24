@@ -19,6 +19,16 @@ $base-line-height:  1.5;
 $spacing-unit:      60px;
 
 $background-color:  #fdfdfd;
+
+$c-signal:          #5F11E8;
+$c-people:          #FEDDDD;
+$c-business:        #96F07A;
+$c-curiosites:      #FFDE7F;
+$c-metal:           #666666;
+$c-light:           #f8f8f8;
+$c-white:           #ffffff;
+$c-dark:            #0A2A4F;
+
 $brand-color:       #e08f8f;
 $brand-color-invert:#ffffff;
 
@@ -34,7 +44,7 @@ $grey-light: lighten($grey, 45%);
 $grey-dark:  darken($grey, 25%);
 
 $cubic-bezier:      cubic-bezier(0.2,2,.3,.8);
-$text-color:        $brand-color;
+$text-color:        $c-dark;
 $cb-ease_out:       cubic-bezier(0.2,1,.3,.8);
 
 
@@ -64,6 +74,7 @@ $on-laptop:         40em; //640px
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
 	"reset",
+  "design-system",
   "animations",
   "base",
   "layout",

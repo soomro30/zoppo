@@ -1,0 +1,18 @@
+.ds-dot {
+    display: inline-block;
+    width: 5em;
+    height: 5em;
+    border-radius: 100%;
+    background-color: #666;
+    &--shadow {
+        box-shadow: 0 0 2px rgba($c-dark, 0.2);
+    }
+}
+
+.ds-header {
+    text-align: center;
+    background: $c-signal;
+    color: $c-light;
+    padding: 4em;
+    margin-bottom: 2em;
+}
