@@ -29,19 +29,7 @@ $c-light:           #f8f8f8;
 $c-white:           #ffffff;
 $c-dark:            #0A2A4F;
 
-$brand-color:       #e08f8f;
-$brand-color-invert:#ffffff;
 
-// $secondary-color:   rgba(52,170,199,1);
-$secondary-color:   rgb(195, 255, 220);
-$secondary-color-invert:   #333;
-
-$third-color:       rgba(174,90,253,1);
-$third-color-invert: #ffffff;
-
-$grey:       #828282;
-$grey-light: lighten($grey, 45%);
-$grey-dark:  darken($grey, 25%);
 
 $cubic-bezier:      cubic-bezier(0.2,2,.3,.8);
 $text-color:        $c-dark;

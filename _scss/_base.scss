@@ -163,11 +163,11 @@ h4 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $c-signal;
     text-decoration: none;
 
     &:visited {
-        color: $brand-color;
+        color: $c-signal;
     }
 
     // &:hover {
@@ -182,8 +182,8 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey;
-    border-left: 4px solid $grey-light;
+    color: $c-metal;
+    border-left: 4px solid $c-light;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
     letter-spacing: -1px;
@@ -198,7 +198,7 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-light;
+    border: 1px solid $c-light;
     border-radius: 3px;
     background-color: #eef;
     text-align: left;
@@ -271,7 +271,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey;
+            fill: $c-metal;
         }
     }
 }

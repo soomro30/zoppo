@@ -1,6 +1,6 @@
 //Single curious pages
 .content {
-    background: $grey-light;
+    background: $c-light;
 }
 $moveContent: 50px; 
 .section--1 {
@@ -155,7 +155,7 @@ $speed-bumps-color: #232b40;
 	.keyhole__svg {
 	    width: 100%;
 	    height: auto;
-	    fill: $grey-light;
+	    fill: $c-light;
 	    position: absolute;
 	    top: 0; left: 0;
 	    z-index: 2;
@@ -197,7 +197,7 @@ $speed-bumps-color: #232b40;
 	// .keyhole__svg {
 	//     width: 100%;
 	//     height: auto;
-	//     fill: $grey-light;
+	//     fill: $c-light;
 	//     position: absolute;
 	//     top: 0; left: 0;
 	//     z-index: 2;
@@ -242,7 +242,7 @@ $speed-bumps-color: #232b40;
 //Mobile first
 .cc-mobile-first {
 	.section--2 {
-		background: $secondary-color;
+		background: $c-signal;
 		color: #fff;
 	}
 }
