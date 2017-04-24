@@ -52,18 +52,18 @@ ready(function(){
     // Events
     var hover_case2 = false; // prevent from start multiple hover animations
 
-    $('.cases__item--2').bind('touchstart mouseenter', function(e) {
-        if ( !hover_case2 ) {
-            start_case2();
-            hover_case2 = true;
-        }
+    // $('.cases__item--2').bind('touchstart mouseenter', function(e) {
+    //     if ( !hover_case2 ) {
+    //         start_case2();
+    //         hover_case2 = true;
+    //     }
 
-    });
+    // });
 
-    $('.cases__item--2').bind('touchend mouseleave', function(e) {
-        if ( hover_case2 ) {
-            end_case2();
-            hover_case2 = false;
-        }
-    });
+    // $('.cases__item--2').bind('touchend mouseleave', function(e) {
+    //     if ( hover_case2 ) {
+    //         end_case2();
+    //         hover_case2 = false;
+    //     }
+    // });
 });
