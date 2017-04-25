@@ -1,0 +1,39 @@
+/**
+ * Boxes with drop shadows
+ */
+
+.box {
+    padding: $s-small*2 $s-small;
+    background: $c-white;
+    position: relative;
+    // margin-bottom: $s-small;
+    margin-left: $s-small;
+    margin-right: $s-small*2;
+    &:before {
+        content:"";
+        display: block;
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: -1;
+        transform: translate($s-small, $s-small);
+        background: $c-signal;
+    }
+
+    // Right modification
+    &--right{
+        margin-left: $s-small*2;
+        margin-right: $s-small;
+        &:before {
+            transform: translate(-$s-small, $s-small);;
+        }
+    }
+
+    // Different colors
+    &--people:before {
+        background: $c-people;
+    }
+}
+
+.box + .box {
+    margin-top: $s-small*2;
+}

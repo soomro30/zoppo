@@ -17,6 +17,7 @@ $small-font-size:   $base-font-size * 0.875;
 $base-line-height:  1.5;
 
 $spacing-unit:      60px;
+$s-small:           1.5em;
 
 $background-color:  #fdfdfd;
 
@@ -68,4 +69,5 @@ $on-laptop:         40em; //640px
   "layout",
   "curious",
   "syntax-highlighting",
+  "components/boxes",
   "components/buttons";
