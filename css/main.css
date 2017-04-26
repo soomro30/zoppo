@@ -1319,6 +1319,12 @@ pre {
               transform: translate(-1.5em, 1.5em); }
   .box--people:before {
     background: #FEDDDD; }
+  .box--business:before {
+    background: #96F07A; }
+  .box--curiosites:before {
+    background: #FFDE7F; }
+  .box--metal:before {
+    background: #666666; }
 
 .box + .box {
   margin-top: 3em; }

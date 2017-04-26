@@ -29,9 +29,10 @@
     }
 
     // Different colors
-    &--people:before {
-        background: $c-people;
-    }
+    &--people:before     { background: $c-people; }
+    &--business:before   { background: $c-business; }
+    &--curiosites:before { background: $c-curiosites; }
+    &--metal:before      { background: $c-metal; }
 }
 
 .box + .box {

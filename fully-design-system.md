@@ -96,10 +96,17 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat,
 
 Standard button:
 <a class="button" href="#"><span>Explore</span></a>
+
+```<a class="button" href="#"><span>Explore</span></a>```
+
 <div style="background: #666666; padding: 4em">
     Inverted button:
+
     <a class="button button--inv" href="#"><span>Explore</span></a>
+
 </div>
+
+```<a class="button button--inv" href="#"><span>Explore</span></a>```
 
 <header class="ds-header" markdown='1'>
 ## Boxes
@@ -107,18 +114,36 @@ Boxes with different dropshadows for text and images.
 </header>
 
 <div class="box" markdown="1">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
-</div>
-
-<div class="box box--people box--right" markdown="1">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
-</div>
-
-<div class="box" markdown="1">
 
 ## The secret clubhouse
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
+
+```<div class="box" markdown="1">```
+
 </div>
 
+<div class="box box--right box--people" markdown="1">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
+
+```<div class="box box--right box--people" markdown="1"></div>```
+</div>
+
+<div class="box box--business" markdown="1">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
+
+```<div class="box box--business" markdown="1"></div>```
+</div>
+
+<div class="box box--right box--curiosites" markdown="1">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
+
+```<div class="box box--right box--curiosites" markdown="1">```
+</div>
+
+<div class="box box--metal" markdown="1">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
+
+```<div class="box box--metal" markdown="1">```
+</div>
 
 <br><br><br>
