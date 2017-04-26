@@ -1,23 +1,16 @@
-
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
-}
-
-
-
 /**
  * Basic styling
  */
+html,body {
+    background: $c-light;
+    // overflow-x: hidden;
+}
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    font-weight: $base-font-weight;
+    font-size: calc( 12px + 0.5vw );
+    line-height: $base-line-height;
+    font-family: $base-font-family;
     color: $text-color;
-    background-color: $background-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -26,28 +19,16 @@ body {
     font-kerning: normal;
 }
 
-p {
-    line-height: 1.75;
-    @include media-query($on-laptop) {
-        line-height: 2.5;
-    }
-}
-
-h1, h2, h3, h4, h5, h6 {
-    line-height: 1.2;
-}
-
 /**
- * Set `margin-bottom` to maintain vertical rhythm
+ * Set `margin-top` on a elements siblings
  */
-h1, h2, h3, h4, h5, h6,
-blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
-    margin-bottom: $spacing-unit / 4;
+* + *:not(body, path, #barba-wrapper, .site-footer, .box) {
+    margin-top: $spacing-unit;
 }
-p {
-    margin-bottom: $spacing-unit / 2;
+
+// remove this later
+.about-us, .cases, .cases__item, .l-column-side {
+    margin-top: 0 !important;
 }
 
 .header {
@@ -133,47 +114,53 @@ li {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: $header-font-family;
     font-weight: 700;
-    font-style: italic;
+    line-height: 1.5;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
+    // background: red;
+}
+// p { background: green;}
+
+h1, .h1 { 
+    font-size: 5em;
+    max-width: calc( 11.2em + #{$spacing-unit*2});
 }
 
-h2 {
-    font-size: 32px;
-
-    @include media-query($on-laptop) {
-        font-size: 28px;
-    }
+h2, .h2 { 
+    font-size: 2.5em;
+    max-width: calc( 22.4em + #{$spacing-unit*2});
 }
 
-h3 {
-    font-size: 26px;
-
-    @include media-query($on-laptop) {
-        font-size: 22px;
-    }
+h3, .h3 { 
+    font-size: 2em;
+    max-width: calc( 28em + #{$spacing-unit*2});    
 }
 
-h4 {
-    font-size: 20px;
-
-    @include media-query($on-laptop) {
-        font-size: 18px;
-    }
+h4, .h4 { // eg ingress
+    font-size: 1.5em;
+    max-width: calc( 37.35em + #{$spacing-unit*2});        
 }
 
+h5, .h5, h6, .h6 {
+    max-width: calc( 56em + #{$spacing-unit*2});
+}
 
 /**
  * Links
  */
 a {
-    color: $brand-color;
+    color: $c-signal;
     text-decoration: none;
 
     &:visited {
-        color: $brand-color;
+        color: $c-signal;
     }
+    &:hover   { color: #000; }
 
     // &:hover {
     //     color: $text-color;
@@ -187,16 +174,12 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey;
-    border-left: 4px solid $grey-light;
+    color: $c-metal;
+    border-left: 4px solid $c-light;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
-
-    > :last-child {
-        margin-bottom: 0;
-    }
 }
 
 
@@ -207,12 +190,14 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-light;
+    border: 1px solid $c-light;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: rgba($c-metal, 0.2);
     text-align: left;
     max-width: 60em;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    word-break: break-all;
 }
 
 code {
@@ -230,6 +215,25 @@ pre {
     }
 }
 
+/**
+ * Other typography
+ */
+p {
+    max-width: 56em; // max 95 characters
+    max-width: calc( 56em + #{$spacing-unit*2});
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
+}
+
+.ingress {
+    @extend .h4;
+}
+p.ingress {
+    max-width: calc( 37.35em + #{$spacing-unit*2});    
+}
 
 
 // /**
@@ -280,7 +284,37 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey;
+            fill: $c-metal;
         }
     }
 }
+
+
+/**
+ * Colors
+ */
+
+// Help classes for colors
+.c-signal { color: $c-signal; }
+.c-signal-bg { background-color: $c-signal; color: $c-white; }
+
+.c-people { color: $c-people; }
+.c-people-bg { background-color: $c-people }
+
+.c-business { color: $c-business; }
+.c-business-bg { background-color: $c-business }
+
+.c-curiosites { color: $c-curiosites; }
+.c-curiosites-bg { background-color: $c-curiosites }
+
+.c-metal { color: $c-metal; }
+.c-metal-bg { background-color: $c-metal; color: $c-white; }
+
+.c-light { color: $c-light; }
+.c-light-bg { background-color: $c-light }
+
+.c-white { color: $c-white; }
+.c-white-bg { background-color: $c-white }
+
+.c-dark { color: $c-dark; }
+.c-dark-bg { background-color: $c-dark; color: $c-white; }

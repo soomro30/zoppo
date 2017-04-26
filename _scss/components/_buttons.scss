@@ -2,7 +2,7 @@
  * Buttons
  */
 
-@mixin button_active($background: $brand-color, $color: rgba(0,0,0,1)) {
+@mixin button_active($background: $c-signal, $color: rgba(0,0,0,1)) {
 	span {
 		background: $background;
 		color: $color;
@@ -18,12 +18,10 @@
 	position: relative;
 	font-size: 1.5rem;
 	margin: 0.4em 0;
-	color: $brand-color;
-	font-style: italic;
+	color: $c-signal;
 	line-height: 1;
 	font-family: $header-font-family;
 	font-weight: 700;
-    font-style: italic;
     transition: transform 0.3s cubic-bezier(0,.3,.19,.99);
 	mix-blend-mode: lighten;
 	span {
@@ -31,7 +29,7 @@
 		padding: 0.5em 1em 0.6em;
 		transition: background 0.1s, color 0.1s;
 		background: rgba(0,0,0,0);
-		border: 3px solid $brand-color;
+		border: 3px solid $c-signal;
 		border-radius: 1.5em;
 	}
 	&:hover, &:focus {
@@ -47,7 +45,7 @@
 		height: 1.35em;
 		transform: translateY(0.4em);
 		transform-origin: bottom;
-		border: 3px solid $brand-color;
+		border: 3px solid $c-signal;
 		border-top: none;
 		border-bottom-left-radius: 1.3em;
 		border-bottom-right-radius: 1.3em;
@@ -68,15 +66,15 @@
 	&--dark {
 		mix-blend-mode: darken;
 		span {
-			border: 3px solid $secondary-color-invert;
-			color: $secondary-color-invert;
+			border: 3px solid $c-light;
+			color: $c-light;
 		}
 		&:before {
-			border: 3px solid $secondary-color-invert;
+			border: 3px solid $c-light;
 			border-top: none;
 		}
 		&:hover, &:focus {
-			@include button_active($secondary-color-invert, #fff);
+			@include button_active($c-light, #fff);
 		}
 	}
 }
@@ -86,7 +84,7 @@
 // 		@include button_active();
 // 	}
 // 	.button--inv-color {
-// 		@include button_active($brand-color, #fff);
+// 		@include button_active($c-signal, #fff);
 // 	}
 // }
 
@@ -110,11 +108,11 @@
 	mix-blend-mode: darken;
 	span {
 		background: rgba(255,255,255,0);
-		border: 3px solid $brand-color;
-		color: $brand-color;
+		border: 3px solid $c-signal;
+		color: $c-signal;
 		
 	}
 	&:hover, &:focus {
-		@include button_active($brand-color, #fff);
+		@include button_active($c-signal, #fff);
 	}
 }

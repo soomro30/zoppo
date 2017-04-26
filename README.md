@@ -18,6 +18,19 @@ Only if you hasn't install Jekyll, node or Gulp installed on your machine:
 2. Change to branch develop 
 3. Inside the directory, run `npm install` and `bundle install`.
 
+You may have to update ruby and all your local gems if they are to old:
+
+Update Ruby using rvm:
+```\curl -sSL https://get.rvm.io | bash -s stable```
+```rvm install ruby-2.4.1```
+```rvm use ruby-2.4.1```
+```bundle install```
+
+
+Update gems:
+```gem update```
+ 
+
 ## Usage
 
 **development mode**

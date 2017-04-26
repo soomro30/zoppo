@@ -68,6 +68,7 @@ gulp.task("deploy", ["jekyll-build"], function () {
  */
 gulp.task('watch', function () {
     gulp.watch('_scss/*.scss', ['sass']);
+    gulp.watch('_scss/**/*.scss', ['sass']);
     gulp.watch(['*.html', '*.md', '_layouts/*.html', '_case/*', '_curious-about/*', '_includes/**/**', 'js/**', '_scss/**'], ['jekyll-rebuild']);
 });
 
