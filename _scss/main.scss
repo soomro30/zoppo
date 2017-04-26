@@ -1,40 +1,48 @@
 // @import url(https://fonts.googleapis.com/css?family=Playfair+Display:900italic,700italic);
 
+
 @font-face {
-  font-family: "GT-Pressura-Mono-Regular";
-  src: url("../assets/sketch/GT-Pressura-Mono-Regular.woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'moderat';
+    src: url('../assets/typefaces/moderat-subset/moderat-regular-webfont.woff2') format('woff2'),
+         url('../assets/typefaces/moderat-subset/moderat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'moderat';
+    src: url('../assets/typefaces/moderat-subset/moderat-bold-webfont.woff2') format('woff2'),
+         url('../assets/typefaces/moderat-subset/moderat-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
 }
 
 // Our variables
-$base-font-family: "GT-Pressura-Mono-Regular", monospace;
-$header-font-family: "Playfair Display", serif;
+$base-font-family: "Fira Mono", monospace;
+$header-font-family: "Moderat", sans-serif;
 
-$base-font-size:    16px;
+$base-font-size:    18px;
 $base-font-weight:  400;
 $small-font-size:   $base-font-size * 0.875;
-$base-line-height:  1.5;
+$base-line-height:  1.75; 
 
-$spacing-unit:      60px;
+$spacing-unit:      30px;
+$s-small:           30px;
 
 $background-color:  #fdfdfd;
-$brand-color:       #e08f8f;
-$brand-color-invert:#ffffff;
 
-// $secondary-color:   rgba(52,170,199,1);
-$secondary-color:   rgb(195, 255, 220);
-$secondary-color-invert:   #333;
+$c-signal:          rgba(95,17,232,1);
+$c-people:          rgba(255,193,180,1);
+$c-business:        rgba(123,215,94,1);
+$c-curiosites:      rgba(255,222,127,1);
+$c-metal:           #666666;
+$c-light:           #f8f8f8;
+$c-white:           #ffffff;
+$c-dark:            rgba(10,42,79,1);
 
-$third-color:       rgba(174,90,253,1);
-$third-color-invert: #ffffff;
 
-$grey:       #828282;
-$grey-light: lighten($grey, 45%);
-$grey-dark:  darken($grey, 25%);
 
 $cubic-bezier:      cubic-bezier(0.2,2,.3,.8);
-$text-color:        $brand-color;
+$text-color:        $c-dark;
 $cb-ease_out:       cubic-bezier(0.2,1,.3,.8);
 
 
@@ -64,9 +72,11 @@ $on-laptop:         40em; //640px
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
 	"reset",
+  "design-system",
   "animations",
   "base",
   "layout",
   "curious",
   "syntax-highlighting",
+  "components/boxes",
   "components/buttons";
