@@ -19,11 +19,9 @@
 	font-size: 1.5rem;
 	margin: 0.4em 0;
 	color: $c-signal;
-	font-style: italic;
 	line-height: 1;
 	font-family: $header-font-family;
 	font-weight: 700;
-    font-style: italic;
     transition: transform 0.3s cubic-bezier(0,.3,.19,.99);
 	mix-blend-mode: lighten;
 	span {

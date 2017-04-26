@@ -1,34 +1,43 @@
 // @import url(https://fonts.googleapis.com/css?family=Playfair+Display:900italic,700italic);
 
+
 @font-face {
-  font-family: "GT-Pressura-Mono-Regular";
-  src: url("../assets/sketch/GT-Pressura-Mono-Regular.woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'moderat';
+    src: url('../assets/typefaces/moderat-subset/moderat-regular-webfont.woff2') format('woff2'),
+         url('../assets/typefaces/moderat-subset/moderat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'moderat';
+    src: url('../assets/typefaces/moderat-subset/moderat-bold-webfont.woff2') format('woff2'),
+         url('../assets/typefaces/moderat-subset/moderat-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
 }
 
 // Our variables
-$base-font-family: "GT-Pressura-Mono-Regular", monospace;
-$header-font-family: "Playfair Display", serif;
+$base-font-family: "Fira Mono", monospace;
+$header-font-family: "Moderat", sans-serif;
 
-$base-font-size:    16px;
+$base-font-size:    18px;
 $base-font-weight:  400;
 $small-font-size:   $base-font-size * 0.875;
-$base-line-height:  1.5;
+$base-line-height:  1.75; 
 
-$spacing-unit:      60px;
-$s-small:           1.5em;
+$spacing-unit:      30px;
+$s-small:           30px;
 
 $background-color:  #fdfdfd;
 
-$c-signal:          #5F11E8;
-$c-people:          #FEDDDD;
-$c-business:        #96F07A;
-$c-curiosites:      #FFDE7F;
+$c-signal:          rgba(95,17,232,1);
+$c-people:          rgba(255,193,180,1);
+$c-business:        rgba(123,215,94,1);
+$c-curiosites:      rgba(255,222,127,1);
 $c-metal:           #666666;
 $c-light:           #f8f8f8;
 $c-white:           #ffffff;
-$c-dark:            #0A2A4F;
+$c-dark:            rgba(10,42,79,1);
 
 
 

@@ -7,13 +7,21 @@
 
     {% include header.html %}
 
- 	<div id="barba-wrapper">
+ 	  <div id="barba-wrapper">
     	<div class="site-content barba-container" data-namespace="{% if page.slug %}{{ page.slug }}{% else %}home{% endif %}">
         	{{ content }}
     	</div>
     </div>
 
     {% include footer.html %}
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Fira Mono']
+        }
+      });
+    </script>
 
   </body>
 

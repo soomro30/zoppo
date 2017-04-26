@@ -3,14 +3,15 @@
  */
 
 .box {
-    padding: $s-small*2 $s-small;
+    padding: $s-small*2 0; // make sure all content is inside a p or h tag.
     background: $c-white;
     position: relative;
     // margin-bottom: $s-small;
     margin-left: $s-small;
-    margin-right: $s-small*2;
+    margin-right: auto;
     background-size: cover;
     background-position: center;
+    max-width: 59em;
     &:before {
         content:"";
         display: block;
@@ -23,7 +24,7 @@
 
     // Right modification
     &--right{
-        margin-left: $s-small*2;
+        margin-left: auto;
         margin-right: $s-small;
         &:before { transform: translate(-$s-small, $s-small) }
     }
@@ -53,3 +54,4 @@
 .box + .box {
     margin-top: $s-small*2;
 }
+

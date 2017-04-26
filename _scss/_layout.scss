@@ -1,6 +1,10 @@
 
 $golden-ratio: 61.8%;
 
+.site-content {
+    overflow-x: hidden; //prevent boxes from overflowing on mobile
+}
+
 .l-column-main {
     @include media-query($on-laptop) {
         flex: 0 0 $golden-ratio;
@@ -83,7 +87,6 @@ $golden-ratio: 61.8%;
     @include media-query($on-laptop) {
         width: 4em;
         height: 4em;
-        margin-top: 2em;
     }
 }
 
@@ -93,7 +96,6 @@ $golden-ratio: 61.8%;
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
-    float: left;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     &,
@@ -505,10 +507,9 @@ $rotZ: 15deg;
     }
 }
 
-
 .about-us {
     padding: 1em;
-    background-color: $c-signal;
+    background-color: $c-people;
     color: $c-light;
     position: relative;
     // overflow: hidden;
@@ -556,7 +557,7 @@ $rotZ: 15deg;
     &:before {
         top: -5vw;
         border-width: 0 0 5vw 100vw;
-        border-color: transparent transparent $c-signal transparent;
+        border-color: transparent transparent $c-people transparent;
         transform: scaleY(1) translateY(1px);
         transform-origin: bottom;
     }
@@ -564,7 +565,7 @@ $rotZ: 15deg;
         bottom: -3vw;
         z-index: 1;
         border-width: 0 100vw 3vw 0;
-        border-color: transparent $c-signal transparent transparent;
+        border-color: transparent $c-people transparent transparent;
         transform: scaleY(1) translateY(-1px);
         transform-origin: top;
     }
@@ -726,13 +727,8 @@ $rotZ: 15deg;
 // }
 
 .page-title {
-    font-size: 36px;
-    letter-spacing: -1px;
     line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 42px;
-    }
+    text-align: center;
 }
 // .page {
 //     padding: $spacing-unit * 2 $spacing-unit $spacing-unit;
@@ -743,7 +739,7 @@ $rotZ: 15deg;
 
 .page-header {
     padding: $spacing-unit $spacing-unit $spacing-unit/2;
-    max-width: $content-width;
+    // max-width: $content-width;
     margin: 0 auto;
 }
 
