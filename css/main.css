@@ -357,7 +357,7 @@ code {
   font-size: 15px;
   border: 1px solid #f8f8f8;
   border-radius: 3px;
-  background-color: #eef;
+  background-color: rgba(102, 102, 102, 0.2);
   text-align: left;
   max-width: 60em;
   margin: 0 auto; }
@@ -1155,7 +1155,7 @@ pre {
 .highlight {
   background: #fff; }
   .highlighter-rouge .highlight {
-    background: #eef; }
+    background: rgba(95, 17, 232, 0.2); }
   .highlight .c {
     color: #998;
     font-style: italic; }
@@ -1298,7 +1298,9 @@ pre {
   background: #ffffff;
   position: relative;
   margin-left: 1.5em;
-  margin-right: 3em; }
+  margin-right: 3em;
+  background-size: cover;
+  background-position: center; }
   .box:before {
     content: "";
     display: block;
@@ -1324,6 +1326,22 @@ pre {
   .box--curiosites:before {
     background: #FFDE7F; }
   .box--metal:before {
+    background: #666666; }
+  .box--bgsignal, .box--bgmetal {
+    color: #ffffff; }
+    .box--bgsignal:before, .box--bgmetal:before {
+      background: #ffffff; }
+  .box--bgpeople:before, .box--bgcuriosites:before, .box--bgbusiness:before {
+    background: #ffffff; }
+  .box--bgsignal {
+    background: #5F11E8; }
+  .box--bgpeople {
+    background: #FEDDDD; }
+  .box--bgcuriosites {
+    background: #FFDE7F; }
+  .box--bgbusiness {
+    background: #96F07A; }
+  .box--bgmetal {
     background: #666666; }
 
 .box + .box {

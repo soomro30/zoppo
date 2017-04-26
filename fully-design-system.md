@@ -122,10 +122,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat,
 
 </div>
 
-<div class="box box--right box--people" markdown="1">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
+<div class="box box--right box--people" markdown="1" style="background-image:url(http://placekitten.com/g/1920/600); color:white">
 
-```<div class="box box--right box--people" markdown="1"></div>```
+```<div class="box box--right box--people" markdown="1" style="background-image:url(http://placekitten.com/g/1920/600)">```
 </div>
 
 <div class="box box--business" markdown="1">
@@ -142,6 +141,12 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat,
 
 <div class="box box--metal" markdown="1">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
+
+```<div class="box box--metal" markdown="1">```
+</div>
+
+<div class="box box--bgsignal" markdown="1">
+Also works with `.box--bgpeople`, `.box--bgcuriosites`, `.box--bgbusiness` and  `.box--bgmetal`
 
 ```<div class="box box--metal" markdown="1">```
 </div>
