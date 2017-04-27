@@ -119,7 +119,7 @@ Standard button:
 
 ```<a class="button" href="#"><span>Explore</span></a>```
 
-<div style="background: #666666; padding: 4em">
+<div class="c-signal-bg" style="padding: 4em">
     Inverted button:
 
     <a class="button button--inv" href="#"><span>Explore</span></a>

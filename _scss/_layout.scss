@@ -354,9 +354,9 @@ $golden-ratio: 61.8%;
 
     color: $c-light;
     
-    .button {
-        @extend .button--inv-color;
-    }
+    // .button {
+    //     @extend .button--inv-color;
+    // }
 }
 
 .case-link {
@@ -385,9 +385,9 @@ $golden-ratio: 61.8%;
     color: $c-light;
     background-position: center;
     position: relative;
-    .button {
-        @extend .button--dark;
-    }
+    // .button {
+    //     @extend .button--dark;
+    // }
     &:after {
         content: "";
         display: block;
