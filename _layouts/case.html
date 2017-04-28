@@ -4,8 +4,8 @@ layout: default
 <article class="page" itemscope itemtype="http://schema.org/BlogPosting">
 	
 
-	<div class="hero hero--{{ page.slug }}">
-		<!-- <span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span> -->
+	<div class="hero hero--{{ page.slug }}" id="case_{{ page.slug }}">
+		{% comment %}<span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span>{% endcomment %}
 		<header class="hero__header">
 			<h1 itemprop="name headline">
 				{{ page.title }}
@@ -14,17 +14,12 @@ layout: default
 			{% comment %}<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} {% endcomment %}
 			{% comment %}<span class="categories">{{ page.categories }}<span></p>{% endcomment %}
 		</header>
-	<!--       <div class="pagination">
-			<div class="pagination__counter">1<span>/3</span></div>
-			<a class="pagination__arrow pagination__next" href="#">→</a>
-			<a class="pagination__arrow pagination__previous disabled" href="#">←</a>
-		</div> -->
-		
-		<!-- 
+
+		{% comment %}
 		###################################
 		## Get code for the background set
 		## in current curious-about post
-		-->
+		{% endcomment %}
 		{% unless page.background == nil %}
 		<div class="hero__background">
 			{{ page.background }}
@@ -45,12 +40,13 @@ layout: default
 			</div>
 		</div>
 
-		<!-- 
+		{% comment %}
 		####################
 		## Get scripts from
 		## current post
-		-->
-		{% for js in cc.scripts %}
+		{% endcomment %}
+
+		{% for js in page.scripts %}
 			{% assign root = 'js/' %}
 			<script type="text/javascript">
 			{% include {{ root | append: js }} %}

@@ -1470,3 +1470,8 @@ p {
           justify-content: space-around;
       -webkit-transform: translate3D(0, 4em, 0);
               transform: translate3D(0, 4em, 0); } }
+
+#case2__image {
+  height: 90%;
+  width: auto;
+  mix-blend-mode: multiply; }

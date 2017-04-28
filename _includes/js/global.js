@@ -1,3 +1,5 @@
+{% include js/gsap-cubicbezier.js %}
+
 // Init all code on document eady
 function ready(fn) {
 	if (document.readyState != 'loading') {
