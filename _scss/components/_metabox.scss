@@ -2,29 +2,20 @@ $moveMetabox: 4em;
 .metabox {
     position: relative;
     z-index: 10;
-    margin-top: -$moveMetabox;
+    // margin-top: -$moveMetabox;
     transform: translate3D(0,$moveMetabox,0);
     max-width: 60em;
-    width: 90%;
+    margin: 0 $s-small;
+    width: calc(100% - #{$s-small*2});
     background: $c-white;
 
     flex-wrap: wrap;
     justify-content: flex-start;
-
+    // align-self: flex-end;
+    animation: moveBack 0.7s forwards cubic-bezier(0.3,0,.1,1);
+    padding-bottom: 0;
     @include media-query($on-laptop) {
         justify-content: space-around;
-    }
-
-    align-self: flex-end;
-    // border: 3px solid #ddd;
-    // border-radius: 1.5em;
-    // mix-blend-mode: exclusion;
-    // color: #ddd;
-
-    margin: 0 auto;
-    animation: moveBack 0.7s forwards cubic-bezier(0.3,0,.1,1);
-    // box-shadow: 0 5px 10px rgba(#000, 0.05);
-    @include media-query($on-laptop) {
         transform: translate3D(0,$moveMetabox,0);
     }
 }

@@ -2,11 +2,11 @@
 * Buttons
 */
 
-$bmove: 4px;
+$bshadow: 2px; // the size of the shadow
 
 //Default button for use on dark background
 .button {
-	font-size: 1em;
+	font-size: 0.8em;
 	font-family: $header-font-family;
 	font-weight: bold;
 	border: none;
@@ -29,7 +29,7 @@ $bmove: 4px;
 		height: 100%;
 		background-color: $c-signal;
 		z-index: -1;
-		transform: translateX(-$bmove);
+		transform: translateX(-$bshadow); // the size of the shadow
 		transition: transform 0.6s cubic-bezier(0,.90,.13,.90);
 	}
 	&:hover, &:focus {
@@ -54,7 +54,7 @@ $bmove: 4px;
 		width: 100%;
 		height: 100%;
 		transition: transform 0.6s cubic-bezier(0,.90,.13,.90);
-		transform: translate3D(0, -$bmove, 0);
+		transform: translate3D(0, -$bshadow, 0); // the size of the shadow
 		position: relative;
 	}
 	&:hover, &:focus {

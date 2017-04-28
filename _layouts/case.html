@@ -59,6 +59,12 @@ layout: default
 
     </div>
 
+	{% unless page.ingress == nil %}
+	<div class="ingress ingress--{{ page.slug }}">
+		{{ page.ingress | markdownify }}
+	</div>
+	{% endunless %}
+
 	<div class="text-content" itemprop="articleBody">
 		{{ content }}
 	</div>
