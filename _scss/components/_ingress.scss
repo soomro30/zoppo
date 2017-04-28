@@ -1,0 +1,21 @@
+.ingress {
+    text-align: center;
+    background: $c-white;
+    margin-left: $s-small;
+    margin-right: $s-small;
+    padding: $s-small*2 0;
+    @include media-query($on-laptop) {
+        padding: calc(#{$s-small} + 8vw) $s-small*2;
+    }
+    p {
+        @extend .h4;
+    }
+}
+// p.ingress {
+//     max-width: calc( 37.35em + #{$spacing-unit*2});    
+// }
+
+// custom css
+.ingress {
+    &--owd-bob p { max-width: calc( 34em + 60px); } // to look better on desktop
+}

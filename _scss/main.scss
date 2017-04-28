@@ -50,7 +50,7 @@ $cb-ease_out:       cubic-bezier(0.2,1,.3,.8);
 $content-width:     60em;
 
 $on-palm:           600px;
-$on-laptop:         40em; //640px
+$on-laptop:         50em; //640px
 
 * { box-sizing: border-box }
 
@@ -78,8 +78,8 @@ $on-laptop:         40em; //640px
     "layout",
     "curious",
     "syntax-highlighting",
-    "components/boxes",
     "components/buttons",
     "components/columns",
     "components/hero",
+    "components/ingress",
     "components/metabox";

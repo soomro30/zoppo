@@ -112,6 +112,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-right: auto;
     padding-left: $spacing-unit;
     padding-right: $spacing-unit;
+    // letter-spacing: 0.1em;
     // background: red;
 }
 h1 + h2 {
@@ -219,13 +220,6 @@ p {
     margin-right: auto;
     padding-left: $spacing-unit;
     padding-right: $spacing-unit;
-}
-
-.ingress {
-    @extend .h4;
-}
-p.ingress {
-    max-width: calc( 37.35em + #{$spacing-unit*2});    
 }
 
 .meta-description , .meta {
