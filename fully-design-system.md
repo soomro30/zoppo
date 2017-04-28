@@ -38,9 +38,9 @@ This color is used for business inqueries and other parts concerning contact wit
 </div>
 
 
-<div class="c-curiosites-bg" markdown='1' style="padding-top: 30px; padding-bottom: 30px">
+<div class="c-curiosities-bg" markdown='1' style="padding-top: 30px; padding-bottom: 30px">
 
-### curiosites - `#FFDE7F`
+### curiosities - `#FFDE7F`
 
 This color primarily for the current and constant curiosity, but also for explorations and ideas.
 
@@ -153,10 +153,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat,
 ```<div class="box box--business" markdown="1"></div>```
 </div>
 
-<div class="box box--right box--curiosites" markdown="1">
+<div class="box box--right box--curiosities" markdown="1">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
 
-```<div class="box box--right box--curiosites" markdown="1">```
+```<div class="box box--right box--curiosities" markdown="1">```
 </div>
 
 <div class="box box--metal" markdown="1">
@@ -166,7 +166,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat,
 </div>
 
 <div class="box box--bgsignal" markdown="1">
-Also works with `.box--bgpeople`, `.box--bgcuriosites`, `.box--bgbusiness` and  `.box--bgmetal`
+Also works with `.box--bgpeople`, `.box--bgcuriosities`, `.box--bgbusiness` and  `.box--bgmetal`
 
 ```<div class="box box--metal" markdown="1">```
 </div>

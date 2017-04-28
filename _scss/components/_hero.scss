@@ -41,7 +41,7 @@
         min-height: 100vh;
     }
 
-    &__header{
+    &__header {
         position: relative;
         z-index: 1;
         flex: 1 1 0%;
@@ -58,6 +58,13 @@
         margin-top: 2em;
         @include media-query($on-laptop) {
             margin-top: 0;
+        }
+    }
+
+    &--cc {
+        background: $c-curiosities;
+        .hero__header {
+            color: $c-dark;
         }
     }
 }
