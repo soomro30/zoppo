@@ -3,14 +3,14 @@ layout: default
 ---
 <article class="page cc-{{ page.slug }}" itemscope itemtype="http://schema.org/BlogPosting">
 	
-	<div class="hero hero--{{ page.slug }}">
+	<div class="hero hero--cc hero--{{ page.slug }}">
 		<!-- <span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span> -->
 		<header class="hero__header">
 			<h1 itemprop="name headline">
 				<span class="hero__subheader">Current curiosity:</span> 
 				{{ page.title }}
 			</h1>
-			<h2>Lorem ipsum dolem es simet</h2>
+			<h2>{{page.subtitle}}</h2>
 			{% comment %}<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} {% endcomment %}
 			{% comment %}<span class="categories">{{ page.categories }}<span></p>{% endcomment %}
 		</header>
@@ -66,21 +66,19 @@ layout: default
 		## Get all content (sections) from
 		## the current curious-about post
 		-->
-		<div class="wrapper wrapper--1">
-			{% unless page.section1 == nil %}
-			<div class="ingress">
-				{{ page.section1 | markdownify }}
-			</div>
-			{% endunless %}
-
-			{% unless page.section2 == nil %}
-			<div class="section section--2">
-				<div class="text-content">
-					{{ page.section2 | markdownify }}
-				</div>
-			</div>
-			{% endunless %}
+		{% unless page.ingress == nil %}
+		<div class="ingress">
+			{{ page.ingress | markdownify }}
 		</div>
+		{% endunless %}
+
+		{% unless page.section2 == nil %}
+		<div class="section section--2">
+			<div class="text-content">
+				{{ page.section2 | markdownify }}
+			</div>
+		</div>
+		{% endunless %}
 
 		{% unless page.section3 == nil %}
 		<div class="section section--3">

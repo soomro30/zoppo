@@ -3,7 +3,7 @@ layout: case
 title:  "Owd Bob"
 subtitle: "The most exlusive print shop in the world"
 start:	"The most exlusive</br>print shop"
-date:   2015-12-09 08:41:20 +0100
+date:   2017-04-18 12:00:00 +0100
 categories: back-end, ui, web
 slug: owd-bob
 client: Internal lab

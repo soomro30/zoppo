@@ -32,7 +32,7 @@
     // Different colors
     &--people:before     { background: $c-people }
     &--business:before   { background: $c-business }
-    &--curiosites:before { background: $c-curiosites }
+    &--curiosities:before { background: $c-curiosities }
     &--metal:before      { background: $c-metal }
 
     // Background colors on the box and white shadow
@@ -40,12 +40,12 @@
         color: $c-white;
         &:before { background: $c-white }
     }
-    &--bgpeople, &--bgcuriosites, &--bgbusiness {
+    &--bgpeople, &--bgcuriosities, &--bgbusiness {
         &:before { background: $c-white }
     }
     &--bgsignal     { background: $c-signal };
     &--bgpeople     { background: $c-people };
-    &--bgcuriosites { background: $c-curiosites };
+    &--bgcuriosities { background: $c-curiosities };
     &--bgbusiness   { background: $c-business };
     &--bgmetal      { background: $c-metal };
 
