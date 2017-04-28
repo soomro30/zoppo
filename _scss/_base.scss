@@ -22,7 +22,7 @@ body {
 /**
  * Set `margin-top` on a elements siblings
  */
-* + *:not(body, path, #barba-wrapper, .site-footer, .box) {
+* + *:not(body, path, #barba-wrapper, .barba-container, .site-footer, .box, .cc__background) {
     margin-top: $spacing-unit;
 }
 

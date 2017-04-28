@@ -71,12 +71,13 @@ $on-laptop:         40em; //640px
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-	"reset",
-  "design-system",
-  "animations",
-  "base",
-  "layout",
-  "curious",
-  "syntax-highlighting",
-  "components/boxes",
-  "components/buttons";
+    "reset",
+    "design-system",
+    "animations",
+    "base",
+    "layout",
+    "curious",
+    "syntax-highlighting",
+    "components/boxes",
+    "components/buttons",
+    "components/metabox";
