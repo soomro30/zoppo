@@ -1,0 +1,13 @@
+.column {
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        padding: $s-small;
+    }
+    padding: $s-small/3 $s-small;
+    
+    &--vertical {
+        display: flex;
+        flex-direction: column;
+    }
+}

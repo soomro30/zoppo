@@ -1,11 +1,14 @@
 ---
 layout: case
 title:  "Matbaren - lorem ipsum"
+subtitle: "Lorem ipsum dolem es"
 start:  "Matbaren</br>loremsumn"
 date:   2015-12-09 08:41:20 +0100
 categories: web, design
 slug: lorem-ipsum-case-2
-link: http://owdbob.com
+client: Matbaren Norden AB
+project: Lorem ipsum
+link: http://matbaren.se
 link-text: Launch site
 
 section1: |

@@ -1,10 +1,13 @@
 ---
 layout: case
 title:  "Owd Bob"
+subtitle: "Lorem ipsum dolem es"
 start:	"Lorem ipsum</br>highlight case."
 date:   2015-12-09 08:41:20 +0100
 categories: back-end, ui, web
 slug: owd-bob
+client: Internal lab
+project: E-commerce
 link: http://owdbob.com
 link-text: Launch site
 

@@ -26,6 +26,8 @@ Update Ruby using rvm:
 ```rvm use ruby-2.4.1```
 ```bundle install```
 
+If you get problems with "WARN: Unresolved spec during Gem...", try running this to clean up old gems:
+```bundle clean --force``
 
 Update gems:
 ```gem update```

@@ -3,13 +3,61 @@ layout: default
 ---
 <article class="page" itemscope itemtype="http://schema.org/BlogPosting">
 	
-	<div class="hero" style="background-image: url({{ site.baseurl }}/assets/sketch/case-image.svg)"></div>
-	
-	<header class="page-header">
-		<h1 class="page-title" itemprop="name headline">{{ page.title }}</h1>
-		<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} 
-		<span class="categories">{{ page.categories }}<span></p>
-	</header>
+
+	<div class="hero hero--{{ page.slug }}">
+		<!-- <span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span> -->
+		<header class="hero__header">
+			<h1 itemprop="name headline">
+				{{ page.title }}
+			</h1>
+			<h2>{{page.subtitle}}</h2>
+			{% comment %}<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} {% endcomment %}
+			{% comment %}<span class="categories">{{ page.categories }}<span></p>{% endcomment %}
+		</header>
+	<!--       <div class="pagination">
+			<div class="pagination__counter">1<span>/3</span></div>
+			<a class="pagination__arrow pagination__next" href="#">→</a>
+			<a class="pagination__arrow pagination__previous disabled" href="#">←</a>
+		</div> -->
+		
+		<!-- 
+		###################################
+		## Get code for the background set
+		## in current curious-about post
+		-->
+		{% unless page.background == nil %}
+		<div class="hero__background">
+			{{ page.background }}
+		</div>
+		{% endunless %}
+
+		<div class="metabox column__wrapper">
+			<div class="column column--vertical">
+				<strong class="meta-description">Client:</strong>
+				<span class="meta">{{page.client}}</span>
+			</div>
+			<div class="column column--vertical">
+				<strong class="meta-description">Project:</strong>
+				<span class="meta">{{page.project}}</span>
+			</div>
+			<div class="column column--vertical">
+				<a href="{{page.link}}" class="button"><span>{{page.link-text}}</span></a>
+			</div>
+		</div>
+
+		<!-- 
+		####################
+		## Get scripts from
+		## current post
+		-->
+		{% for js in cc.scripts %}
+			{% assign root = 'js/' %}
+			<script type="text/javascript">
+			{% include {{ root | append: js }} %}
+			</script>
+		{% endfor %}
+
+    </div>
 
 	<div class="text-content" itemprop="articleBody">
 		{{ content }}
