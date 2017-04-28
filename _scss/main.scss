@@ -23,7 +23,7 @@ $header-font-family: "Moderat", sans-serif;
 $base-font-size:    18px;
 $base-font-weight:  400;
 $small-font-size:   $base-font-size * 0.875;
-$base-line-height:  1.75; 
+$base-line-height:  1.75;
 
 $spacing-unit:      30px;
 $s-small:           30px;
@@ -80,4 +80,6 @@ $on-laptop:         40em; //640px
     "syntax-highlighting",
     "components/boxes",
     "components/buttons",
+    "components/columns",
+    "components/hero",
     "components/metabox";

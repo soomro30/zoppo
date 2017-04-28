@@ -3,49 +3,60 @@ layout: default
 ---
 <article class="page cc-{{ page.slug }}" itemscope itemtype="http://schema.org/BlogPosting">
 	
-	<div class="cc">
-        <div class="cc__item cc__item--{{ page.slug }} ">
-            <!-- <span class="cc-meta">{{ page.date | date: "%b %-d, %Y" }}</span> -->
-            <header class="cc__overlay">
-                <h1 class="header" itemprop="name headline">
-                    <span class="cc__subheader">Current curiosity:</span> 
-                    {{ page.title }}
-                </h1>
-				<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} 
-				<span class="categories">{{ page.categories }}<span></p>
-            </header>
-      <!--       <div class="pagination">
-                <div class="pagination__counter">1<span>/3</span></div>
-                <a class="pagination__arrow pagination__next" href="#">→</a>
-                <a class="pagination__arrow pagination__previous disabled" href="#">←</a>
-            </div> -->
-			
-			<!-- 
-			###################################
-			## Get code for the background set
-			## in current curious-about post
-			-->
-            {% unless page.background == nil %}
-            <div class="cc__background">
-                {{ page.background }}
-            </div>
-            {% endunless %}
+	<div class="hero hero--{{ page.slug }}">
+		<!-- <span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span> -->
+		<header class="hero__header">
+			<h1 itemprop="name headline">
+				<span class="hero__subheader">Current curiosity:</span> 
+				{{ page.title }}
+			</h1>
+			<h2>Lorem ipsum dolem es simet</h2>
+			{% comment %}<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} {% endcomment %}
+			{% comment %}<span class="categories">{{ page.categories }}<span></p>{% endcomment %}
+		</header>
+	<!--       <div class="pagination">
+			<div class="pagination__counter">1<span>/3</span></div>
+			<a class="pagination__arrow pagination__next" href="#">→</a>
+			<a class="pagination__arrow pagination__previous disabled" href="#">←</a>
+		</div> -->
+		
+		<!-- 
+		###################################
+		## Get code for the background set
+		## in current curious-about post
+		-->
+		{% unless page.background == nil %}
+		<div class="hero__background">
+			{{ page.background }}
+		</div>
+		{% endunless %}
 
-            <!-- 
-            ####################
-            ## Get scripts from
-            ## current post
-            -->
-			{% for js in cc.scripts %}
-				{% assign root = 'js/' %}
-                <script type="text/javascript">
-                {% include {{ root | append: js }} %}
-                </script>
-            {% endfor %}
-       
+		<div class="metabox column__wrapper">
+			<div class="column column--vertical">
+				<strong class="meta-description">Client:</strong>
+				<span class="meta">Internal lab</span>
+			</div>
+			<div class="column column--vertical">
+				<strong class="meta-description">Project:</strong>
+				<span class="meta">E-commerce</span>
+			</div>
+			<div class="column column--vertical">
+				<a href="#" class="button"><span>Visit the site</span></a>
+			</div>
+		</div>
 
+		<!-- 
+		####################
+		## Get scripts from
+		## current post
+		-->
+		{% for js in cc.scripts %}
+			{% assign root = 'js/' %}
+			<script type="text/javascript">
+			{% include {{ root | append: js }} %}
+			</script>
+		{% endfor %}
 
-        </div>
     </div>
 
 	<div class="content" itemprop="articleBody">
@@ -57,10 +68,8 @@ layout: default
 		-->
 		<div class="wrapper wrapper--1">
 			{% unless page.section1 == nil %}
-			<div class="section section--1">
-				<div class="text-content">
-					{{ page.section1 | markdownify }}
-				</div>
+			<div class="ingress">
+				{{ page.section1 | markdownify }}
 			</div>
 			{% endunless %}
 

@@ -1,0 +1,73 @@
+/**
+ * Curious section
+ */
+
+.hero__subheader {
+    display: block;
+    font-size: 0.3em;
+    font-family: $base-font-family;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background: $c-signal;
+    height: auto;
+
+    min-height: 100vh;
+     // Hacky way to prevent page from scrolling when URL-bar disapears.
+    // -9vw is the magic number for the URL-bar
+    @media (max-device-aspect-ratio: 3/4) {
+        min-height: (70vw * 1.333 - 9vw);
+    }
+    @media (max-device-aspect-ratio: 2/3) {
+        min-height: (70vw * 1.5 - 9vw);
+    }
+    //ex iPhone 5
+    @media (max-device-aspect-ratio: 10/16) {
+        min-height: (70vw * 1.6 - 9vw);
+    }
+    //ex iPhone 6, Nexus 5X, Galaxy S5
+    @media (max-device-aspect-ratio: 9/16) {
+        min-height: (70vw * 1.778 - 9vw);
+    }
+
+    @include media-query($on-laptop) {
+        min-height: 100vh;
+    }
+
+    &__header{
+        position: relative;
+        z-index: 1;
+        flex: 1 1 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: $s-small*2 0 $s-small;
+        color: $c-light;
+        a { color: $c-light }
+    }
+
+    .header {
+        margin-top: 2em;
+        @include media-query($on-laptop) {
+            margin-top: 0;
+        }
+    }
+}
+
+.hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,10 +1,15 @@
 ---
 layout: case
 title:  "Lorem ipsum Case 3"
+subtitle: "Lorem ipsum dolem es"
 start:  "Lorem ipsum</br>Case no 3"
 date:   2015-12-09 08:41:20 +0100
 categories: web, design
 slug: lorem-ipsum-case-3
+client: Lorem ipsum
+project: Lorem ipsum
+link: http://loremipsum.se
+link-text: Launch site
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis nesciunt repellat rem, consequuntur explicabo laboriosam sunt quod quidem sit quas ipsam eligendi quisquam, architecto provident laudantium id ut! Mollitia, labore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsa dolorem, minima sunt maiores a ducimus sed atque, similique, molestias labore. Tempora, obcaecati repellat eius corporis laudantium. Fugit, dolorem qui?
 

@@ -66,42 +66,29 @@ $golden-ratio: 61.8%;
     // Positioning context for the mobile navigation icon
     position: absolute;
     z-index: 10;
-    .wrapper {
-        padding: 1em $spacing-unit*0.5 0;
-        // max-width: 80%;
-        margin: 0 4%;
-    }
-    // mix-blend-mode: multiply;
-}
-.logo {
-    fill: $c-signal;
-    opacity: 1;
-    transition: fill 0.7s;
-    &:hover {
-        fill: #fff
-    }
-    width: 2em;
-    height: 2em;
-    // background: url(../assets/sketch/logo-2.svg) no-repeat;
-    background-size: 97% 97%;
-    @include media-query($on-laptop) {
+    padding: $s-small;
+    // margin: 0 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__svg {
+        fill: $c-white;
+        opacity: 1;
+        transition: fill 0.7s;
+        &:hover {
+            fill: $c-people;
+        }
         width: 4em;
         height: 4em;
+        // background: url(../assets/sketch/logo-2.svg) no-repeat;
+        background-size: 97% 97%;
+        @include media-query($on-laptop) {
+            width: 4em;
+            height: 4em;
+        }
     }
-}
 
-.site-title {
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    &,
-    &:visited {
-        color: $text-color;
-    }
+    // mix-blend-mode: multiply;
 }
 
 .site-nav {
@@ -754,12 +741,4 @@ $rotZ: 15deg;
     &--right {
         margin-right: 0;
     }
-}
-
-.hero {
-    margin-bottom: $spacing-unit;
-    width: 100%;
-    height: 50vh;
-    background-size: cover;
-    background-position: center center;
 }
