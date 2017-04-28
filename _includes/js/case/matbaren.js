@@ -4,8 +4,6 @@
 // Note the dubble trigger from the event lisseners
 // or even better - convert to a gsap timeline and change play direction depending on enter or leave
 
-console.log('matbaren');
-
 // Init all code on document eady
 function ready(fn) {
     if (document.readyState != 'loading') {
