@@ -75,7 +75,9 @@ layout: default
 		{% endif %}
 		<a class="boxgrid__box" href="{{ case.url | prepend: site.baseurl }}">
 			<figure>
-				<img src="http://placekitten.com/g/644/400" alt="{{ case.title }}">	
+				<div class="image-loader" style="background: #ccc"> 
+					<img src="http://placekitten.com/g/644/400" alt="{{ case.title }}">	
+				</div>
 				<figcaption>
 					<h3>{{ case.title }}</h3>
 					<p>{{ case.subtitle }}</p>
