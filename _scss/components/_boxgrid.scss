@@ -1,0 +1,92 @@
+$bgShadow: $s-small * 0.5;
+
+$bgMqSmall: 400px;
+
+.boxgrid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 $s-small $s-small*1.5;
+    margin-top: $s-small;
+    position: relative;
+    max-width: 68.7em; //magic number to align the border to the content on large displays
+    margin-left: auto;
+    margin-right: auto;
+
+    a {
+        color: $c-dark;
+    }
+
+    &__header {
+        width: 100%;
+        // flex: 1 0 100%;
+        max-width: 100%;
+        text-align: center;
+        padding: $s-small 12% $s-small*0.5;
+        color: $c-signal;
+    }
+
+    &__box {
+        width: 100%;
+        position: relative;
+        margin-top: $s-small;
+        @media (min-width: $bgMqSmall) {
+            width: auto;
+            flex: 1 0 0%;
+            margin-right: $s-small * 0.5;
+        }        
+        
+        &:after {
+            content:"";
+            background: $c-white;
+            position: absolute;
+            top: $bgShadow;
+            bottom: 0;
+            left: -$bgShadow;
+            width: $bgShadow;
+        }
+        &:nth-child(odd) {
+            @media (min-width: $bgMqSmall) {
+                margin-right: 0;
+                margin-left: $s-small * 0.5;
+            }
+            &:after {
+                left: auto;
+                right: -$bgShadow;         
+            }
+            text-align: right;
+            figcaption {
+                text-align: left;
+                padding-left: $bgShadow;
+            }
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    figcaption {
+        background: $c-white;
+        display: inline-block;
+        min-width: 80%;
+        padding: $s-small 0;
+        h3, p {
+            padding-left: 0;
+        }
+    }
+
+    // The box border effect
+    &:before {
+        content: "";
+        border: 2px solid $c-signal;
+        position: absolute;
+        top: 0;
+        left: 12%;
+        right: 12%;
+        height: 100%;
+        @media (min-width: $bgMqSmall) {
+            left: 10%;
+            right: 10%;
+        }
+    }
+}

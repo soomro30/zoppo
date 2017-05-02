@@ -171,4 +171,36 @@ Also works with `.box--bgpeople`, `.box--bgcuriosities`, `.box--bgbusiness` and 
 ```<div class="box box--metal" markdown="1">```
 </div>
 
+
+
+
+<header class="ds-header" markdown='1'>
+## boxgrid
+a grid with images and texts. Used in "other projects"
+</header>
+
+<div class="boxgrid">
+<h2 class="boxgrid__header h4">Check out our other projects</h2>
+<figure class="boxgrid__box">
+    <img 
+    src=" http://placekitten.com/g/644/400"
+    alt="A beautiful cat">	
+    <figcaption>
+        <h3>A beautiful cat</h3>
+        <p>lorem ipsum</p>
+    </figcaption>
+</figure>
+
+<figure class="boxgrid__box">
+    <img
+    src="http://placekitten.com/g/644/400"
+    alt="A beautiful cat">	
+    <figcaption>
+        <h3>Another beautiful cat</h3>
+        <p>Lorem ipsum dolem es simet</p>
+    </figcaption>
+</figure>
+</div>
+
+
 <br><br><br>
