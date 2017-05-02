@@ -25,8 +25,8 @@ body {
 // * + *:not(body, path, #barba-wrapper, .barba-container, .site-footer, .box, .cc__background, .column, .meta) {
 //     margin-top: $spacing-unit;
 // }
-p + p {
-    margin-top: $spacing-unit;
+p + * {
+    margin-top: $spacing-unit * 0.5;
 }
 
 // remove this later
@@ -71,6 +71,22 @@ img {
 }
 
 
+.image-loader {
+    // display: inline-block;
+    position: relative;
+    padding-bottom: 62%; // 161 : 100 ratio
+    width: 100%;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        transition: opacity 0.4s;
+    }
+}
+
+
 
 /**
  * Figures
@@ -83,6 +99,10 @@ figcaption {
     font-size: $small-font-size;
 }
 
+pre {
+    margin-top: $s-small * 0.5;
+    margin-bottom: $s-small * 0.5;
+}
 
 
 /**
@@ -284,6 +304,7 @@ p {
         }
     }
 }
+
 
 
 /**

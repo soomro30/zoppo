@@ -108,7 +108,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat,
 Ingress Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ip`um cupiditate.
 </p>
 
-```<p class="ingress"></p>```
+``` html
+<p class="ingress"></p>
+```
 
 <header class="ds-header" markdown='1'>
 ## Buttons
@@ -117,7 +119,9 @@ Ingress Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero 
 Standard button:
 <a class="button" href="#"><span>Explore</span></a>
 
-```<a class="button" href="#"><span>Explore</span></a>```
+``` html
+<a class="button" href="#"><span>Explore</span></a>
+```
 
 <div class="c-signal-bg" style="padding: 4em">
     Inverted button:
@@ -126,7 +130,9 @@ Standard button:
 
 </div>
 
-```<a class="button button--inv" href="#"><span>Explore</span></a>```
+``` html
+<a class="button button--inv" href="#"><span>Explore</span></a>
+```
 
 <header class="ds-header" markdown='1'>
 ## Boxes
@@ -138,37 +144,49 @@ Boxes with different dropshadows for text and images.
 ## The secret clubhouse
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
 
-```<div class="box" markdown="1">```
+``` html
+<div class="box" markdown="1">
+```
 
 </div>
 
 <div class="box box--right box--people" markdown="1" style="background-image:url(http://placekitten.com/g/1920/600); color:white">
 
-```<div class="box box--right box--people" markdown="1" style="background-image:url(http://placekitten.com/g/1920/600)">```
+``` html
+<div class="box box--right box--people" markdown="1" style="background-image:url(http://placekitten.com/g/1920/600)">
+```
 </div>
 
 <div class="box box--business" markdown="1">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
 
-```<div class="box box--business" markdown="1"></div>```
+``` html
+<div class="box box--business" markdown="1"></div>
+```
 </div>
 
 <div class="box box--right box--curiosities" markdown="1">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
 
-```<div class="box box--right box--curiosities" markdown="1">```
+``` html
+<div class="box box--right box--curiosities" markdown="1">
+```
 </div>
 
 <div class="box box--metal" markdown="1">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
 
-```<div class="box box--metal" markdown="1">```
+``` html
+<div class="box box--metal" markdown="1">
+```
 </div>
 
 <div class="box box--bgsignal" markdown="1">
 Also works with `.box--bgpeople`, `.box--bgcuriosities`, `.box--bgbusiness` and  `.box--bgmetal`
 
-```<div class="box box--metal" markdown="1">```
+``` html
+<div class="box box--metal" markdown="1">
+```
 </div>
 
 
@@ -182,9 +200,12 @@ a grid with images and texts. Used in "other projects"
 <div class="boxgrid">
 <h2 class="boxgrid__header h4">Check out our other projects</h2>
 <figure class="boxgrid__box">
-    <img 
-    src=" http://placekitten.com/g/644/400"
-    alt="A beautiful cat">	
+    {% comment %}Change this color to an average color from the image{% endcomment %}
+    <div class="image-loader" style="background: #ccc"> 
+        <img 
+        src=" http://placekitten.com/g/644/400"
+        alt="A beautiful cat">	
+    </div>
     <figcaption>
         <h3>A beautiful cat</h3>
         <p>lorem ipsum</p>
@@ -192,9 +213,11 @@ a grid with images and texts. Used in "other projects"
 </figure>
 
 <figure class="boxgrid__box">
-    <img
-    src="http://placekitten.com/g/644/400"
-    alt="A beautiful cat">	
+    <div class="image-loader" style="background: #c1c1c1">
+        <img 
+        src="http://placekitten.com/g/644/400"
+        alt="A beautiful cat">	
+    </div>
     <figcaption>
         <h3>Another beautiful cat</h3>
         <p>Lorem ipsum dolem es simet</p>
@@ -202,5 +225,125 @@ a grid with images and texts. Used in "other projects"
 </figure>
 </div>
 
+``` html
+<div class="boxgrid">
+    <h2 class="boxgrid__header h4">Boxgrid title</h2>
+
+    <figure class="boxgrid__box">
+        <div class="image-loader" style="background: #c1c1c1"> <!--Change this color to an average color from the image-->
+            <img src="" alt="Fig title">	
+        </div>
+        <figcaption>
+            <h3>Fig title</h3>
+            <p>Fig Description</p>
+        </figcaption>
+    </figure>
+</div>
+```
+
+### A compat boxgrid:
+
+<div class="boxgrid boxgrid--compact">
+<h2 class="boxgrid__header h4">Recent work</h2>
+    <figure class="boxgrid__box">
+        {% comment %}Change this color to an average color from the image{% endcomment %}
+        <div class="image-loader" style="background: #ccc"> 
+            <img 
+            src=" http://placekitten.com/g/644/400"
+            alt="A beautiful cat">	
+        </div>
+        <figcaption>
+            <h3 class="h4">A beautiful cat</h3>
+            <p>lorem ipsum</p>
+            <a href="#" class="button"><span>View case</span></a>
+        </figcaption>
+    </figure>
+    <figure class="boxgrid__box">
+        <div class="image-loader" style="background: #c1c1c1">
+            <img 
+            src="http://placekitten.com/g/644/400"
+            alt="A beautiful cat">	
+        </div>
+        <figcaption>
+            <h3 class="h4">Another beautiful cat</h3>
+            <p>Lorem ipsum</p>
+            <a href="#" class="button"><span>View case</span></a>
+        </figcaption>
+    </figure>
+    <figure class="boxgrid__box">
+        <div class="image-loader" style="background: #c1c1c1">
+            <img 
+            src="http://placekitten.com/g/644/400"
+            alt="A beautiful cat">	
+        </div>
+        <figcaption>
+            <h3 class="h4">Another beautiful cat</h3>
+            <p>Lorem ipsum dolem es simet es lorem ipsum</p>
+            <a href="#" class="button"><span>View case</span></a>
+        </figcaption>
+    </figure>
+    <figure class="boxgrid__box">
+        <div class="image-loader" style="background: #c1c1c1">
+            <img 
+            src="http://placekitten.com/g/644/400"
+            alt="A beautiful cat">	
+        </div>
+        <figcaption>
+            <h3 class="h4">Another beautiful cat</h3>
+            <p>Lorem ipsum</p>
+            <a href="#" class="button"><span>View case</span></a>
+        </figcaption>
+    </figure>
+    <figure class="boxgrid__box">
+        <div class="image-loader" style="background: #c1c1c1">
+            <img 
+            src="http://placekitten.com/g/644/400"
+            alt="A beautiful cat">	
+        </div>
+        <figcaption>
+            <h3 class="h4">Lorem ipsum</h3>
+            <p>Lorem ipsum dolem es simet lorem</p>
+            <a href="#" class="button"><span>View case</span></a>
+        </figcaption>
+    </figure>
+    <figure class="boxgrid__box">
+        <div class="image-loader" style="background: #c1c1c1">
+            <img 
+            src="http://placekitten.com/g/644/400"
+            alt="A beautiful cat">	
+        </div>
+        <figcaption>
+            <h3 class="h4">Another beautiful cat</h3>
+            <p>Lorem ipsum dolem es simet</p>
+            <a href="#" class="button"><span>View case</span></a>
+        </figcaption>
+    </figure>
+</div>
+
+``` html
+<div class="boxgrid boxgrid--compact">
+...
+</div>
+```
+
+<header class="ds-header" markdown='1'>
+## images
+Load images with style
+</header>
+
+<div class="image-loader" style="background: #c1c1c1">
+    <img 
+    src="http://placekitten.com/g/644/400"
+    alt="A beautiful cat">	
+</div>
+
+``` html
+<div class="image-loader" style="background: #c1c1c1">
+    <img 
+    src="http://placekitten.com/g/644/400"
+    alt="A beautiful cat">	
+</div>
+
+```
 
 <br><br><br>

@@ -10,6 +10,19 @@ function ready(fn) {
 }
 ready(function(){
 
+	// Fade images when loaded if they are inside an image-loader container
+	// Transition using CSS in base.scss
+	var imageLoaders = document.querySelectorAll('.image-loader img');
+
+	imageLoaders.forEach(function(image) {
+		image.style.opacity = 0;
+		var imageObj = new Image();
+		imageObj.onload = function(){
+			image.style.opacity = 1;
+		}
+		imageObj.src = image.src;
+	}, this);
+
 	// Initialize barba.js
 	Barba.Pjax.start();
 

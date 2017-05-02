@@ -1,6 +1,7 @@
 $bgShadow: $s-small * 0.5;
 
 $bgMqSmall: 400px;
+$bgMqMedium: 800px;
 
 .boxgrid {
     display: flex;
@@ -33,6 +34,7 @@ $bgMqSmall: 400px;
             width: auto;
             flex: 1 0 0%;
             margin-right: $s-small * 0.5;
+            margin-left: $s-small * 0.5;
         }        
         
         &:after {
@@ -45,10 +47,10 @@ $bgMqSmall: 400px;
             width: $bgShadow;
         }
         &:nth-child(odd) {
-            @media (min-width: $bgMqSmall) {
-                margin-right: 0;
-                margin-left: $s-small * 0.5;
-            }
+            // @media (min-width: $bgMqSmall) {
+            //     margin-right: 0;
+            //     margin-left: $s-small * 0.5;
+            // }
             &:after {
                 left: auto;
                 right: -$bgShadow;         
@@ -61,7 +63,7 @@ $bgMqSmall: 400px;
         }
         img {
             width: 100%;
-            height: auto;
+            // height: auto;
         }
     }
 
@@ -85,8 +87,45 @@ $bgMqSmall: 400px;
         right: 12%;
         height: 100%;
         @media (min-width: $bgMqSmall) {
-            left: 10%;
-            right: 10%;
+            left: 12%;
+            right: 12%;
         }
+        @media (min-width: $bgMqMedium) {
+            left: 9%;
+            right: 9%;
+        }
+    }
+
+    // The compact version used in ex the case grid under page Work
+    &--compact {
+        .boxgrid__box {
+            @media (min-width: $bgMqSmall) {
+                flex: 1 0 calc(50% - #{$s-small});
+                max-width: calc(50% - #{$s-small});
+                display: flex;
+                flex-direction: column;
+            }
+             @media (min-width: $bgMqMedium) {
+                flex: 1 0 calc(33% - #{$s-small});
+                max-width: calc(33% - #{$s-small});
+            }
+            &:after {
+                display: none;
+            }
+
+            figcaption {
+                display: block;
+                min-width: auto;
+                width: 100%;
+                padding-left: $s-small* 0.5;
+                padding-right: $s-small* 0.5;
+                text-align: center;
+                flex: 1 0 0%;
+                h3, p {
+                    padding: 0;
+                }
+            }
+        }
+        
     }
 }
