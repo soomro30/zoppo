@@ -115,8 +115,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     // letter-spacing: 0.1em;
     // background: red;
 }
-h1 + h2 {
-    margin-top: $s-small/2;
+h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
+    margin-top: $s-small * 0.3;
 }
 // p { background: green;}
 
