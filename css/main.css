@@ -518,7 +518,6 @@ p {
   width: 100%;
   position: absolute;
   z-index: 10;
-  padding: 30px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -538,6 +537,11 @@ p {
       .site-header__svg {
         width: 4em;
         height: 4em; } }
+  .site-header__logoanim {
+    width: 7em;
+    height: 7em; }
+  .site-header .button {
+    margin: 30px; }
 
 .site-nav {
   display: block;

@@ -1,4 +1,5 @@
 {% include js/gsap-cubicbezier.js %}
+{% include js/bodymovin.min.js %}
 
 // Init all code on document eady
 function ready(fn) {
@@ -22,6 +23,17 @@ ready(function(){
 		}
 		imageObj.src = image.src;
 	}, this);
+
+	// Init logo anim
+	var animData = {
+        container: document.getElementById('logo_anim'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '../../assets/javascript/logo.json'
+    };
+    var anim = bodymovin.loadAnimation(animData);;
+	window.onresize = anim.resize.bind(anim);
 
 	// Initialize barba.js
 	Barba.Pjax.start();
