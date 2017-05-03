@@ -301,8 +301,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .ingress p, .h5, .h6 {
   line-height: 1.2;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px; }
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media screen and (min-width: 600px) {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .ingress p, .h5, .h6 {
+      padding-left: 30px;
+      padding-right: 30px; } }
 
 h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
   margin-top: 9px; }
@@ -382,8 +386,12 @@ p {
   max-width: calc( 56em + 60px);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px; }
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media screen and (min-width: 600px) {
+    p {
+      padding-left: 30px;
+      padding-right: 30px; } }
 
 .meta-description, .meta {
   letter-spacing: 0.125em; }
@@ -1308,11 +1316,14 @@ p {
   padding: 60px 0;
   background: #ffffff;
   position: relative;
-  margin-left: 30px;
+  margin-left: 15px;
   margin-right: auto;
   background-size: cover;
   background-position: center;
   max-width: 59em; }
+  @media screen and (min-width: 600px) {
+    .box {
+      margin-left: 30px; } }
   .box:before {
     content: "";
     display: block;
@@ -1322,15 +1333,26 @@ p {
     right: 0;
     bottom: 0;
     z-index: -1;
-    -webkit-transform: translate(30px, 30px);
-            transform: translate(30px, 30px);
-    background: #5f11e8; }
+    background: #5f11e8;
+    -webkit-transform: translate(15px, 15px);
+            transform: translate(15px, 15px); }
+    @media screen and (min-width: 600px) {
+      .box:before {
+        -webkit-transform: translate(30px, 30px);
+                transform: translate(30px, 30px); } }
   .box--right {
     margin-left: auto;
-    margin-right: 30px; }
+    margin-right: 15px; }
     .box--right:before {
-      -webkit-transform: translate(-30px, 30px);
-              transform: translate(-30px, 30px); }
+      -webkit-transform: translate(-15px, 15px);
+              transform: translate(-15px, 15px); }
+    @media screen and (min-width: 600px) {
+      .box--right {
+        margin-left: auto;
+        margin-right: 30px; }
+        .box--right:before {
+          -webkit-transform: translate(-30px, 30px);
+                  transform: translate(-30px, 30px); } }
   .box--people:before {
     background: #ffc1b4; }
   .box--business:before {
