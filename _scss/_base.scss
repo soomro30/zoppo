@@ -130,8 +130,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     line-height: 1.2;
     margin-left: auto;
     margin-right: auto;
-    padding-left: $spacing-unit;
-    padding-right: $spacing-unit;
+    padding-left: $spacing-unit*0.5;
+    padding-right: $spacing-unit*0.5;
+    @include media-query($on-palm) {
+        padding-left: $spacing-unit;
+        padding-right: $spacing-unit;
+    }
     // letter-spacing: 0.1em;
     // background: red;
 }
@@ -238,8 +242,12 @@ p {
     
     margin-left: auto;
     margin-right: auto;
-    padding-left: $spacing-unit;
-    padding-right: $spacing-unit;
+    padding-left: $spacing-unit*0.5;
+    padding-right: $spacing-unit*0.5;
+    @include media-query($on-palm) {
+        padding-left: $spacing-unit;
+        padding-right: $spacing-unit;
+    }
 }
 
 .meta-description , .meta {
