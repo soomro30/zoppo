@@ -295,7 +295,7 @@ li > ol {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .ingress p, .h5, .h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .navigation__link, .navigation__overlay, .h3, .h4, .ingress p, .h5, .h6 {
   font-family: "Moderat", sans-serif;
   font-weight: 700;
   line-height: 1.2;
@@ -304,7 +304,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .ingress p, .h5, .h6 {
   padding-left: 15px;
   padding-right: 15px; }
   @media screen and (min-width: 600px) {
-    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .ingress p, .h5, .h6 {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .navigation__link, .navigation__overlay, .h3, .h4, .ingress p, .h5, .h6 {
       padding-left: 30px;
       padding-right: 30px; } }
 
@@ -315,7 +315,7 @@ h1, .h1 {
   font-size: 5em;
   max-width: calc( 11.2em + 60px); }
 
-h2, .h2 {
+h2, .h2, .navigation__link, .navigation__overlay {
   font-size: 2.5em;
   max-width: calc( 22.4em + 60px); }
 
@@ -1677,6 +1677,83 @@ p {
           justify-content: space-around;
       -webkit-transform: translate3D(0, 4em, 0);
               transform: translate3D(0, 4em, 0); } }
+
+.navigation {
+  width: 100%;
+  height: 100vh;
+  background: #5f11e8;
+  position: relative; }
+  .navigation__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    background: url("//demosthenes.info/assets/images/polina.jpg") no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%); }
+  .navigation__list {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    list-style-type: none;
+    margin: 0 0 60px; }
+  .navigation__item {
+    position: relative; }
+  .navigation__link, .navigation__overlay {
+    color: #ffffff;
+    padding: 15px 60px;
+    display: inline-block; }
+    .navigation__link:visited, .navigation__link:hover, .navigation__overlay:visited, .navigation__overlay:hover {
+      color: #ffffff; }
+    .navigation__link:hover ~ .wave-svg, .navigation__overlay:hover ~ .wave-svg {
+      stroke-dashoffset: 37; }
+  .navigation__overlay {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    pointer-events: none; }
+  .navigation #menu-work ~ .navigation__overlay {
+    left: 1.455em; }
+  .navigation #menu-about ~ .navigation__overlay {
+    left: 1.244em; }
+  .navigation #menu-curiosities ~ .navigation__overlay {
+    left: 0.68em; }
+  .navigation #menu-contact ~ .navigation__overlay {
+    left: 1.255em; }
+  .navigation .wave-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    stroke: #ffc1b4;
+    stroke-width: 7px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 329, 329;
+    stroke-dashoffset: 329;
+    transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 0, 0.1, 0.99);
+    pointer-events: none; }
+  .navigation #menu-work ~ .wave-svg {
+    stroke: #5f11e8; }
+  .navigation #menu-work:hover ~ .wave-svg {
+    stroke-dashoffset: 182; }
+  .navigation #menu-about:hover ~ .wave-svg {
+    stroke-dashoffset: 148; }
+  .navigation #menu-curiosities ~ .wave-svg {
+    stroke: #ffde7f; }
+  .navigation #menu-contact:hover ~ .wave-svg {
+    stroke-dashoffset: 108; }
 
 #case2__image {
   height: 90%;

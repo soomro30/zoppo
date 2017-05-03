@@ -1,0 +1,88 @@
+.navigation {
+    width: 100%;
+    height: 100vh;
+    // min-height: 100vh;
+    background: $c-signal;
+    position: relative;
+    // &:after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0; right: 0; bottom: 0; left: 0;
+    //     background: $c-signal;
+    //     background: linear-gradient(to bottom, $c-signal 0%,rgba($c-signal,1) 100%);
+    //     mix-blend-mode: multiply;
+    //     z-index:1;
+    // }
+    &__video { 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+        background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+        background-size: cover;
+        transition: 1s opacity;
+        filter: grayscale(100%);
+    }
+    &__list {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        list-style-type: none;
+        margin: 0 0 $s-small*2;
+    }
+    &__item {
+        position: relative;
+    }
+    &__link, &__overlay {
+        @extend .h2;
+        color: $c-white;
+        padding: $s-small*0.5 $s-small*2;
+        display: inline-block;
+        &:visited, &:hover {
+            color: $c-white;
+        }
+        &:hover ~ .wave-svg {
+            stroke-dashoffset: 37;
+        }
+    }
+    &__overlay{
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        pointer-events: none;
+        // color: red;
+    }
+    #menu-work ~ .navigation__overlay { left: 1.455em; }
+    #menu-about ~ .navigation__overlay { left: 1.244em; }
+    #menu-curiosities ~ .navigation__overlay { left: 0.68em; }
+    #menu-contact ~ .navigation__overlay { left: 1.255em; }
+    
+    .wave-svg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: $s-small;
+        // z-index: -1;
+        stroke: $c-people;
+        stroke-width:7px;
+        fill:none;stroke-linecap:round;stroke-linejoin:round;
+
+        stroke-dasharray: 329, 329;
+        stroke-dashoffset: 329; // max 329
+        transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 0, 0.1, 0.99);
+        pointer-events: none;
+    }
+    #menu-work ~ .wave-svg { stroke: $c-signal; }
+    #menu-work:hover ~ .wave-svg { stroke-dashoffset: 182; }
+    #menu-about:hover ~ .wave-svg { stroke-dashoffset: 148; }
+    #menu-curiosities ~ .wave-svg { stroke: $c-curiosities; }
+    #menu-contact:hover ~ .wave-svg { stroke-dashoffset: 108; }
+    
+}
