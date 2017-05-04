@@ -69,7 +69,7 @@
         stroke-width:7px;
         fill:none;stroke-linecap:round;stroke-linejoin:round;
 
-        stroke-dasharray: 329, 329;
+        stroke-dasharray: 329, 340;
         stroke-dashoffset: 329; // max 329
         transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 0, 0.1, 0.99);
         pointer-events: none;

@@ -26,3 +26,24 @@
 
 .c-dark { color: $c-dark; }
 .c-dark-bg { background-color: $c-dark; color: $c-white; }
+
+
+// Position
+.flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+// Images / backgrounds
+.background-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.invert {
+    color: $c-white;
+}

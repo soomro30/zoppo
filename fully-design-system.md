@@ -123,15 +123,20 @@ Standard button:
 <a class="button" href="#"><span>Explore</span></a>
 ```
 
-<div class="c-signal-bg" style="padding: 4em">
-    Inverted button:
-
-    <a class="button button--inv" href="#"><span>Explore</span></a>
-
+<div class="c-signal-bg" style="padding: 4em" markdown="1">
+<p>Inverted button:
+<a class="button button--inv" href="#"><span>Explore</span></a>
+</p>
+ ``` html
+<a class="button button--inv" href="#"><span>Explore</span></a>
+```
 </div>
+<br>
+Link button:
+<a href="#" class="link link--next"><span>View all cases</span></a>
 
 ``` html
-<a class="button button--inv" href="#"><span>Explore</span></a>
+<a href="#" class="link link--next"><span>View all cases</span></a>
 ```
 
 <header class="ds-header" markdown='1'>
@@ -344,6 +349,50 @@ Load images with style
     alt="A beautiful cat">	
 </div>
 
+```
+
+<header class="ds-header" markdown='1'>
+## Imagebox + text
+Example of a custom CSS grid layout using a container with the class `grid`.
+</header>
+
+<div class="grid grid--space case-highlight" markdown='1'>
+<div class="flexcenter background-image invert" id="lettering2" markdown='1' style="background-image: url(../assets/introfilmen-poster.jpg)">
+
+#### div #exampleimage
+``` scss
+grid-column: 1 / span 12;
+grid-row: 4 / span 13;
+@include media-query($on-laptop) {
+    grid-column: 1 / span 8;
+    grid-row: 2 / span 13;
+}
+```
+
+#### div #exampletext
+``` scss
+grid-column: 2 / span 13;
+grid-row: 1 / span 4; 
+@include media-query($on-laptop) {
+    grid-column: 8 / span 5;
+    grid-row: 1 / span 8;
+}
+```
+
+</div>
+<div class="boxtext boxtext--lpc">
+    <h2>Lorem ipsum</h2>
+    <p>Dolem es simet lorem</p>
+    <a href="#" class="button"><span>View case study</span></a>
+    <a href="#" class="link link--next"><span>View all cases</span></a>
+</div>
+</div>
+
+``` html
+<div class="grid grid--space">
+    <div class="background-image" id="exampleimage" style="background-image: url(assets/introfilmen-poster.jpg)"></div>
+    <div class="boxtext" id="exampletext"></div>
+</div>
 ```
 
 <br><br><br>
