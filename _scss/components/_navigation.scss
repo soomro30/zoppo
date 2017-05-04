@@ -21,12 +21,7 @@
         min-height: 100%;
         width: auto;
         height: auto;
-        z-index: -100;
         transform: translateX(-50%) translateY(-50%);
-        background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
-        background-size: cover;
-        transition: 1s opacity;
-        filter: grayscale(100%);
     }
     &__list {
         position: absolute;
