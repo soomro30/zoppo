@@ -312,7 +312,6 @@ h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
   margin-top: 9px; }
 
 h1, .h1 {
-  font-size: 5em;
   font-size: calc( 3em + 2vw);
   max-width: calc( 11.2em + 60px); }
 
