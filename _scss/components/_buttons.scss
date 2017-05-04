@@ -2,7 +2,7 @@
 * Buttons
 */
 
-$bshadow: 2px; // the size of the shadow
+$bshadow: 3px; // the size of the shadow
 
 //Default button for use on dark background
 .button {
@@ -47,7 +47,7 @@ $bshadow: 2px; // the size of the shadow
 	span {
 		letter-spacing: 0.15em;
 		color: $c-signal;
-		padding: 0.5em 1.5em;
+		padding: 0.55em 1.5em 0.45em;
 		background-color: $c-white;
 		border: 2px solid $c-signal;
 		display: block;
@@ -88,4 +88,59 @@ $bshadow: 2px; // the size of the shadow
 			}
 		}
 	}
+
+}
+// Text link with arrows
+.link, p a {
+	font-size: 0.8em;
+	font-family: $header-font-family;
+	color: $c-signal;
+	padding: $s-small*0.5;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: $s-small * 0.4;
+		left: $s-small;
+		right: $s-small;
+		height: 4px;
+		background: $c-signal;
+		transition: transform 0.4s $cb-ease_out;
+		transform: translateX(-1em) scaleX(0);
+		transform-origin: top left;
+		// opacity: 0;
+	}
+	&:hover {
+		color: $c-signal;
+		&:before {
+			transform: translateX(0) scaleX(1);
+			// opacity: 1;
+		}
+		&:after {
+			transform: translateX(0.5em);
+		}
+	}
+	&--next {
+		&:after {
+			content: "";
+			display: inline-block;
+			margin-left: $s-small*0.25;
+			width: 1em; 
+			height: 0.5em;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE2IDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDMuNTI4YzAgLjA4Ny0uMDMuMTYtLjA5My4yMjJsLTMuNTU1IDMuMjc4Yy0uMS4wODctLjIwNy4xMDUtLjMyNC4wNTYtLjExOC0uMDU2LS4xNzYtLjE0NS0uMTc2LS4yN1Y0Ljc0MkguMjk2Qy4yMSA0Ljc0LjE0IDQuNzE0LjA4MyA0LjY2LjAyOCA0LjYwMiAwIDQuNTMgMCA0LjQ0NVYyLjY2N2MwLS4wODYuMDI4LS4xNTcuMDgzLS4yMTNDLjE0IDIuNC4yMSAyLjM3LjI5NiAyLjM3aDExLjU1NlYuMjk4YzAtLjEzLjA1OC0uMjIuMTc2LS4yNy4xMTctLjA0OC4yMjUtLjAzMy4zMjQuMDQ4bDMuNTU1IDMuMjRjLjA2Mi4wNjIuMDkzLjEzMy4wOTMuMjEzeiIgZmlsbD0iIzVGMTBFOCIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
+			transition: transform 0.4s $cb-ease_out;
+		}
+	}
+	&--invert {
+		color: $c-white;
+		&.link--next:after {
+			background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE2IDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDMuNTI4YzAgLjA4Ny0uMDMuMTYtLjA5My4yMjJsLTMuNTU1IDMuMjc4Yy0uMS4wODctLjIwNy4xMDUtLjMyNC4wNTYtLjExOC0uMDU2LS4xNzYtLjE0NS0uMTc2LS4yN1Y0Ljc0MkguMjk2Qy4yMSA0Ljc0LjE0IDQuNzE0LjA4MyA0LjY2LjAyOCA0LjYwMiAwIDQuNTMgMCA0LjQ0NVYyLjY2N2MwLS4wODYuMDI4LS4xNTcuMDgzLS4yMTNDLjE0IDIuNC4yMSAyLjM3LjI5NiAyLjM3aDExLjU1NlYuMjk4YzAtLjEzLjA1OC0uMjIuMTc2LS4yNy4xMTctLjA0OC4yMjUtLjAzMy4zMjQuMDQ4bDMuNTU1IDMuMjRjLjA2Mi4wNjIuMDkzLjEzMy4wOTMuMjEzeiIgZmlsbD0iI2ZmZmZmZiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
+		}
+	}
+}
+
+.button + .link {
+	margin-top: $s-small*0.5;
 }

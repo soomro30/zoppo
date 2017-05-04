@@ -1,0 +1,39 @@
+<!-- 
+####################
+## Loop through the latest case
+-->
+<div class="grid grid--space case-highlight">
+    <!-- Get all cc-about posts and revers them -->
+    {% assign items = site.case | sort: 'date' | reverse %}
+    {% assign root = 'js/' %}
+    
+    {% for case in items limit:1 %}
+        <!-- 
+        ###############################
+        ## Get code for the background
+        ## set in current post
+        -->
+        {% unless case.background == nil %}
+            {{ case.background }}
+        {% endunless %}
+
+        <!-- 
+        ####################
+        ## Get scripts from
+        ## current post
+        -->
+        {% for js in case.scripts %}
+            <script type="text/javascript">
+            {% include {{ root | append: js }} %}
+            </script>
+        {% endfor %}     
+
+        <div class="boxtext boxtext--lpc">
+            <h2>{{case.title}}</h2>
+            <p>{{case.subtitle}}</p>
+            <a href="{{ case.url | prepend: site.baseurl }}" class="button"><span>View case study</span></a>
+            <a href="{{ site.cases | prepend: site.baseurl }}" class="link link--next"><span>View all cases</span></a>
+        </div>
+    {% endfor %}
+
+</div>

@@ -21,7 +21,13 @@ section2: |
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum animi nisi esse debitis dolores nemo ex, obcaecati ut odio nihil reprehenderit eveniet aliquam eum fuga, dolorem perferendis aperiam. Dolorem, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsa dolorem, minima sunt maiores a ducimus sed atque, similique, molestias labore. Tempora, obcaecati repellat eius corporis laudantium. Fugit, dolorem qui?
 
 background: |
-  <div class="case1__image" id="lettering2"></div>
+  <style>
+    #lettering2 svg {
+      padding: 6vw;
+      max-height: 60vh;
+    }
+  </style>
+  <div class="case__image c-signal-bg flexcenter" id="lettering2"></div>
 
 scripts: 
 - vivus.js

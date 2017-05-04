@@ -11,6 +11,9 @@ github_username:  fullydstudios
 highlighter: rouge
 exclude: ["node_modules", "gulpfile.js", "package.json"] #like git-ignore for master?
 
+# Links
+cases: "/cases"
+
 collections:
   case:
     output: true

@@ -22,5 +22,10 @@
         </li>
     </ul>
 
-    <video src="assets/introfilmen-v0_2.mp4" autoplay loop poster="poster.jpg"></video>
+    <video class="navigation__video" 
+        poster="{{ site.baseurl }}/assets/introfilmen-poster.jpg"
+        autoplay loop muted playsinline>
+        <source src="{{ site.baseurl }}/assets/introfilmen-v0_2.mp4">
+        <img src="{{ site.baseurl }}/assets/introfilmen-poster.jpg">
+    </video>
 </nav>

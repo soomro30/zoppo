@@ -66,3 +66,16 @@
     margin-top: $s-small*2;
 }
 
+// Boxtext
+.boxtext {
+    background-color: $c-white;
+    padding: $s-small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    .button {
+        margin-top: $s-small;
+    }
+}
