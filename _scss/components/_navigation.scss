@@ -74,8 +74,9 @@
         transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 0, 0.1, 0.99);
         pointer-events: none;
     }
-    #menu-work ~ .wave-svg { stroke: $c-signal; }
+    #menu-work ~ .wave-svg { stroke: lighten($c-signal, 10%); }
     #menu-work:hover ~ .wave-svg { stroke-dashoffset: 182; }
+    #menu-about ~ .wave-svg { stroke: $c-business; }
     #menu-about:hover ~ .wave-svg { stroke-dashoffset: 148; }
     #menu-curiosities ~ .wave-svg { stroke: $c-curiosities; }
     #menu-contact:hover ~ .wave-svg { stroke-dashoffset: 108; }

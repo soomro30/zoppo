@@ -313,6 +313,7 @@ h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
 
 h1, .h1 {
   font-size: 5em;
+  font-size: calc( 3em + 2vw);
   max-width: calc( 11.2em + 60px); }
 
 h2, .h2, .navigation__link, .navigation__overlay {
@@ -1474,9 +1475,11 @@ p {
     transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 0, 0.1, 0.99);
     pointer-events: none; }
   .navigation #menu-work ~ .wave-svg {
-    stroke: #5f11e8; }
+    stroke: #7d3bf1; }
   .navigation #menu-work:hover ~ .wave-svg {
     stroke-dashoffset: 182; }
+  .navigation #menu-about ~ .wave-svg {
+    stroke: #7bd75e; }
   .navigation #menu-about:hover ~ .wave-svg {
     stroke-dashoffset: 148; }
   .navigation #menu-curiosities ~ .wave-svg {
