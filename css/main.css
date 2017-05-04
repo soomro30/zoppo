@@ -734,93 +734,6 @@ p {
           background: inherit;
           color: inherit; } }
 
-.about-us {
-  padding: 1em;
-  background-color: #ffc1b4;
-  color: #f8f8f8;
-  position: relative; }
-  .about-us h1 {
-    width: 90%;
-    line-height: 1.5;
-    transition: -webkit-transform 3s cubic-bezier(0.2, 1, 0.3, 0.8);
-    transition: transform 3s cubic-bezier(0.2, 1, 0.3, 0.8);
-    -webkit-transform: skew(-10deg) rotate(-1.5deg);
-            transform: skew(-10deg) rotate(-1.5deg); }
-    @media screen and (min-width: 50em) {
-      .about-us h1 {
-        font-size: 2vw;
-        -webkit-transform: skew(-20deg) rotate(-1.5deg) translateY(-0.5vw);
-                transform: skew(-20deg) rotate(-1.5deg) translateY(-0.5vw); } }
-    .about-us h1 .sub-header {
-      display: block;
-      transition: -webkit-transform 3s cubic-bezier(0.2, 1, 0.3, 0.8);
-      transition: transform 3s cubic-bezier(0.2, 1, 0.3, 0.8); }
-    .about-us h1 .sub-header--1 {
-      margin-top: 0.2em;
-      -webkit-transform: rotate(1.5deg);
-              transform: rotate(1.5deg); }
-    .about-us h1 .sub-header--2 {
-      -webkit-transform: rotate(3deg);
-              transform: rotate(3deg); }
-    .about-us h1 .button {
-      transition: -webkit-transform 3s cubic-bezier(0.2, 1, 0.3, 0.8);
-      transition: transform 3s cubic-bezier(0.2, 1, 0.3, 0.8);
-      -webkit-transform: rotate(3deg);
-              transform: rotate(3deg); }
-      .about-us h1 .button:hover span, .about-us h1 .button:active span, .about-us h1 .button:focus span {
-        color: #5f11e8; }
-  .about-us:before, .about-us:after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    position: absolute;
-    right: 0;
-    transition: -webkit-transform 3s cubic-bezier(0.2, 1, 0.3, 0.8);
-    transition: transform 3s cubic-bezier(0.2, 1, 0.3, 0.8); }
-  .about-us:before {
-    top: -5vw;
-    border-width: 0 0 5vw 100vw;
-    border-color: transparent transparent #ffc1b4 transparent;
-    -webkit-transform: scaleY(1) translateY(1px);
-            transform: scaleY(1) translateY(1px);
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom; }
-  .about-us:after {
-    bottom: -3vw;
-    z-index: 1;
-    border-width: 0 100vw 3vw 0;
-    border-color: transparent #ffc1b4 transparent transparent;
-    -webkit-transform: scaleY(1) translateY(-1px);
-            transform: scaleY(1) translateY(-1px);
-    -webkit-transform-origin: top;
-            transform-origin: top; }
-
-.cc__wrap:hover ~ .about-us h1 {
-  -webkit-transform: skew(-18deg) rotate(0deg) scaleY(0.9);
-          transform: skew(-18deg) rotate(0deg) scaleY(0.9); }
-
-.cc__wrap:hover ~ .about-us:before {
-  -webkit-transform: scaleY(0.5) translateY(2px);
-          transform: scaleY(0.5) translateY(2px); }
-
-.cc__wrap:hover ~ .about-us:after {
-  -webkit-transform: scaleY(0.7) translateY(-2px);
-          transform: scaleY(0.7) translateY(-2px); }
-
-.cc__wrap:hover ~ .about-us .sub-header--1 {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg); }
-
-.cc__wrap:hover ~ .about-us .sub-header--2 {
-  -webkit-transform: rotate(1deg);
-          transform: rotate(1deg); }
-
-.cc__wrap:hover ~ .about-us .button {
-  -webkit-transform: rotate(1deg);
-          transform: rotate(1deg); }
-
 /**
  * Site footer
  */
@@ -1361,6 +1274,10 @@ p {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE2IDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDMuNTI4YzAgLjA4Ny0uMDMuMTYtLjA5My4yMjJsLTMuNTU1IDMuMjc4Yy0uMS4wODctLjIwNy4xMDUtLjMyNC4wNTYtLjExOC0uMDU2LS4xNzYtLjE0NS0uMTc2LS4yN1Y0Ljc0MkguMjk2Qy4yMSA0Ljc0LjE0IDQuNzE0LjA4MyA0LjY2LjAyOCA0LjYwMiAwIDQuNTMgMCA0LjQ0NVYyLjY2N2MwLS4wODYuMDI4LS4xNTcuMDgzLS4yMTNDLjE0IDIuNC4yMSAyLjM3LjI5NiAyLjM3aDExLjU1NlYuMjk4YzAtLjEzLjA1OC0uMjIuMTc2LS4yNy4xMTctLjA0OC4yMjUtLjAzMy4zMjQuMDQ4bDMuNTU1IDMuMjRjLjA2Mi4wNjIuMDkzLjEzMy4wOTMuMjEzeiIgZmlsbD0iIzVGMTBFOCIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
     transition: -webkit-transform 0.4s cubic-bezier(0.2, 1, 0.3, 0.8);
     transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 0.8); }
+  .link--invert, p a--invert {
+    color: #ffffff; }
+    .link--invert.link--next:after, p a--invert.link--next:after {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE2IDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDMuNTI4YzAgLjA4Ny0uMDMuMTYtLjA5My4yMjJsLTMuNTU1IDMuMjc4Yy0uMS4wODctLjIwNy4xMDUtLjMyNC4wNTYtLjExOC0uMDU2LS4xNzYtLjE0NS0uMTc2LS4yN1Y0Ljc0MkguMjk2Qy4yMSA0Ljc0LjE0IDQuNzE0LjA4MyA0LjY2LjAyOCA0LjYwMiAwIDQuNTMgMCA0LjQ0NVYyLjY2N2MwLS4wODYuMDI4LS4xNTcuMDgzLS4yMTNDLjE0IDIuNC4yMSAyLjM3LjI5NiAyLjM3aDExLjU1NlYuMjk4YzAtLjEzLjA1OC0uMjIuMTc2LS4yNy4xMTctLjA0OC4yMjUtLjAzMy4zMjQuMDQ4bDMuNTU1IDMuMjRjLjA2Mi4wNjIuMDkzLjEzMy4wOTMuMjEzeiIgZmlsbD0iI2ZmZmZmZiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+"); }
 
 .button + .link {
   margin-top: 15px; }

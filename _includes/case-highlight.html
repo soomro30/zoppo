@@ -31,7 +31,6 @@
         <div class="boxtext boxtext--lpc">
             <h2>{{case.title}}</h2>
             <p>{{case.subtitle}}</p>
-            {% comment %}{% include case-item.html %}{% endcomment %}
             <a href="{{ case.url | prepend: site.baseurl }}" class="button"><span>View case study</span></a>
             <a href="{{ site.cases | prepend: site.baseurl }}" class="link link--next"><span>View all cases</span></a>
         </div>
