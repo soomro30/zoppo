@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
         padding-left: $spacing-unit;
         padding-right: $spacing-unit;
     }
-    // letter-spacing: 0.1em;
+    // letter-spacing:  0.1em;
     // background: red;
 }
 h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
@@ -168,6 +168,11 @@ h5, .h5, h6, .h6 {
     max-width: calc( 56em + #{$spacing-unit*2});
 }
 
+.pre-header {
+    font-size: 1em;
+    letter-spacing: 0.125em;
+}
+
 /**
  * Links
  */
@@ -196,7 +201,7 @@ blockquote {
     border-left: 4px solid $c-light;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
-    letter-spacing: -1px;
+    letter-spacing:  -1px;
     font-style: italic;
 }
 
@@ -251,7 +256,7 @@ p {
 }
 
 .meta-description , .meta {
-    letter-spacing: 0.125em;
+    letter-spacing:  0.125em;
 }
 .meta-description {
     text-transform: uppercase;
@@ -312,34 +317,3 @@ p {
         }
     }
 }
-
-
-
-/**
- * Colors
- */
-
-// Help classes for colors
-.c-signal { color: $c-signal; }
-.c-signal-bg { background-color: $c-signal; color: $c-white; }
-
-.c-people { color: $c-people; }
-.c-people-bg { background-color: $c-people }
-
-.c-business { color: $c-business; }
-.c-business-bg { background-color: $c-business }
-
-.c-curiosities { color: $c-curiosities; }
-.c-curiosities-bg { background-color: $c-curiosities }
-
-.c-metal { color: $c-metal; }
-.c-metal-bg { background-color: $c-metal; color: $c-white; }
-
-.c-light { color: $c-light; }
-.c-light-bg { background-color: $c-light }
-
-.c-white { color: $c-white; }
-.c-white-bg { background-color: $c-white }
-
-.c-dark { color: $c-dark; }
-.c-dark-bg { background-color: $c-dark; color: $c-white; }
