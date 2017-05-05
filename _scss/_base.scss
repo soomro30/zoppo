@@ -136,7 +136,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
         padding-left: $spacing-unit;
         padding-right: $spacing-unit;
     }
-    // letter-spacing:  0.1em;
+    letter-spacing:  0.05em;
+    word-spacing: 0.1em;
     // background: red;
 }
 h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
@@ -180,15 +181,31 @@ a {
     color: $c-signal;
     text-decoration: none;
 
-    &:visited {
-        color: inherit;
+    &:visited  {
+        color: $c-signal;
     }
-    &:hover   { color: #000; }
-
-    // &:hover {
-    //     color: $text-color;
-    //     text-decoration: underline;
-    // }
+    &:hover {
+        color: $c-signal;
+    }
+}
+p > a:not(.button, .link) {
+    position: relative;
+    text-shadow: 1px 1px 0 $c-light, 2px 1px 0 $c-light, -1px 1px 0 $c-light, -2px 1px 0 $c-light, 1px -1px 0 $c-light, 2px -1px 0 $c-light, -1px -1px 0 $c-light, -2px -1px 0 $c-light;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-bottom: 2px solid $c-signal;
+        z-index: -1;
+        transform: scaleX(0);
+        // transform-origin: top left;
+        transition: transform .7s $easeout;
+    }
+    &:hover:after {
+        transform: scaleX(1);
+    }
 }
 
 

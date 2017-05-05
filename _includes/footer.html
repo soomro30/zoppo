@@ -1,18 +1,31 @@
-<footer class="site-footer">
+<footer class="column__wrapper footer">
 
-    <h1>[ List on all staff and contact info ]</h1>
+    <div class="column">
+        <p><strong>Fully Studios</strong></p>
+        <p>{{site.adress}}</p>
+    </div>
 
-    <p>{{ site.description }}</p>
+    <div class="column">
+        <p><strong>Contact us</strong></p>
+        <p>
+            <a href="tel:{{site.tel}}">{{site.tel}}</a><br>
+            <a href="mailto:{{site.email}}">{{site.email}}</a>
+        </p>
+    </div>
 
-    <nav class="site-nav">
-        <a class="page-link" href="{{ site.url }}">Home</a>
-        {% for the_page in site.pages %}
-        {% if the_page.title %}
-        <a class="page-link" href="{{ the_page.url | prepend: site.baseurl }}">{{ the_page.title }}</a>
-        {% endif %}
-        {% endfor %}
+    <div class="column">
+        <p><strong>Follow us</strong></p>
+        <p>
+            <a href="{{site.facebook}}">Facebook</a><br>
+            <a href="{{site.instagram}}">Instagram</a><br>
+            <a href="{{site.vimeo}}">Vimeo</a><br>
+            <a href="{{site.github}}">Github</a><br>
+        </p>
+    </div>
 
-    </nav>
+    <div class="column">
+        <p><img src="/assets/fully-studios-logo.svg" alt="Fully Studios" /></p>
+    </div>
 
 </footer>
 
@@ -21,3 +34,16 @@
 {% include {{ root | append: '/js/barba.min.js' }} %}
 {% include {{ root | append: 'js/global.js' }} %}
 </script>
+
+
+ <nav style="font-size: 0.7em">
+    <span>Placeholder navigation during development</span>
+    <ul>
+        <li><a style="font-size: 1em" class="page-link" href="{{ site.url }}">Home</a></li>
+        {% for the_page in site.pages %}
+        {% if the_page.title %}
+        <li><a style="font-size: 1em" class="page-link" href="{{ the_page.url | prepend: site.baseurl }}">{{ the_page.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</nav>
