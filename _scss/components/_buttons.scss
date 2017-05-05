@@ -89,6 +89,51 @@ $bshadow: 3px; // the size of the shadow
 		}
 	}
 
+	&--nav {
+		span {
+			padding: 0;
+			line-height: 0;
+			position: relative;
+			z-index: 2;
+		}
+		svg {
+			margin: 0;
+			width: 3em;
+			height: 3em;
+		}
+		line {
+			fill:none;
+			stroke:#5F11E8;
+			stroke-width:4;
+			stroke-miterlimit:10;
+		}
+		&:after {
+			transform-origin: top left;
+			pointer-events: none;
+		}
+
+		&.menu-open {
+			&:after {
+				animation: openmenu .5s forwards cubic-bezier(0.16, 0, 0.28, 0.99);
+				position: fixed;
+			}
+		}
+
+		&.menu-closed {
+			&:after {
+				animation: closemenu .5s cubic-bezier(0.16, 0, 0.28, 0.99);
+			}
+		}
+	}
+}
+@keyframes openmenu {
+	0% { transform: scale(0.03, 0.04) }
+	100% { transform: scale(1) }
+}
+@keyframes closemenu {
+	0% { transform: scale(100) translate3D(-#{$s-small}, -#{$s-small}, 0) }
+	// 50% { transform: scale(50) translate3D(-#{$s-small}, -#{$s-small}, 0) }
+	// 100% { transform: scale(1) translate3D(-$bshadow, 0, 0) }
 }
 // Text link with arrows
 .link {

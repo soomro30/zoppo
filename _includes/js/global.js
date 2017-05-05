@@ -32,8 +32,23 @@ ready(function(){
         autoplay: true,
         path: '../../assets/javascript/logo.json'
     };
-    var anim = bodymovin.loadAnimation(animData);;
+    var anim = bodymovin.loadAnimation(animData);
 	window.onresize = anim.resize.bind(anim);
+
+	// menu function
+	var menutoggle = document.getElementById('openmenu');
+	var menuIsOpen = false;
+	menutoggle.addEventListener('mouseup', function(){
+		if (menuIsOpen) {
+			menutoggle.classList.remove('menu-open');
+			menutoggle.classList.add('menu-closed');
+		} else {
+			menutoggle.classList.remove('menu-closed');	
+			menutoggle.classList.add('menu-open');
+		}
+		menuIsOpen = menuIsOpen ? false : true;
+		console.log(menuIsOpen);
+	}, false);
 
 	// Initialize barba.js
 	Barba.Pjax.start();
