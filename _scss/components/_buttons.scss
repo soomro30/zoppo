@@ -95,8 +95,8 @@ $bshadow: 3px; // the size of the shadow
 	font-size: 0.8em;
 	font-family: $header-font-family;
 	color: $c-signal;
-	padding: $s-small*0.5;
 	position: relative;
+	padding: $s-small*0.5 0;
 	&:before {
 		content: "";
 		position: absolute;
@@ -145,6 +145,9 @@ $bshadow: 3px; // the size of the shadow
 			color: $c-white;
 		}
 	}
+}
+.link {
+	padding: $s-small*0.5;
 }
 
 .button + .link {
