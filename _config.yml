@@ -1,9 +1,9 @@
 title: Fully Studios
-email: info@fullydstudios.se
+email: hi@fullystudios.se
 description: > 
   Fully Studios - This site is under construction.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://fullydstudios.github.io" # the base hostname & protocol for your site
+url: "http://fullystudios.github.io" # the base hostname & protocol for your site
 twitter_username: fullystudios_se
 github_username:  fullydstudios
 

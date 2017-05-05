@@ -1022,6 +1022,9 @@ p {
         .box--right:before {
           -webkit-transform: translate(-30px, 30px);
                   transform: translate(-30px, 30px); } }
+  .box--center {
+    margin-left: auto;
+    margin-right: auto; }
   .box--people:before {
     background: #ffc1b4; }
   .box--business:before {
@@ -1065,8 +1068,6 @@ p {
   @media screen and (min-width: 600px) {
     .boxtext {
       padding: 90px 90px; } }
-  .boxtext .button {
-    margin-top: 30px; }
   .boxtext--frame {
     background-color: #7bd75e;
     color: #ffffff;
@@ -1312,6 +1313,9 @@ p {
 
 .button + .link {
   margin-top: 15px; }
+
+* + .button {
+  margin-top: 30px; }
 
 .column {
   padding: 10px 30px; }
@@ -1575,6 +1579,9 @@ p {
 .c-dark-bg {
   background-color: #0a2a4f;
   color: #ffffff; }
+
+.center {
+  text-align: center; }
 
 .flexcenter {
   display: -ms-flexbox;

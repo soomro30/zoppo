@@ -150,3 +150,7 @@ $bshadow: 3px; // the size of the shadow
 .button + .link {
 	margin-top: $s-small*0.5;
 }
+
+* + .button {
+	margin-top: $s-small;	
+}
