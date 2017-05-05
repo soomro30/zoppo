@@ -40,6 +40,12 @@
         }
     }
 
+    // Center version
+    &--center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     // Different colors
     &--people:before     { background: $c-people }
     &--business:before   { background: $c-business }
@@ -78,9 +84,6 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    .button {
-        margin-top: $s-small;
-    }
 
     &--frame {
         background-color: $c-business;

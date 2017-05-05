@@ -408,7 +408,7 @@ grid-row: 1 / span 4;
 <div class="boxtext boxtext--frame">
 <h2 style="max-width:13em">.boxtext--frame</h2>
 <a href="#" class="button"><span>Read all about it</span></a>
-<a href="mailto:hi@fullystudios.se" class="link link--next link--invert"><span>Or drop us a line</span></a>
+<a href="mailto:{{site.email}}" class="link link--next link--invert"><span>Or drop us a line</span></a>
 </div>
 
 
