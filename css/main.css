@@ -342,7 +342,8 @@ a {
 
 p > a:not(.button):not(.link) {
   position: relative;
-  text-shadow: 1px 1px 0 #f8f8f8, 2px 1px 0 #f8f8f8, -1px 1px 0 #f8f8f8, -2px 1px 0 #f8f8f8, 1px -1px 0 #f8f8f8, 2px -1px 0 #f8f8f8, -1px -1px 0 #f8f8f8, -2px -1px 0 #f8f8f8; }
+  text-shadow: 1px 1px 0 #ffffff, 2px 1px 0 #ffffff, -1px 1px 0 #ffffff, -2px 1px 0 #ffffff, 1px -1px 0 #ffffff, 2px -1px 0 #ffffff, -1px -1px 0 #ffffff, -2px -1px 0 #ffffff;
+  z-index: 1; }
   p > a:not(.button):not(.link):after {
     content: "";
     position: absolute;
