@@ -1,4 +1,8 @@
 .column {
+    padding: $s-small/3 $s-small*0.5;
+    @include media-query($on-laptop) {
+        padding: $s-small/3 $s-small;    
+    }
     &__wrapper {
         display: flex;
         justify-content: flex-start;
@@ -8,10 +12,17 @@
             justify-content: space-around;
         }
     }
-    padding: $s-small/3 $s-small;
     
     &--vertical {
         display: flex;
         flex-direction: column;
+    }
+    &--2-4-4 {
+        flex: 1 0 50%;
+        max-width: 100%;
+        @include media-query($on-laptop) {
+            flex: 1 0 25%;
+            max-width: 25%;
+        }
     }
 }

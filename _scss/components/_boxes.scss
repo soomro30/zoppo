@@ -11,7 +11,7 @@
     margin-right: auto;
     background-size: cover;
     background-position: center;
-    max-width: 59em;
+    max-width: $content-width;
     @include media-query($on-palm) {
         margin-left: $s-small;
     }
