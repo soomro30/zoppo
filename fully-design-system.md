@@ -139,6 +139,16 @@ Link button:
 <a href="#" class="link link--next"><span>View all cases</span></a>
 ```
 
+<div class="c-signal-bg" style="padding: 4em" markdown="1">
+<p>Inverted link:
+<a href="#" class="link link--next link--invert"><span>View all cases</span></a>
+</p>
+ ``` html
+<a href="#" class="link link--next link--invert"><span>View all cases</span></a>
+```
+</div>
+<br>
+
 <header class="ds-header" markdown='1'>
 ## Boxes
 Boxes with different dropshadows for text and images.
@@ -381,7 +391,7 @@ grid-row: 1 / span 4;
 
 </div>
 <div class="boxtext boxtext--lpc">
-    <h2>Lorem ipsum</h2>
+    <h2>.boxtext</h2>
     <p>Dolem es simet lorem</p>
     <a href="#" class="button"><span>View case study</span></a>
     <a href="#" class="link link--next"><span>View all cases</span></a>
@@ -392,6 +402,19 @@ grid-row: 1 / span 4;
 <div class="grid grid--space">
     <div class="background-image" id="exampleimage" style="background-image: url(assets/introfilmen-poster.jpg)"></div>
     <div class="boxtext" id="exampletext"></div>
+</div>
+```
+
+<div class="boxtext boxtext--frame">
+<h2 style="max-width:13em">.boxtext--frame</h2>
+<a href="#" class="button"><span>Read all about it</span></a>
+<a href="mailto:hi@fullystudios.se" class="link link--next link--invert"><span>Or drop us a line</span></a>
+</div>
+
+
+``` html
+<div class="boxtext boxtext--frame">
+[...]
 </div>
 ```
 

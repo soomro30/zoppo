@@ -181,7 +181,7 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: $c-signal;
+        color: inherit;
     }
     &:hover   { color: #000; }
 
