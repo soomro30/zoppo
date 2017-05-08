@@ -29,11 +29,17 @@ ready(function(){
         container: document.getElementById('logo_anim'),
         renderer: 'svg',
         loop: false,
-        autoplay: true,
+        autoplay: false,
         path: '../../assets/javascript/logo.json'
     };
     var anim = bodymovin.loadAnimation(animData);
+	anim.addEventListener('DOMLoaded',startLogoAnimation);
+	bodymovin.setQuality(2);
 	window.onresize = anim.resize.bind(anim);
+
+	function startLogoAnimation(){
+		anim.goToAndPlay(1, true);
+	}
 
 	// menu function
 	var menutoggle = document.getElementById('openmenu');
@@ -54,6 +60,7 @@ ready(function(){
 			// menu.classList.remove('menu-closed');
 			menu.classList.add('menu-open');
 			// document.body.classList.add('menu-open');
+			startLogoAnimation();
 		}
 		menuIsOpen = !menuIsOpen;
 		console.log(menuIsOpen);

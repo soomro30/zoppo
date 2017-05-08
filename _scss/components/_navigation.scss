@@ -34,7 +34,7 @@ $animTime: .3s;
         left: 0;
         z-index: 3;
         list-style-type: none;
-        margin: 0 0 $s-small*2;
+        margin: 0 0 $s-small*3;
     }
     &__item {
         position: relative;
@@ -42,7 +42,10 @@ $animTime: .3s;
     &__link, &__overlay {
         @extend .h2;
         color: $c-white;
-        padding: $s-small*0.5 $s-small*2;
+        padding: $s-small*0.5 $s-small;
+        @include media-query($on-laptop) {
+            padding: $s-small*0.5 $s-small*2;        
+        }
         display: inline-block;
         &:visited, &:hover {
             color: $c-white;

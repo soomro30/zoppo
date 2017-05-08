@@ -137,10 +137,8 @@ $golden-ratio: 61.8%;
     }
 
     &__logoanim {
-        width: 7em;
-        // width: calc(5em + 20vw);
-        height: 7em;
-                // height: calc(5em + 20vw);
+        width: calc(7em + 3vw);
+        height: calc(7em + 3vw);
     }
 
     .button--nav {

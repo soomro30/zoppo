@@ -552,8 +552,8 @@ p {
       height: 4em; } }
 
 .site-header__logoanim {
-  width: 7em;
-  height: 7em; }
+  width: calc(7em + 3vw);
+  height: calc(7em + 3vw); }
 
 .site-header .button--nav {
   margin: 30px;
@@ -1259,7 +1259,6 @@ p {
 * Buttons
 */
 .button {
-  font-size: 0.8em;
   font-family: "Moderat", sans-serif;
   font-weight: bold;
   border: none;
@@ -1273,6 +1272,9 @@ p {
   z-index: 1;
   padding: 0;
   display: inline-block; }
+  @media screen and (min-width: 50em) {
+    .button {
+      font-size: 0.8em; } }
   .button:after {
     content: "";
     position: absolute;
@@ -1561,13 +1563,16 @@ p {
     left: 0;
     z-index: 3;
     list-style-type: none;
-    margin: 0 0 60px; }
+    margin: 0 0 90px; }
   .navigation__item {
     position: relative; }
   .navigation__link, .navigation__overlay {
     color: #ffffff;
-    padding: 15px 60px;
+    padding: 15px 30px;
     display: inline-block; }
+    @media screen and (min-width: 50em) {
+      .navigation__link, .navigation__overlay {
+        padding: 15px 60px; } }
     .navigation__link:visited, .navigation__link:hover, .navigation__overlay:visited, .navigation__overlay:hover {
       color: #ffffff; }
     .navigation__link:hover ~ .wave-svg, .navigation__overlay:hover ~ .wave-svg {
