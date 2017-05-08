@@ -1648,7 +1648,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 20;
+  z-index: 4;
   pointer-events: none; }
   #menu .navigation__item, #menu .navigation__video {
     opacity: 0; }
@@ -1681,6 +1681,7 @@ p {
                 transform: scale(0.01, 0.05) translate3d(30px, 30px, 0); } }
   #menu.menu-open {
     pointer-events: auto;
+    z-index: 20;
     position: fixed;
     top: 0;
     left: 0;

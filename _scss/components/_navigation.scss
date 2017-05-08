@@ -111,7 +111,7 @@ $animTime: .3s;
 
 #menu {
     position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 20;
+    z-index: 4;
     pointer-events: none;
     .navigation__item, .navigation__video {
         opacity: 0;
@@ -140,6 +140,7 @@ $animTime: .3s;
     }
     &.menu-open {
         pointer-events: auto;
+        z-index: 20;
         .navigation__bg {
             transform: scale(1, 1) translate3d(0,0,0);
             opacity: 1;
