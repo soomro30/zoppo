@@ -2,7 +2,14 @@
 layout: default
 ---
 
-{% include menu.html %}
+<nav class="navigation" id="startmenu">
+    {% include menu.html %}
+</nav>
+
+<nav class="navigation" id="menu">
+    <div class="navigation__bg"></div>
+    {% include menu.html %}
+</nav>
 
 {% include cc.html %}
 

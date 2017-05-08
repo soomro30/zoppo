@@ -1,9 +1,11 @@
+$animTime: .3s;
+
 .navigation {
     width: 100%;
     height: 100vh;
     // min-height: 100vh;
-    background: $c-signal;
     position: relative;
+    overflow: hidden;
     // &:after {
     //     content: "";
     //     position: absolute;
@@ -14,6 +16,7 @@
     //     z-index:1;
     // }
     &__video { 
+        background-color: $c-signal;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -22,12 +25,14 @@
         width: auto;
         height: auto;
         transform: translateX(-50%) translateY(-50%);
+        transition: opacity $animTime;
+        z-index: 2;
     }
     &__list {
         position: absolute;
         bottom: 0;
         left: 0;
-        z-index: 2;
+        z-index: 3;
         list-style-type: none;
         margin: 0 0 $s-small*2;
     }
@@ -53,10 +58,10 @@
         pointer-events: none;
         // color: red;
     }
-    #menu-work ~ .navigation__overlay { left: 1.552em; }
-    #menu-about ~ .navigation__overlay { left: 1.344em; }
-    #menu-curiosities ~ .navigation__overlay { left: 0.725em; }
-    #menu-contact ~ .navigation__overlay { left: 1.35em; }
+    .menu-work ~ .navigation__overlay { left: 1.552em; }
+    .menu-about ~ .navigation__overlay { left: 1.344em; }
+    .menu-curiosities ~ .navigation__overlay { left: 0.725em; }
+    .menu-contact ~ .navigation__overlay { left: 1.35em; }
     
     .wave-svg {
         width: 100%;
@@ -74,11 +79,152 @@
         transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 0, 0.1, 0.99);
         pointer-events: none;
     }
-    #menu-work ~ .wave-svg { stroke: lighten($c-signal, 10%); }
-    #menu-work:hover ~ .wave-svg { stroke-dashoffset: 182; }
-    #menu-about ~ .wave-svg { stroke: $c-business; }
-    #menu-about:hover ~ .wave-svg { stroke-dashoffset: 148; }
-    #menu-curiosities ~ .wave-svg { stroke: $c-curiosities; }
-    #menu-contact:hover ~ .wave-svg { stroke-dashoffset: 108; }
-    
+    .menu-work ~ .wave-svg { stroke: lighten($c-signal, 10%); }
+    .menu-work:hover ~ .wave-svg { stroke-dashoffset: 182; }
+    .menu-about ~ .wave-svg { stroke: $c-business; }
+    .menu-about:hover ~ .wave-svg { stroke-dashoffset: 148; }
+    .menu-curiosities ~ .wave-svg { stroke: $c-curiosities; }
+    .menu-contact:hover ~ .wave-svg { stroke-dashoffset: 108; }
+
+    &.menu-open {
+        z-index: 15;
+    }
+
+}
+
+#startmenu {
+    z-index: 10;
+    .navigation__item {
+        opacity: 0;
+        animation: slidedown $animTime*2 0s forwards cubic-bezier(0.16, 0, 0.28, 0.99);
+
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i / 15}s;
+            }
+        }
+    }
+}
+
+#menu {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 20;
+    pointer-events: none;
+    .navigation__item, .navigation__video {
+        opacity: 0;
+    }
+    .navigation__item {
+        transform: translate3D(0,-2em,0);
+        transition: transform $animTime, opacity $animTime;
+    }
+    .navigation__bg {
+        width: 100%; height: 100%;
+        background-color: $c-signal;
+        // background-color: red;
+        transform: translateX(-3px);
+        transform-origin: calc(0% + #{$s-small}) calc(0% + #{$s-small});
+        transition: transform $animTime*1.5 cubic-bezier(0.16, 0, 0.28, 0.99), opacity $animTime*1.1 $animTime*0.9;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transform: scale(0.05, 0.01) translate3d($s-small,$s-small,0);
+        @media (orientation: landscape) {
+            transform: scale(0.01, 0.05) translate3d($s-small,$s-small,0);        
+        }
+        opacity: 0;
+    }
+    &.menu-open {
+        pointer-events: auto;
+        .navigation__bg {
+            transform: scale(1, 1) translate3d(0,0,0);
+            opacity: 1;
+            transition: transform $animTime cubic-bezier(0.16, 0, 0.28, 0.99), opacity 0.1s 0s;
+        }
+        .navigation__item, .navigation__video {
+            opacity: 0;
+        }
+        .navigation__item {
+            opacity: 1;
+            transform: translate3d(0,0,0);
+            transition: transform $animTime, opacity $animTime*0.5;
+            // animation: slidedown $animTime 0s forwards;
+        }
+        @for $i from 1 through 5 {
+            .navigation__item:nth-child(#{$i}) {
+                transition-delay: #{$i / 20}s;
+            }
+        }
+
+        .navigation__video {
+            opacity: 1;
+            transition: opacity $animTime*1.5 $animTime;
+            // animation: show $animTime $animTime forwards;
+        }
+        position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    }
+
+    &.menu-closed {
+        .navigation__bg {
+            // animation: closemenu $animTime forwards cubic-bezier(0.16, 0, 0.28, 0.99);
+            // transform-origin: 0% 0%;
+        }
+        .navigation__item, .navigation__video {
+            // opacity: 1;
+            // animation: hide $animTime forwards;
+        }
+    }
+}
+
+@keyframes openmenu {
+	0% { 
+        transform: scale(0.03, 0.04) translate3d($s-small,$s-small,0);
+        width: 100%; height: 100%;
+    }
+	100% { 
+        transform: scale(1) translate3d(0,0,0); 
+        width: 100%; height: 100%;    
+    }
+}
+@keyframes closemenu {
+	0% { 
+        transform: scale(100) translate3D(-#{$s-small}, -#{$s-small}, 0);
+        opacity: 1;
+    }
+	// 50% { transform: scale(50) translate3D(-#{$s-small}, -#{$s-small}, 0) }
+	99% { opacity: 1 }
+    100% { opacity: 0 }
+}
+@keyframes show {
+	0% { 
+        opacity: 0;
+    }
+	100% { 
+        opacity: 1;
+    }
+}
+@keyframes hide {
+	0% { 
+        opacity: 1;
+    }
+	100% { 
+        opacity: 0;
+    }
+}
+
+@keyframes slidedown {
+    0% { 
+        opacity: 0;
+        transform: translate3D(0,-20px,0);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+	100% { 
+        opacity: 1;
+        transform: translate3D(0,0,0);        
+    }
 }

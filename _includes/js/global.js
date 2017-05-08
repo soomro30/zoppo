@@ -37,16 +37,25 @@ ready(function(){
 
 	// menu function
 	var menutoggle = document.getElementById('openmenu');
+	var menu = document.getElementById('menu');
 	var menuIsOpen = false;
-	menutoggle.addEventListener('mouseup', function(){
+	menutoggle.addEventListener('click', function(e){
+		e.preventDefault();
+		console.log(e);
 		if (menuIsOpen) {
 			menutoggle.classList.remove('menu-open');
-			menutoggle.classList.add('menu-closed');
+			// menutoggle.classList.add('menu-closed');
+			menu.classList.remove('menu-open');
+			// menu.classList.add('menu-closed');
+			// document.body.classList.remove('menu-open');
 		} else {
-			menutoggle.classList.remove('menu-closed');	
+			// menutoggle.classList.remove('menu-closed');	
 			menutoggle.classList.add('menu-open');
+			// menu.classList.remove('menu-closed');
+			menu.classList.add('menu-open');
+			// document.body.classList.add('menu-open');
 		}
-		menuIsOpen = menuIsOpen ? false : true;
+		menuIsOpen = !menuIsOpen;
 		console.log(menuIsOpen);
 	}, false);
 

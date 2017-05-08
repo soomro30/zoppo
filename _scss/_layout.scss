@@ -119,17 +119,6 @@ $golden-ratio: 61.8%;
  * Site header
  */
 .site-header {
-    min-height: 56px;
-    width: 100%;
-
-    // Positioning context for the mobile navigation icon
-    position: absolute;
-    z-index: 20;
-    // padding: $s-small;
-    // margin: 0 4%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     &__svg {
         fill: $c-white;
         opacity: 1;
@@ -149,12 +138,31 @@ $golden-ratio: 61.8%;
 
     &__logoanim {
         width: 7em;
+        // width: calc(5em + 20vw);
         height: 7em;
+                // height: calc(5em + 20vw);
     }
 
-    .button {
+    .button--nav {
         margin: $s-small;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        &.menu-open {
+            z-index: 40;
+        }
     }
+    .site-header__logo {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 40;
+    }
+
+    // &.menu-open {
+        
+    // }
 
     // mix-blend-mode: multiply;
 }
