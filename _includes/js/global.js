@@ -9,6 +9,12 @@ function ready(fn) {
 		document.addEventListener('DOMContentLoaded', fn);
 	}
 }
+
+// Create transition object
+var transitionOverlay = document.createElement("div");
+transitionOverlay.classList.add('transition-overlay');
+document.body.appendChild(transitionOverlay);
+
 ready(function(){
 
 	// Fade images when loaded if they are inside an image-loader container
@@ -33,12 +39,28 @@ ready(function(){
         path: '../../assets/javascript/logo.json'
     };
     var anim = bodymovin.loadAnimation(animData);
+
+	// Init logo anim
+	var transitionData = {
+        container: transitionOverlay,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+		autoloadSegments: false,
+        path: '../../assets/javascript/pagetransition.json',
+		rendererSettings: { 
+        	preserveAspectRatio:'none'
+    	}
+    };
+    var pagetransition = bodymovin.loadAnimation(transitionData);
+
 	anim.addEventListener('DOMLoaded',startLogoAnimation);
 	bodymovin.setQuality(2);
 	window.onresize = anim.resize.bind(anim);
 
 	function startLogoAnimation(){
 		anim.goToAndPlay(1, true);
+		// pagetransition.goToAndPlay(1, true);
 	}
 
 	// menu function
@@ -81,7 +103,9 @@ ready(function(){
 	
 		 */
 		start: function() {
+			console.log('start');
 			// As soon the loading is finished and the old page is faded out, let's fade the new page
+			// console.log('this', this);
 			Promise
 				.all([this.newContainerLoading, this.animOut()])
 				.then(this.animIn.bind(this));
@@ -92,18 +116,24 @@ ready(function(){
 		 * @return { promise }
 		 */
 		animOut: function() {
-
+			console.log('anim-out');
 			var deferred = Barba.Utils.deferred();
+			
+			pagetransition.playSegments([[0,12]],true); // in
 
-			/**
-			 * Animate out the old container 
-			 * this.oldContainer is the HTMLElement of the old Container
-			 */
-			TweenMax.to(this.oldContainer, 0.2, {
-				opacity: 0,
-				onComplete: function() {
-					deferred.resolve();
-				}
+			function pagetransitionComplete (resolve) {
+				pagetransition.removeEventListener('complete', pagetransitionComplete);
+				resolve();
+				console.log('resolve');
+			}
+
+			var jonasPromise = new Promise(function(resolve) {
+				pagetransition.addEventListener('complete', pagetransitionComplete.bind(this, resolve));
+			});
+
+			jonasPromise.then(function() {
+				console.log('done and over');
+				deferred.resolve();
 			});
 
 			return deferred.promise;
@@ -113,23 +143,15 @@ ready(function(){
 		 * @return { promise }
 		 */
 		animIn: function() {
+			console.log('anim-in');
+			window.scrollTo(0,0);
+
 			var _this = this;
-			var newCont = this.newContainer;
 
-			// Hide the old container
-			this.oldContainer.style.display = "none";
+			pagetransition.playSegments([[12,38]],true); // out
+		
+			_this.done();
 
-			// Set the new container's start values
-			TweenMax.set(newCont, { visibility: 'visible', opacity:0 });
-
-			// Animate in the new container
-			TweenMax.to(newCont, 0.2, {
-				opacity: 1,
-				onComplete: function() {
-					// .done() will automatically remove the old Container from the DOM 
-					_this.done();
-				}
-			});
 		}
 	});
 
