@@ -40,7 +40,7 @@ ready(function(){
     };
     var anim = bodymovin.loadAnimation(animData);
 
-	// Init logo anim
+	// Init page transition anim
 	var transitionData = {
         container: transitionOverlay,
         renderer: 'svg',
@@ -63,34 +63,30 @@ ready(function(){
 		// pagetransition.goToAndPlay(1, true);
 	}
 
-	// menu function
+
+	// menu functions
+	function openMenu(){
+		menutoggle.classList.add('menu-open');
+		menu.classList.add('menu-open');
+		startLogoAnimation();
+		menuIsOpen = !menuIsOpen;
+	}
+	function closeMenu(){
+		menutoggle.classList.remove('menu-open');
+		menu.classList.remove('menu-open');
+		menuIsOpen = !menuIsOpen;
+	}
 	var menutoggle = document.getElementById('openmenu');
 	var menu = document.getElementById('menu');
 	var menuIsOpen = false;
 	menutoggle.addEventListener('click', function(e){
 		e.preventDefault();
-		console.log(e);
-		if (menuIsOpen) {
-			menutoggle.classList.remove('menu-open');
-			// menutoggle.classList.add('menu-closed');
-			menu.classList.remove('menu-open');
-			// menu.classList.add('menu-closed');
-			// document.body.classList.remove('menu-open');
-		} else {
-			// menutoggle.classList.remove('menu-closed');	
-			menutoggle.classList.add('menu-open');
-			// menu.classList.remove('menu-closed');
-			menu.classList.add('menu-open');
-			// document.body.classList.add('menu-open');
-			startLogoAnimation();
-		}
-		menuIsOpen = !menuIsOpen;
-		console.log(menuIsOpen);
+		menuIsOpen ? closeMenu() : openMenu();
 	}, false);
+
 
 	// Initialize barba.js
 	Barba.Pjax.start();
-
 
 	// simple fade animation
 	var FadeTransition = Barba.BaseTransition.extend({
@@ -103,9 +99,7 @@ ready(function(){
 	
 		 */
 		start: function() {
-			console.log('start');
 			// As soon the loading is finished and the old page is faded out, let's fade the new page
-			// console.log('this', this);
 			Promise
 				.all([this.newContainerLoading, this.animOut()])
 				.then(this.animIn.bind(this));
@@ -116,23 +110,22 @@ ready(function(){
 		 * @return { promise }
 		 */
 		animOut: function() {
-			console.log('anim-out');
+			// Use barba.js deffered function
 			var deferred = Barba.Utils.deferred();
 			
-			pagetransition.playSegments([[0,12]],true); // in
+			// play in animation
+			pagetransition.playSegments([[0,11]],true);
 
+			// Resolve the promise when animation is complete
 			function pagetransitionComplete (resolve) {
 				pagetransition.removeEventListener('complete', pagetransitionComplete);
 				resolve();
-				console.log('resolve');
 			}
 
-			var jonasPromise = new Promise(function(resolve) {
+			// Lissen for when the animation is complete
+			var transitionPromise = new Promise(function(resolve) {
 				pagetransition.addEventListener('complete', pagetransitionComplete.bind(this, resolve));
-			});
-
-			jonasPromise.then(function() {
-				console.log('done and over');
+			}).then(function() {
 				deferred.resolve();
 			});
 
@@ -143,15 +136,14 @@ ready(function(){
 		 * @return { promise }
 		 */
 		animIn: function() {
-			console.log('anim-in');
 			window.scrollTo(0,0);
+			closeMenu();
 
-			var _this = this;
-
-			pagetransition.playSegments([[12,38]],true); // out
-		
-			_this.done();
-
+			// play the out transition
+			pagetransition.playSegments([[25,54]],true);
+			
+			// immediately clear the old DOM
+			this.done();
 		}
 	});
 

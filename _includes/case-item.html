@@ -3,8 +3,8 @@
 ## Get code for the background
 ## set in current post
 -->
-{% unless case.background == nil %}
-    {{ case.background }}
+{% unless work.background == nil %}
+    {{ work.background }}
 {% endunless %}
 
 <!-- 
@@ -12,16 +12,16 @@
 ## Get scripts from
 ## current post
 -->
-{% for js in case.scripts %}
+{% for js in work.scripts %}
     <script type="text/javascript">
     {% include {{ root | append: js }} %}
     </script>
 {% endfor %}            
 
-<h2 class="cases__header">
-    {{ case.start }}
+<h2 class="works__header">
+    {{ work.start }}
 </h2>
 
-<a class="button" href="{{ case.url | prepend: site.baseurl }}">
-    <span>See case</span>
+<a class="button" href="{{ work.url | prepend: site.baseurl }}">
+    <span>See work</span>
 </a>

@@ -3,6 +3,7 @@ layout: case
 title:  "Matbaren Order Manage&shy;ment System"
 subtitle: "Lorem ipsum dolem es"
 start:  "Matbaren</br>System"
+button-text: View case study
 date:   2016-12-01 12:00:00 +0100
 categories: web, design
 slug: matbaren

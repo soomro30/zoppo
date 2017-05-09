@@ -3,6 +3,7 @@ layout: case
 title:  "Lorem ipsum Case 3"
 subtitle: "Lorem ipsum dolem es"
 start:  "Lorem ipsum</br>Case no 3"
+button-text: View case study
 date:   2015-12-09 08:41:20 +0100
 categories: web, design
 slug: lorem-ipsum-case-3

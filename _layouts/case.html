@@ -4,7 +4,7 @@ layout: default
 <article class="page" itemscope itemtype="http://schema.org/BlogPosting">
 	
 
-	<div class="hero hero--{{ page.slug }}" id="case_{{ page.slug }}">
+	<div class="hero hero--{{ page.slug }}" id="work_{{ page.slug }}">
 		{% comment %}<span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span>{% endcomment %}
 		<header class="hero__header">
 			<h1 itemprop="name headline">
@@ -69,18 +69,18 @@ layout: default
 
 <div class="boxgrid">
 	<h2 class="boxgrid__header h4">Check out our other projects</h2>
-	{% for case in site.case %}
-		{% if case.title == page.title %}
+	{% for work in site.work %}
+		{% if work.title == page.title %}
 			{% continue %}
 		{% endif %}
-		<a class="boxgrid__box" href="{{ case.url | prepend: site.baseurl }}">
+		<a class="boxgrid__box" href="{{ work.url | prepend: site.baseurl }}">
 			<figure>
 				<div class="image-loader" style="background: #ccc"> 
-					<img src="http://placekitten.com/g/644/400" alt="{{ case.title }}">	
+					<img src="http://placekitten.com/g/644/400" alt="{{ work.title }}">	
 				</div>
 				<figcaption>
-					<h3>{{ case.title }}</h3>
-					<p>{{ case.subtitle }}</p>
+					<h3>{{ work.title }}</h3>
+					<p>{{ work.subtitle }}</p>
 				</figcaption>
 			</figure>
 		</a>

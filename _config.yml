@@ -17,11 +17,14 @@ instagram: "https://www.instagram.com/fullystudios/"
 highlighter: rouge
 exclude: ["node_modules", "gulpfile.js", "package.json"] #like git-ignore for master?
 
+gems:
+  - jekyll-redirect-from
+
 # Links
-cases: "/cases"
+works: "/works"
 
 collections:
-  case:
+  work:
     output: true
     permalink: /:collection/:title/
   curious-about:
