@@ -169,6 +169,41 @@ $bshadow: 3px; // the size of the shadow
 	}
 }
 
+.metabutton {
+	font-family: $header-font-family;
+	letter-spacing: 0.15em;
+	border: 2px solid #ccc;
+	color: #ccc;
+	display: inline-block;
+	padding: $s-small*0.5 $s-small*0.75;
+	font-size: 0.8em;
+	font-weight: 300;
+	transition: color 0.2s, border 0.2s;
+	&:hover {
+		border: 2px solid $c-signal;
+		span:after {
+			transform: scaleX(1);
+		}
+	}
+	span {
+		position: relative;
+		text-shadow: 1px 1px 0 $c-white, 2px 1px 0 $c-white, -1px 1px 0 $c-white, -2px 1px 0 $c-white, 1px -1px 0 $c-white, 2px -1px 0 $c-white, -1px -1px 0 $c-white, -2px -1px 0 $c-white;
+		z-index: 1;
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			border-bottom: 2px solid $c-signal;
+			z-index: -1;
+			transform: scaleX(0);
+			// transform-origin: top left;
+			transition: transform .7s $easeout;
+		}
+	}
+}
+
 .button + .link {
 	margin-top: $s-small*0.5;
 }

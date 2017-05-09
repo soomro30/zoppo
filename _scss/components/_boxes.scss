@@ -9,11 +9,13 @@
     // margin-bottom: $s-small;
     margin-left: $s-small*0.5;
     margin-right: auto;
+    margin-bottom: $s-small*0.5;
     background-size: cover;
     background-position: center;
     max-width: $content-width;
     @include media-query($on-palm) {
         margin-left: $s-small;
+        margin-bottom: $s-small;
     }
     &:before {
         content:"";
@@ -68,7 +70,7 @@
 
 }
 
-.box + .box {
+.box + * {
     margin-top: $s-small*2;
 }
 

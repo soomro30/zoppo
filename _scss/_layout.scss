@@ -8,26 +8,57 @@
         margin-top: $s-small*2;
         margin-bottom: $s-small*2;
     }
+    &--padding {
+        padding-left: $s-small;
+        padding-right: $s-small;
+    }
+
+    // 2 column grid component. Example: Case Owd Bob
+    &__column1-2 {
+        margin-bottom: $s-small;
+        grid-column: 1 / span 12;
+        grid-row: 1;
+        @include media-query($on-laptop) {
+            grid-column: 1 / span 6;
+        }
+    }
+    &__column2-2 {
+        margin-bottom: $s-small;
+        grid-column: 1 / span 12;        
+        grid-row: 2;
+        @include media-query($on-laptop) {
+            grid-column: 7 / span 6;
+            grid-row: 1;
+        }
+    }
+
+    // 2 column offset component. Example: Landing Case
+    &__offsetcolumn1-2 {
+        grid-column: 1 / span 12;
+        grid-row: 4 / span 13;
+        @include media-query($on-laptop) {
+            grid-column: 1 / span 8;
+            grid-row: 2 / span 13;
+        }
+        &--small {
+            grid-row: 4 / span 8;        
+            @include media-query($on-laptop) {
+                grid-row: 2 / span 8;
+            }
+        }
+    }
+    &__offsetcolumn2-2 {
+        grid-column: 2 / span 13;
+        grid-row: 1 / span 4; 
+        @include media-query($on-laptop) {
+            grid-column: 8 / span 5;
+            grid-row: 1 / span 8;
+        }
+    }
 }
+
 
 // Landing layout
-#lettering2 {
-    grid-column: 1 / span 12;
-    grid-row: 4 / span 13;
-    @include media-query($on-laptop) {
-        grid-column: 1 / span 8;
-        grid-row: 2 / span 13;
-    }
-}
-.boxtext--lpc {
-    grid-column: 2 / span 13;
-    grid-row: 1 / span 4; 
-    @include media-query($on-laptop) {
-        grid-column: 8 / span 5;
-        grid-row: 1 / span 8;
-    }
-}
-
 .logowall {
     align-items: center;
     justify-content: space-between;

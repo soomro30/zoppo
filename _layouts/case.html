@@ -3,8 +3,19 @@ layout: default
 ---
 <article class="page" itemscope itemtype="http://schema.org/BlogPosting">
 	
-
-	<div class="hero hero--{{ page.slug }}" id="work_{{ page.slug }}">
+	{% unless page.backgroundimage_2880 == nil %}
+	<style>
+		.hero--{{page.slug}} {
+			background-image: url({{site.baseurl}}/assets/{{ page.backgroundimage_1440 }});
+		}
+		@media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
+			.hero--{{page.slug}} {
+				background-image: url({{site.baseurl}}/assets/{{ page.backgroundimage_2880 }});
+			}
+		}
+	</style>
+	{% endunless %}
+	<div class="hero hero--{{ page.slug }}{% unless page.backgroundimage_2880 == nil %} background-image{% endunless %}" id="work_{{ page.slug }}">
 		{% comment %}<span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span>{% endcomment %}
 		<header class="hero__header">
 			<h1 itemprop="name headline">
@@ -40,30 +51,22 @@ layout: default
 			</div>
 		</div>
 
-		{% comment %}
-		####################
-		## Get scripts from
-		## current post
-		{% endcomment %}
-
-		{% for js in page.scripts %}
-			{% assign root = 'js/' %}
-			<script type="text/javascript">
-			{% include {{ root | append: js }} %}
-			</script>
-		{% endfor %}
-
     </div>
 
 	{% unless page.ingress == nil %}
 	<div class="ingress ingress--{{ page.slug }}">
 		{{ page.ingress | markdownify }}
+
+		<a class="metabutton" href="mailto:{{page.authoremail}}">
+			Author: <span>{{page.author}}</span>
+		</a>
+		
 	</div>
 	{% endunless %}
 
-	<div class="text-content" itemprop="articleBody">
+	<main itemprop="articleBody">
 		{{ content }}
-	</div>
+	</main>
 
 </article>
 
@@ -87,4 +90,15 @@ layout: default
 	{% endfor %}
 </div>
 
-<br><br>
+{% comment %}
+####################
+## Get scripts from
+## current post
+{% endcomment %}
+
+{% for js in page.scripts %}
+	{% assign root = 'js/' %}
+	<script type="text/javascript">
+	{% include {{ root | append: js }} %}
+	</script>
+{% endfor %}

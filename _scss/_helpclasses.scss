@@ -28,6 +28,15 @@
 .c-dark-bg { background-color: $c-dark; color: $c-white; }
 
 
+.sectionspacing {
+    margin-top: $s-small*3;
+    margin-bottom: $s-small*3;
+    @include media-query($on-laptop) {
+        margin-top: $s-small*6;
+        margin-bottom: $s-small*6;
+    }
+}
+
 // Position
 .center {
     text-align: center;
@@ -45,7 +54,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    &--padding {
+        padding: $s-small 0;
+        @include media-query($on-laptop) {
+            padding: $s-small*2 0;
+        }
+    }
 }
+
 
 .invert {
     color: $c-white;
