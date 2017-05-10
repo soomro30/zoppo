@@ -474,6 +474,16 @@ p {
       .grid__offsetcolumn2-2 {
         grid-column: 8 / span 5;
         grid-row: 1 / span 8; } }
+  .grid__fullwidth {
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 10; }
+  .grid__boxunder {
+    grid-column: 2 / span 10;
+    grid-row: 7 / span 4; }
+    @media screen and (min-width: 50em) {
+      .grid__boxunder {
+        grid-column: 2 / span 10;
+        grid-row: 7 / span 8; } }
 
 .logowall {
   -ms-flex-align: center;
@@ -533,6 +543,20 @@ p {
   top: 0;
   right: 0;
   z-index: 40; }
+
+.imagegrid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap; }
+  .imagegrid .imagegrid__image {
+    -ms-flex: 1 0 50%;
+        flex: 1 0 50%;
+    max-width: 50%;
+    height: auto; }
+  .imagegrid img {
+    width: 100%;
+    height: auto; }
 
 /**
  * Cases section
@@ -791,20 +815,16 @@ p {
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-direction: column;
-      flex-direction: column;
-  text-align: center; }
+      flex-direction: column; }
   @media screen and (min-width: 600px) {
     .boxtext {
-      padding: 90px 90px; } }
+      padding: 60px 60px; } }
   .boxtext--frame {
     background-color: #7bd75e;
     color: #ffffff;
-    margin: calc(1.5em + 30px) 15px;
-    position: relative; }
-    @media screen and (min-width: 600px) {
-      .boxtext--frame {
-        margin-left: 60px;
-        margin-right: 60px; } }
+    margin: calc(1.5em + 30px) auto;
+    position: relative;
+    max-width: 59em; }
     .boxtext--frame:after, .boxtext--frame:before {
       content: "";
       position: absolute;
@@ -820,6 +840,11 @@ p {
       bottom: 0;
       border-left: 4px solid #ffffff;
       border-right: 4px solid #ffffff; }
+    .boxtext--frame--curiosities {
+      background-color: #ffde7f;
+      color: #0a2a4f; }
+      .boxtext--frame--curiosities:before {
+        border-color: #ffde7f; }
 
 .boxgrid {
   display: -ms-flexbox;
@@ -1618,8 +1643,7 @@ p {
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-direction: column;
-      flex-direction: column;
-  text-align: center; }
+      flex-direction: column; }
 
 .background-image {
   background-size: cover;

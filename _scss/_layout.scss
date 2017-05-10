@@ -55,6 +55,23 @@
             grid-row: 1 / span 8;
         }
     }
+
+    // Fullwidth image with box underneath
+    &__fullwidth {
+        grid-column: 1 / span 12;
+        grid-row: 1 / span 10; 
+    }
+
+    &__boxunder {
+        grid-column: 2 / span 10;
+        grid-row: 7 / span 4; 
+        @include media-query($on-laptop) {
+            grid-column: 2 / span 10;
+            grid-row: 7 / span 8;
+        }
+    }
+
+    
 }
 
 
@@ -130,6 +147,21 @@
     }
 }
 
+
+// Image grid
+.imagegrid {
+    display: flex;
+    flex-flow: row wrap;
+    .imagegrid__image {
+        flex: 1 0 50%;
+        max-width:50%;
+        height: auto; 
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
 
 /**
  * Cases section
