@@ -13,6 +13,7 @@
     background-size: cover;
     background-position: center;
     max-width: $content-width;
+    width: calc(100% - #{$s-small});
     @include media-query($on-palm) {
         margin-left: $s-small;
         margin-bottom: $s-small;

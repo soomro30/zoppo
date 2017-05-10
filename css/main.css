@@ -503,9 +503,6 @@ p {
     width: 6em;
     height: 5.6em; }
 
-.site-content {
-  overflow-x: hidden; }
-
 @media screen and (min-width: 50em) {
   .l-column-main {
     -ms-flex: 0 0 61.8%;
@@ -1047,7 +1044,8 @@ p {
   margin-bottom: 15px;
   background-size: cover;
   background-position: center;
-  max-width: 59em; }
+  max-width: 59em;
+  width: calc(100% - 30px); }
   @media screen and (min-width: 600px) {
     .box {
       margin-left: 30px;

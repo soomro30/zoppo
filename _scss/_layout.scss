@@ -91,10 +91,6 @@
 
 $golden-ratio: 61.8%;
 
-.site-content {
-    overflow-x: hidden; //prevent boxes from overflowing on mobile
-}
-
 .l-column-main {
     @include media-query($on-laptop) {
         flex: 0 0 $golden-ratio;
