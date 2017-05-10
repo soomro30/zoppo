@@ -69,12 +69,12 @@ ready(function(){
 		menutoggle.classList.add('menu-open');
 		menu.classList.add('menu-open');
 		startLogoAnimation();
-		menuIsOpen = !menuIsOpen;
+		menuIsOpen = true;
 	}
 	function closeMenu(){
 		menutoggle.classList.remove('menu-open');
 		menu.classList.remove('menu-open');
-		menuIsOpen = !menuIsOpen;
+		menuIsOpen = false;
 	}
 	var menutoggle = document.getElementById('openmenu');
 	var menu = document.getElementById('menu');

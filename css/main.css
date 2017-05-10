@@ -1356,6 +1356,24 @@ p {
     stroke: #5F11E8;
     stroke-width: 4;
     stroke-miterlimit: 10; }
+  .button--nav line {
+    transition: -webkit-transform 0.3s cubic-bezier(0.2, 1, 0.3, 0.8);
+    transition: transform 0.3s cubic-bezier(0.2, 1, 0.3, 0.8); }
+  .button--nav line:nth-child(1), .button--nav line:nth-child(3) {
+    -webkit-transform-origin: top left;
+            transform-origin: top left; }
+  .button--nav line:nth-child(2) {
+    -webkit-transform-origin: center left;
+            transform-origin: center left; }
+  .button--nav.menu-open line:nth-child(1) {
+    -webkit-transform: rotate(45deg) translate3D(0.3em, -0.3em, 0);
+            transform: rotate(45deg) translate3D(0.3em, -0.3em, 0); }
+  .button--nav.menu-open line:nth-child(2) {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0); }
+  .button--nav.menu-open line:nth-child(3) {
+    -webkit-transform: rotate(-45deg) translate3D(0.3em, 0.3em, 0);
+            transform: rotate(-45deg) translate3D(0.3em, 0.3em, 0); }
 
 .link {
   font-size: 0.8em;

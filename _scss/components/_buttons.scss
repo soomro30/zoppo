@@ -109,6 +109,28 @@ $bshadow: 3px; // the size of the shadow
 			stroke-width:4;
 			stroke-miterlimit:10;
 		}
+		line {
+			transition: transform 0.3s $easeout;
+		}
+		line:nth-child(1), line:nth-child(3) {
+			transform-origin: top left;
+		}
+		line:nth-child(2) {
+			transform-origin: center left;
+		}
+		line:nth-child(1) {
+		}
+		&.menu-open {
+			line:nth-child(1) {
+				transform: rotate(45deg) translate3D(0.3em, -0.3em, 0)
+			}
+			line:nth-child(2) {
+				transform: scaleX(0);
+			}
+			line:nth-child(3) {
+				transform: rotate(-45deg) translate3D(0.3em, 0.3em, 0)
+			}
+		}
 	}
 }
 
