@@ -209,12 +209,12 @@ $bshadow: 3px; // the size of the shadow
 	}
 	span {
 		position: relative;
-		text-shadow: 1px 1px 0 $c-white, 2px 1px 0 $c-white, -1px 1px 0 $c-white, -2px 1px 0 $c-white, 1px -1px 0 $c-white, 2px -1px 0 $c-white, -1px -1px 0 $c-white, -2px -1px 0 $c-white;
+		// text-shadow: 1px 1px 0 $c-white, 2px 1px 0 $c-white, -1px 1px 0 $c-white, -2px 1px 0 $c-white, 1px -1px 0 $c-white, 2px -1px 0 $c-white, -1px -1px 0 $c-white, -2px -1px 0 $c-white;
 		z-index: 1;
 		&:after {
 			content: "";
 			position: absolute;
-			bottom: 0;
+			bottom: -0.1em;
 			left: 0;
 			right: 0;
 			border-bottom: 2px solid $c-signal;

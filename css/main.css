@@ -235,7 +235,7 @@ svg {
 
 .image-loader {
   position: relative;
-  padding-bottom: 62%;
+  padding-bottom: 57.6388889%;
   width: 100%; }
   .image-loader img {
     position: absolute;
@@ -1440,12 +1440,11 @@ p {
               transform: scaleX(1); }
   .metabutton span {
     position: relative;
-    text-shadow: 1px 1px 0 #ffffff, 2px 1px 0 #ffffff, -1px 1px 0 #ffffff, -2px 1px 0 #ffffff, 1px -1px 0 #ffffff, 2px -1px 0 #ffffff, -1px -1px 0 #ffffff, -2px -1px 0 #ffffff;
     z-index: 1; }
     .metabutton span:after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: -0.1em;
       left: 0;
       right: 0;
       border-bottom: 2px solid #5f11e8;
