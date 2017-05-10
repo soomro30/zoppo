@@ -110,26 +110,12 @@ ready(function(){
 		 * @return { promise }
 		 */
 		animOut: function() {
-			// Use barba.js deffered function
-			var deferred = Barba.Utils.deferred();
-			
-			// play in animation
-			pagetransition.playSegments([[0,11]],true);
-
-			// Resolve the promise when animation is complete
-			function pagetransitionComplete (resolve) {
-				pagetransition.removeEventListener('complete', pagetransitionComplete);
-				resolve();
-			}
-
-			// Lissen for when the animation is complete
-			var transitionPromise = new Promise(function(resolve) {
-				pagetransition.addEventListener('complete', pagetransitionComplete.bind(this, resolve));
-			}).then(function() {
-				deferred.resolve();
+			return new Promise(function(resolve) {
+				pagetransition.playSegments([[0,11]],true);
+				pagetransition.onComplete = function() {
+					resolve(true);
+				}
 			});
-
-			return deferred.promise;
 		},
 		/**
 		 * [animIn transition]
