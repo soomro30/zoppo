@@ -1299,10 +1299,11 @@ p {
         align-items: center;
     text-align: center;
     padding: 60px 0 30px;
-    color: #f8f8f8;
-    text-shadow: -5px 4px 0px #0a2a4f, 0px -2px 0px #0a2a4f, 0px 2px 0px #0a2a4f, 2px 2px 0px #0a2a4f, -2px -2px 0px #0a2a4f, 2px -2px 0px #0a2a4f, -2px 2px 0px #0a2a4f, 1px 1px 0px #0a2a4f, -1px -1px 0px #0a2a4f, 1px -1px 0px #0a2a4f, -1px 1px 0px #0a2a4f; }
+    color: #f8f8f8; }
     .hero__header a {
       color: #f8f8f8; }
+    .hero__header--shadow {
+      text-shadow: -5px 4px 0px #0a2a4f, 0px -2px 0px #0a2a4f, 0px 2px 0px #0a2a4f, 2px 2px 0px #0a2a4f, -2px -2px 0px #0a2a4f, 2px -2px 0px #0a2a4f, -2px 2px 0px #0a2a4f, 1px 1px 0px #0a2a4f, -1px -1px 0px #0a2a4f, 1px -1px 0px #0a2a4f, -1px 1px 0px #0a2a4f; }
   .hero .header {
     margin-top: 2em; }
     @media screen and (min-width: 50em) {
