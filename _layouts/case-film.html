@@ -1,0 +1,61 @@
+---
+layout: case
+---
+
+
+{% unless page.videos == nil %}
+<section class="imagegrid imagegrid--firstlarge">
+	{% for video in page.videos %}
+	<div class="imagegrid__image">
+		<div class="video">
+			<iframe src="https://player.vimeo.com/video/211438822" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
+	</div>
+	{% endfor %}
+</section>
+{% endunless %}
+
+
+{% unless page.frames == nil %}
+<div class="imagegrid">
+{% for frame in page.frames %}
+	<div class="imagegrid__image">
+		<img class="image" src="{{site.baseurl}}/assets/{{frame}}">
+	</div>
+{% endfor %}
+</div>
+{% endunless %}
+
+
+{% unless page.column5050_text == nil %}
+    <section class="grid grid--space grid--padding">
+        <div class="grid__column1-2">
+            {{ page.column5050_text | markdownify }}
+        </div>
+        <div class="grid__column2-2">
+            <img class="image"
+                alt="{{column5050_image_alt}}"
+                width="1440" height="1653"
+                src="{{site.baseurl}}/assets/{{ page.column5050_image_720 }}" 
+                srcset="{{site.baseurl}}/assets/{{ page.column5050_image_1440 }} 1440w,
+                        {{site.baseurl}}/assets/{{ page.column5050_image_720 }} 720w"
+                sizes="100vw">
+        </div>
+    </section>
+{% endunless %}
+
+{% unless page.text == nil %}
+	<section class="sectionspacing">
+		{{page.text | markdownify}}
+		
+		{% unless page.author == nil %}
+		<p>
+			<a class="metabutton" href="mailto:{{page.authoremail}}">
+				Author: <span>{{page.author}}</span>
+			</a>
+		</p>
+		{% endunless %}
+		
+	</section>
+{% endunless %}
+

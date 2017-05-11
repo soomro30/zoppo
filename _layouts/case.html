@@ -3,21 +3,21 @@ layout: default
 ---
 <article class="page" itemscope itemtype="http://schema.org/BlogPosting">
 	
-	{% unless page.backgroundimage_2880 == nil %}
+	{% unless page.background-image_2880 == nil %}
 	<style>
 		.hero--{{page.slug}} {
-			background-image: url({{site.baseurl}}/assets/{{ page.backgroundimage_1440 }});
+			background-image: url({{site.baseurl}}/assets/{{ page.background-image_1440 }});
 		}
 		@media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
 			.hero--{{page.slug}} {
-				background-image: url({{site.baseurl}}/assets/{{ page.backgroundimage_2880 }});
+				background-image: url({{site.baseurl}}/assets/{{ page.background-image_2880 }});
 			}
 		}
 	</style>
 	{% endunless %}
-	<div class="hero hero--{{ page.slug }}{% unless page.backgroundimage_2880 == nil %} background-image{% endunless %}" id="work_{{ page.slug }}">
+	<div class="hero hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %}" id="work_{{ page.slug }}">
 		{% comment %}<span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span>{% endcomment %}
-		<header class="hero__header">
+		<header class="hero__header {% unless page.hero_shadow == nil %}hero__header--shadow{% endunless %}">
 			<h1 itemprop="name headline">
 				{{ page.title }}
 			</h1>
@@ -46,9 +46,11 @@ layout: default
 				<strong class="meta-description">Project:</strong>
 				<span class="meta">{{page.project}}</span>
 			</div>
+			{% unless page.link == nil %}
 			<div class="column column--vertical">
 				<a href="{{page.link}}" class="button"><span>{{page.link-text}}</span></a>
 			</div>
+			{% endunless %}
 		</div>
 
     </div>
@@ -57,9 +59,11 @@ layout: default
 	<div class="ingress ingress--{{ page.slug }}">
 		{{ page.ingress | markdownify }}
 
+		{% unless page.author == nil %}
 		<a class="metabutton" href="mailto:{{page.authoremail}}">
 			Author: <span>{{page.author}}</span>
 		</a>
+		{% endunless %}
 		
 	</div>
 	{% endunless %}
@@ -72,14 +76,14 @@ layout: default
 
 <div class="boxgrid">
 	<h2 class="boxgrid__header h4">Check out our other projects</h2>
-	{% for work in site.work %}
+	{% for work in site.work limit:3 %}
 		{% if work.title == page.title %}
 			{% continue %}
 		{% endif %}
 		<a class="boxgrid__box" href="{{ work.url | prepend: site.baseurl }}">
 			<figure>
 				<div class="image-loader" style="background: #ccc"> 
-					<img src="{{site.baseurl}}/assets/{{work.backgroundimage_1440}}" alt="{{ work.title }}">	
+					<img src="{{site.baseurl}}/assets/{{work.background-image_1440}}" alt="{{ work.title }}">	
 				</div>
 				<figcaption>
 					<h3>{{ work.title }}</h3>

@@ -13,14 +13,14 @@
         ## Get code for the background
         ## set in current post
         -->
-        {% unless work.backgroundimage_2880 == nil %}
+        {% unless work.background-image_2880 == nil %}
             <style>
                 .grid__offsetcolumn1-2 {
-                    background-image: url({{site.baseurl}}/assets/{{ work.backgroundimage_1440 }});
+                    background-image: url({{site.baseurl}}/assets/{{ work.background-image_1440 }});
                 }
                 @media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
                     .grid__offsetcolumn1-2 {
-                        background-image: url({{site.baseurl}}/assets/{{ work.backgroundimage_2880 }});
+                        background-image: url({{site.baseurl}}/assets/{{ work.background-image_2880 }});
                     }
                 }
             </style>

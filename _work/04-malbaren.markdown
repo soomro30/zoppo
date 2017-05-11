@@ -13,12 +13,11 @@ client: Matbaren
 project: Website
 link: http://målbaren.se
 link-text: Visit the site
+background-image_2880: "malbaren/pasta-parmesan-2400x1200.jpg"
+background-image_1440: "malbaren/pasta-parmesan-1024x512.jpg"
 
 ingress: |
   Matbaren (or “The Food Bar”) is the ideal alternative for grocery stores across Sweden that want to offer their customers higher quality “fast food.” They have been developing various food concepts to offer store clerks and their customers, and each time they come out with a new one, they turn to us for digital promotion. 
-
-section1: |
-  In addition to their homepage, we created sites for their **“Salad Bar”** (Salladsbaren) and **“Master Chef”** (Köksmastaren) concepts, as well as for the very appetizing **“Grill Bar”** (Grillbaren). Should you be a carnivore, you can tour the BBQ delights [here](http://grillbaren.com/).
 
 image1_1440: "malbaren/process1_1440.jpg"
 image1_720: "malbaren/process1_720.jpg"
@@ -83,8 +82,8 @@ section9: |
 
 image6_2880: "malbaren/site-screens_2880.jpg"
 image6_1440: "malbaren/site-screens_1440.jpg"
-image6_mobile_1x: "malbaren/site-screen-mobile_1x.jpg"
-image6_mobile_2x: "malbaren/site-screen-mobile_2x.jpg"
+image6_mobile_1x: "malbaren/site-screen-mobile@1x.jpg"
+image6_mobile_2x: "malbaren/site-screen-mobile@2x.jpg"
 
 section10: |
   I wanted the buttons to have some energy. You’ll notice that they expand with a bit of a reverberating bounce at the end. It’s hardly noticeable but it makes a significant difference. It’s like a little punch.
@@ -92,13 +91,10 @@ section10: |
 section11: |
   Go ahead and poke around malbaren.se to see if you can spot more. If subtle animations are your thing, I’m frequently experimenting on [CodePen](http://codepen.io/sandstedt). Come hang!
 
-backgroundimage_2880: "malbaren/background_2880.jpg"
-backgroundimage_1440: "malbaren/background_1440.jpg"
-
 
 ---
 
-Description text ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsa dolorem, minima sunt maiores a ducimus sed atque, similique, molestias labore. Tempora, obcaecati repellat eius corporis laudantium. Fugit, dolorem qui?
+Matbaren (or “The Food Bar”) is the ideal alternative for grocery stores across Sweden that want to offer their customers higher quality “fast food.” They have been developing various food concepts to offer store clerks and their customers, and each time they come out with a new one, they turn to us for digital promotion.
 
 [Launch site][case-link]
 

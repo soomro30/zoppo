@@ -13,6 +13,9 @@ client: Internal lab
 project: E-commerce
 link: http://owdbob.com
 link-text: Visit the site
+background-image_2880: "owd-bob/background_2880.jpg"
+background-image_1440: "owd-bob/background_1440.jpg"
+backgrund-color: "#B98A3E"
 
 ingress: |
   Given that Fully is a digital studio, the majority of our creations live, move and die on the Internet. This is a glorious thing; as an outlet for creativity, the digital world is boundless and constantly proffers new tools. The results can be stunning. 
@@ -59,7 +62,12 @@ section4: |
 
   The opening hours were revealed on Instagram only. If you missed them, you needed to go back and check. Otherwise the opportunity was gone and the store’s “doors” closed yet again. We hoped this would inspire people to actively visit our profile, and to see the store opening as an event.
 
-image3_2880: "owd-bob/instagram_2880.jpg"
+imageline:
+  - "owd-bob/post-1.jpg"
+  - "owd-bob/post-2.jpg"
+  - "owd-bob/post-3.jpg"
+  - "owd-bob/post-4.jpg"
+
 image3_1440: "owd-bob/instagram_1440.jpg"
 image3_alt: "Instagram feed"
 
@@ -77,8 +85,7 @@ section6: |
 
   And it’s just important as a human to put yourself out there and make something. It’s easy to have an idea, and even easier to have an opinion. The hardest part is to deliver. It doesn’t need to be perfect, it just needs to get out there.
 
-backgroundimage_2880: "owd-bob/background_2880.jpg"
-backgroundimage_1440: "owd-bob/background_1440.jpg"
+
 scripts: 
 - vivus.js
 - case/owd-bob.js

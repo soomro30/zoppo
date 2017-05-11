@@ -53,6 +53,20 @@
         padding: $s-small*2 0 $s-small;
         color: $c-light;
         a { color: $c-light }
+        text-shadow:
+            -5px 4px 0px $c-dark, // big shadow - the rest is outlines
+            0px -2px 0px $c-dark,
+            0px 2px 0px $c-dark,
+            2px 2px 0px $c-dark,
+            -2px -2px 0px $c-dark,
+            2px -2px 0px $c-dark, 
+            -2px 2px 0px $c-dark,
+            1px 1px 0px $c-dark,
+            -1px -1px 0px $c-dark,
+            1px -1px 0px $c-dark, 
+            -1px 1px 0px $c-dark;
+        // text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.33), -3px -1px 19px rgba(0, 0, 0, 0.11);
+        
     }
 
     .header {

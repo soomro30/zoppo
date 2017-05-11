@@ -66,15 +66,18 @@ layout: case
 </div>
 {% endunless %}
 
-{% unless page.image3_2880 == nil %}
-    <img class="image"
-        alt="{{image3_alt}}"
-        width="1440" height="643"
-        src="{{site.baseurl}}/assets/{{ page.image3_1440 }}" 
-        srcset="{{site.baseurl}}/assets/{{ page.image3_2880 }} 2880w,
-                {{site.baseurl}}/assets/{{ page.image3_1440 }} 1440w"
-        sizes="100vw">
-{% endunless %}
+<section class="imageline">
+    {% unless page.imageline == nil %}
+        {% for image in page.imageline %}
+            <div class="imageline__image">
+                <img class="image"
+                    alt="Image of projekt {{page.title}}"
+                    src="{{site.baseurl}}/assets/{{ image }}">
+            </div>
+        {% endfor %}
+    {% endunless %}
+</section>
+
 
 <div class="c-metal-bg image">
 <br><br>[ Image slider]<br><br><br>

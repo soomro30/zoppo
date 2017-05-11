@@ -35,6 +35,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
         server: {
             baseDir: '_site'
         },
+        ghostMode: false,
         notify: false,
         open: false
     });
