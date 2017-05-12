@@ -26,7 +26,7 @@ body {
 //     margin-top: $spacing-unit;
 // }
 p + * {
-    margin-top: $spacing-unit * 0.5;
+    margin-top: $spacing-unit;
 }
 
 // remove this later
@@ -40,42 +40,26 @@ p + * {
  */
 img {
     max-width: 100%;
+    height: auto;
     vertical-align: middle;
 }
 svg { max-width: 100%}
 
 .image {
-    @extend .fadeIn;
     width: 100%;
+    height: auto;
 }
-.image-container {
-    position: relative;
-    padding-bottom: 100%; /* ratio 1:1 */
-    height: 0;
-    overflow: hidden;
-
-    &--wide {
-        padding-bottom: 75%; /* ratio 4:3 */
-        @include media-query($on-laptop) {
-            padding-bottom: 33.333%; /* ratio 3:1 */
-        }
+.image + * {
+    margin-top: $s-small;
+    @include media-query($on-palm) {
+        margin-top: $s-small*2;
     }
 }
-
-
-
-.image-container img, .image-container .image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
 
 .image-loader {
     // display: inline-block;
     position: relative;
-    padding-bottom: 62%; // 161 : 100 ratio
+    padding-bottom: 57.6388889%; // 144 : 83 ratio - ex 1440 x 830px
     width: 100%;
     img {
         position: absolute;
@@ -87,7 +71,37 @@ svg { max-width: 100%}
     }
 }
 
+// Video
+.video {
+    position: relative;
+    padding-bottom: 55.85%; /* 16:9 */
+    height: 0;
+}
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
+.video + .video {
+    margin-top: $s-small;
+}
+
+/**
+ * Page loader
+ */
+.transition-overlay {
+    width: 100%;
+    height: 100%;
+    // background-color: $c-signal;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 10;
+    pointer-events: none;
+    // opacity: 0;
+}
 
 /**
  * Figures
@@ -189,7 +203,7 @@ a {
         color: $c-signal;
     }
 }
-p > a:not(.button, .link) {
+p > a:not(.button, .link, .metabutton, .custom-button) {
     position: relative;
     text-shadow: 1px 1px 0 $c-white, 2px 1px 0 $c-white, -1px 1px 0 $c-white, -2px 1px 0 $c-white, 1px -1px 0 $c-white, 2px -1px 0 $c-white, -1px -1px 0 $c-white, -2px -1px 0 $c-white;
     z-index: 1;

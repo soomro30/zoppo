@@ -35,6 +35,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
         server: {
             baseDir: '_site'
         },
+        ghostMode: false,
         notify: false,
         open: false
     });
@@ -71,7 +72,7 @@ gulp.task("deploy", ["jekyll-build"], function () {
 gulp.task('watch', function () {
     gulp.watch('_scss/*.scss', ['sass']);
     gulp.watch('_scss/**/*.scss', ['sass']);
-    gulp.watch(['*.html', '*.md', '_layouts/*.html', '_case/*', '_curious-about/*', '_includes/**/**', 'js/**', '_scss/**'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '*.md', '_layouts/*.html', '_layouts/work/*.html', '_work/*', '_curious-about/*', '_includes/**/**', 'js/**', '_scss/**'], ['jekyll-rebuild']);
 });
 
 /**

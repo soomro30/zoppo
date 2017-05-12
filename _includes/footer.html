@@ -41,10 +41,10 @@
  <nav style="font-size: 0.7em">
     <span>Placeholder navigation during development</span>
     <ul>
-        <li><a style="font-size: 1em" class="page-link" href="{{ site.url }}">Home</a></li>
+        <li><a style="font-size: 1em" href="{{ site.url }}">Home</a></li>
         {% for the_page in site.pages %}
         {% if the_page.title %}
-        <li><a style="font-size: 1em" class="page-link" href="{{ the_page.url | prepend: site.baseurl }}">{{ the_page.title }}</a></li>
+        <li><a style="font-size: 1em" href="{{ the_page.url | prepend: site.baseurl }}">{{ the_page.title }}</a></li>
         {% endif %}
         {% endfor %}
     </ul>

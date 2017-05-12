@@ -9,6 +9,12 @@ function ready(fn) {
 		document.addEventListener('DOMContentLoaded', fn);
 	}
 }
+
+// Create transition object
+var transitionOverlay = document.createElement("div");
+transitionOverlay.classList.add('transition-overlay');
+document.body.appendChild(transitionOverlay);
+
 ready(function(){
 
 	// Fade images when loaded if they are inside an image-loader container
@@ -29,30 +35,58 @@ ready(function(){
         container: document.getElementById('logo_anim'),
         renderer: 'svg',
         loop: false,
-        autoplay: true,
+        autoplay: false,
         path: '../../assets/javascript/logo.json'
     };
     var anim = bodymovin.loadAnimation(animData);
+
+	// Init page transition anim
+	var transitionData = {
+        container: transitionOverlay,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+		autoloadSegments: false,
+        path: '../../assets/javascript/pagetransition.json',
+		rendererSettings: { 
+        	preserveAspectRatio:'none'
+    	}
+    };
+    var pagetransition = bodymovin.loadAnimation(transitionData);
+
+	anim.addEventListener('DOMLoaded',startLogoAnimation);
+	bodymovin.setQuality(2);
 	window.onresize = anim.resize.bind(anim);
 
-	// menu function
+	function startLogoAnimation(){
+		anim.goToAndPlay(1, true);
+		// pagetransition.goToAndPlay(1, true);
+	}
+
+
+	// menu functions
+	function openMenu(){
+		menutoggle.classList.add('menu-open');
+		menu.classList.add('menu-open');
+		startLogoAnimation();
+		menuIsOpen = true;
+	}
+	function closeMenu(){
+		menutoggle.classList.remove('menu-open');
+		menu.classList.remove('menu-open');
+		menuIsOpen = false;
+	}
 	var menutoggle = document.getElementById('openmenu');
+	var menu = document.getElementById('menu');
 	var menuIsOpen = false;
-	menutoggle.addEventListener('mouseup', function(){
-		if (menuIsOpen) {
-			menutoggle.classList.remove('menu-open');
-			menutoggle.classList.add('menu-closed');
-		} else {
-			menutoggle.classList.remove('menu-closed');	
-			menutoggle.classList.add('menu-open');
-		}
-		menuIsOpen = menuIsOpen ? false : true;
-		console.log(menuIsOpen);
+	menutoggle.addEventListener('click', function(e){
+		e.preventDefault();
+		menuIsOpen ? closeMenu() : openMenu();
 	}, false);
+
 
 	// Initialize barba.js
 	Barba.Pjax.start();
-
 
 	// simple fade animation
 	var FadeTransition = Barba.BaseTransition.extend({
@@ -76,44 +110,26 @@ ready(function(){
 		 * @return { promise }
 		 */
 		animOut: function() {
-
-			var deferred = Barba.Utils.deferred();
-
-			/**
-			 * Animate out the old container 
-			 * this.oldContainer is the HTMLElement of the old Container
-			 */
-			TweenMax.to(this.oldContainer, 0.2, {
-				opacity: 0,
-				onComplete: function() {
-					deferred.resolve();
+			return new Promise(function(resolve) {
+				pagetransition.playSegments([[0,11]],true);
+				pagetransition.onComplete = function() {
+					resolve(true);
 				}
 			});
-
-			return deferred.promise;
 		},
 		/**
 		 * [animIn transition]
 		 * @return { promise }
 		 */
 		animIn: function() {
-			var _this = this;
-			var newCont = this.newContainer;
+			window.scrollTo(0,0);
+			closeMenu();
 
-			// Hide the old container
-			this.oldContainer.style.display = "none";
-
-			// Set the new container's start values
-			TweenMax.set(newCont, { visibility: 'visible', opacity:0 });
-
-			// Animate in the new container
-			TweenMax.to(newCont, 0.2, {
-				opacity: 1,
-				onComplete: function() {
-					// .done() will automatically remove the old Container from the DOM 
-					_this.done();
-				}
-			});
+			// play the out transition
+			pagetransition.playSegments([[25,54]],true);
+			
+			// immediately clear the old DOM
+			this.done();
 		}
 	});
 

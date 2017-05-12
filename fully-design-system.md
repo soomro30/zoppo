@@ -218,7 +218,7 @@ a grid with images and texts. Used in "other projects"
     {% comment %}Change this color to an average color from the image{% endcomment %}
     <div class="image-loader" style="background: #ccc"> 
         <img 
-        src=" http://placekitten.com/g/644/400"
+        src=" http://placekitten.com/g/1440/830"
         alt="A beautiful cat">	
     </div>
     <figcaption>
@@ -230,7 +230,7 @@ a grid with images and texts. Used in "other projects"
 <figure class="boxgrid__box">
     <div class="image-loader" style="background: #c1c1c1">
         <img 
-        src="http://placekitten.com/g/644/400"
+        src="http://placekitten.com/g/1440/830"
         alt="A beautiful cat">	
     </div>
     <figcaption>
@@ -264,7 +264,7 @@ a grid with images and texts. Used in "other projects"
         {% comment %}Change this color to an average color from the image{% endcomment %}
         <div class="image-loader" style="background: #ccc"> 
             <img 
-            src=" http://placekitten.com/g/644/400"
+            src=" http://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
         <figcaption>
@@ -276,7 +276,7 @@ a grid with images and texts. Used in "other projects"
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1">
             <img 
-            src="http://placekitten.com/g/644/400"
+            src="http://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
         <figcaption>
@@ -288,7 +288,7 @@ a grid with images and texts. Used in "other projects"
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1">
             <img 
-            src="http://placekitten.com/g/644/400"
+            src="http://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
         <figcaption>
@@ -300,7 +300,7 @@ a grid with images and texts. Used in "other projects"
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1">
             <img 
-            src="http://placekitten.com/g/644/400"
+            src="http://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
         <figcaption>
@@ -312,7 +312,7 @@ a grid with images and texts. Used in "other projects"
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1">
             <img 
-            src="http://placekitten.com/g/644/400"
+            src="http://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
         <figcaption>
@@ -324,7 +324,7 @@ a grid with images and texts. Used in "other projects"
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1">
             <img 
-            src="http://placekitten.com/g/644/400"
+            src="http://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
         <figcaption>
@@ -348,14 +348,14 @@ Load images with style
 
 <div class="image-loader" style="background: #c1c1c1">
     <img 
-    src="http://placekitten.com/g/644/400"
+    src="http://placekitten.com/g/1440/830"
     alt="A beautiful cat">	
 </div>
 
 ``` html
 <div class="image-loader" style="background: #c1c1c1">
     <img 
-    src="http://placekitten.com/g/644/400"
+    src="http://placekitten.com/g/1440/830"
     alt="A beautiful cat">	
 </div>
 
@@ -367,7 +367,7 @@ Example of a custom CSS grid layout using a container with the class `grid`.
 </header>
 
 <div class="grid grid--space case-highlight" markdown='1'>
-<div class="flexcenter background-image invert" id="lettering2" markdown='1' style="background-image: url(../assets/introfilmen-poster.jpg)">
+<div class="flexcenter center background-image invert grid__offsetcolumn1-2" id="lettering2" markdown='1' style="background-image: url(../assets/introfilmen-poster.jpg)">
 
 #### div #exampleimage
 ``` scss
@@ -390,7 +390,7 @@ grid-row: 1 / span 4;
 ```
 
 </div>
-<div class="boxtext boxtext--lpc">
+<div class="boxtext grid__offsetcolumn2-2">
     <h2>.boxtext</h2>
     <p>Dolem es simet lorem</p>
     <a href="#" class="button"><span>View case study</span></a>

@@ -14,11 +14,6 @@ layout: default
 			{% comment %}<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} {% endcomment %}
 			{% comment %}<span class="categories">{{ page.categories }}<span></p>{% endcomment %}
 		</header>
-	<!--       <div class="pagination">
-			<div class="pagination__counter">1<span>/3</span></div>
-			<a class="pagination__arrow pagination__next" href="#">→</a>
-			<a class="pagination__arrow pagination__previous disabled" href="#">←</a>
-		</div> -->
 		
 		<!-- 
 		###################################
@@ -165,15 +160,15 @@ layout: default
 <header class="text-content">
 	<h2>Other curiousities:</h2>
 </header>
-<ul class="case-list case-list--small">
+<ul class="">
 	{% for curious in site.curious-about %}
 		{% if curious.title == page.title %}
 			{% continue %}
 		{% endif %}
-		<li class="case-list__item">
+		<li class="">
 			<!-- <span class="case-meta">{{ case.date | date: "%b %-d, %Y" }}</span> -->
-			<a class="case-link" href="{{ curious.url | prepend: site.baseurl }}">
-				<h2 class="case-list__header">
+			<a class="" href="{{ curious.url | prepend: site.baseurl }}">
+				<h2 class="">
 					{{ curious.title }}
 				</h2>
 			</a>

@@ -60,8 +60,11 @@ ready(function(){
 
     var animTrigger = document.getElementById('case_matbaren');
 
-    animTrigger.addEventListener("touchstart", start_case2, true);
-    animTrigger.addEventListener("mouseenter", start_case2, true);
-    animTrigger.addEventListener("touchend", end_case2, true);
-    animTrigger.addEventListener("mouseleave", end_case2, true);
+    if (animTrigger) {
+        animTrigger.addEventListener("touchstart", start_case2, true);
+        animTrigger.addEventListener("mouseenter", start_case2, true);
+        animTrigger.addEventListener("touchend", end_case2, true);
+        animTrigger.addEventListener("mouseleave", end_case2, true);
+    }
+
 });

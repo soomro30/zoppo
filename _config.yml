@@ -13,15 +13,21 @@ facebook: "https://www.facebook.com/Fully-Flared-Digital-Agency-150488108297019/
 vimeo: "https://vimeo.com/fullystudios"
 instagram: "https://www.instagram.com/fullystudios/"
 
+# Links
+works: "/works"
+
 
 highlighter: rouge
 exclude: ["node_modules", "gulpfile.js", "package.json"] #like git-ignore for master?
+sass:
+  style: compressed
 
-# Links
-cases: "/cases"
+gems:
+  - jekyll-redirect-from
+
 
 collections:
-  case:
+  work:
     output: true
     permalink: /:collection/:title/
   curious-about:
