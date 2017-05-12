@@ -3,7 +3,7 @@ layout: work/owd-bob
 title:  "Owd Bob"
 subtitle: "The most exlusive print shop in the world"
 author: "Robin Kollberg"
-authoremail: r@fullyflared.se
+author-email: r@fullyflared.se
 start:	"The most exlusive</br>print shop"
 button-text: View case study
 date:   2017-04-18 12:00:00 +0100

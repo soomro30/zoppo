@@ -1,19 +1,22 @@
 ---
 layout: default
 ---
+
 <article class="page" itemscope itemtype="http://schema.org/BlogPosting">
 	
 	{% unless page.background-image_2880 == nil %}
-	<style>
-		.hero--{{page.slug}} {
-			background-image: url({{site.baseurl}}/assets/{{ page.background-image_1440 }});
-		}
-		@media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
-			.hero--{{page.slug}} {
-				background-image: url({{site.baseurl}}/assets/{{ page.background-image_2880 }});
-			}
-		}
-	</style>
+		{% if page.background == nil %}
+			<style>
+				.hero--{{page.slug}} {
+					background-image: url({{site.baseurl}}/assets/{{ page.background-image_1440 }});
+				}
+				@media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
+					.hero--{{page.slug}} {
+						background-image: url({{site.baseurl}}/assets/{{ page.background-image_2880 }});
+					}
+				}
+			</style>
+		{% endif %}
 	{% endunless %}
 	<div class="hero hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %}" id="work_{{ page.slug }}">
 		{% comment %}<span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span>{% endcomment %}
@@ -60,7 +63,7 @@ layout: default
 		{{ page.ingress | markdownify }}
 
 		{% unless page.author == nil %}
-		<a class="metabutton" href="mailto:{{page.authoremail}}">
+		<a class="metabutton" href="mailto:{{page.author-email}}">
 			Author: <span>{{page.author}}</span>
 		</a>
 		{% endunless %}

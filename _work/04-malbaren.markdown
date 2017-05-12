@@ -1,10 +1,9 @@
 ---
 layout: work/malbaren
 title:  "Målbaren"
-subtitle: "Lorem ipsum subis subtitle"
+subtitle: "High quality fast food"
 author: "Jonas Sandstedt"
-authoremail: jonas@fullyflared.se
-start:	"Lorem ipsum</br>dolem start"
+author-email: jonas@fullyflared.se
 button-text: View case study
 date:   2017-04-27 12:00:00 +0100
 categories: design, branding, web
@@ -86,10 +85,19 @@ image6_mobile_1x: "malbaren/site-screen-mobile@1x.jpg"
 image6_mobile_2x: "malbaren/site-screen-mobile@2x.jpg"
 
 section10: |
+  <a href="#buttons" class="custom-button malbaren-button">And<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
+  <a href="#buttons" class="custom-button malbaren-button">notice<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
+  <a href="#buttons" class="custom-button malbaren-button">how the<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
+  <a href="#buttons" class="custom-button malbaren-button">corners<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
+  <a href="#buttons" class="custom-button malbaren-button">pop when<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
+  <a href="#buttons" class="custom-button malbaren-button">you hover<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
+  <a href="#buttons" class="custom-button malbaren-button">over<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
+  <a href="#buttons" class="custom-button malbaren-button">a button?<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
+
   I wanted the buttons to have some energy. You’ll notice that they expand with a bit of a reverberating bounce at the end. It’s hardly noticeable but it makes a significant difference. It’s like a little punch.
 
 section11: |
-  Go ahead and poke around malbaren.se to see if you can spot more. If subtle animations are your thing, I’m frequently experimenting on [CodePen](http://codepen.io/sandstedt). Come hang!
+  Go ahead and poke around [målbaren.se](http://målbaren.se) to see if you can spot more. If subtle animations are your thing, I’m frequently experimenting on [CodePen](http://codepen.io/sandstedt). Come hang!
 
 
 ---

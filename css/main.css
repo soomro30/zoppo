@@ -352,11 +352,11 @@ a {
   a:hover {
     color: #5f11e8; }
 
-p > a:not(.button):not(.link):not(.metabutton) {
+p > a:not(.button):not(.link):not(.metabutton):not(.custom-button) {
   position: relative;
   text-shadow: 1px 1px 0 #ffffff, 2px 1px 0 #ffffff, -1px 1px 0 #ffffff, -2px 1px 0 #ffffff, 1px -1px 0 #ffffff, 2px -1px 0 #ffffff, -1px -1px 0 #ffffff, -2px -1px 0 #ffffff;
   z-index: 1; }
-  p > a:not(.button):not(.link):not(.metabutton):after {
+  p > a:not(.button):not(.link):not(.metabutton):not(.custom-button):after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -368,7 +368,7 @@ p > a:not(.button):not(.link):not(.metabutton) {
             transform: scaleX(0);
     transition: -webkit-transform 0.7s cubic-bezier(0.2, 1, 0.3, 0.8);
     transition: transform 0.7s cubic-bezier(0.2, 1, 0.3, 0.8); }
-  p > a:not(.button):not(.link):not(.metabutton):hover:after {
+  p > a:not(.button):not(.link):not(.metabutton):not(.custom-button):hover:after {
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
 
@@ -1040,7 +1040,8 @@ p {
   position: relative;
   z-index: 1;
   padding: 0;
-  display: inline-block; }
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent; }
   @media screen and (min-width: 50em) {
     .button {
       font-size: 0.8em; } }

@@ -2,12 +2,87 @@
 layout: case
 ---
 
+<style>
+    .malbaren-button {
+        background: rgba(27,42,51,.05);
+        color: #49b276;
+        display: inline-block;
+        padding: .54em 1.2em .6em;
+        margin-bottom: 1em;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        font-weight: 400;
+        text-indent: .2em;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+        position: relative;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    .malbaren-button:hover, .malbaren-button:visited, .malbaren-button:active {
+        color: #49b276;
+        outline: none;
+    }
+    .malbaren-button:focus {
+        outline: 0;
+        background: rgba(27,42,51,.1);
+    }
+    .malbaren-button__decoration {
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        border-color: #49b276;
+        -webkit-transition: -webkit-transform .2s cubic-bezier(.12,.01,.07,2);
+        transition: transform .2s cubic-bezier(.12,.01,.07,2);
+        pointer-events: none;
+    }
+    .malbaren-button__decoration:nth-child(1) {
+        top: 0;
+        left: 0;
+        border-top: 1px solid;
+        border-left: 1px solid;
+    }
+    .malbaren-button__decoration:nth-child(2) {
+        top: 0;
+        right: 0;
+        border-top: 1px solid;
+        border-right: 1px solid;
+    }
+    .malbaren-button__decoration:nth-child(3) {
+        bottom: 0;
+        left: 0;
+        border-bottom: 1px solid;
+        border-left: 1px solid
+    }
+    .malbaren-button__decoration:nth-child(4) {
+        bottom: 0;
+        right: 0;
+        border-bottom: 1px solid;
+        border-right: 1px solid;
+    }
+    .malbaren-button:hover .malbaren-button__decoration:nth-child(1), .malbaren-button:active .malbaren-button__decoration:nth-child(1) {
+        -webkit-transform: translate3D(-5px,-5px,0);
+        transform: translate3D(-5px,-5px,0);
+    }
+    .malbaren-button:hover .malbaren-button__decoration:nth-child(2), .malbaren-button:active .malbaren-button__decoration:nth-child(2) {
+        -webkit-transform: translate3D(5px,-5px,0);
+        transform: translate3D(5px,-5px,0);
+    }
+    .malbaren-button:hover .malbaren-button__decoration:nth-child(3), .malbaren-button:active .malbaren-button__decoration:nth-child(3) {
+        -webkit-transform: translate3D(-5px,5px,0);
+        transform: translate3D(-5px,5px,0);
+    }
+    .malbaren-button:hover .malbaren-button__decoration:nth-child(4), .malbaren-button:active .malbaren-button__decoration:nth-child(4) {
+        -webkit-transform: translate3D(5px,5px,0);
+        transform: translate3D(5px,5px,0);
+    }
+</style>
+
 {% unless page.section2 == nil %}
-    <section class="sectionspacing">
-        <div class="boxtext boxtext--frame boxtext--frame--curiosities center">
-            <div class="h4">
-                {{ page.section2 | markdownify }}
-            </div>
+    <section class="boxtext boxtext--frame boxtext--frame--curiosities center">
+        <div class="h4">
+            {{ page.section2 | markdownify }}
         </div>
     </section>
 {% endunless %}
@@ -119,16 +194,6 @@ layout: case
 
 {% unless page.section10 == nil %}
     <section class="sectionspacing" id="buttons">
-    <p>
-    <a href="#buttons" class="button"><span>And</span></a>
-    <a href="#buttons" class="button"><span>notice</span></a>
-    <a href="#buttons" class="button"><span>how the</span></a>
-    <a href="#buttons" class="button"><span>corners</span></a>
-    <a href="#buttons" class="button"><span>pop when</span></a>
-    <a href="#buttons" class="button"><span>you hover</span></a>
-    <a href="#buttons" class="button"><span>over</span></a>
-    <a href="#buttons" class="button"><span>a button?</span></a>
-    </p>
         {{ page.section10 | markdownify }}
     </section>
 {% endunless %}
@@ -138,7 +203,7 @@ layout: case
     <section class="sectionspacing">
         {{ page.section11 | markdownify }}
         <p>
-            <a class="metabutton" href="mailto:{{page.authoremail}}">
+            <a class="metabutton" href="mailto:{{page.author-email}}">
                 Author: <span>{{page.author}}</span>
             </a>
         </p>
