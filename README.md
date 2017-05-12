@@ -11,6 +11,7 @@ Only if you hasn't install Jekyll, node or Gulp installed on your machine:
 1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
 2. [NodeJS](http://nodejs.org) - use the installer.
 3. [GulpJS](https://github.com/gulpjs/gulp) - `$ npm install -g gulp` (mac users may need sudo)
+4. [Bundle](http://bundler.io/) -  `gem install bundler`
 
 ## Local Installation
 
@@ -20,6 +21,7 @@ Only if you hasn't install Jekyll, node or Gulp installed on your machine:
 
 You may have to update ruby and all your local gems if they are to old:
 
+Project requires ruby v2.4.1. See instructions for installation below
 Update Ruby using rvm:
 ```\curl -sSL https://get.rvm.io | bash -s stable```
 ```rvm install ruby-2.4.1```
