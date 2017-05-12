@@ -1,10 +1,9 @@
 ---
 layout: work/owd-bob
 title:  "Owd Bob"
-subtitle: "The most exlusive print shop in the world"
+subtitle: "The most elusive print shop in the world"
 author: "Robin Kollberg"
-authoremail: r@fullyflared.se
-start:	"The most exlusive</br>print shop"
+author-email: r@fullyflared.se
 button-text: View case study
 date:   2017-04-18 12:00:00 +0100
 categories: back-end, ui, web

@@ -203,7 +203,7 @@ a {
         color: $c-signal;
     }
 }
-p > a:not(.button, .link, .metabutton) {
+p > a:not(.button, .link, .metabutton, .custom-button) {
     position: relative;
     text-shadow: 1px 1px 0 $c-white, 2px 1px 0 $c-white, -1px 1px 0 $c-white, -2px 1px 0 $c-white, 1px -1px 0 $c-white, 2px -1px 0 $c-white, -1px -1px 0 $c-white, -2px -1px 0 $c-white;
     z-index: 1;
