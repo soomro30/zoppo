@@ -1,0 +1,96 @@
+---
+layout: page
+---
+
+
+{% unless page.section1 == nil %}
+    <section class="gridabout">
+        <div class="boxtext h4">
+            {{ page.section1 | markdownify }}
+        </div>
+        <div>
+            <style>
+                #mojs-container {
+                    width: 100%;
+                    height: 100%;
+                    min-height: 200px;
+                    position: relative;
+                    overflow: hidden;
+                    background: #f8f8f8;
+                }
+            </style>
+            <div id="mojs-container"></div>
+            {{page.script}}
+            <script>
+                'use strict';
+
+                var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) {if (window.CP.shouldStopExecution(2)){break;} var source = arguments[i]; for (var key in source) {if (window.CP.shouldStopExecution(1)){break;} if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } }
+                window.CP.exitedLoop(1);
+                }
+                window.CP.exitedLoop(2);
+                return target; };
+
+                var speed = 20000;
+                var bouncyEasing = mojs.easing.path('M0, 100 C0, 100 4.662029727428005, 84.89585771251048 10, 85 C15.337970272571994, 85.10414228748952 14.27330466967262, 89.69090248656187 20, 90 C25.72669533032738, 90.30909751343812 24.024639394198353, 62.832117209961226 35, 55 C45.97536060580163, 47.16788279003875 53.57911797108407, 15.00704725964117 60, 15 C66.42088202891594, 14.992952740358822 63.57500209133861, 25.16371664316865 67.03856889114438, 25 C70.50213569095015, 24.836283356831338 71.2387296629268, 4.687707608565022 75, 5 C78.7612703370732, 5.312292391434977 79.75700849697688, 7.128738360898843 85, 7.428571428571429 C90.24299150302312, 7.728404496244019 100, 0 100, 0');
+
+                //const mojsCurve = new MojsCurveEditor({
+                //  name:         'bounce curve'
+                //});
+                var container = document.getElementById('mojs-container');
+                var containerW = container.offsetWidth;
+                var containerH = container.offsetHeight;
+                console.log(containerH);
+
+                var CIRCLE_OPTS = {
+                parent: container,
+                radius: { 0: containerW / 1.8 },
+                fill: 'none',
+                stroke: '#7BD75E',
+                strokeWidth: 5,
+                duration: speed,
+                repeat: 1000,
+                easing: bouncyEasing
+                };
+
+                //  easing: mojsCurve.getEasing(),
+                var circle = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: 0
+                })).play();
+
+                var circle2 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: speed * 0.25
+                })).play();
+
+                var circle3 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: speed * 0.50
+                })).play();
+
+                var circle4 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: speed * 0.75
+                })).play();
+
+                var circle5 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: speed
+                })).play();
+
+                var circle6 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: speed * 1.25
+                })).play();
+
+                var circle7 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: speed * 1.5
+                })).play();
+
+                var circle8 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: speed * 1.75
+                })).play();
+            </script>
+        </div>
+    </section>
+{% endunless %}
+
+{% unless page.section2 == nil %}
+    <section class="box box--people box--right">
+        {{ page.section2 | markdownify }}
+    </section>
+{% endunless %}

@@ -105,6 +105,16 @@
     }
 }
 
+
+// About layout
+.gridabout {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include media-query($on-laptop) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 /**
  * Site header
  */

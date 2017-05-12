@@ -320,7 +320,7 @@ h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
 
 h1, .h1 {
   font-size: calc( 3em + 2vw);
-  max-width: calc( 11.2em + 60px); }
+  max-width: calc( 12em + 60px); }
 
 h2, .h2, .navigation__link, .navigation__overlay {
   font-size: 2.5em;
@@ -526,6 +526,13 @@ p {
   .footer img {
     width: 6em;
     height: 5.6em; }
+
+.gridabout {
+  display: grid;
+  grid-template-columns: 1fr; }
+  @media screen and (min-width: 50em) {
+    .gridabout {
+      grid-template-columns: 1fr 1fr; } }
 
 /**
  * Site header
