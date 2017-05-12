@@ -85,15 +85,14 @@ image6_mobile_1x: "malbaren/site-screen-mobile@1x.jpg"
 image6_mobile_2x: "malbaren/site-screen-mobile@2x.jpg"
 
 section10: |
-  <a href="#buttons" class="custom-button malbaren-button">And<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
-  <a href="#buttons" class="custom-button malbaren-button">notice<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
-  <a href="#buttons" class="custom-button malbaren-button">how the<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
-  <a href="#buttons" class="custom-button malbaren-button">corners<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
-  <a href="#buttons" class="custom-button malbaren-button">pop when<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
-  <a href="#buttons" class="custom-button malbaren-button">you hover<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
-  <a href="#buttons" class="custom-button malbaren-button">over<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
-  <a href="#buttons" class="custom-button malbaren-button">a button?<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></a>
-
+  <span class="custom-button malbaren-button">And<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></span>
+  <span class="custom-button malbaren-button">notice<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></span>
+  <span class="custom-button malbaren-button">how the<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></span>
+  <span class="custom-button malbaren-button">corners<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></span>
+  <span class="custom-button malbaren-button">pop when<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></span>
+  <span class="custom-button malbaren-button">you hover<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></span>
+  <span class="custom-button malbaren-button">over<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></span>
+  <span class="custom-button malbaren-button">a button?<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></span><br>
   I wanted the buttons to have some energy. You’ll notice that they expand with a bit of a reverberating bounce at the end. It’s hardly noticeable but it makes a significant difference. It’s like a little punch.
 
 section11: |
