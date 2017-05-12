@@ -92,7 +92,7 @@ scripts:
 
 ---
 
-Description text ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsa dolorem, minima sunt maiores a ducimus sed atque, similique, molestias labore. Tempora, obcaecati repellat eius corporis laudantium. Fugit, dolorem qui?
+Given that Fully is a digital studio, the majority of our creations live, move and die on the Internet. This is a glorious thing; as an outlet for creativity, the digital world is boundless and constantly proffers new tools. The results can be stunning. 
 
 [Launch site][case-link]
 
