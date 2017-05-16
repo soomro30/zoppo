@@ -41,7 +41,7 @@ Update gems:
 
 This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc etc.
 
-```shell
+``` shell
 $ gulp
 ```
 
