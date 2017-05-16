@@ -56,7 +56,7 @@
     &--metal:before      { background: $c-metal }
 
     // Background colors on the box and white shadow
-    &--bgsignal, &--bgmetal {
+    &--bgsignal, &--bgmetal, &--invert {
         color: $c-white;
         &:before { background: $c-white }
     }

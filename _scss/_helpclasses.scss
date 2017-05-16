@@ -36,6 +36,14 @@
         margin-bottom: $s-small*6;
     }
 }
+.sectionpadding {
+    padding-top: $s-small*3;
+    padding-bottom: $s-small*3;
+    @include media-query($on-laptop) {
+        padding-top: $s-small*6;
+        padding-bottom: $s-small*6;
+    }
+}
 
 // Position
 .center {
@@ -53,6 +61,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
     &--padding {
         padding: $s-small 0;
         @include media-query($on-laptop) {

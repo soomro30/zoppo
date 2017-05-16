@@ -163,7 +163,118 @@ container.addEventListener('click', function (e) {
 {% endunless %}
 
 {% unless page.section2 == nil %}
-    <section class="box box--people box--right">
-        {{ page.section2 | markdownify }}
+    <section class="sectionspacing invert">
+
+        <style>
+            .anim-container {
+                position: relative;
+            }
+            #morphanim__text {
+                position: absolute;
+                top: 15%;
+                left: 30%;
+                width: 40%;
+                height: 80%;
+                text-align: center;
+                font-size: 3.5vw;
+                max-width: none;
+                padding: 0;
+                transition: transform 1s 0s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+            }
+            #morphanim__text.tablet {
+                transform: scale(0.5) translateY(-1em);
+            }
+            #morphanim__text.mobile {
+                transform: scale(0.22) translateY(-2em);
+            }
+            #morphanim {
+                display: block;
+                width: 50%;
+                height: auto;
+                margin: 0 auto;
+            }
+
+        </style>
+        <div class="anim-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="557" height="366" viewBox="0 0 557 366" id="morphanim">
+                <title>{{ page.section2 | markdownify }}</title>
+                <g id="icon-mobile">
+                    <rect class="morphanim__frame" fill="#fff" x="219.33" y="72" width="118.33" height="222" rx="15" ry="15"/>
+                    <rect class="morphanim__screen" fill="#7bd85e" x="227.33" y="99" width="102.33" height="170"/>
+                    <rect class="morphanim__bottom" fill="#7bd85e" x="272.67" y="274.9" width="11.67" height="11.67" rx="5.75" ry="5.75"/>
+                </g>
+                <g id="icon-tablet">
+                    <rect class="morphanim__frame" fill="#fff" x="154.67" y="10" width="247.67" height="346" rx="15" ry="15"/>
+                    <rect class="morphanim__screen" fill="#7bd85e" x="170.67" y="32" width="215.67" height="292"/>
+                    <rect class="morphanim__bottom" fill="#7bd85e" x="272.67" y="333.9" width="11.67" height="11.67" rx="5.75" ry="5.75"/>
+                </g>
+                <g id="icon-desktop">
+                    <rect class="morphanim__frame" fill="#fff" x="29" width="499.67" height="356" rx="15" ry="15"/>
+                    <rect class="morphanim__screen" fill="#7bd85e" x="48.67" y="24" width="460.33" height="300"/>
+                    <rect class="morphanim__bottom" fill="#fff" x="10" y="323" width="540" height="35" rx="5.75" ry="5.75"/>
+                </g>                    
+            </svg>
+
+            
+            <h2 id="morphanim__text">{{ page.section2 }}</h2>
+            
+        </div>
+
+        <script>
+            var myIcons = new SVGMorpheus('#morphanim', {rotation:'none', easing: 'cubic-in-out', duration: 1000 } );
+            var animText = document.getElementById('morphanim__text');
+
+            var triggerDesktop = new mojs.Tween({
+                delay: 2000,
+                duration: 4000,
+                onComplete: function onComplete() {
+                    console.log('triggerDesktop');
+                    animText.classList.remove('tablet');
+                    animText.classList.remove('mobile');
+                    myIcons.to('icon-desktop');
+                }
+            });
+            
+            var triggerTablet = new mojs.Tween({
+                delay: 6000,
+                duration: 4000,
+                onComplete: function onComplete() {
+                    console.log('triggerTablet')
+                    animText.classList.remove('mobile');
+                    animText.classList.add('tablet');
+                    myIcons.to('icon-tablet');
+                }
+            });
+
+            var triggerMobile = new mojs.Tween({
+                delay: 12000,
+                duration: 4000,
+                onComplete: function onComplete() {
+                    console.log('triggerMobile');
+                    animText.classList.remove('tablet');
+                    animText.classList.add('mobile');
+                    myIcons.to('icon-mobile');
+                }
+            });
+
+            var timeline = new mojs.Timeline({
+                repeat:     999
+            });
+            timeline.add( triggerTablet, triggerMobile, triggerDesktop);
+            timeline.play();
+
+        </script>
+
+
+
     </section>
 {% endunless %}
+
+{% unless page.section3 == nil %}
+    <section class="background-image sectionpadding" style="background-image: url(http://placekitten.com/g/1920/1080)">
+        <div class="box box--invert box--center c-business-bg" style="max-width: 45em">
+            {{ page.section3 | markdownify }}
+        </div>
+    </section>
+{% endunless %}
+

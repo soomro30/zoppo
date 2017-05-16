@@ -852,9 +852,9 @@ p {
     background: #ffde7f; }
   .box--metal:before {
     background: #666666; }
-  .box--bgsignal, .box--bgmetal {
+  .box--bgsignal, .box--bgmetal, .box--invert {
     color: #ffffff; }
-    .box--bgsignal:before, .box--bgmetal:before {
+    .box--bgsignal:before, .box--bgmetal:before, .box--invert:before {
       background: #ffffff; }
   .box--bgpeople:before, .box--bgcuriosities:before, .box--bgbusiness:before {
     background: #ffffff; }
@@ -1702,6 +1702,14 @@ p {
       margin-top: 180px;
       margin-bottom: 180px; } }
 
+.sectionpadding {
+  padding-top: 90px;
+  padding-bottom: 90px; }
+  @media screen and (min-width: 50em) {
+    .sectionpadding {
+      padding-top: 180px;
+      padding-bottom: 180px; } }
+
 .center {
   text-align: center; }
 
@@ -1718,7 +1726,9 @@ p {
 .background-image {
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1; }
   .background-image--padding {
     padding: 30px 0; }
     @media screen and (min-width: 50em) {
