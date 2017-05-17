@@ -23,139 +23,139 @@ layout: page
             <div id="mojs-container"></div>
             {{page.script}}
             <script>
-            // For edits this code, copy code from https://codepen.io/fullystudios/pen/dd259ea5429ebf4213fae25b821df085?editors=0010
-'use strict';
+                // For edits this code, copy code from https://codepen.io/fullystudios/pen/dd259ea5429ebf4213fae25b821df085?editors=0010
+                'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) {if (window.CP.shouldStopExecution(2)){break;} var source = arguments[i]; for (var key in source) {if (window.CP.shouldStopExecution(1)){break;} if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } }
-window.CP.exitedLoop(1);
- }
-window.CP.exitedLoop(2);
- return target; };
+                var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) {if (window.CP.shouldStopExecution(2)){break;} var source = arguments[i]; for (var key in source) {if (window.CP.shouldStopExecution(1)){break;} if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } }
+                window.CP.exitedLoop(1);
+                }
+                window.CP.exitedLoop(2);
+                return target; };
 
-var speed = 20000;
-var bouncyEasing = mojs.easing.path('M0 100s4.662-15.104 10-15c5.338.104 4.273 4.69 10 5 5.727.31 4.025-27.168 15-35 10.975-7.832 18.58-39.993 25-40 6.42-.007 3.575 10.164 7.04 10C70.5 24.836 71.24 4.688 75 5c3.76.312 4.757 2.13 10 2.43C90.243 7.727 100 0 100 0');
-var shakeEasing = mojs.easing.path('M0, 100 C0, 100 2.5552968568102443, 90 2.5552968568102443, 90 C2.5, 90 5, 110 5, 110 C5, 110 8.247962747380676, 80 8.247962747380676, 80 C8.247962747380676, 80 10, 117 10, 117 C10, 117 13.038416763678697, 87.42857142857143 13.038416763678697, 87.42857142857143 C13.038416763678697, 87.42857142857143 15, 107.71428571428571 15, 107.71428571428571 C15, 107.71428571428571 17.578579743888245, 95 17.578579743888245, 95 C17.578579743888245, 95 20, 105 20, 105 C20, 105 22.90454016298021, 97.85714285714286 22.90454016298021, 97.85714285714286 C22.90454016298021, 97.85714285714286 25, 102.57142857142857 25, 102.57142857142857 C25, 102.57142857142857 28.28870779976717, 95 28.28870779976717, 95 C28.28870779976717, 95 30, 105 30, 105 C30, 105 33.25378346915017, 92.28571428571429 33.25378346915017, 92.28571428571429 C33.25378346915017, 92.28571428571429 35, 105 35, 105 C35, 105 40, 97.71428571428571 40, 97.71428571428571 C40, 97.71428571428571 45, 105 45, 105 C45, 105 50, 100 50, 100 C50, 100 100, 100 100, 100');
+                var speed = 20000;
+                var bouncyEasing = mojs.easing.path('M0 100s4.662-15.104 10-15c5.338.104 4.273 4.69 10 5 5.727.31 4.025-27.168 15-35 10.975-7.832 18.58-39.993 25-40 6.42-.007 3.575 10.164 7.04 10C70.5 24.836 71.24 4.688 75 5c3.76.312 4.757 2.13 10 2.43C90.243 7.727 100 0 100 0');
+                var shakeEasing = mojs.easing.path('M0, 100 C0, 100 2.5552968568102443, 90 2.5552968568102443, 90 C2.5, 90 5, 110 5, 110 C5, 110 8.247962747380676, 80 8.247962747380676, 80 C8.247962747380676, 80 10, 117 10, 117 C10, 117 13.038416763678697, 87.42857142857143 13.038416763678697, 87.42857142857143 C13.038416763678697, 87.42857142857143 15, 107.71428571428571 15, 107.71428571428571 C15, 107.71428571428571 17.578579743888245, 95 17.578579743888245, 95 C17.578579743888245, 95 20, 105 20, 105 C20, 105 22.90454016298021, 97.85714285714286 22.90454016298021, 97.85714285714286 C22.90454016298021, 97.85714285714286 25, 102.57142857142857 25, 102.57142857142857 C25, 102.57142857142857 28.28870779976717, 95 28.28870779976717, 95 C28.28870779976717, 95 30, 105 30, 105 C30, 105 33.25378346915017, 92.28571428571429 33.25378346915017, 92.28571428571429 C33.25378346915017, 92.28571428571429 35, 105 35, 105 C35, 105 40, 97.71428571428571 40, 97.71428571428571 C40, 97.71428571428571 45, 105 45, 105 C45, 105 50, 100 50, 100 C50, 100 100, 100 100, 100');
 
-var container = document.getElementById('mojs-container');
-var containerW = container.offsetWidth;
-var containerH = container.offsetHeight;
-var radius = containerW < containerH ? containerW : containerH;
+                var container = document.getElementById('mojs-container');
+                var containerW = container.offsetWidth;
+                var containerH = container.offsetHeight;
+                var radius = containerW < containerH ? containerW : containerH;
 
-var c_accent = '#7BD75E';
+                var c_accent = '#7BD75E';
 
-var CIRCLE_OPTS = {
-  parent: container,
-  radius: { 0: radius / 2 + 5 },
-  fill: 'none',
-  stroke: c_accent,
-  strokeWidth: 5,
-  duration: speed,
-  repeat: 1000,
-  easing: bouncyEasing
-  //easing: mojsCurve.getEasing(),
-};
+                var CIRCLE_OPTS = {
+                parent: container,
+                radius: { 0: radius / 2 + 5 },
+                fill: 'none',
+                stroke: c_accent,
+                strokeWidth: 5,
+                duration: speed,
+                repeat: 1000,
+                easing: bouncyEasing
+                //easing: mojsCurve.getEasing(),
+                };
 
-var circlebg = new mojs.Shape({
-  parent: container,
-  radius: { 100: radius / 2 },
-  fill: '#ffffff',
-  opacity: { 0: 1 },
-  duration: 600,
-  easing: 'quint.out',
-  duration: 1600
-}).play();
+                var circlebg = new mojs.Shape({
+                parent: container,
+                radius: { 100: radius / 2 },
+                fill: '#ffffff',
+                opacity: { 0: 1 },
+                duration: 600,
+                easing: 'quint.out',
+                duration: 1600
+                }).play();
 
-var shakeBg = new mojs.Tween({
-  delay: 400,
-  duration: 4600,
-  onComplete: function onComplete() {
-    this.replay();
-  },
-  onUpdate: function onUpdate(progress) {
-    var shakeProgress = shakeEasing(progress);
-    container.style.transform = 'scale(' + (1 + shakeProgress * 0.15) + ')';
-  }
-}).play();
+                var shakeBg = new mojs.Tween({
+                delay: 400,
+                duration: 4600,
+                onComplete: function onComplete() {
+                    this.replay();
+                },
+                onUpdate: function onUpdate(progress) {
+                    var shakeProgress = shakeEasing(progress);
+                    container.style.transform = 'scale(' + (1 + shakeProgress * 0.15) + ')';
+                }
+                }).play();
 
-var circle = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
-  delay: 0
-})).play();
+                var circle = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: 0
+                })).play();
 
-var circle2 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
-  delay: speed * 0.25
-})).play();
+                var circle2 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: speed * 0.25
+                })).play();
 
-var circle3 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
-  delay: speed * 0.50
-})).play();
+                var circle3 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: speed * 0.50
+                })).play();
 
-var circle4 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
-  delay: speed * 0.75
-})).play();
+                var circle4 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: speed * 0.75
+                })).play();
 
-var circle5 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
-  delay: speed
-})).play();
+                var circle5 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: speed
+                })).play();
 
-var circle6 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
-  delay: speed * 1.25
-})).play();
+                var circle6 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: speed * 1.25
+                })).play();
 
-var circle7 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
-  delay: speed * 1.5
-})).play();
+                var circle7 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: speed * 1.5
+                })).play();
 
-var circle8 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
-  delay: speed * 1.75
-})).play();
+                var circle8 = new mojs.Shape(_extends({}, CIRCLE_OPTS, {
+                delay: speed * 1.75
+                })).play();
 
-// Create the bursts
-var B_CHILD = {
-  fill: c_accent,
-  delay: 'rand(300, 359)',
-  duration: 4700,
-  repeat: 1000,
-  pathScale: 'rand(0.8, 1)',
-  isSwirl: true,
-  swirlSize: 'stagger(-2,2)',
-  swirlFrequency: 1
-};
-var B_OPTS = {
-  count: 'rand(15,30)',
-  parent: container,
-  children: _extends({}, B_CHILD)
-};
-var burst1 = new mojs.Burst(_extends({}, B_OPTS, {
-  radius: { 0: radius / 2 }
-})).play();
+                // Create the bursts
+                var B_CHILD = {
+                fill: c_accent,
+                delay: 'rand(300, 359)',
+                duration: 4700,
+                repeat: 1000,
+                pathScale: 'rand(0.8, 1)',
+                isSwirl: true,
+                swirlSize: 'stagger(-2,2)',
+                swirlFrequency: 1
+                };
+                var B_OPTS = {
+                count: 'rand(15,30)',
+                parent: container,
+                children: _extends({}, B_CHILD)
+                };
+                var burst1 = new mojs.Burst(_extends({}, B_OPTS, {
+                radius: { 0: radius / 2 }
+                })).play();
 
-var burst2 = new mojs.Burst(_extends({}, B_OPTS, {
-  radius: { 0: radius / 3 }
-})).play();
+                var burst2 = new mojs.Burst(_extends({}, B_OPTS, {
+                radius: { 0: radius / 3 }
+                })).play();
 
-var burst3 = new mojs.Burst(_extends({}, B_OPTS, {
-  radius: { 0: radius / 5 }
-})).play();
+                var burst3 = new mojs.Burst(_extends({}, B_OPTS, {
+                radius: { 0: radius / 5 }
+                })).play();
 
-var burst_tune = new mojs.Burst(_extends({}, B_OPTS, {
-  radius: { 0: radius / 2 },
-  repeat: 0,
-  left: 0,
-  top: 0,
-  children: _extends({}, B_CHILD, {
-    repeat:     0,
-    fill: c_accent,
-    delay: 'rand(10, 150)',
-    pathScale: 'rand(0.7, 0.8)',
-    degreeShift: 20
-  })
-}));
-container.addEventListener('click', function (e) {
-  shakeBg.replay();
-  burst_tune.generate().tune({ x: e.pageX - this.offsetLeft, y: e.pageY - this.offsetTop }).replay();
-  console.log('e.pageX',e.pageX);
-  console.log(e);
-});
+                var burst_tune = new mojs.Burst(_extends({}, B_OPTS, {
+                radius: { 0: radius / 2 },
+                repeat: 0,
+                left: 0,
+                top: 0,
+                children: _extends({}, B_CHILD, {
+                    repeat:     0,
+                    fill: c_accent,
+                    delay: 'rand(10, 150)',
+                    pathScale: 'rand(0.7, 0.8)',
+                    degreeShift: 20
+                })
+                }));
+                container.addEventListener('click', function (e) {
+                shakeBg.replay();
+                burst_tune.generate().tune({ x: e.pageX - this.offsetLeft, y: e.pageY - this.offsetTop }).replay();
+                console.log('e.pageX',e.pageX);
+                console.log(e);
+                });
 
             </script>
         </div>
@@ -171,12 +171,12 @@ container.addEventListener('click', function (e) {
             }
             #morphanim__text {
                 position: absolute;
-                top: 15%;
-                left: 30%;
-                width: 40%;
+                top: 17%;
+                left: 15%;
+                width: 70%;
                 height: 80%;
                 text-align: center;
-                font-size: 3.5vw;
+                font-size: 6vw;
                 max-width: none;
                 padding: 0;
                 transition: transform 1s 0s cubic-bezier(0.645, 0.045, 0.355, 1.000);
@@ -189,9 +189,26 @@ container.addEventListener('click', function (e) {
             }
             #morphanim {
                 display: block;
-                width: 50%;
+                width: 90%;
                 height: auto;
                 margin: 0 auto;
+            }
+            @media (min-width: 40em) {
+                #morphanim__text {
+                    top: 15%;
+                    left: 30%;
+                    width: 40%;
+                    font-size: 3.5vw;
+                }
+                #morphanim {
+                    width: 50%;
+                }
+                /*#morphanim__text.tablet {
+                    transform: scale(0.5) translateY(-1em);
+                }
+                #morphanim__text.mobile {
+                    transform: scale(0.22) translateY(-2em);
+                }*/
             }
 
         </style>
@@ -275,6 +292,13 @@ container.addEventListener('click', function (e) {
         <div class="box box--invert box--center c-business-bg" style="max-width: 45em">
             {{ page.section3 | markdownify }}
         </div>
+    </section>
+{% endunless %}
+
+{% unless page.section4 == nil %}
+    <section class="sectionpadding invert center">
+        {{ page.section4 | markdownify }}
+        <a href="{{page.button-url}}" class="button"><span>{{page.button-text}}</span></a>
     </section>
 {% endunless %}
 

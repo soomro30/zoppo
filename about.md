@@ -14,6 +14,12 @@ section2: |
 section3: |
   #### With the fundamentals nailed down, we can explore and carry out the more dazzling experiments at the intersection of art and code.
 
+section4: |
+  #### This is what the Curiosities are all about -- following our noses through barely-charted territories of design. These creative romps keep us sharp and adaptive and, usually, we end up exactly where we need to be.
+
+button-text: Check them out
+button-url: "#"
+
 script: "<script src='https://cdnjs.cloudflare.com/ajax/libs/mo-js/0.288.1/mo.min.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.3.2/svg-morpheus.js'></script>"
 
 ---
