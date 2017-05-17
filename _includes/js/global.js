@@ -145,4 +145,12 @@ ready(function(){
 		return FadeTransition;
 	};
 
+	// lory js ( image slider )
+   
+    var variableWidth = document.querySelector('.js_variablewlidth');
+
+    lory(variableWidth, {
+        rewind: true
+    });
+
 });

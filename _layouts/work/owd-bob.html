@@ -66,7 +66,7 @@ layout: case
 </div>
 {% endunless %}
 
-<section class="imageline">
+<!-- <section class="imageline">
     {% unless page.imageline == nil %}
         {% for image in page.imageline %}
             <div class="imageline__image">
@@ -76,10 +76,27 @@ layout: case
             </div>
         {% endfor %}
     {% endunless %}
+</section> -->
+
+<section class="imageline-wide sectionspacing">
+    <div class="slider js_variablewlidth variablewidth">
+        <div class="frame js_frame">
+            <ul class="slides js_slides">
+                {% unless page.imageline == nil %}
+                    {% for image in page.imageline %}
+                        <li class="js_slide">
+                            <img class="image"
+                                alt="Image of projekt {{page.title}}"
+                                src="{{site.baseurl}}/assets/{{ image }}">
+                        </li>
+                    {% endfor %}
+                {% endunless %}
+            </ul>
+        </div>
+    </div>
 </section>
 
-
-<div class="c-metal-bg image">
+<!-- <div class="c-metal-bg image">
 <br><br>[ Image slider]<br><br><br>
 {% comment %}TODO
 $('.variable-width').slick({
@@ -90,7 +107,7 @@ $('.variable-width').slick({
   centerMode: true,
   variableWidth: true
 });{% endcomment %}
-</div>
+</div> -->
 
 {% unless page.section5 == nil %}
     <section class="box box--center">
