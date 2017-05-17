@@ -298,7 +298,7 @@ layout: page
 {% unless page.section4 == nil %}
     <section class="sectionpadding invert center">
         {{ page.section4 | markdownify }}
-        <a href="{{page.button-url}}" class="button"><span>{{page.button-text}}</span></a>
+        <a href="{{page.button-url | prepend: site.baseurl }}" class="button"><span>{{page.button-text}}</span></a>
     </section>
 {% endunless %}
 
