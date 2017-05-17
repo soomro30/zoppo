@@ -50,9 +50,8 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: $s-small*2 0 $s-small;
+        padding: $s-small*3 0 $s-small;
         color: $c-light;
-        a { color: $c-light }
         &--shadow {
             text-shadow:
                 -5px 4px 0px $c-dark, // big shadow - the rest is outlines
@@ -100,4 +99,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+// Custom heros
+.hero--about {
+    h4 {
+        margin-top: $s-small*2;
+        a {
+            &:after {
+                content: "";
+                background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNy4xIDE2Ij48c3R5bGU+LnN0MHtmaWxsOiMwQTJBNEY7fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMuNiAxNmMtLjEgMC0uMiAwLS4yLS4xTC4xIDEyLjNjLS4xIDAtLjEtLjItLjEtLjMuMS0uMS4xLS4yLjMtLjJoMi4xVi4zYzAtLjEgMC0uMi4xLS4yIDAtLjEuMS0uMS4yLS4xaDEuOGMuMSAwIC4yIDAgLjIuMS4xLjEuMS4xLjEuMnYxMS42aDIuMWMuMSAwIC4yLjEuMy4ydi4zTDQgMTZoLS40eiIvPjwvc3ZnPg==);
+                background-repeat: no-repeat;
+                background-position: bottom center;
+                width: 7.1px;
+                height: 16px;
+                display: block;
+                padding-top: $s-small;
+                margin: 0 auto;
+                transition: transform 0.4s $easeout;
+            }
+            &:hover {
+                &:after {
+                    transform: translateY(16px);
+                }
+            }
+        }
+    }
 }
