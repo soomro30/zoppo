@@ -203,7 +203,7 @@ a {
         color: $c-signal;
     }
 }
-p > a:not(.button, .link, .metabutton, .custom-button) {
+p > a:not(.button, .link, .metabutton, .custom-button), h2 > a {
     position: relative;
     text-shadow: 1px 1px 0 $c-white, 2px 1px 0 $c-white, -1px 1px 0 $c-white, -2px 1px 0 $c-white, 1px -1px 0 $c-white, 2px -1px 0 $c-white, -1px -1px 0 $c-white, -2px -1px 0 $c-white;
     z-index: 1;
@@ -221,6 +221,15 @@ p > a:not(.button, .link, .metabutton, .custom-button) {
     }
     &:hover:after {
         transform: scaleX(1);
+    }
+}
+.c-business-bg a, h2 > a {
+    text-shadow: none !important;
+}
+.c-people-bg a {
+    color: $c-dark;
+    &:after {
+        border-color: $c-white;
     }
 }
 

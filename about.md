@@ -1,7 +1,8 @@
 ---
 layout: about
 title: About
-pagetitle: Fully Studios is a Swedish web and film studio specializing in motion on the web.
+pagetitle: |
+  # Fully Studios is a Swedish web and film studio specializing in motion on the web.
 permalink: /about/
 slug: about
 bg-color: "c-business-bg"

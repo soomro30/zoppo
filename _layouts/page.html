@@ -6,13 +6,13 @@ layout: default
 
   <div class="hero hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %} {{page.bg-color}}" id="work_{{ page.slug }}">
     <header class="hero__header">
-      <h1 itemprop="name headline">
         {% if page.pagetitle != nil %}
-          {{ page.pagetitle }}
+          {{ page.pagetitle | markdownify }}
         {% else %}
-          {{ page.title }}
+          <h1 itemprop="name headline">
+            {{ page.title }}
+          </h1>
         {% endif %}
-      </h1>
       {% unless page.subtitl == nil %}
       <h2>{{page.subtitle}}</h2>
       {% endunless %}
