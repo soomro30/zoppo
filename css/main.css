@@ -928,6 +928,7 @@ p {
       flex-wrap: wrap;
   padding: 0 30px 45px;
   margin-top: 30px;
+  margin-bottom: 30px;
   position: relative;
   max-width: 68.7em;
   margin-left: auto;
@@ -946,24 +947,23 @@ p {
     margin-top: 30px;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex: 1 0 100%;
+        flex: 1 0 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30em;
     -ms-flex-direction: column;
-        flex-direction: column; }
-    @media (min-width: 400px) {
+        flex-direction: column;
+    -ms-flex-align: start;
+        align-items: flex-start; }
+    @media (min-width: 800px) {
       .boxgrid__box {
         width: auto;
-        -ms-flex: 1 0 0%;
-            flex: 1 0 0%;
+        -ms-flex: 1 0 calc(50% - 30px);
+            flex: 1 0 calc(50% - 30px);
+        max-width: calc(50% - 30px);
         margin-right: 15px;
         margin-left: 15px; } }
-    .boxgrid__box figure {
-      -ms-flex: 1 0 0%;
-          flex: 1 0 0%;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-align: start;
-          align-items: flex-start;
-      -ms-flex-direction: column;
-          flex-direction: column; }
     .boxgrid__box figcaption {
       -ms-flex: 1 0 0%;
           flex: 1 0 0%; }
@@ -975,15 +975,15 @@ p {
       bottom: 0;
       left: -15px;
       width: 15px; }
-    .boxgrid__box:nth-child(odd) {
+    .boxgrid__box:nth-of-type(even) {
       text-align: right; }
-      .boxgrid__box:nth-child(odd):after {
+      .boxgrid__box:nth-of-type(even):after {
         left: auto;
         right: -15px; }
-      .boxgrid__box:nth-child(odd) figcaption {
+      .boxgrid__box:nth-of-type(even) figcaption {
         text-align: left;
         padding-left: 15px; }
-      .boxgrid__box:nth-child(odd) figure {
+      .boxgrid__box:nth-of-type(even) figure {
         -ms-flex-align: end;
             align-items: flex-end; }
     .boxgrid__box img {
@@ -1003,6 +1003,8 @@ p {
     left: 12%;
     right: 12%;
     height: 100%; }
+    .c-people-bg .boxgrid:before {
+      border-color: #0a2a4f; }
     @media (min-width: 400px) {
       .boxgrid:before {
         left: 12%;
@@ -1038,6 +1040,16 @@ p {
         flex: 1 0 0%; }
     .boxgrid--compact .boxgrid__box figcaption h3, .boxgrid--compact .boxgrid__box figcaption p {
       padding: 0; }
+  @media (min-width: 829px) {
+    .boxgrid--offset {
+      max-width: 67rem;
+      margin-bottom: calc(30px + 6em); }
+      .boxgrid--offset .boxgrid__box {
+        -webkit-transform: translateY(-2.5em);
+                transform: translateY(-2.5em); }
+        .boxgrid--offset .boxgrid__box:nth-of-type(even) {
+          -webkit-transform: translateY(3.5em);
+                  transform: translateY(3.5em); } }
 
 /**
 * Buttons
