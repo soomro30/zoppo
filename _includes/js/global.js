@@ -147,10 +147,10 @@ ready(function(){
 
 	// lory js ( image slider )
    
-    var variableWidth = document.querySelector('.js_variablewlidth');
+    // var variableWidth = document.querySelector('.js_variablewlidth');
 
-    lory(variableWidth, {
-        rewind: true
-    });
+    // lory(variableWidth, {
+    //     rewind: true
+    // });
 
 });

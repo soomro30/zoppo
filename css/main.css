@@ -1387,6 +1387,33 @@ p {
 .ingress--owd-bob p {
   max-width: calc( 34em + 60px); }
 
+.map {
+  height: 60vh;
+  min-height: 400px;
+  width: 100%;
+  margin: 0 auto; }
+  .map__container {
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 120px; }
+    .map__container:after {
+      content: "";
+      display: block;
+      border: 4px solid #0a2a4f;
+      width: 80%;
+      position: absolute;
+      left: 10%;
+      top: -30px;
+      bottom: -60px;
+      pointer-events: none; }
+  .map > div {
+    background-color: transparent !important; }
+  .map__header {
+    margin-bottom: 30px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+
 .metabox {
   position: relative;
   z-index: 10;
