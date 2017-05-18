@@ -5,7 +5,7 @@ layout: default
   
 
   <div class="hero hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %} {{page.bg-color}}" id="work_{{ page.slug }}">
-    <header class="hero__header">
+    <header class="hero__header hyphenate">
         {% if page.pagetitle != nil %}
           {{ page.pagetitle | markdownify }}
         {% else %}
