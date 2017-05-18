@@ -1675,10 +1675,10 @@ p {
  * (optional) define here the style definitions which should be applied on the slider container
  * e.g. width including further controls like arrows etc.
  */
-.frame {
+.slider__frame {
   /**
-     * (optional) wrapper width, specifies width of the slider frame.
-     */
+        * (optional) wrapper width, specifies width of the slider frame.
+        */
   width: 100%;
   position: relative;
   font-size: 0;
@@ -1686,15 +1686,15 @@ p {
   overflow: hidden;
   white-space: nowrap; }
 
-.slides {
+.slider__slides {
   display: inline-block; }
 
-li {
+.slider__slide {
   position: relative;
   display: inline-block;
   /**
-     * (optional) if the content inside the slide element has a defined size.
-     */
+        * (optional) if the content inside the slide element has a defined size.
+        */
   width: 33%; }
 
 #case2__image {

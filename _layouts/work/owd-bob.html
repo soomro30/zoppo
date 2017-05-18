@@ -66,8 +66,9 @@ layout: case
 </div>
 {% endunless %}
 
-<!-- <section class="imageline">
-    {% unless page.imageline == nil %}
+{% unless page.imageline == nil %}
+ <section class="sectionspacing c-dark-bg flexcenter">
+     <div class="imageline">
         {% for image in page.imageline %}
             <div class="imageline__image">
                 <img class="image"
@@ -75,16 +76,17 @@ layout: case
                     src="{{site.baseurl}}/assets/{{ image }}">
             </div>
         {% endfor %}
-    {% endunless %}
-</section> -->
+    </div>
+</section> 
+{% endunless %}
 
 <section class="imageline-wide sectionspacing">
     <div class="slider js_variablewlidth variablewidth">
-        <div class="frame js_frame">
-            <ul class="slides js_slides">
+        <div class="slider__frame js_frame">
+            <ul class="slider__slides js_slides">
                 {% unless page.imageline == nil %}
                     {% for image in page.imageline %}
-                        <li class="js_slide">
+                        <li class="slider__slide js_slide">
                             <img class="image"
                                 alt="Image of projekt {{page.title}}"
                                 src="{{site.baseurl}}/assets/{{ image }}">
