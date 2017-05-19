@@ -10,6 +10,7 @@ client: Kakservice
 project: Animated film
 background-image_2880: "kakservice/ks-background_1440.jpg"
 background-image_1440: "kakservice/ks-background_1440.jpg"
+background-image_720: "kakservice/frame-1.jpg"
 
 ingress: |
   Kakservice has been around since the 70’s. In their early days they sold cinnamon buns and newspapers to sailors in the Fjällbacka archipelago. Today their cookies go to schools, sport clubs and organisations, where they are then sold to help raise funds for special causes and programs.

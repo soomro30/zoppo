@@ -84,6 +84,7 @@ $bgMqMedium: 800px;
 
     figcaption {
         background: $c-white;
+        color: $c-dark;
         display: inline-block;
         min-width: 80%;
         padding: $s-small 0;
@@ -98,6 +99,7 @@ $bgMqMedium: 800px;
         border: 4px solid $c-signal;
         @at-root {
             .c-people-bg .boxgrid:before { border-color: $c-dark }
+            .c-signal-bg .boxgrid:before { border-color: $c-white }
         }
         position: absolute;
         top: 0;
@@ -133,6 +135,9 @@ $bgMqMedium: 800px;
 
             figcaption {
                 display: block;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
                 min-width: auto;
                 width: 100%;
                 padding-left: $s-small* 0.5;
@@ -141,6 +146,9 @@ $bgMqMedium: 800px;
                 flex: 1 0 0%;
                 h3, p {
                     padding: 0;
+                }
+                .button {
+                    align-self: center;
                 }
             }
         }

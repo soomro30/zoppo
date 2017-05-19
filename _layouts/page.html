@@ -3,35 +3,48 @@ layout: default
 ---
 <article class="page">
   
+  {% unless page.background-image_2880 == nil %}
+		{% if page.background == nil %}
+			<style>
+				.hero--{{page.slug}} {
+					background-image: url({{site.baseurl}}/assets/{{ page.background-image_1440 }});
+				}
+				@media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
+					.hero--{{page.slug}} {
+						background-image: url({{site.baseurl}}/assets/{{ page.background-image_2880 }});
+					}
+				}
+			</style>
+		{% endif %}
+	{% endunless %}
+	<div class="hero hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %} {{page.bg-color}}" id="work_{{ page.slug }}">
+		<header class="hero__header hyphenate">
+			{% if page.pagetitle != nil %}
+				{{ page.pagetitle | markdownify }}
+			{% else %}
+			<h1 itemprop="name headline">
+				{{ page.title }}
+			</h1>
+			{% endif %}
+			{% unless page.subtitl == nil %}
+				<h2>{{page.subtitle}}</h2>
+			{% endunless %}
+		</header>
 
-  <div class="hero hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %} {{page.bg-color}}" id="work_{{ page.slug }}">
-    <header class="hero__header hyphenate">
-        {% if page.pagetitle != nil %}
-          {{ page.pagetitle | markdownify }}
-        {% else %}
-          <h1 itemprop="name headline">
-            {{ page.title }}
-          </h1>
-        {% endif %}
-      {% unless page.subtitl == nil %}
-      <h2>{{page.subtitle}}</h2>
-      {% endunless %}
-    </header>
+		{% comment %}
+		###################################
+		## Get code for the background set
+		## in current curious-about post
+		{% endcomment %}
+		{% unless page.background == nil %}
+			<div class="hero__background">
+				{{ page.background }}
+			</div>
+		{% endunless %}
+	</div>
 
-    {% comment %}
-    ###################################
-    ## Get code for the background set
-    ## in current curious-about post
-    {% endcomment %}
-    {% unless page.background == nil %}
-    <div class="hero__background">
-      {{ page.background }}
-    </div>
-    {% endunless %}
-  </div>
-
-  <div>
-    {{ content }}
-  </div>
+	<div>
+		{{ content }}
+	</div>
 
 </article>

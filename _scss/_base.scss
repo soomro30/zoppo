@@ -10,7 +10,6 @@ body {
     font-size: calc( 12px + 0.5vw );
     line-height: $base-line-height;
     font-family: $base-font-family;
-    color: $text-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -59,7 +58,7 @@ svg { max-width: 100%}
 .image-loader {
     // display: inline-block;
     position: relative;
-    padding-bottom: 57.6388889%; // 144 : 83 ratio - ex 1440 x 830px
+    padding-bottom: 56.3%; // 16 : 9 ratio
     width: 100%;
     img {
         position: absolute;

@@ -1,21 +1,20 @@
 ---
-layout: work/malbaren
-title:  "Målbaren"
-subtitle: "High quality fast food"
+layout: work
+title:  "Paprica&shy;klubben"
+subtitle: "An interactive world for ICAs children club"
 author: "Jonas Sandstedt"
 author-email: jonas@fullyflared.se
-button-text: View case study
+button-text: View case
 date:   2017-04-27 12:00:00 +0100
 categories: design, branding, web
-slug: malbaren
-client: Matbaren
+slug: paprickklubben
+client: ICA
 project: Website
 link: http://målbaren.se
 link-text: Visit the site
 background-image_2880: "malbaren/pasta-parmesan-2400x1200.jpg"
 background-image_1440: "malbaren/pasta-parmesan-1024x512.jpg"
-background-image_720: "malbaren/pasta-parmesan-720x405.jpg"
-background-color: "#263644"
+background-color: "#80b568"
 
 ingress: |
   Matbaren (or “The Food Bar”) is the ideal alternative for grocery stores across Sweden that want to offer their customers higher quality “fast food.” They have been developing various food concepts to offer store clerks and their customers, and each time they come out with a new one, they turn to us for digital promotion. 

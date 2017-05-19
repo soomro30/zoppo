@@ -14,7 +14,8 @@ link: http://owdbob.com
 link-text: Visit the site
 background-image_2880: "owd-bob/background_2880.jpg"
 background-image_1440: "owd-bob/background_1440.jpg"
-backgrund-color: "#B98A3E"
+background-image_720: "owd-bob/background_720.jpg"
+background-color: "#B98A3E"
 
 ingress: |
   Given that Fully is a digital studio, the majority of our creations live, move and die on the Internet. This is a glorious thing; as an outlet for creativity, the digital world is boundless and constantly proffers new tools. The results can be stunning. 

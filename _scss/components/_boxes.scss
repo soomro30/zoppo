@@ -78,9 +78,10 @@
 // Boxtext
 .boxtext {
     background-color: $c-white;
-    padding: $s-small $s-small*0.5;
+    color: $c-dark;
+    padding: $s-small $s-small*0.25;
     @include media-query($on-palm) {
-        padding: $s-small*2 $s-small*2;    
+        padding: $s-small*2 $s-small;    
     }
     display: flex;
     align-items: center;
@@ -125,5 +126,22 @@
         //         border-color: $c-signal;
         //     }
         // }
+    }
+
+    &--simpleframe {
+        background-color: transparent;
+        color: inherit;
+        border-top: 4px solid $c-white;
+        border-left: 4px solid $c-white;
+        border-right: 4px solid $c-white;
+        margin-left: $s-small*0.5;
+        margin-right: $s-small*0.5;
+        margin-top: -$s-small*2;
+        position: relative;
+        z-index: 1;
+        @include media-query($on-laptop) {
+            margin-left: $s-small;
+            margin-right: $s-small;
+        }
     }
 }

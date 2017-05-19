@@ -14,6 +14,8 @@ link: http://matbaren.se
 link-text: Launch site
 background-image_2880: "matbaren/background_2880.jpg"
 background-image_1440: "matbaren/background_1440.jpg"
+background-image_720: "kakservice/frame-1.jpg"
+background-color: #222932
 
 ingress: |
   Order management systems are famously awful. For the most part, they’re sad, grey C-Sharp concoctions from the 90s – Enter our client, Matbaren (or “Food Bar” in English).

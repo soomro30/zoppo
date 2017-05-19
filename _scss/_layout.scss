@@ -73,7 +73,6 @@
             grid-row: 7 / span 8;
         }
     }
-
     
 }
 
@@ -94,6 +93,7 @@
 
 .footer {
     background-color: $c-white;
+    color: $c-dark;
     margin: 0 $s-small;
     
     @include media-query($on-laptop) {
@@ -116,6 +116,92 @@
     }
 }
 
+// Work layout
+.work-ingress {
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 4;
+    @include media-query($on-laptop) {
+        grid-column: 1 / span 5;
+        grid-row: 1 / span 6;
+    }
+}
+.work1-image {
+    grid-column: 1 / span 12;
+    grid-row: 9 / span 11;
+    @include media-query($on-laptop) {
+        grid-column: 1 / span 8;
+        grid-row: 7 / span 15;
+    }
+}
+.work1-text {
+    grid-column: 1 / -1;
+    grid-row: 5 / span 4;
+    z-index: 1;
+    @include media-query($on-laptop) {
+        grid-column: 8 / span 5;
+        grid-row: 5 / span 10;
+    }
+}
+
+.reelgrid {
+    margin-top: $s-small*2;
+    @include media-query($on-laptop) {
+        position: relative;
+        padding-top: $s-small*2;
+        margin-top: $s-small*4;
+        &__text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            z-index: 1;
+        }
+        &__video {
+            padding-bottom: 56.05%;
+        }
+    }
+}
+
+.work2-image {
+    grid-column: 1 / -1;
+    grid-row: 3 / span 10;
+    @include media-query($on-laptop) {
+        grid-column: 1 / 8;
+        grid-row: 5 / span 12;
+    }
+}
+
+.work2-text {
+    margin-top: $s-small*2;
+    grid-column: 1 / -1;
+    grid-row: 1 / span 2;
+    z-index: 1;
+    @include media-query($on-laptop) {
+        margin-top: 0;
+        grid-column: 8 / -1;
+        grid-row: 1 / span 20;
+    }
+}
+
+.work3-image {
+    grid-column: 1 / -1;
+    grid-row: 3 / span 15;
+    @include media-query($on-laptop) {
+        grid-row: 1 / span 18;
+    }
+}
+
+.work3-text {
+    margin-top: $s-small*2;
+    grid-column: 1 / -1;
+    grid-row: 1 / span 2;
+    z-index: 1;
+    @include media-query($on-laptop) {
+        margin-top: 0;
+        grid-column: 2 / span 5;
+        grid-row: 14 / span 7;
+    }
+}
 /**
  * Site header
  */

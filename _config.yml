@@ -11,6 +11,15 @@ facebook: "https://www.facebook.com/Fully-Flared-Digital-Agency-150488108297019/
 vimeo: "https://vimeo.com/fullystudios"
 instagram: "https://www.instagram.com/fullystudios/"
 
+# Papricaklubben
+case_highlight1_id: 6
+
+# Collector
+case_highlight2_id: 1
+
+# KappAhl
+case_highlight3_id: 2
+
 # Links
 works: "/works"
 about: "/about"
