@@ -64,7 +64,7 @@ layout: page
 
 </section>
 
-<div class="grid">
+<section class="grid">
     <!-- 
     ###################################################
     ## Get specific highlight posts set in _config.yml
@@ -107,10 +107,10 @@ layout: page
         <p>{{work2.subtitle}}</p>
         <a href="{{ work2.url | prepend: site.baseurl }}" class="button"><span>{{work2.button-text}}</span></a>
     </div>
-</div>
+</section>
 
 
-<div class="grid">
+<section class="grid space-after">
     <!-- 
     ###################################################
     ## Get specific highlight posts set in _config.yml
@@ -153,13 +153,13 @@ layout: page
         <p>{{work3.subtitle}}</p>
         <a href="{{ work3.url | prepend: site.baseurl }}" class="button"><span>{{work3.button-text}}</span></a>
     </div>
-</div>
+</section>
 
 <!-- 
 ####################
 ## Loop through the latest work
 -->
-<div class="boxgrid boxgrid--compact">
+<section class="boxgrid boxgrid--compact">
     <h2 class="boxgrid__header h4 invert">Recent work</h2>
     <!-- Get all work posts and revers them -->
     {% assign items = site.work | sort: 'date' | reverse %}
@@ -188,4 +188,4 @@ layout: page
         
     {% endfor %}
 
-</div>
+</section>

@@ -178,6 +178,7 @@
     z-index: 1;
     @include media-query($on-laptop) {
         margin-top: 0;
+        margin-right: $s-small;
         grid-column: 8 / -1;
         grid-row: 1 / span 20;
     }
