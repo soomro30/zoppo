@@ -68,6 +68,17 @@ imageline:
   - "owd-bob/post-3.jpg"
   - "owd-bob/post-4.jpg"
 
+slider:
+  slide1:
+    image: "owd-bob/slider-01-photo_finished_print_elin.jpg"
+    width: '947px'
+  slide2:
+    image: "owd-bob/slider-02-elinjonsson_insta.jpg"
+    width: '647px'
+  slide3:
+    image: "owd-bob/slider-03-screen-shot.jpg"
+    width: '710px'
+ 
 image3_1440: "owd-bob/instagram_1440.jpg"
 image3_alt: "Instagram feed"
 
