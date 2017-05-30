@@ -146,11 +146,61 @@ ready(function(){
 	};
 
 	// lory js ( image slider )
-   
-    // var variableWidth = document.querySelector('.js_variablewlidth');
 
-    // lory(variableWidth, {
-    //     rewind: true
-    // });
+    var js_slider 		  = document.querySelector('.js_slider');
+    var js_slides 		  = document.querySelector('.js_slides');  
+	var dot_count         = js_slider.querySelectorAll('.js_slide').length;
+	var dot_container     = js_slider.querySelector('.js_dots');
+	var dot_list_item     = document.createElement('li');
+
+
+	function handleDotEvent(e) {
+	   	
+	   console.log('handleDotEvent');
+
+	   if (e.type === 'before.lory.init') {
+	     for (var i = 0, len = dot_count; i < len; i++) {
+	       var clone = dot_list_item.cloneNode();
+	       dot_container.appendChild(clone);
+
+	       // var iw = js_slider.getElementsByTagName('img');
+	       // var iw = iw;
+	       // console.log(iw);
+	     }
+	     dot_container.childNodes[0].classList.add('active');
+	   }
+	   if (e.type === 'after.lory.init') {
+	     for (var i = 0, len = dot_count; i < len; i++) {
+	       dot_container.childNodes[i].addEventListener('click', function(e) {
+	         dot_navigation_slider.slideTo(Array.prototype.indexOf.call(dot_container.childNodes, e.target));
+	       });
+	     }
+	   }
+	   if (e.type === 'after.lory.slide') {
+	     for (var i = 0, len = dot_container.childNodes.length; i < len; i++) {
+	       dot_container.childNodes[i].classList.remove('active');
+	     }
+	     dot_container.childNodes[e.detail.currentSlide - 1].classList.add('active');
+	   }
+	   if (e.type === 'on.lory.resize') {
+	       for (var i = 0, len = dot_container.childNodes.length; i < len; i++) {
+	           dot_container.childNodes[i].classList.remove('active');
+	       }
+	       dot_container.childNodes[0].classList.add('active');
+	   }
+	}
+	
+	js_slider.addEventListener('before.lory.init', handleDotEvent);
+	js_slider.addEventListener('after.lory.init', handleDotEvent);
+	js_slider.addEventListener('after.lory.slide', handleDotEvent);
+	js_slider.addEventListener('on.lory.resize', handleDotEvent);
+
+	// js_slider.addEventListener('before.lory.init', handleVariableWidth);
+
+	var dot_navigation_slider = lory(js_slider, {
+	   infinite: 1,
+	   enableMouseEvents: true,
+	   ease: 'cubic-bezier(.17,.67,.38,1.03)'
+	});
 
 });
