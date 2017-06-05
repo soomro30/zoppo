@@ -203,6 +203,48 @@
         grid-row: 14 / span 7;
     }
 }
+
+// Curiosities layout
+.grid--curiosities {
+    .bgimage:nth-of-type(1) {
+        grid-column: 1 / -1;
+        grid-row: 3 / span 10;
+        @include media-query($on-laptop) {
+            grid-row: 1 / span 17;
+        }
+    }
+
+    .boxtext:nth-of-type(1) {
+        z-index: 1;
+        grid-column: 1 / -1;
+        grid-row: 3 / span 10;
+        @include media-query($on-laptop) {
+            grid-column: 2 / span 5;
+            grid-row: 14 / span 7;
+        }
+    }
+
+    .bgimage:nth-of-type(2) {
+        grid-column: 1 / -1;
+        grid-row: 3 / span 10;
+        @include media-query($on-laptop) {
+            grid-column: 1 / span 8;
+            grid-row: 22 / span 17;
+        }
+    }
+
+    .boxtext:nth-of-type(2) {
+        z-index: 1;
+        grid-column: 1 / -1;
+        grid-row: 3 / span 10;
+        @include media-query($on-laptop) {
+            grid-column: 8 / span 5;
+            grid-row: 20 / span 10;
+        }
+    }
+
+}
+
 /**
  * Site header
  */

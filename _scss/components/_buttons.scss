@@ -92,6 +92,22 @@ $bshadow: 3px; // the size of the shadow
 		}
 	}
 
+	&--curiosities {
+		span {
+			border-color: $c-curiosities;
+			background-color: $c-dark;
+			color: $c-curiosities;
+		}
+		&:after {
+			background-color: $c-curiosities;
+		}
+		&:active {
+			span {
+				color: $c-dark;
+			}
+		}
+	}
+
 	&--nav {
 		span {
 			padding: 0;

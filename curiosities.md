@@ -3,7 +3,7 @@ layout: curiosities
 title: Curiousities
 permalink: /curiousities/
 slug: curiousities
-bg-color: c-curiosities-bg
+background-color: "#ffde7f"
 redirect_from: /curious-about/
 ---
 

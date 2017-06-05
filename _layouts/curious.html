@@ -3,8 +3,25 @@ layout: default
 ---
 <article class="page cc-{{ page.slug }}" itemscope itemtype="http://schema.org/BlogPosting">
 	
-	<div class="hero hero--cc hero--{{ page.slug }}">
-		<!-- <span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span> -->
+	{% unless page.background-image_2880 == nil %}
+		{% if page.background == nil %}
+			<style>
+				.hero--{{page.slug}} {
+					background-image: url({{site.baseurl}}/assets/curious-about/{{page.slug}}/{{ page.background-image_1440 }});
+				}
+				@media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
+					.hero--{{page.slug}} {
+						background-image: url({{site.baseurl}}/assets/curious-about/{{page.slug}}/{{ page.background-image_2880 }});
+					}
+				}
+			</style>
+		{% endif %}
+	{% endunless %}
+	<div class="hero hero--cc hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %}" id="work_{{ page.slug }}">
+		{% comment %}<span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span>{% endcomment %}
+
+		
+		{% comment %}<header class="hero__header hero__header--shadow">{% endcomment %}
 		<header class="hero__header">
 			<h1 itemprop="name headline">
 				<span class="hero__subheader">Current curiosity:</span> 
@@ -14,43 +31,25 @@ layout: default
 			{% comment %}<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} {% endcomment %}
 			{% comment %}<span class="categories">{{ page.categories }}<span></p>{% endcomment %}
 		</header>
-		
-		<!-- 
+
+		{% comment %}
 		###################################
 		## Get code for the background set
 		## in current curious-about post
-		-->
+		{% endcomment %}
 		{% unless page.background == nil %}
 		<div class="hero__background">
 			{{ page.background }}
 		</div>
 		{% endunless %}
 
-		<div class="metabox column__wrapper">
-			<div class="column column--vertical">
-				<strong class="meta-description">Client:</strong>
-				<span class="meta">Internal lab</span>
-			</div>
-			<div class="column column--vertical">
-				<strong class="meta-description">Project:</strong>
-				<span class="meta">E-commerce</span>
-			</div>
-			<div class="column column--vertical">
-				<a href="#" class="button"><span>Visit the site</span></a>
-			</div>
+		{% unless page.ingress == nil %}
+		<div class="metabox column__wrapper center">
+			<h4>
+				{{ page.ingress | markdownify }}
+			</h4>
 		</div>
-
-		<!-- 
-		####################
-		## Get scripts from
-		## current post
-		-->
-		{% for js in cc.scripts %}
-			{% assign root = 'js/' %}
-			<script type="text/javascript">
-			{% include {{ root | append: js }} %}
-			</script>
-		{% endfor %}
+		{% endunless %}
 
     </div>
 
@@ -61,11 +60,6 @@ layout: default
 		## Get all content (sections) from
 		## the current curious-about post
 		-->
-		{% unless page.ingress == nil %}
-		<div class="ingress">
-			{{ page.ingress | markdownify }}
-		</div>
-		{% endunless %}
 
 		{% unless page.section2 == nil %}
 		<div class="section section--2">

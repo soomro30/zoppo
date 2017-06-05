@@ -5,6 +5,10 @@ subtitle: "In Pursuit of Blissful DevEx"
 date:   2017-04-04 12:00:00 +0100
 categories: respnsive design, web, CSS
 slug: developer-experience
+background-image_720: "hero_720.jpg"
+background-image_1440: "hero.jpg"
+background-image_2880: "hero@2x.jpg"
+background-color: "#67E287"
 
 ingress: |
   Luckily for those who can’t draw to save their lives, in our present digital era you don’t need to be a good drawer to be a good designer. You can create entire worlds without having to pick up a pen.

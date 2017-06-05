@@ -7,7 +7,7 @@ pagetitle: |
   #### [Looking for someone special?](#we-are-fully)
 permalink: /contact/
 slug: about
-bg-color: "c-people-bg"
+background-color: "c-people-bg"
 
 employees:
   - name: Robin Kollberg

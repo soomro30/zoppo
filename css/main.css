@@ -340,6 +340,9 @@ h5, .h5, h6, .h6 {
   font-size: 1em;
   letter-spacing: 0.125em; }
 
+.sub-header {
+  font-size: 1.25em; }
+
 /**
  * Links
  */
@@ -621,6 +624,39 @@ p {
       margin-top: 0;
       grid-column: 2 / span 5;
       grid-row: 14 / span 7; } }
+
+.grid--curiosities .bgimage:nth-of-type(1) {
+  grid-column: 1 / -1;
+  grid-row: 3 / span 10; }
+  @media screen and (min-width: 50em) {
+    .grid--curiosities .bgimage:nth-of-type(1) {
+      grid-row: 1 / span 17; } }
+
+.grid--curiosities .boxtext:nth-of-type(1) {
+  z-index: 1;
+  grid-column: 1 / -1;
+  grid-row: 3 / span 10; }
+  @media screen and (min-width: 50em) {
+    .grid--curiosities .boxtext:nth-of-type(1) {
+      grid-column: 2 / span 5;
+      grid-row: 14 / span 7; } }
+
+.grid--curiosities .bgimage:nth-of-type(2) {
+  grid-column: 1 / -1;
+  grid-row: 3 / span 10; }
+  @media screen and (min-width: 50em) {
+    .grid--curiosities .bgimage:nth-of-type(2) {
+      grid-column: 1 / span 8;
+      grid-row: 22 / span 17; } }
+
+.grid--curiosities .boxtext:nth-of-type(2) {
+  z-index: 1;
+  grid-column: 1 / -1;
+  grid-row: 3 / span 10; }
+  @media screen and (min-width: 50em) {
+    .grid--curiosities .boxtext:nth-of-type(2) {
+      grid-column: 8 / span 5;
+      grid-row: 20 / span 10; } }
 
 /**
  * Site header
@@ -1001,6 +1037,14 @@ p {
       color: #0a2a4f; }
       .boxtext--frame--curiosities:before {
         border-color: #ffde7f; }
+    .boxtext--frame--darkoncuriosity {
+      background-color: #0a2a4f;
+      color: #ffde7f; }
+      .boxtext--frame--darkoncuriosity:before {
+        border-color: #0a2a4f; }
+      .boxtext--frame--darkoncuriosity:after {
+        border-left-color: #ffde7f;
+        border-right-color: #ffde7f; }
   .boxtext--simpleframe {
     background-color: transparent;
     color: inherit;
@@ -1016,6 +1060,15 @@ p {
       .boxtext--simpleframe {
         margin-left: 30px;
         margin-right: 30px; } }
+  .boxtext--texttop {
+    padding-top: 7.5px;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    @media screen and (min-width: 600px) {
+      .boxtext--texttop {
+        padding-top: 30px; } }
+  .boxtext__texttop {
+    margin-bottom: 30px; }
 
 .boxgrid {
   display: -ms-flexbox;
@@ -1236,6 +1289,14 @@ p {
     background-color: #ffffff; }
   .button--inv:active span {
     color: #5f11e8; }
+  .button--curiosities span {
+    border-color: #ffde7f;
+    background-color: #0a2a4f;
+    color: #ffde7f; }
+  .button--curiosities:after {
+    background-color: #ffde7f; }
+  .button--curiosities:active span {
+    color: #0a2a4f; }
   .button--nav span {
     padding: 0;
     line-height: 0;

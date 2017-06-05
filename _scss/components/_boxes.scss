@@ -120,6 +120,18 @@
                 border-color: $c-curiosities;
             }
         }
+        &--darkoncuriosity {
+            background-color: $c-dark;
+            color: $c-curiosities;
+            &:before {
+                border-color: $c-dark;
+            }
+            &:after {
+                border-left-color: $c-curiosities;
+                border-right-color: $c-curiosities;
+                
+            }
+        }
         // &--signal {
         //     background-color: $c-signal;
         //     &:before {
@@ -143,5 +155,17 @@
             margin-left: $s-small;
             margin-right: $s-small;
         }
+    }
+
+    &--texttop {
+        padding-top: $s-small*0.25;
+        justify-content: space-between;
+        @include media-query($on-palm) {
+            padding-top: $s-small;    
+        }
+    }
+
+    &__texttop {
+        margin-bottom: $s-small;
     }
 }

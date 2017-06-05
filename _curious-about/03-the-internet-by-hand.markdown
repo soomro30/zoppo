@@ -1,9 +1,15 @@
 ---
 layout: curious
 title:  "The Internet by hand"
+subtitle: "You can create entire worlds without having to pick up a pen."
 date:   2017-04-27 11:07:00 +0100
 categories: art, design, web
 slug: the-internet-by-hand
+background-image_720: "hero_720.jpg"
+background-image_1440: "hero_3.jpg"
+background-image_2880: "hero_3@2x.jpg"
+background-color: "#f8f8f8"
+
 ingress: |
   Luckily for those who can’t draw to save their lives, in our present digital era you don’t need to be a good drawer to be a good designer. You can create entire worlds without having to pick up a pen.
 section1: |
