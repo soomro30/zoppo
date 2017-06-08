@@ -31,6 +31,7 @@ $bgMqMedium: 800px;
     }
 
     &__box {
+        
         width: 100%;
         position: relative;
         margin-top: $s-small;
@@ -41,7 +42,6 @@ $bgMqMedium: 800px;
         max-width: 30em;
         flex-direction: column;
         align-items: flex-start;
-        
         @media (min-width: $bgMqMedium) {
             width: auto;
             flex: 1 0 calc(50% - #{$s-small});
@@ -49,12 +49,6 @@ $bgMqMedium: 800px;
             margin-right: $s-small * 0.5;
             margin-left: $s-small * 0.5;
         }
-
-
-        figcaption {
-            flex: 1 0 0%;
-        }
-
         
         &:after {
             content:"";
@@ -66,16 +60,17 @@ $bgMqMedium: 800px;
             width: $bgShadow;
         }
         &:nth-of-type(even) {
+            align-items: flex-end;
             &:after {
                 left: auto;
                 right: -$bgShadow;         
             }
             text-align: right;
-            figcaption {
+            .boxgrid__caption {
                 text-align: left;
                 padding-left: $bgShadow;
             }
-            figure {
+            .boxgrid_box {
                 align-items: flex-end;
             }
         }
@@ -85,7 +80,11 @@ $bgMqMedium: 800px;
         }
     }
 
-    figcaption {
+    &__caption {
+        flex: 1 0 0%;
+    }
+
+    &__caption {
         background: $c-white;
         color: $c-dark;
         display: inline-block;
@@ -114,8 +113,18 @@ $bgMqMedium: 800px;
             right: 12%;
         }
         @media (min-width: $bgMqMedium) {
-            left: 8.3%;
-            right: 8.3%;
+            left: 7%;
+            right: 7%;
+        }
+    }
+
+    &--curiosity {
+        .boxgrid__header {
+            color: $c-curiosities;
+        }
+        &:before {
+            border-color: $c-curiosities;
+
         }
     }
 
@@ -136,7 +145,7 @@ $bgMqMedium: 800px;
                 display: none;
             }
 
-            figcaption {
+            .boxgrid__caption {
                 display: block;
                 display: flex;
                 justify-content: space-between;
