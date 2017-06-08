@@ -34,6 +34,27 @@
         }
     }
 
+    // 2 column grid component. Example: Case internet by hand
+    &__column-large {
+        margin-bottom: $s-small;
+        grid-column: 1 / span 12;
+        grid-row: 1;
+        justify-self: center;
+        @include media-query($on-laptop) {
+            grid-column: 1 / span 8;
+        }
+    }
+    &__column-small {
+        margin-bottom: $s-small;
+        grid-column: 1 / span 12;        
+        grid-row: 2;
+        justify-self: center;
+        @include media-query($on-laptop) {
+            grid-column: 9 / span 4;
+            grid-row: 1;
+        }
+    }
+
     // 2 column offset component. Example: Landing Case
     &__offsetcolumn1-2 {
         grid-column: 1 / span 12;
@@ -309,6 +330,12 @@
         @include media-query($on-laptop) {
             flex: 1 0  calc(33.333% - #{$s-small*0.5});
             max-width: calc(33.333% - #{$s-small*0.5});
+        }
+        &--two {
+            @include media-query($on-laptop) {
+                flex: 1 0  calc(50% - #{$s-small*0.5});
+                max-width: calc(50% - #{$s-small*0.5});
+            }
         }
     }
     img {
