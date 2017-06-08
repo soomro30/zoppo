@@ -14,4 +14,10 @@ $moveMetabox: 4em;
     @include media-query($on-laptop) {
         transform: translate3D(0,$moveMetabox,0);
     }
+
+    &--offset {
+        // margin-top: -$s-small*4;
+        transform: translate3D(0,-$moveMetabox,0);
+        animation: moveOffset 0.7s forwards cubic-bezier(0.3,0,.1,1);
+    }
 }
