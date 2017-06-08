@@ -84,7 +84,7 @@ layout: default
         {% endunless %}
     </div>
     <header class="boxtext boxtext--texttop center hyphenate">
-        <p class="c-dark boxtext__texttop">Current Curiosity</p>
+        <p class="c-dark boxtext__texttop">Constant Curiosity</p>
         <div>
         {% if curiosity.pagetitle != nil %}
             {{ curiosity.pagetitle | markdownify }}
@@ -118,7 +118,7 @@ layout: default
 -->
 <section class="boxgrid boxgrid--compact">
     <h2 class="boxgrid__header h4 invert">All curiosities</h2>
-    <!-- Get all work posts and revers them -->
+    <!-- Get all curiositie posts -->
     {% assign items = site.curious-about | sort: 'date' %}
     {% assign root = 'js/' %}
     

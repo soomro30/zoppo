@@ -27,7 +27,7 @@ layout: default
 				<span class="hero__subheader">Current curiosity:</span> 
 				{{ page.title }}
 			</h1>
-			<h2>{{page.subtitle}}</h2>
+			
 			{% comment %}<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} {% endcomment %}
 			{% comment %}<span class="categories">{{ page.categories }}<span></p>{% endcomment %}
 		</header>
@@ -43,129 +43,58 @@ layout: default
 		</div>
 		{% endunless %}
 
-		{% unless page.ingress == nil %}
-		<div class="metabox column__wrapper center">
-			<h4>
-				{{ page.ingress | markdownify }}
-			</h4>
-		</div>
-		{% endunless %}
-
     </div>
 
-	<div class="content" itemprop="articleBody">
-		
-		<!-- 
-		###################################
-		## Get all content (sections) from
-		## the current curious-about post
-		-->
-
-		{% unless page.section2 == nil %}
-		<div class="section section--2">
-			<div class="text-content">
-				{{ page.section2 | markdownify }}
+	<main class="content" itemprop="articleBody">
+		{% unless page.ingress == nil %}
+		<div class="c-white-bg">
+			<div class="metabox metabox--offset column__wrapper center">
+				<h4>
+					{{ page.ingress | markdownify }}
+				</h4>
 			</div>
 		</div>
 		{% endunless %}
 
-		{% unless page.section3 == nil %}
-		<div class="section section--3">
+		{{ content }}
 
-			<div class="text-content">
-				<div class="section--3__image" id="lettering2"></div>
-				{% comment %} move to scriptfile {% endcomment %}
-				<script type="text/javascript">
-				var lettering2 = document.getElementById('lettering2');
-				if( lettering2 ) {
-				    // var filepath = '/assets/owd-bob/feb27.svg';
-				    //var filepath = '/assets/owd-bob/apr12.svg';
-				    var filepath = '/assets/owd-bob/june16.svg';
-				    var lettering2_v = new Vivus('lettering2', {
-				        duration: 250, 
-				        file: filepath,
-				        type: 'delayed',
-				        animTimingFunction: Vivus.EASE_OUT,
-				    });
-
-
-				}
-				</script>
-				<div>
-				{{ page.section3 | markdownify }}
-				</div>
-			</div>
-		</div>
-		{% endunless %}
-
-		{% unless page.section4 == nil %}
-		<div class="section section--4">
-			<div class="l-offset">
-				<div class="image-container image-container--wide">
-					<picture class="image">
-						<source srcset="{{ "/assets/owd-bob/mona_with_logo_2300.jpg" | prepend: site.baseurl }}" media="(min-width: 1800px)">
-						<source srcset="{{ "/assets/owd-bob/mona_with_logo_1200.jpg" | prepend: site.baseurl }}" media="(min-width: 641px)">
-						<img srcset="{{ "/assets/owd-bob/mona_with_logo_1200.jpg" | prepend: site.baseurl }}" alt="Owd Bob's logo on top of Mona Lisa">
-					</picture>
-				</div>
-			</div>
-			<div class="l-offset l-offset--right">
-				<div class="text-content text-content--right">
-					{{ page.section4 | markdownify }}
-				</div>
-			</div>
-		</div>
-		{% endunless %}
-
-		{% unless page.section5 == nil %}
-		<div class="section section--5">
-			<div class="text-content">
-
-				<div class="keyhole">
-				    <div class="keyhole__content">
-				        <img src="{{ "/assets/owd-bob/instagram-feed_elin-johnsson.jpg" | prepend: site.baseurl }}" alt="Instagram feed from Owd Bob">
-				    </div>
-				    <!-- <svg class="keyhole__svg" xmlns="http://www.w3.org/2000/svg" width="200" height="300" viewBox="0 0 200 300"><title>keyhole</title><path d="M100,0a80,80,0,0,1,56.12,137l-2.43,2.39c-2.91,2.37-4.68,8.76-3.93,14.21l18.87,136.49A8.49,8.49,0,0,1,160,300h40V0H100Z"/><path d="M0,300H40a8.49,8.49,0,0,1-8.63-9.91L50.24,153.6c0.75-5.45-1-11.84-3.93-14.21L43.88,137A80,80,0,0,1,100,0H0V300Z"/></svg> -->
-					<svg class="keyhole__svg" data-name="398d550c-2dd8-4e6d-b011-699f00888ff8" xmlns="http://www.w3.org/2000/svg" width="200" height="340" viewBox="0 0 200 340"><title>keyhole-invert</title><path d="M0-20V300H40a8.49,8.49,0,0,1-8.63-9.91L50.24,153.6c0.75-5.45-1-11.84-3.93-14.21L43.88,137a80,80,0,1,1,112.24,0l-2.43,2.39c-2.91,2.37-4.68,8.76-3.93,14.21l18.87,136.49A8.49,8.49,0,0,1,160,300h40V-20H0Z" transform="translate(0 20)"/><rect y="320" width="200" height="20"/></svg>
-
-				</div>
-
-				<div class="text">
-					{{ page.section5 | markdownify }}
-				</div>
-			</div>
-		</div>
-		{% endunless %}
-
-		{% unless page.section6 == nil %}
-		<div class="section section--6">
-			<div class="text-content">
-				{{ page.section6 | markdownify }}
-				<a href="{{site.baseurl}}/contact" class="button"><span>Get in touch</span></a>
-			</div>
-		</div>
-		{% endunless %}
-
-	</div>
+	</main>
 
 </article>
 
 
-<header class="text-content">
-	<h2>Other curiousities:</h2>
-</header>
-<ul class="">
-	{% for curious in site.curious-about %}
+
+<div class="boxgrid boxgrid--curiosity">
+	<h2 class="boxgrid__header h4">Check out our other curiousities</h2>
+	{% for curious in site.curious-about limit:3 %}
 		{% if curious.title == page.title %}
 			{% continue %}
 		{% endif %}
-		<li class="">
-			<!-- <span class="case-meta">{{ case.date | date: "%b %-d, %Y" }}</span> -->
-			<a class="" href="{{ curious.url | prepend: site.baseurl }}">
-				<h2 class="">
-					{{ curious.title }}
-				</h2>
-			</a>
-		</li>
+		<a class="boxgrid__box" href="{{ curious.url | prepend: site.baseurl }}">
+			
+				<div class="image-loader" style="background: #ccc">
+				{% unless curious.background-image_1440 == nil %}
+					<img src="{{site.baseurl}}/assets/curious-about/{{curious.slug}}/{{curious.background-image_1440}}" alt="{{ curious.title }}">	
+				{% endunless %}
+				</div>
+				<div class="boxgrid__caption">
+					<h3>{{ curious.title }}</h3>
+					<p>{{ curious.subtitle }}</p>
+				</div>
+			
+		</a>
 	{% endfor %}
-</ul>
+</div>
+
+{% comment %}
+####################
+## Get scripts from
+## current post
+{% endcomment %}
+
+{% for js in page.scripts %}
+	{% assign root = 'js/' %}
+	<script type="text/javascript">
+	{% include {{ root | append: js }} %}
+	</script>
+{% endfor %}

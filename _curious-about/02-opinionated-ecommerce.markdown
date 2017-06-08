@@ -1,6 +1,7 @@
 ---
 layout: curious
 title:  "Opinionated e-commerce"
+subtitle: "Lorem ipsum"
 date:   2016-11-30 12:00:00 +0100
 categories: e-commerce, web, UX
 slug: opinionated-ecommerce

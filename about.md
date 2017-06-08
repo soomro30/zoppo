@@ -5,7 +5,7 @@ pagetitle: |
   # Fully Studios is a Swedish web and film studio specializing in motion on the web.
 permalink: /about/
 slug: about
-background-color: "c-business-bg"
+background-color: "#7BD75E"
 section1: |
   Basically, we’re interested in making the web more vibrant. Through websites, illustration and film. Vivid narratives and animated web design.
 

@@ -60,6 +60,7 @@ svg { max-width: 100%}
     position: relative;
     padding-bottom: 56.3%; // 16 : 9 ratio
     width: 100%;
+    overflow: hidden;
     img {
         position: absolute;
         top: 0;

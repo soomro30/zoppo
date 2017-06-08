@@ -84,15 +84,13 @@ layout: default
 			{% continue %}
 		{% endif %}
 		<a class="boxgrid__box" href="{{ work.url | prepend: site.baseurl }}">
-			<figure>
-				<div class="image-loader" style="background: #ccc"> 
-					<img src="{{site.baseurl}}/assets/{{work.background-image_1440}}" alt="{{ work.title }}">	
-				</div>
-				<figcaption>
-					<h3>{{ work.title }}</h3>
-					<p>{{ work.subtitle }}</p>
-				</figcaption>
-			</figure>
+			<div class="image-loader" style="background: #ccc"> 
+				<img src="{{site.baseurl}}/assets/{{work.background-image_1440}}" alt="{{ work.title }}">	
+			</div>
+			<div class="boxgrid__caption">
+				<h3>{{ work.title }}</h3>
+				<p>{{ work.subtitle }}</p>
+			</div>
 		</a>
 	{% endfor %}
 </div>

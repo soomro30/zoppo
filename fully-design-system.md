@@ -5,9 +5,11 @@ permalink: /design-system/
 published: true
 author: Jonas Sandstedt
 date: 2017-04-24
+background-image_1440: '../assets/introfilmen-poster.jpg'
+background-image_2880: '../assets/introfilmen-poster.jpg'
 ---
 
-<header class="ds-header" markdown='1'>
+<header class="ds-header" markdown='1' style="margin-top: 0">
 ## Colors
 </header>
 
@@ -359,6 +361,46 @@ Load images with style
     alt="A beautiful cat">	
 </div>
 
+```
+
+
+<header class="ds-header" markdown='1'>
+## Backgrund image
+</header>
+
+<style>
+    #{{page.slug}}_bg {
+        background-image: url(../assets/introfilmen-poster.jpg);
+    }
+    @media (min-width: 800px) {
+        #{{page.slug}}_bg {
+            background-image: url(../assets/introfilmen-poster.jpg);
+        }
+    }
+</style>
+<div class="background-image background-image--padding flexcenter invert" id="{{page.slug}}_bg" markdown="1">
+    Availible classes:
+    .background-image
+    .background-image--padding
+    .background-image--largepadding
+</div>
+
+```
+{% raw %}
+<style>
+    #{{page.slug}}_bg {
+        background-image: url(../assets/introfilmen-poster.jpg);
+    }
+    @media (min-width: 800px) {
+        #{{page.slug}}_bg {
+            background-image: url(../assets/introfilmen-poster.jpg);
+        }
+    }
+</style>
+<div class="background-image background-image--padding flexcenter invert" id="{{page.slug}}_bg">
+    <p>Lorem ipsum</p>
+</div>
+{% endraw %}
 ```
 
 <header class="ds-header" markdown='1'>
