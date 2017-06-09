@@ -20,7 +20,7 @@ layout: case
 <div class="imagegrid">
 {% for frame in page.frames %}
 	<div class="imagegrid__image">
-		<img class="image" src="{{site.baseurl}}/assets/{{frame}}">
+		<img class="image" src="{{site.baseurl}}/assets/work/{{page.slug}}/{{frame}}">
 	</div>
 {% endfor %}
 </div>
@@ -36,9 +36,9 @@ layout: case
             <img class="image"
                 alt="{{column5050_image_alt}}"
                 width="1440" height="1653"
-                src="{{site.baseurl}}/assets/{{ page.column5050_image_720 }}" 
-                srcset="{{site.baseurl}}/assets/{{ page.column5050_image_1440 }} 1440w,
-                        {{site.baseurl}}/assets/{{ page.column5050_image_720 }} 720w"
+                src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.column5050_image_720 }}" 
+                srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.column5050_image_1440 }} 1440w,
+                        {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.column5050_image_720 }} 720w"
                 sizes="100vw">
         </div>
     </section>

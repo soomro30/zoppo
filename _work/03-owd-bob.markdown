@@ -12,10 +12,10 @@ client: Internal lab
 project: E-commerce
 link: http://owdbob.com
 link-text: Visit the site
-background-image_2880: "owd-bob/background_2880.jpg"
-background-image_1440: "owd-bob/background_1440.jpg"
-background-image_720: "owd-bob/background_720.jpg"
-background-color: "#B98A3E"
+background-image_2880: "background_2880.jpg"
+background-image_1440: "background_1440.jpg"
+background-image_720: "background_720.jpg"
+background-image_color: "#B98A3E"
 
 ingress: |
   Given that Fully is a digital studio, the majority of our creations live, move and die on the Internet. This is a glorious thing; as an outlet for creativity, the digital world is boundless and constantly proffers new tools. The results can be stunning. 
@@ -26,8 +26,8 @@ section1: |
 
   When art buying started to shift to the web, I noticed that both these things -- the thrill and the respect -- were being lost in translation. Print stores like Society 6 were selling artists’ work in bulk, and splashing their prints across mugs and t-shirts and all kinds of cheap ephemera. The artists went under-paid and under-noticed. Meanwhile, as a buyer, it was difficult to find “something special” when everything was 1 of 5,000+.
 
-image1_1440: "owd-bob/paintings_1440.jpg"
-image1_720: "owd-bob/paintings_720.jpg"
+image1_1440: "paintings_1440.jpg"
+image1_720: "paintings_720.jpg"
 image1_alt: "Paintings"
 
 section2: |
@@ -52,8 +52,8 @@ section3: |
   Visit Owd Bob on<br>
   [instagram](https://instagram.com)
 
-image2_2880: "owd-bob/mona_2880.jpg"
-image2_1440: "owd-bob/mona_1440.jpg"
+image2_2880: "mona_2880.jpg"
+image2_1440: "mona_1440.jpg"
 image2_alt: "Mona lisa with Owd Bobs logo masking her face"
 
 section4: |
@@ -63,23 +63,23 @@ section4: |
   The opening hours were revealed on Instagram only. If you missed them, you needed to go back and check. Otherwise the opportunity was gone and the store’s “doors” closed yet again. We hoped this would inspire people to actively visit our profile, and to see the store opening as an event.
 
 imageline:
-  - "owd-bob/post-1.jpg"
-  - "owd-bob/post-2.jpg"
-  - "owd-bob/post-3.jpg"
-  - "owd-bob/post-4.jpg"
+  - "post-1.jpg"
+  - "post-2.jpg"
+  - "post-3.jpg"
+  - "post-4.jpg"
 
 slider:
   slide1:
-    image: "owd-bob/slider-01-photo_finished_print_elin.jpg"
+    image: "slider-01-photo_finished_print_elin.jpg"
     width: '947px'
   slide2:
-    image: "owd-bob/slider-02-elinjonsson_insta.jpg"
+    image: "slider-02-elinjonsson_insta.jpg"
     width: '647px'
   slide3:
-    image: "owd-bob/slider-03-screen-shot.jpg"
+    image: "slider-03-screen-shot.jpg"
     width: '710px'
  
-image3_1440: "owd-bob/instagram_1440.jpg"
+image3_1440: "instagram_1440.jpg"
 image3_alt: "Instagram feed"
 
 

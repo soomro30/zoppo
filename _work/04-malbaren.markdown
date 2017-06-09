@@ -12,16 +12,16 @@ client: Matbaren
 project: Website
 link: http://målbaren.se
 link-text: Visit the site
-background-image_2880: "malbaren/pasta-parmesan-2400x1200.jpg"
-background-image_1440: "malbaren/pasta-parmesan-1024x512.jpg"
-background-image_720: "malbaren/pasta-parmesan-720x405.jpg"
-background-color: "#263644"
+background-image_2880: "pasta-parmesan-2400x1200.jpg"
+background-image_1440: "pasta-parmesan-1024x512.jpg"
+background-image_720: "pasta-parmesan-720x405.jpg"
+background-image_color: "#263644"
 
 ingress: |
   Matbaren (or “The Food Bar”) is the ideal alternative for grocery stores across Sweden that want to offer their customers higher quality “fast food.” They have been developing various food concepts to offer store clerks and their customers, and each time they come out with a new one, they turn to us for digital promotion. 
 
-image1_1440: "malbaren/process1_1440.jpg"
-image1_720: "malbaren/process1_720.jpg"
+image1_1440: "process1_1440.jpg"
+image1_720: "process1_720.jpg"
 image1_alt: "Process"
 
 section2: |
@@ -35,8 +35,8 @@ section3: |
 
   We came up with the name Målbaren, which is a play on words in Swedish, as mål means both “meal” and “goal.” The tagline, “för målmedvetna människor” means both “for determined people” and “for food conscious people.” 
 
-image2_2880: "malbaren/vagn-concept_2880.jpg"
-image2_1440: "malbaren/vagn-concept_1440.jpg"
+image2_2880: "vagn-concept_2880.jpg"
+image2_1440: "vagn-concept_1440.jpg"
 image2_alt: "Mona lisa with Owd Bobs logo masking her face"
 
 section4: |
@@ -46,8 +46,8 @@ section4: |
 
   But we didn’t go over the top with it. We went for streamlined and sporty with subtle details. 
 
-image3_2880: "malbaren/colors_2880.jpg"
-image3_1440: "malbaren/colors_1440.jpg"
+image3_2880: "colors_2880.jpg"
+image3_1440: "colors_1440.jpg"
 image3_alt: "Målbaren color scheme"
 
 section5: |
@@ -58,11 +58,11 @@ section6: |
   For the typeface in the logo, I wanted something with power and energy in it, and with an anatomical feel if I could find it. I decided quite quickly it should be in italic, which gives the impression of forward-moving speed. And in bold too, for all the obvious reasons. 
   Panton Italic was ideal. If you look closely at the hairline creases in the M, A, and N it looks somewhat like flexed muscles. 
 
-image4_2880: "malbaren/process1_2880.jpg"
-image4_1440: "malbaren/process1_1440.jpg"
+image4_2880: "process1_2880.jpg"
+image4_1440: "process1_1440.jpg"
 image4_alt: "Målbaren logo design process"
 
-image5: "malbaren/tyop.svg"
+image5: "tyop.svg"
 image5_alt: "Detail on typeface Panton"
 
 section7: |
@@ -81,10 +81,10 @@ section9: |
 
   When I sloped them downwards it was an instant visual relief. (Who doesn’t love the downhill?) It also fit better with the idea that Målbaren’s food is quick and easy.
 
-image6_2880: "malbaren/site-screens_2880.jpg"
-image6_1440: "malbaren/site-screens_1440.jpg"
-image6_mobile_1x: "malbaren/site-screen-mobile@1x.jpg"
-image6_mobile_2x: "malbaren/site-screen-mobile@2x.jpg"
+image6_2880: "site-screens_2880.jpg"
+image6_1440: "site-screens_1440.jpg"
+image6_mobile_1x: "site-screen-mobile@1x.jpg"
+image6_mobile_2x: "site-screen-mobile@2x.jpg"
 
 section10: |
   <span class="custom-button malbaren-button">And<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></span>

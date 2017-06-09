@@ -8,17 +8,17 @@ layout: default
 		{% if page.background == nil %}
 			<style>
 				.hero--{{page.slug}} {
-					background-image: url({{site.baseurl}}/assets/{{ page.background-image_1440 }});
+					background-image: url({{site.baseurl}}/assets/work/{{page.slug}}/{{ page.background-image_1440 }});
 				}
 				@media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
 					.hero--{{page.slug}} {
-						background-image: url({{site.baseurl}}/assets/{{ page.background-image_2880 }});
+						background-image: url({{site.baseurl}}/assets/work/{{page.slug}}/{{ page.background-image_2880 }});
 					}
 				}
 			</style>
 		{% endif %}
 	{% endunless %}
-	<div class="hero hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %}" id="work_{{ page.slug }}">
+	<div class="hero hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %}" id="work_{{ page.slug }}" {% unless page.background-image_color == nil %} style="background-color: {{page.background-image_color}}"{% endunless %}>
 		{% comment %}<span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span>{% endcomment %}
 		<header class="hero__header hero__header--shadow">
 			<h1 itemprop="name headline">
@@ -84,8 +84,8 @@ layout: default
 			{% continue %}
 		{% endif %}
 		<a class="boxgrid__box" href="{{ work.url | prepend: site.baseurl }}">
-			<div class="image-loader" style="background: #ccc"> 
-				<img src="{{site.baseurl}}/assets/{{work.background-image_1440}}" alt="{{ work.title }}">	
+			<div class="image-loader" style="background: {{work.background-image_color}}"> 
+				<img src="{{site.baseurl}}/assets/work/{{work.slug}}/{{work.background-image_1440}}" alt="{{ work.title }}">	
 			</div>
 			<div class="boxgrid__caption">
 				<h3>{{ work.title }}</h3>

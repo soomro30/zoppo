@@ -8,9 +8,10 @@ categories: film, web
 slug: collector
 client: Collector
 project: Web and film
-background-image_2880: "kakservice/ks-background_1440.jpg"
-background-image_1440: "kakservice/ks-background_1440.jpg"
-background-color: "#2a153f"
+background-image_2880: "hero@2x.jpg"
+background-image_1440: "hero.jpg"
+background-image_720: "hero_720.jpg"
+background-image_color: "#2a153f"
 author: Joakim & Jonathan
 
 ingress: |
@@ -20,12 +21,12 @@ videos:
   - "https://www.youtube.com/embed/oVzgmvZ8DdY?rel=0&amp;showinfo=0"
 
 frames:
-  - "kakservice/frame-1.jpg"
-  - "kakservice/frame-2.jpg"
-  - "kakservice/frame-3.jpg"
-  - "kakservice/frame-4.jpg"
-  - "kakservice/frame-5.jpg"
-  - "kakservice/frame-6.jpg"
+  - "frame-1.jpg"
+  - "frame-2.jpg"
+  - "frame-3.jpg"
+  - "frame-4.jpg"
+  - "frame-5.jpg"
+  - "frame-6.jpg"
 
 ---
 Collector is a Scandinavian online-only bank, known for its refreshing digital-first approach to finance. They are continuously growing, and wanted to showcase their stellar numbers from 2016. 
