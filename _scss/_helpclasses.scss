@@ -83,6 +83,9 @@
             padding: $s-small*4 0;
         }
     }
+    &--contain {
+        background-size: contain;
+    }
 }
 
 

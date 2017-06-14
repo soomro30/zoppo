@@ -223,7 +223,7 @@ a grid with images and texts. Used in "other projects"
         src=" http://placekitten.com/g/1440/830"
         alt="A beautiful cat">	
     </div>
-    <figcaption>
+    <figcaption class="boxgrid__caption">
         <h3>A beautiful cat</h3>
         <p>lorem ipsum</p>
     </figcaption>
@@ -235,7 +235,7 @@ a grid with images and texts. Used in "other projects"
         src="http://placekitten.com/g/1440/830"
         alt="A beautiful cat">	
     </div>
-    <figcaption>
+    <figcaption class="boxgrid__caption">
         <h3>Another beautiful cat</h3>
         <p>Lorem ipsum dolem es simet</p>
     </figcaption>
@@ -250,7 +250,7 @@ a grid with images and texts. Used in "other projects"
         <div class="image-loader" style="background: #c1c1c1"> <!--Change this color to an average color from the image-->
             <img src="" alt="Fig title">	
         </div>
-        <figcaption>
+        <figcaption class="boxgrid__caption">
             <h3>Fig title</h3>
             <p>Fig Description</p>
         </figcaption>
@@ -269,7 +269,7 @@ a grid with images and texts. Used in "other projects"
             src=" http://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
-        <figcaption>
+        <figcaption class="boxgrid__caption">
             <h3 class="h4">A beautiful cat</h3>
             <p>lorem ipsum</p>
             <a href="#" class="button"><span>View case</span></a>
@@ -281,7 +281,7 @@ a grid with images and texts. Used in "other projects"
             src="http://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
-        <figcaption>
+        <figcaption class="boxgrid__caption">
             <h3 class="h4">Another beautiful cat</h3>
             <p>Lorem ipsum</p>
             <a href="#" class="button"><span>View case</span></a>
@@ -293,7 +293,7 @@ a grid with images and texts. Used in "other projects"
             src="http://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
-        <figcaption>
+        <figcaption class="boxgrid__caption">
             <h3 class="h4">Another beautiful cat</h3>
             <p>Lorem ipsum dolem es simet es lorem ipsum</p>
             <a href="#" class="button"><span>View case</span></a>
@@ -305,7 +305,7 @@ a grid with images and texts. Used in "other projects"
             src="http://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
-        <figcaption>
+        <figcaption class="boxgrid__caption">
             <h3 class="h4">Another beautiful cat</h3>
             <p>Lorem ipsum</p>
             <a href="#" class="button"><span>View case</span></a>
@@ -317,7 +317,7 @@ a grid with images and texts. Used in "other projects"
             src="http://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
-        <figcaption>
+        <figcaption class="boxgrid__caption">
             <h3 class="h4">Lorem ipsum</h3>
             <p>Lorem ipsum dolem es simet lorem</p>
             <a href="#" class="button"><span>View case</span></a>
@@ -329,7 +329,7 @@ a grid with images and texts. Used in "other projects"
             src="http://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
-        <figcaption>
+        <figcaption class="boxgrid__caption">
             <h3 class="h4">Another beautiful cat</h3>
             <p>Lorem ipsum dolem es simet</p>
             <a href="#" class="button"><span>View case</span></a>

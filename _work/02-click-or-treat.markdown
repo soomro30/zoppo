@@ -2,12 +2,16 @@
 layout: work/click-or-treat
 title:  Click or Treat
 subtitle: "Mission: Scare Gothenburg"
-button-text: View film
+author: "Jonathan David Asp"
+author-email: jonathan.asp@fullystudios.se
+button-text: Get scared
 date:   2017-06-08 12:00:00 +0100
 categories: film
 slug: click-or-treat
-client: Kakservice
-project: Animated film
+client: DDB / Liseberg
+project: Campaign
+link: "#open-cot"
+link-text: Try the demo
 background-image_2880: hero.jpg
 background-image_1440: hero.jpg
 background-image_720: hero_720.jpg
@@ -15,25 +19,77 @@ background-image_color: "#000000"
 background-color: "#000000"
 
 ingress: |
-  Click ingress
+  One day I got a call from DDB, an agency we collaborate with quite regularly. They usually get in contact when they need an interactive banner or campaign site, as we’re well known around town for our web animation savvy.
 
-videos: 
-  - "https://www.youtube.com/embed/oVzgmvZ8DdY?rel=0&amp;showinfo=0"
+  This time they wanted to enlist our help with a very specific mission: to scare Göteborg.
 
-column5050_text: |
-  When you make this kind of film, or any film, you start out with a storyboard. It’s drawn in a simplified style, but in a way that communicates the essence of the film. In this case, the entire film was drawn by hand (but, you know, in digital files). Then came After Effects for animation, sound and final polish.
+section1: |
+  Their aim was to pull off a digital marketing stunt that would drive foot traffic to the Halloween festivities at Liseberg. To do this, they were toying with the question how to make a traditional “boo!” kind of scare go digital.
 
-column5050_image_1440: "kakservice/ks_process_1440.jpg"
-column5050_image_720: "kakservice/ks_process_720.jpg"
-column5050_image_alt: "alt text"
+image1_2880: "liseberg-halloween@2x.jpg"
+image1_1440: "liseberg-halloween.jpg"
+image1_720: "liseberg-halloween_720.jpg"
 
-frames:
-  - "kakservice/frame-1.jpg"
-  - "kakservice/frame-2.jpg"
-  - "kakservice/frame-3.jpg"
-  - "kakservice/frame-4.jpg"
-  - "kakservice/frame-5.jpg"
-  - "kakservice/frame-6.jpg"
+section2: |
+  ## The idea
+  
+  #### Jonas and I went over to DDB’s office the next day to flesh out the idea, which was this: to scare the lights out of people when they’re reading (what they think is) a normal web article and have a terrifying face/scream pop up out of nowhere. 
+
+  The idea was brilliant and to do it any justice, the execution had to be perfect. We completely cleared our schedules to make this thing come aaaalive. 
+  
+  In the process, we learned that scaring someone in the digital realm shares the same principles as in the real world. 
+
+section3-headline: How to scare someone
+section3: |
+  #### 1. Find a great hiding place
+
+  **The more unsuspecting your target is, the better.**
+
+  In this case the hiding place would be in the webpages of Nöjesbladet, Sweden’s largest entertainment website. 
+
+  We worked extensively with Nöjesbladet’s technical team to embed the scare-code on every article that appeared on their front page. All that was needed to trigger it was the addition of a few characters at the end of article’s URL. We covered our footprints well. 
+
+  The best bit was the screen override would happen when the viewer scrolled halfway down, so they’d be distracted by reading when AAHHH THE HORROR!
+
+section3_image_medium: "bu-url@2x.jpg"
+section3_image_small: "bu-url.jpg"
+section3_image_alt: "/article21463075.ab?bu=uu"
+
+section4: |
+  #### 2. Don't give yourself away early
+
+  Ssssshhhhh.
+
+  The loading had to be just right. The video clip and the audio had to come at precisely the same time -- one couldn’t come before the other. Not even a millisecond of a glitch. 
+
+  When working across multiple different browsers and devices, getting this perfect took some doing. 
+
+  The video was too heavy on bandwidth so to speed up the loading time, we divided the video into an image sequence and removed a few frames. This also solved the problem of display on smartphones so users wouldn’t need to press “play” to show the video. 
+
+  [bild på dator]
+
+section5: |
+  #### 3. Look scary. Sound scary. Be scary. 
+
+  Go all out. 
+
+  The video DDB/Liseberg supplied us was perfect -- a very creepy joker man accompanied by a blood-curdling scream. Surprising and scary, but not overly grotesque. For the days we were working on this project, the office resounded with shrieks around every 5 minutes. 
+
+  [bild]
+
+  [bild]
+
+section6: |
+  ## Success!
+
+  This prank-PR turned out to be a huge hit. Ten thousand scares were recorded in the first 48 hours. And by the end, 200,000 people had visited -- twice more than expected. DDB & Fully even shared a prize for it, winning the Bronze Guldnyckeln. 
+
+section7: |
+  [bild]
+
+  It was fun for us to return to our roots, in a way. Before Fully started doing HTML websites, we were famous for flash sites. We had so much fun with it. But there were a lot of sites that went totally overboard, and it was understandable that the Internet turned its back on animation for a period of years. But now it can be really powerful to introduce it in small and tasteful doses. It’s something fresh and unexpected, creating awesome results when deployed as a marketing tactic.  
+
+  Granted this project wasn’t a flash animation (we coded it with HTML/Javascript), but it very well could have been. I think we’ll see more and more animation on the web, programmed in all sorts of ways. The gif renaissance is proof that people are hungry for it again. 
 
 ---
 Kakservice has been around since the 70’s. In their early days they sold cinnamon buns and newspapers to sailors in the Fjällbacka archipelago. Today their cookies go to schools, sport clubs and organisations, where they are then sold to help raise funds for special causes and programs.
