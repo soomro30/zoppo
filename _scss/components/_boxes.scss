@@ -143,10 +143,10 @@
 
     &--simpleframe {
         background-color: transparent;
-        color: inherit;
-        border-top: 4px solid $c-white;
-        border-left: 4px solid $c-white;
-        border-right: 4px solid $c-white;
+        color: $c-signal;
+        border-top: 4px solid $c-signal;
+        border-left: 4px solid $c-signal;
+        border-right: 4px solid $c-signal;
         margin-left: $s-small*0.5;
         margin-right: $s-small*0.5;
         margin-top: -$s-small*2;

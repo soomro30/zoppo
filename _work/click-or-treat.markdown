@@ -12,7 +12,7 @@ client: DDB / Liseberg
 project: Campaign
 link: "#open-cot"
 link-text: Try the demo
-background-image_2880: hero.jpg
+background-image_2880: hero@2x.jpg
 background-image_1440: hero.jpg
 background-image_720: hero_720.jpg
 background-image_color: "#000000"

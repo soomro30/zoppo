@@ -16,11 +16,11 @@
         {% unless work.background-image_2880 == nil %}
             <style>
                 .grid__offsetcolumn1-2 {
-                    background-image: url({{site.baseurl}}/assets/{{ work.background-image_1440 }});
+                    background-image: url({{site.baseurl}}/assets/work/{{work.slug}}/{{ work.background-image_1440 }});
                 }
                 @media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
                     .grid__offsetcolumn1-2 {
-                        background-image: url({{site.baseurl}}/assets/{{ work.background-image_2880 }});
+                        background-image: url({{site.baseurl}}/assets/work/{{work.slug}}/{{ work.background-image_2880 }});
                     }
                 }
             </style>

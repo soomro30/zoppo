@@ -12,10 +12,10 @@ client: Internal lab
 project: E-commerce
 link: http://owdbob.com
 link-text: Visit the site
-background-image_2880: "background_2880.jpg"
-background-image_1440: "background_1440.jpg"
-background-image_720: "background_720.jpg"
-background-image_color: "#B98A3E"
+background-image_2880: "hero@2x.jpg"
+background-image_1440: "hero.jpg"
+background-image_720: "hero_720.jpg"
+background-image_color: "#c9cba3"
 
 ingress: |
   Given that Fully is a digital studio, the majority of our creations live, move and die on the Internet. This is a glorious thing; as an outlet for creativity, the digital world is boundless and constantly proffers new tools. The results can be stunning. 

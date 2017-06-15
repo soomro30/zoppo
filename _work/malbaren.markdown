@@ -12,10 +12,10 @@ client: Matbaren
 project: Website
 link: http://målbaren.se
 link-text: Visit the site
-background-image_2880: "pasta-parmesan-2400x1200.jpg"
-background-image_1440: "pasta-parmesan-1024x512.jpg"
-background-image_720: "pasta-parmesan-720x405.jpg"
-background-image_color: "#263644"
+background-image_2880: "hero@2x.jpg"
+background-image_1440: "hero.jpg"
+background-image_720: "hero_720.jpg"
+background-image_color: "#49B276"
 
 ingress: |
   Matbaren (or “The Food Bar”) is the ideal alternative for grocery stores across Sweden that want to offer their customers higher quality “fast food.” They have been developing various food concepts to offer store clerks and their customers, and each time they come out with a new one, they turn to us for digital promotion. 

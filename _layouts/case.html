@@ -20,7 +20,8 @@ layout: default
 	{% endunless %}
 	<div class="hero hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %}" id="work_{{ page.slug }}" {% unless page.background-image_color == nil %} style="background-color: {{page.background-image_color}}"{% endunless %}>
 		{% comment %}<span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span>{% endcomment %}
-		<header class="hero__header hero__header--shadow">
+		<header class="hero__header">
+		{% comment %}hero__header--shadow{% endcomment %}
 			<h1 itemprop="name headline">
 				{{ page.title }}
 			</h1>
