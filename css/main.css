@@ -343,8 +343,8 @@ h2, .h2, .navigation__link, .navigation__overlay {
   max-width: calc( 22.4em + 60px); }
 
 h3, .h3 {
-  font-size: 2em;
-  max-width: calc( 28em + 60px); }
+  font-size: 1.5em;
+  max-width: calc( 37.35em + 60px); }
 
 h4, .h4, .ingress p {
   font-size: 1.5em;

@@ -13,10 +13,10 @@ section2: |
   Above all else, we like to make digital products that are solidly and thoughtfully built.
 
 section3: |
-  #### With the fundamentals nailed down, we can explore and carry out the more dazzling experiments at the intersection of art and code.
+  ### With the fundamentals nailed down, we can explore and carry out the more dazzling experiments at the intersection of art and code.
 
 section4: |
-  #### This is what the Curiosities are all about -- following our noses through barely-charted territories of design. These creative romps keep us sharp and adaptive and, usually, we end up exactly where we need to be.
+  ### This is what the Curiosities are all about -- following our noses through barely-charted territories of design. These creative romps keep us sharp and adaptive and, usually, we end up exactly where we need to be.
 
 button-text: Check them out
 button-url: "/curiousities/"

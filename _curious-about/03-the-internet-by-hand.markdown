@@ -20,7 +20,7 @@ section2: |
   Over the years, we’ve done dozens of projects for clients involving custom illustrations and animated movies. But having poly-talented illustrators in our midst has prompted us to experiment with translating the handwritten arts to the web in new ways.
 
 section3: |
-  #### Perhaps we sound a little Dr. Frankenstein-esque, but we’re looking to liberate our hand-drawn creations from their rectangles.
+  ### Perhaps we sound a little Dr. Frankenstein-esque, but we’re looking to liberate our hand-drawn creations from their rectangles.
 
 section4: |
   But busting them out of their .png files and video players isn’t just a nerdy design wish. It’s actually an imperative for the future of hand-drawn elements on the web. It’s not feasible for these assets to be fixed files anymore. The rise of mobile devices and the massive variance in screen sizes means that all websites, and all the content on them, need to be responsive.
@@ -32,7 +32,7 @@ divider-image_small: "tomeloop.png"
 divider-image_alt: "Tomte walkcycle"
 
 section5: |
-  #### The implications for interactive storytelling and powerful infographics are far-reaching. We’ve dabbled a bit thusfar and the results are pretty stellar:
+  ### The implications for interactive storytelling and powerful infographics are far-reaching. We’ve dabbled a bit thusfar and the results are pretty stellar:
 
 section5-image1_small: "example.png"
 section5-image1_medium: "example.png"
@@ -48,7 +48,7 @@ section6_image_medium: "illustration_bg.jpg"
 section6_image_large: "illustration_bg@2x.jpg"
 
 section7: |
-  #### It follows that we’re fascinated by how we can get art to live on the web. Rather than just “upload” it, we want to translate it completely and entirely to a digital medium through code, and in doing so, expand its capabilities.
+  ### It follows that we’re fascinated by how we can get art to live on the web. Rather than just “upload” it, we want to translate it completely and entirely to a digital medium through code, and in doing so, expand its capabilities.
 
 section8: |
   As the technology develops, we think this kind of animation will play a larger and larger role in web experiences. Granted it’s not the future, but it is a future of the web. Computer-generated imagery (CGI) will only continue to grow in importance. But as it does, hand-drawn imagery will provide a fresh alternative that delivers a staggering visceral impact when done well.

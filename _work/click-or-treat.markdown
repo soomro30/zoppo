@@ -33,7 +33,7 @@ image1_720: "liseberg-halloween_720.jpg"
 section2: |
   ## The idea
   
-  #### Jonas and I went over to DDB’s office the next day to flesh out the idea, which was this: to scare the lights out of people when they’re reading (what they think is) a normal web article and have a terrifying face/scream pop up out of nowhere. 
+  ### Jonas and I went over to DDB’s office the next day to flesh out the idea, which was this: to scare the lights out of people when they’re reading (what they think is) a normal web article and have a terrifying face/scream pop up out of nowhere. 
 
   The idea was brilliant and to do it any justice, the execution had to be perfect. We completely cleared our schedules to make this thing come aaaalive. 
   
@@ -41,7 +41,7 @@ section2: |
 
 section3-headline: How to scare someone
 section3: |
-  #### 1. Find a great hiding place
+  ### 1. Find a great hiding place
 
   **The more unsuspecting your target is, the better.**
 
@@ -56,7 +56,7 @@ section3_image_small: "bu-url.jpg"
 section3_image_alt: "/article21463075.ab?bu=uu"
 
 section4: |
-  #### 2. Don't give yourself away early
+  ### 2. Don't give yourself away early
 
   Ssssshhhhh.
 
@@ -71,7 +71,7 @@ section4_image_small: "laptop_720.jpg"
 section4_image_alt: Image of a laptop with Aftonbladets "Nöjes"-page
 
 section5: |
-  #### 3. Look scary. Sound scary. Be scary. 
+  ### 3. Look scary. Sound scary. Be scary. 
 
   Go all out. 
 

@@ -14,4 +14,4 @@ reel-sub: Showreel 2017
 
 ---
 
-#### Browse around and have a look. These are our featured projects. Give us a shout if you find anything you like.
+### Browse around and have a look. These are our featured projects. Give us a shout if you find anything you like.

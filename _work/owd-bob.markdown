@@ -32,7 +32,7 @@ image1_alt: "Paintings"
 
 section2: |
   ## The idea
-  #### I called Mikael late one night with an idea: to set up an online print store that would be open for only 48 hours at a time.
+  ### I called Mikael late one night with an idea: to set up an online print store that would be open for only 48 hours at a time.
 
   Each 48-hour cycle would feature just one print and one artist, created specially for the project and never to be reprinted again. Like the lithographs of old, each print would be numbered. There would only be so many printed as were ordered. If you pass it up, the webshop closes and it’s gone. 
   

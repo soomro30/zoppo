@@ -96,11 +96,11 @@ Headlines, textblock etc.
 
 ### H3 headline
 
-#### H4 headline
+### H4 headline
 
-##### H5 headline
+#### H5 headline
 
-###### H6 headline
+##### H6 headline
 
 Paragraph text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis maiores hic quo optio alias odit voluptas debitis autem voluptate, facilis quaerat numquam, porro maxime repellendus sapiente a illum eius adipisci.
 
@@ -411,7 +411,7 @@ Example of a custom CSS grid layout using a container with the class `grid`.
 <div class="grid grid--space case-highlight" markdown='1'>
 <div class="flexcenter center background-image invert grid__offsetcolumn1-2" id="lettering2" markdown='1' style="background-image: url(../assets/introfilmen-poster.jpg)">
 
-#### div #exampleimage
+### div #exampleimage
 ``` scss
 grid-column: 1 / span 12;
 grid-row: 4 / span 13;
@@ -421,7 +421,7 @@ grid-row: 4 / span 13;
 }
 ```
 
-#### div #exampletext
+### div #exampletext
 ``` scss
 grid-column: 2 / span 13;
 grid-row: 1 / span 4; 

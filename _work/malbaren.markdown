@@ -31,7 +31,7 @@ section2: |
 
 section3: |
   ## Branding, go!
-  #### When it came to thinking of a name, we searched for a single word that would combine the values of both exercise and food. It needed to be memorable and show a kinship with Matbaren’s other concepts.
+  ### When it came to thinking of a name, we searched for a single word that would combine the values of both exercise and food. It needed to be memorable and show a kinship with Matbaren’s other concepts.
 
   We came up with the name Målbaren, which is a play on words in Swedish, as mål means both “meal” and “goal.” The tagline, “för målmedvetna människor” means both “for determined people” and “for food conscious people.” 
 
@@ -72,7 +72,7 @@ section7: |
 
 section8: |
   ## To the Internet!
-  #### Next up was a website for Målbaren.
+  ### Next up was a website for Målbaren.
 
   I wanted to incorporate the concept of motion throughout the site. In subtle ways, though. Even in symbolic, non-moving ways. 
 
