@@ -15,7 +15,7 @@ background-image_color: "#2a153f"
 author: Joakim & Jonathan
 
 ingress: |
-  Lorem ipsum
+  Collector is a Scandinavian online-only bank, known for its refreshing digital-first approach to finance. They are continuously growing, and wanted to showcase their stellar numbers from 2016. 
 
 videos: 
   - "https://www.youtube.com/embed/oVzgmvZ8DdY?rel=0&amp;showinfo=0"
