@@ -98,33 +98,6 @@ section7_image2_medium: "halloween_mobile.jpg"
 section7_image2_alt: "Lorem ipsum"
 
 ---
-Kakservice has been around since the 70’s. In their early days they sold cinnamon buns and newspapers to sailors in the Fjällbacka archipelago. Today their cookies go to schools, sport clubs and organisations, where they are then sold to help raise funds for special causes and programs.
+One day I got a call from DDB, an agency we collaborate with quite regularly. They usually get in contact when they need an interactive banner or campaign site, as we’re well known around town for our web animation savvy.
 
-
-
-
-layout: case
-title:  "Click or Treat"
-subtitle: "High quality fast food"
-author: "Jonas Sandstedt"
-author-email: jonas@fullyflared.se
-button-text: View case study
-date:   2017-06-09 12:00:00 +0100
-categories: front-end, campaign, web
-slug: click-or-treat
-client: DDB / Liseberg
-project: Campaign
-link: "#open-demo"
-link-text: Try the demo
-background-image_2880: "hero.jpg"
-background-image_1440: "hero.jpg"
-background-image_720: "hero_720.jpg"
-background-color: "#000000"
-
-ingress: |
-  Click or treat lorem ipsum
-
-image1_1440: "malbaren/process1_1440.jpg"
-image1_720: "malbaren/process1_720.jpg"
-image1_alt: "Process"
-
+This time they wanted to enlist our help with a very specific mission: to scare Göteborg.
