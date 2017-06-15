@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: case
 title:  "Paprica&shy;klubben"
 subtitle: "An interactive world for ICAs children club"
 author: "Jonas Sandstedt"

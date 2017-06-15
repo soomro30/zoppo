@@ -2,8 +2,6 @@
 layout: case
 ---
 
-lol
-
 {% unless page.section1 == nil %}
     <style>
         #{{page.slug}}_bg {
@@ -38,7 +36,7 @@ lol
             </div>
             <div class="grid__column2-2 flexcenter">
                 <img class="image"
-                    alt="{{section3_image_alt}}"
+                    alt="{{page.section3_image_alt}}"
                     width="1440" height="1653"
                     src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3_image_small }}" 
                     srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3_image_medium }} 1440w,
@@ -53,8 +51,39 @@ lol
 
 
 {% unless page.section4 == nil %}
-    <div class="sectionspacing invert">
-        {{ page.section4 | markdownify }}
+
+    <style>
+        #section4_bg .grid__column1-2 {
+            background-image: url(../../assets/work/{{page.slug}}/{{page.section4_image_small}});
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: 0% 100%;
+            padding-bottom: 20em;
+            height: 30vh;
+        }
+        @media (min-width: 800px) {
+            #section4_bg .grid__column1-2 {
+                background: none;
+                height: auto;
+            }
+            #section4_bg {
+                background-image: url(../../assets/work/{{page.slug}}/{{page.section4_image_medium}});
+                background-position: 0% 100%;
+                padding-bottom: 10vw;
+            }
+        }
+    </style>
+
+    <div class="grid grid--space invert background-image background-image--contain" 
+        id="section4_bg">
+        <div class="grid__column1-2"
+            role="img"
+            aria-label="{{section4_image_alt}}"
+            title="{{section4_image_alt}}">
+        </div>
+        <div class="grid__column2-2">
+            {{ page.section4 | markdownify }}
+        </div>
     </div>
 {% endunless %}
 
@@ -65,13 +94,49 @@ lol
 {% endunless %}
 
 {% unless page.section6 == nil %}
-    <div class="box box--business box--center">
-        {{ page.section6 | markdownify }}
+    <img src="../../assets/work/{{page.slug}}/{{page.section6_image1}}" alt="Image sprite of a scare dude" class="image">
+    <style>
+        #section6_bg {
+            background-image: url(../../assets/work/{{page.slug}}/{{page.section6_image2}});
+            min-height: calc(3em + 100vh);
+            background-size: contain;
+            background-position: top center;
+        }
+    </style>
+    <div class="background-image flexend" id="section6_bg">
+        <div class="box box--business box--center">
+            {{ page.section6 | markdownify }}
+        </div>
     </div>
 {% endunless %}
 
+{% unless page.section7_image1_large == nil %}
+<div class="grid grid--space grid--padding">
+    <div class="grid__column-large">
+        <img class="image"
+            alt="{{page.section7_image1_alt}}"
+            width="1726" height="1028"
+            src="{{site.baseurl}}/assets/work/{{page.slug}}/{{page.section7_image1_large}}" 
+            srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{page.section7_image1_large}} 1724w,
+                    {{site.baseurl}}/assets/work/{{page.slug}}/{{page.section7_image1_medium}} 863w"
+            sizes="(min-width: 580px) 50vw,
+                100vw">
+    </div>
+    <div class="grid__column-small">
+        <img class="image"
+            alt="{{page.section7_image2_alt}}"
+            width="1726" height="1028"
+            src="{{site.baseurl}}/assets/work/{{page.slug}}/{{page.section7_image2_large}}" 
+            srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{page.section7_image2_large}} 1724w,
+                    {{site.baseurl}}/assets/work/{{page.slug}}/{{page.section7_image2_medium}} 863w"
+            sizes="(min-width: 580px) 50vw,
+                100vw">
+    </div>
+</div>
+{% endunless %}
+
 {% unless page.section7 == nil %}
-    <div class="sectionspacing invert">
+    <div class="invert">
         {{ page.section7 | markdownify }}
         <p>
             <a class="metabutton" href="mailto:{{page.author-email}}">
@@ -80,3 +145,40 @@ lol
         </p>
     </div>
 {% endunless %}
+
+<style>
+    #lisebergScareFrame {
+        position: fixed;
+        top: 0; right: 0; bottom: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        z-index: 100;
+    }
+</style>
+<iframe class="hidden" id="lisebergScareFrame" src="{{site.baseurl}}/assets/work/{{page.slug}}/click-or-treat.html"></iframe>
+<script>
+    var scareFrameClicked = false;
+
+    //Function to click on button
+    scareButton = document.getElementById('click-or-treat_button');
+    scareFrame = document.getElementById('lisebergScareFrame');
+
+    scareButton.addEventListener('click', function(e){
+        e.preventDefault();
+        scareFrame.contentWindow.postMessage("onscrolltriggerd", "*");
+        scareFrameClicked = true;
+    });
+
+    // Lissen to message event from the iframe
+    window.addEventListener('message', function(e) {
+        if (scareFrameClicked) {
+            if (e.data === "runhalloweenprank") {
+                scareFrame.classList.remove('hidden');
+            } else if (e.data === "endhalloweenprank") {
+                scareFrame.classList.add('hidden');
+                scareFrameClicked = false;
+            }
+        }
+    });
+</script>

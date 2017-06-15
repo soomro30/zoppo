@@ -16,16 +16,16 @@
     // 2 column grid component. Example: Case Owd Bob
     &__column1-2 {
         margin-bottom: $s-small;
-        grid-column: 1 / span 12;
+        grid-column: 1 / -1;
         grid-row: 1;
-        justify-self: center;
         @include media-query($on-laptop) {
+            justify-self: center;
             grid-column: 1 / span 6;
         }
     }
     &__column2-2 {
         margin-bottom: $s-small;
-        grid-column: 1 / span 12;        
+        grid-column: 1 / -1;        
         grid-row: 2;
         justify-self: center;
         @include media-query($on-laptop) {
@@ -37,7 +37,7 @@
     // 2 column grid component. Example: Case internet by hand
     &__column-large {
         margin-bottom: $s-small;
-        grid-column: 1 / span 12;
+        grid-column: 1 / -1;
         grid-row: 1;
         justify-self: center;
         @include media-query($on-laptop) {
@@ -46,7 +46,7 @@
     }
     &__column-small {
         margin-bottom: $s-small;
-        grid-column: 1 / span 12;        
+        grid-column: 1 / -1;        
         grid-row: 2;
         justify-self: center;
         @include media-query($on-laptop) {
@@ -57,7 +57,7 @@
 
     // 2 column offset component. Example: Landing Case
     &__offsetcolumn1-2 {
-        grid-column: 1 / span 12;
+        grid-column: 1 / -1;
         grid-row: 4 / span 13;
         @include media-query($on-laptop) {
             grid-column: 1 / span 8;
@@ -82,7 +82,7 @@
 
     // Fullwidth image with box underneath
     &__fullwidth {
-        grid-column: 1 / span 12;
+        grid-column: 1 / -1;
         grid-row: 1 / span 10; 
     }
 
@@ -139,7 +139,7 @@
 
 // Work layout
 .work-ingress {
-    grid-column: 1 / span 12;
+    grid-column: 1 / -1;
     grid-row: 1 / span 4;
     @include media-query($on-laptop) {
         grid-column: 1 / span 5;
@@ -147,7 +147,7 @@
     }
 }
 .work1-image {
-    grid-column: 1 / span 12;
+    grid-column: 1 / -1;
     grid-row: 9 / span 11;
     @include media-query($on-laptop) {
         grid-column: 1 / span 8;
@@ -188,7 +188,7 @@
     grid-row: 3 / span 10;
     @include media-query($on-laptop) {
         grid-column: 1 / 8;
-        grid-row: 5 / span 12;
+        grid-row: 5 / -1;
     }
 }
 

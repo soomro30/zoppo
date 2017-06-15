@@ -5,7 +5,7 @@ pagetitle: |
   # This is what we do
 permalink: /work/
 slug: work
-background-color: "c-signal-bg"
+background-color: "#5F11E8"
 background-image_2880: "work_bg@2.jpg"
 background-image_1440: "work_bg.jpg"
 reel-text: Keep it REEL!

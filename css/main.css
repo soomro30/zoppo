@@ -486,15 +486,15 @@ p {
     padding-right: 30px; }
   .grid__column1-2 {
     margin-bottom: 30px;
-    grid-column: 1 / span 12;
-    grid-row: 1;
-    justify-self: center; }
+    grid-column: 1 / -1;
+    grid-row: 1; }
     @media screen and (min-width: 50em) {
       .grid__column1-2 {
+        justify-self: center;
         grid-column: 1 / span 6; } }
   .grid__column2-2 {
     margin-bottom: 30px;
-    grid-column: 1 / span 12;
+    grid-column: 1 / -1;
     grid-row: 2;
     justify-self: center; }
     @media screen and (min-width: 50em) {
@@ -503,7 +503,7 @@ p {
         grid-row: 1; } }
   .grid__column-large {
     margin-bottom: 30px;
-    grid-column: 1 / span 12;
+    grid-column: 1 / -1;
     grid-row: 1;
     justify-self: center; }
     @media screen and (min-width: 50em) {
@@ -511,7 +511,7 @@ p {
         grid-column: 1 / span 8; } }
   .grid__column-small {
     margin-bottom: 30px;
-    grid-column: 1 / span 12;
+    grid-column: 1 / -1;
     grid-row: 2;
     justify-self: center; }
     @media screen and (min-width: 50em) {
@@ -519,7 +519,7 @@ p {
         grid-column: 9 / span 4;
         grid-row: 1; } }
   .grid__offsetcolumn1-2 {
-    grid-column: 1 / span 12;
+    grid-column: 1 / -1;
     grid-row: 4 / span 13; }
     @media screen and (min-width: 50em) {
       .grid__offsetcolumn1-2 {
@@ -539,7 +539,7 @@ p {
         grid-column: 8 / span 5;
         grid-row: 1 / span 8; } }
   .grid__fullwidth {
-    grid-column: 1 / span 12;
+    grid-column: 1 / -1;
     grid-row: 1 / span 10; }
   .grid__boxunder {
     grid-column: 2 / span 10;
@@ -581,7 +581,7 @@ p {
       grid-template-columns: 1fr 1fr; } }
 
 .work-ingress {
-  grid-column: 1 / span 12;
+  grid-column: 1 / -1;
   grid-row: 1 / span 4; }
   @media screen and (min-width: 50em) {
     .work-ingress {
@@ -589,7 +589,7 @@ p {
       grid-row: 1 / span 6; } }
 
 .work1-image {
-  grid-column: 1 / span 12;
+  grid-column: 1 / -1;
   grid-row: 9 / span 11; }
   @media screen and (min-width: 50em) {
     .work1-image {
@@ -627,7 +627,7 @@ p {
   @media screen and (min-width: 50em) {
     .work2-image {
       grid-column: 1 / 8;
-      grid-row: 5 / span 12; } }
+      grid-row: 5 / -1; } }
 
 .work2-text {
   margin-top: 60px;
@@ -974,7 +974,8 @@ p {
   @media screen and (min-width: 600px) {
     .box {
       margin-left: 30px;
-      margin-bottom: 30px; } }
+      margin-bottom: 30px;
+      width: calc(100% - 60px); } }
   .box:before {
     content: "";
     display: block;
@@ -2080,6 +2081,16 @@ p {
   -ms-flex-direction: column;
       flex-direction: column; }
 
+.flexend {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
 .background-image {
   background-size: cover;
   background-position: center;
@@ -2110,3 +2121,6 @@ p {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
       hyphens: auto; }
+
+.hidden {
+  display: none; }

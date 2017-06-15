@@ -51,7 +51,7 @@ layout: default
 			</div>
 			{% unless page.link == nil %}
 			<div class="column column--vertical">
-				<a href="{{page.link}}" class="button"><span>{{page.link-text}}</span></a>
+				<a href="{{page.link}}" class="button" id="{{page.slug}}_button"><span>{{page.link-text}}</span></a>
 			</div>
 			{% endunless %}
 		</div>

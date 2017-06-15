@@ -66,7 +66,9 @@ section4: |
 
   The video was too heavy on bandwidth so to speed up the loading time, we divided the video into an image sequence and removed a few frames. This also solved the problem of display on smartphones so users wouldn’t need to press “play” to show the video. 
 
-  [bild på dator]
+section4_image_medium: "laptop.jpg"
+section4_image_small: "laptop_720.jpg"
+section4_image_alt: Image of a laptop with Aftonbladets "Nöjes"-page
 
 section5: |
   #### 3. Look scary. Sound scary. Be scary. 
@@ -75,21 +77,25 @@ section5: |
 
   The video DDB/Liseberg supplied us was perfect -- a very creepy joker man accompanied by a blood-curdling scream. Surprising and scary, but not overly grotesque. For the days we were working on this project, the office resounded with shrieks around every 5 minutes. 
 
-  [bild]
-
-  [bild]
-
 section6: |
   ## Success!
 
   This prank-PR turned out to be a huge hit. Ten thousand scares were recorded in the first 48 hours. And by the end, 200,000 people had visited -- twice more than expected. DDB & Fully even shared a prize for it, winning the Bronze Guldnyckeln. 
 
-section7: |
-  [bild]
+section6_image1: "buu_sprite.jpg"
+section6_image2: "buu.jpg"
 
+section7: |
   It was fun for us to return to our roots, in a way. Before Fully started doing HTML websites, we were famous for flash sites. We had so much fun with it. But there were a lot of sites that went totally overboard, and it was understandable that the Internet turned its back on animation for a period of years. But now it can be really powerful to introduce it in small and tasteful doses. It’s something fresh and unexpected, creating awesome results when deployed as a marketing tactic.  
 
-  Granted this project wasn’t a flash animation (we coded it with HTML/Javascript), but it very well could have been. I think we’ll see more and more animation on the web, programmed in all sorts of ways. The gif renaissance is proof that people are hungry for it again. 
+  Granted this project wasn’t a flash animation (we coded it with HTML/Javascript), but it very well could have been. I think we’ll see more and more animation on the web, programmed in all sorts of ways. The gif renaissance is proof that people are hungry for it again.
+
+section7_image1_large: "halloween_laptop@2x.jpg"
+section7_image1_medium: "halloween_laptop.jpg"
+section7_image1_alt: "Lorem ipsum"
+section7_image2_large: "halloween_mobile@2x.jpg"
+section7_image2_medium: "halloween_mobile.jpg"
+section7_image2_alt: "Lorem ipsum"
 
 ---
 Kakservice has been around since the 70’s. In their early days they sold cinnamon buns and newspapers to sailors in the Fjällbacka archipelago. Today their cookies go to schools, sport clubs and organisations, where they are then sold to help raise funds for special causes and programs.

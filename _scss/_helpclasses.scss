@@ -63,6 +63,12 @@
     justify-content: center;
     flex-direction: column;
 }
+.flexend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
 
 // Images / backgrounds
 .background-image {
@@ -104,4 +110,8 @@
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
             hyphens: auto;
+}
+
+.hidden {
+    display: none;
 }
