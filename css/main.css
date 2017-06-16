@@ -627,7 +627,7 @@ p {
   @media screen and (min-width: 50em) {
     .work2-image {
       grid-column: 1 / 8;
-      grid-row: 5 / -1; } }
+      grid-row: 5 / 17; } }
 
 .work2-text {
   margin-top: 60px;
