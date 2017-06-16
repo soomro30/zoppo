@@ -20,7 +20,7 @@ layout: case
 <div class="imagegrid">
 {% for frame in page.frames %}
 	<div class="imagegrid__image">
-		<img class="image" src="{{site.baseurl}}/assets/work/{{page.slug}}/{{frame}}">
+		<img alt="{{frame.alt}}" class="image" src="{{site.baseurl}}/assets/work/{{page.slug}}/{{frame.medium}}">
 	</div>
 {% endfor %}
 </div>

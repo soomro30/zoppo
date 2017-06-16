@@ -7,6 +7,11 @@ author: Jonas Sandstedt
 date: 2017-04-24
 background-image_1440: '../assets/introfilmen-poster.jpg'
 background-image_2880: '../assets/introfilmen-poster.jpg'
+vimeo_IDs: 
+  - "211438822"
+  - "205372936"
+  - "162523357"
+  - "54016145"
 ---
 
 <header class="ds-header" markdown='1' style="margin-top: 0">
@@ -348,6 +353,8 @@ a grid with images and texts. Used in "other projects"
 Load images with style
 </header>
 
+<h3 id="backgrund-image">Fixed ratio image loader</h3>
+
 <div class="image-loader" style="background: #c1c1c1">
     <img 
     src="http://placekitten.com/g/1440/830"
@@ -363,10 +370,8 @@ Load images with style
 
 ```
 
-
-<header class="ds-header" markdown='1'>
-## Backgrund image
-</header>
+<br>
+<h3 id="backgrund-image">Backgrund image</h3>
 
 <style>
     #{{page.slug}}_bg {
@@ -400,6 +405,39 @@ Load images with style
 <div class="background-image background-image--padding flexcenter invert" id="{{page.slug}}_bg">
     <p>Lorem ipsum</p>
 </div>
+{% endraw %}
+```
+
+<br>
+<h3 id="imagegrid">Imagegrid</h3>
+<p>Also works with images 😁</p>
+
+{% unless page.vimeo_IDs == nil %}
+<section class="imagegrid imagegrid--firstlarge">
+	{% for video in page.vimeo_IDs %}
+	<div class="imagegrid__image">
+		<div class="video">
+			<iframe src="https://player.vimeo.com/video/{{video}}" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
+	</div>
+	{% endfor %}
+</section>
+{% endunless %}
+
+<p>This example takes an array of vimeo video ID's</p>
+``` html
+{% raw %}
+{% unless page.vimeo_IDs == nil %}
+<section class="imagegrid imagegrid--firstlarge">
+	{% for video in page.vimeo_IDs %}
+	<div class="imagegrid__image">
+		<div class="video">
+			<iframe src="https://player.vimeo.com/video/{{video}}" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
+	</div>
+	{% endfor %}
+</section>
+{% endunless %}
 {% endraw %}
 ```
 

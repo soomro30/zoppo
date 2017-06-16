@@ -29,12 +29,30 @@ column5050_image_720: "ks_process_720.jpg"
 column5050_image_alt: "alt text"
 
 frames:
-  - "frame-1.jpg"
-  - "frame-2.jpg"
-  - "frame-3.jpg"
-  - "frame-4.jpg"
-  - "frame-5.jpg"
-  - "frame-6.jpg"
+  - alt: "Screenshot from Kakservice"
+    medium: "frame-1.jpg"
+    large: "frame-1.jpg"
+
+  - alt: "Screenshot from Kakservice"
+    medium: "frame-2.jpg"
+    large: "frame-2.jpg"
+
+  - alt: "Screenshot from Kakservice"
+    medium: "frame-3.jpg"
+    large: "frame-3.jpg"
+
+  - alt: "Screenshot from Kakservice"
+    medium: "frame-4.jpg"
+    large: "frame-4.jpg"
+
+  - alt: "Screenshot from Kakservice"
+    medium: "frame-5.jpg"
+    large: "frame-5.jpg"
+
+  - alt: "Screenshot from Kakservice"
+    medium: "frame-6.jpg"
+    large: "frame-6.jpg"
+
 
 ---
 Kakservice has been around since the 70’s. In their early days they sold cinnamon buns and newspapers to sailors in the Fjällbacka archipelago. Today their cookies go to schools, sport clubs and organisations, where they are then sold to help raise funds for special causes and programs.

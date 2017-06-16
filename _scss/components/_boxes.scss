@@ -95,6 +95,10 @@
         margin: calc(1.5em + #{$s-small}) auto;
         position: relative;
         max-width: $content-width;
+        padding: $s-small;
+        @include media-query($on-palm) {
+            padding: $s-small*2; 
+        }
 
         &:after, &:before {
             content: "";
@@ -130,7 +134,20 @@
             &:after {
                 border-left-color: $c-curiosities;
                 border-right-color: $c-curiosities;
-                
+            }
+        }
+        &--dark {
+            background-color: $c-dark;
+            color: $c-white;
+            &:before {
+                border-color: $c-dark;
+            }
+        }
+        &--people {
+            background-color: $c-people;
+            color: $c-dark;
+            &:before {
+                border-color: $c-people;
             }
         }
         // &--signal {

@@ -1056,7 +1056,11 @@ p {
     color: #ffffff;
     margin: calc(1.5em + 30px) auto;
     position: relative;
-    max-width: 59em; }
+    max-width: 59em;
+    padding: 30px; }
+    @media screen and (min-width: 600px) {
+      .boxtext--frame {
+        padding: 60px; } }
     .boxtext--frame:after, .boxtext--frame:before {
       content: "";
       position: absolute;
@@ -1085,6 +1089,16 @@ p {
       .boxtext--frame--darkoncuriosity:after {
         border-left-color: #ffde7f;
         border-right-color: #ffde7f; }
+    .boxtext--frame--dark {
+      background-color: #0a2a4f;
+      color: #ffffff; }
+      .boxtext--frame--dark:before {
+        border-color: #0a2a4f; }
+    .boxtext--frame--people {
+      background-color: #ffc1b4;
+      color: #0a2a4f; }
+      .boxtext--frame--people:before {
+        border-color: #ffc1b4; }
   .boxtext--simpleframe {
     background-color: transparent;
     color: #5f11e8;
