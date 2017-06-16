@@ -18,8 +18,8 @@ ingress: |
   
   Kakservice came to us and wanted to make an instructional animated film that explains and supports the sales process.
 
-videos: 
-  - "https://www.youtube.com/watch?v=9RLQ5tFvFLk"
+vimeo_IDs: 
+  - "221850778"
 
 column5050_text: |
   When you make this kind of film, or any film, you start out with a storyboard. It’s drawn in a simplified style, but in a way that communicates the essence of the film. In this case, the entire film was drawn by hand (but, you know, in digital files). Then came After Effects for animation, sound and final polish.
