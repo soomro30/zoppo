@@ -167,7 +167,7 @@ Boxes with different dropshadows for text and images.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
 
 ``` html
-<div class="box" markdown="1">
+<div class="box"></div>
 ```
 
 </div>
@@ -175,7 +175,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat,
 <div class="box box--right box--people" markdown="1" style="background-image:url(http://placekitten.com/g/1920/600); color:white">
 
 ``` html
-<div class="box box--right box--people" markdown="1" style="background-image:url(http://placekitten.com/g/1920/600)">
+<div class="box box--right box--people" style="background-image:url(http://placekitten.com/g/1920/600)"></div>
 ```
 </div>
 
@@ -183,7 +183,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat,
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
 
 ``` html
-<div class="box box--business" markdown="1"></div>
+<div class="box box--business"></div>
 ```
 </div>
 
@@ -191,7 +191,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat,
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
 
 ``` html
-<div class="box box--right box--curiosities" markdown="1">
+<div class="box box--right box--curiosities"></div>
 ```
 </div>
 
@@ -199,7 +199,15 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat,
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat, voluptas corporis voluptatum architecto sequi fuga. Earum ipsam commodi nisi soluta ut officiis eligendi culpa repudiandae ipsum cupiditate.
 
 ``` html
-<div class="box box--metal" markdown="1">
+<div class="box box--metal"></div>
+```
+</div>
+
+<div class="box box--right box--up" markdown="1">
+
+Make the shadow go upwards instead by using the class `box--up`
+``` html
+<div class="box box--right box--up"></div>
 ```
 </div>
 
@@ -207,9 +215,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat,
 Also works with `.box--bgpeople`, `.box--bgcuriosities`, `.box--bgbusiness` and  `.box--bgmetal`
 
 ``` html
-<div class="box box--metal" markdown="1">
+<div class="box box--metal">
 ```
 </div>
+
 
 
 
@@ -420,7 +429,14 @@ Load images with style
 			<iframe src="https://player.vimeo.com/video/{{video}}" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</div>
 	</div>
-	{% endfor %}
+        
+{% endfor %}
+    <div class="imagegrid__image imagegrid__image--two">
+        <img src="../assets/introfilmen-poster.jpg">
+    </div>
+    <div class="imagegrid__image imagegrid__image--two">
+        <img src="../assets/introfilmen-poster.jpg">
+    </div>
 </section>
 {% endunless %}
 
@@ -436,15 +452,19 @@ Load images with style
 		</div>
 	</div>
 	{% endfor %}
+    <div class="imagegrid__image imagegrid__image--two"></div>
+    <div class="imagegrid__image imagegrid__image--two"></div>
 </section>
 {% endunless %}
 {% endraw %}
 ```
 
 <header class="ds-header" markdown='1'>
-## Imagebox + text
-Example of a custom CSS grid layout using a container with the class `grid`.
+## Layouts
 </header>
+
+<h3 id="imagebox+text">Imagebox + text</h3>
+<p>Example of a custom CSS grid layout using a container with the class `grid`.</p>
 
 <div class="grid grid--space case-highlight" markdown='1'>
 <div class="flexcenter center background-image invert grid__offsetcolumn1-2" id="lettering2" markdown='1' style="background-image: url(../assets/introfilmen-poster.jpg)">
@@ -480,11 +500,53 @@ grid-row: 1 / span 4;
 
 ``` html
 <div class="grid grid--space">
-    <div class="background-image" id="exampleimage" style="background-image: url(assets/introfilmen-poster.jpg)"></div>
-    <div class="boxtext" id="exampletext"></div>
+    <div class="background-image grid__offsetcolumn1-2" id="exampleimage" style="background-image: url(assets/introfilmen-poster.jpg)"></div>
+    <div class="boxtext grid__offsetcolumn2-2" id="exampletext"></div>
 </div>
 ```
 
+<br>
+<h3 id="two-columns">2 columns text / image</h3>
+
+<div class="grid grid--space grid--padding">
+    <div class="grid__column1-2">
+        <p>Column 1 - lorem ipsum dolem es simet lorem ipsum dolem es simet lorem ipsum dolem es simet</p>
+    </div>
+    <div class="grid__column2-2 flexcenter">
+        <img class="image"
+            alt="{{page.section3_image_alt}}"
+            width="1440" height="1653"
+            src="../assets/introfilmen-poster.jpg" 
+            srcset="../assets/introfilmen-poster.jpg 1440w,
+                    ../assets/introfilmen-poster.jpg 720w"
+            sizes="(min-width: 580px) 50vw,
+                    100vw">
+    </div>
+</div>
+
+```scss
+{% raw %}
+<div class="grid grid--space grid--padding">
+    <div class="grid__column1-2">
+        {{ page.section3 | markdownify }}
+    </div>
+    <div class="grid__column2-2 flexcenter">
+        <img class="image"
+            alt="{{page.section3_image_alt}}"
+            width="1440" height="1653"
+            src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3_image_small }}" 
+            srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3_image_medium }} 1440w,
+                    {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3_image_small }} 720w"
+           sizes="(min-width: 580px) 50vw,
+                   100vw">
+    </div>
+</div>
+{% endraw %}
+```
+
+<br>
+<h3 id="boxttext-frame">A Boxtext width a frame</h3>
+<p markdown='1'>Availible classes: `boxtext--frame--curiosities`, `boxtext--frame--darkoncuriosity` `boxtext--frame--dark`, `boxtext--frame--people`</p>
 <div class="boxtext boxtext--frame">
 <h2 style="max-width:13em">.boxtext--frame</h2>
 <a href="#" class="button"><span>Read all about it</span></a>

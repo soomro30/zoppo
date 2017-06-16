@@ -40,7 +40,21 @@
         @include media-query($on-palm) {
             margin-left: auto;
             margin-right: $s-small;
-            &:before { transform: translate(-$s-small, $s-small) }        
+            &:before { transform: translate(-$s-small, $s-small) }
+        }
+    }
+
+    // transform the shadow upwards instead
+    &--up {
+        &.box--right {
+            margin-right: $s-small;
+            @include media-query($on-palm) {
+                margin-right: $s-small*2;
+            }
+        }
+        &:before { transform: translate($s-small*0.5, -$s-small*0.5) }
+        @include media-query($on-palm) {
+            &:before { transform: translate($s-small, -$s-small) }
         }
     }
 
@@ -48,6 +62,12 @@
     &--center {
         margin-left: auto;
         margin-right: auto;
+        h4, .h4, h4 + * {
+            @include media-query($on-laptop) {
+                padding-left: $s-small*4;
+                padding-right: $s-small*4;
+            }
+        }
     }
 
     // Different colors
@@ -74,6 +94,10 @@
 
 .box + * {
     margin-top: $s-small*2;
+}
+
+.box + .box--up {
+    margin-top: $s-small*3;
 }
 
 // Boxtext
