@@ -80,20 +80,47 @@ layout: default
 
 <div class="boxgrid">
 	<h2 class="boxgrid__header h4">Check out our other projects</h2>
-	{% for work in site.work limit:3 %}
-		{% if work.title == page.title %}
-			{% continue %}
+
+	{% comment %}
+	Get next and previous work post,
+	and assign a default work post if there are no next or previous post
+	{% endcomment %}
+	{% assign previousPost = page.previous %}
+	{% assign nextPost = page.next %}
+
+	{% if previousPost == nil%}
+		{% assign previousPost = site.work[0] %}
+		{% if previousPost == nextPost %}
+			{% assign previousPost = site.work[1] %}
 		{% endif %}
-		<a class="boxgrid__box" href="{{ work.url | prepend: site.baseurl }}">
-			<div class="image-loader" style="background: {{work.background-image_color}}"> 
-				<img src="{{site.baseurl}}/assets/work/{{work.slug}}/{{work.background-image_1440}}" alt="{{ work.title }}">	
-			</div>
-			<div class="boxgrid__caption">
-				<h3>{{ work.title }}</h3>
-				<p>{{ work.subtitle }}</p>
-			</div>
-		</a>
-	{% endfor %}
+	{% endif %}
+
+	{% if nextPost == nil%}
+		{% assign nextPost = site.work[0] %}
+		{% if nextPost == nextPost %}
+			{% assign nextPost = site.work[1] %}
+		{% endif %}
+	{% endif %}
+
+	<a class="boxgrid__box" href="{{ previousPost.url | prepend: site.baseurl }}">
+		<div class="image-loader" style="background: {{previousPost.background-image_color}}"> 
+			<img src="{{site.baseurl}}/assets/work/{{previousPost.slug}}/{{previousPost.background-image_1440}}" alt="{{ previousPost.title }}">	
+		</div>
+		<div class="boxgrid__caption">
+			<h3>{{ previousPost.title }}</h3>
+			<p>{{ previousPost.subtitle }}</p>
+		</div>
+	</a>
+
+	<a class="boxgrid__box" href="{{ nextPost.url | prepend: site.baseurl }}">
+		<div class="image-loader" style="background: {{nextPost.background-image_color}}"> 
+			<img src="{{site.baseurl}}/assets/work/{{nextPost.slug}}/{{nextPost.background-image_1440}}" alt="{{ nextPost.title }}">	
+		</div>
+		<div class="boxgrid__caption">
+			<h3>{{ nextPost.title }}</h3>
+			<p>{{ nextPost.subtitle }}</p>
+		</div>
+	</a>
 </div>
 
 {% comment %}
