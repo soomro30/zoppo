@@ -11,22 +11,32 @@ $animTime: .3s;
     //     position: absolute;
     //     top: 0; right: 0; bottom: 0; left: 0;
     //     background: $c-signal;
-    //     background: linear-gradient(to bottom, $c-signal 0%,rgba($c-signal,1) 100%);
+    //     background: linear-gradient(to bottom, rgba($c-people, 0.5) 0%,rgba($c-signal,0.5) 100%);
     //     mix-blend-mode: multiply;
     //     z-index:1;
     // }
     &__video { 
-        background-color: $c-signal;
+        background-color: $c-dark;
+        // opacity: 0;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        transform: translateX(-50%) translateY(-50%);
-        transition: opacity $animTime;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         z-index: 2;
+        @media (min-aspect-ratio: 16/9) {
+            width: 100%;
+            height: auto;
+            transform: translateY(-25%);
+            top: 25%;
+        }
+        @media (max-aspect-ratio: 16/9) {
+            width: auto;
+            height: 100%;
+            transform: translateX(-75%);
+            margin-top: 0;
+            left: 75%;
+        }
     }
     &__list {
         position: absolute;
