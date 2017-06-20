@@ -1586,6 +1586,19 @@ p {
       margin-top: 0;
       left: 75%; } }
 
+.hero__bgcenter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
 .hero--about h4 {
   margin-top: 60px; }
   .hero--about h4 a:after {
