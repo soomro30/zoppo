@@ -3,52 +3,52 @@
 ## Loop through the latest work
 -->
 <div class="grid grid--space work-highlight">
+    {% assign work1 = site.work[site.case_highlight1_id] %}
     <!-- Get all cc-about posts and revers them -->
-    {% assign items = site.work | sort: 'date' | reverse %}
+
     {% assign root = 'js/' %}
     
-    {% for work in items limit:1 %}
-        <!-- 
-        ###############################
-        ## Get code for the background
-        ## set in current post
-        -->
-        {% unless work.background-image_2880 == nil %}
-            <style>
+    <!-- 
+    ###############################
+    ## Get code for the background
+    ## set in current post
+    -->
+    {% unless work1.background-image_2880 == nil %}
+        <style>
+            .grid__offsetcolumn1-2 {
+                background-image: url({{site.baseurl}}/assets/work/{{work1.slug}}/{{ work1.background-image_1440 }});
+            }
+            @media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
                 .grid__offsetcolumn1-2 {
-                    background-image: url({{site.baseurl}}/assets/work/{{work.slug}}/{{ work.background-image_1440 }});
+                    background-image: url({{site.baseurl}}/assets/work/{{work1.slug}}/{{ work1.background-image_2880 }});
                 }
-                @media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
-                    .grid__offsetcolumn1-2 {
-                        background-image: url({{site.baseurl}}/assets/work/{{work.slug}}/{{ work.background-image_2880 }});
-                    }
-                }
-            </style>
+            }
+        </style>
+    {% endunless %}
+
+    <div class="grid__offsetcolumn1-2 background-image">
+        {% unless work1.background == nil %}
+            {{ work1.background }}
         {% endunless %}
+    </div>
 
-        <div class="grid__offsetcolumn1-2 background-image">
-            {% unless work.background == nil %}
-                {{ work.background }}
-            {% endunless %}
-        </div>
+    <!-- 
+    ####################
+    ## Get scripts from
+    ## current post
+    -->
+    {% for js in work1.scripts %}
+        <script type="text/javascript">
+        {% include {{ root | append: js }} %}
+        </script>
+    {% endfor %}     
 
-        <!-- 
-        ####################
-        ## Get scripts from
-        ## current post
-        -->
-        {% for js in work.scripts %}
-            <script type="text/javascript">
-            {% include {{ root | append: js }} %}
-            </script>
-        {% endfor %}     
+    <div class="boxtext grid__offsetcolumn2-2">
+        <h2>{{work1.title}}</h2>
+        <p>{{work1.subtitle}}</p>
+        <a href="{{ work1.url | prepend: site.baseurl }}" class="button"><span>{{work1.button-text}}</span></a>
+        <a href="{{ site.works | prepend: site.baseurl }}" class="link link--next"><span>View all projects</span></a>
+    </div>
 
-        <div class="boxtext grid__offsetcolumn2-2">
-            <h2>{{work.title}}</h2>
-            <p>{{work.subtitle}}</p>
-            <a href="{{ work.url | prepend: site.baseurl }}" class="button"><span>{{work.button-text}}</span></a>
-            <a href="{{ site.works | prepend: site.baseurl }}" class="link link--next"><span>View all projects</span></a>
-        </div>
-    {% endfor %}
 
 </div>

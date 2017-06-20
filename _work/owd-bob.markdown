@@ -84,7 +84,7 @@ image3_alt: "Instagram feed"
 
 
 section5: |
-  Our plan worked. We gained a lot of interest and traffic and were contacted by several journalists who wanted to write about the project. For instance, [My Clever Lab](https://www) named us Startup of the Week. And the first artists told us that they sold more prints during the 48 hours than they had in a year when featured on some of the print-on-demand alternatives out there.
+  Our plan worked. We gained a lot of interest and traffic and were contacted by several journalists who wanted to write about the project. For instance, My Clever Lab named us Startup of the Week. And the first artists told us that they sold more prints during the 48 hours than they had in a year when featured on some of the print-on-demand alternatives out there.
 
 section6: |
   ## Alive and growing

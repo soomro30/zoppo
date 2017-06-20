@@ -6,11 +6,15 @@ pagetitle: |
 permalink: /work/
 slug: work
 background-color: "#f8f8f8"
-background-image_2880: "work_bg@2.jpg"
-background-image_1440: "work_bg.jpg"
 reel-text: Keep it REEL!
 reel-url: https://player.vimeo.com/video/211438822
 reel-sub: Showreel 2017 
+
+background: |
+  <video class="hero__background" poster="./../assets/work/hero-poster.jpg" loop autoplay muted playsinline>
+    <source src="./../assets/work/hero.mp4">
+    <img src="./../assets/work/hero-poster.jpg">
+  </video>
 
 ---
 

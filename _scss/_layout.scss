@@ -138,7 +138,8 @@
 }
 
 // Work layout
-.work-ingress {
+.boxtext--simpleframe.work-ingress {
+    z-index: 4;
     grid-column: 1 / -1;
     grid-row: 1 / span 4;
     @include media-query($on-laptop) {

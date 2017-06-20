@@ -244,7 +244,7 @@ layout: page
 
             var triggerDesktop = new mojs.Tween({
                 delay: 2000,
-                duration: 4000,
+                duration: 2000,
                 onComplete: function onComplete() {
                     console.log('triggerDesktop');
                     animText.classList.remove('tablet');
@@ -254,8 +254,8 @@ layout: page
             });
             
             var triggerTablet = new mojs.Tween({
-                delay: 6000,
-                duration: 4000,
+                delay: 4000,
+                duration: 2000,
                 onComplete: function onComplete() {
                     console.log('triggerTablet')
                     animText.classList.remove('mobile');
@@ -265,8 +265,8 @@ layout: page
             });
 
             var triggerMobile = new mojs.Tween({
-                delay: 12000,
-                duration: 4000,
+                delay: 6000,
+                duration: 2000,
                 onComplete: function onComplete() {
                     console.log('triggerMobile');
                     animText.classList.remove('tablet');
