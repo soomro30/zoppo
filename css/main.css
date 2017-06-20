@@ -661,6 +661,9 @@ p {
       grid-column: 2 / span 5;
       grid-row: 14 / span 7; } }
 
+.grid--curiosities .bgimage {
+  position: relative; }
+
 .grid--curiosities .bgimage:nth-of-type(1) {
   grid-column: 1 / -1;
   grid-row: 3 / span 10; }
@@ -1552,8 +1555,6 @@ p {
         margin-top: 0; } }
   .hero--cc {
     background: #ffde7f; }
-    .hero--cc .hero__header {
-      color: #0a2a4f; }
   .hero > .button {
     margin-top: 3em; }
 
