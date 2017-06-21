@@ -33,20 +33,6 @@ layout: page
         {% endunless %}
     </div>
 
-    <!-- 
-    ####################
-    ## Get scripts from
-    ## current post
-    -->
-    {% comment %}
-    {% for js in work1.scripts %}
-        <script type="text/javascript">
-        {% assign root = 'js/' %}
-        {% include {{ root | append: js }} %}
-        </script>
-    {% endfor %}     
-    {% endcomment %}
-
     <div class="boxtext work1-text center">
         <h2>{{work1.title}}</h2>
         <p>{{work1.subtitle}}</p>
@@ -92,20 +78,6 @@ layout: page
         {% endunless %}
     </div>
 
-    <!-- 
-    ####################
-    ## Get scripts from
-    ## current post
-    -->
-    {% comment %}
-    {% for js in work2.scripts %}
-        <script type="text/javascript">
-        {% assign root = 'js/' %}
-        {% include {{ root | append: js }} %}
-        </script>
-    {% endfor %}   
-    {% endcomment %}  
-
     <div class="boxtext work2-text center">
         <h2>{{work2.title}}</h2>
         <p>{{work2.subtitle}}</p>
@@ -140,19 +112,6 @@ layout: page
         {% endunless %}
     </div>
 
-    <!-- 
-    ####################
-    ## Get scripts from
-    ## current post
-    -->
-    {% comment %}
-    {% for js in work3.scripts %}
-        <script type="text/javascript">
-        {% assign root = 'js/' %}
-        {% include {{ root | append: js }} %}
-        </script>
-    {% endfor %} 
-    {% endcomment %}    
 
     <div class="boxtext work3-text center">
         <h2>{{work3.title}}</h2>
@@ -169,7 +128,6 @@ layout: page
     <h2 class="boxgrid__header h4 invert">Recent work</h2>
     <!-- Get all work posts and revers them -->
     {% assign items = site.work | sort: 'date' | reverse %}
-    {% assign root = 'js/' %}
     
     {% for work in items limit:9 %}
 

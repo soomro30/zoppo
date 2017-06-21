@@ -2,7 +2,6 @@
 layout: case
 ---
 
-
 {% unless page.section1 == nil %}
     <section class="grid grid--space grid--padding">
         <div class="grid__column1-2">
@@ -51,7 +50,7 @@ layout: case
 
 {% unless page.section4 == nil %}
 <div class="grid grid--space">
-    <div class="grid__offsetcolumn2-2 c-business-bg flexcenter" id="lettering2">
+    <div class="grid__offsetcolumn2-2 flexcenter" id="lettering2" style="background-color: #222a3f">
         <style>
         #lettering2 svg {
             padding: 6vw;
@@ -65,6 +64,7 @@ layout: case
     </section>
 </div>
 {% endunless %}
+
 
 {% unless page.imageline == nil %}
  <section class="sectionspacing c-dark-bg flexcenter">
@@ -175,9 +175,23 @@ $('.variable-width').slick({
         
         <p>
         <a class="metabutton" href="mailto:{{page.author-email}}">
-			Author: <span>{{page.author}}</span>
-		</a>
+            Author: <span>{{page.author}}</span>
+        </a>
         </p>
-		
+        
     </section>
 {% endunless %}
+{{page.script}}
+<script>
+    if(document.getElementById('lettering2')) {
+        // var filepath = '/assets/owd-bob/feb27.svg';
+        // var filepath = '/assets/owd-bob/apr12.svg';
+        var filepath = '/assets/work/owd-bob/june16.svg';
+        new Vivus('lettering2', {
+            duration: 250, 
+            file: filepath,
+            type: 'delayed',
+            animTimingFunction: Vivus.EASE_OUT,
+        });
+    }
+</script>

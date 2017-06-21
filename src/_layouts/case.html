@@ -85,22 +85,25 @@ layout: default
 	Get next and previous work post,
 	and assign a default work post if there are no next or previous post
 	{% endcomment %}
+
+
 	{% assign previousPost = page.previous %}
 	{% assign nextPost = page.next %}
 
-	{% if previousPost == nil%}
-		{% assign previousPost = site.work[0] %}
-		{% if previousPost == nextPost %}
-			{% assign previousPost = site.work[1] %}
-		{% endif %}
+	{% if page.previous.url %}
+	    {% assign previousPost = page.previous %}
+	{% else %}
+		{% assign previousPost = site.work[-1] %}
 	{% endif %}
 
-	{% if nextPost == nil%}
+	{% if page.next.url %}
+	    {% assign nextPost = page.next %}
+	{% else %}
 		{% assign nextPost = site.work[0] %}
-		{% if nextPost == nextPost %}
-			{% assign nextPost = site.work[1] %}
-		{% endif %}
 	{% endif %}
+
+
+
 
 	<a class="boxgrid__box" href="{{ previousPost.url | prepend: site.baseurl }}">
 		<div class="image-loader" style="background: {{previousPost.background-image_color}}"> 
@@ -122,16 +125,3 @@ layout: default
 		</div>
 	</a>
 </div>
-
-{% comment %}
-####################
-## Get scripts from
-## current post
-
-{% for js in page.scripts %}
-	{% assign root = 'js/' %}
-	<script type="text/javascript">
-	{% include {{ root | append: js }} %}
-	</script>
-{% endfor %}
-{% endcomment %}

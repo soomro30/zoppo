@@ -97,9 +97,7 @@ section6: |
   And it’s just important as a human to put yourself out there and make something. It’s easy to have an idea, and even easier to have an opinion. The hardest part is to deliver. It doesn’t need to be perfect, it just needs to get out there.
 
 
-scripts: 
-- vivus.js
-- case/owd-bob.js
+script: <script src='https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.1/vivus.min.js'></script>
 
 ---
 

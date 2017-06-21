@@ -22,7 +22,7 @@ layout: page
             </style>
             <div id="mojs-container"></div>
             {{page.script}}
-            {% comment %}
+            
             <script>
                 // For edits this code, copy code from https://codepen.io/fullystudios/pen/dd259ea5429ebf4213fae25b821df085?editors=0010
                 'use strict';
@@ -159,7 +159,6 @@ layout: page
                 });
 
             </script>
-            {% endcomment %}
         </div>
     </section>
 {% endunless %}
@@ -240,7 +239,6 @@ layout: page
             
         </div>
 
-        {% comment %}
         <script>
             var myIcons = new SVGMorpheus('#morphanim', {rotation:'none', easing: 'cubic-in-out', duration: 1000 } );
             var animText = document.getElementById('morphanim__text');
@@ -285,7 +283,6 @@ layout: page
             timeline.play();
 
         </script>
-        {% endcomment %}
 
 
 
