@@ -1,3 +1,4 @@
+# Site settings
 title: Fully Studios
 email: hi@fullystudios.se
 tel: "+46 738 07 30 72"
@@ -24,16 +25,6 @@ case_highlight3_id: 2
 works: "/works"
 about: "/about"
 
-
-highlighter: rouge
-exclude: ["node_modules", "gulpfile.js", "package.json"] #like git-ignore for master?
-sass:
-  style: compressed
-
-gems:
-  - jekyll-redirect-from
-
-
 # Custom post types 
 collections:
   work:
@@ -52,7 +43,7 @@ defaults:
     values:
       layout: "curious"
       button-text: Read all about it
-      
+      background-color: "#f2f2f2"
   -
     scope:
       path: ""
@@ -60,4 +51,31 @@ defaults:
     values:
       layout: "work"
       button-text: View case
-      
+      background-color: "#f2f2f2"
+
+# Build settings
+highlighter: rouge
+markdown: kramdown
+source: src
+destination: public
+sass:
+  sass_dir: assets/css/modules
+  style: compressed
+
+# live reload
+livereload: true
+reload_port: 5678
+
+# gems
+plugins_dir:
+  - jekyll-seo-tag
+  - jekyll-autoprefixer
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+# plugin settings
+autoprefixer:
+  browsers:
+  - last 2 versions
+
+exclude: ['node_modules', 'webpack', 'Gemfile', 'Gemfile.lock', 'Rakefile']

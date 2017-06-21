@@ -1,0 +1,197 @@
+---
+layout: page
+---
+
+
+{% unless page.section1 == nil %}
+    <section class="gridabout">
+        <div class="boxtext h4">
+            {{ page.section1 | markdownify }}
+        </div>
+    </section>
+{% endunless %}
+
+<section id="we-are-fully" class="boxgrid boxgrid--offset">
+
+    {% for employee in page.employees %}
+        <figure class="boxgrid__box">
+            <div class="image-loader" style="background: #c1c1c1"> <!--Change this color to an average color from the image-->
+                <img src="/assets/{{ employee.image }}" alt="{{ employee.name }}">	
+            </div>
+            <figcaption class="boxgrid__caption">
+                <h3>{{ employee.name }}</h3>
+                <p>{{ employee.title }}</p>
+                <p>Drop me a line at <a class="hyphenate" href="mailto:{{employee.email}}">{{employee.email}}</a> or give me a call on <a href="tel:{{employee.tel}}"></a>{{employee.tel}}</p>
+            </figcaption>
+        </figure>
+    {% endfor %}
+
+</section>
+
+
+<div class="map__container">
+    <h3 class="map__header center">Here is our office, swing by!</h3>
+    <div class="map flexcenter center" id="g_map">
+        {% comment %}fallback text{% endcomment %}
+        Visit us at:<br>
+        <a href="https://www.google.se/maps/place/Fully+Studios/@57.7033361,11.9650662,19z/data=!3m1!4b1!4m5!3m4!1s0x464ff365f9958667:0xc960c81a24202e95!8m2!3d57.7033354!4d11.9656134">
+            {{site.adress}}
+        </a>
+    </div>
+    
+    <script>
+        var g_map;
+        function initMap() {
+        fully = {lat: 57.703229, lng: 11.965552};
+        g_map = new google.maps.Map(document.getElementById('g_map'), {
+
+            center: fully,
+            zoom: 18,
+            scrollwheel: false,
+            styles: 
+            [
+                {
+                    "featureType": "all",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#ffc1b4"
+                        },
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        },
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels",
+                    "stylers": [
+                        {
+                            "saturation": "100"
+                        },
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels.text",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        },
+                        {
+                            "weight": "1.00"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        },
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "labels",
+                    "stylers": [
+                        {
+                            "color": "#0a2a4f"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "weight": "0.53"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "color": "#f8f8f8"
+                        }
+                    ]
+                }
+            ]
+        });
+        var marker_image = '../assets/icons/marker.svg';
+        var g_marker = new google.maps.Marker({
+            position: fully,
+            map: g_map,
+            icon: marker_image
+        });
+        var site_description = "{{site.description}}";
+        var site_adress = "{{site.adress}}"
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<br><h4 id="firstHeading">Fully Studios</h4>'+
+            '<div id="bodyContent"><p>'+
+            site_description +
+            '</p><p><strong>Visit us at:</strong><br>'+
+            site_adress +
+            '</p>'+
+            '<p>'+
+            '<a target="_blank" href="https://www.google.se/maps/dir//Fully+Studios,+Victoriapassagen,+S%C3%B6dra+Larmgatan+14,+411+16+G%C3%B6teborg/@57.7033354,11.9650662,19z/data=!4m15!1m6!3m5!1s0x464ff365f9958667:0xc960c81a24202e95!2sFully+Studios!8m2!3d57.7033354!4d11.9656134!4m7!1m0!1m5!1m1!1s0x464ff365f9958667:0xc960c81a24202e95!2m2!1d11.9656134!2d57.7033354">'+
+            'Navigate here'+
+            '</a><br><br>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        g_marker.addListener('click', function() {
+            infowindow.open(g_map, g_marker);
+        });
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDe3ra-SnCYjK0_ypN4eF0D88-W0IOEN3Y&callback=initMap" async defer></script>
+</div>

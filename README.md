@@ -4,9 +4,32 @@ Website for the Swedish agency Fully Studios
 
 Fully Digital site is based on Jekyll, GulpJS, SASS, AutoPrefixer &amp; BrowserSync
 
+## Jekyll Starter
+
+This starter uses webpack, react, and jekyll.
+
+It also includes a multi threaded rake task to sync webpack and jekyll.
+To run in dev mode: `rake start`
+To build: `rake b`
+
+### Setup
+
+- `npm install -g webpack`
+- `npm install`
+- `bundle install`
+- `rake start`
+
+## Todos
+- för över statiska filer
+- för över style
+- för över cases och deras js
+- importera dependencies på rätt sätt (package + webpack)
+- eslinter
+
+#Old stuff below
 
 ## System Preparation
-Only if you hasn't install Jekyll, node or Gulp installed on your machine:
+Only if you haven't installed Jekyll, node or Gulp installed on your machine:
 
 1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
 2. [NodeJS](http://nodejs.org) - use the installer.

@@ -1,0 +1,137 @@
+---
+layout: default
+---
+
+<article class="page" itemscope itemtype="http://schema.org/BlogPosting">
+	
+	{% unless page.background-image_2880 == nil %}
+		{% if page.background == nil %}
+			<style>
+				.hero--{{page.slug}} {
+					background-image: url({{site.baseurl}}/assets/work/{{page.slug}}/{{ page.background-image_1440 }});
+				}
+				@media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
+					.hero--{{page.slug}} {
+						background-image: url({{site.baseurl}}/assets/work/{{page.slug}}/{{ page.background-image_2880 }});
+					}
+				}
+			</style>
+		{% endif %}
+	{% endunless %}
+	<div class="hero hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %}" id="work_{{ page.slug }}" {% unless page.background-image_color == nil %} style="background-color: {{page.background-image_color}}"{% endunless %}>
+		{% comment %}<span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span>{% endcomment %}
+		<header class="hero__header">
+		{% comment %}hero__header--shadow{% endcomment %}
+			<h1 itemprop="name headline">
+				{{ page.title }}
+			</h1>
+			<h2>{{page.subtitle}}</h2>
+			{% comment %}<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} {% endcomment %}
+			{% comment %}<span class="categories">{{ page.categories }}<span></p>{% endcomment %}
+		</header>
+
+		{% comment %}
+		###################################
+		## Get code for the background set
+		## in current curious-about post
+		{% endcomment %}
+		{% unless page.background == nil %}
+		<div class="hero__background">
+			{{ page.background }}
+		</div>
+		{% endunless %}
+
+		<div class="metabox column__wrapper">
+			<div class="column column--vertical">
+				<strong class="meta-description">Client:</strong>
+				<span class="meta">{{page.client}}</span>
+			</div>
+			<div class="column column--vertical">
+				<strong class="meta-description">Project:</strong>
+				<span class="meta">{{page.project}}</span>
+			</div>
+			{% unless page.link == nil %}
+			<div class="column column--vertical">
+				<a href="{{page.link}}" class="button" id="{{page.slug}}_button"><span>{{page.link-text}}</span></a>
+			</div>
+			{% endunless %}
+		</div>
+
+    </div>
+
+	{% unless page.ingress == nil %}
+	<div class="ingress ingress--{{ page.slug }}">
+		{{ page.ingress | markdownify }}
+
+		{% unless page.author == nil %}
+		<a class="metabutton" href="mailto:{{page.author-email}}">
+			Author: <span>{{page.author}}</span>
+		</a>
+		{% endunless %}
+		
+	</div>
+	{% endunless %}
+
+	<main itemprop="articleBody">
+		{{ content }}
+	</main>
+
+</article>
+
+<div class="boxgrid">
+	<h2 class="boxgrid__header h4">Check out our other projects</h2>
+
+	{% comment %}
+	Get next and previous work post,
+	and assign a default work post if there are no next or previous post
+	{% endcomment %}
+	{% assign previousPost = page.previous %}
+	{% assign nextPost = page.next %}
+
+	{% if previousPost == nil%}
+		{% assign previousPost = site.work[0] %}
+		{% if previousPost == nextPost %}
+			{% assign previousPost = site.work[1] %}
+		{% endif %}
+	{% endif %}
+
+	{% if nextPost == nil%}
+		{% assign nextPost = site.work[0] %}
+		{% if nextPost == nextPost %}
+			{% assign nextPost = site.work[1] %}
+		{% endif %}
+	{% endif %}
+
+	<a class="boxgrid__box" href="{{ previousPost.url | prepend: site.baseurl }}">
+		<div class="image-loader" style="background: {{previousPost.background-image_color}}"> 
+			<img src="{{site.baseurl}}/assets/work/{{previousPost.slug}}/{{previousPost.background-image_1440}}" alt="{{ previousPost.title }}">	
+		</div>
+		<div class="boxgrid__caption">
+			<h3>{{ previousPost.title }}</h3>
+			<p>{{ previousPost.subtitle }}</p>
+		</div>
+	</a>
+
+	<a class="boxgrid__box" href="{{ nextPost.url | prepend: site.baseurl }}">
+		<div class="image-loader" style="background: {{nextPost.background-image_color}}"> 
+			<img src="{{site.baseurl}}/assets/work/{{nextPost.slug}}/{{nextPost.background-image_1440}}" alt="{{ nextPost.title }}">	
+		</div>
+		<div class="boxgrid__caption">
+			<h3>{{ nextPost.title }}</h3>
+			<p>{{ nextPost.subtitle }}</p>
+		</div>
+	</a>
+</div>
+
+{% comment %}
+####################
+## Get scripts from
+## current post
+
+{% for js in page.scripts %}
+	{% assign root = 'js/' %}
+	<script type="text/javascript">
+	{% include {{ root | append: js }} %}
+	</script>
+{% endfor %}
+{% endcomment %}
