@@ -118,7 +118,7 @@ layout: default
     
     {% for curiosity in items %}
         <div class="boxgrid__box">
-            <div class="image-loader" style="background-color: {{curiosity.background-color}}"> <!--Change this color to an average color from the image-->
+            <div class="image-loader" style="background-color: {{ curiosity.background-color }}"> <!--Change this color to an average color from the image-->
                 {% unless curiosity.background-image_720 == nil %}
                     <img src="{{site.baseurl}}/assets/curious-about/{{curiosity.slug}}/{{curiosity.background-image_720}}" alt="{{curiosity.title}}">	
                 {% endunless %}

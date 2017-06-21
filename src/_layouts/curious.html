@@ -70,7 +70,7 @@ layout: default
 		{% endif %}
 		<a class="boxgrid__box" href="{{ curious.url | prepend: site.baseurl }}">
 			
-				<div class="image-loader" style="background: #ccc">
+				<div class="image-loader" style="background: {{ curious.background-color }}">
 				{% unless curious.background-image_1440 == nil %}
 					<img src="{{site.baseurl}}/assets/curious-about/{{curious.slug}}/{{curious.background-image_1440}}" alt="{{ curious.title }}">	
 				{% endunless %}

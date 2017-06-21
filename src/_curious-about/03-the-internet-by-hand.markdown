@@ -6,7 +6,7 @@ date:   2017-04-27 11:07:00 +0100
 categories: art, design, web
 slug: the-internet-by-hand
 background-image_720: "hero_720.jpg"
-background-color: "#FFDE7F"
+background-image_color: "#FFDE7F"
 background: '<div class="hero__bgcenter"><img style="max-width: 20em; height: auto" class="image" src="//fullystudios.github.io//assets/curious-about/the-internet-by-hand/tomte-sequence.gif"></div>'
 
 ingress: |
