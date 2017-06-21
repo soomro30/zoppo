@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign items = site.curious-about | sort: 'date' %}
+{% assign items = (site.curious-about | sort: 'date') | reverse %}
 {% assign root = 'js/' %}
     
 {% for curiosity in items limit:1 %}
@@ -42,9 +42,7 @@ layout: default
         ## in current curious-about post
         {% endcomment %}
         {% unless curiosity.background == nil %}
-            <div class="hero__background">
-                {{ curiosity.background }}
-            </div>
+            {{ curiosity.background }}
         {% endunless %}
     </div>
 {% endfor %}
@@ -52,9 +50,7 @@ layout: default
 
 
 <div class="grid grid--curiosities">
-{% assign items = site.curious-about | sort: 'date' %}
-{% assign root = 'js/' %}
-    
+
 {% for curiosity in items limit:2 offset:1 %}
     
     {% unless curiosity.background-image_2880 == nil %}
@@ -78,9 +74,7 @@ layout: default
         ## in current curious-about post
         {% endcomment %}
         {% unless curiosity.background == nil %}
-            <div class="hero__background">
-                {{ curiosity.background }}
-            </div>
+            {{ curiosity.background }}
         {% endunless %}
     </div>
     <header class="boxtext boxtext--texttop center hyphenate">

@@ -228,6 +228,9 @@
 
 // Curiosities layout
 .grid--curiosities {
+    .bgimage {
+        position: relative;
+    }
     .bgimage:nth-of-type(1) {
         grid-column: 1 / -1;
         grid-row: 3 / span 10;

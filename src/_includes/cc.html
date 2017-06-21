@@ -20,24 +20,8 @@
     ## set in current post
     -->
     {% unless cc.background == nil %}
-    <div class="hero__background">
         {{ cc.background }}
-    </div>
     {% endunless %}
-    
-    <!-- 
-    ####################
-    ## Get scripts from
-    ## current post
-    -->
-    {% comment %}
-    {% for js in cc.scripts %}
-        {% assign root = 'js/' %}
-        <script type="text/javascript">
-        {% include {{ root | append: js }} %}
-        </script>
-    {% endfor %}
-    {% endcomment %}
 
 </section>
 {% endfor %}
