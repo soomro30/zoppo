@@ -14,6 +14,7 @@ To build: `rake b`
 
 ### Setup
 
+- `nvm use 7.2.1`
 - `npm install -g webpack`
 - `npm install`
 - `bundle install`
@@ -32,7 +33,7 @@ To build: `rake b`
 Only if you haven't installed Jekyll, node or Gulp installed on your machine:
 
 1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
-2. [NodeJS](http://nodejs.org) - use the installer.
+2. [NodeJS](http://nodejs.org) - use the installer. 7.2.1
 3. [GulpJS](https://github.com/gulpjs/gulp) - `$ npm install -g gulp` (mac users may need sudo)
 4. [Bundle](http://bundler.io/) -  `gem install bundler`
 
