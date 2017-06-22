@@ -36,6 +36,7 @@ Update gems:
 2. Change to branch develop 
 3. Inside the directory, run: 
 - `nvm use 7.2.1`
+- if you dont have node 7.2.1 run `nvm install 7.2.1`
 - `npm install -g webpack`
 - if you dont have bundler run `gem install bundler` (see above)
 - `npm install`
