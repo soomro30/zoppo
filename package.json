@@ -25,10 +25,13 @@
     "babel-preset-react": "^6.5.0",
     "barba.js": "^1.0.0",
     "bodymovin": "^4.7.0",
+    "eslint": "^4.0.0",
+    "eslint-loader": "^1.8.0",
+    "lory.js": "^2.2.1",
     "react": "^15.0.2",
     "react-addons-update": "^15.0.2",
     "react-dom": "^15.0.2",
-    "webpack": "^1.13.2",
-    "turbolinks": "^5.0.3"
+    "turbolinks": "^5.0.3",
+    "webpack": "^1.13.2"
   }
 }
