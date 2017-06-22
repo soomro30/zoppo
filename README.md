@@ -89,6 +89,7 @@ As this is just a Jekyll project, you can use any of the commands listed in thei
 Get highlighting in markdown files in Sublime:
 1. Install Package Markdown Extended
 2. Activatel package ctrl + shift + p and select Markdown Extended
+3. Set default: Navigate through the following menus in Sublime Text: View -> Syntax -> Open all with current extension as... -> Markdown Extended
 ...
 
 

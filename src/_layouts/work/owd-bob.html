@@ -67,7 +67,7 @@ layout: case
 
 
 {% unless page.imageline == nil %}
- <section class="sectionspacing c-dark-bg flexcenter">
+ <section class="c-dark-bg flexcenter">
      <div class="imageline">
         {% for image in page.imageline %}
             <div class="imageline__image">
@@ -80,7 +80,7 @@ layout: case
 </section> 
 {% endunless %}
 
-<section class="slider-wide sectionspacing">
+<section class="slider-wide">
     <div class="slider js_slider">
         <div class="slider__frame js_frame">
             <ul class="slider__slides js_slides">
@@ -166,7 +166,7 @@ $('.variable-width').slick({
 </div> -->
 
 {% unless page.section5 == nil %}
-    <section class="box box--center">
+    <section class="box box--center sectionspacing">
         <div class="h4">
             {{ page.section5 | markdownify }}
         </div>
