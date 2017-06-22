@@ -32,20 +32,7 @@
         {% endunless %}
     </div>
 
-    <!-- 
-    ####################
-    ## Get scripts from
-    ## current post
-    -->
-    {% comment %}
-    {% for js in work1.scripts %}
-        <script type="text/javascript">
-        {% include {{ root | append: js }} %}
-        </script>
-    {% endfor %}  
-    {% endcomment %}   
-
-    <div class="boxtext grid__offsetcolumn2-2">
+    <div class="boxtext grid__offsetcolumn2-2 grid__offsetcolumn2-2--bring-to-front">
         <h2>{{work1.title}}</h2>
         <p>{{work1.subtitle}}</p>
         <a href="{{ work1.url | prepend: site.baseurl }}" class="button"><span>{{work1.button-text}}</span></a>
