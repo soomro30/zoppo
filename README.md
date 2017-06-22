@@ -20,6 +20,21 @@ To build: `rake b`
 - `bundle install`
 - `rake start`
 
+#### Error?
+If nothing happens after 20s when you run `rake start`, try run `rake b`. If you get following error:
+```jekyll 3.4.3 | Error:  "\xE6" on US-ASCI```
+Do the following:
+
+1. In terminal, run `locale`. If LANG or LC_ALL is blank:
+2. Run `cd` and `sudo nano /etc/profile`
+3. Copy paste this in the end and save:
+    ```
+export LC_ALL=sv_SE.UTF-8  
+export LANG=sv_SE.UTF-8
+    ````
+5. Restart you terminal
+4. run `locale` and confirm the changes. 
+
 ## Todos
 - för över statiska filer
 - för över style

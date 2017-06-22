@@ -9,5 +9,5 @@ group :jekyll_plugins do
 	gem "jekyll-seo-tag"
  	gem "jekyll-autoprefixer"
 	gem "jekyll-contentblocks"
-  	# gem "jekyll-redirect-from"
+  	gem "jekyll-redirect-from"
 end
