@@ -4,5 +4,5 @@ node_modules
 .publish
 .DS_Store
 /Gemfile.lock
-/.sass-cache
-/public
+.sass-cache
+public

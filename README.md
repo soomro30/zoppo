@@ -14,10 +14,26 @@ To build: `rake b`
 
 ### Setup
 
+- `nvm use 7.2.1`
 - `npm install -g webpack`
 - `npm install`
 - `bundle install`
 - `rake start`
+
+#### Error?
+If nothing happens after 20s when you run `rake start`, try run `rake b`. If you get following error:
+```jekyll 3.4.3 | Error:  "\xE6" on US-ASCI```
+Do the following:
+
+1. In terminal, run `locale`. If LANG or LC_ALL is blank:
+2. Run `cd` and `sudo nano /etc/profile`
+3. Copy paste this in the end and save:
+    ```
+export LC_ALL=sv_SE.UTF-8  
+export LANG=sv_SE.UTF-8
+    ````
+5. Restart you terminal
+4. run `locale` and confirm the changes. 
 
 ## Todos
 - för över statiska filer
@@ -32,7 +48,7 @@ To build: `rake b`
 Only if you haven't installed Jekyll, node or Gulp installed on your machine:
 
 1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
-2. [NodeJS](http://nodejs.org) - use the installer.
+2. [NodeJS](http://nodejs.org) - use the installer. 7.2.1
 3. [GulpJS](https://github.com/gulpjs/gulp) - `$ npm install -g gulp` (mac users may need sudo)
 4. [Bundle](http://bundler.io/) -  `gem install bundler`
 

@@ -22,7 +22,7 @@ layout: page
             </style>
             <div id="mojs-container"></div>
             {{page.script}}
-            
+
             <script>
                 // For edits this code, copy code from https://codepen.io/fullystudios/pen/dd259ea5429ebf4213fae25b821df085?editors=0010
                 'use strict';
@@ -290,9 +290,12 @@ layout: page
 {% endunless %}
 
 {% unless page.section3 == nil %}
-    <section class="background-image sectionpadding" style="background-image: url(http://placekitten.com/g/1920/1080)">
-        <div class="box box--invert box--center c-business-bg" style="max-width: 45em">
-            {{ page.section3 | markdownify }}
+    <section class="background-image sectionpadding">
+        <iframe style="width: 100%; height: 100%; position:absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden;" src="../assets/about/partiklar/index.html" frameborder="0"></iframe>
+        <div style="position: relative; z-index: 1; pointer-events: none;">
+            <div class="box box--invert box--center c-business-bg" style="max-width: 45em">
+                {{ page.section3 | markdownify }}
+            </div>
         </div>
     </section>
 {% endunless %}
