@@ -13676,6 +13676,9 @@
 			_classCallCheck(this, Slider);
 
 			this._js_slider = document.querySelector('.js_slider');
+
+			if (!this._js_slider) return;
+
 			this._js_slides = document.querySelector('.js_slides');
 			this._dot_count = this._js_slider.querySelectorAll('.js_slide').length;
 			this._dot_container = this._js_slider.querySelector('.js_dots');
