@@ -85,6 +85,12 @@ As this is just a Jekyll project, you can use any of the commands listed in thei
 
 ...
 
+### Markdown
+Get highlighting in markdown files in Sublime:
+1. Install Package Markdown Extended
+2. Activatel package ctrl + shift + p and select Markdown Extended
+...
+
 
 ## CREDITS:
 
