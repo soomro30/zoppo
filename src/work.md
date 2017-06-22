@@ -7,7 +7,7 @@ permalink: /work/
 slug: work
 background-color: "#f8f8f8"
 reel-text: Keep it REEL!
-reel-url: https://player.vimeo.com/video/211438822
+reel-vimeo-id: 222507866
 reel-sub: Showreel 2017 
 
 background: |
