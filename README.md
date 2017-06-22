@@ -16,6 +16,7 @@ To build: `rake b`
 
 - `nvm use 7.2.1`
 - `npm install -g webpack`
+- if you dont have bundler run `gem install bundler`
 - `npm install`
 - `bundle install`
 - `rake start`
