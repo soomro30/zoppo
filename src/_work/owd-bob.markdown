@@ -1,5 +1,6 @@
 ---
 layout: work/owd-bob
+type: work
 title:  "Owd Bob"
 subtitle: "The most elusive print shop in the world"
 author: "Robin Kollberg"
@@ -69,33 +70,24 @@ imageline:
   - "post-4.jpg"
 
 slider:
-  slide1:
+  - slide: 
     image: "slider/dan_1.jpg"
-    width: '947px'
-  slide2:
+  - slide:
     image: "slider/dan_2.jpg"
-    width: '947px'
-  slide3:
+  - slide:
     image: "slider/elin_1.jpg"
-    width: '947px'
-  slide4:
+  - slide:
     image: "slider/elin_2.jpg"
-    width: '947px'
-  slide5:
+  - slide:
     image: "slider/elin_3.jpg"
-    width: '947px'
-  slide6:
+  - slide:
     image: "slider/elin_4.jpg"
-    width: '947px'
-  slide7:
+  - slide:
     image: "slider/jocke_1.jpg"
-    width: '947px'
-  slide8:
+  - slide:
     image: "slider/jocke_2.jpg"
-    width: '947px'
-  slide9:
+  - slide:
     image: "slider/mikael_selin_1.jpg"
-    width: '947px'
  
 image3_1440: "instagram_1440.jpg"
 image3_alt: "Instagram feed"

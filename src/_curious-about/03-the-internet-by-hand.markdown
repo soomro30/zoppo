@@ -1,5 +1,6 @@
 ---
 layout: curious/the-internet-by-hand
+type: curious-about
 title:  "The Internet by hand"
 subtitle: "You can create entire worlds without having to pick up a pen."
 date:   2017-04-27 11:07:00 +0100
@@ -14,6 +15,26 @@ ingress: |
 
 section1: |
   This being said, we’re pretty fascinated by the old arts and things crafted by human hands. We have two properly educated illustrators at Fully, which is a larger number than most agencies have at all. The twist is that one of them is our back-end coder and the other is our filmmaker.
+
+slider:
+  - slide: 
+    image: "slider/draw.jpg"
+  - slide:
+    image: "slider/gbg.jpg"
+  - slide:
+    image: "slider/goth_big.jpg"
+  - slide:
+    image: "slider/hast.jpg"
+  - slide:
+    image: "slider/jan.jpg"
+  - slide:
+    image: "slider/julkort_stort.jpg"
+  - slide:
+    image: "slider/katt.jpg"
+  - slide:
+    image: "slider/mustaschvax.jpg"
+  - slide:
+    image: "slider/Oldman-Majorna_stor.jpg"
 
 section2: |
   Over the years, we’ve done dozens of projects for clients involving custom illustrations and animated movies. But having poly-talented illustrators in our midst has prompted us to experiment with translating the handwritten arts to the web in new ways.
