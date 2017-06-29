@@ -4,7 +4,8 @@ email: hello@fullystudios.se
 tel: "+46 738 07 30 72"
 description: Fully Studios - This site is under construction.
 adress: Victoriapassagen,<br>Södra Larmgatan 14,<br>411 16 Göteborg
-baseurl: "" # the subpath of your site, e.g. /blog
+# baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/fullystudios" # for demo site on demo.fullyflared.se/fullystudios
 url: "http://fullystudios.github.io" # the base hostname & protocol for your site
 twitter: "https://twitter.com/fullyflared_se"
 github:  "https://github.com/fullystudios"
