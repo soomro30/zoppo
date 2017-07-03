@@ -112,17 +112,17 @@
     }
     .column {
         margin-bottom: $s-small;
+        align-items: center;
     }
+    img {display: block; margin: 0 auto;}
 }
 
 .footer {
     background-color: $c-white;
     color: $c-dark;
-    margin: 0 $s-small;
     
     @include media-query($on-laptop) {
         font-size: 80%;
-        margin: $s-small*2 $s-small 0;
     }
     img {
         width: 6em;

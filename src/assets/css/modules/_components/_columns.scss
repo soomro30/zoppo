@@ -1,4 +1,9 @@
 .column {
+    width: 100%;
+    @include media-query($on-palm) {
+        width: auto;
+    }
+
     padding: $s-small/3 $s-small*0.5;
     @include media-query($on-laptop) {
         padding: $s-small/3 $s-small;    
@@ -24,5 +29,11 @@
             flex: 1 0 25%;
             max-width: 25%;
         }
+    }
+    
+    &--alignend {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
     }
 }
