@@ -9,6 +9,7 @@ class Nav {
 			e.preventDefault();
 			this._menuIsOpen ? this.closeMenu() : this.openMenu();
 		}, false);
+		console.log('open menu');
     }
 
 	openMenu () {

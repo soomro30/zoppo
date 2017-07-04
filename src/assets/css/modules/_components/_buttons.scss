@@ -139,13 +139,13 @@ $bshadow: 3px; // the size of the shadow
 		}
 		&.menu-open {
 			line:nth-child(1) {
-				transform: rotate(45deg) translate3D(0.3em, -0.3em, 0)
+				transform: rotate(45deg) translate3D(1.4em, -2.4em, 0);
 			}
 			line:nth-child(2) {
 				transform: scaleX(0);
 			}
 			line:nth-child(3) {
-				transform: rotate(-45deg) translate3D(0.3em, 0.3em, 0)
+				transform: rotate(-45deg) translate3D(-3.5em, 0.3em, 0)
 			}
 		}
 	}
