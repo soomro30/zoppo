@@ -23,20 +23,20 @@
     min-height: 100vh;
      // Hacky way to prevent page from scrolling when URL-bar disapears.
     // -9vw is the magic number for the URL-bar
-    @media (max-device-aspect-ratio: 3/4) {
-        min-height: (70vw * 1.333 - 9vw);
-    }
-    @media (max-device-aspect-ratio: 2/3) {
-        min-height: (70vw * 1.5 - 9vw);
-    }
-    //ex iPhone 5
-    @media (max-device-aspect-ratio: 10/16) {
-        min-height: (70vw * 1.6 - 9vw);
-    }
-    //ex iPhone 6, Nexus 5X, Galaxy S5
-    @media (max-device-aspect-ratio: 9/16) {
-        min-height: (70vw * 1.778 - 9vw);
-    }
+    // @media (max-device-aspect-ratio: 3/4) {
+    //     min-height: (70vw * 1.333 - 9vw);
+    // }
+    // @media (max-device-aspect-ratio: 2/3) {
+    //     min-height: (70vw * 1.5 - 9vw);
+    // }
+    // //ex iPhone 5
+    // @media (max-device-aspect-ratio: 10/16) {
+    //     min-height: (70vw * 1.6 - 9vw);
+    // }
+    // //ex iPhone 6, Nexus 5X, Galaxy S5
+    // @media (max-device-aspect-ratio: 9/16) {
+    //     min-height: (70vw * 1.778 - 9vw);
+    // }
 
     @include media-query($on-laptop) {
         min-height: 100vh;
@@ -85,6 +85,10 @@
     > .button {
         margin-top: 3em;
     }
+
+    .button {
+        text-align: center;
+    }
 }
 
 // For custom backgrounds
@@ -126,6 +130,11 @@
 
 // Custom heros
 .hero--about {
+
+    h1 {
+        font-size: calc( 2em + 2vw );
+    }
+
     h4 {
         margin-top: $s-small*2;
         a {
@@ -147,5 +156,14 @@
                 }
             }
         }
+    }
+}
+.hero--owd-bob {
+    
+}
+.hero--contact {
+    padding:100px 0 30px;
+    h2 {
+        font-size: calc( 1.5em + 2vw );
     }
 }

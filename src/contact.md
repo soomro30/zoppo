@@ -6,7 +6,7 @@ pagetitle: |
 
   ### [Looking for someone special?](#we-are-fully)
 permalink: /contact/
-slug: about
+slug: contact
 background-color: "#FFC1B4"
 
 employees:

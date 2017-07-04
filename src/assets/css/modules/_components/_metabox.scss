@@ -6,7 +6,7 @@ $moveMetabox: 4em;
     transform: translate3D(0,$moveMetabox,0);
     max-width: 60em;
     margin: 0 $s-small;
-    width: calc(100% - #{$s-small*2});
+    width: calc(100% - #{$s-small});
     background: $c-white;
     // align-self: flex-end;
     animation: moveBack 0.7s forwards cubic-bezier(0.3,0,.1,1);
