@@ -10,8 +10,8 @@ layout: page
         </div>
         <div class="anim-wrapper">
             <style>
-                .anim-wrapper {
-                    
+                .gridabout {
+                    overflow: hidden;
                 }
                 #mojs-container {
                     width: 100%;
@@ -164,9 +164,13 @@ layout: page
 {% endunless %}
 
 {% unless page.section2 == nil %}
-    <section class="sectionspacing invert">
+    <section class="sectionspacing invert responsive-animation">
 
         <style>
+            .responsive-animation {
+                overflow: hidden;
+                width: 100%;
+            }
             .anim-container {
                 position: relative;
                 overflow: hidden;
@@ -191,8 +195,8 @@ layout: page
             }
             #morphanim {
                 display: block;
-                width: 90%;
-                height: auto;
+                width: 90vw;
+                height: 59.3vw;
                 margin: 0 auto;
             }
             @media (min-width: 40em) {
@@ -203,14 +207,9 @@ layout: page
                     font-size: 3.5vw;
                 }
                 #morphanim {
-                    width: 50%;
+                    width: 50vw;
+                    height: 32.8vw;
                 }
-                /*#morphanim__text.tablet {
-                    transform: scale(0.5) translateY(-1em);
-                }
-                #morphanim__text.mobile {
-                    transform: scale(0.22) translateY(-2em);
-                }*/
             }
 
         </style>
