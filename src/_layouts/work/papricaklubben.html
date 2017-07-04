@@ -43,7 +43,7 @@ layout: case
 {% unless page.section4 == nil %}
     <div class="grid grid--space sectionspacing-small">
         <div class="background-image grid__offsetcolumn1-2" style="background-image: url({{site.baseurl}}/assets/work/{{page.slug}}/{{page.section4-image_large}})"></div>
-        <div class="grid__offsetcolumn2-2">
+        <div class="grid__offsetcolumn2-2 bring-to-front">
             <div class="box box--people box--up box--right">{{ page.section4 | markdownify }}</div>
         </div>
     </div>

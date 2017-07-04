@@ -71,7 +71,9 @@
     justify-content: flex-end;
     flex-direction: column;
 }
-
+.bring-to-front {
+    z-index: 1;
+}
 // Images / backgrounds
 .background-image {
     background-size: cover;
