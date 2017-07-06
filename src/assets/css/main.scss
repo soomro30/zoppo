@@ -29,6 +29,7 @@ $base-line-height:  1.75;
 
 $spacing-unit:      30px;
 $s-small:           30px;
+$s-tiny:            10px;
 
 $background-color:  #fdfdfd;
 
@@ -81,7 +82,7 @@ $on-desktop:        1280px;
     "base",
     "layout",
     "curious",
-    "syntax-highlighting",
+    "syntax-highlighting", // kanske ta bort denna? 3k
     "_components/boxes",
     "_components/boxgrid",
     "_components/buttons",
