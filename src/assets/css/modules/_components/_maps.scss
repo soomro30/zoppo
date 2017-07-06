@@ -12,9 +12,13 @@
             content: "";
             display: block;
             border: 4px solid $c-dark;
-            width: 80%;
+            left: 4%;
+            width: 90%;
+            @include media-query($on-laptop) {
+                width: 80%;
+                left: 10%;
+            }
             position: absolute;
-            left: 10%;
             top: -$s-small; 
             bottom: -$s-small*2;
             pointer-events: none;

@@ -48,6 +48,12 @@ layout: page
             center: fully,
             zoom: 18,
             scrollwheel: false,
+            zoomControl: true,
+            mapTypeControl: false,
+            scaleControl: true,
+            streetViewControl: true,
+            rotateControl: true,
+            fullscreenControl: false,
             styles: 
             [
                 {
@@ -160,11 +166,21 @@ layout: page
                 }
             ]
         });
-        var marker_image = '../assets/icons/marker.svg';
+
+        var marker_icon = {
+            path: 'M0,27.62A27.23,27.23,0,0,1,2.19,16.88,27.07,27.07,0,0,1,16.88,2.19,26.87,26.87,0,0,1,27.62,0,26.6,26.6,0,0,1,38.4,2.19,27.36,27.36,0,0,1,47.19,8a26.93,26.93,0,0,1,5.94,8.83,27.47,27.47,0,0,1,0,21.48,29.84,29.84,0,0,1-2.89,5.23L32,71.37q-1.8,2.73-4.3,2.73t-4.34-2.73L5.08,43.59a24.62,24.62,0,0,1-2.89-5.23A27.23,27.23,0,0,1,0,27.62Zm17.38,0A10.27,10.27,0,0,0,27.62,37.93a9.8,9.8,0,0,0,7.3-3,9.74,9.74,0,0,0,3-7.27,9.9,9.9,0,0,0-3-7.27,9.8,9.8,0,0,0-7.3-3,9.92,9.92,0,0,0-7.27,3A10.05,10.05,0,0,0,17.38,27.62Z',
+            fillColor: '#092a4f',
+            fillOpacity: 0.9,
+            scale: 1,
+            strokeColor: '#092a4f',
+            strokeWeight: 1,
+            anchor: new google.maps.Point(30, 60)
+          };
+
         var g_marker = new google.maps.Marker({
             position: fully,
             map: g_map,
-            icon: marker_image
+            icon: marker_icon
         });
         var site_description = "{{site.description}}";
         var site_adress = "{{site.adress}}"
