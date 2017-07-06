@@ -12,8 +12,8 @@
             content: "";
             display: block;
             border: 4px solid $c-dark;
-            left: 4%;
-            width: 90%;
+            left: 1%;
+            width: 96%;
             @include media-query($on-laptop) {
                 width: 80%;
                 left: 10%;
