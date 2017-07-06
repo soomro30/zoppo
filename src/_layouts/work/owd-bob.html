@@ -50,18 +50,18 @@ layout: case
 
 {% unless page.section4 == nil %}
 <div class="grid grid--space">
-    <div class="grid__offsetcolumn2-2 flexcenter" id="lettering2" style="background-color: #222a3f">
+    <div class="grid__offsetcolumn2-2 grid__offsetcolumn2-2--owd-bob flexcenter" id="lettering2" style="background-color: #222a3f">
         <style>
         #lettering2 svg {
-            padding: 6vw;
+            padding: 4em;
             max-height: 60vh;
         }
         </style>
     </div>
-
     <section class="grid__offsetcolumn1-2 grid__offsetcolumn1-2--small box box--business">
         {{ page.section4 | markdownify }}
     </section>
+
 </div>
 {% endunless %}
 
