@@ -26,7 +26,7 @@ employees:
     image: employees/jonathan-davis-asp.jpg
     title: I develop and fix stuff at Fully
     email: jonathan.asp@fullystudios.se
-    tel: +46 739 48 07 05
+    tel: +46 739 48 07 05 
 
   - name: Alexander Tengner
     image: employees/alexander-tengner.jpg
