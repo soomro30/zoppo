@@ -119,3 +119,15 @@
 .hidden {
     display: none;
 }
+
+.hidden-sm{
+    @media ( max-width: $on-palm ) {
+        display: none;
+    }
+}
+
+.visible-only-sm {
+    @media (min-width: $on-palm ) {
+        display: none;
+    }
+}
