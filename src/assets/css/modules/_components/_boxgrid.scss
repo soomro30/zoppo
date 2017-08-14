@@ -19,6 +19,7 @@ $bgMqMedium: 800px;
     }
     a {
         color: $c-dark;
+        border-bottom:0.5px solid $c-signal;
     }
 
     &__header {
