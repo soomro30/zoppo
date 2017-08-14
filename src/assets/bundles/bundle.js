@@ -70,6 +70,10 @@
 
 	var _Slider2 = _interopRequireDefault(_Slider);
 
+	var _VideoPlayer = __webpack_require__(7);
+
+	var _VideoPlayer2 = _interopRequireDefault(_VideoPlayer);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// import PageTransition from './PageTransition';
@@ -78,7 +82,8 @@
 	module.exports = {
 		nav: new _Nav2.default(),
 		logoAnimation: new _LogoAnimation2.default(),
-		slider: new _Slider2.default()
+		slider: new _Slider2.default(),
+		videoPlayer: new _VideoPlayer2.default()
 		// barbaWrapper: new BarbaWrapper,
 		// pageTransition: new PageTransition
 	};
@@ -107,7 +112,6 @@
 				e.preventDefault();
 				_this._menuIsOpen ? _this.closeMenu() : _this.openMenu();
 			}, false);
-			console.log('open menu');
 		}
 
 		_createClass(Nav, [{
@@ -14623,6 +14627,84 @@
 	/******/ ])
 	});
 	;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	module.exports = function () {
+	    function VideoPlayer() {
+	        var _this = this;
+
+	        _classCallCheck(this, VideoPlayer);
+
+	        this.triggerTime = 5.7;
+	        this.loopTime = 1.5; // seconds from the end that the film gonna loop from
+	        this.videoModals = document.querySelectorAll('[data-videomodal]');
+	        this.videoElement = document.querySelectorAll('[data-videoplayer]');
+	        this.videoElement.forEach(function (el, index) {
+	            _this.setupEvents(el);
+	            el.modal = _this.videoModals[index];
+	            el.modal.classList.remove('navigation__modal--open');
+	        });
+	    }
+
+	    _createClass(VideoPlayer, [{
+	        key: 'setupEvents',
+	        value: function setupEvents(el) {
+	            var _this2 = this;
+
+	            el.addEventListener('playing', function (evt) {
+	                console.log('the video is playing', evt);
+	                _this2.modalTrigger(el);
+	            });
+	            el.addEventListener('ended', function (evt) {
+	                console.log('the video has ended', evt);
+	                _this2.videoLoop(el);
+	            });
+
+	            console.log('test', this.videoElement);
+	        }
+	    }, {
+	        key: 'modalTrigger',
+	        value: function modalTrigger(el) {
+	            var start = null;
+	            var self = this;
+	            function loop(timestamp) {
+	                if (!start) start = timestamp;
+	                // let progress = timestamp - start;
+
+	                if (el.currentTime < self.triggerTime) {
+	                    window.requestAnimationFrame(loop);
+	                } else {
+	                    console.log(el.currentTime);
+	                    self.openModal(el.modal);
+	                }
+	            }
+
+	            window.requestAnimationFrame(loop);
+	        }
+	    }, {
+	        key: 'openModal',
+	        value: function openModal(el) {
+	            el.classList.add('navigation__modal--open');
+	        }
+	    }, {
+	        key: 'videoLoop',
+	        value: function videoLoop(el) {
+	            el.currentTime = el.duration - this.loopTime;
+	            el.play();
+	        }
+	    }]);
+
+	    return VideoPlayer;
+	}();
 
 /***/ })
 /******/ ]);

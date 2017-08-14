@@ -70,6 +70,32 @@ $animTime: .3s;
         pointer-events: none;
         // color: red;
     }
+    &__modal {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        z-index: 10;
+        background-color: $c-white;
+        padding: $s-small 0;
+        text-align: center;
+        transform: translate3D(-20%, -50%, 0) scale(0.5);
+        opacity: 0;
+        transition: transform 1s $bounce, opacity 0.2s;
+        &--open {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+    }
+    #menu .navigation__modal {
+        transition: transform 0.3s 1s;
+    }
+    &#startmenu &__modal {
+        display: block;
+    }
+    &.menu-open .navigation__modal {
+        display: block;
+    }
     .menu-work ~ .navigation__overlay { left: 1.552em; }
     .menu-about ~ .navigation__overlay { left: 1.344em; }
     .menu-curiosities ~ .navigation__overlay { left: 0.725em; }

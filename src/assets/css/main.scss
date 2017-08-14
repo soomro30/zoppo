@@ -46,8 +46,9 @@ $c-dark:            rgba(10,42,79,1);
 
 $cubic-bezier:      cubic-bezier(0.2,2,.3,.8);
 $text-color:        $c-dark;
-$cb-ease_out:       cubic-bezier(0.2,1,.3,.8);
+$cb-ease_out:       cubic-bezier(0.14, 0.79, 0.39, 1); // org cubic-bezier(0.2,1,.3,.8)
 $easeout:           $cb-ease_out;
+$bounce:            cubic-bezier(0.08, 1.51, 0.27, 0.97);
 
 
 // Width of the content area
