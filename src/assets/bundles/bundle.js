@@ -14644,16 +14644,19 @@
 
 	        _classCallCheck(this, VideoPlayer);
 
-	        this.triggerTime = 5.7;
+	        this.triggerTime = 6.3;
 	        this.loopTime = 1.5; // seconds from the end that the film gonna loop from
-	        this.videoModals = document.querySelectorAll('[data-videomodal]');
+	        this.videoModal = document.querySelector('[data-videomodal]');
+	        this.videoModal.classList.remove('navigation__modal--open');
+
 	        this.videoElement = document.querySelectorAll('[data-videoplayer]');
 	        this.videoElement.forEach(function (el, index) {
 	            _this.setupEvents(el);
-	            el.modal = _this.videoModals[index];
-	            el.modal.classList.remove('navigation__modal--open');
 	        });
 	    }
+
+	    // Lissen for the video to start playing, and loop it when it ends
+
 
 	    _createClass(VideoPlayer, [{
 	        key: 'setupEvents',
@@ -14661,32 +14664,24 @@
 	            var _this2 = this;
 
 	            el.addEventListener('playing', function (evt) {
-	                console.log('the video is playing', evt);
-	                _this2.modalTrigger(el);
+	                _this2.modalTrigger.call(_this2, el);
 	            });
 	            el.addEventListener('ended', function (evt) {
-	                console.log('the video has ended', evt);
 	                _this2.videoLoop(el);
 	            });
-
-	            console.log('test', this.videoElement);
 	        }
 	    }, {
 	        key: 'modalTrigger',
 	        value: function modalTrigger(el) {
-	            var start = null;
-	            var self = this;
-	            function loop(timestamp) {
-	                if (!start) start = timestamp;
-	                // let progress = timestamp - start;
+	            var _this3 = this;
 
-	                if (el.currentTime < self.triggerTime) {
+	            var loop = function loop() {
+	                if (el.currentTime < _this3.triggerTime) {
 	                    window.requestAnimationFrame(loop);
 	                } else {
-	                    console.log(el.currentTime);
-	                    self.openModal(el.modal);
+	                    _this3.openModal(_this3.videoModal);
 	                }
-	            }
+	            };
 
 	            window.requestAnimationFrame(loop);
 	        }

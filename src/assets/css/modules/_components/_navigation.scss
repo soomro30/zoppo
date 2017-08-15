@@ -70,18 +70,28 @@ $animTime: .3s;
         pointer-events: none;
         // color: red;
     }
+    &__wrapper {
+        position: relative;
+    }
     &__modal {
-        display: none;
         position: absolute;
-        bottom: 0;
-        right: 10%;
+        bottom: -14%;
+        margin-left: $s-small;
+        right: $s-small;
         z-index: 10;
         background-color: $c-white;
-        padding: $s-small 0;
+        padding: $s-small;
         text-align: center;
         transform: translate3D(-20%, -50%, 0) scale(0.5);
         opacity: 0;
         transition: transform 1s $bounce, opacity 0.2s;
+        p { display: none; }
+        @include media-query($on-laptop) {
+            bottom: 0;
+            left: auto;
+            padding: $s-small 0;
+            p { display: block; }
+        }
         &--open {
             transform: translateY(0) scale(1);
             opacity: 1;
@@ -90,12 +100,7 @@ $animTime: .3s;
     #menu .navigation__modal {
         transition: transform 0.3s 1s;
     }
-    &#startmenu &__modal {
-        display: block;
-    }
-    &.menu-open .navigation__modal {
-        display: block;
-    }
+
     .menu-work ~ .navigation__overlay { left: 1.552em; }
     .menu-about ~ .navigation__overlay { left: 1.344em; }
     .menu-curiosities ~ .navigation__overlay { left: 0.725em; }
