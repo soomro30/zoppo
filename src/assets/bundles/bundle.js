@@ -14647,8 +14647,9 @@
 	        this.triggerTime = 6.3;
 	        this.loopTime = 1.5; // seconds from the end that the film gonna loop from
 	        this.videoModal = document.querySelector('[data-videomodal]');
-	        this.videoModal.classList.remove('navigation__modal--open');
+	        if (!this.videoModal) return;
 
+	        this.videoModal.classList.remove('navigation__modal--open');
 	        this.videoElement = document.querySelectorAll('[data-videoplayer]');
 	        this.videoElement.forEach(function (el, index) {
 	            _this.setupEvents(el);

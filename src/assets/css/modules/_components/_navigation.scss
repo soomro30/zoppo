@@ -88,7 +88,7 @@ $animTime: .3s;
         p { display: none; }
         @include media-query($on-laptop) {
             bottom: 0;
-            left: auto;
+            right: $s-small * 2;
             padding: $s-small 0;
             p { display: block; }
         }
