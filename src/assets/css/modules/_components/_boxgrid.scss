@@ -19,7 +19,7 @@ $bgMqMedium: 800px;
     }
     a {
         color: $c-dark;
-        border-bottom:0.5px solid $c-signal;
+        // border-bottom:0.5px solid $c-signal;
     }
 
     &__header {
@@ -170,7 +170,7 @@ $bgMqMedium: 800px;
     // Offset version
     &--offset {
         @media (min-width: 829px) {
-            max-width: 67rem; // lock it to a two grid
+            max-width: 76rem; // lock it to a two grid
             margin-bottom: calc(#{$s-small} + 6em);
             .boxgrid__box {
                 transform: translateY(-2.5em);
@@ -178,6 +178,18 @@ $bgMqMedium: 800px;
                     transform: translateY(3.5em);
                 }
             }
+        }
+    }
+}
+
+// Page specific changes
+.page-contact, .page-curiousities {
+    .boxgrid {
+        &:before {
+            border-color: $c-dark;
+        }
+        &__header {
+            color: $c-dark;
         }
     }
 }

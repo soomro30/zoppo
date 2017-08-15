@@ -51,7 +51,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: $s-small*3 0 $s-small;
+        padding: $s-small*4 0 $s-small;
         color: $c-light;
         &--shadow {
             text-shadow:
@@ -158,12 +158,15 @@
         }
     }
 }
-.hero--owd-bob {
-    
+
+// Page specific changes
+.hero-contact {
+    a {
+        color: $c-dark;
+    }
 }
-.hero--contact {
-    padding:100px 0 30px;
-    h2 {
-        font-size: calc( 1.5em + 2vw );
+.hero--the-internet-by-hand {
+    .hero__header-element {
+        color: $c-dark;
     }
 }
