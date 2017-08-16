@@ -47,6 +47,9 @@ layout: default
 		{% unless page.ingress == nil %}
 		<div class="c-white-bg">
 			<div class="metabox metabox--offset column__wrapper center">
+				{% unless page.subtitle == nil %}
+				<h2 class="h3">{{ page.subtitle }}</h2>
+				{% endunless %}
 				<h4>
 					{{ page.ingress | markdownify }}
 				</h4>

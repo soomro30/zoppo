@@ -24,7 +24,7 @@ body {
 // * + *:not(body, path, #barba-wrapper, .barba-container, .site-footer, .box, .cc__background, .column, .meta) {
 //     margin-top: $spacing-unit;
 // }
-p + * {
+p + *, ol + *, ul + * {
     margin-top: $spacing-unit;
 }
 
@@ -119,6 +119,18 @@ pre {
  */
 ul, ol {
     margin-left: $spacing-unit;
+    max-width: 56em; // max 95 characters
+    max-width: calc( 56em + #{$spacing-unit*2});
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $spacing-unit*2;
+    padding-right: $spacing-unit*2;
+    @include media-query($on-palm) {
+        padding-left: $spacing-unit*3;
+        padding-right: $spacing-unit*3;
+    }
+    font-weight: bold;
 }
 
 li {
