@@ -1,6 +1,6 @@
 {% assign items = site.curious-about | sort: 'date' | reverse %}
 {% for cc in items limit:1 %}
-<section class="hero c-curiosities-bg" id="{{ cc.slug }}">
+<section class="hero hero--{{ cc.slug }}" id="{{ cc.slug }}"{% unless cc.background-image_color == nil %} style="background-color: {{cc.background-image_color}}"{% endunless %}>
     <!-- Get all cc-about posts and revers them -->
     <!-- Get only the latest post -->
     <header class="hero__header">

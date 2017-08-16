@@ -74,6 +74,10 @@
 
 	var _VideoPlayer2 = _interopRequireDefault(_VideoPlayer);
 
+	var _Curiosities = __webpack_require__(8);
+
+	var _Curiosities2 = _interopRequireDefault(_Curiosities);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// import PageTransition from './PageTransition';
@@ -83,7 +87,8 @@
 		nav: new _Nav2.default(),
 		logoAnimation: new _LogoAnimation2.default(),
 		slider: new _Slider2.default(),
-		videoPlayer: new _VideoPlayer2.default()
+		videoPlayer: new _VideoPlayer2.default(),
+		opinioated: new _Curiosities2.default()
 		// barbaWrapper: new BarbaWrapper,
 		// pageTransition: new PageTransition
 	};
@@ -14649,7 +14654,7 @@
 	        this.videoModal = document.querySelector('[data-videomodal]');
 	        if (!this.videoModal) return;
 
-	        this.videoModal.classList.remove('navigation__modal--open');
+	        this.videoModal.classList.remove('newsflash--open');
 	        this.videoElement = document.querySelectorAll('[data-videoplayer]');
 	        this.videoElement.forEach(function (el, index) {
 	            _this.setupEvents(el);
@@ -14689,7 +14694,7 @@
 	    }, {
 	        key: 'openModal',
 	        value: function openModal(el) {
-	            el.classList.add('navigation__modal--open');
+	            el.classList.add('newsflash--open');
 	        }
 	    }, {
 	        key: 'videoLoop',
@@ -14701,6 +14706,115 @@
 
 	    return VideoPlayer;
 	}();
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	module.exports = function () {
+	    function Opinioated() {
+	        var _this = this;
+
+	        _classCallCheck(this, Opinioated);
+
+	        var swipers = document.querySelectorAll('[data-coeswipe]');
+	        swipers.forEach(function (swiper) {
+	            _this.setup(swiper);
+	        });
+	    }
+
+	    _createClass(Opinioated, [{
+	        key: 'setup',
+	        value: function setup(swiper) {
+	            var _this2 = this;
+
+	            var images = document.querySelectorAll('[data-coeswipeimage]');
+	            var swiperImages = [].concat(_toConsumableArray(images));
+
+	            swiperImages.forEach(function (image) {
+	                image.addEventListener('mousemove', _this2.changeImage);
+	                image.addEventListener('touchmove', _this2.changeImage);
+	            });
+	        }
+	    }, {
+	        key: 'changeImage',
+	        value: function changeImage(e) {
+	            var image = e.target;
+
+	            // if (!e.offsetX && e.changedTouches === 'undefined') return;
+
+	            // Get pointer offset depending if the pointer is a mouse or touch
+	            var imageOffset = e.offsetX ? e.offsetX : e.changedTouches[0].clientX - e.changedTouches[0].target.offsetLeft;
+
+	            // let rPos = pageX - imageOffset;
+	            var elementWidth = image.offsetWidth;
+	            var elementPart = elementWidth / 4;
+
+	            var currentPart = 1;
+	            if (imageOffset > elementWidth - elementPart) {
+	                currentPart = 4;
+	                image.style.backgroundPositionX = '100%';
+	            } else if (imageOffset > elementWidth - elementPart * 2) {
+	                currentPart = 3;
+	                image.style.backgroundPositionX = '66.66%';
+	            } else if (imageOffset > elementWidth - elementPart * 3) {
+	                currentPart = 2;
+	                image.style.backgroundPositionX = '33.33%';
+	            } else {
+	                currentPart = 1;
+	                image.style.backgroundPositionX = '0%';
+	            }
+
+	            // console.log('currentPart', currentPart);
+	            // console.log('imageOffset', imageOffset);
+	            // console.log('____');
+	        }
+	    }]);
+
+	    return Opinioated;
+	}();
+
+	// $('.slide-content').mousemove(function(event) {  
+	//     var current = $(this).parents('.slider').slick('slickCurrentSlide');
+
+	//     if (current !== 4) {        
+	//       var pageCoords = event.pageX;
+	//       var elementOffset = $(this).offset().left;
+	//       var rPos = pageCoords - elementOffset;
+	//       var elementWidth = $(this).width();
+	//       var elementPart = elementWidth / 4;
+
+	//       console.log('mousemove. current !== 4. current:' + current);
+
+	//       if (rPos > elementWidth - elementPart ) {
+	//         $(this).parents('.slider').slick('slickGoTo',3);
+	//       }
+	//       else if (rPos > elementWidth - (elementPart*2) ) {
+	//         $(this).parents('.slider').slick('slickGoTo',2);
+	//       }
+	//       else if (rPos > elementWidth - (elementPart*3) ) {
+	//         $(this).parents('.slider').slick('slickGoTo',1);
+	//       }
+	//       else {
+	//         $(this).parents('.slider').slick('slickGoTo',0);
+	//       }
+	//     }
+	//   }).on("touchend", function(ev) {
+	//       var current = $(this).parents('.slider').slick('slickCurrentSlide');
+
+	//       if (current !== 4) {
+	//         $(this).parents('.slider').slick('slickGoTo',4);
+	//         $(this).parents('.slider').parent().addClass('clicked');
+	//       }
+	//   });
 
 /***/ })
 /******/ ]);

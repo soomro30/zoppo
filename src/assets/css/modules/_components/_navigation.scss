@@ -39,11 +39,16 @@ $animTime: .3s;
     }
     &__list {
         position: absolute;
-        bottom: 0;
+        top: $s-small*2;
         left: 0;
         z-index: 3;
         list-style-type: none;
-        margin: 0 0 $s-small*3;
+        margin: 0 0 $s-small*4;
+        @media (min-width: $on-laptop) and (min-height: 445px) {
+            bottom: 0;
+            top: auto;
+            margin-bottom: $s-small*3;
+        }
     }
     &__item {
         position: relative;
@@ -54,6 +59,12 @@ $animTime: .3s;
         padding: $s-small*0.5 $s-small;
         @include media-query($on-laptop) {
             padding: $s-small*0.5 $s-small*2;        
+        }
+        @media (max-height: 445px) {
+            padding: 0.2em $s-small;
+        }
+        @media (max-height: 415px) {
+            font-size: calc(1em + 2vh);
         }
         display: inline-block;
         &:visited, &:hover {
@@ -72,33 +83,6 @@ $animTime: .3s;
     }
     &__wrapper {
         position: relative;
-    }
-    &__modal {
-        position: absolute;
-        bottom: -14%;
-        margin-left: $s-small;
-        right: $s-small;
-        z-index: 10;
-        background-color: $c-white;
-        padding: $s-small;
-        text-align: center;
-        transform: translate3D(-20%, -50%, 0) scale(0.5);
-        opacity: 0;
-        transition: transform 1s $bounce, opacity 0.2s;
-        p { display: none; }
-        @include media-query($on-laptop) {
-            bottom: 0;
-            right: $s-small * 2;
-            padding: $s-small 0;
-            p { display: block; }
-        }
-        &--open {
-            transform: translateY(0) scale(1);
-            opacity: 1;
-        }
-    }
-    #menu .navigation__modal {
-        transition: transform 0.3s 1s;
     }
 
     .menu-work ~ .navigation__overlay { left: 1.552em; }

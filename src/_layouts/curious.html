@@ -17,7 +17,7 @@ layout: default
 			</style>
 		{% endif %}
 	{% endunless %}
-	<div class="hero hero--cc hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %}" id="work_{{ page.slug }}">
+	<div class="hero hero--cc hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %}" id="work_{{ page.slug }}" {% unless page.background-image_color == nil %} style="background-color: {{page.background-image_color}}"{% endunless %}>
 		{% comment %}<span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span>{% endcomment %}
 
 		
@@ -70,9 +70,9 @@ layout: default
 		{% endif %}
 		<a class="boxgrid__box" href="{{ curious.url | prepend: site.baseurl }}">
 			
-				<div class="image-loader" style="background: {{ curious.background-color }}">
-				{% unless curious.background-image_1440 == nil %}
-					<img src="{{site.baseurl}}/assets/curious-about/{{curious.slug}}/{{curious.background-image_1440}}" alt="{{ curious.title }}">	
+				<div class="image-loader"{% unless curious.background-image_color == nil %} style="background-color: {{ curious.background-image_color }}" {% endunless %}>
+				{% unless curious.background-image_720 == nil %}
+					<img src="{{site.baseurl}}/assets/curious-about/{{curious.slug}}/{{curious.background-image_720}}" alt="{{ curious.title }}">	
 				{% endunless %}
 				</div>
 				<div class="boxgrid__caption">

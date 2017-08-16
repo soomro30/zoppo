@@ -78,9 +78,9 @@
         }
     }
 
-    &--cc {
-        background: $c-curiosities;
-    }
+    // &--cc {
+    //     background-color: $c-curiosities;
+    // }
 
     > .button {
         margin-top: 3em;
@@ -165,6 +165,17 @@
         color: $c-dark;
     }
 }
+
+// Start 
+.page- {
+    .c-curiosities-bg .hero__bgcenter {
+        padding-top: 8em;
+        @include media-query($on-laptop) {
+            padding-top: 0;
+        }
+    }
+}
+
 .hero--the-internet-by-hand {
     .hero__header-element {
         color: $c-dark;

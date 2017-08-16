@@ -467,7 +467,7 @@ Load images with style
 <p>Example of a custom CSS grid layout using a container with the class `grid`.</p>
 
 <div class="grid grid--space case-highlight" markdown='1'>
-<div class="flexcenter center background-image invert grid__offsetcolumn1-2" id="lettering2" markdown='1' style="background-image: url(../assets/introfilmen-poster.jpg)">
+<div class="flexcenter background-image invert grid__offsetcolumn1-2" id="lettering2" markdown='1' style="background-image: url(../assets/introfilmen-poster.jpg)">
 
 ### div #exampleimage
 ``` scss

@@ -26,7 +26,7 @@
         </style>
     {% endunless %}
 
-    <div class="grid__offsetcolumn1-2 background-image">
+    <div class="grid__offsetcolumn1-2 background-image"{% unless work1.background-image_color == nil %} style="background-color: {{work1.background-image_color}}"{% endunless %}>
         {% unless work1.background == nil %}
             {{ work1.background }}
         {% endunless %}

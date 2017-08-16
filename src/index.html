@@ -6,10 +6,11 @@ layout: default
     <nav class="navigation" id="startmenu">
         {% include menu.html %}
     </nav>
-    <div class="navigation__modal" data-videomodal>
-        <h3>Keep it REEL!</h3>
-        <p>Come closer and see how it moves!</p>
-        <a href="{{ site.baseurl }}/work#reel" class="button"><span>Check it out</span></a>
+    <div class="newsflash" data-videomodal>
+        {{ site.newsflash | markdownify }}
+        {% unless site.newsflash_buttontext == nil %}
+            <a href="{{ site.baseurl }}{{ site.newsflash_buttonurl }}" class="button"><span>{{ site.newsflash_buttontext }}</span></a>
+        {% endunless %}
     </div>
 </div>
 
@@ -21,13 +22,11 @@ layout: default
 
 {% include logowall.html %}
 
-<section class="box box--people box--right box--center c-people center">
+<section class="box box--people box--right box--center c-people center sectionspacing-small">
     <h2>Smell that?</h2>
     <p class="h4">Yeah, that’s the sweet smell of coffee (or tea). Swing by some time and have some.</p>
     <a href="mailto:{{ site.email }}" class="button"><span>Sign me up for fika!</span></a>
 </section>
-
-<br><br>
 
 
 <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->

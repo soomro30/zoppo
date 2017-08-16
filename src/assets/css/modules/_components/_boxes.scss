@@ -1,6 +1,10 @@
 /**
  * Boxes with drop shadows
  */
+:root {
+    --boxShadowX: #{$s-small*0.5};
+    --boxShadowY: #{$s-small*0.5};
+}
 
 .box {
     padding: $s-small*2 0; // make sure all content is inside a p or h tag.
@@ -27,8 +31,11 @@
         z-index: -1;
         background: $c-signal;
         transform: translate($s-small*0.5, $s-small*0.5);
+        animation: flying 7s infinite cubic-bezier(0.15, 0, 0.2, 0.99); // breathing animation
         @include media-query($on-palm) {
             transform: translate($s-small, $s-small);
+            --boxShadowX: #{$s-small};
+            --boxShadowY: #{$s-small};
         }
     }
 
@@ -36,11 +43,19 @@
     &--right{
         margin-left: auto;
         margin-right: $s-small*0.5;
-        &:before { transform: translate(-$s-small*0.5, $s-small*0.5) }
+        &:before { 
+            transform: translate(-$s-small*0.5, $s-small*0.5);
+            --boxShadowX: -#{$s-small*0.5};
+            --boxShadowY: #{$s-small*0.5};
+        }
         @include media-query($on-palm) {
             margin-left: auto;
             margin-right: $s-small;
-            &:before { transform: translate(-$s-small, $s-small) }
+            &:before { 
+                transform: translate(-$s-small, $s-small);
+                --boxShadowX: -#{$s-small};
+                --boxShadowY: #{$s-small};
+            }
         }
     }
 
@@ -52,9 +67,17 @@
                 margin-right: $s-small*2;
             }
         }
-        &:before { transform: translate($s-small*0.5, -$s-small*0.5) }
+        &:before { 
+            transform: translate($s-small*0.5, -$s-small*0.5);
+            --boxShadowX: #{$s-small*0.5};
+            --boxShadowY: -#{$s-small*0.5};
+        }
         @include media-query($on-palm) {
-            &:before { transform: translate($s-small, -$s-small) }
+            &:before { 
+                transform: translate($s-small, -$s-small);
+                --boxShadowX: #{$s-small};
+                --boxShadowY: -#{$s-small};
+            }
         }
     }
 
@@ -67,6 +90,12 @@
                 padding-left: $s-small*4;
                 padding-right: $s-small*4;
             }
+        }
+    }
+
+    &--noshadow {
+        &:before {
+            display: none;
         }
     }
 
@@ -90,6 +119,15 @@
     &--bgbusiness   { background: $c-business };
     &--bgmetal      { background: $c-metal };
 
+}
+
+@keyframes flying {
+    0%, 90%, 100% {
+        transform: translate(var(--boxShadowX), var(--boxShadowY));
+    }
+    60% {
+        transform: translate( var(--boxShadowX), calc( var(--boxShadowY) * 0.75));
+    }
 }
 
 .box + * {

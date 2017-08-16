@@ -6,7 +6,7 @@ class VideoPlayer {
         this.videoModal = document.querySelector('[data-videomodal]');
         if (!this.videoModal) return;
 
-        this.videoModal.classList.remove('navigation__modal--open');
+        this.videoModal.classList.remove('newsflash--open');
         this.videoElement = document.querySelectorAll('[data-videoplayer]');
         this.videoElement.forEach((el, index) => {
             this.setupEvents(el);
@@ -37,7 +37,7 @@ class VideoPlayer {
     }
 
     openModal (el) {
-        el.classList.add('navigation__modal--open');
+        el.classList.add('newsflash--open');
     }
 
     videoLoop (el) {
