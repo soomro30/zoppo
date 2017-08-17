@@ -39,16 +39,16 @@ section2: |
 
   Laravel framework (just Wordpress to working with new framework) 
 
-section2-prog_text: |
-  ### Progress on modularity thus far
+section2-prog_header: |
+  Progress on modularity thus far
 
 section2-prog_martina: 50
 section2-prog_mikael: 50
 section2-prog_jonathan: 40
 section2-prog_jonas: 85
 
-section2-goal_text: |
-  ### Goal
+section2-goal_header: |
+  Goal
 
 section2-goal_martina: 97
 section2-goal_mikael: 90
@@ -69,16 +69,16 @@ section3: |
 
   So in the statistics here, you’ll see a pretty wide gap between Fully’s those focused on backend (Mikael, Martina) and frontend (Jonathan, Jonas). 
 
-section3-prog_text: |
-  ### Progress on test-driven development
+section3-prog_header: |
+  Progress on test-driven development
 
 section3-prog_martina: 20
 section3-prog_mikael: 80
 section3-prog_jonathan: 10
 section3-prog_jonas: 2
 
-section3-goal_text: |
-  ### Goal
+section3-goal_header: |
+  Goal
 
 section3-goal_martina: 70
 section3-goal_mikael: 100
@@ -97,16 +97,16 @@ section4: |
 
   Again, this method is more suited to the problem-solving of backend code, rather than the taste-based decisions of frontend.  
 
-section4-prog_text: |
-  ### Progress on pair programming
+section4-prog_header: |
+  Progress on pair programming
 
 section4-prog_martina: 15
 section4-prog_mikael: 30
 section4-prog_jonathan: 25
 section4-prog_jonas: 0
 
-section4-goal_text: |
-  ### Goal
+section4-goal_header: |
+  Goal
 
 section4-goal_martina: 80
 section4-goal_mikael: 80
@@ -124,16 +124,16 @@ section5: |
   Having clear expectations about how something should be written allows us to stop sweating over small details and focus on the bigger stuff. Though the general thought is to leave some breathing room, especially where the artsy frontend is concerned. And because we’re not robots. 
 
 
-section5-prog_text: |
-  ### Progress on common standards
+section5-prog_header: |
+  Progress on common standards
 
 section5-prog_martina: 40
 section5-prog_mikael: 50
 section5-prog_jonathan: 50
 section5-prog_jonas: 50
 
-section5-goal_text: |
-  ### Goal
+section5-goal_header: |
+  Goal
 
 section5-goal_martina: 96
 section5-goal_mikael: 100
