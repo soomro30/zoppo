@@ -140,12 +140,8 @@ section5-goal_mikael: 100
 section5-goal_jonathan: 90
 section5-goal_jonas: 75
 
+section6_header: "As coders, our happiness index is pretty simple:"
 section6: |
-  ### As coders, our happiness index is pretty simple. We’re happy: 
-  * When stuff works 
-  * When it keeps working 
-  * When it’s easy to fix 
-
   If this is all happening we feel like wizards, cathedral architects, code samurais. But the trick is to keep the creative spirit very much alive, rather than letting it become squashed by the techniques/standards mentioned above. 
 
   Like learning to cut vegetables properly, at first you have to unlearn how you’ve been cutting vegetables your whole life and the new techniques feel heavy and unnecessary. But once you master them, once they become second-nature, your speed and stamina increases and your creativity can be fully unleashed. 
