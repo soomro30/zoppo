@@ -44,6 +44,7 @@ $animTime: .3s;
         z-index: 3;
         list-style-type: none;
         margin: 0 0 $s-small*4;
+        padding: 0;
         @media (min-width: $on-laptop) and (min-height: 445px) {
             bottom: 0;
             top: auto;
