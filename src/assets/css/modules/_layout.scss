@@ -285,7 +285,17 @@
 /**
  * Site header
  */
-.site-header {
+ .site-header {
+     &__logo {
+         position: absolute;
+         top: 0;
+         right: 0;
+         z-index: 40;
+    }
+    &__logoanim {
+         width: calc(7em + 3vw);
+         height: calc(7em + 3vw);
+    }
     &__svg {
         fill: $c-white;
         opacity: 1;
@@ -303,10 +313,6 @@
         }
     }
 
-    &__logoanim {
-        width: calc(7em + 3vw);
-        height: calc(7em + 3vw);
-    }
 
     .button--nav {
         margin: $s-small;
@@ -317,12 +323,6 @@
         &.menu-open {
             z-index: 40;
         }
-    }
-    .site-header__logo {
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 40;
     }
 }
 
