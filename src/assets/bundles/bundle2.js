@@ -57,18 +57,8 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	document.addEventListener('DOMContentLoaded', function () {
-	    var trigger = new _scrolltriggerClasses2.default({
-	        offset: {
-	            x: 0,
-	            y: 100
-	        },
-	        centerVertical: true,
-	        once: true
-	    });
+	    var trigger = new _scrolltriggerClasses2.default();
 	});
-
-	// Scroll reveal animations
-	// Usage: add data-scroll on an html element to toggle the classes visible and invisible
 
 /***/ }),
 /* 1 */

@@ -45,7 +45,7 @@
         &--padding {
             padding: $s-small $s-small*3;
             @include media-query($on-laptop) {
-                padding: 0 $s-small * 4;
+                padding: 0 $s-small*4;
             }
         }
 
@@ -64,10 +64,18 @@
         }
     }
     &--padding {
-        padding-left: $s-small;
-        padding-right: $s-small;
+        padding-left: $s-small*0.25;
+        padding-right: $s-small*0.25;
+        @include media-query($on-laptop) {
+            padding-left: $s-small;
+            padding-right: $s-small;
+        }
         max-width: 82rem;
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.imagegrid + h3 {
+    margin-top: $s-small*2;    
 }
