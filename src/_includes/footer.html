@@ -41,7 +41,10 @@
     });
 </script>
 
-<script src="{{ "/assets/bundles/bundle.js" | prepend: site.baseurl }}"></script>
+{% assign random = site.time | date: "%s%N" %}
+{% capture boundle_src %}/assets/bundles/bundle.js?v={{ random }}{% endcapture %}
+
+<script src="{{ boundle_src | prepend: site.baseurl }}"></script>
 {% comment %} <script src="{{ "/assets/test.js" | prepend: site.baseurl }}"></script> {% endcomment %}
 
 

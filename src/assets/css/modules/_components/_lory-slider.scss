@@ -10,34 +10,38 @@
 }
 
 .slider {
+    position: relative; // to position the nav buttons
 
     &__frame {
         /**
         * (optional) wrapper width, specifies width of the slider frame.
         */
         width: 100%;
-        position: relative;
-        font-size: 0;
-        line-height: 0;
-        overflow: hidden;
-        white-space: nowrap;
+        position: relative;     // default lory.js
+        font-size: 0;           // default lory.js
+        line-height: 0;         // default lory.js
+        overflow: hidden;       // default lory.js
+        white-space: nowrap;    // default lory.js
     }
 
     &__slides {
-        display: inline-block;
-        margin:0 5vw;
+        display: inline-block;  // default lory.js
+        margin: 0;              // default lory.js
+        max-width: 100%;        // default lory.js
         padding: 0;
     }
 
     &__slide {
-        position: relative;
-        display: inline-block;
-        width: 950px; //auto; // 440px; // default
+        position: relative;     // default lory.js
+        display: inline-block;  // default lory.js
+        width: 950px; //auto; // 440px; // default // optional
         max-width: 90vw; 
         margin-left:5px;
         margin-right:5px;
-        
+        transform: translateX(calc(5% + 2.5px)); // center slide
+
         @include media-query($on-palm) {
+            transform: translateX(33.333%); // center slide
             max-width: 60vw;
             margin-left:10px;
             margin-right:10px;
@@ -63,24 +67,32 @@
     }
 
     .prev, .next {
-          display: none !important;
-           position: absolute;
-           margin-top: -25px;
-           display: block;
-           cursor: pointer;
-       }
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        display: none;
+        @include media-query($on-palm) {
+            display: block;
+        }
+        cursor: pointer;
+        svg {
+            width: 25px;
+            height: 25px;
+            fill:none;
+            stroke:currentColor;
+            stroke-width:4;
+            stroke-miterlimit:10;
+        }
+    }
 
-       .next {
-           right: 0;
-       }
+    .next {
+        right: $s-small*0.5;
+    }
 
-       .prev {
-           left: 0;
-       }
+    .prev {
+        left: $s-small*0.5;
+    }
 
-       .next svg, .prev svg {
-           width: 25px;
-       }
 
     .dots {
         margin: 0;
@@ -101,10 +113,13 @@
         border: 1px solid #fff;
         display: inline-block;
         height: 3px;
-        width: 31px;
+        width: 20px;
         margin: 0 5px;
         cursor: pointer;
         opacity: 0.5;
+        @include media-query($on-palm) {
+            width: 31px;
+        }
     }
 
     .dots > li.active {

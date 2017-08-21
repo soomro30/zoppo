@@ -108,7 +108,7 @@ $bshadow: 3px; // the size of the shadow
 		}
 	}
 
-	&--nav {
+	&--nav, &--icon {
 		span {
 			padding: 0;
 			line-height: 0;
@@ -147,6 +147,11 @@ $bshadow: 3px; // the size of the shadow
 			line:nth-child(3) {
 				transform: rotate(-45deg) translate3D(-3.5em, 0.3em, 0)
 			}
+		}
+	}
+	&--icon {
+		span {
+			padding: $s-small*0.25;
 		}
 	}
 }
