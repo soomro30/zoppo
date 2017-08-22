@@ -2,7 +2,7 @@ module.exports =
 class VideoPlayer {
 	constructor () {
         this.triggerTime = 6.3;
-        this.loopTime = 1.5; // seconds from the end that the film gonna loop from
+        this.loopTime = 3; // seconds from the end that the film gonna loop from - timecode: 07:24
         this.videoModal = document.querySelector('[data-videomodal]');
         if (!this.videoModal) return;
 

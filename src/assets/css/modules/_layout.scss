@@ -147,6 +147,15 @@
     @include media-query($on-laptop) {
         grid-template-columns: 1fr 1fr;
     }
+    .anim-wrapper {
+        height: auto;
+        padding-top: 60%;
+        position: relative;
+        iframe {
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+        }
+    }
 }
 
 // Work layout
@@ -212,7 +221,7 @@
     z-index: 1;
     @include media-query($on-laptop) {
         margin-top: 0;
-        margin-right: $s-small;
+        // margin-right: $s-small;
         grid-column: 8 / -1;
         grid-row: 1 / span 20;
     }
