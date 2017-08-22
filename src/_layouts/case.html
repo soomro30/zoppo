@@ -50,25 +50,45 @@ layout: default
 				<strong class="meta-description">Project:</strong>
 				<span class="meta">{{page.project}}</span>
 			</div>
-			{% unless page.link == nil %}
-			<div class="column column--vertical">
-				<a href="{{page.link}}" class="button" id="{{page.slug}}_button"><span>{{page.link-text}}</span></a>
-			</div>
-			{% endunless %}
 		</div>
 
     </div>
 
 	{% unless page.ingress == nil %}
 	<div class="ingress ingress--{{ page.slug }}">
-		{{ page.ingress | markdownify }}
+		<div class="ingress__content">
+			{{ page.ingress | markdownify }}
 
-		{% unless page.author == nil %}
-		<a class="metabutton" href="mailto:{{page.author-email}}">
-			Author: <span>{{page.author}}</span>
-		</a>
+			{% unless page.author == nil %}
+			<p><a class="metabutton" href="mailto:{{page.author-email}}">
+				Author: <span>{{page.author}}</span>
+			</a></p>
+			{% endunless %}
+		</div>
+		{% unless page.casetop-bg_1440 == nil %}
+			<style>
+				#casetop_{{page.slug}} {
+					background-image: url({{site.baseurl}}/assets/work/{{page.slug}}/{{ page.casetop-bg_640 }});
+				}
+				@media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
+					#casetop_{{page.slug}} {
+						background-image: url({{site.baseurl}}/assets/work/{{page.slug}}/{{ page.casetop-bg_1440 }});
+					}
+				}
+			</style>
 		{% endunless %}
-		
+		<div data-scroll class="ingress__image background-image{% unless page.casetop-bg_1440 == nil %} background-image{% endunless %}" id="casetop_{{ page.slug }}" {% unless page.background-image_color == nil %} style="background-color: {{page.background-image_color}}"{% endunless %}>
+			{% unless page.casetop-video == nil %}
+			<video class="ingress__video" loop autoplay muted playsinline>
+				<source src="{{ site.baseurl }}/assets/work/{{page.slug}}/{{ page.casetop-video }}">
+			</video>
+
+			{% endunless %}
+
+			{% unless page.link == nil %}
+			<a href="{{page.link}}" class="button ingress__button" id="{{page.slug}}_button"><span>{{page.link-text}}</span></a>
+			{% endunless %}
+		</div>
 	</div>
 	{% endunless %}
 

@@ -18,6 +18,10 @@ background-image_720: hero_720.jpg
 background-image_color: "#000000"
 background-color: "#000000"
 
+casetop-bg_640: casetop_640.jpg
+casetop-bg_1440: casetop_1440.jpg
+casetop-video: casetop.mp4
+
 ingress: |
   One day I got a call from DDB, an agency we collaborate with quite regularly. They usually get in contact when they need an interactive banner or campaign site, as we’re well known around town for our web animation savvy.
 
