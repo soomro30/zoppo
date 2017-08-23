@@ -32,6 +32,9 @@
         background: $c-signal;
         transform: translate($s-small*0.5, $s-small*0.5);
         animation: flying 7s infinite cubic-bezier(0.15, 0, 0.2, 0.99); // breathing animation
+        @media (prefers-reduced-motion) {
+            animation: none;
+        }
         @include media-query($on-palm) {
             transform: translate($s-small, $s-small);
             --boxShadowX: #{$s-small};

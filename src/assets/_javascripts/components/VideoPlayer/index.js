@@ -11,7 +11,6 @@ class VideoPlayer {
         this.videoElement.forEach((el, index) => {
             this.setupEvents(el);
         });
-        console.log(this.loopTime);
     } 
     
     // Lissen for the video to start playing, and loop it when it ends
@@ -22,6 +21,20 @@ class VideoPlayer {
         el.addEventListener('ended', evt => {
             this.videoLoop(el);
         });
+
+        // Reduce motion / pause video
+        var motionQuery = matchMedia('(prefers-reduced-motion)');
+        function handleReduceMotionChanged() {
+          if (motionQuery.matches) {
+              // Pause autoplaying video
+              el.pause();
+              console.log('hej');
+          } else {
+              el.play();
+          }
+        }
+        motionQuery.addListener(handleReduceMotionChanged);
+        handleReduceMotionChanged(); // trigger once on load if needed
     }
     
     modalTrigger (el) {

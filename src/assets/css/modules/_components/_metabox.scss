@@ -21,6 +21,10 @@ $moveMetabox: 4em;
     @include media-query($on-desktop) {
         padding: $s-small*0.5 $s-small*2;
     } 
+    @media (prefers-reduced-motion) {
+        transform: translate3D(0,0,0);
+        animation: none;
+    }
     .column {
         flex: 1 0 0%;
     }

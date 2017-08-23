@@ -19,13 +19,13 @@
                     <img src="{{site.baseurl}}/assets/work/{{work.slug}}/{{work.background-image_720}}" alt="{{work.title}}">	
                 {% endunless %}
             </div>
-            <figcaption class="boxgrid__caption">
+            <div class="boxgrid__caption">
                 <div>
                     <h3>{{work.title}}</h3>
                     <p>{{work.subtitle}}</p>
                 </div>
                 <a href="{{work.url | prepend: site.baseurl}}" class="button"><span>{{work.button-text}}</span></a>
-            </figcaption>
+            </div>
         </div>
         
     {% endfor %}

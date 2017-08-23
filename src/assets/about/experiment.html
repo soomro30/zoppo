@@ -21665,23 +21665,6 @@ function modulateRandomTone(tone) {
 }
 
 
-// BASS
-//C2, D2, E2, G2, A2
-
-var bassPart = new Tone.Part(function(time, event){
-	if (Math.random() < event.prob){
-		synth_bg.triggerAttackRelease(event.note, event.dur, time);
-	}
-},[ {time : "0:0", 			note : "A1", dur : "1n", 		prob: 1}, 
-	{time : "0:4", 			note : "C2", dur : "1n", 		prob : 0.6},
-]).start(0);
-
-bassPart.loop = true;
-bassPart.loopEnd = "2m";
-
-Tone.Transport.bpm.value = 125;
-
-Tone.Transport.start();
 // Get screen dimensions
 var width, height, aspect, pixelRatio, scene, camera, sphere, geo, mesh, dot, renderer;
 

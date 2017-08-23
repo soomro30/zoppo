@@ -14677,7 +14677,6 @@
 	        this.videoElement.forEach(function (el, index) {
 	            _this.setupEvents(el);
 	        });
-	        console.log(this.loopTime);
 	    }
 
 	    // Lissen for the video to start playing, and loop it when it ends
@@ -14694,6 +14693,20 @@
 	            el.addEventListener('ended', function (evt) {
 	                _this2.videoLoop(el);
 	            });
+
+	            // Reduce motion / pause video
+	            var motionQuery = matchMedia('(prefers-reduced-motion)');
+	            function handleReduceMotionChanged() {
+	                if (motionQuery.matches) {
+	                    // Pause autoplaying video
+	                    el.pause();
+	                    console.log('hej');
+	                } else {
+	                    el.play();
+	                }
+	            }
+	            motionQuery.addListener(handleReduceMotionChanged);
+	            handleReduceMotionChanged(); // trigger once on load if needed
 	        }
 	    }, {
 	        key: 'modalTrigger',

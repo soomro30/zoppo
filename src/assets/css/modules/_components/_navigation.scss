@@ -125,6 +125,10 @@ $animTime: .3s;
     .navigation__item {
         opacity: 0;
         animation: slidedown $animTime*2 0s forwards cubic-bezier(0.16, 0, 0.28, 0.99);
+        @media (prefers-reduced-motion) {
+            animation: none;
+            opacity: 1;
+        }
 
         @for $i from 1 through 5 {
             &:nth-child(#{$i}) {

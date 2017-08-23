@@ -45,7 +45,9 @@
     &__header {
         position: relative;
         z-index: 3;
-        flex: 1 1 0%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -135,32 +137,33 @@
         font-size: calc( 2em + 2vw );
     }
 
-    h4 {
-        margin-top: $s-small*2;
-        a {
-            &:after {
-                content: "";
-                background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNy4xIDE2Ij48c3R5bGU+LnN0MHtmaWxsOiMwQTJBNEY7fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMuNiAxNmMtLjEgMC0uMiAwLS4yLS4xTC4xIDEyLjNjLS4xIDAtLjEtLjItLjEtLjMuMS0uMS4xLS4yLjMtLjJoMi4xVi4zYzAtLjEgMC0uMi4xLS4yIDAtLjEuMS0uMS4yLS4xaDEuOGMuMSAwIC4yIDAgLjIuMS4xLjEuMS4xLjEuMnYxMS42aDIuMWMuMSAwIC4yLjEuMy4ydi4zTDQgMTZoLS40eiIvPjwvc3ZnPg==);
-                background-repeat: no-repeat;
-                background-position: bottom center;
-                width: 7.1px;
-                height: 16px;
-                display: block;
-                padding-top: $s-small;
-                margin: 0 auto;
-                transition: transform 0.4s $easeout;
-            }
-            &:hover {
-                &:after {
-                    transform: translateY(16px);
-                }
-            }
-        }
-    }
+    // h4 {
+    //     margin-top: $s-small*2;
+    //     a {
+    //         color: $c-dark;
+    //         &:after {
+    //             content: "";
+    //             background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNy4xIDE2Ij48c3R5bGU+LnN0MHtmaWxsOiMwQTJBNEY7fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMuNiAxNmMtLjEgMC0uMiAwLS4yLS4xTC4xIDEyLjNjLS4xIDAtLjEtLjItLjEtLjMuMS0uMS4xLS4yLjMtLjJoMi4xVi4zYzAtLjEgMC0uMi4xLS4yIDAtLjEuMS0uMS4yLS4xaDEuOGMuMSAwIC4yIDAgLjIuMS4xLjEuMS4xLjEuMnYxMS42aDIuMWMuMSAwIC4yLjEuMy4ydi4zTDQgMTZoLS40eiIvPjwvc3ZnPg==);
+    //             background-repeat: no-repeat;
+    //             background-position: bottom center;
+    //             width: 7.1px;
+    //             height: 16px;
+    //             display: block;
+    //             padding-top: $s-small;
+    //             margin: 0 auto;
+    //             transition: transform 0.4s $easeout;
+    //         }
+    //         &:hover {
+    //             &:after {
+    //                 transform: translateY(16px);
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 // Page specific changes
-.hero-contact {
+.hero--contact {
     a {
         color: $c-dark;
     }
