@@ -109,6 +109,8 @@ section6: |
 
 script: <script src='https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.1/vivus.min.js'></script>
 
+shareimage: work/owd-bob/shareimage.jpg
+
 ---
 
 Given that Fully is a digital studio, the majority of our creations live, move and die on the Internet. This is a glorious thing; as an outlet for creativity, the digital world is boundless and constantly proffers new tools. The results can be stunning. 

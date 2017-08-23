@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else if page.content %}{{ page.content | markdownify | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:image:type" content="image/jpg">
-  <meta property="og:image" content="{{site.url}}/{{site.baseurl}}fully-studios-facebook-share-image.jpg">
+  <meta property="og:image" content="{{ site.absolute_path }}{{ site.baseurl }}/assets/{% if page.shareimage %}{{page.shareimage}}{% else %}{{site.shareimage}}{% endif %}">
   <meta property="og:image:alt" content="{{site.title}}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
