@@ -67,8 +67,12 @@
 	    });
 	});
 
+	// Branding
+
+
 	// Scroll reveal animations
 	// Usage: add data-scroll on an html element to toggle the classes visible and invisible
+	console.log('%c                       \n     FULLY STUDIOS     \n                       ', 'background: #5f11e8; color: #fff; font-family: monospace; font-size: 40px;');
 
 /***/ }),
 /* 1 */

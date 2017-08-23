@@ -13,3 +13,6 @@ document.addEventListener('DOMContentLoaded', function(){
           once: true
     });
 });
+
+// Branding
+console.log('%c                       \n     FULLY STUDIOS     \n                       ', 'background: #5f11e8; color: #fff; font-family: monospace; font-size: 40px;');

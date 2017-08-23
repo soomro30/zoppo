@@ -760,7 +760,6 @@ body,html{background:#7BD75E;margin:0;padding:0;width:100%;height:100%;overflow:
 	        _silentNode.connect(audioContext.destination);
 	    });
 	    Tone.version = 'r6';
-	    console.log('%c * Tone.js ' + Tone.version + ' * ', 'background: #000; color: #fff');
 	    return Tone;
 	});
 	Module(function (Tone) {
@@ -20355,7 +20354,7 @@ if(a===THREE.ByteType)return t.BYTE;if(a===THREE.ShortType)return t.SHORT;if(a==
 if(a===THREE.LuminanceAlphaFormat)return t.LUMINANCE_ALPHA;if(a===THREE.DepthFormat)return t.DEPTH_COMPONENT;if(a===THREE.AddEquation)return t.FUNC_ADD;if(a===THREE.SubtractEquation)return t.FUNC_SUBTRACT;if(a===THREE.ReverseSubtractEquation)return t.FUNC_REVERSE_SUBTRACT;if(a===THREE.ZeroFactor)return t.ZERO;if(a===THREE.OneFactor)return t.ONE;if(a===THREE.SrcColorFactor)return t.SRC_COLOR;if(a===THREE.OneMinusSrcColorFactor)return t.ONE_MINUS_SRC_COLOR;if(a===THREE.SrcAlphaFactor)return t.SRC_ALPHA;
 if(a===THREE.OneMinusSrcAlphaFactor)return t.ONE_MINUS_SRC_ALPHA;if(a===THREE.DstAlphaFactor)return t.DST_ALPHA;if(a===THREE.OneMinusDstAlphaFactor)return t.ONE_MINUS_DST_ALPHA;if(a===THREE.DstColorFactor)return t.DST_COLOR;if(a===THREE.OneMinusDstColorFactor)return t.ONE_MINUS_DST_COLOR;if(a===THREE.SrcAlphaSaturateFactor)return t.SRC_ALPHA_SATURATE;b=V.get("WEBGL_compressed_texture_s3tc");if(null!==b){if(a===THREE.RGB_S3TC_DXT1_Format)return b.COMPRESSED_RGB_S3TC_DXT1_EXT;if(a===THREE.RGBA_S3TC_DXT1_Format)return b.COMPRESSED_RGBA_S3TC_DXT1_EXT;
 if(a===THREE.RGBA_S3TC_DXT3_Format)return b.COMPRESSED_RGBA_S3TC_DXT3_EXT;if(a===THREE.RGBA_S3TC_DXT5_Format)return b.COMPRESSED_RGBA_S3TC_DXT5_EXT}b=V.get("WEBGL_compressed_texture_pvrtc");if(null!==b){if(a===THREE.RGB_PVRTC_4BPPV1_Format)return b.COMPRESSED_RGB_PVRTC_4BPPV1_IMG;if(a===THREE.RGB_PVRTC_2BPPV1_Format)return b.COMPRESSED_RGB_PVRTC_2BPPV1_IMG;if(a===THREE.RGBA_PVRTC_4BPPV1_Format)return b.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG;if(a===THREE.RGBA_PVRTC_2BPPV1_Format)return b.COMPRESSED_RGBA_PVRTC_2BPPV1_IMG}b=
-V.get("WEBGL_compressed_texture_etc1");if(null!==b&&a===THREE.RGB_ETC1_Format)return b.COMPRESSED_RGB_ETC1_WEBGL;b=V.get("EXT_blend_minmax");if(null!==b){if(a===THREE.MinEquation)return b.MIN_EXT;if(a===THREE.MaxEquation)return b.MAX_EXT}return 0}console.log("THREE.WebGLRenderer",THREE.REVISION);a=a||{};var N=void 0!==a.canvas?a.canvas:document.createElement("canvas"),P=void 0!==a.context?a.context:null,L=void 0!==a.alpha?a.alpha:!1,O=void 0!==a.depth?a.depth:!0,K=void 0!==a.stencil?a.stencil:!0,
+V.get("WEBGL_compressed_texture_etc1");if(null!==b&&a===THREE.RGB_ETC1_Format)return b.COMPRESSED_RGB_ETC1_WEBGL;b=V.get("EXT_blend_minmax");if(null!==b){if(a===THREE.MinEquation)return b.MIN_EXT;if(a===THREE.MaxEquation)return b.MAX_EXT}return 0}a=a||{};var N=void 0!==a.canvas?a.canvas:document.createElement("canvas"),P=void 0!==a.context?a.context:null,L=void 0!==a.alpha?a.alpha:!1,O=void 0!==a.depth?a.depth:!0,K=void 0!==a.stencil?a.stencil:!0,
 I=void 0!==a.antialias?a.antialias:!1,G=void 0!==a.premultipliedAlpha?a.premultipliedAlpha:!0,Q=void 0!==a.preserveDrawingBuffer?a.preserveDrawingBuffer:!1,R=[],E=[],Z=-1,T=[],X=-1,ba=new Float32Array(8),ha=[],qa=[];this.domElement=N;this.context=null;this.sortObjects=this.autoClearStencil=this.autoClearDepth=this.autoClearColor=this.autoClear=!0;this.clippingPlanes=[];this.localClippingEnabled=!1;this.gammaFactor=2;this.physicallyCorrectLights=this.gammaOutput=this.gammaInput=!1;this.toneMapping=
 THREE.LinearToneMapping;this.toneMappingWhitePoint=this.toneMappingExposure=1;this.maxMorphTargets=8;this.maxMorphNormals=4;this.autoScaleCubemaps=!0;var W=this,ca=null,Aa=null,Ba=null,oa=-1,na="",ga=null,ua=new THREE.Vector4,Ga=null,la=new THREE.Vector4,wa=0,aa=new THREE.Color(0),ja=0,Ca=N.width,Da=N.height,$=1,Fa=new THREE.Vector4(0,0,Ca,Da),Ja=!1,ma=new THREE.Vector4(0,0,Ca,Da),Ha=new THREE.Frustum,xa=!1,ya=!1,sa=!1,da=0,fa={type:"4fv",value:null,needsUpdate:!1},za=null,ta=0,Na=new THREE.Matrix3,
 Ma=new THREE.Sphere,Oa=new THREE.Plane,va=new THREE.Matrix4,Y=new THREE.Vector3,S={hash:"",ambient:[0,0,0],directional:[],directionalShadowMap:[],directionalShadowMatrix:[],spot:[],spotShadowMap:[],spotShadowMatrix:[],point:[],pointShadowMap:[],pointShadowMatrix:[],hemi:[],shadows:[]},ka={geometries:0,textures:0},ia={calls:0,vertices:0,faces:0,points:0};this.info={render:ia,memory:ka,programs:null};var t;try{L={alpha:L,depth:O,stencil:K,antialias:I,premultipliedAlpha:G,preserveDrawingBuffer:Q};t=
@@ -21708,7 +21707,6 @@ setScene = function() {
 	dot = new THREE.Mesh(sphere, solid);
 	scene.add(mesh);
 	scene.add(dot);
-	console.log(mesh);
 };
 
 setRenderer = function(){
