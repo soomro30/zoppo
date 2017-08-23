@@ -2,7 +2,7 @@ module.exports =
 class VideoPlayer {
 	constructor () {
         this.triggerTime = 6.3;
-        this.loopTime = 2.96; // seconds from the end that the film gonna loop from - timecode: 07:24 = 7.96 (LENGTH= 10.92)
+        this.loopTime = 1.53; // seconds from the end that the film gonna loop from | 9.4 - 7.6
         this.videoModal = document.querySelector('[data-videomodal]');
         if (!this.videoModal) return;
 
@@ -11,7 +11,7 @@ class VideoPlayer {
         this.videoElement.forEach((el, index) => {
             this.setupEvents(el);
         });
-
+        console.log(this.loopTime);
     } 
     
     // Lissen for the video to start playing, and loop it when it ends
