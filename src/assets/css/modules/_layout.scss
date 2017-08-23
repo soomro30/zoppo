@@ -336,6 +336,20 @@
         }
     }
 }
+.menu-open +  .site-header__logo {
+    position: fixed;
+    // animation: slideleft 0.6s $easeout forwards;
+}
+// @keyframes slideleft {
+//     0% { 
+//         opacity: 0;
+//         transform: translate3D(100px,0,0);
+//     }
+// 	100% { 
+//         opacity: 1;
+//         transform: translate3D(0,0,0);        
+//     }
+// }
 
 .imageline {
     background-color: $c-dark;

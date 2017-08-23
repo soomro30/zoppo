@@ -80,10 +80,6 @@
 
 	var _Nav2 = _interopRequireDefault(_Nav);
 
-	var _LogoAnimation = __webpack_require__(3);
-
-	var _LogoAnimation2 = _interopRequireDefault(_LogoAnimation);
-
 	var _Slider = __webpack_require__(5);
 
 	var _Slider2 = _interopRequireDefault(_Slider);
@@ -103,7 +99,6 @@
 
 	module.exports = {
 		nav: new _Nav2.default(),
-		logoAnimation: new _LogoAnimation2.default(),
 		slider: new _Slider2.default(),
 		videoPlayer: new _VideoPlayer2.default(),
 		opinioated: new _Curiosities2.default()
@@ -113,11 +108,17 @@
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _LogoAnimation = __webpack_require__(3);
+
+	var _LogoAnimation2 = _interopRequireDefault(_LogoAnimation);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -135,6 +136,7 @@
 				e.preventDefault();
 				_this._menuIsOpen ? _this.closeMenu() : _this.openMenu();
 			}, false);
+			this.logoAnimation = new _LogoAnimation2.default();
 		}
 
 		_createClass(Nav, [{
@@ -142,7 +144,7 @@
 			value: function openMenu() {
 				this._menutoggle.classList.add('menu-open');
 				this._menu.classList.add('menu-open');
-				// startLogoAnimation();
+				this.logoAnimation.startLogoAnimation();
 				this._menuIsOpen = true;
 			}
 		}, {

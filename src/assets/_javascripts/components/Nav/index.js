@@ -1,3 +1,5 @@
+import LogoAnimation from '../LogoAnimation';
+
 module.exports =
 class Nav {
 	constructor () {
@@ -9,12 +11,13 @@ class Nav {
 			e.preventDefault();
 			this._menuIsOpen ? this.closeMenu() : this.openMenu();
 		}, false);
+		this.logoAnimation = new LogoAnimation;
     }
 
 	openMenu () {
 		this._menutoggle.classList.add('menu-open');
 		this._menu.classList.add('menu-open');
-		// startLogoAnimation();
+		this.logoAnimation.startLogoAnimation();
 		this._menuIsOpen = true;
 	}
 	closeMenu () {
