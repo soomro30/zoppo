@@ -187,15 +187,17 @@
 }
 
 .reelgrid {
-    margin-top: $s-small*2;
+    // SAVE to when we add a video player that can hide the text field
+    // margin-top: $s-small*2;
     @include media-query($on-laptop) {
         position: relative;
         padding-top: $s-small*2;
         margin-top: $s-small*4;
         &__text {
-            position: absolute;
-            top: 0;
-            left: 0;
+            // SAVE to when we add a video player that can hide the text field
+            // position: absolute;
+            // top: 0;
+            // left: 0;
             width: 50%;
             z-index: 1;
         }
