@@ -1,0 +1,43 @@
+<!-- 
+####################
+## Loop through the latest work
+-->
+<div class="grid grid--space work-highlight">
+    {% assign work1 = site.work[site.case_highlight1_id] %}
+    <!-- Get all cc-about posts and revers them -->
+
+    {% assign root = 'js/' %}
+    
+    <!-- 
+    ###############################
+    ## Get code for the background
+    ## set in current post
+    -->
+    {% unless work1.background-image_2880 == nil %}
+        <style>
+            .grid__offsetcolumn1-2 {
+                background-image: url({{site.baseurl}}/assets/work/{{work1.slug}}/{{ work1.background-image_1440 }});
+            }
+            @media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
+                .grid__offsetcolumn1-2 {
+                    background-image: url({{site.baseurl}}/assets/work/{{work1.slug}}/{{ work1.background-image_2880 }});
+                }
+            }
+        </style>
+    {% endunless %}
+
+    <div class="grid__offsetcolumn1-2 background-image"{% unless work1.background-image_color == nil %} style="background-color: {{work1.background-image_color}}"{% endunless %}>
+        {% unless work1.background == nil %}
+            {{ work1.background }}
+        {% endunless %}
+    </div>
+
+    <div class="boxtext grid__offsetcolumn2-2 bring-to-front">
+        <h2>{{work1.title}}</h2>
+        <p>{{work1.subtitle}}</p>
+        <a href="{{ work1.url | prepend: site.baseurl }}" class="button"><span>{{work1.button-text}}</span></a>
+        <a href="{{ site.works | prepend: site.baseurl }}" class="link link--next"><span>View all projects</span></a>
+    </div>
+
+
+</div>

@@ -1,0 +1,31 @@
+
+
+<section class="section c-metal-bg center slider-wide">
+    <div class="slider js_slider">
+        <div class="slider__frame js_frame">
+            <ul class="slider__slides js_slides">
+                {% unless page.slider == nil %}
+                    {% for slide in page.slider %}
+                        <li class="slider__slide js_slide">
+                            <img class="image"
+                            alt="Image of project {{page.title}}"
+                            src="{{ site.baseurl }}/assets/{{ page.type }}/{{ page.slug }}/{{ slide.image }}">
+                        </li>
+                    {% endfor %}
+                {% endunless %}
+            </ul>
+        </div>
+
+        <div class="js_prev prev button button--icon">
+            <span>
+                <svg xmlns="https://www.w3.org/2000/svg" width="60px" height="60px" viewBox="0 0 60 60"><polyline points="40,50 20,30 40,10 "/></svg>
+            </span>
+        </div>
+        <div class="js_next next button button--icon">
+            <span>
+                <svg xmlns="https://www.w3.org/2000/svg" width="60px" height="60px" viewBox="0 0 60 60"><polyline points="20,10 40,30 20,50"/></svg>
+            </span>
+        </div>
+        <ul class="js_dots dots"></ul>
+    </div>
+</section>

@@ -22,6 +22,12 @@ employees:
     email: joakim.hanner@fullystudios.se
     tel: +46 738 07 30 72
 
+  - name: Edīte Garjāne
+    image: employees/edite-garjane.jpg
+    title: I do strategic project management at Fully
+    email: edite.garjane@fullystudios.se
+    tel: +46 723 33 95 08
+
   - name: Jonathan Asp
     image: employees/jonathan-davis-asp.jpg
     title: I develop and fix stuff at Fully
@@ -51,12 +57,6 @@ employees:
     title: I design and develop stuff done at Fully
     email: jonas.sandstedt@fullystudios.se
     tel: +46 739 37 73 92
-
-  - name: Edite Garjane
-    image: employees/edite-garjane.jpg
-    title: I develop stuff at Fully
-    email: edite.garjane@fullystudios.se
-    tel: +46 723 33 95 08
 
 ---
 

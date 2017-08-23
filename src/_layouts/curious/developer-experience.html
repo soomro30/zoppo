@@ -1,0 +1,499 @@
+---
+layout: curious
+---
+
+<!-- 
+###################################
+## Get all content (sections) from
+## the current curious-about post
+-->
+
+{% unless page.section1 == nil %}
+<div class="section section--1 sectionspacing-small">
+    {{ page.section1 | markdownify }}
+</div>
+{% endunless %}
+
+
+{% unless page.section2 == nil %}
+<div class="section section--2 sectionspacing-small">
+    <div class="box box--curiosities sectionspacing-small">
+        {{ page.section2 | markdownify }}
+    </div>
+    <h3 class="center">{{ page.section2-prog_header }}</h3>
+    <div class="imagegrid imagegrid--padding center">
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-signal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section2-prog_martina }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section2-prog_martina }}%</tspan></text>
+            </svg>
+            <p>Martina</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-business" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section2-prog_mikael }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section2-prog_mikael }}%</tspan></text>
+            </svg>
+            <p>Mikael</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-people" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section2-prog_jonathan }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section2-prog_jonathan }}%</tspan></text>
+            </svg>
+            <p>Jonathan</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-curiosities" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section2-prog_jonas }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section2-prog_jonas }}%</tspan></text>
+            </svg>
+            <p>Jonas</p>
+        </div>
+    </div>
+
+    <h3 class="center">{{ page.section2-goal_header }}</h3>
+    <div class="imagegrid imagegrid--padding center">
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-signal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section2-goal_martina }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section2-goal_martina }}%</tspan></text>
+            </svg>
+            <p>Martina</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-business" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section2-goal_mikael }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section2-goal_mikael }}%</tspan></text>
+            </svg>
+            <p>Mikael</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-people" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section2-goal_jonathan }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section2-goal_jonathan }}%</tspan></text>
+            </svg>
+            <p>Jonathan</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-curiosities" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section2-goal_jonas }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section2-goal_jonas }}%</tspan></text>
+            </svg>
+            <p>Jonas</p>
+        </div>
+    </div>
+    
+</div>
+{% endunless %}
+
+
+{% unless page.section3 == nil %}
+<div class="section section--3 sectionspacing-small">
+    <div class="box box--right box--business sectionspacing-small">
+        {{ page.section3 | markdownify }}
+    </div>
+    <h3 class="center">{{ page.section3-prog_header }}</h3>
+    <div class="imagegrid imagegrid--padding center">
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-signal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section3-prog_martina }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section3-prog_martina }}%</tspan></text>
+            </svg>
+            <p>Martina</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-business" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section3-prog_mikael }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section3-prog_mikael }}%</tspan></text>
+            </svg>
+            <p>Mikael</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-people" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section3-prog_jonathan }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section3-prog_jonathan }}%</tspan></text>
+            </svg>
+            <p>Jonathan</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-curiosities" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section3-prog_jonas }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section3-prog_jonas }}%</tspan></text>
+            </svg>
+            <p>Jonas</p>
+        </div>
+    </div>
+
+    <h3 class="center">{{ page.section3-goal_header }}</h3>
+    <div class="imagegrid imagegrid--padding center">
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-signal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section3-goal_martina }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section3-goal_martina }}%</tspan></text>
+            </svg>
+            <p>Martina</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-business" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section3-goal_mikael }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section3-goal_mikael }}%</tspan></text>
+            </svg>
+            <p>Mikael</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-people" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section3-goal_jonathan }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section3-goal_jonathan }}%</tspan></text>
+            </svg>
+            <p>Jonathan</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-curiosities" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section3-goal_jonas }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section3-goal_jonas }}%</tspan></text>
+            </svg>
+            <p>Jonas</p>
+        </div>
+    </div>
+
+</div>
+{% endunless %}
+
+
+{% unless page.section4 == nil %}
+<div class="section section--4 sectionspacing-small">
+    <div class="box box--people sectionspacing-small">
+        {{ page.section4 | markdownify }}
+    </div>
+    <h3 class="center">{{ page.section4-prog_header }}</h3>
+    <div class="imagegrid imagegrid--padding center">
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-signal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section4-prog_martina }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section4-prog_martina }}%</tspan></text>
+            </svg>
+            <p>Martina</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-business" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section4-prog_mikael }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section4-prog_mikael }}%</tspan></text>
+            </svg>
+            <p>Mikael</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-people" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section4-prog_jonathan }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section4-prog_jonathan }}%</tspan></text>
+            </svg>
+            <p>Jonathan</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-curiosities" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section4-prog_jonas }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section4-prog_jonas }}%</tspan></text>
+            </svg>
+            <p>Jonas</p>
+        </div>
+    </div>
+
+    <h3 class="center">{{ page.section4-goal_header }}</h3>
+    <div class="imagegrid imagegrid--padding center">
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-signal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section4-goal_martina }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section4-goal_martina }}%</tspan></text>
+            </svg>
+            <p>Martina</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-business" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section4-goal_mikael }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section4-goal_mikael }}%</tspan></text>
+            </svg>
+            <p>Mikael</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-people" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section4-goal_jonathan }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section4-goal_jonathan }}%</tspan></text>
+            </svg>
+            <p>Jonathan</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-curiosities" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section4-goal_jonas }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section4-goal_jonas }}%</tspan></text>
+            </svg>
+            <p>Jonas</p>
+        </div>
+    </div>
+
+</div>
+{% endunless %}
+
+
+{% unless page.section5 == nil %}
+<div class="section section--5 sectionspacing-small">
+    <div class="box box--right box--business sectionspacing-small">
+        {{ page.section5 | markdownify }}
+    </div>
+    <h3 class="center">{{ page.section5-prog_header }}</h3>
+    <div class="imagegrid imagegrid--padding center">
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-signal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section5-prog_martina }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section5-prog_martina }}%</tspan></text>
+            </svg>
+            <p>Martina</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-business" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section5-prog_mikael }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section5-prog_mikael }}%</tspan></text>
+            </svg>
+            <p>Mikael</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-people" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section5-prog_jonathan }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section5-prog_jonathan }}%</tspan></text>
+            </svg>
+            <p>Jonathan</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-curiosities" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section5-prog_jonas }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section5-prog_jonas }}%</tspan></text>
+            </svg>
+            <p>Jonas</p>
+        </div>
+    </div>
+
+    <h3 class="center">{{ page.section5-goal_header }}</h3>
+    <div class="imagegrid imagegrid--padding center">
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-signal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section5-goal_martina }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section5-goal_martina }}%</tspan></text>
+            </svg>
+            <p>Martina</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-business" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section5-goal_mikael }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section5-goal_mikael }}%</tspan></text>
+            </svg>
+            <p>Mikael</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-people" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section5-goal_jonathan }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section5-goal_jonathan }}%</tspan></text>
+            </svg>
+            <p>Jonathan</p>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile statbox" data-scroll>
+            <svg class="stat-circle c-curiosities" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38">
+                <path class="stat-circle__bg" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <path class="stat-circle__line" stroke-dashoffset="{{ 100 | minus: page.section5-goal_jonas }}" d="M19,3.1c8.8,0,15.9,7.1,15.9,15.9S27.8,34.9,19,34.9S3.1,27.8,3.1,19S10.2,3.1,19,3.1"/>
+                <text transform="matrix(1 0 0 1 19 21)" text-anchor="middle"><tspan x="0" y="0" class="stat-circle__number">{{ page.section5-goal_jonas }}%</tspan></text>
+            </svg>
+            <p>Jonas</p>
+        </div>
+    </div>
+
+</div>
+{% endunless %}
+
+
+{% unless page.section6 == nil %}
+<div class="section section--6 sectionspacing-small">
+    <h4 class="center">{{ page.section6_header }}</h4>
+
+    <style>
+    body {
+     background: #f8f8f8;
+    }
+
+    .terminal-window {
+        text-align: left;
+        width: 100%;
+        max-width: 67.5rem;
+        border-radius: 10px;
+        margin: 30px auto 60px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .terminal-window header {
+        background: #eeeeee;
+        height: 30px;
+        border-radius: 8px 8px 0 0;
+        padding-left: 20px;
+    }
+
+    .terminal-window header .term-button {
+        width: 12px;
+        height: 12px;
+        margin: 10px 1px 0 0;
+        display: inline-block;
+        border-radius: 8px;
+    }
+
+    .terminal-window header .term-button.term-green {
+        background: #3BB662;
+    }
+
+    .terminal-window header .term-button.term-yellow {
+        background: #E5C30F;
+    }
+
+    .terminal-window header .term-button.term-red {
+        background: #E75448;
+    }
+
+    .terminal-window .terminal__wrapper {
+       width: 100%;
+       overflow: auto; 
+    }
+    .terminal-window .terminal {
+        color: #0a2a4f;
+        font-family: "Roboto Mono", monospace;
+        font-size: 11pt;
+        background: #eeeeee;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        width: 100%;
+        overflow: auto;
+        height: auto;
+        min-height: 32em;
+        min-width: 60em;
+    }
+
+    .terminal-window section.terminal .typed-cursor {
+        opacity: 1;
+        -webkit-animation: blink 0.7s infinite;
+        -moz-animation: blink 0.7s infinite;
+        animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @-webkit-keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @-moz-keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .terminal-data {
+        display: none;
+    }
+
+    .terminal-window .term-gray {
+        color: gray;
+    }
+
+    .terminal-window .term-green {
+        color: green;
+    }
+
+    </style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        {% include {{ root | append: 'js/typed.js' }} %}
+    </script>
+    <script type="text/javascript">
+        {% include {{ root | append: 'js/curious/developer-experience.js' }} %}
+    </script>
+
+    <div class="terminal-window" id="fs_terminal" data-scroll data-scroll-showCallback="runScripts(0);">
+        <header>
+            <div class="term-button term-green"></div>
+            <div class="term-button term-yellow"></div>
+            <div class="term-button term-red"></div>
+        </header>
+        <div class="terminal__wrapper">
+            <section class="terminal">
+                <div class="history"></div>
+                $&nbsp;<span class="prompt"></span>
+                <span class="typed-cursor"></span>
+            </section>
+        </div>
+    </div>
+
+    <div class="terminal-data mimik-run-output">
+        <br><span class="term-gray">/User/fullystudios</span><br>
+        └─┬ We’re happy:<br>
+        &nbsp;&nbsp;└─┬ <span class="term-green">✓</span> When stuff works<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;├ <span class="term-green">✓</span> When it keeps working<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;└ <span class="term-green">✓</span> When it’s easy to fix<br> 
+            
+        ----------------------------------------------<br>
+        <br><span class="term-gray">Generated in 0.20ms</span><br>
+    </div>
+
+
+
+    {{ page.section6 | markdownify }}
+    <div class="center">{{ page.section6_2 | markdownify }}</div>
+</div>
+{% endunless %}
+

@@ -1,0 +1,198 @@
+$bgShadow: $s-small * 0.5;
+
+$bgMqSmall: 400px;
+$bgMqMedium: 800px;
+
+.boxgrid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 $s-small $s-small*1.5;
+    margin-top: $s-small;
+    margin-bottom: $s-small;
+    position: relative;
+    max-width: 68.7em; //magic number to align the border to the content on large displays
+    margin-left: auto;
+    margin-right: auto;
+    @include media-query($on-laptop) {
+        margin-top: $s-small*3;
+        margin-bottom: $s-small*3;
+    }
+    a {
+        color: $c-dark;
+        // border-bottom:0.5px solid $c-signal;
+    }
+
+    &__header {
+        width: 100%;
+        // flex: 1 0 100%;
+        max-width: 100%;
+        text-align: center;
+        padding: $s-small 12% $s-small*0.5;
+        color: $c-signal;
+    }
+
+    &__box {
+        
+        width: 100%;
+        position: relative;
+        margin-top: $s-small;
+        display: flex;
+        flex: 1 0 100%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 30em;
+        flex-direction: column;
+        align-items: flex-start;
+        @media (min-width: $bgMqMedium) {
+            width: auto;
+            flex: 1 0 calc(50% - #{$s-small});
+            max-width: calc(50% - #{$s-small});
+            margin-right: $s-small * 0.5;
+            margin-left: $s-small * 0.5;
+        }
+        
+        &:after {
+            content:"";
+            background: $c-white;
+            position: absolute;
+            top: $bgShadow;
+            bottom: 0;
+            left: -$bgShadow;
+            width: $bgShadow;
+        }
+        &:nth-of-type(even) {
+            align-items: flex-end;
+            &:after {
+                left: auto;
+                right: -$bgShadow;         
+            }
+            text-align: right;
+            .boxgrid__caption {
+                text-align: left;
+                padding-left: $bgShadow;
+            }
+            .boxgrid_box {
+                align-items: flex-end;
+            }
+        }
+        img {
+            width: 100%;
+            // height: auto;
+        }
+    }
+
+    &__caption {
+        flex: 1 0 0%;
+    }
+
+    &__caption {
+        background: $c-white;
+        color: $c-dark;
+        display: inline-block;
+        min-width: 80%;
+        padding: $s-small 0;
+        h3, p {
+            padding-left: 0;
+        }
+    }
+
+    // The box border effect
+    &:before {
+        content: "";
+        border: 4px solid $c-signal;
+        @at-root {
+            .c-people-bg .boxgrid:before { border-color: $c-dark }
+            .c-signal-bg .boxgrid:before { border-color: $c-white }
+        }
+        position: absolute;
+        top: 0;
+        left: 12%;
+        right: 12%;
+        height: 100%;
+        @media (min-width: $bgMqSmall) {
+            left: 12%;
+            right: 12%;
+        }
+        @media (min-width: $bgMqMedium) {
+            left: 7%;
+            right: 7%;
+        }
+    }
+
+    &--curiosity {
+        .boxgrid__header {
+            color: $c-curiosities;
+        }
+        &:before {
+            border-color: $c-curiosities;
+
+        }
+    }
+
+    // The compact version used in ex the case grid under page Work
+    &--compact {
+        .boxgrid__box {
+            @media (min-width: $bgMqSmall) {
+                flex: 1 0 calc(50% - #{$s-small});
+                max-width: calc(50% - #{$s-small});
+                display: flex;
+                flex-direction: column;
+            }
+             @media (min-width: $bgMqMedium) {
+                flex: 1 0 calc(33% - #{$s-small});
+                max-width: calc(33% - #{$s-small});
+            }
+            &:after {
+                display: none;
+            }
+
+            .boxgrid__caption {
+                display: block;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                min-width: auto;
+                width: 100%;
+                padding-left: $s-small* 0.5;
+                padding-right: $s-small* 0.5;
+                text-align: center;
+
+                flex-grow: 1;
+                flex-shrink: 0;
+                flex-basis: auto;
+                h3, p {
+                    padding: 0;
+                }
+                .button {
+                    align-self: center;
+                }
+            }
+        }
+    }
+
+    // Offset version
+    &--offset {
+        @media (min-width: 829px) {
+            max-width: 76rem; // lock it to a two grid
+            margin-bottom: calc(#{$s-small} + 6em);
+            .boxgrid__box {
+                transform: translateY(-2.5em);
+                &:nth-of-type(even) {
+                    transform: translateY(3.5em);
+                }
+            }
+        }
+    }
+}
+
+// Page specific changes
+.page-contact, .page-curiousities {
+    .boxgrid {
+        &:before {
+            border-color: $c-dark;
+        }
+        &__header {
+            color: $c-dark;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+---
+layout: default
+---
+
+<article class="page" itemscope itemtype="http://schema.org/BlogPosting">
+	
+	{% unless page.background-image_2880 == nil %}
+		{% if page.background == nil %}
+			<style>
+				.hero--{{page.slug}} {
+					background-image: url({{site.baseurl}}/assets/work/{{page.slug}}/{{ page.background-image_1440 }});
+				}
+				@media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
+					.hero--{{page.slug}} {
+						background-image: url({{site.baseurl}}/assets/work/{{page.slug}}/{{ page.background-image_2880 }});
+					}
+				}
+			</style>
+		{% endif %}
+	{% endunless %}
+	<div class="hero hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %}" id="work_{{ page.slug }}" {% unless page.background-image_color == nil %} style="background-color: {{page.background-image_color}}"{% endunless %}>
+		{% comment %}<span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span>{% endcomment %}
+		<header class="hero__header">
+		{% comment %}hero__header--shadow{% endcomment %}
+			<h1 class="hero__header-element" itemprop="name headline">
+				{{ page.title }}
+			</h1>
+			<h2>{{page.subtitle}}</h2>
+			{% comment %}<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} {% endcomment %}
+			{% comment %}<span class="categories">{{ page.categories }}<span></p>{% endcomment %}
+		</header>
+
+		{% comment %}
+		###################################
+		## Get code for the background set
+		## in current curious-about post
+		{% endcomment %}
+		{% unless page.background == nil %}
+		<div class="hero__background">
+			{{ page.background }}
+		</div>
+		{% endunless %}
+
+		<div class="metabox column__wrapper">
+			<div class="column column--vertical">
+				<strong class="meta-description">Client:</strong>
+				<span class="meta">{{page.client}}</span>
+			</div>
+			<div class="column column--vertical">
+				<strong class="meta-description">Project:</strong>
+				<span class="meta">{{page.project}}</span>
+			</div>
+		</div>
+
+    </div>
+
+	{% unless page.ingress == nil %}
+	<div class="ingress ingress--{{ page.slug }}">
+		<div class="ingress__content">
+			{{ page.ingress | markdownify }}
+
+			{% unless page.author == nil %}
+			<p><a class="metabutton" href="mailto:{{page.author-email}}">
+				Author: <span>{{page.author}}</span>
+			</a></p>
+			{% endunless %}
+		</div>
+		{% unless page.casetop-bg_1440 == nil %}
+			<style>
+				#casetop_{{page.slug}} {
+					background-image: url({{site.baseurl}}/assets/work/{{page.slug}}/{{ page.casetop-bg_640 }});
+				}
+				@media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
+					#casetop_{{page.slug}} {
+						background-image: url({{site.baseurl}}/assets/work/{{page.slug}}/{{ page.casetop-bg_1440 }});
+					}
+				}
+			</style>
+		{% endunless %}
+		<div data-scroll class="ingress__image background-image{% unless page.casetop-bg_1440 == nil %} background-image{% endunless %}" id="casetop_{{ page.slug }}" {% unless page.background-image_color == nil %} style="background-color: {{page.background-image_color}}"{% endunless %}>
+			{% unless page.casetop-video == nil %}
+			<video class="ingress__video" loop autoplay muted playsinline>
+				<source src="{{ site.baseurl }}/assets/work/{{page.slug}}/{{ page.casetop-video }}">
+			</video>
+
+			{% endunless %}
+
+			{% unless page.link == nil %}
+			<a href="{{page.link}}" class="button ingress__button" id="{{page.slug}}_button"><span>{{page.link-text}}</span></a>
+			{% endunless %}
+		</div>
+	</div>
+	{% endunless %}
+
+	<main itemprop="articleBody">
+		{{ content }}
+	</main>
+
+</article>
+
+{% include workgrid.html %}

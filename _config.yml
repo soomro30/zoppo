@@ -12,14 +12,21 @@ github:  "https://github.com/fullystudios"
 facebook: "https://www.facebook.com/Fully-Flared-Digital-Agency-150488108297019/?ref=ts&fref=ts"
 vimeo: "https://vimeo.com/fullystudios"
 instagram: "https://www.instagram.com/fullystudios/"
+newsflash: |
+  ### News flash!
+
+  We got a new name, a new logo and a new way of announcing news flashes.
+
+# newsflash_buttontext: Check it out
+# newsflash_buttonurl: /work#reel
 
 # Papricaklubben
-case_highlight1_id: 6
+case_highlight1_id: 5
 
 # Collector
 case_highlight2_id: 1
 
-# KappAhl
+# Tanumstrand
 case_highlight3_id: 2
 
 # Links
@@ -44,7 +51,7 @@ defaults:
     values:
       layout: "curious"
       button-text: Read all about it
-      background-color: "#f2f2f2"
+      background-color: "#f8f8f8"
   -
     scope:
       path: ""
@@ -52,7 +59,7 @@ defaults:
     values:
       layout: "work"
       button-text: View case
-      background-color: "#f2f2f2"
+      background-color: "#f8f8f8"
 
 # Build settings
 highlighter: rouge

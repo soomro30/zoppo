@@ -1,0 +1,133 @@
+/**
+ * Colors
+ */
+
+// Help classes for colors
+.c-signal { color: $c-signal; }
+.c-signal-bg { background-color: $c-signal; color: $c-white; }
+
+.c-people { color: $c-people; }
+.c-people-bg { background-color: $c-people }
+
+.c-business { color: $c-business; }
+.c-business-bg { background-color: $c-business }
+
+.c-curiosities { color: $c-curiosities; }
+.c-curiosities-bg { background-color: $c-curiosities }
+
+.c-metal { color: $c-metal; }
+.c-metal-bg { background-color: $c-metal; color: $c-white; }
+
+.c-light { color: $c-light; }
+.c-light-bg { background-color: $c-light }
+
+.c-white { color: $c-white; }
+.c-white-bg { background-color: $c-white }
+
+.c-dark { color: $c-dark; }
+.c-dark-bg { background-color: $c-dark; color: $c-white; }
+
+
+.sectionspacing {
+    margin-top: $s-small*3;
+    margin-bottom: $s-small*3;
+    @include media-query($on-laptop) {
+        margin-top: $s-small*6;
+        margin-bottom: $s-small*6;
+    }
+}
+.sectionspacing-small {
+    margin-top: $s-small*1;
+    margin-bottom: $s-small*1;
+    @include media-query($on-laptop) {
+        margin-top: $s-small*3;
+        margin-bottom: $s-small*3;
+    }
+}
+.sectionpadding {
+    padding-top: $s-small*3;
+    padding-bottom: $s-small*3;
+    @include media-query($on-laptop) {
+        padding-top: $s-small*6;
+        padding-bottom: $s-small*6;
+    }
+}
+
+// Position
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.flexend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.bring-to-front {
+    z-index: 1;
+}
+// Images / backgrounds
+.background-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    &--padding {
+        padding: $s-small 0;
+        @include media-query($on-laptop) {
+            padding: $s-small*2 0;
+        }
+    }
+    &--largepadding {
+        padding: $s-small*2 0;
+        @include media-query($on-laptop) {
+            padding: $s-small*4 0;
+        }
+    }
+    &--contain {
+        background-size: contain;
+    }
+}
+
+
+.invert {
+    color: $c-white;
+}
+
+// text
+.hyphenate {
+    -ms-word-break: break-all;
+        word-break: break-all;
+
+        // Non standard for webkit
+        word-break: break-word;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+            hyphens: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden-sm{
+    @media ( max-width: $on-palm ) {
+        display: none;
+    }
+}
+
+.visible-only-sm {
+    @media (min-width: $on-palm ) {
+        display: none;
+    }
+}

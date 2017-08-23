@@ -1,0 +1,182 @@
+---
+layout: curious
+---
+
+<!-- 
+###################################
+## Get all content (sections) from
+## the current curious-about post
+-->
+
+{% unless page.section1 == nil %}
+<div class="section section--1 sectionspacing-small">
+  
+    {{ page.section1 | markdownify }}
+
+    <div class="imagegrid sectionspacing-small">
+        <div class="imagegrid__image imagegrid__image--two imagegrid__image--padding">
+            <img class="image"
+                alt="{{page.section1-image1_alt}}"
+                width="1440" height="643"
+                src="{{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{page.section1-image1}}">
+        </div>
+        <div class="imagegrid__image imagegrid__image--two imagegrid__image--padding">
+            <img class="image"
+                alt="{{page.section1-image2_alt}}"
+                width="1440" height="643"
+                src="{{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{page.section1-image2}}">
+        </div>
+    </div>
+</div>
+{% endunless %}
+
+
+{% unless page.section2 == nil %}
+<div class="section section--2">
+    <h2 class="center">{{ page.section2-header }}</h2>
+    <div class="box box--center box--noshadow" style="margin-bottom: -3em">
+        {{ page.section2 | markdownify }}
+    </div>
+
+    <style>
+        .coe-swipe {
+            width: 100%;
+            height: 0%;
+            padding-top: 150%;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <div class="imagegrid" data-coeswipe style="position: relative; z-index: 1">
+        <div class="imagegrid__image imagegrid__image--tree imagegrid__image--threemobile" data-coeswipeimage>
+            <div class="coe-swipe coe-swipe--1" style="background-image: url({{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{page.section2-image1}}"></div>
+        </div>
+        <div class="imagegrid__image imagegrid__image--tree imagegrid__image--threemobile" data-coeswipeimage>
+            <div class="coe-swipe coe-swipe--2" style="background-image: url({{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{page.section2-image2}}"></div>
+        </div>
+        <div class="imagegrid__image imagegrid__image--tree imagegrid__image--threemobile" data-coeswipeimage>
+            <div class="coe-swipe coe-swipe--3" style="background-image: url({{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{page.section2-image3}}"></div>
+        </div>
+    </div>
+
+    {{ page.section2-image-sub | markdownify }}
+
+</div>
+{% endunless %}
+
+
+{% unless page.section3 == nil %}
+<div class="section section--3 sectionspacing-small">
+    <div class="box box--right box--business">
+        {{ page.section3 | markdownify }}
+    </div>
+</div>
+{% endunless %}
+
+{% unless page.section4 == nil %}
+<div class="section section--4 sectionspacing-small">
+    <div class="imagegrid" data-coeswipe>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile" data-coeswipeimage>
+            <div class="coe-swipe coe-swipe--1" style="background-image: url({{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{page.section4-image1}}"></div>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile" data-coeswipeimage>
+            <div class="coe-swipe coe-swipe--2" style="background-image: url({{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{page.section4-image2}}"></div>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile" data-coeswipeimage>
+            <div class="coe-swipe coe-swipe--3" style="background-image: url({{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{page.section4-image3}}"></div>
+        </div>
+        <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile" data-coeswipeimage>
+            <div class="coe-swipe coe-swipe--4" style="background-image: url({{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{page.section4-image4}}"></div>
+        </div>
+    </div>
+    <div style="margin-top: -5em; position: relative; z-index: 1; margin-left: 5%">
+        <div class="box box--people" style="max-width: 33em;">
+            {{ page.section4 | markdownify }}
+        </div>
+    </div>
+</div>
+{% endunless %}
+
+{% unless page.section5 == nil %}
+<div class="section section--5 sectionspacing-small">
+    {{ page.section5 | markdownify }}
+</div>
+
+<div class="flexcenter" id="openlettering" style="background-color: #222a3f">
+    <style>
+    {% comment %} prevent relayout {% endcomment %}
+    #openlettering {
+        height: 80vh;
+    }
+    #openlettering svg {
+        padding: 4em 4em 6em;
+        height: 80vh;
+    }
+    </style>
+    <script>
+        function getRandom(min, max) {
+            return Math.ceil(Math.random() * (max - min));
+        }
+        if(document.getElementById('openlettering')) {
+            var animations = ['{{ site.baseurl }}/assets/work/owd-bob/feb27.svg', '{{ site.baseurl }}/assets/work/owd-bob/apr12.svg', '{{ site.baseurl }}/assets/work/owd-bob/june16.svg'];
+            
+            var filepath = animations[getRandom(0, 2)];
+            console.log(getRandom(0, 3));
+            new Vivus('openlettering', {
+                duration: 250, 
+                file: filepath,
+                type: 'delayed',
+                animTimingFunction: Vivus.EASE_OUT,
+            });
+        }
+    </script>
+</div>
+{% endunless %}
+
+
+{% unless page.section6 == nil %}
+<div class="section section--6" style="margin-top: -4em;">
+    <div class="box box--noshadow box--center">
+        {{ page.section6 | markdownify }}
+    </div>
+</div>
+{% endunless %}
+
+
+{% unless page.section8 == nil %}
+<div class="section section--8">
+    {{ page.section8 | markdownify }}
+    <p>
+        <a href="{{site.baseurl}}/contact" class="button"><span>{{page.cta}}</span></a>
+    </p>
+</div>
+{% endunless %}
+
+
+{% unless page.section7 == nil %}
+<div class="section section--7 sectionspacing-small grid grid--space">
+    {% unless page.section7-image_2880 == nil %}
+        <style>
+            .section7-{{ page.slug }} {
+                background-image: url({{site.baseurl}}/assets/work/{{work1.slug}}/{{ page.section7-image_1440 }});
+            }
+            @media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
+                .section7-{{ page.slug }} {
+                    background-image: url({{site.baseurl}}/assets/work/{{work1.slug}}/{{ page.section7-image_2880 }});
+                }
+            }
+        </style>
+    {% endunless %}
+    <div class="background-image grid__offsetcolumn1-2 section7-{{ page.slug }}" style="background-image: url({{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{ page.background-image_2880 }})"></div>
+    <div class="grid__offsetcolumn2-2 bring-to-front">
+        <div class="box box--right box--up">
+            {{ page.section7 | markdownify }}
+        </div>
+    </div>
+</div>
+{% endunless %}
+
+
+<script type="text/javascript">
+    {% include {{ root | append: 'js/curious/opinionated-ecommerce.js' }} %}
+</script>

@@ -1,0 +1,407 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: minmax(5vh, auto); // 20 rows per vp
+    grid-auto-rows: minmax(5vh, auto);
+    // min-height: 100vh;
+    &--space {
+        margin-top: $s-small*2;
+        margin-bottom: $s-small*2;
+    }
+    &--padding {
+        // padding-left: $s-tiny / 2 ;
+        // padding-right: $s-tiny / 2 ;
+        @include media-query($on-laptop) {
+            padding-left: $s-small;
+            padding-right: $s-small;
+        }
+    }
+
+    // 2 column grid component. Example: Case Owd Bob
+    &__column1-2 {
+        margin-bottom: $s-small;
+        grid-column: 1 / -1;
+        grid-row: 1;
+        @include media-query($on-laptop) {
+            justify-self: center;
+            grid-column: 1 / span 6;
+        }
+    }
+    &__column2-2 {
+        margin-bottom: $s-small;
+        grid-column: 1 / -1;        
+        grid-row: 2;
+        justify-self: center;
+        @include media-query($on-laptop) {
+            grid-column: 7 / span 6;
+            grid-row: 1;
+        }
+    }
+
+    // 2 column grid component. Example: Case internet by hand
+    &__column-large {
+        margin-bottom: $s-small;
+        grid-column: 1 / -1;
+        grid-row: 1;
+        justify-self: center;
+        @include media-query($on-laptop) {
+            grid-column: 1 / span 8;
+        }
+    }
+    &__column-small {
+        margin-bottom: $s-small;
+        grid-column: 1 / -1;        
+        grid-row: 2;
+        justify-self: center;
+        @include media-query($on-laptop) {
+            grid-column: 9 / span 4;
+            grid-row: 1;
+        }
+    }
+
+    // 2 column offset component. Example: Landing Case
+    &__offsetcolumn1-2 {
+        grid-column: 2 / -1;
+        grid-row: 1 / span 7;
+        @include media-query($on-laptop) {
+            grid-column: 1 / span 8;
+            grid-row: 2 / span 13;
+        }
+        &--small {
+            grid-column: 1 / -1;
+            grid-row: 4 / span 8;        
+            @include media-query($on-laptop) {
+                grid-column: 1 / span 8;
+                grid-row: 2 / span 8;
+            }
+        }
+    }
+    &__offsetcolumn2-2 {
+        grid-column: 1 / -1;
+        grid-row: 8 / span 1;
+        @include media-query($on-laptop) {
+            grid-column: 8 / span 5;
+            grid-row: 1 / span 8;
+        }
+        
+        &--owd-bob {
+            grid-row: 11 / span 7;
+            @include media-query($on-laptop) {
+                grid-row: 3 / span 8;
+            }
+        }
+    }
+
+    // Fullwidth image with box underneath
+    &__fullwidth {
+        grid-column: 1 / -1;
+        grid-row: 1 / span 10; 
+    }
+
+    &__boxunder {
+        grid-column: 2 / span 10;
+        grid-row: 7 / span 4; 
+        @include media-query($on-laptop) {
+            grid-column: 2 / span 10;
+            grid-row: 7 / span 8;
+        }
+    }
+    
+}
+
+
+// Landing layout
+.logowall {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: $content-width;
+    .kappahl-logo {
+        margin-top: 8px;
+    }
+    .column {
+        margin-bottom: $s-small;
+        align-items: center;
+    }
+    img {display: block; margin: 0 auto;}
+}
+
+.footer {
+    background-color: $c-white;
+    color: $c-dark;
+    
+    @include media-query($on-laptop) {
+        font-size: 80%;
+    }
+    img {
+        width: 6em;
+        height: 5.6em;
+    }
+}
+
+
+// About layout
+.gridabout {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include media-query($on-laptop) {
+        grid-template-columns: 1fr 1fr;
+    }
+    .anim-wrapper {
+        height: auto;
+        padding-top: 60%;
+        position: relative;
+        iframe {
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+        }
+    }
+}
+
+// Work layout
+.boxtext--simpleframe.work-ingress {
+    z-index: 4;
+    grid-column: 1 / -1;
+    grid-row: 1 / span 4;
+    @include media-query($on-laptop) {
+        grid-column: 1 / span 5;
+        grid-row: 1 / span 6;
+    }
+}
+.work1-image {
+    grid-column: 1 / -1;
+    grid-row: 9 / span 11;
+    @include media-query($on-laptop) {
+        grid-column: 1 / span 8;
+        grid-row: 7 / span 15;
+    }
+}
+.work1-text {
+    grid-column: 1 / -1;
+    grid-row: 5 / span 4;
+    z-index: 1;
+    @include media-query($on-laptop) {
+        grid-column: 8 / span 5;
+        grid-row: 5 / span 10;
+    }
+}
+
+.reelgrid {
+    margin-top: $s-small*2;
+    @include media-query($on-laptop) {
+        position: relative;
+        padding-top: $s-small*2;
+        margin-top: $s-small*4;
+        &__text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            z-index: 1;
+        }
+        &__video {
+            padding-bottom: 56.05%;
+        }
+    }
+}
+
+.work2-image {
+    grid-column: 1 / -1;
+    grid-row: 3 / span 10;
+    @include media-query($on-laptop) {
+        grid-column: 1 / 8;
+        grid-row: 5 / 17;
+    }
+}
+
+.work2-text {
+    margin-top: $s-small*2;
+    grid-column: 1 / -1;
+    grid-row: 1 / span 2;
+    z-index: 1;
+    @include media-query($on-laptop) {
+        margin-top: 0;
+        // margin-right: $s-small;
+        grid-column: 8 / -1;
+        grid-row: 1 / span 20;
+    }
+}
+
+.work3-image {
+    grid-column: 1 / -1;
+    grid-row: 3 / span 15;
+    @include media-query($on-laptop) {
+        grid-row: 1 / span 18;
+    }
+}
+
+.work3-text {
+    margin-top: $s-small*2;
+    grid-column: 1 / -1;
+    grid-row: 1 / span 2;
+    z-index: 1;
+    @include media-query($on-laptop) {
+        margin-top: 0;
+        grid-column: 2 / span 5;
+        grid-row: 14 / span 7;
+    }
+}
+
+// Curiosities layout
+.grid--curiosities {
+    .bgimage {
+        position: relative;
+    }
+    .bgimage:nth-of-type(1) {
+        grid-column: 1 / -1;
+        grid-row: 3 / span 10;
+        @include media-query($on-laptop) {
+            grid-row: 1 / span 17;
+        }
+    }
+
+    .boxtext:nth-of-type(1) {
+        z-index: 1;
+        grid-column: 1 / -1;
+        grid-row: 3 / span 10;
+        @include media-query($on-laptop) {
+            grid-column: 2 / span 5;
+            grid-row: 14 / span 7;
+        }
+    }
+
+    .bgimage:nth-of-type(2) {
+        grid-column: 1 / -1;
+        grid-row: 3 / span 10;
+        @include media-query($on-laptop) {
+            grid-column: 1 / span 8;
+            grid-row: 22 / span 17;
+        }
+    }
+
+    .boxtext:nth-of-type(2) {
+        z-index: 1;
+        grid-column: 1 / -1;
+        grid-row: 3 / span 10;
+        @include media-query($on-laptop) {
+            grid-column: 8 / span 5;
+            grid-row: 20 / span 10;
+        }
+    }
+
+}
+
+/**
+ * Site header
+ */
+ .site-header {
+     &__logo {
+         position: absolute;
+         top: 0;
+         right: 0;
+         z-index: 40;
+    }
+    &__logoanim {
+         width: calc(7em + 3vw);
+         height: calc(7em + 3vw);
+    }
+    &__svg {
+        fill: $c-white;
+        opacity: 1;
+        transition: fill 0.7s;
+        &:hover {
+            fill: $c-people;
+        }
+        width: 4em;
+        height: 4em;
+        // background: url(../assets/sketch/logo-2.svg) no-repeat;
+        background-size: 97% 97%;
+        @include media-query($on-laptop) {
+            width: 4em;
+            height: 4em;
+        }
+    }
+
+
+    .button--nav {
+        margin: $s-small;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        &.menu-open {
+            z-index: 40;
+        }
+    }
+}
+
+.imageline {
+    background-color: $c-dark;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    max-width: 1300px;
+    padding: $s-small*0.5;
+    @include media-query($on-palm) {
+        padding: $s-small;
+    }
+
+    &__image {
+        flex: 1 0 calc(50% - #{$s-small*0.5});
+        @include media-query($on-palm) {
+            flex: 1;
+        }
+        margin: $s-small*0.25;
+        // display: inline-block;
+        // background: #fff;
+        // width: 100%;
+        // grid-column: auto;
+        // grid-row: auto;
+        // padding: $s-small*0.5;
+        // height: 40vh;
+        // width: auto;
+        // img {
+        // }
+    }
+    // display: grid;
+    // grid-gap: 10px;
+    // grid-template-columns: repeat(auto-fill, 100px ) ;
+    // // grid-template-rows: 40vh;
+}
+
+
+/**
+ * Cases section
+ */
+
+
+.case2__image {
+    width: 100vw;
+    height: 100vw * 0.5;
+    @include media-query($on-laptop) {
+        width: 30vw;
+        height: 30vw * 0.5;
+    }
+
+    perspective: 1000px;
+}
+#mbkz_bg, #mbkz_menu, #mbkz_side, #mbkz_content {
+    // transition: transform 1.6s $cubic-bezier;
+    transform-origin: 50% 50%;
+}
+
+// ###############################################
+// remove this??? ################################
+
+.text-content {
+    padding: $spacing-unit/2 $spacing-unit/2 $spacing-unit/2;
+    max-width: $content-width;
+    margin: 0 auto;
+    text-align: left;
+    @include media-query($on-laptop) {
+        padding: $spacing-unit $spacing-unit $spacing-unit;
+    }
+    &--right {
+        margin-right: 0;
+    }
+}

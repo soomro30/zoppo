@@ -1,0 +1,33 @@
+<!-- 
+####################
+## Loop through the latest work
+-->
+<section class="boxgrid boxgrid--compact">
+    <h2 class="boxgrid__header h4">Recent work</h2>
+    <!-- Get all work posts and revers them -->
+    {% assign items = site.work | sort: 'date' | reverse %}
+    
+    {% for work in items limit:9 %}
+
+		{% if work.title == page.title or work.title == work1.title or work.title == work2.title or work.title == work3.title %}
+			{% continue %}
+		{% endif %}
+
+        <div class="boxgrid__box">
+            <div class="image-loader" style="background-color: {{work.background-color}}"> <!--Change this color to an average color from the image-->
+                {% unless work.background-image_720 == nil %}
+                    <img src="{{site.baseurl}}/assets/work/{{work.slug}}/{{work.background-image_720}}" alt="{{work.title}}">	
+                {% endunless %}
+            </div>
+            <div class="boxgrid__caption">
+                <div>
+                    <h3>{{work.title}}</h3>
+                    <p>{{work.subtitle}}</p>
+                </div>
+                <a href="{{work.url | prepend: site.baseurl}}" class="button"><span>{{work.button-text}}</span></a>
+            </div>
+        </div>
+        
+    {% endfor %}
+
+</section>

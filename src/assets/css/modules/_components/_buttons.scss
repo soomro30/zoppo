@@ -1,0 +1,257 @@
+/**
+* Buttons
+*/
+
+$bshadow: 3px; // the size of the shadow
+
+//Default button for use on dark background
+.button {
+	@include media-query($on-laptop) {
+		font-size: 0.8em;
+	}
+	font-family: $header-font-family;
+	font-weight: bold;
+	border: none;
+	background-color: transparent;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	user-select: none;
+	position: relative;
+	z-index: 1;
+	padding: 0;
+	display: inline-block;
+	-webkit-tap-highlight-color: transparent;
+	
+	// 3D sida under
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $c-signal;
+		z-index: -1;
+		transform: translateX(-$bshadow); // the size of the shadow
+		transition: transform 0.6s cubic-bezier(0,.90,.13,.90);
+	}
+	&:hover, &:focus {
+		&:after {
+			transform: translateX(0);			
+		}
+	}
+
+	// End Shadow
+	&:focus, &:active {
+		outline: none;    
+	}
+
+	//The button-part with the text
+	span {
+		letter-spacing: 0.15em;
+		color: $c-signal;
+		padding: 0.55em 1.5em 0.45em;
+		background-color: $c-white;
+		border: 2px solid $c-signal;
+		display: block;
+		width: 100%;
+		height: 100%;
+		transition: transform 0.6s cubic-bezier(0,.90,.13,.90);
+		transform: translate3D(0, -$bshadow, 0); // the size of the shadow
+		position: relative;
+	}
+	&:hover, &:focus {
+		span {
+			transform: translate3D(0, 0, 0);
+		}
+	}
+	&:active span {
+		transform: translate3D(0, 0, 0);
+		border: 2px solid transparent;
+		background-color: transparent;
+		color: $c-white;
+		:after {
+			background-color: none;
+		}
+	}
+
+	// Inverted button (when on signal bg)
+	&--inv {
+		span {
+			border-color: $c-white;
+			background-color: $c-signal;
+			color: $c-white;
+		}
+		&:after {
+			background-color: $c-white;
+		}
+		&:active {
+			span {
+				color: $c-signal;
+			}
+		}
+	}
+
+	&--curiosities {
+		span {
+			border-color: $c-curiosities;
+			background-color: $c-dark;
+			color: $c-curiosities;
+		}
+		&:after {
+			background-color: $c-curiosities;
+		}
+		&:active {
+			span {
+				color: $c-dark;
+			}
+		}
+	}
+
+	&--nav, &--icon {
+		span {
+			padding: 0;
+			line-height: 0;
+			position: relative;
+			z-index: 2;
+		}
+		svg {
+			margin: 0;
+			width: 3em;
+			height: 3em;
+		}
+		line {
+			fill:none;
+			stroke:#5F11E8;
+			stroke-width:4;
+			stroke-miterlimit:10;
+		}
+		line {
+			transition: transform 0.3s $easeout;
+		}
+		line:nth-child(1), line:nth-child(3) {
+			transform-origin: top left;
+		}
+		line:nth-child(2) {
+			transform-origin: center left;
+		}
+		line:nth-child(1) {
+		}
+		&.menu-open {
+			line:nth-child(1) {
+				transform: rotate(45deg) translate3D(1.4em, -2.4em, 0);
+			}
+			line:nth-child(2) {
+				transform: scaleX(0);
+			}
+			line:nth-child(3) {
+				transform: rotate(-45deg) translate3D(-3.5em, 0.3em, 0)
+			}
+		}
+	}
+	&--icon {
+		span {
+			padding: $s-small*0.25;
+		}
+	}
+}
+
+// Text link with arrows
+.link {
+	font-size: 1em;
+	font-family: $header-font-family;
+	color: $c-signal;
+	position: relative;
+	padding: $s-small*0.5;
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: $s-small * 0.4;
+		left: $s-small;
+		right: $s-small;
+		height: 4px;
+		background-color: $c-signal;
+		transition: transform 0.4s $cb-ease_out;
+		transform: translateX(-1em) scaleX(0);
+		transform-origin: top left;
+		// opacity: 0;
+	}
+	&:hover {
+		color: $c-signal;
+		&:before {
+			transform: translateX(0) scaleX(1);
+			// opacity: 1;
+		}
+		&:after {
+			transform: translateX(0.5em);
+		}
+	}
+	&--next {
+		&:after {
+			content: "";
+			display: inline-block;
+			margin-left: $s-small*0.25;
+			width: 1em; 
+			height: 0.5em;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE2IDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDMuNTI4YzAgLjA4Ny0uMDMuMTYtLjA5My4yMjJsLTMuNTU1IDMuMjc4Yy0uMS4wODctLjIwNy4xMDUtLjMyNC4wNTYtLjExOC0uMDU2LS4xNzYtLjE0NS0uMTc2LS4yN1Y0Ljc0MkguMjk2Qy4yMSA0Ljc0LjE0IDQuNzE0LjA4MyA0LjY2LjAyOCA0LjYwMiAwIDQuNTMgMCA0LjQ0NVYyLjY2N2MwLS4wODYuMDI4LS4xNTcuMDgzLS4yMTNDLjE0IDIuNC4yMSAyLjM3LjI5NiAyLjM3aDExLjU1NlYuMjk4YzAtLjEzLjA1OC0uMjIuMTc2LS4yNy4xMTctLjA0OC4yMjUtLjAzMy4zMjQuMDQ4bDMuNTU1IDMuMjRjLjA2Mi4wNjIuMDkzLjEzMy4wOTMuMjEzeiIgZmlsbD0iIzVGMTBFOCIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
+			transition: transform 0.4s $cb-ease_out;
+		}
+	}
+	&--invert {
+		color: $c-white;
+		&:before {
+			background-color: $c-white;
+		}
+		&.link--next:after {
+			background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE2IDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDMuNTI4YzAgLjA4Ny0uMDMuMTYtLjA5My4yMjJsLTMuNTU1IDMuMjc4Yy0uMS4wODctLjIwNy4xMDUtLjMyNC4wNTYtLjExOC0uMDU2LS4xNzYtLjE0NS0uMTc2LS4yN1Y0Ljc0MkguMjk2Qy4yMSA0Ljc0LjE0IDQuNzE0LjA4MyA0LjY2LjAyOCA0LjYwMiAwIDQuNTMgMCA0LjQ0NVYyLjY2N2MwLS4wODYuMDI4LS4xNTcuMDgzLS4yMTNDLjE0IDIuNC4yMSAyLjM3LjI5NiAyLjM3aDExLjU1NlYuMjk4YzAtLjEzLjA1OC0uMjIuMTc2LS4yNy4xMTctLjA0OC4yMjUtLjAzMy4zMjQuMDQ4bDMuNTU1IDMuMjRjLjA2Mi4wNjIuMDkzLjEzMy4wOTMuMjEzeiIgZmlsbD0iI2ZmZmZmZiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
+		}
+		&:hover {
+			color: $c-white;
+		}
+	}
+}
+
+.metabutton {
+	font-family: $header-font-family;
+	letter-spacing: 0.15em;
+	border: 2px solid #ccc;
+	color: #ccc;
+	display: inline-block;
+	padding: $s-small*0.5 $s-small*0.75;
+	font-size: 0.8em;
+	font-weight: 300;
+	transition: color 0.2s, border 0.2s;
+	&:hover {
+		border: 2px solid $c-signal;
+		span:after {
+			transform: scaleX(1);
+		}
+	}
+	span {
+		position: relative;
+		// text-shadow: 1px 1px 0 $c-white, 2px 1px 0 $c-white, -1px 1px 0 $c-white, -2px 1px 0 $c-white, 1px -1px 0 $c-white, 2px -1px 0 $c-white, -1px -1px 0 $c-white, -2px -1px 0 $c-white;
+		z-index: 1;
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -0.1em;
+			left: 0;
+			right: 0;
+			border-bottom: 2px solid $c-signal;
+			z-index: -1;
+			transform: scaleX(0);
+			// transform-origin: top left;
+			transition: transform .7s $easeout;
+		}
+	}
+}
+
+.button + .link {
+	margin-top: $s-small*0.5;
+}
+
+* + .button {
+	margin-top: $s-small;		
+}

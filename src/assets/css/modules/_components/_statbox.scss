@@ -1,0 +1,47 @@
+.statbox {
+    background-color: $c-white;
+    border: 1px solid darken($c-light, 1%);
+    padding: $s-small*0.5 $s-small*0.25 $s-small*0.25;
+    @include media-query($on-laptop) {
+        padding: $s-small $s-small $s-small*0.5;
+    }
+}
+.stat-circle {
+    display: block;
+    margin: 0 auto $s-small*0.5;
+    @include media-query($on-laptop) {
+        margin-bottom: $s-small;
+    }
+    width: 80%;
+    height: auto;
+    &__bg, &__line {
+        fill:none;
+        stroke-width:5;
+        stroke-miterlimit:10;
+    }
+    &__bg {
+        stroke: $c-light;
+    }
+    &__line {
+        stroke: currentColor;
+        stroke-dasharray: 100;
+        transition: stroke-dashoffset 0.8s $easeout; // anim in
+    }
+    &__number, &__procent {
+        font-family: $header-font-family;
+        font-size: 7px;
+        fill: $c-metal;
+    }
+    &__number {
+        font-weight: bold;
+    }
+    &__procent {
+        font-weight: normal;
+    }
+}
+.invisible .stat-circle {
+    &__line {
+        stroke-dashoffset: 100;
+        transition: stroke-dashoffset 0.6s $easein; // anim out
+    }
+}

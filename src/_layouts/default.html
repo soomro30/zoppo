@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html class="page-{{page.slug}}" lang="en" {% unless page.background-color == nil %}style="background-color: {{page.background-color}}"{% endunless %}>
+
+  {% include head.html %}
+
+  <body {% unless page.background-color == nil %}style="background-color: {{page.background-color}}"{% endunless %}>
+
+    {% include header.html %}
+
+ 	  <div id="barba-wrapper">
+    	<div class="site-content barba-container" data-namespace="{% if page.slug %}{{ page.slug }}{% else %}home{% endif %}">
+        	{{ content }}
+    	</div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

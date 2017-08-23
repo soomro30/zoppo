@@ -66,24 +66,12 @@ export LANG=sv_SE.UTF-8
 
 As this is just a Jekyll project, you can use any of the commands listed in their [docs](http://jekyllrb.com/docs/usage/)
 
-## Deploy with Gulp and GitHub Pages
 
+## Manual deployment
+1. in _config.yml, make sure the baseurl is correct
+2. run rake b
+3. Move all files in pulic to the server
 
-## Struture
-
-
-
-### Templates
-
-...
-
-### CSS
-
-...
-
-### JS
-
-...
 
 ### Markdown
 Get highlighting in markdown files in Sublime:
