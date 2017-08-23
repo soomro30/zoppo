@@ -80,7 +80,7 @@ cta: Get in touch
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsa dolorem, minima sunt maiores a ducimus sed atque, similique, molestias labore. Tempora, obcaecati repellat eius corporis laudantium. Fugit, dolorem qui?
+You can create entire worlds without having to pick up a pen.
 
 [Launch site][motion-link]
 
