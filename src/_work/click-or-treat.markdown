@@ -25,7 +25,7 @@ casetop-video: casetop.mp4
 ingress: |
   One day I got a call from DDB, an agency we collaborate with quite regularly. They usually get in contact when they need an interactive banner or campaign site, as we’re well known around town for our web animation savvy.
 
-  This time they wanted to enlist our help with a very specific mission: to scare Göteborg.
+  This time they wanted to enlist our help with a very specific mission: to scare Gothenburg.
 
 section1: |
   Their aim was to pull off a digital marketing stunt that would drive foot traffic to the Halloween festivities at Liseberg. To do this, they were toying with the question how to make a traditional “boo!” kind of scare go digital.
@@ -39,7 +39,7 @@ section2: |
   
   ### Jonas and I went over to DDB’s office the next day to flesh out the idea, which was this: to scare the lights out of people when they’re reading (what they think is) a normal web article and have a terrifying face/scream pop up out of nowhere. 
 
-  The idea was brilliant and to do it any justice, the execution had to be perfect. We completely cleared our schedules to make this thing come aaaalive. 
+  The idea was brilliant, and to do it any justice the execution had to be perfect. We completely cleared our schedules to make this thing come aaaalive. 
   
   In the process, we learned that scaring someone in the digital realm shares the same principles as in the real world. 
 
