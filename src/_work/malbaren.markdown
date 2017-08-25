@@ -29,13 +29,13 @@ image1_alt: "Process"
 section2: |
   One day Matbaren came to us with an idea about placing their buffet carts in gyms and sport facilities. These would be stocked with extra healthy food suited to fitness and nutrition goals. 
 
-They asked us to come up with a brand concept from the ground up, from a name and tagline to a graphic toolkit. And of course, a website and everything on it.
+  They asked us to come up with a brand concept from the ground up, from a name and tagline to a graphic toolkit. And of course, a website and everything on it.
 
 section3: |
   ## Branding, go!
   ### In devising a name, we searched for a single word that would combine the values of both exercise and food. It needed to be memorable and show a kinship with Matbaren’s other concepts.
 
-  We came up with the name Målbaren, which is a play on words in Swedish, as mål means both “meal” and “goal.” The tagline, “för målmedvetna människor” means both “for determined people” and “for food conscious people.” 
+  We came up with the name Målbaren, which is a play on words in Swedish, as mål means both “meal” and “goal. The tagline, “för målmedvetna människor” means both “for determined people” and “for food conscious people.” 
 
 image2_2880: "vagn-concept_2880.jpg"
 image2_1440: "vagn-concept_1440.jpg"
