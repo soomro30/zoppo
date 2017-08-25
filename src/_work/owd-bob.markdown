@@ -19,13 +19,13 @@ background-image_720: "hero_720.jpg"
 background-image_color: "#c9cba3"
 
 ingress: |
-  Given that Fully is a digital studio, the majority of our creations live, move and die on the Internet. This is a glorious thing; as an outlet for creativity, the digital world is boundless and constantly proffers new tools. The results can be stunning. 
+  Given that Fully is a digital studio, the majority of our creations live, move and die on the Internet. This is a glorious thing; as an outlet for creativity, the digital world is boundless and constantly proffers new tools. 
 
 section1: |
   Growing up, my grandma was an avid collector of paintings. 
   She imparted both the thrill of obtaining art and respect for its makers. 
 
-  When art buying started to shift to the web, I noticed that both these things -- the thrill and the respect -- were being lost in translation. Print stores like Society 6 were selling artists’ work in bulk, and splashing their prints across mugs and t-shirts and all kinds of cheap ephemera. The artists went under-paid and under-noticed. Meanwhile, as a buyer, it was difficult to find “something special” when everything was 1 of 5,000+.
+  When art buying started to shift to the web, I noticed that both these things -- the thrill and the respect -- were being lost in translation. Online print stores were selling artists’ work in bulk, and splashing their prints across mugs and t-shirts and all kinds of cheap ephemera. The artists went under-paid and under-noticed. Meanwhile, as a buyer, it was difficult to find “something special” when everything was 1 of 5,000+.
 
 image1_1440: "paintings_1440.jpg"
 image1_720: "paintings_720.jpg"

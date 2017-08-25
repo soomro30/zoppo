@@ -19,17 +19,18 @@ ingress: |
   TanumStrand is a hotel and retreat center on Sweden’s west coast, close-ish to the Norwegian border. With its granite archipelagos, misty mornings and gently rocking rowboats, it’s an idyll that would make any Swedish ex-pat weep. 
 
 section1: |
-  ### Recently TanumStrand gave itself a facelift. They updated their spa and revitalized their restaurant, and even overhauled their website.
+  ### In recent years, TanumStrand has undertaken some serious upgrades. 
+  They completely renovated their spa, transformed their restaurant and even overhauled their website.  
   In this season of transformation, they wanted us to produce a few commercials to spotlight their fresh new look and set the tone as a place of rest and rejuvenation.
   
   Rather than focus on advertising their new facilities, I wanted to create an immersive experience that would stir longing in the viewer. In other words: we weren’t going to sell the spa. We were going to sell the peace. 
 
-  We ended up doing 4 films in total -- Spring, Summer, Fall, and Winter -- with each focusing on the festive hallmarks of the season. These mini narratives of tranquility performed exceptionally well as commercials, and aired as a 15 second spot on TV 4 and a 20 second spot on the web.
+  We ended up doing 4 films in total — spring, summer, fall, and winter — with each focusing on the festive hallmarks of the season. These mini narratives of tranquility performed exceptionally well as commercials, and aired as 15 second spots on TV 4 and 20 second spots on the web.
 
 section2: |
   ## Spring
   
-  **We began with Spring, a season when the earth is shaking itself out of its slumber, and people are doing the same. TanumStrand had renovated their gym so I wanted to point in that direction, but have the mood be more expansive and peaceful. Hence the outdoor training scenes.**
+  **We began with spring, a season when the earth is shaking itself out of its slumber, and people are doing the same. TanumStrand had renovated their gym so I wanted to point in that direction, but have the mood be more expansive and peaceful. Hence the outdoor training scenes.**
 
 section2_images:
   - alt: "A lorem ipsum image"
@@ -70,7 +71,7 @@ section4_text: |
 
   As soon as we knew that we were going to film at sea, I felt it was important to get the sky shot of the boat. I brought in a drone to help get this bird’s eye view. The results were, of course, majestic. 
 
-  I think this film imparts what I was aiming for in terms of feeling: that special mix of adventurous thrill and contented calm that being on the sea provides.
+  I think this film imparts what I was aiming for in terms of feeling: that special mix of adventurous thrill and contented calm that’s unique to the open sea. 
 
 section4_video: "221864459"
 
@@ -78,12 +79,12 @@ section4_video: "221864459"
 section5: |
   ## Winter
   
-  **For the Winter film, the immediate focus was obvious: Christmas. TanumStrand puts together an awesome julbord, especially for company retreats.**
+  **For the winter film, the immediate focus was obvious: Christmas. TanumStrand puts together an awesome julbord, especially for company retreats.**
 
 section5_text: |
   But in terms of a more subtle theme used in the composition of the scenes, I played with the concept of “fire and ice.” Nearly every scene features cold meeting hot. From the sauna to the winter sea. On the cold patio, tucked near the fire with warm glögg in hand. 
 
-  In terms of music, I had a score specially created for the first three films, which conveyed the peacefulness of the place, along with a touch of melancholy and tingling crescendo. For the Winter film, I contacted the composer to see if he could give the same score a Christmas-y feeling. He delivered with jingle bells and choir voices galore.
+  For the music, I had a score specially created for the first three films, which conveyed the peacefulness of the place, along with a touch of melancholy and a tingling crescendo. When it came time for winter film, I contacted the composer to see if he could give the same score a Christmas-y feeling. He delivered with jingle bells and choir voices galore.
 
 section5_images:
   - alt: "A lorem ipsum image"

@@ -18,20 +18,22 @@ background-image_720: "hero_720.jpg"
 background-image_color: "#49B276"
 
 ingress: |
-  Matbaren (or “The Food Bar”) is the ideal alternative for grocery stores across Sweden that want to offer their customers higher quality “fast food.” They have been developing various food concepts to offer store clerks and their customers, and each time they come out with a new one, they turn to us for digital promotion. 
+  Matbaren (“The Food Bar”) supplies grocery stores across Sweden with bright buffet carts, so customers can assemble their own perfect to-go meal in a snap. 
+  
+  They have come up with several different buffet concepts, from the classic salad bar to haute cuisine. 
 
 image1_1440: "process1_1440.jpg"
 image1_720: "process1_720.jpg"
 image1_alt: "Process"
 
 section2: |
-  Matbaren came to us recently with an idea they had about placing their food carts in gyms and stocking them with various healthy foods suited to fitness and nutrition goals. This time they asked if we could do more than just a website, but rather create an entire brand concept for this food-in-gyms idea, from coming up with a name and tagline to devising its graphic toolkit to handling social media. 
+  One day Matbaren came to us with an idea about placing their buffet carts in gyms and sport facilities. These would be stocked with extra healthy food suited to fitness and nutrition goals. 
 
-  Our answer was a hearty&nbsp;yes. 
+They asked us to come up with a brand concept from the ground up, from a name and tagline to a graphic toolkit. And of course, a website and everything on it.
 
 section3: |
   ## Branding, go!
-  ### When it came to thinking of a name, we searched for a single word that would combine the values of both exercise and food. It needed to be memorable and show a kinship with Matbaren’s other concepts.
+  ### In devising a name, we searched for a single word that would combine the values of both exercise and food. It needed to be memorable and show a kinship with Matbaren’s other concepts.
 
   We came up with the name Målbaren, which is a play on words in Swedish, as mål means both “meal” and “goal.” The tagline, “för målmedvetna människor” means both “for determined people” and “for food conscious people.” 
 
@@ -51,12 +53,12 @@ image3_1440: "colors_1440.jpg"
 image3_alt: "Målbaren color scheme"
 
 section5: |
-  The color palette needed to draw inspiration from the work-out world as well as look good on the web next to food images (we weren’t feeling neon, for example). I settled on this green as a primary color, as it has an energizing blue tone to it. 
+  The color palette needed to draw inspiration from the workout world as well as look good on the web next to food images (we weren’t feeling neon, for example). I settled on this green as a primary color, as it has an energizing blue tone to it. 
 
 
 section6: |
-  For the typeface in the logo, I wanted something with power and energy in it, and with an anatomical feel if I could find it. I decided quite quickly it should be in italic, which gives the impression of forward-moving speed. And in bold too, for all the obvious reasons. 
-  Panton Italic was ideal. If you look closely at the hairline creases in the M, A, and N it looks somewhat like flexed muscles. 
+  For the typeface in the logo, I wanted something with power and energy, and with an anatomical feel if I could find it. I decided quite quickly it should be in italic, which gives the impression of forward-moving speed. And in bold too, for all the obvious reasons. 
+  Panton Italic was the answer. If you look closely at the hairline creases in the M, A, and N it looks somewhat like flexed muscles. 
 
 image4_2880: "process1_2880.jpg"
 image4_1440: "process1_1440.jpg"
@@ -98,8 +100,7 @@ section10: |
   I wanted the buttons to have some energy. You’ll notice that they expand with a bit of a reverberating bounce at the end. It’s hardly noticeable but it makes a significant difference. It’s like a little punch.
 
 section11: |
-  Go ahead and poke around [målbaren.se](http://målbaren.se) to see if you can spot more. If subtle animations are your thing, I’m frequently experimenting on [CodePen](http://codepen.io/sandstedt). Come hang!
-
+  Poke around the site to see if you can spot more!  
 
 ---
 

@@ -2,7 +2,7 @@
 layout: curious/the-internet-by-hand
 type: curious-about
 title:  "The Internet by hand"
-subtitle: "You can create entire worlds without having to pick up a pen."
+subtitle: "An old art meets the new web"
 date:   2017-04-27 11:07:00 +0100
 categories: art, design, web
 slug: the-internet-by-hand
@@ -72,11 +72,6 @@ section7: |
 
 section8: |
   As the technology develops, we think this kind of animation will play a larger and larger role in web experiences. Granted it’s not the future, but it is a future of the web. Computer-generated imagery (CGI) will only continue to grow in importance. But as it does, hand-drawn imagery will provide a fresh alternative that delivers a staggering visceral impact when done well.
-
-  After all, drawings done by hand are as limitless as the human mind. When this form is truly joined to the near-limitlessness of the web, well…. some awesome things will be created, to put it lightly.
-
-cta: Get in touch
-
 
 ---
 

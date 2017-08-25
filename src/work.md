@@ -2,13 +2,12 @@
 layout: work
 title: Work
 pagetitle: |
-  # This is what we do
+  # What we make
 permalink: /work/
 slug: work
 background-color: "#f8f8f8"
-reel-text: Keep it REEL!
+reel-text: Showreel 2017
 reel-vimeo-id: 222507866
-reel-sub: Showreel 2017 
 
 background: |
   <video class="hero__background" poster="./../assets/work/hero-poster.jpg" loop autoplay muted playsinline>
@@ -18,4 +17,4 @@ background: |
 
 ---
 
-### Browse around and have a look. These are our featured projects. Give us a shout if you find anything you like.
+### Featured projects
