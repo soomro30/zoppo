@@ -90,7 +90,7 @@ section6_image1: "buu_sprite.jpg"
 section6_image2: "buu.jpg"
 
 section7: |
-  It was fun for us to return to our roots, in a way. Before Fully started doing HTML websites, we were famous for flash sites. We had so much fun with it. But there were a lot of sites that went totally overboard, and it was understandable that the Internet turned its back on animation for a period of years. But now it can be really powerful to introduce it in small and tasteful doses. It’s something fresh and unexpected, creating awesome results when deployed as a marketing tactic.  
+  It was fun for us to return to our roots, in a way. Before Fully started doing HTML websites, we were famous for flash sites. We had so much fun with it. But there were a lot of sites that went totally overboard, and it was understandable that the Internet turned its back on animation for a period of years. But now it can be really powerful to introduce it in small and tasteful doses. 
 
   Granted this project wasn’t a flash animation (we coded it with HTML/Javascript), but it very well could have been. I think we’ll see more and more animation on the web, programmed in all sorts of ways. The gif renaissance is proof that people are hungry for it again.
 
