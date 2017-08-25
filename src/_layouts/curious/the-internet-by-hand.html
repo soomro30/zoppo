@@ -222,9 +222,11 @@ layout: curious
 {% unless page.section8 == nil %}
 <div class="section section--8">
     {{ page.section8 | markdownify }}
+    {% unless page.cta == nil %}
     <p>
         <a href="{{site.baseurl}}/contact" class="button"><span>{{page.cta}}</span></a>
     </p>
+    {% endunless %}    
 </div>
 {% endunless %}
  

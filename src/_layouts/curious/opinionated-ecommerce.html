@@ -64,18 +64,12 @@ layout: curious
 </div>
 {% endunless %}
 
-
 {% unless page.section3 == nil %}
 <div class="section section--3 sectionspacing-small">
-    <div class="box box--right box--business">
+    <div class="box box--right box--business box--up">
         {{ page.section3 | markdownify }}
     </div>
-</div>
-{% endunless %}
-
-{% unless page.section4 == nil %}
-<div class="section section--4 sectionspacing-small">
-    <div class="imagegrid" data-coeswipe>
+    <div class="imagegrid" data-coeswipe style="margin-top: -4em; margin-right: 10vw">
         <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile" data-coeswipeimage>
             <div class="coe-swipe coe-swipe--1" style="background-image: url({{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{page.section4-image1}}"></div>
         </div>
@@ -87,11 +81,6 @@ layout: curious
         </div>
         <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile" data-coeswipeimage>
             <div class="coe-swipe coe-swipe--4" style="background-image: url({{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{page.section4-image4}}"></div>
-        </div>
-    </div>
-    <div style="margin-top: -5em; position: relative; z-index: 1; margin-left: 5%">
-        <div class="box box--people" style="max-width: 33em;">
-            {{ page.section4 | markdownify }}
         </div>
     </div>
 </div>
