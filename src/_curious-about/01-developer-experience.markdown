@@ -146,11 +146,6 @@ section6: |
 
   Like learning to cut vegetables properly, at first you have to unlearn how you’ve been cutting vegetables your whole life and the new techniques feel heavy and unnecessary. But once you master them, once they become second-nature, your speed and stamina increases and your creativity can be fully unleashed. 
 
-section6_2: |
-  ## That’s what we’re aiming for, after all: mastery.
-  ## Muahaha.
-
-
 ---
 
 A term that has been gaining popularity in the past few years is “developer experience.” It’s like “user experience” but for APIs. Meaning how easy it is for a developer to navigate a specific coding platform.
