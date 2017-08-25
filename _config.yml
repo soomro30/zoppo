@@ -20,7 +20,7 @@ newsflash: |
   We got a new name, a new logo and a new way of announcing news flashes.
 
 # newsflash_buttontext: Check it out
-# newsflash_buttonurl: /work#reel
+newsflash_buttonurl: /work#reel
 
 # Papricaklubben
 case_highlight1_id: 5

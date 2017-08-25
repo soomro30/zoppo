@@ -7,12 +7,22 @@ excerpt: Fully Studios is a Swedish web and film studio specializing in motion o
     <nav class="navigation" id="startmenu">
         {% include menu.html %}
     </nav>
-    <div class="newsflash" data-videomodal>
+    {% unless site.newsflash_buttonurl == nil %}
+    <a class="newsflash button" data-videomodal href="{{site.newsflash_buttonurl}}">
+    {% else %}
+    <div class="newsflash button" data-videomodal>
+    {% endunless %}
+    <span>
         {{ site.newsflash | markdownify }}
         {% unless site.newsflash_buttontext == nil %}
-            <a href="{{ site.baseurl }}{{ site.newsflash_buttonurl }}" class="button"><span>{{ site.newsflash_buttontext }}</span></a>
+            <div class="button"><span>{{ site.newsflash_buttontext }}</span></div>
         {% endunless %}
+        </span>
+    {% unless site.newsflash_buttonurl == nil %}
+    </a>
+    {% else %}
     </div>
+    {% endunless %}
 </div>
 
 {% include cc.html %}
