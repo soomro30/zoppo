@@ -250,6 +250,7 @@ $bshadow: 3px; // the size of the shadow
 		span:after {
 			transform: scaleX(1);
 		}
+		a {color: $c-signal};
 	}
 	span {
 		position: relative;
@@ -268,6 +269,7 @@ $bshadow: 3px; // the size of the shadow
 			transition: transform .7s $easeout;
 		}
 	}
+	a {color: inherit;}
 }
 
 .button + .link {
