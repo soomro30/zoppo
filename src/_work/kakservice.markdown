@@ -14,9 +14,9 @@ background-image_720: "hero_720.jpg"
 background-image_color: "#ff9fc5"
 
 ingress: |
-  Kakservice has been around since the 70’s. In their early days they sold cinnamon buns and newspapers to sailors in the Fjällbacka archipelago. Today their cookies go to schools, sport clubs and organisations, where they are then sold to help raise funds for special causes and programs.
-  
-  Kakservice came to us and wanted to make an instructional animated film that explains and supports the sales process.
+  Kakservice has been around since the 70’s. In their early days they sold cinnamon buns and newspapers to sailors in the Fjällbacka archipelago. Today they sell cookies and candy as part of fundraising packages. Schools, sport clubs and other associations can order Kakservice goodies and sell them to raise money for special events and programs. 
+
+  Kakservice came to us with the desire to make an instructional animated film that explains and supports the sales process.
 
 vimeo_IDs: 
   - "221850778"

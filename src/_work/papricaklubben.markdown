@@ -1,7 +1,7 @@
 ---
 layout: work/papricaklubben
 title:  "Paprica&shy;klubben"
-subtitle: "An interactive world for ICAs children club"
+subtitle: "An interactive world for ICA's children's club"
 author: "Robin Kollberg"
 author-email: robin.kollberg@fullystudios.se
 button-text: View case study
