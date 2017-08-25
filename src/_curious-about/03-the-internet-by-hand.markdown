@@ -2,7 +2,7 @@
 layout: curious/the-internet-by-hand
 type: curious-about
 title:  "The Internet by hand"
-subtitle: "You can create entire worlds without having to pick up a pen."
+subtitle: "An old art meets the new web"
 date:   2017-04-27 11:07:00 +0100
 categories: art, design, web
 slug: the-internet-by-hand
