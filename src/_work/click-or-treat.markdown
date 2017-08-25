@@ -1,7 +1,7 @@
 ---
 layout: work/click-or-treat
-title:  Click or Treat
-subtitle: "Mission: Scare Gothenburg"
+title:  Liseberg
+subtitle: "A Halloween click-or-treat"
 author: "Jonathan David Asp"
 author-email: jonathan.asp@fullystudios.se
 button-text: Get scared
