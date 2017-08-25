@@ -245,12 +245,15 @@ $bshadow: 3px; // the size of the shadow
 	font-size: 0.8em;
 	font-weight: 300;
 	transition: color 0.2s, border 0.2s;
+	&a, &:visited {
+		color: #ccc;
+	}
 	&:hover {
 		border: 2px solid $c-signal;
 		span:after {
 			transform: scaleX(1);
 		}
-		a {color: $c-signal};
+		&:visited, a {color: $c-signal};
 	}
 	span {
 		position: relative;

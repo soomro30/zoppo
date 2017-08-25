@@ -122,6 +122,9 @@
     &--bgbusiness   { background: $c-business };
     &--bgmetal      { background: $c-metal };
 
+    ul {
+        font-weight: normal;
+    }
 }
 
 @keyframes flying {

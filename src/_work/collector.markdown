@@ -20,17 +20,6 @@ background-image_color: "#2a153f"
 ingress: |
   Collector is a Scandinavian online-only bank, known for its refreshing digital-first approach to finance. They are continuously growing, and wanted to showcase their stellar numbers from 2016.
 
-videos: 
-  - "https://www.youtube.com/embed/oVzgmvZ8DdY?rel=0&amp;showinfo=0"
-
-frames:
-  - "frame-1.jpg"
-  - "frame-2.jpg"
-  - "frame-3.jpg"
-  - "frame-4.jpg"
-  - "frame-5.jpg"
-  - "frame-6.jpg"
-
 section1: |
   Collector tasked our friends at DDB with creating a campaign page that presented their 2016 Financial Report in an understandable and compelling way. They came up with inspired idea of bringing in a famous Swedish podcaster, Alexander Pärleros. 
 
@@ -64,8 +53,8 @@ section4: |
   We also made two infographic short films to illustrate Collector’s impressive business success stories from last year. They are all about banking services, which can easily be snooze-inducing. So in the translation to movies, we aimed to make them brisk, inspiring stories. With a hint of comedy too.
 
 vimeo_IDs: 
-  - "221850778"
-  - "221850778"
+  - "209600649"
+  - "209393919"
 
 frames:
   - alt: "Screenshot from Collector Årsredovisning 2016 case films"
@@ -95,11 +84,14 @@ frames:
 section5: |
   ### When it came to the design of the web page, we put a lot of power in the hands of the user. They could make their own choice about how much information they wanted to choose about a topic by using the toggle-down sections. Or they could take a passive approach: we wrapped the Vimeo API in a playlist function so the films would play in a continuous sequence, Netflix-binging style. 
 
-  #### Overall, this site bears many of the genetic markers of a Fully Studios production:
+  ##### Overall, this site bears many of the genetic markers of a Fully Studios production:
 
   * Subtle use of motion graphics throughout, typically triggered by hovers. 
   * A simple, vibrant user interface 
   * A complex technical underbelly (the video sequencing took a lot of elbow grease to become so seamless, for instance).   
+
+section5-image_medium: site-screens_1440@1x.jpg
+section5-image_large: site-screens_2880@2x.jpg
 
 section6: |
   We’re quite pleased with the way this project turned out, and about what it means for us. Last year we set a goal to be a half web, half film studio. Judging by the extent of in-house talent that generated the art, film and code on this campaign page, it looks like we’ve made it. And in good time too! 

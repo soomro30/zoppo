@@ -33,7 +33,7 @@ layout: case
         {% unless page.section3-image_large == nil %}
             <img class="image"
                 alt="{{page.section3-image_alt}}"
-                width="1920" height="1080"
+                width="1440" height="960"
                 src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3-image_small }}" 
                 srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3-image_medium }} 1440w,
                         {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3-image_small }} 720w"
@@ -49,8 +49,20 @@ layout: case
 {% endunless %}
 
 {% unless page.section4 == nil %}
-<section class="sectionspacing">
+<section class="sectionspacing-small">
     {{ page.section4 | markdownify }}
+
+    {% unless page.vimeo_IDs == nil %}
+    <div class="imagegrid">
+    {% for video in page.vimeo_IDs %}
+        <div class="imagegrid__image imagegrid__image--two">
+            <div class="video">
+                <iframe src="https://player.vimeo.com/video/{{video}}" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    {% endunless %}
 
     {% unless page.frames == nil %}
     <div class="imagegrid">
@@ -65,27 +77,27 @@ layout: case
 {% endunless %}
 
 {% unless page.section5 == nil %}
-    <div class="sectionspacing-small">
+    <div class="sectionspacing-small box">
         {{ page.section5 | markdownify }}
-        
-
     </div>
 {% endunless %}
 
-{% unless page.section5_videos == nil %}
-    <section class="imagegrid">
-        {% for videoid in page.section5_videos %}
-        <div class="imagegrid__image imagegrid__image--two">
-            <div class="video">
-                <iframe src="https://player.vimeo.com/video/{{videoid}}" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div>
-        </div>
-        {% endfor %}
+{% unless page.section5-image_medium == nil %}
+    <section class="sectionspacing-small">
+        <img class="image"
+            alt="{{page.section5-image_alt}}"
+            width="1440" height="960"
+            src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5-image_small }}" 
+            srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5-image_medium }} 1440w,
+                    {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5-image_small }} 720w"
+            sizes="(min-width: 580px) 50vw,
+                    100vw">
+
     </section>
 {% endunless %}
 
 {% unless page.section6 == nil %}
-    <div class="sectionspacing-small box box--center">
+    <div class="sectionspacing-small box box--people box--center">
         {{ page.section6 | markdownify }}
         <p>
             <a class="metabutton" href="mailto:{{page.author-email}}">
