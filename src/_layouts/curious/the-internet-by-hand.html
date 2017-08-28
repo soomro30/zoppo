@@ -163,31 +163,21 @@ layout: curious
 
 {% unless page.section5 == nil %}
 <div class="section section--5">
-    {{ page.section5 | markdownify }}
-    
-    <div class="imagegrid">
-        <div class="imagegrid__image imagegrid__image--two">
-            <img class="image"
-                alt="{{page.section5-image1_alt}}"
-                width="1440" height="643"
-                src="/assets/curious-about/{{page.slug}}/{{page.section5-image1_medium}}" 
-                srcset="/assets/curious-about/{{page.slug}}/{{page.section5-image1_medium}} 14400w,
-                        /assets/curious-about/{{page.slug}}/{{page.section5-image1_small}} 720w"
-                sizes="(min-width: 580px) 50vw,
-                        100vw">
-        </div>
-        <div class="imagegrid__image imagegrid__image--two">
-            <img class="image"
-                alt="{{page.section5-image2_alt}}"
-                width="1440" height="643"
-                src="/assets/curious-about/{{page.slug}}/{{page.section5-image2_medium}}" 
-                srcset="/assets/curious-about/{{page.slug}}/{{page.section5-image2_medium}} 14400w,
-                        /assets/curious-about/{{page.slug}}/{{page.section5-image2_small}} 720w"
-                sizes="(min-width: 580px) 50vw,
-                        100vw">
-        </div>
+    <div class="sectionspacing-small">
+        {{ page.section5 | markdownify }}
+    </div>
+    <div style="position: relative">
+    <video class="inlinevideo"
+        data-videoplayer 
+        autoplay muted playsinline loop>
+        <source src="{{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{ page.section5_video }}">
+    </video>
+    <div class="flexcenter" style="position: absolute; bottom: 2em; right: 2em; left: 2em">
+        <a href="{{page.section5_link}}" class="button"><span>Visit site</span></a>
+    </div>
     </div>
 </div>
+
 {% endunless %}
 
 {% unless page.section6 == nil %}
@@ -202,9 +192,7 @@ layout: curious
         }
     </style>
     <div id="{{page.slug}}_bg" class="background-image background-image--largepadding flexcenter">
-        
-            {{ page.section6 | markdownify }}
-      
+        {{ page.section6 | markdownify }}
     </div>
 {% endunless %}
 
@@ -214,10 +202,18 @@ layout: curious
 </div>
 {% endunless %}
 
-<div style="padding: 4em; color: red">
-    <h2>[example of hand drawn thing →  javascript animation]</h2>
+<div class="section grid">
+    <video class="inlinevideo grid__column1-2"
+        data-videoplayer 
+        autoplay muted playsinline loop>
+        <source src="{{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{ page.section8_video1 }}">
+    </video>
+    <video class="inlinevideo grid__column2-2"
+        data-videoplayer 
+        autoplay muted playsinline loop>
+        <source src="{{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{ page.section8_video2 }}">
+    </video>
 </div>
-
 
 {% unless page.section8 == nil %}
 <div class="section section--8">
