@@ -99,10 +99,12 @@
     }
 
     &__boxunder {
-        grid-column: 2 / span 10;
+        grid-column: 1 / -1;
+        margin-left: 10px;
+        margin-right: 10px;
         grid-row: 7 / span 4; 
         @include media-query($on-laptop) {
-            grid-column: 2 / span 10;
+            grid-column: 2 / -2;
             grid-row: 7 / span 8;
         }
     }
@@ -353,12 +355,12 @@
 
 .imageline {
     background-color: $c-dark;
-    display: flex;
-    flex-wrap: wrap;
     overflow: auto;
     max-width: 1300px;
     padding: $s-small*0.5;
     @include media-query($on-palm) {
+        display: flex;
+        flex-wrap: wrap;
         padding: $s-small;
     }
 

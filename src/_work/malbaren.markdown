@@ -99,8 +99,7 @@ section10: |
   <span class="custom-button malbaren-button">a button?<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></span><br>
   I wanted the buttons to have some energy. You’ll notice that they expand with a bit of a reverberating bounce at the end. It’s hardly noticeable but it makes a significant difference. It’s like a little punch.
 
-section11: |
-  Poke around the site to see if you can spot more!  
+  [Poke around](http://malbaren.se) the site to see if you can spot more!  
 
 ---
 

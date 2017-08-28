@@ -135,28 +135,34 @@ layout: curious
 {% unless page.section8 == nil %}
 <div class="section section--8">
     {{ page.section8 | markdownify }}
+    {% unless page.cta == nil %}
     <p>
         <a href="{{site.baseurl}}/contact" class="button"><span>{{page.cta}}</span></a>
     </p>
+    {% endunless %}
 </div>
 {% endunless %}
-
 
 {% unless page.section7 == nil %}
 <div class="section section--7 sectionspacing-small grid grid--space">
     {% unless page.section7-image_2880 == nil %}
         <style>
             .section7-{{ page.slug }} {
-                background-image: url({{site.baseurl}}/assets/work/{{work1.slug}}/{{ page.section7-image_1440 }});
+                background-image: url({{site.baseurl}}/assets/curious-about/{{page.slug}}/{{ page.section7-image_720 }});
             }
-            @media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
+            @media (min-width: 540px) {
                 .section7-{{ page.slug }} {
-                    background-image: url({{site.baseurl}}/assets/work/{{work1.slug}}/{{ page.section7-image_2880 }});
+                    background-image: url({{site.baseurl}}/assets/curious-about/{{page.slug}}/{{ page.section7-image_1440 }});
+                }
+            }
+            @media (min-width: 1600px), (min-width: 1000px) and (min-resolution: 2dppx) {
+                .section7-{{ page.slug }} {
+                    background-image: url({{site.baseurl}}/assets/curious-about/{{page.slug}}/{{ page.section7-image_2880 }});
                 }
             }
         </style>
     {% endunless %}
-    <div class="background-image grid__offsetcolumn1-2 section7-{{ page.slug }}" style="background-image: url({{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{ page.background-image_2880 }})"></div>
+    <div class="background-image grid__offsetcolumn1-2 section7-{{ page.slug }}"></div>
     <div class="grid__offsetcolumn2-2 bring-to-front">
         <div class="box box--right box--up">
             {{ page.section7 | markdownify }}

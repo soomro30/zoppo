@@ -68,7 +68,7 @@ svg { max-width: 100%}
 // Video
 .video {
     position: relative;
-    padding-bottom: 55.85%; /* 16:9 */
+    padding-bottom: 55.95%; /* 16:9 */
     height: 0;
 }
 .video iframe, .video .video__element {
@@ -221,7 +221,7 @@ a {
         color: $c-signal;
     }
 }
-p > a:not(.button, .link, .metabutton, .custom-button), h2 > a {
+p > a:not(.button):not(.link):not(.metabutton):not(.custom-button), h2 > a {
     position: relative;
     text-shadow: 1px 1px 0 $c-white, 2px 1px 0 $c-white, -1px 1px 0 $c-white, -2px 1px 0 $c-white, 1px -1px 0 $c-white, 2px -1px 0 $c-white, -1px -1px 0 $c-white, -2px -1px 0 $c-white;
     z-index: 1;

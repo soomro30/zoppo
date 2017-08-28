@@ -11,7 +11,7 @@ project: Film production
 background-image_2880: "hero@2x.jpg"
 background-image_1440: "hero.jpg"
 background-image_720: "hero_720.jpg"
-background-image_color: "#7e93b0"
+background-image_color: "#5E84C3"
 author: Joakim Hanner
 author-email: joakim.hanner@fullystudios.se
 
