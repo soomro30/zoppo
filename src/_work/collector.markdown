@@ -18,8 +18,7 @@ background-image_1440: "hero.jpg"
 background-image_720: "hero_720.jpg"
 background-image_color: "#AC77BB"
 
-casetop-bg_640: casetop_bg.jpg
-casetop-bg_1440: casetop_bg@2x.jpg
+casetop-bgcolor: "#29173D"
 casetop-image1_small: casetop_image1.jpg
 casetop-image1_medium: casetop_image1@2x.jpg
 casetop-image2_small: casetop_image2.jpg

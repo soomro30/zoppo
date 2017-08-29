@@ -82,9 +82,9 @@ layout: default
 				}
 			</style>
 		{% endunless %}
-		<div data-scroll class="{% unless page.casetop-video == nil %}ingress__videowrapper{% else %}ingress__images{% endunless %} background-image{% unless page.casetop-bg_1440 == nil %} background-image{% endunless %}" id="casetop_{{ page.slug }}" {% unless page.background-image_color == nil %} style="background-color: {{page.background-image_color}}"{% endunless %}>
+		<div data-scroll class="{% unless page.casetop-video == nil %}ingress__videowrapper{% else %}ingress__images{% endunless %} background-image{% unless page.casetop-bg_1440 == nil %} background-image{% endunless %}" id="casetop_{{ page.slug }}" {% unless page.casetop-bgcolor == nil %} style="background-color: {{page.casetop-bgcolor}}"{% endunless %}>
 			{% unless page.casetop-video == nil %}
-			<video class="ingress__video" loop autoplay muted playsinline>
+			<video class="ingress__video" loop autoplay muted playsinline style="background-color: #ffffff">
 				<source src="{{ site.baseurl }}/assets/work/{{page.slug}}/{{ page.casetop-video }}">
 			</video>
 			{% endunless %}

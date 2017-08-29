@@ -13,8 +13,7 @@ background-image_1440: "hero.jpg"
 background-image_720: "hero_720.jpg"
 background-image_color: "#ff9fc5"
 
-casetop-bg_640: casetop_bg.jpg
-casetop-bg_1440: casetop_bg@2x.jpg
+casetop-bgcolor: "#CF7D9E"
 casetop-video: casetop.mp4
 
 ingress: |
