@@ -161,21 +161,21 @@
 }
 
 // Work layout
-.boxtext--simpleframe.work-ingress {
-    z-index: 4;
-    grid-column: 1 / -1;
-    grid-row: 1 / span 4;
-    @include media-query($on-laptop) {
-        grid-column: 1 / span 5;
-        grid-row: 1 / span 6;
-    }
-}
+// .boxtext--simpleframe.work-ingress {
+//     z-index: 4;
+//     grid-column: 1 / -1;
+//     grid-row: 1 / span 4;
+//     @include media-query($on-laptop) {
+//         grid-column: 1 / span 5;
+//         grid-row: 1 / span 6;
+//     }
+// }
 .work1-image {
     grid-column: 1 / -1;
     grid-row: 9 / span 11;
     @include media-query($on-laptop) {
         grid-column: 1 / span 8;
-        grid-row: 7 / span 15;
+        grid-row: 3 / span 15;
     }
 }
 .work1-text {
@@ -184,7 +184,7 @@
     z-index: 1;
     @include media-query($on-laptop) {
         grid-column: 8 / span 5;
-        grid-row: 5 / span 10;
+        grid-row: 1 / span 10;
     }
 }
 
@@ -193,7 +193,6 @@
     // margin-top: $s-small*2;
     @include media-query($on-laptop) {
         position: relative;
-        padding-top: $s-small*2;
         margin-top: $s-small*4;
         &__text {
             // SAVE to when we add a video player that can hide the text field
