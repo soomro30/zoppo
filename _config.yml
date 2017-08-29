@@ -32,7 +32,7 @@ case_highlight2_id: 1
 case_highlight3_id: 2
 
 # Links
-works: "/works"
+works: "/work"
 about: "/about"
 
 # Custom post types 
