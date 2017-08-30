@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign items = (site.curious-about | sort: 'date') | reverse %}
+{% assign items = site.curious-about | sort: 'date' | reverse %}
 {% assign root = 'js/' %}
     
 {% for curiosity in items limit:1 %}
