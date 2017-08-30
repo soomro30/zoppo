@@ -37,7 +37,7 @@ Update gems:
 3. Inside the directory, run: 
 - `nvm use 7.2.1`
 - if you dont have node 7.2.1 run `nvm install 7.2.1`
-- `npm install -g webpack`
+- if you dont have webpack run `npm install -g webpack`
 - if you dont have bundler run `gem install bundler` (see above)
 - `npm install`
 - `bundle install`
@@ -62,6 +62,9 @@ export LANG=sv_SE.UTF-8
 5. Restart you terminal
 4. run `locale` and confirm the changes. 
 
+Error: ```jekyll 3.5.0 | Error:  undefined method `registers' for nil:NilClass```
+1. gem install jekyll -v 3.4.3
+2. bundle update jekyll
 **jekyll**
 
 As this is just a Jekyll project, you can use any of the commands listed in their [docs](http://jekyllrb.com/docs/usage/)
