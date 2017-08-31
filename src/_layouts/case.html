@@ -60,12 +60,12 @@ layout: default
 			{{ page.ingress | markdownify }}
 
 			{% if page.author != nil and page.author2 != nil %}
-			<p><span class="metabutton">
+			<p class="button__wrap"><span class="metabutton">
 				Authors: <span><a href="mailto:{{page.author-email}}" target="_blank">{{page.author}}</a></span> & <span><a href="mailto:{{page.author2-email}}">{{page.author2}}</a></span>
 			</span></p>
 			{% endif %}
 			{% if page.author != nil and page.author2 == nil %}
-			<p><a class="metabutton" href="mailto:{{page.author-email}}">
+			<p class="button__wrap"><a class="metabutton" href="mailto:{{page.author-email}}">
 				Author: <span>{{page.author}}</span>
 			</a></p>
 			{% endif %}
