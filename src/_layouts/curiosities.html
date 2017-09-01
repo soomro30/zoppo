@@ -118,10 +118,12 @@ layout: default
     
     {% for curiosity in items %}
         <div class="boxgrid__box">
-            <div class="image-loader"{% unless curiosity.background-image_color == nil %} style="background-color: {{ curiosity.background-image_color }}" {% endunless %}> <!--Change this color to an average color from the image-->
-                {% unless curiosity.background-image_720 == nil %}
-                    <img src="{{site.baseurl}}/assets/curious-about/{{curiosity.slug}}/{{curiosity.background-image_720}}" alt="{{curiosity.title}}">	
-                {% endunless %}
+            <div>
+                <div {% unless curiosity.background-image_color == nil %} style="background-color: {{ curiosity.background-image_color }}" {% endunless %}> <!--Change this color to an average color from the image-->
+                    {% unless curiosity.background-image_720 == nil %}
+                        <img src="{{site.baseurl}}/assets/curious-about/{{curiosity.slug}}/{{curiosity.background-image_720}}" alt="{{curiosity.title}}">	
+                    {% endunless %}
+                </div>
             </div>
             <figcaption class="boxgrid__caption">
                 <div>

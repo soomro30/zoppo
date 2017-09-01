@@ -34,10 +34,9 @@ $bgMqMedium: 800px;
     &__box {
         
         width: 100%;
-        height: auto;
         position: relative;
         margin-top: $s-small;
-        display: flex;
+        // display: flex;
         flex: 1 0 100%;
         margin-left: auto;
         margin-right: auto;
@@ -89,7 +88,6 @@ $bgMqMedium: 800px;
         display: inline-block;
         min-width: 80%;
         padding: $s-small 0;
-        height: auto;
         h3, p {
             padding-left: 0;
         }

@@ -28,12 +28,12 @@
     }
     &__images {
         height: 0;
-        padding-top: 100%;
+        padding-top: 100vw; // make it a square
         position: relative;
         text-align: center;
         perspective: 2000px;
         @include media-query($on-laptop) {
-            padding-top: 36.5%; // 36.5% in total when the image container is 40%
+            padding-top: 36.5vw; // 36.5% in total when the image container is 40% - set to vw so MS Edge understands what we mean
             flex: 1 0 40%;
             max-width: 40%;
         }
