@@ -72,6 +72,7 @@
     flex-direction: column;
 }
 .bring-to-front {
+    position: relative;
     z-index: 1;
 }
 // Images / backgrounds

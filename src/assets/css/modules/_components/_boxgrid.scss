@@ -34,6 +34,7 @@ $bgMqMedium: 800px;
     &__box {
         
         width: 100%;
+        height: auto;
         position: relative;
         margin-top: $s-small;
         display: flex;
@@ -80,17 +81,15 @@ $bgMqMedium: 800px;
             // height: auto;
         }
     }
-
+    
     &__caption {
         flex: 1 0 0%;
-    }
-
-    &__caption {
         background: $c-white;
         color: $c-dark;
         display: inline-block;
         min-width: 80%;
         padding: $s-small 0;
+        height: auto;
         h3, p {
             padding-left: 0;
         }
