@@ -23,12 +23,10 @@ casetop-bg_1440: casetop_1440.jpg
 casetop-video: casetop.mp4
 
 ingress: |
-  One day I got a call from DDB, an agency we collaborate with quite regularly. They usually get in contact when they need an interactive banner or campaign site, as we’re well known around town for our web animation savvy.
-
-  This time they wanted to enlist our help with a very specific mission: to scare Gothenburg.
+  Liseberg is Gothenburg’s beloved amusement park. It’s typically a place of cotton-candy colors, bunnies and bowties… until October rolls around. Then it’s zombies and crows and gore chambers galore.
 
 section1: |
-  Their aim was to pull off a digital marketing stunt that would drive foot traffic to the Halloween festivities at Liseberg. To do this, they were toying with the question how to make a traditional “boo!” kind of scare go digital.
+    They began with the Halloween thing more recently, and wanted to pull off a digital marketing stunt that would pique public interest and drive more foot traffic to the park. To do this, they were toying with the question how to make a traditional “boo!” kind of scare go digital.
 
 image1_2880: "liseberg-halloween@2x.jpg"
 image1_1440: "liseberg-halloween.jpg"
@@ -37,9 +35,9 @@ image1_720: "liseberg-halloween_720.jpg"
 section2: |
   ## The idea
   
-  ### Jonas and I went over to DDB’s office the next day to flesh out the idea, which was this: to scare the lights out of people when they’re reading (what they think is) a normal web article and have a terrifying face/scream pop up out of nowhere. 
+  ### Together with DDB, we began to flesh out an idea: to scare the lights out of people when they’re reading (what they think is) a normal web article and have a terrifying face/scream pop up out of nowhere. 
 
-  The idea was brilliant, and to do it any justice the execution had to be perfect. We completely cleared our schedules to make this thing come aaaalive. 
+  To do the idea any justice, the execution had to be perfect. We completely cleared our schedules to make this thing come aaaalive. 
   
   In the process, we learned that scaring someone in the digital realm shares the same principles as in the real world. 
 
@@ -88,11 +86,6 @@ section6: |
 
 section6_image1: "buu_sprite.jpg"
 section6_image2: "buu.jpg"
-
-section7: |
-  It was fun for us to return to our roots, in a way. Before Fully started doing HTML websites, we were famous for flash sites. We had so much fun with it. But there were a lot of sites that went totally overboard, and it was understandable that the Internet turned its back on animation for a period of years. But now it can be really powerful to introduce it in small and tasteful doses. 
-
-  Granted this project wasn’t a flash animation (we coded it with HTML/Javascript), but it very well could have been. I think we’ll see more and more animation on the web, programmed in all sorts of ways. The gif renaissance is proof that people are hungry for it again.
 
 section7_image1_large: "halloween_laptop@2x.jpg"
 section7_image1_medium: "halloween_laptop.jpg"
