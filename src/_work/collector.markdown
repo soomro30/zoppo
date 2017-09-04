@@ -62,8 +62,8 @@ section4: |
   We also made two infographic short films to illustrate Collector’s impressive business success stories from last year. They are all about banking services, which can easily be snooze-inducing. So in the translation to movies, we aimed to make them brisk, inspiring stories. With a hint of comedy too.
 
 vimeo_IDs: 
-  - "209600649"
-  - "209393919"
+  - "232305280"
+  - "232305583"
 
 frames:
   - alt: "Screenshot from Collector Årsredovisning 2016 case films"
@@ -91,7 +91,8 @@ frames:
     large: "frame6@2x.jpg" 
 
 section5: |
-  ### When it came to the design of the web page, we put a lot of power in the hands of the user. They could make their own choice about how much information they wanted to choose about a topic by using the toggle-down sections. Or they could take a passive approach: we wrapped the Vimeo API in a playlist function so the films would play in a continuous sequence, Netflix-binging style. 
+  ### When it came to the design of the web page, we put a lot of power in the hands of the user.
+  They could make their own choice about how much information they wanted to choose about a topic by using the toggle-down sections. Or they could take a passive approach: we wrapped the Vimeo API in a playlist function so the films would play in a continuous sequence, Netflix-binging style. 
 
   ##### Overall, this site bears many of the genetic markers of a Fully Studios production:
 

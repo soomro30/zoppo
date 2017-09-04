@@ -31,7 +31,6 @@
         padding-top: 100vw; // make it a square
         position: relative;
         text-align: center;
-        perspective: 2000px;
         @include media-query($on-laptop) {
             padding-top: 36.5vw; // 36.5% in total when the image container is 40% - set to vw so MS Edge understands what we mean
             flex: 1 0 40%;
@@ -43,7 +42,6 @@
         padding: $s-small;
         position: relative;
         text-align: center;
-        perspective: 2000px;
         @include media-query($on-laptop) {
             flex: 1 0 40%;
             max-width: 40%;
@@ -53,17 +51,17 @@
         
         &.invisible {
             .ingress__video, .ingress__image {
-                transform: translateY(100px) rotate3d(1, -1, 1, 10deg);
+                transform: translateY(100px) rotateZ(10deg);
             }
         }
         &.visible {
             .ingress__video, .ingress__image {
-                transform: translateY(0) rotate3d(1, -1, 1, 0);
+                transform: translateY(0) rotateZ(0);
             }
         }
         &:hover {
             .ingress__video {
-                transform: translateY(20px) rotate3d(1, -1, 1, 2deg);
+                transform: translateY(20px) rotateZ(2deg);
             }
         }
         .ingress__button {
@@ -95,7 +93,7 @@
             transition: transform 1s $easeout;
         }
         &:hover {
-            transform: translateY(5px) scale(1.05) rotate3d(1, -1, 1, 2deg) !important;
+            transform: translateY(5px) scale(1.05) rotateZ(2deg) !important;
         }
     }
     &__video {

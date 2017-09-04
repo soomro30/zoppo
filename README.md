@@ -10,12 +10,14 @@ This starter uses webpack, react, and jekyll.
 
 It also includes a multi threaded rake task to sync webpack and jekyll.
 
+
 ## System Preparation
 Only if you haven't installed Jekyll, node or Gulp installed on your machine:
 
 1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
 2. [NodeJS](http://nodejs.org) - use the installer. 7.2.1 - nvm
 4. [Bundle](http://bundler.io/) -  `gem install bundler`
+
 
 ## Local Installation
 You may have to update ruby and all your local gems if they are to old:
@@ -47,6 +49,7 @@ Update gems:
 To run in dev mode: `rake start`
 To build: `rake b`
 
+
 #### Error?
 If nothing happens after 20s when you run `rake start`, try run `rake b`. If you get following error:
 ```jekyll 3.4.3 | Error:  "\xE6" on US-ASCI```
@@ -65,6 +68,11 @@ export LANG=sv_SE.UTF-8
 Error: ```jekyll 3.5.0 | Error:  undefined method `registers' for nil:NilClass```
 1. gem install jekyll -v 3.5.2
 2. bundle update jekyll
+
+
+## Tips and tricks
+* Breake browser cache: simple add this string appending to a file url: `?{{site.time | date: '%s%N'}}` eg `<script src="{{ boundle_src | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>`
+
 
 **jekyll**
 
