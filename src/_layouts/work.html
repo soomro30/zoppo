@@ -37,13 +37,15 @@ layout: page
 </div>
 
 <section class="reelgrid" id="reel">
+
     <div class="boxtext reelgrid__text">
         <h2>{{page.reel-text}}</h2>
         <p>{{page.reel-sub}}</p>
     </div>
-
-    <div class="reelgrid__video video">
-        <iframe src="https://player.vimeo.com/video/{{page.reel-vimeo-id}}" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <div class="reelgrid__videowrap">
+        <div class="reelgrid__video video">
+            <iframe src="https://player.vimeo.com/video/{{page.reel-vimeo-id}}" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
     </div>
 
 </section>
