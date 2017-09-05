@@ -73,8 +73,6 @@ Error: ```jekyll 3.5.0 | Error:  undefined method `registers' for nil:NilClass``
 ## Tips and tricks
 * Breake browser cache: simple add this string appending to a file url: `?{{site.time | date: '%s%N'}}` eg `<script src="{{ boundle_src | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>`
 
-* Test on a local IP adress: open Raketfile and uncomment the `bundle exec jekyll s -w --host=192.168.1.10` and add your IP adress.
-
 
 **jekyll**
 
