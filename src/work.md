@@ -19,6 +19,8 @@ background: |
     <img src="./../assets/work/hero-poster.jpg">
   </video>
 
+excerpt: What we make - featured projects
+
 ---
 
 ### Featured projects

@@ -7,4 +7,4 @@ background-color: "#ffde7f"
 redirect_from: /curious-about/
 ---
 
-What we at Fully has is curiouse about right now.
+What we at Fully are curious about right now.
