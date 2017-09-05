@@ -13,7 +13,7 @@
 			{% continue %}
 		{% endif %}
 
-        <div class="boxgrid__box">
+        <a href="{{work.url | prepend: site.baseurl}}" class="boxgrid__box">
             
             <div class="boxgrid__image" style="background-color: {{work.background-color}}"> <!--Change this color to an average color from the image-->
                 {% unless work.background-image_720 == nil %}
@@ -26,9 +26,9 @@
                     <h3>{{work.title}}</h3>
                     <p>{{work.subtitle}}</p>
                 </div>
-                <a href="{{work.url | prepend: site.baseurl}}" class="button"><span>{{work.button-text}}</span></a>
+                <div class="button"><span>{{work.button-text}}</span></div>
             </div>
-        </div>
+        </a>
         
     {% endfor %}
 
