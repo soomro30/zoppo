@@ -48,7 +48,7 @@ class VideoPlayer {
 
     modalTrigger (el) {
         this.modalIsTriggered = true;
-        let loop = () => {
+        const loop = () => {
             if (el.currentTime < this.triggerTime) {
                 window.requestAnimationFrame(loop);
                 // console.log('el.currentTime: ' + el.currentTime);
