@@ -71,5 +71,5 @@ section6: |
 
 ---
 
-ICA, the largest retailer in the Nordics and essentially shorthand for “grocery store” in Swedish, has always had a strong health focus.
+Recently ICA Kvantum has been increasing its efforts in the education space, trying to get kids to care about fresh-grown foods. And in particular, to know more about the concept of eating fruits and vegetables according to the season.
 

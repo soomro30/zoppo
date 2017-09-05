@@ -35,6 +35,7 @@
     "webpack": "^1.13.2"
   },
   "dependencies": {
-    "scrolltrigger-classes": "^0.3.6"
+    "scrolltrigger-classes": "^0.3.6",
+    "sweet-scroll": "^2.2.1"
   }
 }

@@ -1,18 +1,26 @@
 import ComponentsRegister from './components/ComponentRegister';
-
-// Scroll reveal animations
-// Usage: add data-scroll on an html element to toggle the classes visible and invisible
+import SweetScroll from "sweet-scroll";
 import ScrollTrigger from 'scrolltrigger-classes';
-document.addEventListener('DOMContentLoaded', function(){
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Scroll reveal animations
+    // Usage: add data-scroll on an html element to toggle the classes visible and invisible
     var trigger = new ScrollTrigger({
         offset: {
             x: 0,
             y: 100
-          },
-          centerVertical: true,
-          once: true
+        },
+        centerVertical: true,
+        once: true
     });
-});
+    
+    // Activate SweetScroll
+    const sweetScroll = new SweetScroll({
+        trigger: "[data-scrollto]",
+        outputLog: true,
+    });
+    console.log(sweetScroll)
+}, false);
 
 // Branding
 console.log('%c                       \n     FULLY STUDIOS     \n                       ', 'background: #5f11e8; color: #fff; font-family: monospace; font-size: 40px;');
