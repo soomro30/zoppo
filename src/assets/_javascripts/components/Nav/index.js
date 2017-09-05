@@ -12,18 +12,16 @@ class Nav {
 			this._menuIsOpen ? this.closeMenu() : this.openMenu();
 		}, false);
 		this.logoAnimation = new LogoAnimation;
-		// Set interactive elements
 		
+		// Set invisible interactive elements and make them not tabbable
 		this.menuItems = document.querySelectorAll('#menu a');
 		this.setTabIndex(-1, this.menuItems);
 	}
 	
-	// Functionality
 	setTabIndex (index, items) {
 		for(var i = 0; i < items.length; i++) {
 			items[i].tabIndex = index;
 		}
-		console.log('set tab index', items);
 	}
 
 	openMenu () {

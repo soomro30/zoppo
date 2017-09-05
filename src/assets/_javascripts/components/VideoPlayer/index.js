@@ -16,12 +16,7 @@ class VideoPlayer {
     
     // Lissen for the video to start playing, and loop it when it ends
     setupEvents (el) {
-        console.log('setup events');
-        el.addEventListener('playing', evt => {
-            if (this.modalIsTriggered) return;
-            this.modalTrigger.call(this, el);
-            // console.log('start playing video');
-        });
+        el.addEventListener('timeupdate', this.modalTrigger.bind(this, el));
         el.addEventListener('ended', evt => {
             this.videoLoop(el);
         });
@@ -47,20 +42,30 @@ class VideoPlayer {
     }
 
     modalTrigger (el) {
-        this.modalIsTriggered = true;
-        const loop = () => {
-            if (el.currentTime < this.triggerTime) {
-                window.requestAnimationFrame(loop);
-                // console.log('el.currentTime: ' + el.currentTime);
-            } else {
-                if (this.modalIsOpened) return;
-                // console.log('el.currentTime: ' + el.currentTime);
-                // console.log('this.triggerTime: ' + this.triggerTime);
-                this.openModal(this.videoModal);
-            }
+        // console.log('playing video', el.currentTime);
+        if (this.modalIsTriggered) return;
+
+        if (el.currentTime < this.triggerTime) {
+            return;
+        } else {
+            this.modalIsTriggered = true;
+            this.openModal(this.videoModal);
+            // This is not working
+            // el.removeEventListener('timeupdate', this.modalTrigger);
         }
+        // const loop = () => {
+        //     if (el.currentTime < this.triggerTime) {
+        //         window.requestAnimationFrame(loop);
+        //         // console.log('el.currentTime: ' + el.currentTime);
+        //     } else {
+        //         if (this.modalIsOpened) return;
+        //         // console.log('el.currentTime: ' + el.currentTime);
+        //         // console.log('this.triggerTime: ' + this.triggerTime);
+        //         this.openModal(this.videoModal);
+        //     }
+        // }
         
-        window.requestAnimationFrame(loop);
+        // window.requestAnimationFrame(loop);
     }
 
 

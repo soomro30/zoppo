@@ -73,7 +73,7 @@ sass:
   style: compressed
 
 # live reload
-livereload: true
+livereload: true # remove on production
 reload_port: 5678
 
 # gems
