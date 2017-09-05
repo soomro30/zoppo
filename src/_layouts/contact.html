@@ -21,7 +21,7 @@ layout: page
             <figcaption class="boxgrid__caption">
                 <h3>{{ employee.name }}</h3>
                 <p>{{ employee.title }}</p>
-                <p>{% unless employee.email == nil %}Drop me a line at <a class="hyphenate" href="mailto:{{employee.email}}">{{employee.email}}</a>{% endunless %}{% unless employee.tel == nil %} or give me a call on <a href="tel:{{employee.tel}}">{{employee.tel}}</a>{% endunless %}</p> 
+                <p>{% unless employee.email == nil %}<a class="hyphenate" href="mailto:{{employee.email}}">{{employee.email}}</a>{% endunless %}{% unless employee.tel == nil %}<br><a href="tel:{{employee.tel}}">{{employee.tel}}</a>{% endunless %}</p> 
             </figcaption>
         </figure>
     {% endfor %}
