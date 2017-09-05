@@ -169,6 +169,9 @@ $bshadow: 3px; // the size of the shadow
 			justify-content: space-around;
 			padding: 12px;
 		}
+		&:focus {
+			z-index: 12;
+		}
 	}
 	&--icon {
 		span {

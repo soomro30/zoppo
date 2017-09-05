@@ -239,7 +239,10 @@ p > a:not(.button):not(.link):not(.metabutton):not(.custom-button), h2 > a {
         // transform-origin: top left;
         transition: transform .7s $easeout;
     }
-    &:hover:after {
+    &:focus {
+        outline: none;
+    }
+    &:hover:after, &:focus:after {
         transform: scaleX(1);
     }
 }

@@ -325,6 +325,11 @@ $grh: 5vh;
          top: 0;
          right: 0;
          z-index: 40;
+         transition: transform 0.2s $easeout;
+         &:focus {
+             transform: scale(1.2);
+             outline: none;
+         }
     }
     &__logoanim {
          width: calc(7em + 3vw);

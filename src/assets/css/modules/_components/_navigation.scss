@@ -94,10 +94,11 @@ $animTime: .3s;
             font-size: calc(1em + 2vh);
         }
         display: inline-block;
-        &:visited, &:hover {
+        &:visited, &:hover, &:focus {
             color: $c-white;
+            outline: none;
         }
-        &:hover ~ .wave-svg {
+        &:hover ~ .wave-svg, &:focus ~ .wave-svg {
             stroke-dashoffset: 37px;
         }
     }
@@ -134,11 +135,11 @@ $animTime: .3s;
         pointer-events: none;
     }
     .menu-work ~ .wave-svg { stroke: lighten($c-signal, 10%); }
-    .menu-work:hover ~ .wave-svg { stroke-dashoffset: 182px; }
+    .menu-work:hover ~ .wave-svg, .menu-work:focus ~ .wave-svg { stroke-dashoffset: 182px; }
     .menu-about ~ .wave-svg { stroke: $c-business; }
-    .menu-about:hover ~ .wave-svg { stroke-dashoffset: 148px; }
+    .menu-about:hover ~ .wave-svg, .menu-about:focus ~ .wave-svg { stroke-dashoffset: 148px; }
     .menu-curiosities ~ .wave-svg { stroke: $c-curiosities; }
-    .menu-contact:hover ~ .wave-svg { stroke-dashoffset: 108px; }
+    .menu-contact:hover ~ .wave-svg, .menu-contact:focus ~ .wave-svg { stroke-dashoffset: 108px; }
 
     &.menu-open {
         z-index: 15;

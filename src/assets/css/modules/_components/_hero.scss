@@ -116,7 +116,10 @@
                 margin: 0 auto;
                 transition: transform 0.4s $easeout;
             }
-            &:hover {
+            &:focus {
+                outline: none;
+            }
+            &:hover, &:focus {
                 &:after {
                     transform: translateY(16px);
                 }
@@ -172,6 +175,9 @@
 
 // Page specific changes
 .hero--contact {
+    h2 {
+        max-width: calc( 18.6em + #{$spacing-unit*2});
+    }
     a, h3, h4 {
         color: $c-dark;
     }
