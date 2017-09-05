@@ -32,7 +32,8 @@
     "react-addons-update": "^15.0.2",
     "react-dom": "^15.0.2",
     "turbolinks": "^5.0.3",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "webpack-bundle-analyzer": "^2.9.0"
   },
   "dependencies": {
     "scrolltrigger-classes": "^0.3.6",

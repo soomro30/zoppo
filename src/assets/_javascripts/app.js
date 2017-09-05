@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger: "[data-scrollto]",
         outputLog: true,
     });
-    console.log(sweetScroll)
 }, false);
 
 // Branding

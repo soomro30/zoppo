@@ -1,6 +1,6 @@
 .newsflash {
     position: absolute;
-    bottom: -15%;
+    bottom: -15vw;
     margin-left: $s-small;
     right: $s-small;
     z-index: 10;
@@ -23,6 +23,9 @@
     span {
         padding-top: $s-small;
         padding-bottom: $s-small;
+    }
+    @media (min-height: 480px) {
+        bottom: -5vw;
     }
     @include media-query($on-laptop) {
         bottom: $s-small;
