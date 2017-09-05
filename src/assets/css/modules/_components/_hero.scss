@@ -99,7 +99,7 @@
         text-align: center;
     }
 
-    h4 {
+    h3, h4 {
         color: inherit;
         margin-top: $s-small*2;
         a {
@@ -172,10 +172,10 @@
 
 // Page specific changes
 .hero--contact {
-    a, h4 {
+    a, h3, h4 {
         color: $c-dark;
     }
-    h4 a:after {
+    h3 a:after, h4 a:after {
         background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNy4xIDE2Ij48c3R5bGU+LnN0MHtmaWxsOiMwQTJBNEY7fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMuNiAxNmMtLjEgMC0uMiAwLS4yLS4xTC4xIDEyLjNjLS4xIDAtLjEtLjItLjEtLjMuMS0uMS4xLS4yLjMtLjJoMi4xVi4zYzAtLjEgMC0uMi4xLS4yIDAtLjEuMS0uMS4yLS4xaDEuOGMuMSAwIC4yIDAgLjIuMS4xLjEuMS4xLjEuMnYxMS42aDIuMWMuMSAwIC4yLjEuMy4ydi4zTDQgMTZoLS40eiIvPjwvc3ZnPg==);        
     }
 }
