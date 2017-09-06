@@ -1,6 +1,7 @@
 module.exports =
 class VideoPlayer {
 	constructor () {
+        console.log('test');
         this.triggerTime = 6.2;
         this.loopTime = 1.44; // seconds from the end that the film gonna loop from | 07:15 = 7.6 - 09:04 = 9.04
         this.videoModal = document.querySelector('[data-videomodal]');
@@ -8,10 +9,8 @@ class VideoPlayer {
         this.modalIsTriggered = false;
         this.modalIsOpened = false;
         this.videoModal.classList.remove('newsflash--open');
-        this.videoElement = document.querySelectorAll('[data-videoplayer]');
-        this.videoElement.forEach((el, index) => {
-            this.setupEvents(el);
-        });
+        this.videoElement = document.getElementById("startvideo");
+        this.setupEvents(this.videoElement);
     } 
     
     // Lissen for the video to start playing, and loop it when it ends
