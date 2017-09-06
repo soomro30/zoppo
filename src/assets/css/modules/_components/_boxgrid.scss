@@ -20,12 +20,10 @@ $bgMqMedium: 800px;
     }
     a {
         color: $c-dark;
-        // border-bottom:0.5px solid $c-signal;
     }
 
     &__header {
         width: 100%;
-        // flex: 1 0 100%;
         max-width: 100%;
         text-align: center;
         padding: $s-small 12% $s-small*0.5;
@@ -56,12 +54,10 @@ $bgMqMedium: 800px;
 
     }
     &__box {
-        
         width: 30em;
         max-width: 100%;
         position: relative;
         margin-top: $s-small*1.5;
-        // display: flex;
         flex: 1 0 100%;
         margin-left: auto;
         margin-right: auto;
@@ -82,14 +78,12 @@ $bgMqMedium: 800px;
             text-align: right;
             .boxgrid__caption {
                 text-align: left;
-                // box-shadow: $bgShadow $bgShadow 0 $c-white;
             }
             .boxgrid__image {
                 transform: translate(-$s-small*0.5, -$s-small*0.5);
                 @media (min-width: $bgMqMedium) {
                     transform: translate(-$s-small, -$s-small)
                 }
-                // box-shadow: $bgShadow $bgShadow 0 $c-white;
             }
             .boxgrid_box {
                 align-items: flex-end;
@@ -97,7 +91,6 @@ $bgMqMedium: 800px;
         }
         img {
             width: 100%;
-            // height: auto;
         }
     }
     
@@ -105,12 +98,13 @@ $bgMqMedium: 800px;
         @extend .hyphenate;
         flex: 1 0 100%;
         min-width: 100%;
-        // background: $c-white;
         color: $c-dark;
         display: block;
-        padding: 0 $s-small $s-small;
-        // box-shadow: -$bgShadow $bgShadow 0 $c-white;
+        padding: 0 $s-small*0.5 $s-small;
         overflow: auto;
+        @media (min-width: $bgMqMedium) {
+            padding: 0 $s-small $s-small;
+        }
         h3, p {
             padding-left: 0;
         }
@@ -119,8 +113,7 @@ $bgMqMedium: 800px;
         transform: translate($s-small*0.5, -$s-small*0.5);
         @media (min-width: $bgMqMedium) {
             transform: translate($s-small, -$s-small);
-        }
-        // box-shadow: -$bgShadow $bgShadow 0 $c-white;                
+        }                
     }
 
     // The box border effect
