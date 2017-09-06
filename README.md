@@ -47,7 +47,7 @@ Update gems:
 
 ## Usage 
 To run in dev mode: `rake start`
-To build: `rake b`
+To build for deployment: `rake build`
 
 
 #### Error?

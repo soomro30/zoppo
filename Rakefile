@@ -2,11 +2,11 @@ desc "Run dev"
 task :s do
   puts "Running jekyll @ http://localhost:4000"
   puts "webpack is watching"
-  `bundle exec jekyll s -w --host=0.0.0.0`
+  `bundle exec jekyll s -w --host=0.0.0.0 --livereload`
 end
 
 desc "Build"
-task :b do
+task :build do
   system("bundle exec jekyll b --verbose")
 end
 
