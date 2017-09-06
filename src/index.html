@@ -6,7 +6,8 @@ excerpt: Fully Studios is a Swedish web and film studio, specializing in motion 
 <div class="navigation__wrapper">
     <nav class="navigation" id="startmenu">
         {% include menu.html %}
-        <video class="navigation__video" id="menuvideo"
+        <video class="navigation__video"
+            [data-videomodal]
             poster="{{ site.baseurl }}/assets/intro_knappfilm_v4.jpg"
             autoplay muted playsinline loop>
             <source src="{{ site.baseurl }}/assets/intro_knappfilm_v4.mp4">
@@ -41,7 +42,7 @@ excerpt: Fully Studios is a Swedish web and film studio, specializing in motion 
 
 <section class="box box--people box--right box--center c-people center sectionspacing-small">
     <h2>Quick contact</h2>
-    <p class="h4">Ask a question, any question.</p>
+    <p class="h4">Ask a question, or tell us something.</p>
     <a href="mailto:{{ site.email }}" class="button"><span>Send us an email</span></a>
 </section>
 
