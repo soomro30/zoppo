@@ -1,3 +1,4 @@
-Sitemap: http://stage.fullystudios.se/sitemap.xml
+Sitemap: https://fullystudios.se/sitemap.xml
+
 User-agent: *
-Disallow: /
+Disallow: /files/

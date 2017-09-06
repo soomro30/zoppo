@@ -41,8 +41,11 @@ section2-image1_alt: "Image of person wearing an Atioki t-shirt"
 section2-image2: "atioki-slide1.jpg"
 section2-image2_alt: "Image of person wearing an Atioki t-shirt"
 
-section2-image3: "atioki-slide2.jpg"
+section2-image3: "atioki-slide6.jpg"
 section2-image3_alt: "Image of person wearing an Atioki t-shirt"
+
+section2-image4: "atioki-slide2.jpg"
+section2-image4_alt: "Image of person wearing an Atioki t-shirt"
 
 
 section2-image-sub: |
@@ -54,19 +57,6 @@ section3: |
   When you take a unique item off the shelf, it’s gone. It’s yours. The next person can’t have it.   
 
   This kind of transaction can be invigorating. We wanted to take it one step further in Atioki by leaving a trace. When you revisit the store, the item you purchased will be overlaid with grey. It’s your conquest. Others can see it, but they will never have it. 
-
-section4-image1: "atioki-slide4.jpg"
-section4-image1_alt: "Image of person wearing an Atioki t-shirt"
-
-section4-image2: "atioki-slide5.jpg"
-section4-image2_alt: "Image of person wearing an Atioki t-shirt"
-
-section4-image3: "atioki-slide6.jpg"
-section4-image3_alt: "Image of person wearing an Atioki t-shirt"
-
-section4-image4: "atioki-slide7.jpg"
-section4-image4_alt: "Image of person wearing an Atioki t-shirt"
-
 
 section5: |
   ### Opening hours

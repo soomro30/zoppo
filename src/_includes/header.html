@@ -14,4 +14,11 @@
 <nav class="navigation" id="menu">
     <div class="navigation__bg"></div>
     {% include menu.html %}
+    <video class="navigation__video"
+        [data-videomodal]
+        poster="{{ site.baseurl }}/assets/intro_knappfilm_v4.jpg"
+        autoplay muted playsinline loop>
+        <source src="{{ site.baseurl }}/assets/intro_knappfilm_v3_loop.mp4">
+        <img src="{{ site.baseurl }}/assets/intro_knappfilm_v4.jpg">
+    </video>
 </nav>
