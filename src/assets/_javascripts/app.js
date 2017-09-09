@@ -29,4 +29,6 @@ const easterTrigger = function() {
     document.body.classList.add('easter');
 }
 const easterElem = document.getElementById('easter');
-easterElem.addEventListener('click', easterTrigger, false);
+if (easterElem) {
+    easterElem.addEventListener('click', easterTrigger, false);
+}
