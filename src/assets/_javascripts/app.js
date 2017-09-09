@@ -23,3 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Branding
 console.log('%c                       \n     FULLY STUDIOS     \n                       ', 'background: #5f11e8; color: #fff; font-family: monospace; font-size: 40px;');
+
+// Easter stuff
+const easterTrigger = function() {
+    document.body.classList.add('easter');
+}
+const easterElem = document.getElementById('easter');
+easterElem.addEventListener('click', easterTrigger, false);

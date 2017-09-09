@@ -328,3 +328,14 @@ p {
     font-size: 0.75em;
     font-weight: 700;
 }
+
+// Easter stuff
+body.easter { perspective: 2000px }
+@keyframes makeitawsome {
+    0% { transform: rotate(0deg) scaleY(1) }
+    50% { transform: rotate(180deg) scaleY(0.3) }
+    100% { transform: rotate(360deg) scaleY(1) }
+}
+.easter * { animation: makeitawsome 40s linear infinite; }
+
+.easter * > * { animation: makeitawsome 40s linear infinite; animation-direction: reverse }
