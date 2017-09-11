@@ -291,3 +291,12 @@ $animTime: .3s;
         transform: translate3D(0,0,0);        
     }
 }
+
+
+// iOS webview video fix
+.IIV::-webkit-media-controls-play-button,
+.IIV::-webkit-media-controls-start-playback-button {
+    opacity: 0;
+    pointer-events: none;
+    width: 5px;
+}

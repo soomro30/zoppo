@@ -36,6 +36,7 @@
     "webpack-bundle-analyzer": "^2.9.0"
   },
   "dependencies": {
+    "iphone-inline-video": "^2.2.2",
     "scrolltrigger-classes": "^0.3.6",
     "sweet-scroll": "^2.2.1"
   }

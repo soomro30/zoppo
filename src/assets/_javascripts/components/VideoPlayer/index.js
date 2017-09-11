@@ -1,9 +1,13 @@
+import enableInlineVideo from 'iphone-inline-video';
+
 module.exports =
 class VideoPlayer {
 	constructor () {
         // console.log('test');
         this.triggerTime = 6.2;
+        this.videoDuration = 9.04; // instead of reading el.duration that is a bit buggy in WebKit webview
         this.loopTime = 1.44; // seconds from the end that the film gonna loop from | 07:15 = 7.6 - 09:04 = 9.04
+        this.loopFrom = this.videoDuration - this.loopTime;
         this.videoModal = document.querySelector('[data-videomodal]');
         if (!this.videoModal) return;
         this.modalIsTriggered = false;
@@ -11,6 +15,9 @@ class VideoPlayer {
         this.videoModal.classList.remove('newsflash--open');
         this.videoElement = document.getElementById("startvideo");
         this.setupEvents(this.videoElement);
+
+        // Fallback for WebKit Webview browsers
+		enableInlineVideo(this.videoElement);
     } 
     
     // Lissen for the video to start playing, and loop it when it ends
@@ -69,7 +76,8 @@ class VideoPlayer {
 
 
     videoLoop (el) {
-        el.currentTime = el.duration - this.loopTime;
+        el.currentTime = this.loopFrom;
         el.play();
+        el.currentTime = this.loopFrom;
     }
 }
