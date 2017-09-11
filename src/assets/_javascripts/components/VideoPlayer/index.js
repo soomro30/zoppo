@@ -1,5 +1,3 @@
-import enableInlineVideo from 'iphone-inline-video';
-
 module.exports =
 class VideoPlayer {
 	constructor () {
@@ -15,9 +13,6 @@ class VideoPlayer {
         this.videoModal.classList.remove('newsflash--open');
         this.videoElement = document.getElementById("startvideo");
         this.setupEvents(this.videoElement);
-
-        // Fallback for WebKit Webview browsers
-		enableInlineVideo(this.videoElement);
     } 
     
     // Lissen for the video to start playing, and loop it when it ends

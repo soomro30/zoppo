@@ -1,5 +1,4 @@
 import LogoAnimation from '../LogoAnimation';
-import enableInlineVideo from 'iphone-inline-video';
 
 module.exports =
 class Nav {
@@ -18,9 +17,6 @@ class Nav {
 		// Set invisible interactive elements and make them not tabbable
 		this._menuItems = document.querySelectorAll('#menu a');
 		this.setTabIndex(-1, this._menuItems);
-		
-		// Fallback for WebKit Webview browsers
-		enableInlineVideo(this._menuVideo);
 	}
 	
 	setTabIndex (index, items) {
@@ -42,7 +38,7 @@ class Nav {
 		this._menu.classList.remove('menu-open');
 		this._menuIsOpen = false;
 		this.setTabIndex(-1, this._menuItems);
-		this._menuVideo.stop();
+		this._menuVideo.pause();
 	}
 
 }

@@ -1,6 +1,7 @@
 import ComponentsRegister from './components/ComponentRegister';
 import SweetScroll from "sweet-scroll";
 import ScrollTrigger from 'scrolltrigger-classes';
+import enableInlineVideo from 'iphone-inline-video';
 
 document.addEventListener("DOMContentLoaded", () => {
     // Scroll reveal animations
@@ -32,3 +33,9 @@ const easterElem = document.getElementById('easter');
 if (easterElem) {
     easterElem.addEventListener('click', easterTrigger, false);
 }
+
+// Fallback for WebKit Webview browsers
+const iivVideos = document.querySelectorAll("video");
+iivVideos.forEach(function(el) {
+	enableInlineVideo(el);
+});
