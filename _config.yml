@@ -6,8 +6,8 @@ description: Fully Studios is a Swedish web and film studio, specializing in mot
 adress: Victoriapassagen,<br>Södra Larmgatan 14,<br>411 16 Göteborg
 baseurl: "" # the subpath of your site, e.g. /blog
 # baseurl: "/fullystudios" # for demo site on demo.fullyflared.se/fullystudios
-url: "https://fullystudios.se/" # the base hostname & protocol for your site
-absolute_path: "https://fullystudios.se/" # should be https://fullystudios.se on the live site
+url: "https://fullystudios.se" # the base hostname & protocol for your site
+absolute_path: "https://fullystudios.se" # should be https://fullystudios.se on the live site
 shareimage: "images/fully-studios-facebook-share-image.png"
 twitter: "https://twitter.com/fullyflared_se"
 github:  "https://github.com/fullystudios"

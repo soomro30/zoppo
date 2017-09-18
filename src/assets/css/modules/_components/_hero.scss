@@ -176,6 +176,7 @@
 // Page specific changes
 .hero--contact {
     h2 {
+        width: 100%;
         max-width: calc( 18.6em + #{$spacing-unit*2});
     }
     a, h3, h4 {
