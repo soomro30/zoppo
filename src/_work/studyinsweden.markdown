@@ -7,7 +7,7 @@ author-email: edite.garjane@fullystudios.se
 author2: Alexander
 author2-email: alexander.tengner@fullystudios.se
 button-text: View case
-date:   2017-04-27 12:00:00 +0100
+date:   2017-10-05 12:00:00 +0100
 categories: design, branding, web
 slug: studyinsweden
 client: Study In Sweden

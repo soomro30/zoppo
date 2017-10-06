@@ -15,6 +15,19 @@ layout: case
 </section>
 {% endunless %}
 
+{% unless page.youtube_IDs == nil %}
+<section class="imagegrid imagegrid--firstlarge">
+	{% for video in page.youtube_IDs %}
+	<div class="imagegrid__image">
+		<div class="video">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/{{video}}" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+	{% endfor %}
+</section>
+{% endunless %}
+
+
 
 {% unless page.frames == nil %}
 <div class="imagegrid">
