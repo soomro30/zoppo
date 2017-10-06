@@ -16,12 +16,12 @@ layout: page
     {% for employee in page.employees %}
         <figure class="boxgrid__box">
             <div class="boxgrid__image image-loader" style="background: #FFC1B4">
-                <img src="/assets/{{ employee.image }}" alt="{{ employee.name }}">	
+                <img src="/assets/employees/{{ employee.image }}" alt="{{ employee.name }}">	
             </div>
             <figcaption class="boxgrid__caption">
                 <h3 class="contact-name">{{ employee.name }}</h3>
                 <p class="contact-title">{{ employee.title }}</p>
-                <p class="contact-details">{% unless employee.email == nil %}<a class="hyphenate" href="mailto:{{employee.email}}">{{employee.email}}</a>{% endunless %}{% unless employee.tel == nil %}<br><a href="tel:{{employee.tel}}">{{employee.tel}}</a>{% endunless %}</p> 
+                <p class="contact-details">{% unless employee.email == nil %}<a class="hyphenate" href="mailto:{{employee.email}}">{{employee.email}}</a><br>{% endunless %}{% unless employee.tel == nil %}<a href="tel:{{employee.tel}}">{{employee.tel}}</a>{% endunless %}</p> 
             </figcaption>
         </figure>
     {% endfor %}
