@@ -1,0 +1,129 @@
+---
+layout: case
+---
+
+{% unless page.section1 == nil %}
+
+    <div class="grid grid--space grid--padding">
+        <div class="grid__column1-2 flexcenter">
+            {{ page.section1 | markdownify }}
+        </div>
+        <div class="grid__column2-2 flexcenter">
+            <img class="image"
+                alt="{{page.section1-image_alt}}"
+                width="1920" height="1080"
+                src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section1-image_small }}" 
+                srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section1-image_medium }} 1440w,
+                        {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section1-image_small }} 720w"
+                sizes="(min-width: 580px) 50vw,
+                        100vw">
+        </div>
+    </div>
+
+{% endunless %}
+
+{% unless page.section2 == nil %}
+    <section class="section section--2 sectionspacing-small">
+        {{ page.section2 | markdownify }}
+    </section>
+{% endunless %}
+
+{% unless page.section3 == nil %}
+    <section class="section sectoin--3 sectionspacing-small">
+        <div class="box box--right box--people">
+            {{ page.section3 | markdownify }}
+        </div>
+    </section>
+{% endunless %}
+
+{% unless page.section4 == nil %}
+    <section class="section section--4 sectionspacing-small">
+        {{ page.section4 | markdownify }}
+    </section>
+{% endunless %}
+
+{% unless page.section5 == nil %}
+    <section class="ssectionspacing-small">
+        <div class="grid">
+            {% unless page.section5_2880 == nil %}
+                <div class="grid__fullwidth">
+                    <img class="image"
+                        alt="{{section5_alt}}"
+                        width="1440" height="643"
+                        src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_1440 }}" 
+                        srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_2880 }} 2880w,
+                                {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_1440 }} 1440w"
+                        sizes="100vw">
+                </div>
+            {% endunless %}
+        
+            {% unless page.section2 == nil %}
+                <div class="grid__boxunder boxtext">
+                    {{ page.section5 | markdownify }}
+                </div>
+            {% endunless %}
+        
+        </div>
+    </section>
+{% endunless %}
+
+{% unless page.section6 == nil %}
+    <section class="sectionspacing-small">
+        <div class="box box--center">
+            {{ page.section6 | markdownify }}
+        </div>
+    </section>
+{% endunless %}
+
+{% unless page.section7 == nil %}
+    <section class="sectionspacing-small">
+        {{ page.section7 | markdownify }}
+    </section>
+{% endunless %}
+
+{% unless page.section8 == nil %}
+    <section class="sectionspacing-small">
+        {{ page.section8 | markdownify }}
+    </section>
+{% endunless %}
+
+{% unless page.section9 == nil %}
+    <section class="sectionspacing-small">
+        {{ page.section9 | markdownify }}
+    </section>
+{% endunless %}
+
+<p>
+<a class="metabutton" href="mailto:{{page.author-email}}">
+    Author: <span>{{page.author}}</span>
+</a>
+</p>
+
+{% comment %}{% unless page.section4 == nil %}
+<div class="grid grid--space">
+    <div class="grid__offsetcolumn2-2 c-business-bg flexcenter" id="lettering2">
+        <style>
+        #lettering2 svg {
+            padding: 6vw;
+            max-height: 60vh;
+        }
+        </style>
+    </div>
+
+    <section class="grid__offsetcolumn1-2 grid__offsetcolumn1-2--small box box--business">
+        {{ page.section4 | markdownify }}
+    </section>
+</div>
+{% endunless %}{% endcomment %}
+
+
+{% comment %}{% unless page.image3_2880 == nil %}
+    <img class="image"
+        alt="{{image3_alt}}"
+        width="1440" height="643"
+        src="{{site.baseurl}}/assets/{{ page.image3_1440 }}" 
+        srcset="{{site.baseurl}}/assets/{{ page.image3_2880 }} 2880w,
+                {{site.baseurl}}/assets/{{ page.image3_1440 }} 1440w"
+        sizes="(min-width: 580px) 50vw,
+                100vw">
+{% endunless %}{% endcomment %}
