@@ -116,6 +116,11 @@ $grh: 5vh;
             min-height: (8*$grh); // IE Edge fix
         }
     }
+
+    // Typographic fixes
+    p {
+        margin-left: 0;
+    }
     
 }
 

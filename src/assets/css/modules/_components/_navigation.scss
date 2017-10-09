@@ -129,10 +129,12 @@ $animTime: .3s;
         stroke-width:7px;
         fill:none;stroke-linecap:round;stroke-linejoin:round;
 
-        stroke-dasharray: 329px, 340px;
-        stroke-dashoffset: 330px; // max 320 - px is needed in Edge
         transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 0, 0.1, 0.99);
         pointer-events: none;
+        
+        // Critical css
+        // stroke-dasharray: 329px, 340px;
+        // stroke-dashoffset: 330px; // max 320 - px is needed in Edge
     }
     .menu-work ~ .wave-svg { stroke: lighten($c-signal, 10%); }
     .menu-work:hover ~ .wave-svg, .menu-work:focus ~ .wave-svg { stroke-dashoffset: 182px; }

@@ -10,8 +10,8 @@ class LogoAnimation {
         	container: this._logoContainer,
         	renderer: 'svg',
         	loop: false,
-        	autoplay: false,
-        	path: this._path
+			autoplay: false,
+			path: this._path
         }
 
         this._anim = bodymovin.loadAnimation (this._animData);

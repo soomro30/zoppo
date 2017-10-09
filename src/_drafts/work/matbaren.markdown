@@ -10,9 +10,7 @@ date:   2016-02-01 12:00:00 +0100
 categories: back-end, ui, web
 slug: matbaren
 client: Matbaren
-project: Lorem ipsum
-link: http://owdbob.com
-link-text: Visit the site
+project: Web app
 background-image_2880: "hero@2x.jpg"
 background-image_1440: "hero.jpg"
 background-image_720: "hero_720.jpg"
@@ -37,7 +35,7 @@ section1: |
 
   The supply chain looks like this: 
 
-section1-image_alt: "Grönis, Gulis and Rödis"
+section1-image_alt: "Diagram over Matbaren's supply chain"
 section1-image_medium: "supply_chain@2x.png"
 section1-image_small: "supply_chain.png"
 

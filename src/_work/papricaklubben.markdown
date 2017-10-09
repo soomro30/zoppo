@@ -10,7 +10,7 @@ categories: design, branding, web
 slug: papricaklubben
 client: ICA
 project: Website
-link: http://målbaren.se
+link: https://papricaklubben.se/
 link-text: Visit the site
 background-image_2880: "hero@2x.jpg"
 background-image_1440: "hero.jpg"
