@@ -67,11 +67,11 @@ employees:
     email: chelsea.milojkovic@fullystudios.se
     tel: +46 721 89 49 89
 
-  - name: Mattias Larson
-    image: mattias-larson.jpg
-    title: Motion creative
-    email: mattias.larson@fullystudios.se
-    tel: +46 735 45 97 08
+  #- name: Mattias Larson
+  #  image: mattias-larson.jpg
+  #  title: Motion creative
+  #  email: mattias.larson@fullystudios.se
+  #  tel: +46 735 45 97 08
 
 ---
 
