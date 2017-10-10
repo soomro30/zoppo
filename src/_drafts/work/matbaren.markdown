@@ -10,7 +10,7 @@ date:   2016-02-01 12:00:00 +0100
 categories: back-end, ui, web
 slug: matbaren
 client: Matbaren
-project: Web app
+project: Project
 background-image_2880: "hero@2x.jpg"
 background-image_1440: "hero.jpg"
 background-image_720: "hero_720.jpg"
