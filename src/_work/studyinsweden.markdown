@@ -44,8 +44,8 @@ section3: |
   ## The design
   The new design addresses the importance on high quality, editorial images and content that is structured for easier navigation. It focuses on better reading experience as well as promoting and integrating the rest of Study In Sweden site in the user journey.
 
-section3_2880: "sis_design.jpg"
-section3_1440: "sis_design@2x.jpg"
+section3_2880: "sis_design@2x.jpg"
+section3_1440: "sis_design.jpg"
 section3_alt: "Finished design for Study In Sweden's blog"
 
 section4: |

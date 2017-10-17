@@ -14,7 +14,7 @@ permalink: /contact/
 slug: contact
 background-color: "#FFC1B4"
 
-employees:
+peoples:
   - name: Robin Kollberg
     image: robin-kollberg.jpg
     title: Creative Director
@@ -66,6 +66,11 @@ employees:
     title: Copywriter (US English)
     email: chelsea.milojkovic@fullystudios.se
     tel: +46 721 89 49 89
+  
+  - name: Andreas Johansson
+    image: andreas-johansson.jpg
+    title: Motion Intern
+    email: andreas.johansson@fullystudios.se
 
   #- name: Mattias Larson
   #  image: mattias-larson.jpg

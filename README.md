@@ -82,7 +82,7 @@ As this is just a Jekyll project, you can use any of the commands listed in thei
 ## Manual deployment
 1. in _config.yml, make sure the baseurl is correct
 2. rake build
-3. Move all files in pulic to the server
+3. Move all files in pulic to the server EXCEPT robots.txt
 
 
 ### Markdown
