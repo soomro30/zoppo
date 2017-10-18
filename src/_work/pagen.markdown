@@ -39,19 +39,19 @@ section2: |
 
 trivia: 
   - video: "trivia/frukosttrivia_fisk-v2.mp4"
-    text: "Did you know that Gustav Vasa’s breakfast often was salted herring, pork, bread and a pint of beer?"
+    text: "Visste du att på Gustav Vasas tid bestod frukosten oftast av salt sill, fläsk, bröd och ett stop öl?"
   
   - video: "trivia/frukosttrivia_hand-v2.mp4"
-    text: "In medevil times you didn’t speak loudly about your breakfast, beacuse gluttony was considered to be a deadly sin and a sign of weakness."
+    text: "På medeltiden talade man tyst om sin frukost, då frosseri ansågs vara en dödssynd och ett tecken på svaghet."
   
   - video: "trivia/frukosttrivia_johnny-v2.mp4"
-    text: "When Johnny Wahlqvist was preparing for the world championship in benchpress 2012, he ate: 20 rolls, 12 eggs, 1l processed sour milk, 2 plats of porage, 1l coffe and 1l milk."
+    text: "När Johnny Wahlqvist förberedde sig inför VM i bänkpress 2012 åt han: 20 frallor, tolv ägg, en liter fil, två tallrikar med gröt, en liter kaffe och en liter mjölk."
   
   - video: "trivia/frukosttrivia_klocka-v2.mp4"
-    text: "Did you know that the avrage breakfast on Sweden is 13.8 min in the weekdays? Well, now you know."
+    text: "Visste du att snittfrukosten i Sverige är 13,8 minuter på vardagar? Ok, men nu vet du."
   
   - video: "trivia/frukosttrivia_sang-v2.mp4"
-    text: "The world record for most eaten brekfasts in bed eaten at the same time was achived by 388 people in at a hotel in Shanghai in 2014."
+    text: "Världsrekordet när flest åt frukost i sängen samtidigt sattes av 388 personer på ett hotell i Shanghai 2014."
 
 
 frames:
