@@ -48,37 +48,10 @@ trivia:
     text: "When Johnny Wahlqvist was preparing for the world championship in benchpress 2012, he ate: 20 rolls, 12 eggs, 1l processed sour milk, 2 plats of porage, 1l coffe and 1l milk."
   
   - video: "trivia/frukosttrivia_klocka-v2.mp4"
-    text: "Did you know that the avrage breakfast on Sweden is 13.8 min in the weekdays? Well, now you know."
+    text: "Did you know that the avrage breakfast in Sweden is 13.8 min in the weekdays? Well, now you know."
   
   - video: "trivia/frukosttrivia_sang-v2.mp4"
     text: "The world record for most eaten brekfasts in bed eaten at the same time was achived by 388 people in at a hotel in Shanghai in 2014."
-
-
-frames:
-  - alt: "Pågen Heja mackan - Halloweek"
-    medium: "heja_mackan_halloweek.jpg"
-    large: "heja_mackan_halloweek.jpg"
-
-  - alt: "Pågen Heja mackan - Prepp"
-    medium: "prepp.jpg"
-    large: "prepp.jpg"
-
-  - alt: "Pågen Heja mackan - Lax"
-    medium: "heja_mackan_lax.jpg"
-    large: "heja_mackan_lax.jpg"
-
-  - alt: "Pågen Heja mackan - Roccola"
-    medium: "pagen_roccola.jpg"
-    large: "pagen_roccola.jpg"
-
-  - alt: "Pågen Heja mackan - Varmrökt Lax"
-    medium: "pagen_varmrökt_lax.jpg"
-    large: "pagen_varmrökt_lax.jpg"
-
-
-  - alt: "Pågen Heja mackan - Tortilla Chips"
-    medium: "tortilla_chips.jpg"
-    large: "tortilla_chips.jpg"
 
 ---
 In the age of the television, on-air commercials essentially captured everyone not-on-a-nacho-break. Video in social media, on the other hand, fares way better when it’s fast paced and quick to-the-point.
