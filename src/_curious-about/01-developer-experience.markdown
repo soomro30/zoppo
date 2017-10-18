@@ -9,6 +9,7 @@ background-image_720: "hero_720.jpg"
 background-image_1440: "hero.jpg"
 background-image_2880: "hero@2x.jpg"
 background-image_color: "#FFDE7F"
+shareimage: curious-about/developer-experience/shareimage.png
 
 ingress: |
   A term that has been gaining popularity in the past few years is “developer experience.” It’s like “user experience” but for APIs. Meaning how easy it is for a developer to navigate a specific coding platform.  

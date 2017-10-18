@@ -20,6 +20,8 @@ background-image_color: "#e9d2b0"
 casetop-bgcolor: "#342971"
 casetop-video: casetop.mp4
 
+shareimage: work/pagen/shareimage.png
+
 ingress: |
   We love an old fashion film shoot just as much as we enjoy dazzling audiences with motion graphics. In the cases below, we were blessed to do both. The productions were short and sweet, destined for great things – and social media. 
 

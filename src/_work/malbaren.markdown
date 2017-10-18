@@ -26,6 +26,8 @@ casetop-image2_medium: casetop_image2@2x.jpg
 casetop-image3_small: casetop_image3.jpg
 casetop-image3_medium: casetop_image3@2x.jpg
 
+shareimage: work/malbaren/shareimage.png
+
 ingress: |
   Matbaren (“The Food Bar”) supplies grocery stores across Sweden with nifty buffet carts, so customers can assemble their own  to-go meal on the fly. 
   

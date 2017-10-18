@@ -22,6 +22,8 @@ casetop-bg_640: casetop_640.jpg
 casetop-bg_1440: casetop_1440.jpg
 casetop-video: casetop.mp4
 
+shareimage: work/click-or-treat/shareimage.png
+
 ingress: |
   Liseberg is Gothenburg’s beloved amusement park. It’s typically a place of cotton-candy colors, bunnies and bowties… until October rolls around. Then it’s zombies and crows and gore chambers galore.
 

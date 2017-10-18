@@ -9,6 +9,7 @@ background-image_720: "hero_720.jpg"
 background-image_1440: "hero.jpg"
 background-image_2880: "hero@2x.jpg"
 background-image_color: "#eaeaea"
+shareimage: curious-about/opinionated-ecommerce/shareimage.png
 
 ingress: |
   In the past few years, Fully has been tinkering with norms of e-commerce. You might even say pursuing the holy grail of a perfect webstore. And if not “perfect,” then at least way more interesting and engaging than they currently are.

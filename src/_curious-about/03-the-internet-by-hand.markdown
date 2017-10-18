@@ -9,6 +9,7 @@ slug: the-internet-by-hand
 background-image_720: "hero_720.jpg"
 background-image_color: "#ffde7f"
 background: '<div class="hero__bgcenter"><img style="width: 100%; max-width: 20em; height: auto" class="image" src="https://fullystudios.se/assets/curious-about/the-internet-by-hand/tomte-sequence.gif"></div>'
+shareimage: curious-about/the-internet-by-hand/shareimage.png
 
 ingress: |
   Luckily for those who can’t draw to save their lives, in our present digital era you don’t need to be a good drawer to be a good designer. You can create entire worlds without having to pick up a pen.

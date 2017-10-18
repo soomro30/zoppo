@@ -27,6 +27,8 @@ casetop-image2_medium: casetop_image2@2x.jpg
 casetop-image3_small: casetop_image3.jpg
 casetop-image3_medium: casetop_image3@2x.jpg
 
+shareimage: work/studyinsweden/shareimage.png
+
 ingress: |
   Every year, new students from all over the world are recruited as digital ambassadors and bloggers for Study In Sweden - a website that promotes Sweden as study destination worldwide. Redesigning a site that promotes a country - that was clearly a job for the ones obsessed with Swedishness and user experience at Fully Studios.
 
