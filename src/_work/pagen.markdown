@@ -21,7 +21,7 @@ casetop-bgcolor: "#342971"
 casetop-video: casetop.mp4
 
 ingress: |
-  At Fully, we love an old fashion film shoot just as much as we enjoy dazzling audiences with motion graphics. In the cases below, we were blessed to do both. The productions were short and sweet, destined for great things – and social media. 
+  We love an old fashion film shoot just as much as we enjoy dazzling audiences with motion graphics. In the cases below, we were blessed to do both. The productions were short and sweet, destined for great things – and social media. 
 
 section1: |
   At Fully, many of us are dedicated foodies and, as such, we truly appreciate a sandwich done with precision and love. One day, we were in the middle of devouring a delicious Bahn Mi when the phone rang (true story!). It was our favorite advertising agency DDB asking us if we could produce a series of sandwich videos for a renown Swedish bakery brand, Pågen. We got cracking immediately, clearing the office kitchen table to make way for the sandwich shoot.
@@ -35,7 +35,7 @@ youtube_IDs:
 
 section2: |
   ## Swedes at the breakfast table
-  A couple of months earlier we helped DDB and Pågen with another campaign, celebrating Swedish breakfast habits. Again, the platform for the videos was Facebook and Instagram and the campaign theme was “breakfast trivia.” Fully did all the animation work and DDB wrote the copy for the caption (which unfortunately is not seen here, but it was surely stacked with puns on buns).
+  A couple of months earlier we helped DDB and Pågen with another campaign, celebrating Swedish breakfast habits. Again, the platform for the videos was Facebook and Instagram and the campaign theme was “breakfast trivia.” Fully did all the animation work and DDB wrote the copy for the caption.
 
 trivia: 
   - video: "trivia/frukosttrivia_fisk-v2.mp4"
