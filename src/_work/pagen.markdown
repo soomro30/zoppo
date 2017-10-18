@@ -81,6 +81,6 @@ frames:
     large: "tortilla_chips.jpg"
 
 ---
-At Fully, we love an old fashion film shoot just as much as we enjoy dazzling audiences with motion graphics. In the cases below, we were blessed to do both. The productions were short and sweet, destined for great things – and social media. 
+We love an old fashion film shoot just as much as we enjoy dazzling audiences with motion graphics. In the cases below, we were blessed to do both. The productions were short and sweet, destined for great things – and social media. 
 
 
