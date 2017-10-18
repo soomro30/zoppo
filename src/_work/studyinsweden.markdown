@@ -28,13 +28,13 @@ casetop-image3_small: casetop_image3.jpg
 casetop-image3_medium: casetop_image3@2x.jpg
 
 ingress: |
-  Every year, new students from all over the world are recruited as digital ambassadors and bloggers for Study In Sweden - an official resource curated by Swedish Institute to promote Sweden as a higher education destination worldwide. This year, the new ambassadors were welcomed by an improved blog design that we had the pleasure to create.
+  Every year, new students from all over the world are recruited as digital ambassadors and bloggers for Study In Sweden - a website that promotes Sweden as study destination worldwide. Redesigning a site that promotes a country - that was clearly a job for the ones obsessed with Swedishness and user experience at Fully Studios.
 
 section1: |
-  In the first stage of the project, we did research by analyzing the current user interaction with the blog as well as surveying current bloggers and readers of the site. Essential head start was provided by insights from our strategist Edīte who was a digital ambassador for Study In Sweden in 2016/17.
+  At first, it was almost unfair - Edīte, the manager for the project, was a digital ambassador at Study In Sweden herself just a year ago. Having this kind of head start into research was great, but even better was the input from the current bloggers and readers that helped in research. It turns out, when a country's image is at stake, people join forces to advise. We took the full advantage of it and thank everyone who participated.
 
 section2: |
-  Although the project was of a rather small scale, we put a lot of effort in combining the insights from the research, current bloggers, as well as the goals set by the client in our wireframes. As a result, we came up with a design that highlighted the importance of giving the visitor the most relevant information and an incentive to continue reading for longer. We did this while keeping the individuality of each blogger and praise in their work of high importance.
+  Some might brush this off by saying it's a short, simple re-design project, but combining insights from the stakeholders, previous user research and user interviews thoroughly was crucial for us. After all, we had to come up with solutions for making visitors engage with the site for longer and hopefully - help to convince them that Sweden is the perfect place to move to for their next degree. If you've ever tried convincing your parents to support any crazy ideas of yours - you know what kind of power we were dealing with.
 
 image2_2880: "wf_sis@2x.jpg"
 image2_1440: "wf_sis.jpg"
@@ -42,16 +42,16 @@ image2_alt: "Wireframes"
 
 section3: |
   ## The design
-  The new design addresses the importance on high quality, editorial images and content that is structured for easier navigation. It focuses on better reading experience as well as promoting and integrating the rest of Study In Sweden site in the user journey.
+  The aim was to give more exposure to the bloggers and their own content and be smarter about how to provide the most relevant content to the reader through seamless navigation. As all the great things about Sweden, we learnt that simplicity is what matters. We made it easier to read, search and get inspired to start the next life chapter in Sweden.
 
 section3_2880: "sis_design@2x.jpg"
 section3_1440: "sis_design.jpg"
 section3_alt: "Finished design for Study In Sweden's blog"
 
 section4: |
-  During the project we worked closely together with the client as well as the agency Fröjd who developed the blog. Soon after the launch we conducted a workshop together with the new ambassadors to make sure that the new guidelines were understood and implemented. 
+  We got to meet new friends along the way through working together with digital agency Fröjd who developed the blog and Edīte got to go back to the digital ambassador team. This time, not to write, but to lead a workshop on how to create content that will shine with the help of new redesign. Looks like a full circle to us!
 
 ---
 
-Every year, new students from all over the world are recruited as digital ambassadors and bloggers for Study In Sweden - an official resource curated by Swedish Institute to promote Sweden as a higher education destination worldwide. This year, the new ambassadors were welcomed by an improved blog design that we had the pleasure to create.
+Every year, new students from all over the world are recruited as digital ambassadors and bloggers for Study In Sweden - a website that promotes Sweden as study destination worldwide. Redesigning a site that promotes a country - that was clearly a job for the ones obsessed with Swedishness and user experience at Fully Studios.
 
