@@ -7,7 +7,7 @@
     <!-- Get all work posts and revers them -->
     {% assign items = site.work | sort: 'date' | reverse %}
     
-    {% for work in items limit:9 %}
+    {% for work in items %}
 
 		{% if work.title == page.title or work.title == work1.title or work.title == work2.title or work.title == work3.title %}
 			{% continue %}
