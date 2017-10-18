@@ -74,6 +74,12 @@
         margin-left: auto;
         margin-right: auto;
     }
+    &--compact-center {
+        @include media-query($on-laptop) {
+            max-width: 54em;
+            margin: 0 auto;
+        }
+    }
 }
 
 .imagegrid + h3 {

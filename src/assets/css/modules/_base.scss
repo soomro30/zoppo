@@ -44,11 +44,16 @@ svg { max-width: 100%}
     width: 100%;
     height: auto;
 }
-.image + * {
+.image + *:not(.caption) {
     margin-top: $s-small;
     @include media-query($on-palm) {
         margin-top: $s-small*2;
     }
+}
+
+.image + .caption {
+    margin-top: $s-small * 0.5;
+    margin-bottom: $s-small * 0.75;
 }
 
 .image-loader {
