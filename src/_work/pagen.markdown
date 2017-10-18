@@ -3,7 +3,7 @@ layout: work/pagen
 title:  "Pågen"
 subtitle: "Social&nbsp;meals"
 button-text: View case
-date: 2017-10-17 12:00:00 +0100
+date:   2017-10-17 12:00:00 +0100
 categories: film
 slug: pagen
 client: Pågen
