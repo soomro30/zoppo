@@ -9,7 +9,7 @@ slug: pagen
 client: Pågen
 project: Film
 author: "Joakim Hanner"
-author-email: robin.kollberg@fullystudios.se
+author-email: joakim.hanner@fullystudios.se
 link: https://pagen.se/
 link-text: Visit the site
 background-image_2880: "hero@2x.jpg"
