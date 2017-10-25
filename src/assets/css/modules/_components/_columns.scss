@@ -1,0 +1,40 @@
+.column {
+    width: 100%;
+    @include media-query($on-palm) {
+        width: auto;
+    }
+
+    padding: $s-small/3 $s-tiny * 2;
+    @include media-query($on-laptop) {
+        padding: $s-small/3 $s-small;    
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding: $s-tiny 0;
+        @include media-query($on-laptop) {
+            padding: $s-small 0;
+            justify-content: space-around;
+        }
+    }
+    
+    &--vertical {
+        display: flex;
+        flex-direction: column;
+    }
+    &--2-4-4 {
+        flex: 1 0 50%;
+        max-width: 100%;
+        @include media-query($on-laptop) {
+            flex: 1 0 25%;
+            max-width: 25%;
+        }
+    }
+    
+    &--alignend {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}

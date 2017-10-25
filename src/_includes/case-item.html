@@ -1,0 +1,29 @@
+<!-- 
+###############################
+## Get code for the background
+## set in current post
+-->
+{% unless work.background == nil %}
+    {{ work.background }}
+{% endunless %}
+
+<!-- 
+####################
+## Get scripts from
+## current post
+-->
+{% comment %}
+{% for js in work.scripts %}
+    <script type="text/javascript">
+    {% include {{ root | append: js }} %}
+    </script>
+{% endfor %}    
+{% endcomment %}        
+
+<h2 class="works__header">
+    {{ work.start }}
+</h2>
+
+<a class="button" href="{{ work.url | prepend: site.baseurl }}">
+    <span>See work</span>
+</a>
