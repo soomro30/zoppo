@@ -1,8 +1,8 @@
 // Image grid
 .imagegrid {
-    margin: $s-small*0.5;
     display: flex;
     flex-flow: row wrap;
+    margin: $s-small*0.5;
     @include media-query($on-palm) {
         margin: $s-small*0.75;
     }
@@ -24,12 +24,12 @@
             flex: 1 0  calc(50% - #{$s-small*0.5});
             max-width: calc(50% - #{$s-small*0.5});
         }
-        &--threemobile {
-            margin: $s-small*0.25;
-            height: auto; 
-            flex: 1 0  calc(33.333% - #{$s-small*0.5});
-            max-width: calc(33.333% - #{$s-small*0.5});
-        }
+        // &--threemobile {
+        //     margin: $s-small*0.25;
+        //     height: auto; 
+        //     flex: 1 0  calc(33.333% - #{$s-small*0.5});
+        //     max-width: calc(33.333% - #{$s-small*0.5});
+        // }
         &--two {
             @include media-query($on-laptop) {
                 flex: 1 0  calc(50% - #{$s-small*0.5});
@@ -73,6 +73,12 @@
         max-width: 82rem;
         margin-left: auto;
         margin-right: auto;
+    }
+    &--compact-center {
+        @include media-query($on-laptop) {
+            max-width: 54em;
+            margin: 0 auto;
+        }
     }
 }
 

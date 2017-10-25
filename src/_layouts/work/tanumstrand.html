@@ -1,0 +1,166 @@
+---
+layout: case
+---
+
+{% unless page.section1 == nil %}
+    <section class="sectionspacing box box--center">
+        {{ page.section1 | markdownify }}
+    </section>
+{% endunless %}
+
+
+<div class="sectionspacing">
+
+    {% unless page.section2 == nil %}
+        <section class="boxtext boxtext--frame center">
+            {{ page.section2 | markdownify }}
+        </section>
+        <div class="sectionspacing-small">
+            {{ page.section2_text | markdownify }}
+        </div>
+    {% endunless %}
+
+    {% unless page.section2_images == nil %}
+    <section class="imagegrid">
+        {% for image in page.section2_images %}
+        <div class="imagegrid__image">
+            <img class="image"
+                alt="{{ image.alt }}"
+                width="1440" height="1653"
+                src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ image.small }}" 
+                srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ image.medium }} 1440w,
+                        {{site.baseurl}}/assets/work/{{page.slug}}/{{ image.small }} 720w"
+                sizes="(min-width: 580px) 33vw,
+                100vw">
+        </div>
+        {% endfor %}
+    </section>
+    {% endunless %}
+
+    {% unless page.section2_video == nil %}
+    <div class="video">
+        <iframe src="https://player.vimeo.com/video/{{page.section2_video}}" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    {% endunless %}
+
+</div>
+
+
+
+<div class="sectionspacing">
+
+    {% unless page.section3 == nil %}
+        <section class="boxtext boxtext--frame boxtext--frame--curiosities center">
+            {{ page.section3 | markdownify }}
+        </section>
+        <div class="sectionspacing-small">
+            {{ page.section3_text | markdownify }}
+        </div>
+    {% endunless %}
+
+    {% unless page.section3_images == nil %}
+    <section class="imagegrid">
+        {% for image in page.section3_images %}
+        <div class="imagegrid__image">
+            <img class="image"
+                alt="{{ image.alt }}"
+                width="1440" height="1653"
+                src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ image.small }}" 
+                srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ image.medium }} 1440w,
+                        {{site.baseurl}}/assets/work/{{page.slug}}/{{ image.small }} 720w"
+                sizes="100vw">
+        </div>
+        {% endfor %}
+    </section>
+    {% endunless %}
+
+    {% unless page.section3_video == nil %}
+    <div class="video">
+        <iframe src="https://player.vimeo.com/video/{{page.section3_video}}" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    {% endunless %}
+
+</div>
+
+
+
+<div class="sectionspacing">
+
+    {% unless page.section4 == nil %}
+        <section class="boxtext boxtext--frame boxtext--frame--people center">
+            {{ page.section4 | markdownify }}
+        </section>
+        <div class="sectionspacing-small">
+            {{ page.section4_text | markdownify }}
+        </div>
+    {% endunless %}
+
+    {% unless page.section4_images == nil %}
+    <section class="imagegrid">
+        {% for image in page.section4_images %}
+        <div class="imagegrid__image">
+            <img class="image"
+                alt="{{ image.alt }}"
+                width="1440" height="1653"
+                src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ image.small }}" 
+                srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ image.medium }} 1440w,
+                        {{site.baseurl}}/assets/work/{{page.slug}}/{{ image.small }} 720w"
+                sizes="100vw">
+        </div>
+        {% endfor %}
+    </section>
+    {% endunless %}
+
+    {% unless page.section4_video == nil %}
+    <div class="video">
+        <iframe src="https://player.vimeo.com/video/{{page.section4_video}}" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    {% endunless %}
+
+</div>
+
+
+
+<div class="sectionspacing">
+
+    {% unless page.section5 == nil %}
+        <section class="boxtext boxtext--frame boxtext--frame--dark center">
+            {{ page.section5 | markdownify }}
+        </section>
+        <div class="sectionspacing-small">
+            {{ page.section5_text | markdownify }}
+        </div>
+    {% endunless %}
+
+    {% unless page.section5_images == nil %}
+    <section class="imagegrid">
+        {% for image in page.section5_images %}
+        <div class="imagegrid__image">
+            <img class="image"
+                alt="{{ image.alt }}"
+                width="1440" height="1653"
+                src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ image.small }}" 
+                srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ image.medium }} 1440w,
+                        {{site.baseurl}}/assets/work/{{page.slug}}/{{ image.small }} 720w"
+                sizes="100vw">
+        </div>
+        {% endfor %}
+    </section>
+    {% endunless %}
+
+    {% unless page.section5_video == nil %}
+    <div class="video">
+        <iframe src="https://player.vimeo.com/video/{{page.section5_video}}" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    {% endunless %}
+
+    <div class="sectionspacing-small center">
+        {{ page.section6 | markdownify }}
+        <p>
+            <a class="metabutton" href="mailto:{{page.author-email}}">
+                Author: <span>{{page.author}}</span>
+            </a>
+        </p>
+    </div>
+
+</div>

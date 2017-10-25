@@ -1,5 +1,4 @@
 import Nav from './Nav';
-import LogoAnimation from './LogoAnimation';
 import Slider from './Slider';
 import VideoPlayer from './VideoPlayer';
 import Opinioated from './Curiosities';
@@ -8,7 +7,6 @@ import Opinioated from './Curiosities';
 
 module.exports = {
 	nav: new Nav,
-	logoAnimation: new LogoAnimation,
 	slider: new Slider,
 	videoPlayer: new VideoPlayer,
 	opinioated: new Opinioated

@@ -1,0 +1,52 @@
+---
+layout: case
+---
+
+{% unless page.section1 == nil %}
+    <div class="section section--1 sectionspacing-small">
+        {{ page.section1 | markdownify }}
+    </div>
+{% endunless %}
+
+<div class="grid">
+    {% unless page.image2_2880 == nil %}
+        <div class="grid__fullwidth">
+            <img class="image"
+                alt="{{image2_alt}}"
+                width="1440" height="643"
+                src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image2_1440 }}" 
+                srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image2_2880 }} 2880w,
+                        {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image2_1440 }} 1440w"
+                sizes="100vw">
+        </div>
+    {% endunless %}
+
+    {% unless page.section2 == nil %}
+        <div class="grid__boxunder boxtext">
+            {{ page.section2 | markdownify }}
+        </div>
+    {% endunless %}
+
+</div>
+
+{% unless page.section3 == nil %}
+    <div class="section section--3 sectionspacing-small">
+        {{ page.section3 | markdownify }}
+    </div>
+{% endunless %}
+
+<img
+    class="image" alt="{{section3_alt}}"
+    width="1440" height="960"
+    src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3_1440 }}" 
+    srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3_2880 }} 2880w,
+            {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3_1440 }} 1440w"
+    sizes="100vw">
+
+
+
+{% unless page.section4 == nil %}
+    <div class="section section--4 sectionspacing-small">
+        {{ page.section4 | markdownify }}
+    </div>
+{% endunless %}

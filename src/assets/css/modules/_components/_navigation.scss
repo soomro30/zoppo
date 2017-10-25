@@ -2,10 +2,32 @@ $animTime: .3s;
 
 .navigation {
     width: 100%;
-    height: 100vh;
-    // min-height: 100vh;
+    height: 100%;
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
+    //  Hacky way to prevent page from scrolling when URL-bar disapears.
+    // -7vw is the magic number for the URL-bar
+    @media (max-device-aspect-ratio: 3/4) {
+        min-height: (100vw * 1.333 - 6vw);
+    }
+    @media (max-device-aspect-ratio: 2/3) {
+        min-height: (100vw * 1.5 - 6vw);
+    }
+    //ex iPhone 5
+    @media (max-device-aspect-ratio: 10/16) {
+        min-height: (100vw * 1.6 - 6vw);
+    }
+    //ex iPhone 6, Nexus 5X, Galaxy S5
+    @media (max-device-aspect-ratio: 9/16) {
+        min-height: (100vw * 1.778 - 6vw);
+    }
+
+    @include media-query($on-laptop) {
+        min-height: 100vh;
+    }
+
+    // min-height: 100vh;
     // &:after {
     //     content: "";
     //     position: absolute;
@@ -23,32 +45,36 @@ $animTime: .3s;
         width: 100%;
         height: 100%;
         z-index: 2;
+        margin-top: 0;
         @media (min-aspect-ratio: 16/9) {
             width: 100%;
             height: auto;
-            transform: translateY(-25%);
+            transform: translateY(-25%); // focus on the stubbe
             top: 25%;
         }
         @media (max-aspect-ratio: 16/9) {
             width: auto;
             height: 100%;
-            transform: translateX(-75%);
-            margin-top: 0;
+            transform: translateX(-75%);  // focus on the stubbe
             left: 75%;
         }
     }
     &__list {
         position: absolute;
-        top: $s-small*2;
+        top: 0;
         left: 0;
         z-index: 3;
         list-style-type: none;
-        margin: 0 0 $s-small*4;
+        margin: $s-small 0 $s-small*2;
         padding: 0;
+        @media (min-height: 480px) {
+            top: $s-small*2;
+            margin: $s-small*2 0 $s-small*2;
+        }
         @media (min-width: $on-laptop) and (min-height: 445px) {
             bottom: 0;
             top: auto;
-            margin-bottom: $s-small*3;
+            margin: 0 0 $s-small*3;
         }
     }
     &__item {
@@ -68,11 +94,12 @@ $animTime: .3s;
             font-size: calc(1em + 2vh);
         }
         display: inline-block;
-        &:visited, &:hover {
+        &:visited, &:hover, &:focus {
             color: $c-white;
+            outline: none;
         }
-        &:hover ~ .wave-svg {
-            stroke-dashoffset: 37;
+        &:hover ~ .wave-svg, &:focus ~ .wave-svg {
+            stroke-dashoffset: 37px;
         }
     }
     &__overlay{
@@ -102,17 +129,19 @@ $animTime: .3s;
         stroke-width:7px;
         fill:none;stroke-linecap:round;stroke-linejoin:round;
 
-        stroke-dasharray: 329, 340;
-        stroke-dashoffset: 329; // max 329
         transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 0, 0.1, 0.99);
         pointer-events: none;
+        
+        // Critical css
+        // stroke-dasharray: 329px, 340px;
+        // stroke-dashoffset: 330px; // max 320 - px is needed in Edge
     }
     .menu-work ~ .wave-svg { stroke: lighten($c-signal, 10%); }
-    .menu-work:hover ~ .wave-svg { stroke-dashoffset: 182; }
+    .menu-work:hover ~ .wave-svg, .menu-work:focus ~ .wave-svg { stroke-dashoffset: 182px; }
     .menu-about ~ .wave-svg { stroke: $c-business; }
-    .menu-about:hover ~ .wave-svg { stroke-dashoffset: 148; }
+    .menu-about:hover ~ .wave-svg, .menu-about:focus ~ .wave-svg { stroke-dashoffset: 148px; }
     .menu-curiosities ~ .wave-svg { stroke: $c-curiosities; }
-    .menu-contact:hover ~ .wave-svg { stroke-dashoffset: 108; }
+    .menu-contact:hover ~ .wave-svg, .menu-contact:focus ~ .wave-svg { stroke-dashoffset: 108px; }
 
     &.menu-open {
         z-index: 15;
@@ -174,6 +203,9 @@ $animTime: .3s;
             transform: scale(1, 1) translate3d(0,0,0);
             opacity: 1;
             transition: transform $animTime cubic-bezier(0.16, 0, 0.28, 0.99), opacity 0.1s 0s;
+            @media (prefers-reduced-motion) {
+                transition: none;
+            }
         }
         .navigation__item, .navigation__video {
             opacity: 0;
@@ -260,4 +292,13 @@ $animTime: .3s;
         opacity: 1;
         transform: translate3D(0,0,0);        
     }
+}
+
+
+// iOS webview video fix
+.IIV::-webkit-media-controls-play-button,
+.IIV::-webkit-media-controls-start-playback-button {
+    opacity: 0;
+    pointer-events: none;
+    width: 5px;
 }

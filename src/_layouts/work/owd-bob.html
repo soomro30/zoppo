@@ -1,0 +1,119 @@
+---
+layout: case
+---
+
+{% unless page.section1 == nil %}
+    <section class="grid grid--space grid--padding">
+        <div class="grid__column1-2">
+            {{ page.section1 | markdownify }}
+        </div>
+        <div class="grid__column2-2">
+            <img class="image"
+                alt="{{image1_alt}}"
+                width="1440" height="1653"
+                src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image1_720 }}" 
+                srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image1_1440 }} 1440w,
+                        {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image1_720 }} 720w"
+                sizes="100vw"
+                style="padding: 0 60px; max-width: 30em">
+        </div>
+    </section>
+{% endunless %}
+
+{% unless page.section2 == nil %}
+    <section class="box box--people box--right">
+        {{ page.section2 | markdownify }}
+    </section>
+{% endunless %}
+
+
+{% unless page.section3 == nil %}
+    <section class="background-image background-image--padding" style="background-position: center right; background-size: contain; background-image: url({{site.baseurl}}/assets/work/{{page.slug}}/owd-bob-logo-white-lq.png)">
+            {{ page.section3 | markdownify }}
+    </section>
+{% endunless %}
+
+
+{% unless page.image2_2880 == nil %}
+
+    {% comment %}Good referense for images srcset and sizes: https://jakearchibald.com/2015/anatomy-of-responsive-images/{% endcomment %}
+    <img class="image"
+        alt="{{image2_alt}}"
+        width="1440" height="643"
+        src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image2_1440 }}" 
+        srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image2_2880 }} 2880w,
+                {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image2_1440 }} 1440w"
+        sizes="100vw">
+    
+{% endunless %}
+
+
+{% unless page.section4 == nil %}
+<div class="grid grid--space">
+    <div class="grid__offsetcolumn2-2 grid__offsetcolumn2-2--owd-bob flexcenter" id="lettering2" style="background-color: #222a3f">
+        <style>
+        #lettering2 svg {
+            padding: 4em;
+            max-height: 60vh;
+        }
+        </style>
+    </div>
+    <section class="grid__offsetcolumn1-2 grid__offsetcolumn1-2--small box box--business">
+        {{ page.section4 | markdownify }}
+    </section>
+
+</div>
+{% endunless %}
+
+
+{% unless page.imageline == nil %}
+ <section class="c-dark-bg flexcenter">
+     <div class="imageline">
+        {% for image in page.imageline %}
+            <div class="imageline__image">
+                <img class="image"
+                    alt="Image of projekt {{page.title}}"
+                    src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ image }}">
+            </div>
+        {% endfor %}
+    </div>
+</section> 
+{% endunless %}
+
+{% include slider.html %}
+
+{% unless page.section5 == nil %}
+    <section class="box box--center sectionspacing">
+        <div class="h4">
+            {{ page.section5 | markdownify }}
+        </div>
+    </section>
+{% endunless %}
+
+
+{% unless page.section6 == nil %}
+    <section class="sectionspacing">
+        {{ page.section6 | markdownify }}
+        
+        <p>
+        <a class="metabutton" href="mailto:{{page.author-email}}">
+            Author: <span>{{page.author}}</span>
+        </a>
+        </p>
+        
+    </section>
+{% endunless %}
+{{page.script}}
+<script>
+    if(document.getElementById('lettering2')) {
+        // var filepath = '/assets/owd-bob/feb27.svg';
+        // var filepath = '/assets/owd-bob/apr12.svg';
+        var filepath = '/assets/work/owd-bob/june16.svg';
+        new Vivus('lettering2', {
+            duration: 250, 
+            file: filepath,
+            type: 'delayed',
+            animTimingFunction: Vivus.EASE_OUT,
+        });
+    }
+</script>

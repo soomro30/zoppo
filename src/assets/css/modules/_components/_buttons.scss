@@ -76,7 +76,7 @@ $bshadow: 3px; // the size of the shadow
 	}
 
 	// Inverted button (when on signal bg)
-	&--inv {
+	&--invert {
 		span {
 			border-color: $c-white;
 			background-color: $c-signal;
@@ -107,10 +107,9 @@ $bshadow: 3px; // the size of the shadow
 			}
 		}
 	}
-
+	
 	&--nav, &--icon {
 		span {
-			padding: 0;
 			line-height: 0;
 			position: relative;
 			z-index: 2;
@@ -120,33 +119,58 @@ $bshadow: 3px; // the size of the shadow
 			width: 3em;
 			height: 3em;
 		}
+		&__line {
+			width: 100%;
+			height: 2px;
+			background-color: $c-signal;
+			transition: transform 0.3s $easeout;			
+		}
+		&:active {
+			.button--nav__line {
+				background-color: $c-white;
+			}
+		} 
 		line {
 			fill:none;
 			stroke:#5F11E8;
 			stroke-width:4;
 			stroke-miterlimit:10;
-		}
-		line {
 			transition: transform 0.3s $easeout;
 		}
-		line:nth-child(1), line:nth-child(3) {
+
+		.button--nav__line:nth-child(1), line:nth-child(1), .button--nav__line:nth-child(3), line:nth-child(3) {
 			transform-origin: top left;
 		}
-		line:nth-child(2) {
+		.button--nav__line:nth-child(2), line:nth-child(2) {
 			transform-origin: center left;
 		}
-		line:nth-child(1) {
+		.button--nav__line:nth-child(1), line:nth-child(1) {
 		}
 		&.menu-open {
-			line:nth-child(1) {
-				transform: rotate(45deg) translate3D(1.4em, -2.4em, 0);
+			.button--nav__line:nth-child(1), line:nth-child(1) {
+				transform: rotate(45deg) translate3D(2.5px, -2.5px, 0);
 			}
-			line:nth-child(2) {
+			.button--nav__line:nth-child(2), line:nth-child(2) {
 				transform: scaleX(0);
 			}
-			line:nth-child(3) {
-				transform: rotate(-45deg) translate3D(-3.5em, 0.3em, 0)
+			.button--nav__line:nth-child(3), line:nth-child(3) {
+				transform: rotate(-45deg)  translate3D(1px, 1px, 0)
 			}
+		}
+	}
+	&--nav {
+		width: 48px;
+		height: 48px;
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			justify-content: space-around;
+			padding: 12px;
+		}
+		&:focus {
+			z-index: 12;
 		}
 	}
 	&--icon {
@@ -223,11 +247,15 @@ $bshadow: 3px; // the size of the shadow
 	font-size: 0.8em;
 	font-weight: 300;
 	transition: color 0.2s, border 0.2s;
+	&a, &:visited {
+		color: #ccc;
+	}
 	&:hover {
 		border: 2px solid $c-signal;
 		span:after {
 			transform: scaleX(1);
 		}
+		&:visited, a {color: $c-signal};
 	}
 	span {
 		position: relative;
@@ -246,6 +274,7 @@ $bshadow: 3px; // the size of the shadow
 			transition: transform .7s $easeout;
 		}
 	}
+	a {color: inherit;}
 }
 
 .button + .link {
@@ -254,4 +283,8 @@ $bshadow: 3px; // the size of the shadow
 
 * + .button {
 	margin-top: $s-small;		
+}
+
+.custom-button {
+	display: inline-block;
 }

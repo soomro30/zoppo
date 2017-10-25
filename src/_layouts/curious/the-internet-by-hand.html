@@ -1,0 +1,123 @@
+---
+layout: curious
+---
+
+<!-- 
+###################################
+## Get all content (sections) from
+## the current curious-about post
+-->
+
+{% unless page.section1 == nil %}
+<div class="section section--1 sectionspacing-small">
+  
+        {{ page.section1 | markdownify }}
+  
+</div>
+{% endunless %}
+
+
+{% include slider.html %}
+
+
+{% unless page.section2 == nil %}
+<div class="section section--2 sectionspacing-small">
+    
+        {{ page.section2 | markdownify }}
+  
+</div>
+{% endunless %}
+
+{% unless page.section3 == nil %}
+<div class="section section--3 grid sectionspacing-small">
+    <div class="grid__column-large">
+        <div class="box box--people">
+            {{ page.section3 | markdownify }}
+        </div>
+    </div>
+    <div class="grid__column-small flexcenter">
+        {% comment %}Org see codepen: https://codepen.io/fullystudios/pen/NgqVrr{% endcomment %}
+        <iframe style="width: 300px; height: 366px;" src="/assets/curious-about/{{page.slug}}/frank.html" frameborder="0"></iframe>
+    </div>
+</div>
+{% endunless %}
+
+{% unless page.section4 == nil %}
+<div class="section section--4">
+
+        {{ page.section4 | markdownify }}
+
+</div>
+{% endunless %}
+
+{% unless page.divider-image_large == nil %}
+<div class="section sectionspacing-small">
+    <p><img class="image" src="/assets/curious-about/{{page.slug}}/{{page.divider-image_large}}" alt="{{page.divider-image_alt}}"></p>
+</div>
+{% endunless %}
+
+{% unless page.section5 == nil %}
+<div class="section section--5">
+    <div class="sectionspacing-small">
+        {{ page.section5 | markdownify }}
+    </div>
+    <div style="position: relative">
+    <video class="inlinevideo"
+        data-videoplayer 
+        autoplay muted playsinline loop>
+        <source src="{{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{ page.section5_video }}">
+    </video>
+    <div class="flexcenter" style="position: absolute; bottom: 2em; right: 2em; left: 2em">
+        <a href="{{page.section5_link}}" class="button"><span>Visit site</span></a>
+    </div>
+    </div>
+</div>
+
+{% endunless %}
+
+{% unless page.section6 == nil %}
+    <style>
+        #{{page.slug}}_bg {
+            background-image: url( /assets/curious-about/{{page.slug}}/{{page.section6_image_medium}});
+        }
+        @media (min-width: 800px) {
+            #{{page.slug}}_bg {
+                background-image: url( /assets/curious-about/{{page.slug}}/{{page.section6_image_large}});
+            }
+        }
+    </style>
+    <div id="{{page.slug}}_bg" class="background-image background-image--largepadding flexcenter">
+        {{ page.section6 | markdownify }}
+    </div>
+{% endunless %}
+
+{% unless page.section7 == nil %}
+<div class="section sectionspacing-small box box--center">
+    {{ page.section7 | markdownify }}
+</div>
+{% endunless %}
+
+<div class="section grid">
+    <video class="inlinevideo grid__column1-2"
+        data-videoplayer 
+        autoplay muted playsinline loop>
+        <source src="{{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{ page.section8_video1 }}">
+    </video>
+    <video class="inlinevideo grid__column2-2"
+        data-videoplayer 
+        autoplay muted playsinline loop>
+        <source src="{{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{ page.section8_video2 }}">
+    </video>
+</div>
+
+{% unless page.section8 == nil %}
+<div class="section section--8">
+    {{ page.section8 | markdownify }}
+    {% unless page.cta == nil %}
+    <p>
+        <a href="{{site.baseurl}}/contact" class="button"><span>{{page.cta}}</span></a>
+    </p>
+    {% endunless %}    
+</div>
+{% endunless %}
+ 

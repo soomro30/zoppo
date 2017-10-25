@@ -13,15 +13,15 @@ layout: page
 
 <section id="we-are-fully" class="boxgrid boxgrid--offset">
 
-    {% for employee in page.employees %}
+    {% for people in page.peoples %}
         <figure class="boxgrid__box">
-            <div class="image-loader" style="background: #c1c1c1"> <!--Change this color to an average color from the image-->
-                <img src="/assets/{{ employee.image }}" alt="{{ employee.name }}">	
+            <div class="boxgrid__image image-loader" style="background: #FFC1B4">
+                <img src="/assets/people/{{ people.image }}" alt="{{ people.name }}">	
             </div>
             <figcaption class="boxgrid__caption">
-                <h3>{{ employee.name }}</h3>
-                <p>{{ employee.title }}</p>
-                <p>Drop me a line at <a class="hyphenate" href="mailto:{{employee.email}}">{{employee.email}}</a> or give me a call on <a href="tel:{{employee.tel}}">{{employee.tel}}</a></p> 
+                <h3 class="contact-name">{{ people.name }}</h3>
+                <p class="contact-title">{{ people.title }}</p>
+                <p class="contact-details">{% unless people.email == nil %}<a class="hyphenate" href="mailto:{{people.email}}">{{people.email}}</a><br>{% endunless %}{% unless people.tel == nil %}<a href="tel:{{people.tel}}">{{people.tel}}</a>{% endunless %}</p> 
             </figcaption>
         </figure>
     {% endfor %}

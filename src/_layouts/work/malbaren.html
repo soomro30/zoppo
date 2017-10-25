@@ -132,11 +132,13 @@ layout: case
     </section>
 {% endunless %}
 
-<section class="section section--6">
+<section class="section section--6 sectionspacing-small">
     {% unless page.section6 == nil %}
             {{ page.section6 | markdownify }}
     {% endunless %}
 
+</section>
+<section class="c-dark-bg flexcenter">
     <div class="imageline">
         <div class="imageline__image">
             <img class="image" alt="{{image4_alt}}"
@@ -150,8 +152,7 @@ layout: case
             <img width="1440" height="960" alt="{{image5_alt}}" src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image5 }}">
         </div>
     </div>
-</section>
-
+</div>
 
 {% unless page.section7 == nil %}
     <section class="sectionspacing">
@@ -167,12 +168,12 @@ layout: case
 
 {% unless page.section8 == nil %}
     <section class="flexcenter">
-        <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="100%" height="4em" viewBox="0 0 100 100"><path fill="#ffde7f" d="M0 0l100 100H0"/></svg>
-        <div class="c-curiosities-bg" style="width:100%; padding: 40px 20px 60px">
+        <svg class="malbaren-toptriangle" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="100%" height="4em" viewBox="0 0 100 100"><path fill="#ffde7f" d="M0 0l100 100H0"/></svg>
+        <div class="c-curiosities-bg malbaren-skewbox">
             {{ page.section8 | markdownify }}
             {{ page.section9 | markdownify }}
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="100%" height="4em" viewBox="0 0 100 100"><path fill="#ffde7f" d="M100 100V0H0"/></svg>
+        <svg class="malbaren-bottomtriangle" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="100%" height="4em" viewBox="0 0 100 100"><path fill="#ffde7f" d="M100 100V0H0"/></svg>
     </section>
 {% endunless %}
 
@@ -196,13 +197,6 @@ layout: case
 {% unless page.section10 == nil %}
     <section class="sectionspacing" id="buttons">
         {{ page.section10 | markdownify }}
-    </section>
-{% endunless %}
-
-
-{% unless page.section11 == nil %}
-    <section class="sectionspacing">
-        {{ page.section11 | markdownify }}
         <p>
             <a class="metabutton" href="mailto:{{page.author-email}}">
                 Author: <span>{{page.author}}</span>

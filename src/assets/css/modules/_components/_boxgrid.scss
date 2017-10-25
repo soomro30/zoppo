@@ -6,7 +6,7 @@ $bgMqMedium: 800px;
 .boxgrid {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 $s-small $s-small*1.5;
+    padding: 0 $s-small*0.5 $s-small*0.5;
     margin-top: $s-small;
     margin-bottom: $s-small;
     position: relative;
@@ -14,62 +14,60 @@ $bgMqMedium: 800px;
     margin-left: auto;
     margin-right: auto;
     @include media-query($on-laptop) {
+        padding: 0 $s-small $s-small*0.5;
         margin-top: $s-small*3;
         margin-bottom: $s-small*3;
     }
     a {
         color: $c-dark;
-        // border-bottom:0.5px solid $c-signal;
     }
 
     &__header {
         width: 100%;
-        // flex: 1 0 100%;
         max-width: 100%;
         text-align: center;
         padding: $s-small 12% $s-small*0.5;
         color: $c-signal;
     }
+    a.boxgrid__box {
+        transition: transform 0.3s $easeout;
+        &:focus {
+            outline: none;
+            transform: translateY(-$s-small*0.5);
+        }
 
+    }
     &__box {
-        
-        width: 100%;
+        width: 30em;
+        max-width: 100%;
         position: relative;
-        margin-top: $s-small;
-        display: flex;
+        margin-top: $s-small*1.5;
         flex: 1 0 100%;
         margin-left: auto;
         margin-right: auto;
-        max-width: 30em;
         flex-direction: column;
         align-items: flex-start;
+        background-color: $c-white;
         @media (min-width: $bgMqMedium) {
+            margin-top: $s-small*3;
             width: auto;
-            flex: 1 0 calc(50% - #{$s-small});
-            max-width: calc(50% - #{$s-small});
-            margin-right: $s-small * 0.5;
-            margin-left: $s-small * 0.5;
+            flex: 1 0 calc(50% - #{$s-small*3});
+            max-width: calc(50% - #{$s-small*3});
+            margin-right: $s-small*1.5;
+            margin-left: $s-small*1.5;
         }
-        
-        &:after {
-            content:"";
-            background: $c-white;
-            position: absolute;
-            top: $bgShadow;
-            bottom: 0;
-            left: -$bgShadow;
-            width: $bgShadow;
-        }
+
         &:nth-of-type(even) {
             align-items: flex-end;
-            &:after {
-                left: auto;
-                right: -$bgShadow;         
-            }
             text-align: right;
             .boxgrid__caption {
                 text-align: left;
-                padding-left: $bgShadow;
+            }
+            .boxgrid__image {
+                transform: translate(-$s-small*0.5, -$s-small*0.5);
+                @media (min-width: $bgMqMedium) {
+                    transform: translate(-$s-small, -$s-small)
+                }
             }
             .boxgrid_box {
                 align-items: flex-end;
@@ -77,23 +75,29 @@ $bgMqMedium: 800px;
         }
         img {
             width: 100%;
-            // height: auto;
         }
     }
-
+    
     &__caption {
-        flex: 1 0 0%;
-    }
-
-    &__caption {
-        background: $c-white;
+        @extend .hyphenate;
+        flex: 1 0 100%;
+        min-width: 100%;
         color: $c-dark;
-        display: inline-block;
-        min-width: 80%;
-        padding: $s-small 0;
+        display: block;
+        padding: 0 $s-small*0.5 $s-small;
+        overflow: auto;
+        @media (min-width: $bgMqMedium) {
+            padding: 0 $s-small $s-small;
+        }
         h3, p {
             padding-left: 0;
         }
+    }
+    .boxgrid__image {
+        transform: translate($s-small*0.5, -$s-small*0.5);
+        @media (min-width: $bgMqMedium) {
+            transform: translate($s-small, -$s-small);
+        }                
     }
 
     // The box border effect
@@ -106,16 +110,13 @@ $bgMqMedium: 800px;
         }
         position: absolute;
         top: 0;
-        left: 12%;
-        right: 12%;
+        left: 4em;
+        right: 4em;
         height: 100%;
-        @media (min-width: $bgMqSmall) {
-            left: 12%;
-            right: 12%;
-        }
         @media (min-width: $bgMqMedium) {
-            left: 7%;
-            right: 7%;
+            top: -$s-small;
+            left: 8em;
+            right: 8em;
         }
     }
 
@@ -123,27 +124,33 @@ $bgMqMedium: 800px;
         .boxgrid__header {
             color: $c-curiosities;
         }
+        .boxgrid__box {
+            margin-top: $s-small;
+        }
         &:before {
             border-color: $c-curiosities;
-
+            top: 0;
         }
     }
 
     // The compact version used in ex the case grid under page Work
     &--compact {
+        &:before {
+            top: 0;
+        }
         .boxgrid__box {
+            margin-top: $s-small*2;
             @media (min-width: $bgMqSmall) {
                 flex: 1 0 calc(50% - #{$s-small});
                 max-width: calc(50% - #{$s-small});
                 display: flex;
                 flex-direction: column;
             }
-             @media (min-width: $bgMqMedium) {
+            @media (min-width: $bgMqMedium) {
                 flex: 1 0 calc(33% - #{$s-small});
                 max-width: calc(33% - #{$s-small});
-            }
-            &:after {
-                display: none;
+                margin-right: $s-small*0.5;
+                margin-left: $s-small*0.5;
             }
 
             .boxgrid__caption {
@@ -153,8 +160,9 @@ $bgMqMedium: 800px;
                 flex-direction: column;
                 min-width: auto;
                 width: 100%;
-                padding-left: $s-small* 0.5;
-                padding-right: $s-small* 0.5;
+                padding-top: $s-small*0.5;
+                padding-left: $s-small*0.5;
+                padding-right: $s-small*0.5;
                 text-align: center;
 
                 flex-grow: 1;
@@ -166,6 +174,9 @@ $bgMqMedium: 800px;
                 .button {
                     align-self: center;
                 }
+            }
+            .boxgrid__image {
+                transform: none;
             }
         }
     }

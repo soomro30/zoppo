@@ -1,0 +1,46 @@
+---
+layout: case
+---
+
+{% unless page.section1 == nil %}
+    <section class="sectionspacing-small">
+        <p>
+            {{ page.section1 | markdownify }}
+        </p>
+    </section>
+{% endunless %}
+
+{% unless page.youtube_IDs == nil %}
+    <section class="imagegrid imagegrid--firstlarge">
+        {% for video in page.youtube_IDs %}
+        <div class="imagegrid__image imagegrid__image--two">
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{video}}" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+{% endunless %}
+
+{% unless page.section2 == nil %}
+    <section class="sectionspacing-small">
+        <div class="box box--right box--business">
+            {{ page.section2 | markdownify }}
+        </div>
+    </section>
+{% endunless %}
+
+{% unless page.trivia == nil %}
+    <section class="imagegrid imagegrid--compact-center">
+        {% for trivia in page.trivia %}
+            <div class="imagegrid__image">
+                <video class="image" loop autoplay muted playsinline>
+                    <source src="{{ site.baseurl }}/assets/work/{{page.slug}}/{{ trivia.video }}">
+                </video>
+                <div class="caption">
+                    {{trivia.text}}
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+{% endunless %}

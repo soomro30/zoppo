@@ -2,62 +2,87 @@
 layout: contact
 title: Contact us
 pagetitle: |
-  ## This is where you find the people of Fully Studios. If you don’t know who to call, just give a ring to [+46 738 07 30 72](tel:+46738073072). Or drop a line at [hello@fullystudios.se](mailto:hello@fullystudios.se). If none of the above floats your boat, then why don’t you come for a visit?
+  ## If you want to learn more about us and you’re not sure who to call, just ring [+46 738 07 30 72](tel:+46738073072). Or drop a line at [hello@&shy;fullystudios.se](mailto:hello@fullystudios.se). Our doors and inboxes are always open to new friends.  
 
-  ### [Looking for someone special?](#we-are-fully)
+#pagetitle-link: "#we-are-fully"
+#pagetitle-linktext: Looking for someone special?
+
+sublink: "#we-are-fully"
+sublink-text: Looking for someone special?
+
 permalink: /contact/
 slug: contact
 background-color: "#FFC1B4"
 
-employees:
+peoples:
   - name: Robin Kollberg
-    image: employees/robin-kollberg.jpg
-    title: I get things done at Fully
+    image: robin-kollberg.jpg
+    title: Creative Director
     email: robin.kollberg@fullystudios.se
     tel: +46 702 53 54 60
 
   - name: Joakim Hanner
-    image: employees/joakim-hanner.jpg
-    title: I make things move at Fully
+    image: joakim-hanner.jpg
+    title: Motion & Film Director
     email: joakim.hanner@fullystudios.se
     tel: +46 738 07 30 72
 
   - name: Edīte Garjāne
-    image: employees/edite-garjane.jpg
-    title: I do strategic project management at Fully
+    image: edite-garjane.jpg
+    title: Strategic Project Manager
     email: edite.garjane@fullystudios.se
     tel: +46 723 33 95 08
 
   - name: Jonathan Asp
-    image: employees/jonathan-davis-asp.jpg
-    title: I develop and fix stuff at Fully
+    image: jonathan-davis-asp.jpg
+    title: Developer & Production Manager
     email: jonathan.asp@fullystudios.se
     tel: +46 739 48 07 05 
 
   - name: Alexander Tengner
-    image: employees/alexander-tengner.jpg
-    title: I design nice things at Fully
+    image: alexander-tengner.jpg
+    title: UX & Design Director
     email: alexander.tengner@fullystudios.se
-    tel: +46 739 58 86 73
+    tel: +46 721 71 50 32
 
   - name: Martina Milisic
-    image: employees/martina-milisic.jpg
-    title: I develop stuff at Fully
+    image: martina-milisic.jpg
+    title: Full Stack Developer
     email: martina.milisic@fullystudios.se
-    tel: +46 722 32 02 66
 
   - name: Mikael Biström
-    image: employees/mikael-bistrom.jpg
-    title: I develop stuff at Fully
+    image: mikael-bistrom.jpg
+    title: Technical Director
     email: mikael.bistrom@fullystudios.se
     tel: +46 733 60 12 62
 
   - name: Jonas Sandstedt
-    image: employees/jonas-sandstedt.jpg
-    title: I design and develop stuff done at Fully
+    image: jonas-sandstedt.jpg
+    title: Designer & Front-end Developer
     email: jonas.sandstedt@fullystudios.se
-    tel: +46 739 37 73 92
+
+  - name: Chelsea Milojkovic
+    image: chelsea-milojkovic.jpg
+    title: Copywriter (US English)
+    email: chelsea.milojkovic@fullystudios.se
+    tel: +46 721 89 49 89
+  
+  - name: Andreas Johansson
+    image: andreas-johansson.jpg
+    title: Motion Intern
+    email: andreas.johansson@fullystudios.se
+
+  - name: Yifei Wang
+    image: yifei-wang.jpg
+    title: Developer Intern
+    email: yifei.wang@fullystudios.se
+
+  #- name: Mattias Larson
+  #  image: mattias-larson.jpg
+  #  title: Motion creative
+  #  email: mattias.larson@fullystudios.se
+  #  tel: +46 735 45 97 08
 
 ---
 
-This is where you find the people of Fully Studios. If you don’t know who to call, just give a ring to+46 738 07 30 72. Or drop a line at hello@fullystudios.se. If none of the above floats your boat, then why don’t you come for a visit?
+If you want to learn more about us and you’re not sure who to call, just ring [+46 738 07 30 72](tel:+46738073072). Or drop a line at [hello@fullystudios.se](mailto:hello@fullystudios.se). Our doors and inboxes are always open to new friends. 

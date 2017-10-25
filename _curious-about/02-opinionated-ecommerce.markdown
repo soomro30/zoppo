@@ -1,7 +1,7 @@
 ---
 layout: curious/opinionated-ecommerce
 title:  "Opinionated e&#x2011;commerce"
-subtitle: "Lorem ipsum"
+subtitle: "Fully’s web store experiments"
 date:   2016-11-30 12:00:00 +0100
 categories: e-commerce, web, UX
 slug: opinionated-ecommerce
@@ -9,6 +9,7 @@ background-image_720: "hero_720.jpg"
 background-image_1440: "hero.jpg"
 background-image_2880: "hero@2x.jpg"
 background-image_color: "#eaeaea"
+shareimage: curious-about/opinionated-ecommerce/shareimage.png
 
 ingress: |
   In the past few years, Fully has been tinkering with norms of e-commerce. You might even say pursuing the holy grail of a perfect webstore. And if not “perfect,” then at least way more interesting and engaging than they currently are.
@@ -41,41 +42,22 @@ section2-image1_alt: "Image of person wearing an Atioki t-shirt"
 section2-image2: "atioki-slide1.jpg"
 section2-image2_alt: "Image of person wearing an Atioki t-shirt"
 
-section2-image3: "atioki-slide2.jpg"
+section2-image3: "atioki-slide6.jpg"
 section2-image3_alt: "Image of person wearing an Atioki t-shirt"
+
+section2-image4: "atioki-slide2.jpg"
+section2-image4_alt: "Image of person wearing an Atioki t-shirt"
 
 
 section2-image-sub: |
   #### The images don’t return to their initial state, but rather stay as you left them. This provides the feeling and visual effect of ruffling the products and creating a ripple in the webstore. 
 
 section3: |
-  ## Obscured price tags
-
-  Knowing the price directly ruins the romance a bit, no? 
-
-  In a physical store, you take in the beauty and proportions of a garment, the quality of the fabric in your hands, and maybe even test the fit before you look at the price tag. You can fall in love first. Or, at the very least, show a bit of interest. 
-
-  In the Atioki store, we designed it so you have to click on the picture to reveal its price, similar to flipping over the price tag. 
-
-section4: |
-  ### Buy it, it’s gone 
+  ## Buy it, it’s gone 
 
   When you take a unique item off the shelf, it’s gone. It’s yours. The next person can’t have it.   
 
   This kind of transaction can be invigorating. We wanted to take it one step further in Atioki by leaving a trace. When you revisit the store, the item you purchased will be overlaid with grey. It’s your conquest. Others can see it, but they will never have it. 
-
-section4-image1: "atioki-slide4.jpg"
-section4-image1_alt: "Image of person wearing an Atioki t-shirt"
-
-section4-image2: "atioki-slide5.jpg"
-section4-image2_alt: "Image of person wearing an Atioki t-shirt"
-
-section4-image3: "atioki-slide6.jpg"
-section4-image3_alt: "Image of person wearing an Atioki t-shirt"
-
-section4-image4: "atioki-slide7.jpg"
-section4-image4_alt: "Image of person wearing an Atioki t-shirt"
-
 
 section5: |
   ### Opening hours
@@ -100,12 +82,15 @@ section7: |
 
   This one print might not be to everyone’s liking, but that is the essence of opinionated design. We wanted to see how such an opinionated choice would play out, in an era where Quantity ostensibly reigns supreme. 
 
-section7-image_720: "hero_720.jpg"
-section7-image_1440: "hero.jpg"
-section7-image_2880: "hero@2x.jpg"
+section7-image_720: "owd_bob_store_720.jpg"
+section7-image_1440: "owd_bob_store.jpg"
+section7-image_2880: "owd_bob_store@2x.jpg"
 section7-image_color: "#eaeaea"
 
 header-scripts: <script src='https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.1/vivus.min.js'></script>
+
+section8: | 
+  Owd Bob and Atioki taught us a great deal, and confirmed our hunches that people are craving different modes of online shopping. There’s so much reimagining that could be done in this realm, and we have a lot more open-ended ideas we’d like to test. Alas, these will have to wait for a future Fully lab or, even more ideally, a groovy client will come along with the desire to do e-commerce in a new way. In that case, let the wild rumpus start.
 
 ---
 

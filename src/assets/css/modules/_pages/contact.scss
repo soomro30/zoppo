@@ -1,1 +1,9 @@
-// Example of a page specific page
+.contact-title {
+    margin-top: 0;
+}
+.contact-details {
+    font-size: 0.9em;
+    @include media-query($on-palm) {
+        font-size: inherit;
+    }
+}

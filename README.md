@@ -10,12 +10,14 @@ This starter uses webpack, react, and jekyll.
 
 It also includes a multi threaded rake task to sync webpack and jekyll.
 
+
 ## System Preparation
 Only if you haven't installed Jekyll, node or Gulp installed on your machine:
 
 1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
 2. [NodeJS](http://nodejs.org) - use the installer. 7.2.1 - nvm
 4. [Bundle](http://bundler.io/) -  `gem install bundler`
+
 
 ## Local Installation
 You may have to update ruby and all your local gems if they are to old:
@@ -37,7 +39,7 @@ Update gems:
 3. Inside the directory, run: 
 - `nvm use 7.2.1`
 - if you dont have node 7.2.1 run `nvm install 7.2.1`
-- `npm install -g webpack`
+- if you dont have webpack run `npm install -g webpack`
 - if you dont have bundler run `gem install bundler` (see above)
 - `npm install`
 - `bundle install`
@@ -45,7 +47,8 @@ Update gems:
 
 ## Usage 
 To run in dev mode: `rake start`
-To build: `rake b`
+To build for deployment: `rake build`
+
 
 #### Error?
 If nothing happens after 20s when you run `rake start`, try run `rake b`. If you get following error:
@@ -62,6 +65,15 @@ export LANG=sv_SE.UTF-8
 5. Restart you terminal
 4. run `locale` and confirm the changes. 
 
+Error: ```jekyll 3.5.0 | Error:  undefined method `registers' for nil:NilClass```
+1. gem install jekyll -v 3.5.2
+2. bundle update jekyll
+
+
+## Tips and tricks
+* Breake browser cache: simple add this string appending to a file url: `?{{site.time | date: '%s%N'}}` eg `<script src="{{ boundle_src | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>`
+
+
 **jekyll**
 
 As this is just a Jekyll project, you can use any of the commands listed in their [docs](http://jekyllrb.com/docs/usage/)
@@ -69,8 +81,8 @@ As this is just a Jekyll project, you can use any of the commands listed in thei
 
 ## Manual deployment
 1. in _config.yml, make sure the baseurl is correct
-2. run rake b
-3. Move all files in pulic to the server
+2. rake build
+3. Move all files in pulic to the server EXCEPT robots.txt
 
 
 ### Markdown
