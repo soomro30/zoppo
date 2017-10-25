@@ -1,35 +1,27 @@
-fullystudios.github.io
+[fullystudios.se](https://fullystudios.se)
 =============================
 Website for the Swedish agency Fully Studios
 
-Fully Digital site is based on Jekyll, GulpJS, SASS, AutoPrefixer &amp; BrowserSync
-
-## Jekyll Starter
-
-This starter uses webpack, react, and jekyll.
-
-It also includes a multi threaded rake task to sync webpack and jekyll.
+Fully Digital site is build on Jekyll in combination with Webpack and Babel
 
 
 ## System Preparation
 Only if you haven't installed Jekyll, node or Gulp installed on your machine:
 
-1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
-2. [NodeJS](http://nodejs.org) - use the installer. 7.2.1 - nvm
+1. [Jekyll](http://jekyllrb.com/) - v3.5.2 `$ gem install jekyll`
+2. [NodeJS](http://nodejs.org) - v7.2.1 [Download here](https://nodejs.org/en/download/)
 4. [Bundle](http://bundler.io/) -  `gem install bundler`
+5. [Ruby](https://www.ruby-lang.org/) v2.4.1. Instructions for installation:
 
-
-## Local Installation
-You may have to update ruby and all your local gems if they are to old:
-
-Project requires ruby v2.4.1. See instructions for installation below
 Update Ruby using rvm:
 ```\curl -sSL https://get.rvm.io | bash -s stable```
 ```rvm install ruby-2.4.1```
 ```rvm use ruby-2.4.1```
 
-If you get problems with "WARN: Unresolved spec during Gem...", try running this to clean up old gems:
-```bundle clean --force``
+
+## Local Installation
+You may have to update ruby and all your local gems if they are to old:
+
 
 Update gems:
 ```gem update```
@@ -50,7 +42,10 @@ To run in dev mode: `rake start`
 To build for deployment: `rake build`
 
 
-#### Error?
+## Error?
+If you get this problem `WARN: Unresolved spec during Gem...`, try running this to clean up old gems:
+```bundle clean --force``
+
 If nothing happens after 20s when you run `rake start`, try run `rake b`. If you get following error:
 ```jekyll 3.4.3 | Error:  "\xE6" on US-ASCI```
 Do the following:
@@ -74,10 +69,16 @@ Error: ```jekyll 3.5.0 | Error:  undefined method `registers' for nil:NilClass``
 * Breake browser cache: simple add this string appending to a file url: `?{{site.time | date: '%s%N'}}` eg `<script src="{{ boundle_src | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>`
 
 
-**jekyll**
+#### jekyll
 
-As this is just a Jekyll project, you can use any of the commands listed in their [docs](http://jekyllrb.com/docs/usage/)
+As this is just a Jekyll project, you can use any of the commands listed in their [docs](http://jekyllrb.com/docs/usage/). But notice that the js files wont update because they is compiled with Webpack and Babel to ES5.
 
+#### Markdown
+Get highlighting in markdown files in Sublime:
+1. Install Package Markdown Extended
+2. Activatel package ctrl + shift + p and select Markdown Extended
+3. Set default: Navigate through the following menus in Sublime Text: View -> Syntax -> Open all with current extension as... -> Markdown Extended
+...
 
 ## Manual deployment
 1. in _config.yml, make sure the baseurl is correct
@@ -85,12 +86,6 @@ As this is just a Jekyll project, you can use any of the commands listed in thei
 3. Move all files in pulic to the server EXCEPT robots.txt
 
 
-### Markdown
-Get highlighting in markdown files in Sublime:
-1. Install Package Markdown Extended
-2. Activatel package ctrl + shift + p and select Markdown Extended
-3. Set default: Navigate through the following menus in Sublime Text: View -> Syntax -> Open all with current extension as... -> Markdown Extended
-...
 
 
 ## CREDITS:
