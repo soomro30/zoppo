@@ -72,6 +72,11 @@ peoples:
     title: Motion Intern
     email: andreas.johansson@fullystudios.se
 
+  - name: Yifei Wang
+    image: yifei-wang.jpg
+    title: Developer Intern
+    email: yifei.wang@fullystudios.se
+
   #- name: Mattias Larson
   #  image: mattias-larson.jpg
   #  title: Motion creative
