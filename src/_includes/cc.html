@@ -11,6 +11,8 @@
         {% comment %}<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} {% endcomment %}
         {% comment %}<span class="categories">{{ page.categories }}<span></p>{% endcomment %}
         <a class="button" href="{{ cc.url | prepend: site.baseurl }}"><span>Read all about it</span></a>
+        <a href="{{ site.curiousities | prepend: site.baseurl }}" class="link link--next link--dark"><span>View all curiousities</span><svg class="link--icon"><use xlink:href="#icon-arrow-right"></use></svg></a>
+        
         
     </header>
 

@@ -198,41 +198,46 @@ $bshadow: 3px; // the size of the shadow
 		transition: transform 0.4s $cb-ease_out;
 		transform: translateX(-1em) scaleX(0);
 		transform-origin: top left;
-		// opacity: 0;
 	}
 	&:hover {
 		color: $c-signal;
 		&:before {
 			transform: translateX(0) scaleX(1);
-			// opacity: 1;
 		}
-		&:after {
+		.link--icon {
 			transform: translateX(0.5em);
 		}
 	}
-	&--next {
-		&:after {
-			content: "";
-			display: inline-block;
-			margin-left: $s-small*0.25;
-			width: 1em; 
-			height: 0.5em;
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE2IDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDMuNTI4YzAgLjA4Ny0uMDMuMTYtLjA5My4yMjJsLTMuNTU1IDMuMjc4Yy0uMS4wODctLjIwNy4xMDUtLjMyNC4wNTYtLjExOC0uMDU2LS4xNzYtLjE0NS0uMTc2LS4yN1Y0Ljc0MkguMjk2Qy4yMSA0Ljc0LjE0IDQuNzE0LjA4MyA0LjY2LjAyOCA0LjYwMiAwIDQuNTMgMCA0LjQ0NVYyLjY2N2MwLS4wODYuMDI4LS4xNTcuMDgzLS4yMTNDLjE0IDIuNC4yMSAyLjM3LjI5NiAyLjM3aDExLjU1NlYuMjk4YzAtLjEzLjA1OC0uMjIuMTc2LS4yNy4xMTctLjA0OC4yMjUtLjAzMy4zMjQuMDQ4bDMuNTU1IDMuMjRjLjA2Mi4wNjIuMDkzLjEzMy4wOTMuMjEzeiIgZmlsbD0iIzVGMTBFOCIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
-			transition: transform 0.4s $cb-ease_out;
-		}
+	&--icon {
+		fill: currentColor;
+		display: inline-block;
+		margin-left: $s-small*0.25;
+		width: 1em; 
+		height: 0.5em;
+		transition: transform 0.4s $cb-ease_out;
 	}
 	&--invert {
 		color: $c-white;
 		&:before {
 			background-color: $c-white;
 		}
-		&.link--next:after {
-			background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE2IDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDMuNTI4YzAgLjA4Ny0uMDMuMTYtLjA5My4yMjJsLTMuNTU1IDMuMjc4Yy0uMS4wODctLjIwNy4xMDUtLjMyNC4wNTYtLjExOC0uMDU2LS4xNzYtLjE0NS0uMTc2LS4yN1Y0Ljc0MkguMjk2Qy4yMSA0Ljc0LjE0IDQuNzE0LjA4MyA0LjY2LjAyOCA0LjYwMiAwIDQuNTMgMCA0LjQ0NVYyLjY2N2MwLS4wODYuMDI4LS4xNTcuMDgzLS4yMTNDLjE0IDIuNC4yMSAyLjM3LjI5NiAyLjM3aDExLjU1NlYuMjk4YzAtLjEzLjA1OC0uMjIuMTc2LS4yNy4xMTctLjA0OC4yMjUtLjAzMy4zMjQuMDQ4bDMuNTU1IDMuMjRjLjA2Mi4wNjIuMDkzLjEzMy4wOTMuMjEzeiIgZmlsbD0iI2ZmZmZmZiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
+		&.link--next {
+			color: $c-white;
 		}
 		&:hover {
 			color: $c-white;
+		}
+	}
+	&--dark {
+		color: $c-white;
+		&:before {
+			background-color: $c-dark;
+		}
+		&.link--next {
+			color: $c-dark;
+		}
+		&:hover {
+			color: $c-dark;
 		}
 	}
 }

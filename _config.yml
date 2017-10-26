@@ -34,6 +34,7 @@ case_highlight3_id: 2
 # Links
 works: "/work"
 about: "/about"
+curiousities: "/curiousities"
 
 # Custom post types 
 collections:

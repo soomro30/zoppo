@@ -140,20 +140,29 @@ Standard button:
 </div>
 <br>
 Link button:
-<a href="#" class="link link--next"><span>View all cases</span></a>
+<a href="#" class="link link--next"><span>View all cases</span><svg class="link--icon"><use xlink:href="#icon-arrow-right"></use></svg></a>
 
 ``` html
-<a href="#" class="link link--next"><span>View all cases</span></a>
+<a href="#" class="link link--next"><span>View all cases</span><svg class="link--icon"><use xlink:href="#icon-arrow-right"></use></svg></a>
 ```
 
 <div class="c-signal-bg" style="padding: 4em" markdown="1">
 <p>Inverted link:
-<a href="#" class="link link--next link--invert"><span>View all cases</span></a>
+<a href="#" class="link link--next link--invert"><span>View all cases</span><svg class="link--icon"><use xlink:href="#icon-arrow-right"></use></svg></a>
 </p>
  ``` html
-<a href="#" class="link link--next link--invert"><span>View all cases</span></a>
+<a href="#" class="link link--next link--invert"><span>View all cases</span><svg class="link--icon"><use xlink:href="#icon-arrow-right"></use></svg></a>
 ```
 </div>
+
+<br>
+<p>Dark link:
+<a href="#" class="link link--next link--dark"><span>View all cases</span><svg class="link--icon"><use xlink:href="#icon-arrow-right"></use></svg></a>
+</p>
+ ``` html
+<a href="#" class="link link--next link--dark"><span>View all cases</span><svg class="link--icon"><use xlink:href="#icon-arrow-right"></use></svg></a>
+```
+
 <br>
 
 <header class="ds-header" markdown='1'>
