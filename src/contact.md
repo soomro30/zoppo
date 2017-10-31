@@ -60,6 +60,11 @@ peoples:
     image: jonas-sandstedt.jpg
     title: Designer & Front-end Developer
     email: jonas.sandstedt@fullystudios.se
+  
+  - name: Jörgen Hansson
+    image: jorgen-hansson.jpg
+    title: Front-end Developer
+    email: jorgen.hansson@fullystudios.se
 
   - name: Chelsea Milojkovic
     image: chelsea-milojkovic.jpg
