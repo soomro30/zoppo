@@ -58,7 +58,7 @@ peoples:
 
   - name: Jonas Sandstedt
     image: jonas-sandstedt.jpg
-    title: Designer & Front-end Developer
+    title: Web & UI Animator
     email: jonas.sandstedt@fullystudios.se
   
   - name: Jörgen Hansson
