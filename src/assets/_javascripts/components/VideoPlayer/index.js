@@ -2,10 +2,10 @@ module.exports =
 class VideoPlayer {
 	constructor () {
         // console.log('test');
-        this.triggerTime = 6.2;
-        this.videoDuration = 9.04; // instead of reading el.duration that is a bit buggy in WebKit webview
-        this.loopTime = 1.44; // seconds from the end that the film gonna loop from | 07:15 = 7.6 - 09:04 = 9.04
-        this.loopFrom = this.videoDuration - this.loopTime;
+        this.triggerTime = 0.5;
+        this.videoDuration = 18; // instead of reading el.duration that is a bit buggy in WebKit webview
+        // this.loopTime = 1.44; // seconds from the end that the film gonna loop from | 07:15 = 7.6 - 09:04 = 9.04
+        // this.loopFrom = this.videoDuration - this.loopTime;
         this.videoModal = document.querySelector('[data-videomodal]');
         if (!this.videoModal) return;
         this.modalIsTriggered = false;
@@ -18,9 +18,9 @@ class VideoPlayer {
     // Lissen for the video to start playing, and loop it when it ends
     setupEvents (el) {
         el.addEventListener('timeupdate', this.modalTrigger.bind(this, el));
-        el.addEventListener('ended', evt => {
-            this.videoLoop(el);
-        });
+        // el.addEventListener('ended', evt => {
+        //     this.videoLoop(el);
+        // });
 
         // Reduce motion / pause video
         var motionQuery = matchMedia('(prefers-reduced-motion)');
@@ -71,8 +71,8 @@ class VideoPlayer {
 
 
     videoLoop (el) {
-        el.currentTime = this.loopFrom;
-        el.play();
-        el.currentTime = this.loopFrom;
+        // el.currentTime = this.loopFrom;
+        // el.play();
+        // el.currentTime = this.loopFrom;
     }
 }

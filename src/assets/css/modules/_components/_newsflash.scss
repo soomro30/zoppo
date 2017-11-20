@@ -2,7 +2,7 @@
     position: absolute;
     bottom: -15vw;
     margin-left: $s-small;
-    padding: $s-small;
+    padding: $s-small*0.5;
     right: $s-small;
     z-index: 10;
     font-size: 0.7em;
@@ -28,11 +28,12 @@
     //         margin-top: $s-small;
     //     }	
     // }
-   
+
     @media (min-height: 480px) {
-        bottom: -5vw;
+        bottom: -20vw;
     }
     @include media-query($on-laptop) {
+        padding: $s-small;
         bottom: $s-small;
         right: $s-small * 2;
         // padding: $s-small 0;

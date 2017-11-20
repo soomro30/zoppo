@@ -61,16 +61,12 @@ $animTime: .3s;
     }
     &__list {
         position: absolute;
-        top: 0;
+        top: $s-small*2;
         left: 0;
         z-index: 3;
         list-style-type: none;
-        margin: $s-small 0 $s-small*2;
+        margin: 20px 0 $s-small*2;
         padding: 0;
-        @media (min-height: 480px) {
-            top: $s-small*2;
-            margin: $s-small*2 0 $s-small*2;
-        }
         @media (min-width: $on-laptop) and (min-height: 445px) {
             bottom: 0;
             top: auto;
@@ -83,7 +79,7 @@ $animTime: .3s;
     &__link, &__overlay {
         @extend .h2;
         color: $c-white;
-        padding: $s-small*0.5 $s-small;
+        padding: $s-small*0.25 $s-small;
         @include media-query($on-laptop) {
             padding: $s-small*0.5 $s-small*2;        
         }
