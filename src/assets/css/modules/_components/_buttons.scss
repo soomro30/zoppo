@@ -107,6 +107,22 @@ $bshadow: 3px; // the size of the shadow
 			}
 		}
 	}
+
+	&--transparent {
+		span {
+			border-color: $c-white;
+			background-color: $c-dark;
+			color: $c-white;
+		}
+		&:after {
+			background-color: $c-white;
+		}
+		&:active {
+			span {
+				color: $c-dark;
+			}
+		}
+	}
 	
 	&--nav, &--icon {
 		span {
