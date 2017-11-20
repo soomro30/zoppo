@@ -3,7 +3,7 @@ class VideoPlayer {
 	constructor () {
         // console.log('test');
         this.triggerTime = 0.5;
-        this.videoDuration = 18; // instead of reading el.duration that is a bit buggy in WebKit webview
+        this.videoDuration = 2; // instead of reading el.duration that is a bit buggy in WebKit webview
         // this.loopTime = 1.44; // seconds from the end that the film gonna loop from | 07:15 = 7.6 - 09:04 = 9.04
         // this.loopFrom = this.videoDuration - this.loopTime;
         this.videoModal = document.querySelector('[data-videomodal]');

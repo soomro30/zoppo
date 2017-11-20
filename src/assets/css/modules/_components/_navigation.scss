@@ -80,6 +80,7 @@ $animTime: .3s;
         @extend .h2;
         color: $c-white;
         padding: $s-small*0.25 $s-small;
+        text-shadow: 0px 8px 20px rgba($c-dark, 0.25);
         @include media-query($on-laptop) {
             padding: $s-small*0.5 $s-small*2;        
         }
