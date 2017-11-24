@@ -6,6 +6,7 @@ $animTime: .3s;
     position: relative;
     overflow: hidden;
     min-height: 100vh;
+    padding: $s-small;
     //  Hacky way to prevent page from scrolling when URL-bar disapears.
     // -7vw is the magic number for the URL-bar
     @media (max-device-aspect-ratio: 3/4) {
@@ -24,6 +25,9 @@ $animTime: .3s;
     }
 
     @include media-query($on-laptop) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
         min-height: 100vh;
     }
 
@@ -60,16 +64,17 @@ $animTime: .3s;
         }
     }
     &__list {
-        position: absolute;
-        top: $s-small*2;
-        left: 0;
+        position: relative;
+        display: inline-block;
+        //top: $s-small*3;
+        //left: 0;
         z-index: 3;
         list-style-type: none;
-        margin: 20px 0 $s-small*2;
+        margin: 100px 0 $s-small*2;
         padding: 0;
         @media (min-width: $on-laptop) and (min-height: 445px) {
-            bottom: 0;
-            top: auto;
+           // bottom: 0;
+            ///top: auto;
             margin: 0 0 $s-small*3;
         }
     }
@@ -79,8 +84,8 @@ $animTime: .3s;
     &__link, &__overlay {
         @extend .h2;
         color: $c-white;
-        padding: $s-small*0.25 $s-small;
-        text-shadow: 0px 8px 20px rgba($c-dark, 0.25);
+        padding: $s-small*0.25 0;
+        text-shadow: 0px 8px 20px rgba($c-dark, 0.40);
         @include media-query($on-laptop) {
             padding: $s-small*0.5 $s-small*2;        
         }
@@ -120,7 +125,7 @@ $animTime: .3s;
         height: 100%;
         position: absolute;
         top: 0;
-        left: $s-small;
+        left: -$s-small * 0.5;
         // z-index: -1;
         stroke: $c-people;
         stroke-width:7px;
@@ -128,7 +133,11 @@ $animTime: .3s;
 
         transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 0, 0.1, 0.99);
         pointer-events: none;
-        
+    
+        @include media-query($on-laptop) {
+           left: $s-small;
+        }
+
         // Critical css
         // stroke-dasharray: 329px, 340px;
         // stroke-dashoffset: 330px; // max 320 - px is needed in Edge
@@ -148,6 +157,8 @@ $animTime: .3s;
 
 #startmenu {
     z-index: 10;
+    height: auto;
+    min-height:100vh;
     .navigation__item {
         opacity: 0;
         animation: slidedown $animTime*2 0s forwards cubic-bezier(0.16, 0, 0.28, 0.99);
@@ -161,6 +172,9 @@ $animTime: .3s;
                 animation-delay: #{$i / 15}s;
             }
         }
+    }
+    .navigation__list{
+        margin-top: 0;
     }
 }
 

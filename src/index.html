@@ -13,23 +13,23 @@ title: Motion on the web
             <source src="{{ site.baseurl }}/assets/hero/intro_train.mp4">
             <img src="{{ site.baseurl }}/assets/hero/intro_train.jpg">
         </video>
-    </nav>
-    {% unless site.newsflash_buttonurl == nil %}
-    <div class="newsflash" data-videomodal>
-    {% else %}
-    <div class="newsflash" data-videomodal>
-    {% endunless %}
-    
-        {{ site.newsflash | markdownify }}
-        {% unless site.newsflash_buttontext == nil %}
-            <a href="{{site.newsflash_buttonurl}}" class="button button--transparent"><span>{{ site.newsflash_buttontext }}</span></a>
+        {% unless site.newsflash_buttonurl == nil %}
+        <div class="newsflash" data-videomodal>
+        {% else %}
+        <div class="newsflash" data-videomodal>
         {% endunless %}
-    
-    {% unless site.newsflash_buttonurl == nil %}
-    </div>
-    {% else %}
-    </div>
-    {% endunless %}
+        
+            {{ site.newsflash | markdownify }}
+            {% unless site.newsflash_buttontext == nil %}
+                <a href="{{site.newsflash_buttonurl}}" class="button button--transparent"><span>{{ site.newsflash_buttontext }}</span></a>
+            {% endunless %}
+        
+        {% unless site.newsflash_buttonurl == nil %}
+        </div>
+        {% else %}
+        </div>
+        {% endunless %}
+    </nav>
 </div>
 
 {% include cc.html %}
