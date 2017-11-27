@@ -9,7 +9,7 @@ $animTime: .3s;
     padding: $s-small;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     //  Hacky way to prevent page from scrolling when URL-bar disapears.
     // -7vw is the magic number for the URL-bar
     @media (max-device-aspect-ratio: 3/4) {
@@ -45,7 +45,8 @@ $animTime: .3s;
     //     z-index:1;
     // }
     &__video { 
-        background-color: $c-dark;
+        // background-color: $c-dark;
+        background-color: #100F36; // for the train bg
         position: absolute;
         top: 0;
         left: 0;
@@ -162,7 +163,7 @@ $animTime: .3s;
     z-index: 10;
     height: auto;
     background-color:#0d0d3a;
-    
+    justify-content: space-between;
     //  Hacky way to prevent page from scrolling when URL-bar disapears.
     // -7vw is the magic number for the URL-bar
     @media (max-device-aspect-ratio: 3/4) {
@@ -198,11 +199,11 @@ $animTime: .3s;
         margin-top: 0;
     }
 
-    .navigation__video {
-        @media (max-aspect-ratio: 16/9) { // Portrait
-            height: 80%;
-        }
-    }
+    // .navigation__video {
+    //     @media (max-aspect-ratio: 16/9) { // Portrait
+    //         height: 80%;
+    //     }
+    // }
 }
 
 #menu {

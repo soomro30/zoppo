@@ -4,7 +4,8 @@
   "description": "A jekyll based project boilerplate.",
   "main": "bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "rake start",
+    "build": "rake build"
   },
   "repository": {
     "type": "git",
