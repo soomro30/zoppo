@@ -93,5 +93,6 @@ autoprefixer:
   - ios_saf 9
   - ios_saf 8
   - ios_saf 7
+  - IE 11
 
 exclude: ['node_modules', 'webpack', 'Gemfile', 'Gemfile.lock', 'Rakefile']

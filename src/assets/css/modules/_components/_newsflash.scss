@@ -6,14 +6,14 @@
     right: $s-small;
     z-index: 10;
     font-size: 0.9em;
-    width: 100%;
+    width: 38em;
     // background-color: $c-white;
     // padding: $s-small;
     // text-align: center;
     transform: translate3D(0, 20%, 0) scale(0.8);
     opacity: 0;
     transition: transform 1s $bounce, opacity 0.4s;
-    max-width: 38em;
+    max-width: 100%;
     border: 2px solid $c-white;
     color: $c-white;
 
@@ -29,6 +29,9 @@
     //         margin-top: $s-small;
     //     }	
     // }
+    * {
+        max-width: 100%;
+    }
     h3 {
         font-size: 2em;
     }
