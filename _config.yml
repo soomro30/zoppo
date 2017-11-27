@@ -9,7 +9,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 # baseurl: "/fullystudios.github.io/public/" # for demo site on demo.fullyflared.se/fullystudios
 url: "https://fullystudios.se" # the base hostname & protocol for your site
 absolute_path: "https://fullystudios.se" # should be https://fullystudios.se on the live site
-shareimage: "images/fully-studios-facebook-share-image.png"
+shareimage: "images/fully-studios-facebook-share-image-v2.png"
 twitter: "https://twitter.com/fullyflared_se"
 github:  "https://github.com/fullystudios"
 facebook: "https://www.facebook.com/fullystudios/"
@@ -22,7 +22,7 @@ newsflash: |
   Stockholmers, hit us up! We’ll bring you a snack from the onboard bistro.
 
 newsflash_buttontext: Contact Sthlm office
-newsflash_buttonurl: joakim.hanner@fullystudios.se
+newsflash_buttonurl: mailto:joakim.hanner@fullystudios.se
 
 # Papricaklubben
 case_highlight1_id: 5
