@@ -13,6 +13,13 @@ class VideoPlayer {
         this.videoModal.classList.remove('newsflash--open');
         this.videoElement = document.getElementById("startvideo");
         this.setupEvents(this.videoElement);
+
+        // Set fixed height on video for iOS 7+ for train video apect ratio 3:5
+        this.videoContainer = document.getElementById('startmenu');
+        if (navigator.userAgent.match(/(iPad|iPhone|iPod touch);.*CPU.*OS 7_\d/i) ) {
+            this.videoElement.width = this.videoContainer.offsetHeight * 1.67;
+        }
+
     } 
     
     // Lissen for the video to start playing, and loop it when it ends

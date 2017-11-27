@@ -89,6 +89,9 @@ plugins_dir:
 # plugin settings
 autoprefixer:
   browsers:
-  - last 2 versions
+  - last 3 versions
+  - ios_saf 9
+  - ios_saf 8
+  - ios_saf 7
 
 exclude: ['node_modules', 'webpack', 'Gemfile', 'Gemfile.lock', 'Rakefile']
