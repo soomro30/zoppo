@@ -7,6 +7,9 @@ $animTime: .3s;
     overflow: hidden;
     min-height: 100vh;
     padding: $s-small;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     //  Hacky way to prevent page from scrolling when URL-bar disapears.
     // -7vw is the magic number for the URL-bar
     @media (max-device-aspect-ratio: 3/4) {
@@ -25,9 +28,9 @@ $animTime: .3s;
     }
 
     @include media-query($on-laptop) {
-        display: flex;
         justify-content: flex-start;
         align-items: flex-end;
+        flex-direction: row;
         min-height: 100vh;
     }
 
@@ -50,16 +53,16 @@ $animTime: .3s;
         height: 100%;
         z-index: 2;
         margin-top: 0;
-        @media (min-aspect-ratio: 16/9) {
+        @media (min-aspect-ratio: 16/9) { // Landscape
             width: 100%;
             height: auto;
-            transform: translateY(-25%); // focus on the stubbe
+            transform: translateY(-25%); // focus on the stubbe/train
             top: 25%;
         }
-        @media (max-aspect-ratio: 16/9) {
+        @media (max-aspect-ratio: 16/9) { // Portrait
             width: auto;
             height: 100%;
-            transform: translateX(-75%);  // focus on the stubbe
+            transform: translateX(-75%);  // focus on the stubbe/train
             left: 75%;
         }
     }
@@ -70,7 +73,7 @@ $animTime: .3s;
         //left: 0;
         z-index: 3;
         list-style-type: none;
-        margin: 100px 0 $s-small*2;
+        margin: 100px 0 $s-small;
         padding: 0;
         @media (min-width: $on-laptop) and (min-height: 445px) {
            // bottom: 0;
@@ -158,7 +161,25 @@ $animTime: .3s;
 #startmenu {
     z-index: 10;
     height: auto;
-    min-height:100vh;
+    background-color:#0d0d3a;
+    
+    //  Hacky way to prevent page from scrolling when URL-bar disapears.
+    // -7vw is the magic number for the URL-bar
+    @media (max-device-aspect-ratio: 3/4) {
+        min-height: (120vw * 1.333 - 6vw);
+    }
+    @media (max-device-aspect-ratio: 2/3) {
+        min-height: (120vw * 1.5 - 6vw);
+    }
+    //ex iPhone 5
+    @media (max-device-aspect-ratio: 10/16) {
+        min-height: (120vw * 1.6 - 6vw);
+    }
+    //ex iPhone 6, Nexus 5X, Galaxy S5
+    @media (max-device-aspect-ratio: 9/16) {
+        min-height: (120vw * 1.778 - 6vw);
+    }
+
     .navigation__item {
         opacity: 0;
         animation: slidedown $animTime*2 0s forwards cubic-bezier(0.16, 0, 0.28, 0.99);
@@ -175,6 +196,12 @@ $animTime: .3s;
     }
     .navigation__list{
         margin-top: 0;
+    }
+
+    .navigation__video {
+        @media (max-aspect-ratio: 16/9) { // Portrait
+            height: 80%;
+        }
     }
 }
 
