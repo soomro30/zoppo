@@ -10,6 +10,7 @@ $animTime: .3s;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: flex-start;
     //  Hacky way to prevent page from scrolling when URL-bar disapears.
     // -7vw is the magic number for the URL-bar
     @media (max-device-aspect-ratio: 3/4) {
@@ -147,12 +148,16 @@ $animTime: .3s;
         // stroke-dashoffset: 330px; // max 320 - px is needed in Edge
     }
     .menu-work ~ .wave-svg { stroke: lighten($c-signal, 10%); }
-    .menu-work:hover ~ .wave-svg, .menu-work:focus ~ .wave-svg { stroke-dashoffset: 182px; }
+    .menu-work:hover ~ .wave-svg, .menu-work:focus ~ .wave-svg { stroke-dashoffset: 132px; }
     .menu-about ~ .wave-svg { stroke: $c-business; }
-    .menu-about:hover ~ .wave-svg, .menu-about:focus ~ .wave-svg { stroke-dashoffset: 148px; }
+    .menu-about:hover ~ .wave-svg, .menu-about:focus ~ .wave-svg { stroke-dashoffset: 111px; }
     .menu-curiosities ~ .wave-svg { stroke: $c-curiosities; }
-    .menu-contact:hover ~ .wave-svg, .menu-contact:focus ~ .wave-svg { stroke-dashoffset: 108px; }
-
+    .menu-contact:hover ~ .wave-svg, .menu-contact:focus ~ .wave-svg { stroke-dashoffset: 38px; }
+    @media (min-width: $on-laptop) {
+        .menu-work:hover ~ .wave-svg, .menu-work:focus ~ .wave-svg { stroke-dashoffset: 182px; }
+        .menu-about:hover ~ .wave-svg, .menu-about:focus ~ .wave-svg { stroke-dashoffset: 148px; }
+        .menu-contact:hover ~ .wave-svg, .menu-contact:focus ~ .wave-svg { stroke-dashoffset: 108px; }
+    }
     &.menu-open {
         z-index: 15;
     }
