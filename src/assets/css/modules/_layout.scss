@@ -337,8 +337,10 @@ $grh: 5vh;
          }
     }
     &__logoanim {
-         width: calc(7em + 3vw);
-         height: calc(7em + 3vw);
+        width: 7em;
+        height: 7em;
+        width: calc(7em + 3vw);
+        height: calc(7em + 3vw);
     }
     &__svg {
         fill: $c-white;

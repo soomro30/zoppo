@@ -30,7 +30,7 @@ layout: page
 
 
 <div class="map__container">
-    <h3 class="map__header center">Here is our office, swing by!</h3>
+    <h3 class="map__header center">Here are our offices, swing by!</h3>
     <div class="map flexcenter center" id="g_map">
         {% comment %}fallback text{% endcomment %}
         Visit us at:<br>
@@ -42,11 +42,12 @@ layout: page
     <script>
         var g_map;
         function initMap() {
-        fully = {lat: 57.703229, lng: 11.965552};
+        fully_gbg = {lat: 57.703229, lng: 11.965552};
+        fully_sthlm = {lat: 59.3189606, lng: 18.0575086}
         g_map = new google.maps.Map(document.getElementById('g_map'), {
 
-            center: fully,
-            zoom: 18,
+            center: {lat: 58.5390591, lng: 14.9173849},
+            zoom: 6,
             scrollwheel: false,
             zoomControl: true,
             mapTypeControl: false,
@@ -177,20 +178,23 @@ layout: page
             anchor: new google.maps.Point(30, 60)
           };
 
-        var g_marker = new google.maps.Marker({
-            position: fully,
+        var g_marker_gothenburg = new google.maps.Marker({
+            position: fully_gbg,
+            map: g_map,
+            icon: marker_icon
+        });
+        var g_marker_stockholm = new google.maps.Marker({
+            position: fully_sthlm,
             map: g_map,
             icon: marker_icon
         });
         var site_description = "{{site.description}}";
-        var site_adress = "{{site.adress}}"
-        var contentString = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<br><h4 id="firstHeading">Fully Studios</h4>'+
-            '<div id="bodyContent"><p>'+
-            site_description +
-            '</p><p><strong>Visit us at:</strong><br>'+
+        var site_adress_gbg = "{{site.adress-gbg}}";
+        var site_adress_sthlm = "{{site.adress-sthlm}}";
+
+        function contentString(site_adress) { 
+            return '<div id="content">'+
+            '<div id="bodyContent"><p><strong>Visit us at:</strong><br>'+
             site_adress +
             '</p>'+
             '<p>'+
@@ -199,13 +203,21 @@ layout: page
             '</a><br><br>'+
             '</div>'+
             '</div>';
-
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString
+        };
+        
+        var infowindow_gbg = new google.maps.InfoWindow({
+            content: contentString(site_adress_gbg)
+        });
+        var infowindow_sthlm = new google.maps.InfoWindow({
+            content: contentString(site_adress_sthlm)
         });
 
-        g_marker.addListener('click', function() {
-            infowindow.open(g_map, g_marker);
+        g_marker_gothenburg.addListener('click', function() {
+            infowindow_gbg.open(g_map, g_marker_gothenburg);
+        });
+
+        g_marker_stockholm.addListener('click', function() {
+            infowindow_sthlm.open(g_map, g_marker_stockholm);
         });
     }
     </script>

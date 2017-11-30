@@ -6,6 +6,11 @@ $animTime: .3s;
     position: relative;
     overflow: hidden;
     min-height: 100vh;
+    padding: $s-small;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
     //  Hacky way to prevent page from scrolling when URL-bar disapears.
     // -7vw is the magic number for the URL-bar
     @media (max-device-aspect-ratio: 3/4) {
@@ -24,6 +29,9 @@ $animTime: .3s;
     }
 
     @include media-query($on-laptop) {
+        justify-content: flex-start;
+        align-items: flex-end;
+        flex-direction: row;
         min-height: 100vh;
     }
 
@@ -38,7 +46,8 @@ $animTime: .3s;
     //     z-index:1;
     // }
     &__video { 
-        background-color: $c-dark;
+        // background-color: $c-dark;
+        background-color: #100F36; // for the train bg
         position: absolute;
         top: 0;
         left: 0;
@@ -46,34 +55,31 @@ $animTime: .3s;
         height: 100%;
         z-index: 2;
         margin-top: 0;
-        @media (min-aspect-ratio: 16/9) {
+        @media (min-aspect-ratio: 16/9) { // Landscape
             width: 100%;
             height: auto;
-            transform: translateY(-25%); // focus on the stubbe
+            transform: translateY(-25%); // focus on the stubbe/train
             top: 25%;
         }
-        @media (max-aspect-ratio: 16/9) {
+        @media (max-aspect-ratio: 16/9) { // Portrait
             width: auto;
             height: 100%;
-            transform: translateX(-75%);  // focus on the stubbe
+            transform: translateX(-75%);  // focus on the stubbe/train
             left: 75%;
         }
     }
     &__list {
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: relative;
+        display: inline-block;
+        //top: $s-small*3;
+        //left: 0;
         z-index: 3;
         list-style-type: none;
-        margin: $s-small 0 $s-small*2;
+        margin: 100px 0 $s-small;
         padding: 0;
-        @media (min-height: 480px) {
-            top: $s-small*2;
-            margin: $s-small*2 0 $s-small*2;
-        }
         @media (min-width: $on-laptop) and (min-height: 445px) {
-            bottom: 0;
-            top: auto;
+           // bottom: 0;
+            ///top: auto;
             margin: 0 0 $s-small*3;
         }
     }
@@ -83,7 +89,8 @@ $animTime: .3s;
     &__link, &__overlay {
         @extend .h2;
         color: $c-white;
-        padding: $s-small*0.5 $s-small;
+        padding: $s-small*0.25 0;
+        text-shadow: 0px 8px 20px rgba($c-dark, 0.40);
         @include media-query($on-laptop) {
             padding: $s-small*0.5 $s-small*2;        
         }
@@ -123,7 +130,7 @@ $animTime: .3s;
         height: 100%;
         position: absolute;
         top: 0;
-        left: $s-small;
+        left: -$s-small * 0.5;
         // z-index: -1;
         stroke: $c-people;
         stroke-width:7px;
@@ -131,18 +138,26 @@ $animTime: .3s;
 
         transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 0, 0.1, 0.99);
         pointer-events: none;
-        
+    
+        @include media-query($on-laptop) {
+           left: $s-small;
+        }
+
         // Critical css
         // stroke-dasharray: 329px, 340px;
         // stroke-dashoffset: 330px; // max 320 - px is needed in Edge
     }
     .menu-work ~ .wave-svg { stroke: lighten($c-signal, 10%); }
-    .menu-work:hover ~ .wave-svg, .menu-work:focus ~ .wave-svg { stroke-dashoffset: 182px; }
+    .menu-work:hover ~ .wave-svg, .menu-work:focus ~ .wave-svg { stroke-dashoffset: 132px; }
     .menu-about ~ .wave-svg { stroke: $c-business; }
-    .menu-about:hover ~ .wave-svg, .menu-about:focus ~ .wave-svg { stroke-dashoffset: 148px; }
+    .menu-about:hover ~ .wave-svg, .menu-about:focus ~ .wave-svg { stroke-dashoffset: 111px; }
     .menu-curiosities ~ .wave-svg { stroke: $c-curiosities; }
-    .menu-contact:hover ~ .wave-svg, .menu-contact:focus ~ .wave-svg { stroke-dashoffset: 108px; }
-
+    .menu-contact:hover ~ .wave-svg, .menu-contact:focus ~ .wave-svg { stroke-dashoffset: 38px; }
+    @media (min-width: $on-laptop) {
+        .menu-work:hover ~ .wave-svg, .menu-work:focus ~ .wave-svg { stroke-dashoffset: 182px; }
+        .menu-about:hover ~ .wave-svg, .menu-about:focus ~ .wave-svg { stroke-dashoffset: 148px; }
+        .menu-contact:hover ~ .wave-svg, .menu-contact:focus ~ .wave-svg { stroke-dashoffset: 108px; }
+    }
     &.menu-open {
         z-index: 15;
     }
@@ -151,6 +166,26 @@ $animTime: .3s;
 
 #startmenu {
     z-index: 10;
+    height: auto;
+    background-color:#0d0d3a;
+    justify-content: space-between;
+    //  Hacky way to prevent page from scrolling when URL-bar disapears.
+    // -7vw is the magic number for the URL-bar
+    @media (max-device-aspect-ratio: 3/4) {
+        min-height: (120vw * 1.333 - 6vw);
+    }
+    @media (max-device-aspect-ratio: 2/3) {
+        min-height: (120vw * 1.5 - 6vw);
+    }
+    //ex iPhone 5
+    @media (max-device-aspect-ratio: 10/16) {
+        min-height: (120vw * 1.6 - 6vw);
+    }
+    //ex iPhone 6, Nexus 5X, Galaxy S5
+    @media (max-device-aspect-ratio: 9/16) {
+        min-height: (120vw * 1.778 - 6vw);
+    }
+
     .navigation__item {
         opacity: 0;
         animation: slidedown $animTime*2 0s forwards cubic-bezier(0.16, 0, 0.28, 0.99);
@@ -165,6 +200,15 @@ $animTime: .3s;
             }
         }
     }
+    .navigation__list{
+        margin-top: 0;
+    }
+
+    // .navigation__video {
+    //     @media (max-aspect-ratio: 16/9) { // Portrait
+    //         height: 80%;
+    //     }
+    // }
 }
 
 #menu {

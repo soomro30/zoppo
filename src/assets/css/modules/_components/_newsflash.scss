@@ -1,16 +1,25 @@
 .newsflash {
-    position: absolute;
-    bottom: -15vw;
+    position: relative;
+    //bottom: -15vw;
     margin-left: $s-small;
+    padding: $s-small*0.5 0;
     right: $s-small;
     z-index: 10;
+    font-size: 0.9em;
+    width: 38em;
     // background-color: $c-white;
     // padding: $s-small;
     // text-align: center;
-    transform: translate3D(-20%, -50%, 0) scale(0.5);
+    transform: translate3D(0, 20%, 0) scale(0.8);
     opacity: 0;
-    transition: transform 1s $bounce, opacity 0.2s;
-    max-width: 22em;
+    transition: transform 1s $bounce, opacity 0.4s;
+    max-width: 100%;
+    border: 2px solid $c-white;
+    color: $c-white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     // box-shadow: -#{$s-small*0.25} -#{$s-small*0.25} 0 $c-signal;
     // border: 4px solid $c-signal;
     // p { display: none; }
@@ -20,29 +29,41 @@
     //         margin-top: $s-small;
     //     }	
     // }
-    span {
-        padding-top: $s-small;
-        padding-bottom: $s-small;
+    * {
+        max-width: 100%;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    p {
+        margin-top: $s-small*0.5;
     }
     @media (min-height: 480px) {
-        bottom: -5vw;
+        //bottom: 20vw;
     }
     @include media-query($on-laptop) {
+        position: absolute;
+        padding: $s-small*0.5 $s-small $s-small*0.75;
         bottom: $s-small;
         right: $s-small * 2;
         // padding: $s-small 0;
         // p { display: block; }
-        // h3 {
-        //     font-size: 1.25em;
-        // }
-        p {
-            margin: $s-small*0.5 0 $s-small*0.5;
+        font-size: 0.7em;
+        h3, p {
+            padding: 0;
+            // margin: $s-small*0.5 0 $s-small*0.5;
             // font-size: 0.8em;
+        }
+        h3 {
+            font-size: 2em;
         }
     }
     &--open {
-        transform: translateY(0) scale(1);
+        transform: translate3D(0,0,0) scale(1);
         opacity: 1;
+    }
+    @include media-query($on-laptop) {
+        //position: absolute;
     }
     // &:before {
     //     content:"";

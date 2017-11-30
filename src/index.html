@@ -8,28 +8,28 @@ title: Motion on the web
     <nav class="navigation" id="startmenu">
         {% include menu.html %}
         <video class="navigation__video" id="startvideo"
-            poster="{{ site.baseurl }}/assets/intro_knappfilm_v4.jpg"
-            autoplay muted playsinline>
-            <source src="{{ site.baseurl }}/assets/intro_knappfilm_v4.mp4">
-            <img src="{{ site.baseurl }}/assets/intro_knappfilm_v4.jpg">
+            poster="{{ site.baseurl }}/assets/hero/intro_train_v2.jpg"
+            autoplay muted playsinline loop>
+            <source src="{{ site.baseurl }}/assets/hero/intro_train_v2.mp4">
+            <img src="{{ site.baseurl }}/assets/hero/intro_train_v2.jpg">
         </video>
-    </nav>
-    {% unless site.newsflash_buttonurl == nil %}
-    <a class="newsflash button" data-videomodal href="{{site.newsflash_buttonurl}}">
-    {% else %}
-    <div class="newsflash button" data-videomodal>
-    {% endunless %}
-    <span>
-        {{ site.newsflash | markdownify }}
-        {% unless site.newsflash_buttontext == nil %}
-            <div class="button"><span>{{ site.newsflash_buttontext }}</span></div>
+        {% unless site.newsflash_buttonurl == nil %}
+        <div class="newsflash" data-videomodal>
+        {% else %}
+        <div class="newsflash" data-videomodal>
         {% endunless %}
-        </span>
-    {% unless site.newsflash_buttonurl == nil %}
-    </a>
-    {% else %}
-    </div>
-    {% endunless %}
+        
+            {{ site.newsflash | markdownify }}
+            {% unless site.newsflash_buttontext == nil %}
+                <a href="{{site.newsflash_buttonurl}}" class="button button--transparent"><span>{{ site.newsflash_buttontext }}</span></a>
+            {% endunless %}
+        
+        {% unless site.newsflash_buttonurl == nil %}
+        </div>
+        {% else %}
+        </div>
+        {% endunless %}
+    </nav>
 </div>
 
 {% include cc.html %}
