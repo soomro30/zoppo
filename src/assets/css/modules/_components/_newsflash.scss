@@ -10,7 +10,8 @@
     // background-color: $c-white;
     // padding: $s-small;
     // text-align: center;
-    transform: translate3D(0, 20%, 0) scale(0.8);
+    transform: scale(0.8);
+    transform-origin: 50% -40%;
     opacity: 0;
     transition: transform 1s $bounce, opacity 0.4s;
     max-width: 100%;
@@ -59,7 +60,7 @@
         }
     }
     &--open {
-        transform: translate3D(0,0,0) scale(1);
+        transform: scale(1);
         opacity: 1;
     }
     @include media-query($on-laptop) {
