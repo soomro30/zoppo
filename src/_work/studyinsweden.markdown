@@ -30,15 +30,15 @@ casetop-image3_medium: casetop_image3@2x.jpg
 shareimage: work/studyinsweden/shareimage.png
 
 ingress: |
-  Every year, new students from all over the world are recruited to be digital ambassadors and bloggers for Study In Sweden — a website that promotes Sweden as a top-notch destination for studying abroad. Knowing our penchant for bold and clear UX, the lovely people at Study in Sweden engaged us to redesign their blog.
+  Every year, new students from all over the world are recruited to be digital ambassadors and bloggers for Study In Sweden—a website that promotes Sweden as a top-notch destination for studying abroad. Knowing our penchant for bold and clear UX, the lovely people at Study in Sweden engaged us to redesign their blog.
 
 section1: |
-  Typically the first stage of any creative project is getting to know your subject. But this time we were able to start at turbo-blast seeing as Edīte, the manager for the project, was a digital ambassador at Study In Sweden herself just a year ago.
+  Typically the first stage of any creative project is getting to know your subject. But this time we were able to start at turbo-blast given that Edīte, the manager for the project, was a digital ambassador at Study In Sweden just a year ago.
 
   We proceeded to gather further insights from the blog’s current readers and writers, accumulating research that would later inform our design choices. It turns out, when a country’s image is at stake, people really join forces! (A heartfelt thanks to all who participated!)
 
 section2: |
-  Some might brush this off as a short, simple re-design project, but we saw it as crucial to combine insights from stakeholders, previous user research and user interviews. After all, we had to come up with solutions that would make visitors engage with the site for longer and, hopefully, convince them that Sweden is the perfect place to move for their next degree.
+  This wasn't just a beautifying project—we saw it as crucial to combine insights from stakeholders, previous user research and user interviews. After all, we had to come up with solutions that would make visitors engage with the site for longer and, hopefully, convince them that Sweden is the perfect place to move for their next degree.
 
 image2_2880: "wf_sis@2x.jpg"
 image2_1440: "wf_sis.jpg"
@@ -57,5 +57,5 @@ section4: |
 
 ---
 
-Every year, new students from all over the world are recruited to be digital ambassadors and bloggers for Study In Sweden — a website that promotes Sweden as a top-notch destination for studying abroad. Knowing our penchant for bold and clear UX, the lovely people at Study in Sweden engaged us to redesign their blog.
+Every year, new students from all over the world are recruited to be digital ambassadors and bloggers for Study In Sweden—a website that promotes Sweden as a top-notch destination for studying abroad. Knowing our penchant for bold and clear UX, the lovely people at Study in Sweden engaged us to redesign their blog.
 
