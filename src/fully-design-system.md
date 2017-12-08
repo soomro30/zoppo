@@ -5,8 +5,8 @@ permalink: /design-system/
 published: true
 author: Jonas Sandstedt
 date: 2017-04-24
-background-image_1440: '../assets/introfilmen-poster.jpg'
-background-image_2880: '../assets/introfilmen-poster.jpg'
+background-image_1440: '../assets/hero/introfilmen-poster.jpg'
+background-image_2880: '../assets/hero/introfilmen-poster.jpg'
 vimeo_IDs: 
   - "211438822"
   - "205372936"
@@ -181,10 +181,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo, vero placeat,
 
 </div>
 
-<div class="box box--right box--people" markdown="1" style="background-image:url(http://placekitten.com/g/1920/600); color:white">
+<div class="box box--right box--people" markdown="1" style="background-image:url(https://placekitten.com/g/1920/600); color:white">
 
 ``` html
-<div class="box box--right box--people" style="background-image:url(http://placekitten.com/g/1920/600)"></div>
+<div class="box box--right box--people" style="background-image:url(https://placekitten.com/g/1920/600)"></div>
 ```
 </div>
 
@@ -243,7 +243,7 @@ a grid with images and texts. Used in "other projects"
     {% comment %}Change this color to an average color from the image{% endcomment %}
     <div class="image-loader" style="background: #ccc"> 
         <img 
-        src=" http://placekitten.com/g/1440/830"
+        src=" https://placekitten.com/g/1440/830"
         alt="A beautiful cat">	
     </div>
     <figcaption class="boxgrid__caption">
@@ -255,7 +255,7 @@ a grid with images and texts. Used in "other projects"
 <figure class="boxgrid__box">
     <div class="image-loader" style="background: #c1c1c1">
         <img 
-        src="http://placekitten.com/g/1440/830"
+        src="https://placekitten.com/g/1440/830"
         alt="A beautiful cat">	
     </div>
     <figcaption class="boxgrid__caption">
@@ -289,7 +289,7 @@ a grid with images and texts. Used in "other projects"
         {% comment %}Change this color to an average color from the image{% endcomment %}
         <div class="image-loader" style="background: #ccc"> 
             <img 
-            src=" http://placekitten.com/g/1440/830"
+            src=" https://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
         <figcaption class="boxgrid__caption">
@@ -301,7 +301,7 @@ a grid with images and texts. Used in "other projects"
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1">
             <img 
-            src="http://placekitten.com/g/1440/830"
+            src="https://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
         <figcaption class="boxgrid__caption">
@@ -313,7 +313,7 @@ a grid with images and texts. Used in "other projects"
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1">
             <img 
-            src="http://placekitten.com/g/1440/830"
+            src="https://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
         <figcaption class="boxgrid__caption">
@@ -325,7 +325,7 @@ a grid with images and texts. Used in "other projects"
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1">
             <img 
-            src="http://placekitten.com/g/1440/830"
+            src="https://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
         <figcaption class="boxgrid__caption">
@@ -337,7 +337,7 @@ a grid with images and texts. Used in "other projects"
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1">
             <img 
-            src="http://placekitten.com/g/1440/830"
+            src="https://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
         <figcaption class="boxgrid__caption">
@@ -349,7 +349,7 @@ a grid with images and texts. Used in "other projects"
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1">
             <img 
-            src="http://placekitten.com/g/1440/830"
+            src="https://placekitten.com/g/1440/830"
             alt="A beautiful cat">	
         </div>
         <figcaption class="boxgrid__caption">
@@ -375,14 +375,14 @@ Load images with style
 
 <div class="image-loader" style="background: #c1c1c1">
     <img 
-    src="http://placekitten.com/g/1440/830"
+    src="https://placekitten.com/g/1440/830"
     alt="A beautiful cat">	
 </div>
 
 ``` html
 <div class="image-loader" style="background: #c1c1c1">
     <img 
-    src="http://placekitten.com/g/1440/830"
+    src="https://placekitten.com/g/1440/830"
     alt="A beautiful cat">	
 </div>
 
