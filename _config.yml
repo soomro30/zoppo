@@ -15,14 +15,18 @@ github:  "https://github.com/fullystudios"
 facebook: "https://www.facebook.com/fullystudios/"
 vimeo: "https://vimeo.com/fullystudios"
 instagram: "https://www.instagram.com/fullystudios/"
+
+bgvideoname: "intro_christmastrain" # ex intro_train. the poster need to have the same name as the video file
 newsflash: |
-  ### Our Stockholm office is open!
+  Things are a-brewing<br>
+  Coffee with a tinge of cinnamon<br>
+  Tea with ginger and cardamom<br>
+  No approaching slumber<br>
+  Rather wonder, rather thunder<br><br>
+  Merry Christmas from Fully!
 
-  We now have offices on both coasts and want to make new friends.
-  Stockholmers, hit us up! We’ll bring you a snack from the onboard bistro.
-
-newsflash_buttontext: Contact Sthlm office
-newsflash_buttonurl: mailto:joakim.hanner@fullystudios.se
+# newsflash_buttontext: Contact Sthlm office
+# newsflash_buttonurl: mailto:joakim.hanner@fullystudios.se
 
 # Papricaklubben
 case_highlight1_id: 5
