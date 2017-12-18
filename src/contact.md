@@ -71,11 +71,6 @@ peoples:
     title: Copywriter (US English)
     email: chelsea.milojkovic@fullystudios.se
     tel: +46 721 89 49 89
-  
-  - name: Andreas Johansson
-    image: andreas-johansson.jpg
-    title: Motion Intern
-    email: andreas.johansson@fullystudios.se
 
   - name: Yifei Wang
     image: yifei-wang.jpg

@@ -1,15 +1,14 @@
 .newsflash {
     position: relative;
-    //bottom: -15vw;
     margin-left: $s-small;
     padding: $s-small*0.5 0;
     right: $s-small;
     z-index: 10;
-    font-size: 0.9em;
-    width: 38em;
-    // background-color: $c-white;
-    // padding: $s-small;
-    // text-align: center;
+    // font-size: 0.9em;
+    font-size: 0.8em; // for christmas
+    // width: 38em;
+    width: 28em; // for christmas
+
     transform: scale(0.8);
     transform-origin: 50% -40%;
     opacity: 0;
@@ -22,14 +21,6 @@
     flex-direction: column;
     align-items: center;
     // box-shadow: -#{$s-small*0.25} -#{$s-small*0.25} 0 $c-signal;
-    // border: 4px solid $c-signal;
-    // p { display: none; }
-    // .button {
-    //     margin-top: $s-small*0.5;
-    //     @include media-query($on-laptop) {
-    //         margin-top: $s-small;
-    //     }	
-    // }
     * {
         max-width: 100%;
     }
@@ -63,21 +54,6 @@
         transform: scale(1);
         opacity: 1;
     }
-    @include media-query($on-laptop) {
-        //position: absolute;
-    }
-    // &:before {
-    //     content:"";
-    //     display: block;
-    //     position: absolute;
-    //     top: 0; left: 0; right: 0; bottom: 0;
-    //     z-index: -1;
-    //     background: $c-signal;
-    //     transform: translate($s-small*0.5, $s-small*0.5);
-    //     @include media-query($on-palm) {
-    //         transform: translate($s-small, $s-small);
-    //     }
-    // }
 }
 #menu .newsflash {
     transition: transform 0.3s 1s;
