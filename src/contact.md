@@ -47,7 +47,7 @@ peoples:
 
   - name: Martina Milisic
     image: martina-milisic.jpg
-    title: Full Stack Developer
+    title: Developer
     email: martina.milisic@fullystudios.se
 
   - name: Mikael Biström
