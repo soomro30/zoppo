@@ -77,6 +77,11 @@ peoples:
     title: Developer Intern
     email: yifei.wang@fullystudios.se
 
+  - name: Axel Bolle
+    image: axel-bolle.jpg
+    title: Developer Intern
+    email: axel.bolle@fullystudios.se
+
   #- name: Mattias Larson
   #  image: mattias-larson.jpg
   #  title: Motion creative
