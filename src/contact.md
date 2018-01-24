@@ -29,7 +29,7 @@ peoples:
 
   - name: Edīte Garjāne
     image: edite-garjane.jpg
-    title: Strategic Project Manager
+    title: Design Strategist
     email: edite.garjane@fullystudios.se
     tel: +46 723 33 95 08
 
