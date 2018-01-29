@@ -1,0 +1,85 @@
+---
+layout: default
+---
+<article class="page news-{{ page.slug }}" itemscope itemtype="http://schema.org/BlogPosting">
+	
+	{% unless page.background-image_2880 == nil %}
+		{% if page.background == nil %}
+			<style>
+				.hero--{{page.slug}} {
+					background-image: url({{site.baseurl}}/assets/news/{{page.slug}}/{{ page.background-image_1440 }});
+				}
+				@media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
+					.hero--{{page.slug}} {
+						background-image: url({{site.baseurl}}/assets/news/{{page.slug}}/{{ page.background-image_2880 }});
+					}
+				}
+			</style>
+		{% endif %}
+	{% endunless %}
+	<div class="herohero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %}" id="work_{{ page.slug }}" {% unless page.background-image_color == nil %} style="background-color: {{page.background-image_color}}"{% endunless %}>
+		{% comment %}<span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span>{% endcomment %}
+
+		
+		{% comment %}<header class="hero__header hero__header--shadow">{% endcomment %}
+		<header class="hero__header">
+			<h1 class="hero__header-element" itemprop="name headline">
+				<span class="hero__subheader">Archive:</span> 
+				{{ page.title }}
+			</h1>
+			
+			{% comment %}<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} {% endcomment %}
+			{% comment %}<span class="categories">{{ page.categories }}<span></p>{% endcomment %}
+		</header>
+
+		{% comment %}
+		###################################
+		## Get code for the background set
+		## in current news post
+		{% endcomment %}
+		{% unless page.background == nil %}
+			{{ page.background }}
+		{% endunless %}
+
+    </div>
+
+	<main class="content" itemprop="articleBody">
+		{% unless page.ingress == nil %}
+		<div class="c-white-bg">
+			<div class="metabox metabox--wide metabox--offset column__wrapper center">
+				<h4>
+					{{ page.ingress | markdownify }}
+				</h4>
+			</div>
+		</div>
+		{% endunless %}
+
+		{{ content }}
+
+	</main>
+
+</article>
+
+
+
+<div class="boxgrid">
+	<h2 class="boxgrid__header h4">Check out our other old news</h2>
+	{% for new in site.news limit:3 %}
+		{% if new.title == page.title %}
+			{% continue %}
+		{% endif %}
+		<a class="boxgrid__box" href="{{ new.url | prepend: site.baseurl }}">
+			
+				<div class="boxgrid__image" {% unless new.background-image_color == nil %} style="background-color: {{ new.background-image_color }}" {% endunless %}>
+				{% unless new.background-image_720 == nil %}
+					<img src="{{site.baseurl}}/assets/news/{{new.slug}}/{{new.background-image_720}}" alt="{{ new.title }}">	
+				{% endunless %}
+				</div>
+				<div class="boxgrid__caption" style="padding-top: 3em">
+					<h3>{{ new.title }}</h3>
+					<p>{{ new.subtitle }}</p>
+				</div>
+			
+		</a>
+	{% endfor %}
+</div>

@@ -3,7 +3,6 @@ layout: curious/developer-experience
 title:  "Developer Experience"
 subtitle: "In Pursuit of Blissful DevEx"
 date:   2017-04-04 12:00:00 +0100
-categories: respnsive design, web, CSS
 slug: developer-experience
 background-image_720: "hero_720.jpg"
 background-image_1440: "hero.jpg"
