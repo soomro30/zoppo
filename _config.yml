@@ -16,17 +16,15 @@ facebook: "https://www.facebook.com/fullystudios/"
 vimeo: "https://vimeo.com/fullystudios"
 instagram: "https://www.instagram.com/fullystudios/"
 
-bgvideoname: "intro_christmastrain" # ex intro_train. the poster need to have the same name as the video file
-newsflash: |
-  Things are a-brewing<br>
-  Coffee with a tinge of cinnamon<br>
-  Tea with ginger and cardamom<br>
-  No approaching slumber<br>
-  Rather wonder, rather thunder<br><br>
-  Merry Christmas from Fully!
+bgvideoname: "intro_train_v2" # ex intro_train. the poster need to have the same name as the video
+newsflash: |  
+   ### Our Stockholm office is open!
+   
+   We now have offices on both coasts and want to make new friends. 
+   Stockholmers, hit us up! We’ll bring you a snack from the onboard bistro.
 
-# newsflash_buttontext: Contact Sthlm office
-# newsflash_buttonurl: mailto:joakim.hanner@fullystudios.se
+newsflash_buttontext: Contact Stockholm office
+newsflash_buttonurl: mailto:joakim.hanner@fullystudios.se
 
 # Papricaklubben
 case_highlight1_id: 5
@@ -50,6 +48,10 @@ collections:
   curious-about:
     output: true
     permalink: /:collection/:title/
+  news:
+    output: true
+    permalink: /:collection/:title/
+  
 
 # Default values
 defaults:
@@ -68,6 +70,14 @@ defaults:
     values:
       layout: "work"
       button-text: View case
+      background-color: "#f8f8f8"
+  -
+    scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "news"
+      button-text: View news
       background-color: "#f8f8f8"
 
 # Build settings
