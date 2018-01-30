@@ -82,6 +82,11 @@ peoples:
     title: Developer Intern
     email: axel.bolle@fullystudios.se
 
+  - name: Oskar Eriksson
+    image: oskar-eriksson.jpg
+    title: Developer Intern
+    email: oskar.eriksson@fullystudios.se
+
   #- name: Mattias Larson
   #  image: mattias-larson.jpg
   #  title: Motion creative
