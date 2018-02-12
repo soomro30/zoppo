@@ -45,11 +45,6 @@ peoples:
     email: alexander.tengner@fullystudios.se
     tel: +46 721 71 50 32
 
-  - name: Martina Milisic
-    image: martina-milisic.jpg
-    title: Developer
-    email: martina.milisic@fullystudios.se
-
   - name: Mikael Biström
     image: mikael-bistrom.jpg
     title: Technical Director
