@@ -5,7 +5,8 @@
   "main": "bundle.js",
   "scripts": {
     "start": "rake start",
-    "build": "rake build"
+    "build": "rake build",
+    "webpack": "webpack --config webpack.config.js -p -w --progress"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,7 @@
     "eslint-loader": "^1.8.0",
     "lory.js": "^2.3.3",
     "turbolinks": "^5.0.3",
-    "webpack": "^1.13.2",
+    "webpack": "^1.15.0",
     "webpack-bundle-analyzer": "^2.9.0"
   },
   "dependencies": {
