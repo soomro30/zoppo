@@ -1,0 +1,140 @@
+// custom CSS for news
+
+.navigation__layerimage--svenskaskolan-london{
+    .parallax-container{
+        height: 100%;
+    }
+
+    .parallax-layer{
+        width: 100%;
+        height: 100%;
+    }
+
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #d0e8f2 0%,#8dd0f3 49%);
+
+    img{
+        position: absolute;
+        
+        &.navigation__layerimage-background{
+            left: 50%;
+            transform: translateX(-50%);
+            right: auto;
+        }
+
+        &.navigation__layerimage-cloud:first-child{
+            animation: cloud 50s 0s infinite linear;
+            width: 60%;
+            top: 5vh;
+            left: -20%;
+        }
+
+        &.navigation__layerimage-cloud:nth-child(2){
+            animation: cloud 55s 0s infinite linear;
+            width: 40%;
+            top: 30vh;
+            left: 30%;
+        }
+
+        &.navigation__layerimage-background, &.navigation__layerimage-right{
+            width: 180vh;
+            max-width: none;
+            bottom: -8vw;
+        }
+
+       &.navigation__layerimage-right{
+            right: -15vh;
+            bottom: -5vw;
+        }
+
+        &.navigation__layerimage-left{
+            height: 110%;
+            left: -40px;
+            top: -5%;
+        } 
+        
+        @media (max-aspect-ratio: 1/1){
+            &.navigation__layerimage-right{
+                right: -35vh;
+            }
+            &.navigation__layerimage-left{
+                left: -20vw;
+            }
+        }
+
+        @media (max-aspect-ratio: 10/8){
+            &.navigation__layerimage-background, &.navigation__layerimage-right{
+                width: 200vh;
+                bottom: -9vh;
+            }
+             &.navigation__layerimage-background{
+                bottom: -12vh;
+            }
+        }
+
+        @media (min-aspect-ratio: 10/6){
+            
+            &.navigation__layerimage-background, &.navigation__layerimage-right{
+                width: 110%;
+                bottom: -12vw;
+            }
+
+            &.navigation__layerimage-right{
+                right: -40px;
+                bottom: -8vw;
+            }
+        }
+
+        @media (min-aspect-ratio: 10/5){
+            &.navigation__layerimage-background{
+                bottom: -15vw;
+            }
+
+            &.navigation__layerimage-right{
+                bottom: -10vw;
+            }
+        }
+        
+        @media (max-aspect-ratio: 5/7){
+            &.navigation__layerimage-background, &.navigation__layerimage-right{
+                width: 180vh;
+                bottom: -4vh;
+            }
+
+            &.navigation__layerimage-right{
+                bottom: -9vh;
+            }
+        }
+
+        @media (max-width: $on-laptop - 1){
+            &.navigation__layerimage-left{
+                display: none;
+            }
+
+            &.navigation__layerimage-right{
+                right: -40vh;
+            }
+        }
+    }
+}
+
+@keyframes cloud {
+    0% { 
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    5% {
+        opacity: 0.5;
+    }
+
+    95% {
+        opacity: 0.5;
+    }
+
+    100% { 
+        transform: translateX(80vw);
+        opacity: 0;
+    }
+}

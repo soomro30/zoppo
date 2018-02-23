@@ -31,14 +31,18 @@ class Nav {
 		this._logoAnimation.startLogoAnimation();
 		this._menuIsOpen = true;
 		this.setTabIndex(0, this._menuItems);
-		this._menuVideo.play();
+		if(this._menuVideo != undefined){
+			this._menuVideo.play();
+		}
 	}
 	closeMenu () {
 		this._menutoggle.classList.remove('menu-open');
 		this._menu.classList.remove('menu-open');
 		this._menuIsOpen = false;
 		this.setTabIndex(-1, this._menuItems);
-		this._menuVideo.pause();
+		if(this._menuVideo != undefined){
+			this._menuVideo.pause();
+		}
 	}
 
 }

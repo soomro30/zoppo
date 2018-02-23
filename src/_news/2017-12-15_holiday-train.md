@@ -1,5 +1,5 @@
 ---
-layout: news/default-header
+layout: news/train
 title:  "Holiday Train"
 date:   2017-12-15 12:00:00 +0100
 slug: 2017-12-15-holiday-train

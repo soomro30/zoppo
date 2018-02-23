@@ -13,18 +13,18 @@ $animTime: .3s;
     align-items: flex-start;
     //  Hacky way to prevent page from scrolling when URL-bar disapears.
     // -7vw is the magic number for the URL-bar
-    @media (max-device-aspect-ratio: 3/4) {
+    @media (max-aspect-ratio: 3/4) {
         min-height: (100vw * 1.333 - 6vw);
     }
-    @media (max-device-aspect-ratio: 2/3) {
+    @media (max-aspect-ratio: 2/3) {
         min-height: (100vw * 1.5 - 6vw);
     }
     //ex iPhone 5
-    @media (max-device-aspect-ratio: 10/16) {
+    @media (max-aspect-ratio: 10/16) {
         min-height: (100vw * 1.6 - 6vw);
     }
     //ex iPhone 6, Nexus 5X, Galaxy S5
-    @media (max-device-aspect-ratio: 9/16) {
+    @media (max-aspect-ratio: 9/16) {
         min-height: (100vw * 1.778 - 6vw);
     }
 
@@ -45,7 +45,7 @@ $animTime: .3s;
     //     mix-blend-mode: multiply;
     //     z-index:1;
     // }
-    &__video { 
+    &__video, &__layerimage { 
         // background-color: $c-dark;
         background-color: #100F36; // for the train bg
         position: absolute;
@@ -90,7 +90,7 @@ $animTime: .3s;
         @extend .h2;
         color: $c-white;
         padding: $s-small*0.25 0;
-        text-shadow: 0px 8px 20px rgba($c-dark, 0.40);
+        text-shadow: 0px 5px 10px rgba(10,42,79,0.3);
         @include media-query($on-laptop) {
             padding: $s-small*0.5 $s-small*2;        
         }
@@ -114,6 +114,9 @@ $animTime: .3s;
         top: 0;
         z-index: 1;
         pointer-events: none;
+        @media (max-width: $on-laptop - 1){
+            text-shadow: none;
+        }
         // color: red;
     }
     &__wrapper {
@@ -171,18 +174,18 @@ $animTime: .3s;
     justify-content: space-between;
     //  Hacky way to prevent page from scrolling when URL-bar disapears.
     // -7vw is the magic number for the URL-bar
-    @media (max-device-aspect-ratio: 3/4) {
+    @media (max-aspect-ratio: 3/4) {
         min-height: (120vw * 1.333 - 6vw);
     }
-    @media (max-device-aspect-ratio: 2/3) {
+    @media (max-aspect-ratio: 2/3) {
         min-height: (120vw * 1.5 - 6vw);
     }
     //ex iPhone 5
-    @media (max-device-aspect-ratio: 10/16) {
+    @media (max-aspect-ratio: 10/16) {
         min-height: (120vw * 1.6 - 6vw);
     }
     //ex iPhone 6, Nexus 5X, Galaxy S5
-    @media (max-device-aspect-ratio: 9/16) {
+    @media (max-aspect-ratio: 9/16) {
         min-height: (120vw * 1.778 - 6vw);
     }
 
@@ -215,7 +218,7 @@ $animTime: .3s;
     position: fixed; top: 0; left: 0; right: 0; bottom: 0;
     z-index: 4;
     pointer-events: none;
-    .navigation__item, .navigation__video {
+    .navigation__item, .navigation__video, .navigation__layerimage {
         opacity: 0;
     }
     .navigation__item {
@@ -251,7 +254,7 @@ $animTime: .3s;
                 transition: none;
             }
         }
-        .navigation__item, .navigation__video {
+        .navigation__item, .navigation__video, .navigation__layerimage {
             opacity: 0;
         }
         .navigation__item {
@@ -266,7 +269,7 @@ $animTime: .3s;
             }
         }
 
-        .navigation__video {
+        .navigation__video, .navigation__layerimage{
             opacity: 1;
             transition: opacity $animTime*1.5 $animTime;
             // animation: show $animTime $animTime forwards;
@@ -279,7 +282,7 @@ $animTime: .3s;
             // animation: closemenu $animTime forwards cubic-bezier(0.16, 0, 0.28, 0.99);
             // transform-origin: 0% 0%;
         }
-        .navigation__item, .navigation__video {
+        .navigation__item, .navigation__video, .navigation__layerimage {
             // opacity: 1;
             // animation: hide $animTime forwards;
         }

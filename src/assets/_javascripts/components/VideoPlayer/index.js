@@ -1,7 +1,7 @@
 module.exports =
 class VideoPlayer {
 	constructor () {
-        // console.log('test');
+        //console.log('test');
         this.triggerTime = 0.5;
         this.videoDuration = 2; // instead of reading el.duration that is a bit buggy in WebKit webview
         // this.loopTime = 1.44; // seconds from the end that the film gonna loop from | 07:15 = 7.6 - 09:04 = 9.04
@@ -12,14 +12,18 @@ class VideoPlayer {
         this.modalIsOpened = false;
         this.videoModal.classList.remove('newsflash--open');
         this.videoElement = document.getElementById("startvideo");
-        this.setupEvents(this.videoElement);
+
+        if(this.videoElement != undefined){
+            this.setupEvents(this.videoElement);
+        } else{
+            this.modalTrigger(this.videoModal);
+        }
 
         // Set fixed height on video for iOS 7+ for train video apect ratio 3:5
         this.videoContainer = document.getElementById('startmenu');
         if (navigator.userAgent.match(/(iPad|iPhone|iPod touch);.*CPU.*OS 7_\d/i) ) {
             this.videoElement.width = this.videoContainer.offsetHeight * 1.67;
         }
-
     } 
     
     // Lissen for the video to start playing, and loop it when it ends

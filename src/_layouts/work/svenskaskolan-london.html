@@ -1,0 +1,143 @@
+---
+layout: case
+---
+
+{% unless page.section1 == nil %}
+    <section class="section section--1 sectionspacing-small box box--people box--right">
+        {{ page.section1 | markdownify }}
+    </section>
+{% endunless %}
+
+{% unless page.section2 == nil %}
+    <section class="section sectionspacing">
+        {{ page.section2 | markdownify }}
+        {% unless page.section2-image_large == nil %}
+                <div class="sectionspacing-small">
+                    <img class="image"
+                    alt="{{page.section2-image_alt}}"
+                    width="1440" height="960"
+                    src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section2-image_medium }}" 
+                    srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section2-image_large }} 1440w,
+                            {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section2-image_medium }} 720w"
+                    sizes="100vw">
+                </div>
+        {% endunless %}
+    </section>
+{% endunless %}
+
+{% unless page.section3 == nil %}
+    <section class="section section--3 sectionspacing-small">
+        {{ page.section3 | markdownify }}
+        {% unless page.section3-image_large == nil %}
+            <div class="sectionspacing-small">
+                <img class="image"
+                alt="{{page.section3-image_alt}}"
+                width="1440" height="960"
+                src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3-image_medium }}" 
+                srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3-image_large }} 1440w,
+                        {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3-image_medium }} 720w"
+                sizes="100vw">
+            </div>
+        {% endunless %}
+    </section>
+{% endunless %}
+
+{% unless page.section4 == nil %}
+    <div class="grid grid--space sectionspacing-small">
+        <div class="background-image grid__offsetcolumn1-2" style="background-image: url({{site.baseurl}}/assets/work/{{page.slug}}/{{page.section4-image_large}})"></div>
+        <div class="grid__offsetcolumn2-2 bring-to-front">
+            <div class="box box--curiosities box--up box--right">{{ page.section4 | markdownify }}</div>
+        </div>
+    </div>
+{% endunless %}
+
+{% unless page.section5 == nil %}
+    <section class="section sectionspacing">
+        {{ page.section5 | markdownify }}
+        {% unless page.section5-image1_large == nil %}
+            <div class="imagegrid imagegrid--firstlarge sectionspacing-small">
+                <div class="imagegrid__image imagegrid__image--wo">
+                    <img class="image"
+                    alt="{{page.section5-image1_alt}}"
+                    width="1440" height="960"
+                    src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5-image1_medium }}" 
+                    srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5-image1_large }} 1440w,
+                            {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5-image1_medium }} 720w"
+                    sizes="100vw">
+                </div>
+            </div>
+        {% endunless %}
+        
+        {{ page.section5_text2 | markdownify }}
+        
+        {% unless page.section5-image2_large == nil %}
+            <div class="imagegrid imagegrid--firstlarge sectionspacing-small">
+                <div class="imagegrid__image imagegrid__image--wo">
+                    <img class="image"
+                    alt="{{page.section5-image2_alt}}"
+                    width="1440" height="960"
+                    src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5-image2_medium }}" 
+                    srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5-image2_large }} 1440w,
+                            {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5-image2_medium }} 720w"
+                    sizes="100vw">
+                </div>
+            </div>
+        {% endunless %}
+
+        {{ page.section5_text3 | markdownify }}
+    </section>
+{% endunless %}
+
+
+<div class="grid">
+    {% unless page.section6_image_2880 == nil %}
+        <div class="grid__fullwidth">
+            <img class="image"
+                alt="{{page.image2_alt}}"
+                width="1440" height="643"
+                src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section6_image_1440 }}" 
+                srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section6_image_2880 }} 2880w,
+                        {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section6_image_1440 }} 1440w"
+                sizes="100vw">
+        </div>
+    {% endunless %}
+
+    {% unless page.section6 == nil %}
+        <div class="grid__boxunder boxtext">
+            {{ page.section6 | markdownify }}
+        </div>
+    {% endunless %}
+
+</div>
+
+
+<div class="sectionspacing-small">
+<img
+    class="image" alt="{{page.desktopdesign_alt}}"
+    width="1440" height="960"
+    src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.desktopdesign_1440 }}" 
+    srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.desktopdesign_2880 }} 2880w,
+            {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.desktopdesign_1440 }} 1440w"
+    sizes="100vw">
+
+</div>
+{% unless page.section7 == nil %}
+    <section class="section sectionspacing-small">
+        {{ page.section7 | markdownify }}
+    </section>
+{% endunless %}
+
+<img
+    class="image" alt="{{page.mobiledesign_alt}}"
+    width="1440" height="960"
+    src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.mobiledesign_1440 }}" 
+    srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.mobiledesign_2880 }} 2880w,
+            {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.mobiledesign_1440 }} 1440w"
+    sizes="100vw">
+
+
+{% unless page.section8 == nil %}
+    <div class="sectionspacing box box--curiosities box--center">
+        {{ page.section8 | markdownify }}
+    </div>
+{% endunless %}

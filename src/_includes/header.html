@@ -14,11 +14,28 @@
 <nav class="navigation" id="menu">
     <div class="navigation__bg"></div>
     {% include menu.html %}
-    <video class="navigation__video"
+    <!-- <video class="navigation__video"
         id="menuvideo"
         poster="{{ site.baseurl }}/assets/hero/{{ site.bgvideoname }}.jpg"
         autoplay muted playsinline loop>
         <source src="{{ site.baseurl }}/assets/hero/{{ site.bgvideoname }}.mp4">
         <img src="{{ site.baseurl }}/assets/hero/{{ site.bgvideoname }}.jpg">
-    </video>
+    </video> -->
+    <div class="navigation__layerimage navigation__layerimage--svenskaskolan-london" data-news="svenskaskolan-london">
+        <div class="parallax-container">
+            <div class="parallax-layer" data-depth="0.25">
+                <img src="{{ site.baseurl }}/assets/hero/{{ site.news_imgcloud }}" class="navigation__layerimage-cloud">
+                <img src="{{ site.baseurl }}/assets/hero/{{ site.news_imgcloud }}" class="navigation__layerimage-cloud">
+            </div>
+            <div class="parallax-layer" data-depth="0.20">
+                <img src="{{ site.baseurl }}/assets/hero/{{ site.news_imgbackground }}" class="navigation__layerimage-background">
+            </div>
+            <div class="parallax-layer" data-depth="0.15">
+                <img src="{{ site.baseurl }}/assets/hero/{{ site.news_imgright }}" class="navigation__layerimage-right">
+            </div>
+            <div class="parallax-layer" data-depth="0.1">
+                <img src="{{ site.baseurl }}/assets/hero/{{ site.news_imgleft }}" class="navigation__layerimage-left">
+            </div>
+        </div>
+    </div>
 </nav>

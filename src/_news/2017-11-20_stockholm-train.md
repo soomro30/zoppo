@@ -1,5 +1,5 @@
 ---
-layout: news/default-header
+layout: news/train
 title:  "Stockholm Train"
 date:   2017-11-20 12:00:00 +0100
 slug: 2017-11-20-stockholm-train
