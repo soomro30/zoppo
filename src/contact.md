@@ -67,11 +67,6 @@ peoples:
     email: chelsea.milojkovic@fullystudios.se
     tel: +46 721 89 49 89
 
-  - name: Yifei Wang
-    image: yifei-wang.jpg
-    title: Developer Intern
-    email: yifei.wang@fullystudios.se
-
   - name: Axel Bolle
     image: axel-bolle.jpg
     title: Developer Intern
