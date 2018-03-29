@@ -45,7 +45,7 @@
 </script>
 
 {% assign random = site.time | date: "%s%N" %}
-{% capture boundle_src %}/assets/bundles/bundle.js?v={{ random }}{% endcapture %}
+{% capture boundle_src %}/assets/bundles/app.js?v={{ random }}{% endcapture %}
 
 <script src="{{ boundle_src | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
 

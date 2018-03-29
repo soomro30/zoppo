@@ -18,6 +18,6 @@ newsflash_buttontext: View case
 newsflash_buttonurl: work/swedishschool-london
 
 cssfile: ""
-jsfile: ""
+jsfile: "svenskaskola"
 
 ---

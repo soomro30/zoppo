@@ -12,10 +12,13 @@ module.exports = {
     })
   ],
   devtool: 'cheap-module-source-map',
-  entry: './src/assets/_javascripts/app.js',
+  entry: {
+    app: './src/assets/_javascripts/app.js',
+    news_svenskaskolan: './src/assets/_javascripts/components/News/svenskaskolan.js',
+  },
   output: {
-    path: './src/assets/bundles/',
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, 'src/assets/bundles'),
+    filename: '[name].js'
   },
   module: {
     loaders: [
