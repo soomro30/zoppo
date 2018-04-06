@@ -14,7 +14,8 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   entry: {
     app: './src/assets/_javascripts/app.js',
-    news_svenskaskolan: './src/assets/_javascripts/components/News/svenskaskolan.js',
+    news_svenskaskolan: './src/assets/_javascripts/news/svenskaskolan.js',
+    'first-news-flash': './src/assets/_javascripts/news/first-news-flash.js',
   },
   output: {
     path: path.resolve(__dirname, 'src/assets/bundles'),

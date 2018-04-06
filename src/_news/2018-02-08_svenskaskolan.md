@@ -1,5 +1,5 @@
 ---
-layout: news/svenskaskolan-london
+layout: news-single
 title:  "The Swedish School in London"
 date:   2016-02-08 12:00:00 +0100
 slug: 2016-02-08-swedishschool-london
@@ -18,7 +18,8 @@ newsflash: |
 newsflash_buttontext: View case
 newsflash_buttonurl: work/swedishschool-london
 
+htmlfile: "svenska-skolan.html"
 cssfile: ""
-jsfile: "svenskaskola"
+jsfile: "news_svenskaskolan.js"
 
 ---

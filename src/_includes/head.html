@@ -20,6 +20,11 @@
   <meta property="og:image:height" content="630">
 
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}?{{site.time | date: '%s%N'}}">
+  
+  {% unless page.cssfile == nil or page.cssfile == '' %}
+    <link rel="stylesheet" href="{{ "/assets/css/" | relative_url }}{{page.cssfile}}?{{site.time | date: '%s%N'}}">
+  {% endunless %}
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | relative_url }}">
 

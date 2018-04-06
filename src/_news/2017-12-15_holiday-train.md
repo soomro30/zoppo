@@ -1,5 +1,5 @@
 ---
-layout: news/train
+layout: news-single
 title:  "Holiday Train"
 date:   2017-12-15 12:00:00 +0100
 slug: 2017-12-15-holiday-train
@@ -12,6 +12,7 @@ newsflash: |
 # newsflash_buttontext:
 # newsflash_buttonurl:
 
+htmlfile: "default.html"
 cssfile: ""
 jsfile: ""
 

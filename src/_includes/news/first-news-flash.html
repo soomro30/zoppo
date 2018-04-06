@@ -1,0 +1,13 @@
+
+<div data-news="firstnewsflash">
+  <video class="navigation__video" id="startvideo" poster="{{ page.baseurl }}/assets/hero/{{ page.bgvideoname }}.jpg" autoplay
+    muted playsinline>
+    <source src="{{ page.baseurl }}/assets/hero/{{ page.bgvideoname }}.mp4">
+    <img src="{{ page.baseurl }}/assets/hero/{{ page.bgvideoname }}.jpg">
+  </video>
+  {% unless newsflash == 'hidden' %}
+  <div class="newsflash newsflash--firstnewsflash" data-firstvideomodal>
+    {{ page.newsflash | markdownify }}
+  </div>
+  {% endunless %}
+</div>

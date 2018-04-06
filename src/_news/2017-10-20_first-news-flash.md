@@ -1,5 +1,5 @@
 ---
-layout: news/firstnewsflash
+layout: news-single
 title:  "First News Flash"
 date:   2017-11-20 12:00:00 +0100
 slug: 2017-10-09-first-news-flash
@@ -14,7 +14,8 @@ newsflash: |
 #newsflash_buttontext: Check it out
 newsflash_buttonurl: /about
 
+htmlfile: "first-news-flash.html"
 cssfile: ""
-jsfile: "firstnewsflash" # see this commit: https://github.com/fullystudios/fullystudios.github.io/commit/e4ae94b6a443fae88195cc096305b9903c7397d8
+jsfile: "first-news-flash.js" # see this commit: https://github.com/fullystudios/fullystudios.github.io/commit/e4ae94b6a443fae88195cc096305b9903c7397d8
 
 ---

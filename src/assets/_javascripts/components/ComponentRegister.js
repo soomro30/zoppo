@@ -1,6 +1,6 @@
 import Nav from './Nav';
 import Slider from './Slider';
-import VideoPlayer from './VideoPlayer';
+// import VideoPlayer from './VideoPlayer';
 import Opinioated from './Curiosities';
 // import SvenskaSkolan from './News';
 // import PageTransition from './PageTransition';
@@ -9,7 +9,7 @@ import Opinioated from './Curiosities';
 module.exports = {
 	nav: new Nav,
 	slider: new Slider,
-	videoPlayer: new VideoPlayer,
+	// videoPlayer: new VideoPlayer,
 	opinioated: new Opinioated
 	// svenskaskolan: new SvenskaSkolan
 	// barbaWrapper: new BarbaWrapper,

@@ -17,30 +17,13 @@ layout: default
 			</style>
 		{% endif %}
 	{% endunless %}
-	<div class="herohero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %}" id="work_{{ page.slug }}" {% unless page.background-image_color == nil %} style="background-color: {{page.background-image_color}}"{% endunless %}>
-		{% comment %}<span class="hero-meta">{{ page.date | date: "%b %-d, %Y" }}</span>{% endcomment %}
-
-		
-		{% comment %}<header class="hero__header hero__header--shadow">{% endcomment %}
+	<div class="hero hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %}" id="work_{{ page.slug }}" {% unless page.background-image_color == nil %} style="background-color: {{page.background-image_color}}"{% endunless %}>
 		<header class="hero__header">
 			<h1 class="hero__header-element fullwidth" itemprop="name headline">
 				{{ page.title }}
 			</h1>
-			
-			{% comment %}<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} {% endcomment %}
-			{% comment %}<span class="categories">{{ page.categories }}<span></p>{% endcomment %}
 		</header>
-
-		{% comment %}
-		###################################
-		## Get code for the background set
-		## in current news post
-		{% endcomment %}
-		{% unless page.background == nil %}
-			{{ page.background }}
-		{% endunless %}
-
-    </div>
+	</div>
 
 	<main class="content" itemprop="articleBody">
 		{% unless page.ingress == nil %}
@@ -61,7 +44,7 @@ layout: default
 
 
 
-<div class="boxgrid boxgrid--light">
+<div class="boxgrid">
 	<h2 class="boxgrid__header h4">Check out our news</h2>
 	{% for new in site.news %}
 		{% if new.title == page.title %}
