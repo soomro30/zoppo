@@ -39,6 +39,9 @@ title: Motion on the web
             {{ site.newsflash | markdownify }}
             {% unless site.newsflash_buttontext == nil %}
                 <a href="{{site.newsflash_buttonurl}}" class="button"><span>{{ site.newsflash_buttontext }}</span></a>
+                <a href="/news" class="link link--next"><span>View all news</span>
+                    <svg class="link--icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use></svg>
+                </a>
             {% endunless %}
         
         {% unless site.newsflash_buttonurl == nil %}

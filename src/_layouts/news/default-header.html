@@ -28,23 +28,23 @@ layout: default
 
 
 <div class="boxgrid">
-	<h2 class="boxgrid__header h4">Check out our other old news</h2>
-	{% for new in site.news limit:3 %}
-		{% if new.title == page.title %}
-			{% continue %}
-		{% endif %}
-		<a class="boxgrid__box" href="{{ new.url | prepend: site.baseurl }}">
-			
-				<div class="boxgrid__image" {% unless new.background-image_color == nil %} style="background-color: {{ new.background-image_color }}" {% endunless %}>
-				{% unless new.background-image_720 == nil %}
-					<img src="{{site.baseurl}}/assets/news/{{new.slug}}/{{new.background-image_720}}" alt="{{ new.title }}">	
-				{% endunless %}
-				</div>
-				<div class="boxgrid__caption" style="padding-top: 3em">
-					<h3>{{ new.title }}</h3>
-					<p>{{ new.subtitle }}</p>
-				</div>
-			
-		</a>
-	{% endfor %}
+    <h2 class="boxgrid__header h4">Check out our other news</h2>
+    {% for new in site.news %}
+        {% if new.title == page.title %}
+            {% continue %}
+        {% endif %}
+        <a class="boxgrid__box" href="{{ new.url | prepend: site.baseurl }}">
+            
+                <div class="boxgrid__image" {% unless new.background-image_color == nil %} style="background-color: {{ new.background-image_color }}" {% endunless %}>
+                {% unless new.thumbnail == nil %}
+                    <img src="{{site.baseurl}}/assets/news/{{new.slug}}/{{new.thumbnail}}" alt="{{ new.title }}">   
+                {% endunless %}
+                </div>
+                <div class="boxgrid__caption">
+                    <h3>{{ new.title }}</h3>
+                    <p>{{ new.subtitle }}</p>
+                </div>
+            
+        </a>
+    {% endfor %}
 </div>

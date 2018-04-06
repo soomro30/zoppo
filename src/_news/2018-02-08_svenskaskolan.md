@@ -4,6 +4,7 @@ title:  "The Swedish School in London"
 date:   2016-02-08 12:00:00 +0100
 slug: 2016-02-08-swedishschool-london
 
+thumbnail: "thumbnail_720.jpg"
 img-left: "tree.png"
 img-right: "garden.png"
 img-background: "castle.png"

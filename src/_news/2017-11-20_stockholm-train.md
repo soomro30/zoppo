@@ -4,6 +4,7 @@ title:  "Stockholm Train"
 date:   2017-11-20 12:00:00 +0100
 slug: 2017-11-20-stockholm-train
 
+thumbnail: "thumbnail_720.jpg"
 bgvideoname: "intro_train_v2" # ex intro_train. the poster need to have the same name as the video
 newsflash: |  
    ### Our Stockholm office is open!
