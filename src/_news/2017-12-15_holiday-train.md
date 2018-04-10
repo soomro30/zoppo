@@ -1,6 +1,7 @@
 ---
 layout: news-single
 title:  "Holiday Train"
+subtitle: "New Fully office in Stockholm – Christmas edition"
 date:   2017-12-15 12:00:00 +0100
 slug: 2017-12-15-holiday-train
 
