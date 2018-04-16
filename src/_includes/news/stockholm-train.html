@@ -1,0 +1,17 @@
+
+<video class="navigation__video" id="startvideo" poster="{{ page.baseurl }}/assets/hero/{{ page.bgvideoname }}.jpg" autoplay
+    muted playsinline loop>
+    <source src="{{ page.baseurl }}/assets/hero/{{ page.bgvideoname }}.mp4">
+    <img src="{{ page.baseurl }}/assets/hero/{{ page.bgvideoname }}.jpg">
+</video>
+{% if include.newsflash == 'visible' %}
+
+<div class="newsflash newsflash--train" data-videomodal>
+    {{ page.newsflash | markdownify }}
+    <a href="{{page.newsflash_buttonurl}}" class="button button--transparent">
+        <span>{{ page.newsflash_buttontext }}</span>
+    </a>
+</div>
+
+{% endif %}
+    

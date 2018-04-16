@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="navigation__wrapper">
+  <nav class="navigation" id="startmenu">
+    {% include menu.html %}
+    {% unless page.htmlfile == nil %}
+        {% include news/{{ page.htmlfile }} newsflash="visible" %}
+    {% endunless %}
+  </nav>
+</div>
+
+<div class="boxgrid">
+	<h2 class="boxgrid__header h4">Check out our news</h2>
+	{% for new in site.news %}
+		{% if new.title == page.title %}
+			{% continue %}
+		{% endif %}
+		<a class="boxgrid__box" href="{{ new.url | prepend: site.baseurl }}">
+			
+				<div class="boxgrid__image" {% unless new.background-image_color == nil %} style="background-color: {{ new.background-image_color }}" {% endunless %}>
+				{% unless new.thumbnail == nil %}
+					<img src="{{site.baseurl}}/assets/news/{{new.slug}}/{{new.thumbnail}}" alt="{{ new.title }}">	
+				{% endunless %}
+				</div>
+				<div class="boxgrid__caption">
+					<h3>{{ new.title }}</h3>
+					<p>{{ new.subtitle }}</p>
+				</div>
+			
+		</a>
+	{% endfor %}
+</div>

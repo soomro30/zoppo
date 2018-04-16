@@ -26,7 +26,7 @@ $bgMqMedium: 800px;
         width: 100%;
         max-width: 100%;
         text-align: center;
-        padding: $s-small 12% $s-small*0.5;
+        padding: $s-small 15% $s-small*0.5;
         color: $c-signal;
     }
     a.boxgrid__box {
@@ -193,6 +193,17 @@ $bgMqMedium: 800px;
                 }
             }
         }
+    }
+
+    //Light version
+    &--light{
+      &:before {
+        border: 4px solid $c-light;
+      }
+
+      .boxgrid__header {
+        color: $c-light;
+      }
     }
 }
 

@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger: "[data-scrollto]",
         outputLog: true,
     });
+
+    const videoModal = document.querySelector('[data-videomodal]');
+    if (videoModal) videoModal.classList.add('newsflash--open');
+
 }, false);
 
 // Branding

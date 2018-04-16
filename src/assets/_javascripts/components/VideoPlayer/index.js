@@ -57,6 +57,8 @@ class VideoPlayer {
         // console.log('playing video', el.currentTime);
         if (this.modalIsTriggered) return;
 
+        this.adjustSettings(); //Update vars if needed/special hero
+
         if (el.currentTime < this.triggerTime) {
             return;
         } else {
@@ -78,6 +80,13 @@ class VideoPlayer {
         // }
         
         // window.requestAnimationFrame(loop);
+    }
+
+    adjustSettings(){
+        if( document.querySelectorAll("[data-news='firstnewsflash']").length > 0){
+            this.triggerTime = 6.2;
+            this.videoDuration = 9.04;
+        }
     }
 
 
