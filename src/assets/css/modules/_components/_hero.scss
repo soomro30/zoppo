@@ -156,6 +156,22 @@
     align-items: center;
 }
 
+video.hero__background {
+    @media (min-aspect-ratio: 16/9) {
+        width: 100%;
+        height: auto;
+        transform: translateY(-25%);
+        top: 25%;
+    }
+    @media (max-aspect-ratio: 16/9) {
+        width: auto;
+        height: 100%;
+        transform: translateX(-75%);
+        margin-top: 0;
+        left: 75%;
+    }
+}
+
 .hero__bgcenter {
     position: absolute;
     top: 0;
