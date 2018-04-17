@@ -98,6 +98,11 @@ $grh: 5vh;
         }
     }
 
+     &__offsetcolumn--center {
+         display: flex;
+         align-items: center;
+     }
+
     // Fullwidth image with box underneath
     &__fullwidth {
         grid-column: 1 / span 12;

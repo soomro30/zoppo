@@ -1,0 +1,19 @@
+
+<video class="navigation__video" id="startvideo" poster="{{ page.baseurl }}/assets/hero/{{ page.bgvideoname }}.jpg" autoplay
+  muted playsinline loop>
+  <source src="{{ page.baseurl }}/assets/hero/{{ page.bgvideoname }}.mp4">
+  <img src="{{ page.baseurl }}/assets/hero/{{ page.bgvideoname }}.jpg">
+</video>
+{% unless page.newsflash_buttonurl == nil %}
+<div class="newsflash" data-videomodal>
+  {% else %}
+  <div class="newsflash" data-videomodal>
+    {% endunless %} {{ page.newsflash | markdownify }} {% unless page.newsflash_buttontext == nil %}
+    <a href="{{page.newsflash_buttonurl}}" class="button button--transparent">
+      <span>{{ page.newsflash_buttontext }}</span>
+    </a>
+    {% endunless %} {% unless page.newsflash_buttonurl == nil %}
+  </div>
+  {% else %}
+</div>
+{% endunless %}

@@ -56,8 +56,8 @@
 // Position
 .center {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 .flexcenter {
     display: flex;
@@ -131,4 +131,9 @@
     @media (min-width: $on-palm ) {
         display: none;
     }
+}
+
+.fullwidth{
+  width: 100%;
+  max-width: 100%;
 }

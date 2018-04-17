@@ -1,9 +1,11 @@
 ---
-layout: news/train
+layout: news-single
 title:  "Stockholm Train"
+subtitle: "New Fully office in Stockholm"
 date:   2017-11-20 12:00:00 +0100
 slug: 2017-11-20-stockholm-train
 
+thumbnail: "thumbnail_720.jpg"
 bgvideoname: "intro_train_v2" # ex intro_train. the poster need to have the same name as the video
 newsflash: |  
    ### Our Stockholm office is open!
@@ -14,6 +16,7 @@ newsflash: |
 newsflash_buttontext: Contact Stockholm office
 newsflash_buttonurl: mailto:joakim.hanner@fullystudios.se
 
+htmlfile: "stockholm-train.html"
 cssfile: ""
 jsfile: ""
 

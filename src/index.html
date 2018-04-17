@@ -2,51 +2,29 @@
 layout: default
 excerpt: Fully Studios is a Swedish web and film studio, specializing in motion on the web.
 title: Motion on the web
+
+# Settings for the hero - copy from the page hero
+newsflash: |  
+   ### A regal rebranding
+   
+   It’s not every day you get to rebrand a school — and one that’s a real-life London castle to boot. 
+   Inspired by neo-Gothic surroundings and fistfuls of crayons, we got to work.
+
+newsflash_buttontext: View case
+newsflash_buttonurl: work/swedishschool-london
+
+herofile: "svenska-skolan.html"
+cssfile: ""
+jsfile: "news_svenskaskolan.js"
 ---
 
 <div class="navigation__wrapper">
-    <nav class="navigation" id="startmenu">
-        {% include menu.html %}
-        <!-- <video class="navigation__video" id="startvideo"
-            poster="{{ site.baseurl }}/assets/hero/{{ site.bgvideoname }}.jpg"
-            autoplay muted playsinline loop>
-            <source src="{{ site.baseurl }}/assets/hero/{{ site.bgvideoname }}.mp4">
-            <img src="{{ site.baseurl }}/assets/hero/{{ site.bgvideoname }}.jpg">
-        </video> -->
-        <div class="navigation__layerimage navigation__layerimage--svenskaskolan-london" data-news="svenskaskolan-london">
-            <div class="parallax-container">
-                <div class="parallax-layer" data-depth="0.25">
-                    <img src="{{ site.baseurl }}/assets/hero/{{ site.news_imgcloud }}" class="navigation__layerimage-cloud">
-                    <img src="{{ site.baseurl }}/assets/hero/{{ site.news_imgcloud }}" class="navigation__layerimage-cloud">
-                </div>
-                <div class="parallax-layer" data-depth="0.20">
-                    <img src="{{ site.baseurl }}/assets/hero/{{ site.news_imgbackground }}" class="navigation__layerimage-background">
-                </div>
-                <div class="parallax-layer" data-depth="0.15">
-                    <img src="{{ site.baseurl }}/assets/hero/{{ site.news_imgright }}" class="navigation__layerimage-right">
-                </div>
-                <div class="parallax-layer" data-depth="0.1">
-                    <img src="{{ site.baseurl }}/assets/hero/{{ site.news_imgleft }}" class="navigation__layerimage-left">
-                </div>
-            </div>
-        </div>
-        {% unless site.newsflash_buttonurl == nil %}
-        <div class="newsflash newsflash--svenskaskolan-london" data-videomodal>
-        {% else %}
-        <div class="newsflash newsflash--svenskaskolan-london" data-videomodal>
-        {% endunless %}
-        
-            {{ site.newsflash | markdownify }}
-            {% unless site.newsflash_buttontext == nil %}
-                <a href="{{site.newsflash_buttonurl}}" class="button"><span>{{ site.newsflash_buttontext }}</span></a>
-            {% endunless %}
-        
-        {% unless site.newsflash_buttonurl == nil %}
-        </div>
-        {% else %}
-        </div>
-        {% endunless %}
-    </nav>
+  <nav class="navigation" id="startmenu">
+    {% include menu.html %}
+    {% unless page.herofile == nil %}
+        {% include news/{{ page.herofile }} newsflash="visible" %}
+    {% endunless %}
+  </nav>
 </div>
 
 {% include cc.html %}

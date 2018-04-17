@@ -1,13 +1,11 @@
 .newsflash {
     position: relative;
     margin-left: $s-small;
-    padding: $s-small*0.5 0;
+    padding: #{$s-small*0.7} #{$s-small*0.25};
     right: $s-small;
     z-index: 10;
     font-size: 0.9em;
-    //font-size: 0.8em; // for christmas
     width: 38em;
-    //width: 28em; // for christmas
 
     transform: scale(0.8);
     transform-origin: 50% -40%;
@@ -20,7 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: -#{$s-small*0.25} -#{$s-small*0.25} 0 $c-signal;
+    box-shadow: -#{$s-small*0.25} #{$s-small*0.25} 0 $c-signal;
     * {
         max-width: 100%;
     }
@@ -28,7 +26,7 @@
         font-size: 2em;
         width: 100%;
     }
-    p {
+    h3 + p {
         margin-top: $s-small*0.5;
     }
     @media (min-height: 480px) {
@@ -36,9 +34,9 @@
     }
     @include media-query($on-laptop) {
         position: absolute;
-        padding: $s-small*0.5 $s-small $s-small*0.75;
+        padding: $s-small * 0.8;
         bottom: $s-small;
-        right: $s-small * 2;
+        right: $s-small;
         // padding: $s-small 0;
         // p { display: block; }
         font-size: 0.7em;
@@ -56,14 +54,16 @@
         opacity: 1;
     }
 
-     //Custom variations of Newsflash Box
-    &--train{
-        font-size: 0.8em;
-        box-shadow: none;
-        width: 28em;
-        color: $c-white;
-        border: 2px solid $c-white;
-        background-color: transparent;
+    .button{
+      font-size: 1em;
+    }
+
+    .link{
+      padding: 0 15px;
+
+      &:before{
+        bottom: -3px;
+      }
     }
 }
 #menu .newsflash {

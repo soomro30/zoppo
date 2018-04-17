@@ -45,9 +45,15 @@
 </script>
 
 {% assign random = site.time | date: "%s%N" %}
-{% capture boundle_src %}/assets/bundles/bundle.js?v={{ random }}{% endcapture %}
+{% capture boundle_src %}/assets/bundles/app.js?v={{ random }}{% endcapture %}
 
 <script src="{{ boundle_src | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
+
+{{page.jsfile}}
+
+{% unless page.jsfile == '' or page.jsfile == nil %}
+    <script src="{{ "/assets/bundles/" | relative_url }}{{page.jsfile}}?{{site.time | date: '%s%N'}}"></script>
+{% endunless %}
 
 {% comment %} JIRA issue collector - hide on live site :) {% endcomment %}
 {% comment %} <style>.atlwdg-trigger.atlwdg-SUBTLE {z-index: 1000; box-shadow: none; border: 2px solid #5f11e8; bottom: 5px; right: 5px; color: #5f11e8 }</style>

@@ -1,0 +1,183 @@
+{
+	"metadata": {
+		"type": "App",
+		"sourceFile": "qgroup-corridor.blend",
+		"version": 4.4,
+		"generator": "io_three"
+	},
+	"project": {
+		"gammaInput": false,
+		"gammaOutput": false,
+		"shadows": false,
+		"vr": false
+	},
+	"camera": {
+		"metadata": {
+			"version": 4.5,
+			"type": "Object",
+			"generator": "Object3D.toJSON"
+		},
+		"object": {
+			"uuid": "B4983B31-3F50-4810-A142-E038FAF234BC",
+			"type": "PerspectiveCamera",
+			"name": "Camera",
+			"matrix": [
+				-1,0,0,0,
+				0,1,0,0,
+				0,0,-1,0,
+				0,-0.5,-10,1],
+			"fov": 28.84,
+			"zoom": 1,
+			"near": 0.01,
+			"far": 320,
+			"focus": 10,
+			"aspect": 1.77778,
+			"filmGauge": 35,
+			"filmOffset": 0
+		}
+	},
+	"scene": {
+		"metadata": {
+			"version": 4.5,
+			"type": "Object",
+			"generator": "Object3D.toJSON"
+		},
+		"object":{
+			"children":[
+			{
+				"uuid": "E38D774C-3F42-42F5-8BB6-39B9085CD31C",
+				"type": "Mesh",
+				"name": "tunnel",
+				"matrix": [
+					-1,0,0,0,
+					0,0,1,0,
+					0,1,0,0,
+					0,-2,0,1],
+				"geometry": "661F118D-371A-4F38-8C12-0D424B55BF7F",
+				"material": "F6634A6F-8DE6-4C6A-84FB-9FDB2D7AEB9D"
+			},{
+				"name":"lightintheendofthetunnel",
+				"uuid":"1D955230-0E8E-45B8-90E4-E8793A8CE507",
+				"matrix":[-5,0,0,0,0,2.57049,-1.1236e-07,0,0,-1.1236e-07,-2.57049,0,0,0,190,1],
+				"visible":true,
+				"type":"Mesh",
+				"material":"4A9D15A5-4A36-4639-AC97-FB8A6D3CE1FB",
+				"castShadow":false,
+				"receiveShadow":false,
+				"geometry":"F97F0320-9D31-4A5C-B571-390C191C27F4"
+			}],
+			"matrix":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+			"uuid":"72EFC3EF-D68B-46E3-ADFE-CFD353379EF7",
+			"type":"Scene"
+		},
+		"geometries":[{
+			"name":"EndInTheTunnelGemotry",
+			"data":{
+				"groups":[{
+					"materialIndex":0,
+					"count":6,
+					"start":0
+				}],
+				"index":{
+					"itemSize":1,
+					"type":"Uint16Array",
+					"array":[0,1,2,0,3,1]
+				},
+				"attributes":{
+					"normal":{
+						"itemSize":3,
+						"type":"Float32Array",
+						"array":[0,-0,1,0,-0,1,0,-0,1,0,-0,1]
+					},
+					"position":{
+						"itemSize":3,
+						"type":"Float32Array",
+						"array":[-1,1,0,1,-1,0,1,1,0,-1,-1,0]
+					}
+				}
+			},
+			"uuid":"F97F0320-9D31-4A5C-B571-390C191C27F4",
+			"type":"BufferGeometry"
+		},{
+			"uuid": "661F118D-371A-4F38-8C12-0D424B55BF7F",
+			"type": "BufferGeometry",
+			"name": "TunnelGeometry",
+			"data": {
+				"attributes": {
+					"uv": {
+						"itemSize": 2,
+						"type": "Float32Array",
+						"array": [0,0.300797,0.166667,0,0.166667,0.300797,0.666667,0.300797,0.5,0.601593,0.5,0.300797,0.166667,1,0,0.800797,0.166667,0.800797,0.833333,0.398406,0.666667,0,0.833333,0,0,0.601593,0.166667,0.601593,0.333333,0.300797,0.333333,0.601593,1,0.398406,1,0,0,0.601594,0.166667,0.601594,0.333333,0.601593,0.333333,0.300797,0.333333,0,0.333333,0.800797,0.333333,0.601593,0.333333,1,0.5,0,0.333333,0,0.666667,0,0,0,0.666667,0.601593,0,1,0.666667,0.398406],
+						"normalized": false
+					},
+					"normal": {
+						"itemSize": 3,
+						"type": "Float32Array",
+						"array": [0,0,1,0,0,1,0,0,1,0,0,-1,0,0,-1,0,0,-1,1,0,0,1,0,0,1,0,0,-1,0,0,-1,0,0,-1,0,0,0,0,1,0,0,1,0,0,1,0,0,1,-1,0,0,-1,0,0,1,0,0,1,0,0,0,0,-1,0,0,-1,0,0,1,1,0,0,1,0,0,1,0,0,0,0,-1,0,0,-1,0,0,-1,0,0,1,0,0,-1,1,0,0,-1,0,0],
+						"normalized": false
+					},
+					"position": {
+						"itemSize": 3,
+						"type": "Float32Array",
+						"array": [0,2,0,-3.02,0,0,0,0,0,0,2,4,3.02,0,4,0,0,4,-3.02,2,2,-3.02,0,4,-3.02,0,2,3.02,0,4,3.02,2,0,3.02,0,0,3.02,2,0,3.02,0,0,0,-2,0,3.02,-2,0,3.02,-2,4,3.02,-2,0,-3.02,-2,4,-3.02,-2,2,3.02,-2,4,0,-2,4,-3.02,-2,0,-3.02,0,0,-3.02,-2,0,-3.02,2,0,-3.02,0,4,-3.02,-2,4,-3.02,2,4,-3.02,2,0,3.02,2,4,-3.02,2,4,3.02,2,4],
+						"normalized": false
+					}
+				},
+				"index": {
+					"type": "Uint16Array",
+					"array": [0,1,2,3,4,5,6,7,8,9,10,11,12,2,13,13,14,15,16,11,17,8,18,19,5,20,21,2,22,14,23,19,24,25,8,23,26,21,27,28,5,26,0,29,1,3,30,4,6,31,7,9,32,10,12,0,2,13,2,14,16,9,11,8,7,18,5,4,20,2,1,22,23,8,19,25,6,8,26,5,21,28,3,5]
+				},
+				"groups": [
+					{
+						"start": 0,
+						"count": 84,
+						"materialIndex": 0
+					}],
+				"boundingSphere": {
+					"center": [0,0,2],
+					"radius": 4.137681
+				}
+			}
+		}],
+		"materials": [
+			{
+				"uuid": "4A9D15A5-4A36-4639-AC97-FB8A6D3CE1FB",
+				"type": "MeshBasicMaterial",
+				"color": "0x181818",
+				"depthFunc": 3,
+				"depthTest": true,
+				"depthWrite": true
+			},{
+				"uuid": "F6634A6F-8DE6-4C6A-84FB-9FDB2D7AEB9D",
+				"type": "MeshBasicMaterial",
+				"color": 16777215,
+				"map": "D780B7E4-8885-42C8-BD70-DD251EA7642E",
+				"depthFunc": 3,
+				"depthTest": true,
+				"depthWrite": true
+			}
+		],
+		"textures": [
+		{
+			"uuid": "D780B7E4-8885-42C8-BD70-DD251EA7642E",
+			"name": "",
+			"mapping": 300,
+			"repeat": [1,1],
+			"offset": [0,0],
+			"center": [0,0],
+			"rotation": 0,
+			"wrap": [1001,1001],
+			"minFilter": 1008,
+			"magFilter": 1006,
+			"anisotropy": 1,
+			"flipY": true,
+			"image": "557B3CE0-D179-4C86-8C54-7A915B24DCF8"
+		}],
+		"images": [
+		{
+			"uuid": "557B3CE0-D179-4C86-8C54-7A915B24DCF8",
+			"url": "https://fullystudios.se/assets/work/qgroup/tunnel.png"
+		}]
+	},
+	"scripts": {}
+}

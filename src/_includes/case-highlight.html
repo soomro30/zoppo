@@ -26,15 +26,11 @@
         </style>
     {% endunless %}
 
-    <div class="grid__offsetcolumn1-2 background-image"{% unless work1.background-image_color == nil %} style="background-color: {{work1.background-image_color}}"{% endunless %}>
-        {% unless work1.background == nil %}
-            {{ work1.background }}
-        {% endunless %}
-    </div>
+    <div class="grid__offsetcolumn1-2 background-image"{% unless work1.background-image_color == nil %} style="background-color: {{work1.background-image_color}}"{% endunless %}></div>
 
     <div class="boxtext grid__offsetcolumn2-2 bring-to-front">
         <h2>{{work1.title}}</h2>
-        <p>{{work1.subtitle}}</p>
+        <p class="center">{{work1.subtitle}}</p>
         <a href="{{ work1.url | prepend: site.baseurl }}" class="button"><span>{{work1.button-text}}</span></a>
         <a href="{{ site.works | prepend: site.baseurl }}" class="link link--next"><span>View all projects</span><svg class="link--icon"><use xlink:href="#icon-arrow-right"></use></svg></a>
     </div>
