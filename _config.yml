@@ -19,14 +19,18 @@ instagram: "https://www.instagram.com/fullystudios/"
 # UI copy
 morenews: "More news"
 
-# Papricaklubben
-case_highlight1_id: 5
+# Collector: 1
+# Tanumstrand: 2
+# Papricaklubben: 5
+# Pågen: 8
+# Svenska skolan: 9
+# Qgroup: 10
 
-# Collector
-case_highlight2_id: 1
+case_highlight1_id: 10
 
-# Tanumstrand
-case_highlight3_id: 2
+case_highlight2_id: 9
+
+case_highlight3_id: 5
 
 # Links
 works: "/work"
