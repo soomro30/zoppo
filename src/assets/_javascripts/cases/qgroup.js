@@ -1,5 +1,6 @@
 import { FileLoader, ObjectLoader, WebGLRenderer, BoxGeometry, MeshStandardMaterial, Mesh, Fog } from 'three';
 // import { Stats } from 'three-stats';
+require('intersection-observer');
 
 const TWEEN = require('@tweenjs/tween.js');
 
@@ -54,7 +55,8 @@ const Tunnel = {
         let touchCounter = 0;
 
         var domModal = document.getElementById('loginModal');
-        var heroContent = document.getElementsByClassName('hero__header');
+        var heroContent = document.querySelector('hero__header');
+        var heroMetabox = document.querySelector('metabox');
         var domCloseModal = document.getElementById('closeModal');
 
         this.dom = dom;
@@ -236,7 +238,7 @@ const Tunnel = {
 
             // light strip roof right
             let lightlistRightTop = new Mesh(lightListGeometryTop, lightListMaterial);
-            lightlistRightTop.position.set(-1.5, sizes.height / 2, (1 * rowDistance + (rowDistance / 2)) + offset );
+            lightlistRightTop.position.set(-1.5, sizes.height / 2, (1 * rowDistance + (rowDistance / 2)) + offset);
             scene.add(lightlistRightTop);
 
             for (let rowNr = 1; rowNr < numberOfRows; rowNr++) {
@@ -312,13 +314,16 @@ const Tunnel = {
 
         function openModal() {
             domModal.classList.remove('tunnel__modal--hidden');
-            if(heroContent.length > 0){
-                heroContent[0].classList.add('hero__header--hidden');
-            }
+            heroContent.classList.add('hero__header--hidden');
+            heroMetabox.classList.add('metabox--hidden');
         }
         function closeModal() {
             domModal.classList.add('tunnel__modal--hidden');
             window.location.reload();
+            heroContent.classList.remove('hero__header--hidden');
+            heroMetabox.classList.remove('metabox--hidden');
+
+
             // this.stopTweenFrameUpdate = false;
             // camera.position = cameraOrgPos; // does not work
         }
@@ -339,7 +344,7 @@ const Tunnel = {
             if (camera.position.z <= self.cameraMaxPos && !self.speedTweenActive) { // 267
                 //controls.enabled = false;
                 self.speedTweenActive = true;
-                
+
                 var animCam = { z: camera.position.z, x: camera.rotation.z };
                 var tween = new TWEEN.Tween(animCam)
                     .to({ z: self.cameraMaxPos, x: -2 }, self.zoomSpeed)
@@ -371,7 +376,7 @@ const Tunnel = {
         var changedPerformeceOnce = false;
 
         // check if there is more then 15 frame drops under 45 fps, then lower performence
-        function checkPerformence(){
+        function checkPerformence() {
             let delta = (Date.now() - lastCalledTime) / 1000;
             lastCalledTime = Date.now();
             fps = 1 / delta;
@@ -544,7 +549,7 @@ const Tunnel = {
         }
 
         function onDocumentTouchEnd(event) {
-            if (event.target.offsetParent.matches('.hero__content') || event.target.offsetParent.matches('.tunnel') ) {
+            if (event.target.offsetParent.matches('.hero__content') || event.target.offsetParent.matches('.tunnel')) {
                 countTouchTaps();
             }
 
@@ -581,8 +586,8 @@ const Tunnel = {
 
         window.addEventListener("devicemotion", function (event) {
             // if (event.rotationRate.alpha || event.rotationRate.beta || event.rotationRate.gamma) {
-                gyroPresent = true;
-                window.addEventListener("deviceorientation", handleOrientation, true);
+            gyroPresent = true;
+            window.addEventListener("deviceorientation", handleOrientation, true);
             // }
         });
 
