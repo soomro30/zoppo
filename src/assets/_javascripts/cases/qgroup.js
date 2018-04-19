@@ -1,6 +1,6 @@
 import { FileLoader, ObjectLoader, WebGLRenderer, BoxGeometry, MeshStandardMaterial, Mesh, Fog } from 'three';
 // import { Stats } from 'three-stats';
-require('intersection-observer');
+// require('intersection-observer');
 
 const TWEEN = require('@tweenjs/tween.js');
 
