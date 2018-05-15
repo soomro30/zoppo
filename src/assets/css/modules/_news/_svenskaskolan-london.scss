@@ -16,7 +16,7 @@
 
     img{
         position: absolute;
-        
+
         &.navigation__layerimage-background{
             left: 50%;
             transform: translateX(-50%);
@@ -50,10 +50,10 @@
 
         &.navigation__layerimage-left{
             height: 110%;
-            left: -40px;
+            left: -4%;
             top: -5%;
-        } 
-        
+        }
+
         @media (max-aspect-ratio: 1/1){
             &.navigation__layerimage-right{
                 right: -35vh;
@@ -74,14 +74,14 @@
         }
 
         @media (min-aspect-ratio: 10/6){
-            
+
             &.navigation__layerimage-background, &.navigation__layerimage-right{
                 width: 110%;
                 bottom: -12vw;
             }
 
             &.navigation__layerimage-right{
-                right: -40px;
+                right: -4%;
                 bottom: -8vw;
             }
         }
@@ -95,7 +95,7 @@
                 bottom: -10vw;
             }
         }
-        
+
         @media (max-aspect-ratio: 5/7){
             &.navigation__layerimage-background, &.navigation__layerimage-right{
                 width: 180vh;
@@ -120,7 +120,7 @@
 }
 
 @keyframes cloud {
-    0% { 
+    0% {
         opacity: 0;
         transform: translateX(0);
     }
@@ -133,7 +133,7 @@
         opacity: 0.5;
     }
 
-    100% { 
+    100% {
         transform: translateX(80vw);
         opacity: 0;
     }
