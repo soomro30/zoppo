@@ -16,6 +16,7 @@ module.exports = {
     app: './src/assets/_javascripts/app.js',
     news_svenskaskolan: './src/assets/_javascripts/news/svenskaskolan.js',
     'first-news-flash': './src/assets/_javascripts/news/first-news-flash.js',
+    'summer-2018': './src/assets/_javascripts/news/summer-2018.js',
     'qgroup': './src/assets/_javascripts/cases/qgroup.js',
   },
   output: {
