@@ -45,7 +45,7 @@ $animTime: .3s;
     //     mix-blend-mode: multiply;
     //     z-index:1;
     // }
-    &__video, &__layerimage { 
+    &__video, &__layerimage {
         // background-color: $c-dark;
         background-color: #100F36; // for the train bg
         position: absolute;
@@ -58,8 +58,8 @@ $animTime: .3s;
         @media (min-aspect-ratio: 16/9) { // Landscape
             width: 100%;
             height: auto;
-            transform: translateY(-25%); // focus on the stubbe/train
-            top: 25%;
+            // transform: translateY(-25%); // focus on the stubbe/train
+            // top: 25%;
         }
         @media (max-aspect-ratio: 16/9) { // Portrait
             width: auto;
@@ -90,9 +90,9 @@ $animTime: .3s;
         @extend .h2;
         color: $c-white;
         padding: $s-small*0.25 0;
-        text-shadow: 0px 5px 10px rgba(10,42,79,0.3);
+        //text-shadow: 0px 5px 10px rgba(10,42,79,0.3);
         @include media-query($on-laptop) {
-            padding: $s-small*0.5 $s-small*2;        
+            padding: $s-small*0.5 $s-small*2;
         }
         @media (max-height: 445px) {
             padding: 0.2em $s-small;
@@ -127,7 +127,7 @@ $animTime: .3s;
     .menu-about ~ .navigation__overlay { left: 1.344em; }
     .menu-curiosities ~ .navigation__overlay { left: 0.725em; }
     .menu-contact ~ .navigation__overlay { left: 1.35em; }
-    
+
     .wave-svg {
         width: 100%;
         height: 100%;
@@ -141,7 +141,7 @@ $animTime: .3s;
 
         transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 0, 0.1, 0.99);
         pointer-events: none;
-    
+
         @include media-query($on-laptop) {
            left: $s-small;
         }
@@ -239,7 +239,7 @@ $animTime: .3s;
         z-index: 1;
         transform: scale(0.05, 0.01) translate3d($s-small,$s-small,0);
         @media (orientation: landscape) {
-            transform: scale(0.01, 0.05) translate3d($s-small,$s-small,0);        
+            transform: scale(0.01, 0.05) translate3d($s-small,$s-small,0);
         }
         opacity: 0;
     }
@@ -290,17 +290,17 @@ $animTime: .3s;
 }
 
 @keyframes openmenu {
-	0% { 
+	0% {
         transform: scale(0.03, 0.04) translate3d($s-small,$s-small,0);
         width: 100%; height: 100%;
     }
-	100% { 
-        transform: scale(1) translate3d(0,0,0); 
-        width: 100%; height: 100%;    
+	100% {
+        transform: scale(1) translate3d(0,0,0);
+        width: 100%; height: 100%;
     }
 }
 @keyframes closemenu {
-	0% { 
+	0% {
         transform: scale(100) translate3D(-#{$s-small}, -#{$s-small}, 0);
         opacity: 1;
     }
@@ -309,24 +309,24 @@ $animTime: .3s;
     100% { opacity: 0 }
 }
 @keyframes show {
-	0% { 
+	0% {
         opacity: 0;
     }
-	100% { 
+	100% {
         opacity: 1;
     }
 }
 @keyframes hide {
-	0% { 
+	0% {
         opacity: 1;
     }
-	100% { 
+	100% {
         opacity: 0;
     }
 }
 
 @keyframes slidedown {
-    0% { 
+    0% {
         opacity: 0;
         transform: translate3D(0,-20px,0);
     }
@@ -335,9 +335,9 @@ $animTime: .3s;
         opacity: 1;
     }
 
-	100% { 
+	100% {
         opacity: 1;
-        transform: translate3D(0,0,0);        
+        transform: translate3D(0,0,0);
     }
 }
 
