@@ -3,6 +3,11 @@
 .navigation__layerimage--summer-2018 {
     .parallax-container {
         height: 100%;
+        position: relative;
+        @media (max-aspect-ratio: 8/10) {
+            height: 50vw;
+            top: 50vw;
+        }
     }
 
     .parallax-layer {
@@ -15,48 +20,172 @@
     background: #fdc085;
 
     .img {
-        width: 110%;
         max-width: none;
-        left: -5%;
-        bottom: 30%;
         position: absolute;
-
-        @media (min-aspect-ratio: 7/10) {
-            bottom: 10%;
-        }
-
-        @media (min-aspect-ratio: 10/10) {
-            bottom: -5%;
-        }
-
-        @media (min-aspect-ratio: 10/8) {
-            bottom: -15%;
-        }
-
-        @media (min-aspect-ratio: 10/7) {
-            bottom: -25%;
-        }
-
-        @media (min-aspect-ratio: 10/6) {
-            bottom: -35%;
-        }
-
-        @media (min-aspect-ratio: 10/5) {
-            bottom: -65%;
-        }
-
-        @media (min-aspect-ratio: 10/4) {
-            bottom: -80%;
-        }
     }
+}
+
+.layer_0000_Isbit1-2 {
+    width: (256 / 1920)*100vw;
+    top: 32.1vw;
+    left: 46.4vw;
+}
+
+.layer_0001_Flaskpost-2 {
+    width: (153 / 1920)*100vw;
+    top: 26.3vw;
+    left: 65.9vw;
+}
+.layer_0002_Fullyfrontal-2 {
+    width: (801 / 1920)*100vw;
+    top: -3.3vw;
+    left: 24.8vw;
+}
+.layer_0003_Lov3-2 {
+    width: (142 / 1920)*100vw;
+    top: 36.5vw;
+    left: 70vw;
+}
+.layer_0006_Isbit-2 {
+    width: (89 / 1920)*100vw;
+    top: 22.1vw;
+    left: 69vw;
+}
+.layer_0005_Isbit_stor-2 {
+    width: (97 / 1920)*100vw;
+    top: 22.8vw;
+    left: 66vw;
+}
+.layer_0004_Isbit-liten-2 {
+    width: (47 / 1920)*100vw;
+    top: 23.9vw;
+    left: 70.6vw;
+}
+.layer_0007_Kaffelime-2 {
+    width: (250 / 1920)*100vw;
+    top: 22.4vw;
+    left: 83vw;
+}
+.layer_0008_Fully2-2 {
+    width: (327 / 1920)*100vw;
+    top: 10.2vw;
+    left: 72.7vw;
+}
+.layer_0009_Isbit-4 {
+    width: (95 / 1920)*100vw;
+    top: 25.4vw;
+    left: 27.8vw;
+}
+.layer_0010_Lime2-2 {
+    width: (119 / 1920)*100vw;
+    top: 34.2vw;
+    left: 76.5vw;
+}
+.layer_0011_Isbit2-2 {
+    width: (172 / 1920)*100vw;
+    top: 26.1vw;
+    left: 14.2vw;
+}
+.layer_0012_Isbit3-2 {
+    width: (215 / 1920)*100vw;
+    top: 39.7vw;
+    left: 35vw;
+}
+.layer_0013_Lime-2 {
+    width: (152 / 1920)*100vw;
+    top: 45.2vw;
+    left: 22.9vw;
+}
+.layer_0014_Lov1-2 {
+    width: (67 / 1920)*100vw;
+    top: 34vw;
+    left: 17.1vw;
+}
+.layer_0015_Lov2-2 {
+    width: (137 / 1920)*100vw;
+    top: 53vw;
+    left: 58.4vw;
+}
+.layer_0016_Isbit-3 {
+    width: (50 / 1920)*100vw;
+    top: 26.8vw;
+    left: 9.5vw;
+}
+.layer_0017_Limeflyt-2 {
+    width: (115 / 1920)*100vw;
+    top: 24.7vw;
+    left: 11.8vw;
+}
+.layer_0018_Fully3-2 {
+    width: (278 / 1920)*100vw;
+    top: 15.6vw;
+    left: 13.9vw;
+}
+.layer_0019_vatten {
+    img {
+        width: 100%;
+    }
+    width: 110vw;
+    left: -5vw;
+    top: 23.3vw;
+    // bottom: 30%;
+
+    // @media (min-aspect-ratio: 7/10) {
+    //     bottom: 10%;
+    // }
+
+    // @media (min-aspect-ratio: 10/10) {
+    //     bottom: -5%;
+    // }
+
+    // @media (min-aspect-ratio: 10/8) {
+    //     bottom: -15%;
+    // }
+
+    // @media (min-aspect-ratio: 10/7) {
+    //     bottom: -25%;
+    // }
+
+    // @media (min-aspect-ratio: 10/6) {
+    //     bottom: -35%;
+    // }
+
+    // @media (min-aspect-ratio: 10/5) {
+    //     bottom: -65%;
+    // }
+
+    // @media (min-aspect-ratio: 10/4) {
+    //     bottom: -80%;
+    // }
 }
 
 .summer2018__vattenunder {
     position: absolute;
-    bottom: -150%;
+    bottom: -150vw;
     display: block;
     width: 100%;
     height: 0;
-    padding-top: 150%;
+    padding-top: 150vw;
     background-color: #fd959c;
 }
+
+.navigation__layerimage--summer-2018 {
+    pointer-events: none;
+    img {
+        pointer-events: all;
+    }
+}
+// .navigation__layerimage--summer-2018:after {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-image: url(/assets/news/2018-06-01-summer/mall.png);
+//     background-position: center;
+//     background-size: cover;
+//     opacity: 0.2;
+//     pointer-events: none;
+// }
