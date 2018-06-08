@@ -10,10 +10,10 @@ img-left: "tree.png"
 img-right: "garden.png"
 img-background: "castle.png"
 
-newsflash: |  
+newsflash: |
    ### A regal rebranding
-   
-   It’s not every day you get to rebrand a school — and one that’s a real-life London castle to boot. 
+
+   It’s not every day you get to rebrand a school — and one that’s a real-life London castle to boot.
    Inspired by neo-Gothic surroundings and fistfuls of crayons, we got to work.
 
 newsflash_buttontext: View case
@@ -24,3 +24,4 @@ cssfile: ""
 jsfile: "news_svenskaskolan.js"
 
 ---
+It’s not every day you get to rebrand a school — and one that’s a real-life London castle to boot. Inspired by neo-Gothic surroundings and fistfuls of crayons, we got to work.
