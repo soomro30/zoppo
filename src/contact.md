@@ -2,7 +2,7 @@
 layout: contact
 title: Contact us
 pagetitle: |
-  ## If you want to learn more about us and you’re not sure who to call, just ring [+46 738 07 30 72](tel:+46738073072). Or drop a line at [hello@&shy;fullystudios.se](mailto:hello@fullystudios.se). Our doors and inboxes are always open to new friends.  
+  ## If you want to learn more about us and you’re not sure who to call, just ring [+46 738 07 30 72](tel:+46738073072). Or drop a line at [hello@&shy;fullystudios.se](mailto:hello@fullystudios.se). Our doors and inboxes are always open to new friends.
 
 #pagetitle-link: "#we-are-fully"
 #pagetitle-linktext: Looking for someone special?
@@ -37,7 +37,7 @@ peoples:
     image: jonathan-davis-asp.jpg
     title: Developer & Production Manager
     email: jonathan.asp@fullystudios.se
-    tel: +46 739 48 07 05 
+    tel: +46 739 48 07 05
 
   - name: Alexander Tengner
     image: alexander-tengner.jpg
@@ -55,7 +55,7 @@ peoples:
     image: jonas-sandstedt.jpg
     title: Web & UI Animator
     email: jonas.sandstedt@fullystudios.se
-  
+
   - name: Jörgen Hansson
     image: jorgen-hansson.jpg
     title: Front-end Developer
@@ -67,15 +67,15 @@ peoples:
     email: chelsea.milojkovic@fullystudios.se
     tel: +46 721 89 49 89
 
-  - name: Axel Bolle
-    image: axel-bolle.jpg
-    title: Developer Intern
-    email: axel.bolle@fullystudios.se
-
   - name: Oskar Eriksson
     image: oskar-eriksson.jpg
-    title: Developer Intern
+    title: Web Developer
     email: oskar.eriksson@fullystudios.se
+
+  - name: Pontus Karlsson
+    image: pontus-karlsson.jpg
+    title: Web Developer
+    email: pontus.karlsson@fullystudios.se
 
   #- name: Mattias Larson
   #  image: mattias-larson.jpg
@@ -85,4 +85,4 @@ peoples:
 
 ---
 
-If you want to learn more about us and you’re not sure who to call, just ring [+46 738 07 30 72](tel:+46738073072). Or drop a line at [hello@fullystudios.se](mailto:hello@fullystudios.se). Our doors and inboxes are always open to new friends. 
+If you want to learn more about us and you’re not sure who to call, just ring [+46 738 07 30 72](tel:+46738073072). Or drop a line at [hello@fullystudios.se](mailto:hello@fullystudios.se). Our doors and inboxes are always open to new friends.
