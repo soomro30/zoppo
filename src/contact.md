@@ -27,12 +27,6 @@ peoples:
     email: joakim.hanner@fullystudios.se
     tel: +46 738 07 30 72
 
-  - name: Edīte Garjāne
-    image: edite-garjane.jpg
-    title: Design Strategist
-    email: edite.garjane@fullystudios.se
-    tel: +46 723 33 95 08
-
   - name: Jonathan Asp
     image: jonathan-davis-asp.jpg
     title: Developer & Production Manager
