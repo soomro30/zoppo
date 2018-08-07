@@ -1,10 +1,12 @@
 ---
 layout: curiosities
-title: Curiousities
-permalink: /curiousities/
-slug: curiousities
+title: Curiosities
+permalink: /curiosities/
+slug: curiosities
 background-color: "#ffde7f"
-redirect_from: /curious-about/
+redirect_from:
+  - /curious-about/
+  - /curiousities/
 ---
 
 Notes on Fully’s digital experiments, musings and creative romps.
