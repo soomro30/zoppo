@@ -34,8 +34,13 @@ layout: page
     <div class="map flexcenter center" id="g_map">
         {% comment %}fallback text{% endcomment %}
         Visit us at:<br>
-        <a href="https://www.google.se/maps/place/Fully+Studios/@57.7033361,11.9650662,19z/data=!3m1!4b1!4m5!3m4!1s0x464ff365f9958667:0xc960c81a24202e95!8m2!3d57.7033354!4d11.9656134">
-            {{site.adress}}
+        Gothenburg:
+        <a href="{{site.navigate-url-gbg}}">
+            {{site.adress-gbg}}
+        </a> 
+        Stockholm:
+        <a href="{{site.navigate-url-sthlm}}">
+            {{site.adress-sthlm}}
         </a>
     </div>
     
@@ -188,17 +193,14 @@ layout: page
             map: g_map,
             icon: marker_icon
         });
-        var site_description = "{{site.description}}";
-        var site_adress_gbg = "{{site.adress-gbg}}";
-        var site_adress_sthlm = "{{site.adress-sthlm}}";
 
-        function contentString(site_adress) { 
+        function contentString(site_adress, site_navigate_url) { 
             return '<div id="content">'+
             '<div id="bodyContent"><p><strong>Visit us at:</strong><br>'+
             site_adress +
             '</p>'+
             '<p>'+
-            '<a target="_blank" href="https://www.google.se/maps/dir//Fully+Studios,+Victoriapassagen,+S%C3%B6dra+Larmgatan+14,+411+16+G%C3%B6teborg/@57.7033354,11.9650662,19z/data=!4m15!1m6!3m5!1s0x464ff365f9958667:0xc960c81a24202e95!2sFully+Studios!8m2!3d57.7033354!4d11.9656134!4m7!1m0!1m5!1m1!1s0x464ff365f9958667:0xc960c81a24202e95!2m2!1d11.9656134!2d57.7033354">'+
+            '<a target="_blank" href="' + site_navigate_url + '">'+
             'Navigate here'+
             '</a><br><br>'+
             '</div>'+
@@ -206,10 +208,10 @@ layout: page
         };
         
         var infowindow_gbg = new google.maps.InfoWindow({
-            content: contentString(site_adress_gbg)
+            content: contentString("{{site.adress-gbg}}", "{{site.navigate-url-gbg}}")
         });
         var infowindow_sthlm = new google.maps.InfoWindow({
-            content: contentString(site_adress_sthlm)
+            content: contentString("{{site.adress-sthlm}}", "{{site.navigate-url-sthlm}}")
         });
 
         g_marker_gothenburg.addListener('click', function() {
