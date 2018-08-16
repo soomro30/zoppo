@@ -3,16 +3,16 @@ layout: default
 excerpt: Fully Studios is a Swedish web and film studio, specializing in motion on the web.
 title: Motion on the web
 
-herofile: "summer-2018.html"
+herofile: "fully-hero.html"
 cssfile: ""
-jsfile: "summer-2018.js"
+jsfile: "fully-hero.js"
 ---
 
 <div class="navigation__wrapper">
   <nav class="navigation" id="startmenu">
     {% include menu.html %}
-    {% unless page.herofile == nil %}
-        {% include news/{{ page.herofile }} newsflash="visible" %}
+    {% unless site.herofile == nil %}
+        {% include news/{{ site.herofile }} newsflash="visible" %}
     {% endunless %}
   </nav>
 </div>

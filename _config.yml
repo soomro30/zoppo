@@ -19,6 +19,10 @@ facebook: "https://www.facebook.com/fullystudios/"
 vimeo: "https://vimeo.com/fullystudios"
 instagram: "https://www.instagram.com/fullystudios/"
 
+# Current news
+herofile: fully-hero.html
+herojsfile: fully-hero.js
+
 # UI copy
 morenews: "More news"
 
