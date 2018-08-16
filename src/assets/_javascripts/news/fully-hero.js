@@ -1,24 +1,19 @@
 import lottie from 'lottie-web';
 
 const defaultHero = () => {
-  const fullyheros = document.querySelectorAll("[data-news='fully-hero']");
-
-
-  // var anim;
-
-  // anim = lottie.loadAnimation(params);
-
-  let anims = [];
+  // Get both hero in firstpage / news and menu
+  const fullyheros = document.querySelectorAll('[data-news="fully-hero"]');
   
   if (!fullyheros || fullyheros.length < 1) return;
 
-  const hero = fullyheros.length > 1 ? fullyheros[1] : fullyheros[0]; // only animate on hero
+  // only animate the one hero for performence reasons
+  // and set fallback on the other on (if there is two)
+  const hero = fullyheros.length > 1 ? fullyheros[1] : fullyheros[0];
   if (fullyheros.length > 1) {
-    //set bg image on menu
     fullyheros[0].classList.add('fallback');
-    console.log(fullyheros[0].classList);
-    
   }
+
+  // Animation settings
   const params = {
     container: hero,
     renderer: 'svg',
@@ -28,12 +23,18 @@ const defaultHero = () => {
     rendererSettings: { preserveAspectRatio: 'xMidYMax slice' }
   };
 
-  
-
+  // Init the animation
   const anim = lottie.loadAnimation(params);
-  anims.push(anim);
-  // let container = hero.querySelector('.parallax-container');
-  // let parallaxInstance = new Parallax(container);
+  // lottie.setSpeed(2);
+  lottie.setQuality('low');
+  hero.addEventListener('mouseover', function(){
+    lottie.setSpeed(0.05);
+    console.log('sloooowmo');
+    
+  });
+  hero.addEventListener('mouseout', function(){
+    lottie.setSpeed(1)
+  });
 
   
 }
