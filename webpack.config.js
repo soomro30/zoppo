@@ -18,6 +18,7 @@ module.exports = {
     'first-news-flash': './src/assets/_javascripts/news/first-news-flash.js',
     'summer-2018': './src/assets/_javascripts/news/summer-2018.js',
     'qgroup': './src/assets/_javascripts/cases/qgroup.js',
+    'fully-hero': './src/assets/_javascripts/news/fully-hero.js',
   },
   output: {
     path: path.resolve(__dirname, 'src/assets/bundles'),

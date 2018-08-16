@@ -1,0 +1,15 @@
+// custom CSS for news
+
+.navigation__layerimage--fully-hero {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f1be93;
+  svg {
+    content-fit: cover;
+  }
+
+  &.fallback {
+    background-color: $c-signal; // replace with a fallback image of the finish illustration
+  }
+}
