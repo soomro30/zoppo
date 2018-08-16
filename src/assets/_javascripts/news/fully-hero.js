@@ -15,31 +15,47 @@ const defaultHero = () => {
     fullyheros[0].classList.add('fallback');
   }
 
-  // Animation settings
-  const params = {
-    container: hero,
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: '../../assets/news/fully-hero/data.json',
-    rendererSettings: { preserveAspectRatio: 'xMidYMax slice' }
-  };
+  const scenes = [...hero.querySelectorAll('[data-scene]')];
+  
+  let anims = [];
 
-  // Init the animation
-  const anim = lottie.loadAnimation(params);
-  limitFps && anim.setSubframe(false); // run in 30fps
+  scenes.map(scene => {
+    const sceneObj = {
+      path: scene.dataset.path,
+      node: scene,
+      
+      // Animation settings
+      params = {
+        container: scene,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: `../../assets/news/fully-hero/${path}`,
+        rendererSettings: { preserveAspectRatio: 'xMidYMax slice' }
+      },
+      // Init the animation
+      init: () => {
+        console.log('init');
+        
+        const anim = lottie.loadAnimation(this.params);
+        limitFps && anim.setSubframe(false); // run in 30fps
+  
+        // Slow motion feature
+        hero.addEventListener('mouseover', function () {
+          limitFps && anim.setSubframe(true); // interpolate the keyframes in between
+          anim.setSpeed(0.05);
+        });
+        hero.addEventListener('mouseout', function () {
+          limitFps && anim.setSubframe(false); // run in 30fps
+          anim.setSpeed(1)
+        });
+      }
+    }
+    anims.push(sceneObj);
+  });
 
-  // lottie.setSpeed(2);
+  // Global Settings
   lottie.setQuality('low');
-  hero.addEventListener('mouseover', function(){
-    limitFps && anim.setSubframe(true); // interpolate the keyframes in between
-    lottie.setSpeed(0.05);
-  });
-  hero.addEventListener('mouseout', function(){
-    limitFps && anim.setSubframe(false); // run in 30fps
-    lottie.setSpeed(1)
-  });
-
   
 }
 defaultHero();
