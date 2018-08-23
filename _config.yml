@@ -21,7 +21,7 @@ instagram: "https://www.instagram.com/fullystudios/"
 
 # Current news
 herofile: fully-hero.html
-herojsfile: fully-hero.js
+herojsfile: fully_hero.js
 
 # UI copy
 morenews: "More news"
@@ -44,7 +44,7 @@ works: "/work"
 about: "/about"
 curiosities: "/curiosities"
 
-# Custom post types 
+# Custom post types
 collections:
   work:
     output: true
@@ -55,7 +55,7 @@ collections:
   news:
     output: true
     permalink: /:collection/:title/
-  
+
 
 # Default values
 defaults:

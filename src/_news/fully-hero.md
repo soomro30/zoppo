@@ -19,7 +19,7 @@ hide-newsflash: true
 
 htmlfile: "fully-hero.html"
 cssfile: ""
-jsfile: "fully-hero.js"
+jsfile: "fully_hero.js"
 
 ---
 Fully Studios hero

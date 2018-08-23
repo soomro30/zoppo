@@ -17,12 +17,12 @@ module.exports = {
     news_svenskaskolan: './src/assets/_javascripts/news/svenskaskolan.js',
     'first-news-flash': './src/assets/_javascripts/news/first-news-flash.js',
     'summer-2018': './src/assets/_javascripts/news/summer-2018.js',
+    fully_hero: './src/assets/_javascripts/news/fully_hero.js',
     'qgroup': './src/assets/_javascripts/cases/qgroup.js',
-    'fully-hero': './src/assets/_javascripts/news/fully-hero.js',
   },
   output: {
-    path: path.resolve(__dirname, 'src/assets/bundles'),
-    filename: '[name].js'
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'src/assets/bundles')
   },
   module: {
     loaders: [

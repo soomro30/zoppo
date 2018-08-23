@@ -6,7 +6,7 @@
   "scripts": {
     "start": "rake start",
     "build": "rake build",
-    "webpack": "webpack --config webpack.config.js -p -w --progress"
+    "webpack": "webpack --config webpack.config.js -p -w --progress --verbose"
   },
   "repository": {
     "type": "git",

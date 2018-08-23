@@ -5,7 +5,7 @@ const defaultHero = () => {
   const fullyheros = document.querySelectorAll('[data-news="fully-hero"]');
 
   const limitFps = false; // limit to AfterEffects fps (eg 30fps)
-  
+
   if (!fullyheros || fullyheros.length < 1) return;
 
   // only animate the one hero for performence reasons
@@ -16,30 +16,28 @@ const defaultHero = () => {
   }
 
   const scenes = [...hero.querySelectorAll('[data-scene]')];
-  
+
   let anims = [];
 
   scenes.map(scene => {
     const sceneObj = {
       path: scene.dataset.path,
       node: scene,
-      
+
       // Animation settings
-      params = {
+      params: {
         container: scene,
-        renderer: 'svg',
+        renderer: 'canvas', // canvas works better on firefox
         loop: true,
         autoplay: true,
-        path: `../../assets/news/fully-hero/${path}`,
+        path: `../../assets/news/fully-hero/${scene.dataset.path}`,
         rendererSettings: { preserveAspectRatio: 'xMidYMax slice' }
       },
       // Init the animation
       init: () => {
-        console.log('init');
-        
-        const anim = lottie.loadAnimation(this.params);
+        const anim = lottie.loadAnimation(sceneObj.params);
         limitFps && anim.setSubframe(false); // run in 30fps
-  
+
         // Slow motion feature
         hero.addEventListener('mouseover', function () {
           limitFps && anim.setSubframe(true); // interpolate the keyframes in between
@@ -54,8 +52,13 @@ const defaultHero = () => {
     anims.push(sceneObj);
   });
 
+  // run all animations
+  anims.map(anim => {
+    anim.init();
+  })
+
   // Global Settings
   lottie.setQuality('low');
-  
+
 }
 defaultHero();
