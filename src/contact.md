@@ -61,6 +61,16 @@ peoples:
     email: chelsea.milojkovic@fullystudios.se
     tel: +46 721 89 49 89
 
+  - name: Malin Wirdheim Wincrantz
+    image: malin-wincrantz.jpg
+    title: UI/UX Designer
+    email: malin.wincrantz@fullystudios.se
+
+  - name: Anders Tibbling
+    image: anders-tibbling.jpg
+    title: DevOps Engineer
+    email: anders.tibbling@fullystudios.se
+
   - name: Oskar Eriksson
     image: oskar-eriksson.jpg
     title: Web Developer
@@ -70,6 +80,7 @@ peoples:
     image: pontus-karlsson.jpg
     title: Web Developer
     email: pontus.karlsson@fullystudios.se
+
 
   #- name: Mattias Larson
   #  image: mattias-larson.jpg
