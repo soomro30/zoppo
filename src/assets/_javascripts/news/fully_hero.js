@@ -24,28 +24,30 @@ const defaultHero = () => {
       path: scene.dataset.path,
       node: scene,
 
-      // Animation settings
-      params: {
-        container: scene,
-        renderer: 'canvas', // canvas works better on firefox
-        loop: true,
-        autoplay: true,
-        path: `../../assets/news/fully-hero/${scene.dataset.path}`,
-        rendererSettings: { preserveAspectRatio: 'xMidYMax slice' }
-      },
+      // The lottie animation instance
+      anim: lottie.loadAnimation(
+        {
+          container: scene,
+          renderer: 'canvas', // canvas works better on firefox
+          loop: true,
+          autoplay: true,
+          path: `../../assets/news/fully-hero/${scene.dataset.path}`,
+          rendererSettings: { preserveAspectRatio: 'xMidYMax slice' }
+        }
+      ),
+
       // Init the animation
       init: () => {
-        const anim = lottie.loadAnimation(sceneObj.params);
-        limitFps && anim.setSubframe(false); // run in 30fps
+        limitFps && sceneObj.anim.setSubframe(false); // run in 30fps
 
         // Slow motion feature
-        hero.addEventListener('mouseover', function () {
-          limitFps && anim.setSubframe(true); // interpolate the keyframes in between
-          anim.setSpeed(0.05);
+        scene.addEventListener('mouseover', function () {
+          limitFps && sceneObj.anim.setSubframe(true); // interpolate the keyframes in between
+          sceneObj.anim.setSpeed(0.05);
         });
-        hero.addEventListener('mouseout', function () {
-          limitFps && anim.setSubframe(false); // run in 30fps
-          anim.setSpeed(1)
+        scene.addEventListener('mouseout', function () {
+          limitFps && sceneObj.anim.setSubframe(false); // run in 30fps
+          sceneObj.anim.setSpeed(1)
         });
       }
     }
@@ -56,6 +58,13 @@ const defaultHero = () => {
   anims.map(anim => {
     anim.init();
   })
+
+  // Lissen for resize events and resize the canvas
+  window.addEventListener("optimizedResize", function() {
+    anims.map(anim => {
+      anim.anim.resize();
+    })
+  });
 
   // Global Settings
   lottie.setQuality('low');
