@@ -1,5 +1,4 @@
-// custom CSS for news
-
+// Edited on 1920x1080 screen
 .fully-hero {
   width: 100%;
   height: 100%;
@@ -12,11 +11,90 @@
   flex-wrap: wrap;
 
   &__scene {
-    width: 33.3332%;
-    height: 50%;
+    position: absolute;
+  }
+
+  &__scene--1 {
+    top: 0;
+    left: 0;
+    width: 26%;
+    height: 33.3332%;
+  }
+
+  &__scene--2 {
+    top: 0;
+    left: 31%;
+    width: 22.8%;
+    height: 33%;
+  }
+
+  &__scene--3 {
+    top: 0;
+    left: 58.5332%;
+    width: 41.4332%;
+    height: 60%;
+  }
+
+  &__scene--4 {
+    // top: 70%;
+    bottom: 0;
+    left: 0;
+    width: 33%;
+    height: 60%;
+  }
+  &__scene--4_bg {
+    bottom: 0;
+    left: 0;
+    width: 58%;
+    height: 66%;
+    background-image: url('../../assets/news/fully-hero/room_4_bg_v010.svg');
+    background-size: cover;
+    background-position: bottom left;
+  }
+
+
+  &__scene--4_2 {
+    // top: 70%;
+    bottom: 0;
+    left: 38%;
+    width: 13%;
+    height: 23%;
+  }
+
+  &__scene--5 {
+    // top: 70%;
+    top: 35.5%;
+    left: 31%;
+    width: 22.8%;
+    height: 30.5%;
+    background-image: url('../../assets/news/fully-hero/room_5_bg.svg');
+    background-size: cover;
+  }
+
+  &__scene--6 {
+    width: 41.4332%;
+    height: 39%;
+    bottom: 0;
+    right: 0;
   }
 
   &.fallback {
     background-color: $c-signal; // replace with a fallback image of the finish illustration
   }
+
+  // &__mall {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   z-index: 1;
+  //   object-fit: cover;
+  //   object-position: top left;
+  //   width:100%;
+  //   height:100%;
+  //   pointer-events: none;
+  //   opacity: 0.1;
+  //   display: none;
+  // }
 }

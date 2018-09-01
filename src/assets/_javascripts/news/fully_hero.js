@@ -4,22 +4,23 @@ const defaultHero = () => {
   // Get both hero in firstpage / news and menu
   const fullyheros = document.querySelectorAll('[data-news="fully-hero"]');
 
-  const limitFps = false; // limit to AfterEffects fps (eg 30fps)
-
   if (!fullyheros || fullyheros.length < 1) return;
-
+  
   // only animate the one hero for performence reasons
   // and set fallback on the other on (if there is two)
   const hero = fullyheros.length > 1 ? fullyheros[1] : fullyheros[0];
   if (fullyheros.length > 1) {
     fullyheros[0].classList.add('fallback');
   }
-
+  
   const scenes = [...hero.querySelectorAll('[data-scene]')];
-
+  
+  const limitFps = true; // limit to AfterEffects fps (eg 30fps)
   let anims = [];
 
   scenes.map(scene => {
+    console.log(scene.dataset.preserveaspectratio);
+    
     const sceneObj = {
       path: scene.dataset.path,
       node: scene,
@@ -32,7 +33,7 @@ const defaultHero = () => {
           loop: true,
           autoplay: true,
           path: `../../assets/news/fully-hero/${scene.dataset.path}`,
-          rendererSettings: { preserveAspectRatio: 'xMidYMax slice' }
+          rendererSettings: { preserveAspectRatio: scene.dataset.preserveaspectratio }
         }
       ),
 
@@ -58,6 +59,11 @@ const defaultHero = () => {
   anims.map(anim => {
     anim.init();
   })
+
+
+  // room 3
+  // loop mellan 0 - 195
+  // loop mellan 196 - 391
 
   // Lissen for resize events and resize the canvas
   window.addEventListener("optimizedResize", function() {
