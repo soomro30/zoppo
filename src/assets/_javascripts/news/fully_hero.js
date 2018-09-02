@@ -19,7 +19,6 @@ const defaultHero = () => {
   let anims = [];
 
   scenes.map(scene => {
-    console.log(scene.dataset.preserveaspectratio);
     
     const sceneObj = {
       path: scene.dataset.path,
@@ -39,6 +38,7 @@ const defaultHero = () => {
 
       // Init the animation
       init: () => {
+        sceneObj.node.classList.add('loaded');
         limitFps && sceneObj.anim.setSubframe(false); // run in 30fps
 
         // Slow motion feature
