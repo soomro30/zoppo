@@ -15,9 +15,12 @@ const defaultHero = () => {
   if (fullyheros.length === 1) {
     return;
   }
-  
-  
-  const scenes = [...hero.querySelectorAll('[data-scene]')];
+  let scenes = [];
+  if (window.matchMedia("(orientation: portrait)").matches) {
+    scenes = [hero.querySelector('[data-scene="3"]'), hero.querySelector('[data-scene="6"]')];
+  } else {
+    scenes = [...hero.querySelectorAll('[data-scene]')];
+  }
   
   const limitFps = true; // limit to AfterEffects fps (eg 30fps)
   let anims = [];
@@ -100,40 +103,41 @@ const defaultHero = () => {
 
   console.log('scenes', scenes);
   
-  const scene1 = new Scene(scenes[0]);
-  scene1.init();
-  anims.push(scene1);
+  if (window.matchMedia("(orientation: landscape)").matches) {
+    const scene1 = new Scene(hero.querySelector('[data-scene="1"]'));
+    scene1.init();
+    anims.push(scene1);
 
-  const scene2 = new Scene(scenes[1]);
-  scene2.init();
-  scene2.slowMo();
-  anims.push(scene2);
+    const scene2 = new Scene(hero.querySelector('[data-scene="2"]'));
+    scene2.init();
+    scene2.slowMo();
+    anims.push(scene2);
+
+    // const scene4 = new Scene(scenes[3]);
+    // scene4.init();
+    // anims.push(scene4);
+
+    const scene4_2 = new Scene(hero.querySelector('[data-scene="4_2"]'));
+    scene4_2.init();
+    anims.push(scene4_2);
+
+    const scene5 = new Scene(hero.querySelector('[data-scene="5"]'));
+    scene5.init();
+    anims.push(scene5);
+  } 
 
   // room 3
   // loop mellan 0 - 195
   // loop mellan 196 - 391
-  const scene3 = new Scene(scenes[2]);
+  const scene3 = new Scene(hero.querySelector('[data-scene="3"]'));
   scene3.init();
   // scene3.loopBetween([0, 195], true);
   scene3.hoverPlayFrom(244);
   anims.push(scene3);
 
-  // const scene4 = new Scene(scenes[3]);
-  // scene4.init();
-  // anims.push(scene4);
-
-  const scene4_2 = new Scene(scenes[4]);
-  scene4_2.init();
-  anims.push(scene4_2);
-
-  const scene5 = new Scene(scenes[5]);
-  scene5.init();
-  anims.push(scene5);
-
-  const scene6 = new Scene(scenes[6]);
+  const scene6 = new Scene(hero.querySelector('[data-scene="6"]'));
   scene6.init();
   anims.push(scene6);
-
 
   // Lissen for resize events and resize the canvas
   window.addEventListener("optimizedResize", function() {
