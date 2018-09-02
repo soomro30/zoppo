@@ -9,18 +9,35 @@ const defaultHero = () => {
   // only animate the one hero for performence reasons
   // and set fallback on the other on (if there is two)
   const hero = fullyheros.length > 1 ? fullyheros[1] : fullyheros[0];
-  if (fullyheros.length > 1 || fullyheros.length === 1) {
-    fullyheros[0].classList.add('fallback');
-  }
   if (fullyheros.length === 1) {
     return;
   }
+  let fallbacks = [];
+  if (fullyheros.length > 1 || fullyheros.length === 1) {
+    fallbacks = [...fullyheros[0].querySelectorAll('[data-scene]')];
+  }
+
   let scenes = [];
+  
   if (window.matchMedia("(orientation: portrait)").matches) {
+    let herofallbacks = [...hero.querySelectorAll('[data-scene]')];
+    herofallbacks.splice(2, 1); // remove scene 3
+    herofallbacks.splice(5, 1); // remove scene 6
+    fallbacks = [...fallbacks, ...herofallbacks];
+
     scenes = [hero.querySelector('[data-scene="3"]'), hero.querySelector('[data-scene="6"]')];
   } else {
     scenes = [...hero.querySelectorAll('[data-scene]')];
   }
+
+  fallbacks.map(fallback => {
+    console.log(fallback);
+    
+    fallback.classList.add('fallback');
+  });
+
+  console.log(fallbacks);
+  
   
   const limitFps = true; // limit to AfterEffects fps (eg 30fps)
   let anims = [];
@@ -47,10 +64,9 @@ const defaultHero = () => {
       );
     }
 
-    init() {
-      this.anim.play();
-      console.log('this.node', this.node);
-      
+    init(frame = 0) {
+      this.anim.goToAndPlay(frame, true);
+      this.node.classList.remove('fallback');
       this.node.classList.add('loaded');
       limitFps && this.anim.setSubframe(false); // run in 30fps
     }
@@ -100,8 +116,6 @@ const defaultHero = () => {
       });
     }
   }
-
-  console.log('scenes', scenes);
   
   if (window.matchMedia("(orientation: landscape)").matches) {
     const scene1 = new Scene(hero.querySelector('[data-scene="1"]'));
@@ -130,7 +144,7 @@ const defaultHero = () => {
   // loop mellan 0 - 195
   // loop mellan 196 - 391
   const scene3 = new Scene(hero.querySelector('[data-scene="3"]'));
-  scene3.init();
+  scene3.init(244);
   // scene3.loopBetween([0, 195], true);
   scene3.hoverPlayFrom(244);
   anims.push(scene3);

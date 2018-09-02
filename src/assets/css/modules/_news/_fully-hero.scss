@@ -26,10 +26,10 @@
   }
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0 }
-  100% { opacity: 1 }
-}
+// @keyframes fadeIn {
+//   0% { opacity: 0 }
+//   100% { opacity: 1 }
+// }
 
 // Mobile
 @media screen and (orientation: portrait) {
@@ -114,8 +114,8 @@
       left: 58.5332%;
       width: 41.5%;
       height: 60%;
-      background: linear-gradient(180deg, #aa1672, #cf2b70);
-      background-color: #aa1672;
+      // background: linear-gradient(180deg, #aa1672, #cf2b70);
+      background-color: #091a4f;
     }
   
     &__scene--4 {
@@ -233,33 +233,33 @@
 }
 
 // falback-images
-.fully-hero.fallback {
-  .fully-hero__scene {
+.fully-hero {
+  .fully-hero__scene.fallback {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .fully-hero__scene--1 {
+  .fully-hero__scene--1.fallback {
     background-image: url(../../assets/news/fully-hero/fallback-scene1.svg);
     background-position: bottom right;
   }
-  .fully-hero__scene--2 {
+  .fully-hero__scene--2.fallback {
     background-image: url(../../assets/news/fully-hero/fallback-scene2.svg);
     background-position: bottom center;
   }
-  .fully-hero__scene--3 {
+  .fully-hero__scene--3.fallback {
     background-image: url(../../assets/news/fully-hero/fallback-scene3.svg);
     background-position: bottom left;
   }
-  // .fully-hero__scene--4 {
+  // .fully-hero__scene--4.fallback {
   //   height: 66%;
   //   background-image: url(../../assets/news/fully-hero/fallback-scene4.svg);
   //   background-position: bottom left;
   // }
-  .fully-hero__scene--4_2 {
+  .fully-hero__scene--4_2.fallback {
     background-image: url(../../assets/news/fully-hero/fallback-scene4_2.svg);
   }
-  .fully-hero__scene--5 {
+  .fully-hero__scene--5.fallback {
     background-image: url(../../assets/news/fully-hero/fallback-scene5.svg);
     &:hover {
       &:after {
@@ -267,12 +267,12 @@
       }
     }
   }
-  .fully-hero__scene--6 {
+  .fully-hero__scene--6.fallback {
     background-image: url(../../assets/news/fully-hero/fallback-scene6.svg);
     background-position: bottom left;
   }
 }
-.navigation__list:hover + .fully-hero.fallback .fully-hero__scene--4_bg,
-.navigation__list:hover + .fully-hero.fallback .fully-hero__scene--4_2 {
+.navigation__list:hover + .fully-hero .fully-hero__scene--4_bg.fallback,
+.navigation__list:hover + .fully-hero .fully-hero__scene--4_2.fallback {
   opacity: 1;
 }
