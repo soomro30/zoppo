@@ -5,11 +5,11 @@ title: Motion on the web
 
 herofile: "fully-hero.html"
 cssfile: ""
-jsfile: "fully_hero.js"
+jsfile: "fully-hero.js"
 ---
 
 <div class="navigation__wrapper">
-  <nav class="navigation" id="startmenu">
+  <nav class="navigation navigation--shadow" id="startmenu">
     {% include menu.html %}
     {% unless site.herofile == nil %}
         {% include news/{{ site.herofile }} newsflash="visible" %}

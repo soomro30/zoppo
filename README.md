@@ -43,6 +43,9 @@ To build for deployment: `rake build`
 
 
 ## Error?
+If your js file does not compile, it´s probably a js error. Try running webpack with `--verbose` and see if you have any errors:
+```npm run webpack --verbose```
+
 If you get this problem `WARN: Unresolved spec during Gem...`, try running this to clean up old gems:
 ```bundle clean --force``
 

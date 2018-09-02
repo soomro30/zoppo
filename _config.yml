@@ -21,7 +21,7 @@ instagram: "https://www.instagram.com/fullystudios/"
 
 # Current news
 herofile: fully-hero.html
-herojsfile: fully_hero.js
+herojsfile: fully-hero.js
 
 # UI copy
 morenews: "More news"
