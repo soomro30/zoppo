@@ -5,6 +5,8 @@ import lottie from 'lottie-web';
  * Create a Lottie scene from data-attributes: data-scene, data-path and data-preserveaspectratio
  * 
  * @param {object} node - The lottie DOM container:
+ * @param {bool} limitFps - Set to true if you wanna run the animation in AE comp framerate (ex 30fps)
+ * 
  * @method init [frame = 0] - Plays the scene, adds classes and limit framerate
  * @method pause - Pauses the scene
  * @method destroy - Destroy the scene and add a fallback image class
@@ -14,13 +16,14 @@ import lottie from 'lottie-web';
  * @method hoverPlayFrom [frame = 0] - Start the animation on hover from a certain frame
  */
 class Scene {
-  constructor(node) {
+  constructor(node, limitFps) {
     this.node = node;
     const dataset = node.dataset;
     this.path = dataset.path;
     this.scene = dataset.scene
     this.preserveaspectratio = dataset.preserveaspectratio;
     this.loaded = false;
+    this.limitFps = limitFps;
 
     // The lottie animation instance
     this.anim = lottie.loadAnimation(
@@ -39,7 +42,7 @@ class Scene {
     this.anim.goToAndPlay(frame, true);
     this.node.classList.remove('fallback');
     this.node.classList.add('loaded');
-    limitFps && this.anim.setSubframe(false); // run in 30fps
+    this.limitFps && this.anim.setSubframe(false); // run in 30fps
   }
 
   pause() {
@@ -58,11 +61,11 @@ class Scene {
   // Slow motion feature
   slowMo() {
     this.node.addEventListener('mouseover', () => {
-      limitFps && this.anim.setSubframe(true); // interpolate the keyframes in between
+      this.limitFps && this.anim.setSubframe(true); // interpolate the keyframes in between
       this.anim.setSpeed(0.05);
     });
     this.node.addEventListener('mouseout', () => {
-      limitFps && this.anim.setSubframe(false); // run in 30fps
+      this.limitFps && this.anim.setSubframe(false); // run in 30fps
       this.anim.setSpeed(1)
     });
   }
@@ -151,25 +154,25 @@ const defaultHero = () => {
       // standard motion
       if (window.matchMedia("(orientation: landscape)").matches) {
 
-        const scene1 = new Scene(hero.querySelector('[data-scene="1"]'));
+        const scene1 = new Scene(hero.querySelector('[data-scene="1"]'), limitFps);
         scene1.init();
         anims.push(scene1);
 
-        const scene2 = new Scene(hero.querySelector('[data-scene="2"]'));
+        const scene2 = new Scene(hero.querySelector('[data-scene="2"]'), limitFps);
         scene2.init();
         scene2.slowMo();
         anims.push(scene2);
 
         // TODO: Make a button to hide navigation and show this scene
-        // const scene4 = new Scene(scenes[3]);
+        // const scene4 = new Scene(scenes[3], limitFps);
         // scene4.init();
         // anims.push(scene4);
 
-        const scene4_2 = new Scene(hero.querySelector('[data-scene="4_2"]'));
+        const scene4_2 = new Scene(hero.querySelector('[data-scene="4_2"]'), limitFps);
         scene4_2.init();
         anims.push(scene4_2);
 
-        const scene5 = new Scene(hero.querySelector('[data-scene="5"]'));
+        const scene5 = new Scene(hero.querySelector('[data-scene="5"]'), limitFps);
         scene5.init();
         anims.push(scene5);
       }
@@ -177,13 +180,13 @@ const defaultHero = () => {
       // room 3
       // loop mellan 0 - 195
       // loop mellan 196 - 391
-      const scene3 = new Scene(hero.querySelector('[data-scene="3"]'));
+      const scene3 = new Scene(hero.querySelector('[data-scene="3"]'), limitFps);
       scene3.init(244);
       // scene3.loopBetween([0, 195], true);
       scene3.hoverPlayFrom(244);
       anims.push(scene3);
 
-      const scene6 = new Scene(hero.querySelector('[data-scene="6"]'));
+      const scene6 = new Scene(hero.querySelector('[data-scene="6"]'), limitFps);
       scene6.init();
       anims.push(scene6);
 
