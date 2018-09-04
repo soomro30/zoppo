@@ -1,10 +1,16 @@
-import bodymovin from 'bodymovin';
+import lottie from 'lottie-web';
 
 module.exports =
 class LogoAnimation {
 	constructor () {
 		this._logoContainer = document.getElementById('logo_anim');
-		this._path = '/assets/logo.json'
+		this._path = '/assets/logo.json';
+
+		// hide logoanim on Windows Edge because it looks like shit with the masks inside
+		if (window.navigator.userAgent.indexOf("Edge") > -1) {
+			this._logoContainer.classList.add('fallback');
+			return;
+		}
 
         this._animData = {
         	container: this._logoContainer,
@@ -14,10 +20,10 @@ class LogoAnimation {
 			path: this._path
         }
 
-        this._anim = bodymovin.loadAnimation (this._animData);
+        this._anim = lottie.loadAnimation (this._animData);
         this._anim.addEventListener ('DOMLoaded', this.startLogoAnimation.bind(this));
 
-        bodymovin.setQuality (2);
+        lottie.setQuality(2);
 		window.onresize = this._anim.resize.bind(this._anim);
     }
 

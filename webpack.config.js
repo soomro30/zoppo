@@ -17,11 +17,17 @@ module.exports = {
     news_svenskaskolan: './src/assets/_javascripts/news/svenskaskolan.js',
     'first-news-flash': './src/assets/_javascripts/news/first-news-flash.js',
     'summer-2018': './src/assets/_javascripts/news/summer-2018.js',
+    // 'fully-hero': './src/assets/_javascripts/news/fully-hero.js',
     'qgroup': './src/assets/_javascripts/cases/qgroup.js',
   },
   output: {
-    path: path.resolve(__dirname, 'src/assets/bundles'),
-    filename: '[name].js'
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'src/assets/bundles')
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
   },
   module: {
     loaders: [
@@ -30,7 +36,17 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015']
+          presets: [
+            ["env", {
+              "targets": [
+                "last 2 version",
+                "> 2%",
+                "maintained node versions",
+                "not dead",
+                "IE 11"
+              ]
+            }]
+          ]
         }
       }
     ]

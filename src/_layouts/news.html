@@ -46,7 +46,7 @@ layout: default
 
 <div class="boxgrid">
 	<h2 class="boxgrid__header h4">Check out our news</h2>
-	{% for new in site.news %}
+	{% for new in site.news reversed %}
 		{% if new.title == page.title %}
 			{% continue %}
 		{% endif %}

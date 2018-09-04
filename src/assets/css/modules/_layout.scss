@@ -349,6 +349,12 @@ $grh: 5vh;
         height: 7em;
         width: calc(7em + 3vw);
         height: calc(7em + 3vw);
+        &.fallback {
+            background: url('../fully-studios-logo_white.svg') no-repeat;
+            background-size: contain;
+            margin: $s-small;
+            width: 5em;
+        }
     }
     &__svg {
         fill: $c-white;

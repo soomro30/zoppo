@@ -1,0 +1,303 @@
+// Edited on 1920x1080 screen
+.fully-hero {
+  &__floor {
+    // floor
+    &:after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      bottom: -1.95vh;
+      left: 0;
+      right: 0;
+      height: 2vh;
+      background-color: #7f052e;
+      z-index: 1;
+    }
+  }
+  &__scene {
+    canvas, svg {
+      opacity: 0;
+    }
+    &.loaded {
+      canvas, svg {
+        animation: fadeIn 0.6s linear forwards;
+      }
+    }
+  }
+}
+
+// @keyframes fadeIn {
+//   0% { opacity: 0 }
+//   100% { opacity: 1 }
+// }
+
+// Mobile
+@media screen and (orientation: portrait) {
+  .fully-hero {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__scene {
+      position: relative;
+      height: 50%;
+    }
+
+    // Floor
+    &__scene--6 {
+      &:after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        bottom: -1.95vh;
+        left: 0;
+        right: 0;
+        height: 2vh;
+        background-color: #7f052e;
+        z-index: 1;
+      }
+    }
+    &__scene--3 {
+      &:after {
+        display: none;
+      }
+    }
+
+    // Hide everyone else in case we're going from landscape to portrait
+    &__scene--1, &__scene--2, &__scene--4, &__scene--4_bg, &__scene--4_2, &__scene--5 {
+      display: none;
+    }
+  }
+}
+// Desktop
+@media screen and (orientation: landscape) {
+  .fully-hero {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #091a4f; //#f1be93
+    // svg {
+    //   content-fit: cover;
+    // }
+    display: flex;
+    flex-wrap: wrap;
+    // position: relative;
+
+    // scene 2 tree
+    &:before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 25.8%;
+      right: 42%;
+      bottom: -1px;
+      background: url('../../assets/news/fully-hero/tree_fg1.svg') no-repeat;
+      background-size: auto 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 38.6%;
+      width: 20%;
+      bottom: -1px;
+      background: url('../../assets/news/fully-hero/tree_fg2.svg') no-repeat;
+      background-size: auto 100%;
+      background-position: right;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    &__scene {
+      position: absolute;
+    }
+
+    &__scene--1 {
+      top: 0;
+      left: 0;
+      width: 26%;
+      height: 33.3332%;
+      background: linear-gradient(180deg, #9c0e73, #cf2b70);
+      background-color: #9c0e73;
+    }
+
+    &__scene--2 {
+      top: 0;
+      left: calc(24.8% + 8.75vh); // 29%
+      right: calc(41.3% + 8.75vh);
+      height: 33.3332%;
+      background-color: #f1be93;
+    }
+
+    &__scene--3 {
+      top: 0;
+      left: 58.5332%;
+      width: 41.5%;
+      height: 60%;
+      // background: linear-gradient(180deg, #aa1672, #cf2b70);
+      background-color: #091a4f;
+    }
+
+    &__scene--4 {
+      // opacity: 0.8;
+      bottom: 0;
+      left: 0;
+      width: 33%;
+      height: 60%;
+      transition: opacity 2s;
+      // &:hover {
+      //   opacity: 1;
+      // }
+    }
+    &__scene--4_bg {
+      // opacity: 0;
+      bottom: 0;
+      left: 0;
+      width: 58%;
+      height: 66%;
+      background-color: #f0a992;
+      background-image: url('../../assets/news/fully-hero/room_4_bg_v010.svg');
+      background-size: cover;
+      background-position: bottom left;
+      transition: opacity 2s;
+      // &:hover {
+      //   opacity: 1;
+      // }
+    }
+
+
+    &__scene--4_2 {
+      // top: 70%;
+      bottom: 0;
+      left: 38%;
+      width: 13%;
+      height: 23%;
+      transition: opacity 2s;
+    }
+
+    &__scene--5 {
+      // top: 70%;
+      top: 35.2%;
+      left: calc(24.8% + 8.75vh); // 29%
+      right: calc(41.3% + 8.75vh);
+      height: 30.5%;
+      background: linear-gradient(180deg, #f2b090, #f07991);
+      background-color: #f2b090;
+      svg, canvas {
+        position: relative;
+        z-index: 1;
+      }
+      &:after {
+        content: "";
+        opacity: 0;
+        background: linear-gradient(180deg, #9c0e73, #cf2b70);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: opacity 3s;
+      }
+      &:hover {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__scene--6 {
+      width: 41.4332%;
+      height: 40%;
+      bottom: 0;
+      right: 0;
+      background-color: #ca1d5a;
+    }
+
+    &.fallback {
+      background-color: $c-signal; // replace with a fallback image of the finish illustration
+    }
+
+    // &__mall {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   z-index: 10;
+    //   object-fit: cover;
+    //   object-position: top left;
+    //   width:100%;
+    //   height:100%;
+    //   pointer-events: none;
+    //   opacity: 0.5;
+    //   // display: none;
+    // }
+  }
+
+  .navigation__list:hover + .fully-hero .fully-hero__scene--4_bg {
+    opacity: 0;
+  }
+  .navigation__list:hover + .fully-hero .fully-hero__scene--4_2 {
+    opacity: 0.5;
+  }
+  // .navigation__list:hover + .fully-hero .fully-hero__scene--4 {
+  //   opacity: 0.8;
+  // }
+
+  // .navigation__list:hover + .fully-hero .fully-hero__scene--4_bg,
+  // .navigation__list:hover + .fully-hero .fully-hero__scene--4 {
+  //   opacity: 1;
+  // }
+
+
+}
+
+// falback-images
+.fully-hero {
+  .fully-hero__scene.fallback {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .fully-hero__scene--1.fallback {
+    background-image: url(../../assets/news/fully-hero/fallback-scene1.svg);
+    background-position: bottom right;
+  }
+  .fully-hero__scene--2.fallback {
+    background-image: url(../../assets/news/fully-hero/fallback-scene2.svg);
+    background-position: bottom center;
+  }
+  .fully-hero__scene--3.fallback {
+    background-image: url(../../assets/news/fully-hero/fallback-scene3.svg);
+    background-position: bottom left;
+  }
+  // .fully-hero__scene--4.fallback {
+  //   height: 66%;
+  //   background-image: url(../../assets/news/fully-hero/fallback-scene4.svg);
+  //   background-position: bottom left;
+  // }
+  .fully-hero__scene--4_2.fallback {
+    background-image: url(../../assets/news/fully-hero/fallback-scene4_2.svg);
+  }
+  .fully-hero__scene--5.fallback {
+    background-image: url(../../assets/news/fully-hero/fallback-scene5.svg);
+    &:hover {
+      &:after {
+        opacity: 0
+      }
+    }
+  }
+  .fully-hero__scene--6.fallback {
+    background-image: url(../../assets/news/fully-hero/fallback-scene6.svg);
+    background-position: bottom left;
+  }
+}
+.navigation__list:hover + .fully-hero .fully-hero__scene--4_bg.fallback,
+.navigation__list:hover + .fully-hero .fully-hero__scene--4_2.fallback {
+  opacity: 1;
+}
