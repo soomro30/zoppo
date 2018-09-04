@@ -1,4 +1,4 @@
-import bodymovin from 'bodymovin';
+import lottie from 'lottie-web';
 
 module.exports =
 class LogoAnimation {
@@ -14,10 +14,10 @@ class LogoAnimation {
 			path: this._path
         }
 
-        this._anim = bodymovin.loadAnimation (this._animData);
+        this._anim = lottie.loadAnimation (this._animData);
         this._anim.addEventListener ('DOMLoaded', this.startLogoAnimation.bind(this));
 
-        bodymovin.setQuality (2);
+        lottie.setQuality(2);
 		window.onresize = this._anim.resize.bind(this._anim);
     }
 

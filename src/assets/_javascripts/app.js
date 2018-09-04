@@ -1,3 +1,5 @@
+import "babel-polyfill";
+
 import ComponentsRegister from './components/ComponentRegister';
 import SweetScroll from "sweet-scroll";
 import ScrollTrigger from 'scrolltrigger-classes';

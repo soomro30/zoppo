@@ -1,3 +1,4 @@
+// import "babel-polyfill";
 import lottie from 'lottie-web';
 
 const defaultHero = () => {
@@ -5,7 +6,7 @@ const defaultHero = () => {
   const fullyheros = document.querySelectorAll('[data-news="fully-hero"]');
 
   if (!fullyheros || fullyheros.length <= 1) return;
-  
+
   // only animate the one hero for performence reasons
   // and set fallback on the other on (if there is two)
   const hero = fullyheros.length > 1 ? fullyheros[1] : fullyheros[0];
@@ -18,7 +19,7 @@ const defaultHero = () => {
   }
 
   let scenes = [];
-  
+
   if (window.matchMedia("(orientation: portrait)").matches) {
     let herofallbacks = [...hero.querySelectorAll('[data-scene]')];
     herofallbacks.splice(2, 1); // remove scene 3
@@ -31,19 +32,14 @@ const defaultHero = () => {
   }
 
   fallbacks.map(fallback => {
-    console.log(fallback);
-    
     fallback.classList.add('fallback');
   });
 
-  console.log(fallbacks);
-  
-  
   const limitFps = true; // limit to AfterEffects fps (eg 30fps)
   let anims = [];
 
   class Scene {
-    constructor(node) {      
+    constructor(node) {
       this.node = node;
       const dataset = node.dataset;
       this.path = dataset.path;
@@ -71,12 +67,21 @@ const defaultHero = () => {
       limitFps && this.anim.setSubframe(false); // run in 30fps
     }
 
+    pause() {
+      this.anim.pause();
+    }
+
+    destroy() {
+      this.anim.destroy();
+      this.node.classList.add('fallback');
+    }
+
     resize() {
       this.anim.resize();
     }
-    
+
     // Slow motion feature
-    slowMo() {      
+    slowMo() {
       this.node.addEventListener('mouseover', () => {
         limitFps && this.anim.setSubframe(true); // interpolate the keyframes in between
         this.anim.setSpeed(0.05);
@@ -97,7 +102,7 @@ const defaultHero = () => {
         });
         return;
       }
-      
+
       this.anim.playSegments(segment, force);
     }
 
@@ -116,52 +121,72 @@ const defaultHero = () => {
       });
     }
   }
-  
-  if (window.matchMedia("(orientation: landscape)").matches) {
-    const scene1 = new Scene(hero.querySelector('[data-scene="1"]'));
-    scene1.init();
-    anims.push(scene1);
 
-    const scene2 = new Scene(hero.querySelector('[data-scene="2"]'));
-    scene2.init();
-    scene2.slowMo();
-    anims.push(scene2);
+  let motionQuery = matchMedia('(prefers-reduced-motion)');
+  function handleReduceMotionChanged() {
+    if (motionQuery.matches) {
+      /* adjust motion of 'transition' or 'animation' properties */
+      const allScenes = [...hero.querySelectorAll('[data-scene]')];
 
-    // const scene4 = new Scene(scenes[3]);
-    // scene4.init();
-    // anims.push(scene4);
+      allScenes.map(scene => {
+        scene.classList.add('fallback');
+      });
+      anims.map(anim => {
+        anim.destroy();
+      })
+    } else {
+      /* standard motion */
+      if (window.matchMedia("(orientation: landscape)").matches) {
 
-    const scene4_2 = new Scene(hero.querySelector('[data-scene="4_2"]'));
-    scene4_2.init();
-    anims.push(scene4_2);
+        const scene1 = new Scene(hero.querySelector('[data-scene="1"]'));
+        scene1.init();
+        anims.push(scene1);
 
-    const scene5 = new Scene(hero.querySelector('[data-scene="5"]'));
-    scene5.init();
-    anims.push(scene5);
-  } 
+        const scene2 = new Scene(hero.querySelector('[data-scene="2"]'));
+        scene2.init();
+        scene2.slowMo();
+        anims.push(scene2);
 
-  // room 3
-  // loop mellan 0 - 195
-  // loop mellan 196 - 391
-  const scene3 = new Scene(hero.querySelector('[data-scene="3"]'));
-  scene3.init(244);
-  // scene3.loopBetween([0, 195], true);
-  scene3.hoverPlayFrom(244);
-  anims.push(scene3);
+        // const scene4 = new Scene(scenes[3]);
+        // scene4.init();
+        // anims.push(scene4);
 
-  const scene6 = new Scene(hero.querySelector('[data-scene="6"]'));
-  scene6.init();
-  anims.push(scene6);
+        const scene4_2 = new Scene(hero.querySelector('[data-scene="4_2"]'));
+        scene4_2.init();
+        anims.push(scene4_2);
 
-  // Lissen for resize events and resize the canvas
-  window.addEventListener("optimizedResize", function() {
-    anims.map(anim => {
-      anim.resize();
-    })
-  });
+        const scene5 = new Scene(hero.querySelector('[data-scene="5"]'));
+        scene5.init();
+        anims.push(scene5);
+      }
+
+      // room 3
+      // loop mellan 0 - 195
+      // loop mellan 196 - 391
+      const scene3 = new Scene(hero.querySelector('[data-scene="3"]'));
+      scene3.init(244);
+      // scene3.loopBetween([0, 195], true);
+      scene3.hoverPlayFrom(244);
+      anims.push(scene3);
+
+      const scene6 = new Scene(hero.querySelector('[data-scene="6"]'));
+      scene6.init();
+      anims.push(scene6);
+
+      // Lissen for resize events and resize the canvas
+      window.addEventListener("optimizedResize", function() {
+        anims.map(anim => {
+          anim.resize();
+        })
+      });
+    }
+  }
+  motionQuery.addListener(handleReduceMotionChanged);
+  handleReduceMotionChanged(); // trigger once on load if needed
 
   // Global Settings
   lottie.setQuality('low');
+
 
 }
 defaultHero();

@@ -9,7 +9,7 @@ jsfile: "fully-hero.js"
 ---
 
 <div class="navigation__wrapper">
-  <nav class="navigation navigation--shadow" id="startmenu">
+  <nav class="navigation" id="startmenu">
     {% include menu.html %}
     {% unless site.herofile == nil %}
         {% include news/{{ site.herofile }} newsflash="visible" %}

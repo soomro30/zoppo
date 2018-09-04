@@ -8,9 +8,6 @@ $animTime: .3s;
     min-height: 100vh;
     padding: $s-small;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
     //  Hacky way to prevent page from scrolling when URL-bar disapears.
     // -7vw is the magic number for the URL-bar
     @media (max-aspect-ratio: 3/4) {
@@ -28,12 +25,23 @@ $animTime: .3s;
         min-height: (100vw * 1.778 - 6vw);
     }
 
-    @include media-query($on-laptop) {
-        justify-content: flex-start;
-        align-items: flex-end;
-        flex-direction: row;
-        min-height: 100vh;
-    }
+    // Menu to the bottom left both on mobile and desktop
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 100vh;
+
+    // Uncomment if you wanna have the menu in the top left on mobile
+    // and bottom left on desktop
+    // flex-direction: column;
+    // justify-content: flex-end;
+    // align-items: flex-start;
+    // @include media-query($on-laptop) {
+    //     justify-content: flex-start;
+    //     align-items: flex-end;
+    //     flex-direction: row;
+    //     min-height: 100vh;
+    // }
 
     // min-height: 100vh;
     // &:after {
@@ -108,11 +116,11 @@ $animTime: .3s;
             stroke-dashoffset: 37px;
         }
     }
-    &--shadow {
-        .navigation__link, .navigation__overlay {
-            text-shadow: 0px 2px 10px rgba($c-signal,0.3);
-        }
-    }
+    // &--shadow {
+    //     .navigation__link, .navigation__overlay {
+    //         text-shadow: 0px 2px 10px rgba($c-signal,0.3);
+    //     }
+    // }
     &__overlay{
         position: absolute;
         top: 0;
@@ -175,7 +183,7 @@ $animTime: .3s;
     z-index: 10;
     height: auto;
     background-color:#0d0d3a;
-    justify-content: space-between;
+    // justify-content: space-between;
     //  Hacky way to prevent page from scrolling when URL-bar disapears.
     // -7vw is the magic number for the URL-bar
     @media (max-aspect-ratio: 3/4) {

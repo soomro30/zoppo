@@ -24,6 +24,11 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname, 'src/assets/bundles')
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  },
   module: {
     loaders: [
       {
@@ -31,7 +36,17 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015']
+          presets: [
+            ["env", {
+              "targets": [
+                "last 2 version",
+                "> 2%",
+                "maintained node versions",
+                "not dead",
+                "IE 11"
+              ]
+            }]
+          ]
         }
       }
     ]
