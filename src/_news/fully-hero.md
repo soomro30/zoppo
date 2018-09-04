@@ -1,7 +1,7 @@
 ---
 layout: news-single
 title:  Fully Studios hero
-subtitle: After Effects meets the web with help of the plugin Bodymovin (Lottie)
+subtitle: 
 date:   2018-06-01 12:00:00 +0100
 slug: fully-hero
 
