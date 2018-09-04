@@ -71,6 +71,18 @@ peoples:
     title: DevOps Engineer
     email: anders.tibbling@fullystudios.se
 
+  - name: Jakob Åhl
+    image: jakob-ahl.jpg
+    title: Head of Film
+    email: jakob.ahl@fullystudios.se
+    tel: +46 723 09 62 04
+
+  - name: Josef Carlsson 
+    image: josef-carlsson.jpg
+    title: Creative Technologist
+    email: josef.carlsson@fullystudios.se
+    tel: +46 702 08 11 99
+
   - name: Oskar Eriksson
     image: oskar-eriksson.jpg
     title: Web Developer
