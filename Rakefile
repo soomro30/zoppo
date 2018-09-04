@@ -15,6 +15,14 @@ task :webpack do
   `npm run webpack`
 end
 
+desc "Clear all cache"
+task :cache do
+  # desc "Clears all files and directories in tmp/cache"
+  task :clear do
+    FileUtils.rm_rf(Dir['tmp/cache/[^.]*'])
+  end
+end
+
 desc "Run all dev tasks"
 task :start do
   threads = []

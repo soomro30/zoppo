@@ -1,4 +1,4 @@
-import bodymovin from 'bodymovin';
+import lottie from 'lottie-web';
 import Barba from 'barba.js';
 
 module.exports =
@@ -36,12 +36,12 @@ class PageTransition {
         	autoplay: false,
             autoloadSegments: false,
         	path: this._path,
-            rendererSettings: { 
+            rendererSettings: {
                 preserveAspectRatio:'none'
             }
         }
 
-        this._pageTransition = bodymovin.loadAnimation (this._transitionData);
+        this._pageTransition = lottie.loadAnimation (this._transitionData);
     }
     animOut () {
         return new Promise(function(resolve) {
@@ -58,7 +58,7 @@ class PageTransition {
 
         // play the out transition
         this._pagetransition.playSegments([[25,54]],true);
-        
+
         // immediately clear the old DOM
         this.done();
     }

@@ -1,5 +1,7 @@
+import lottie from 'lottie-web';
+
 {% include js/gsap-cubicbezier.js %}
-{% include js/bodymovin.min.js %}
+// {% include js/lottie.min.js %}
 
 // Init all code on document eady
 function ready(fn) {
@@ -38,7 +40,7 @@ ready(function(){
         autoplay: false,
         path: '../../assets/javascript/logo.json'
     };
-    var anim = bodymovin.loadAnimation(animData);
+    var anim = lottie.loadAnimation(animData);
 
 	// Init page transition anim
 	var transitionData = {
@@ -52,10 +54,10 @@ ready(function(){
         	preserveAspectRatio:'none'
     	}
     };
-    var pagetransition = bodymovin.loadAnimation(transitionData);
+    var pagetransition = lottie.loadAnimation(transitionData);
 
 	anim.addEventListener('DOMLoaded',startLogoAnimation);
-	bodymovin.setQuality(2);
+	lottie.setQuality(2);
 	window.onresize = anim.resize.bind(anim);
 
 	function startLogoAnimation(){
