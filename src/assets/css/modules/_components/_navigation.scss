@@ -7,7 +7,6 @@ $animTime: .3s;
     overflow: hidden;
     min-height: 100vh;
     padding: $s-small;
-    display: flex;
     //  Hacky way to prevent page from scrolling when URL-bar disapears.
     // -7vw is the magic number for the URL-bar
     @media (max-aspect-ratio: 3/4) {
@@ -26,10 +25,11 @@ $animTime: .3s;
     }
 
     // Menu to the bottom left both on mobile and desktop
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex-direction: column;
-    min-height: 100vh;
+    // display: flex;
+    // justify-content: flex-end;
+    // align-items: flex-start;
+    // flex-direction: column;
+    // min-height: 100vh;
 
     // Uncomment if you wanna have the menu in the top left on mobile
     // and bottom left on desktop
@@ -77,10 +77,13 @@ $animTime: .3s;
         }
     }
     &__list {
-        position: relative;
+        // position: relative;
+        // IE 11 ugly fix;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
         display: inline-block;
-        //top: $s-small*3;
-        //left: 0;
         z-index: 3;
         list-style-type: none;
         margin: 100px 0 $s-small;
@@ -97,7 +100,7 @@ $animTime: .3s;
     &__link, &__overlay {
         @extend .h2;
         color: $c-white;
-        padding: $s-small*0.25 0;
+        padding: $s-small*0.25 $s-small;
         @include media-query($on-laptop) {
             padding: $s-small*0.5 $s-small*2;
         }
@@ -106,6 +109,9 @@ $animTime: .3s;
         }
         @media (max-height: 415px) {
             font-size: calc(1em + 2vh);
+        }
+        @media (orientation: portrait) {
+            text-shadow: 0px 2px 10px rgba($c-dark,0.3);
         }
         display: inline-block;
         &:visited, &:hover, &:focus {

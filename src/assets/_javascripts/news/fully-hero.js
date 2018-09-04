@@ -189,4 +189,4 @@ const defaultHero = () => {
 
 
 }
-defaultHero();
+export default defaultHero;

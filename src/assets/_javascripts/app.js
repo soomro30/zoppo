@@ -5,6 +5,9 @@ import SweetScroll from "sweet-scroll";
 import ScrollTrigger from 'scrolltrigger-classes';
 import enableInlineVideo from 'iphone-inline-video';
 
+import defaultHero from './news/fully-hero.js';
+defaultHero();
+
 document.addEventListener("DOMContentLoaded", () => {
     // Scroll reveal animations
     // Usage: add data-scroll on an html element to toggle the classes visible and invisible
@@ -29,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 }, false);
 
 // Branding
-console.log('%c                       \n     FULLY STUDIOS     \n                       ', 'background: #5f11e8; color: #fff; font-family: monospace; font-size: 40px;');
+console.log('%c                       \n     FULLY STUDIOS     \n                       ', 'background: #5f11e8; color: #fff; font-family: monospace; font-size: 30px;');
 
 // Easter stuff
 const easterTrigger = function() {
