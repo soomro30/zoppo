@@ -4,7 +4,13 @@ module.exports =
 class LogoAnimation {
 	constructor () {
 		this._logoContainer = document.getElementById('logo_anim');
-		this._path = '/assets/logo.json'
+		this._path = '/assets/logo.json';
+
+		// hide logoanim on Windows Edge because it looks like shit with the masks inside
+		if (window.navigator.userAgent.indexOf("Edge") > -1) {
+			this._logoContainer.classList.add('fallback');
+			return;
+		}
 
         this._animData = {
         	container: this._logoContainer,
