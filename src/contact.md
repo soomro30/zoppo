@@ -93,6 +93,11 @@ peoples:
     title: Web Developer
     email: pontus.karlsson@fullystudios.se
 
+  - name: Maria Arvidsson
+    image: maria-arvidsson.jpg
+    title: Motion Intern
+    email: maria.arvidsson@fullystudios.se
+
 
   #- name: Mattias Larson
   #  image: mattias-larson.jpg
