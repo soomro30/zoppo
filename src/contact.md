@@ -33,11 +33,34 @@ peoples:
     email: jonathan.asp@fullystudios.se
     tel: +46 739 48 07 05
 
+  - name: Chelsea Milojkovic
+    image: chelsea-milojkovic.jpg
+    title: Copywriter (US English)
+    email: chelsea.milojkovic@fullystudios.se
+    tel: +46 721 89 49 89
+
+  - name: Jakob Åhl
+    image: jakob-ahl.jpg
+    title: Head of Film
+    email: jakob.ahl@fullystudios.se
+    tel: +46 723 09 62 04
+
   - name: Alexander Tengner
     image: alexander-tengner.jpg
     title: UX & Design Director
     email: alexander.tengner@fullystudios.se
     tel: +46 721 71 50 32
+  
+  - name: Malin Wirdheim Wincrantz
+    image: malin-wincrantz.jpg
+    title: UI/UX Designer
+    email: malin.wincrantz@fullystudios.se
+  
+  - name: Josef Carlsson 
+    image: josef-carlsson.jpg
+    title: Creative Technologist
+    email: josef.carlsson@fullystudios.se
+    tel: +46 702 08 11 99
 
   - name: Mikael Biström
     image: mikael-bistrom.jpg
@@ -55,33 +78,10 @@ peoples:
     title: Front-end Developer
     email: jorgen.hansson@fullystudios.se
 
-  - name: Chelsea Milojkovic
-    image: chelsea-milojkovic.jpg
-    title: Copywriter (US English)
-    email: chelsea.milojkovic@fullystudios.se
-    tel: +46 721 89 49 89
-
-  - name: Malin Wirdheim Wincrantz
-    image: malin-wincrantz.jpg
-    title: UI/UX Designer
-    email: malin.wincrantz@fullystudios.se
-
   - name: Anders Tibbling
     image: anders-tibbling.jpg
     title: DevOps Engineer
     email: anders.tibbling@fullystudios.se
-
-  - name: Jakob Åhl
-    image: jakob-ahl.jpg
-    title: Head of Film
-    email: jakob.ahl@fullystudios.se
-    tel: +46 723 09 62 04
-
-  - name: Josef Carlsson 
-    image: josef-carlsson.jpg
-    title: Creative Technologist
-    email: josef.carlsson@fullystudios.se
-    tel: +46 702 08 11 99
 
   - name: Oskar Eriksson
     image: oskar-eriksson.jpg
