@@ -47,6 +47,7 @@
 
     // Floor
     &__scene--6 {
+      background-color: #ca1d5a;
       &:after {
         content: "";
         position: absolute;
@@ -60,6 +61,7 @@
       }
     }
     &__scene--3 {
+      background-color: #091a4f;
       &:after {
         display: none;
       }

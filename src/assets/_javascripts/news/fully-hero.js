@@ -29,7 +29,7 @@ class Scene {
     this.anim = lottie.loadAnimation(
       {
         container: this.node,
-        renderer: 'canvas', // canvas works better on firefox
+        renderer: 'svg', // canvas works better on firefox
         loop: true,
         autoplay: false,
         path: `../../assets/news/fully-hero/${this.path}`,
@@ -190,12 +190,39 @@ const defaultHero = () => {
       scene6.init();
       anims.push(scene6);
 
-      // Lissen for resize events and resize the canvas
-      window.addEventListener("optimizedResize", function() {
-        anims.map(anim => {
-          anim.resize();
-        })
-      });
+      // /* Resize function when using Canvas
+      // Lissen for resize events and resize the canvas, but only after scrolling
+      // */
+
+      // // Setup isScrolling variable
+      // let isScrolling
+      // let isScrollingTimer;
+
+      // // Listen for scroll events
+      // window.addEventListener('scroll', function (event) {
+      //   let isScrolling = true;
+
+      //   // Clear our timeout throughout the scroll
+      //   window.clearTimeout(isScrollingTimer);
+
+      //   // Set a timeout to run after scrolling ends
+      //   isScrollingTimer = setTimeout(function () {
+
+      //     let isScrolling = false;
+
+      //   }, 66);
+
+      // }, false);
+
+      // window.addEventListener("optimizedResize", function() {
+      //   if (!isScrolling) {
+      //     anims.map(anim => {
+      //       anim.resize();
+      //     })
+      //   }
+      // });
+      // //end resize function
+
     }
   }
   motionQuery.addListener(handleReduceMotionChanged);
