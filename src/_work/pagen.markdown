@@ -23,35 +23,35 @@ casetop-video: casetop.mp4
 shareimage: work/pagen/shareimage.png
 
 ingress: |
-  We love an old fashion film shoot just as much as we enjoy dazzling audiences with motion graphics. In the cases below, we were blessed to do both. The productions were short and sweet, destined for great things – and social media. 
+  We love an old fashion film shoot just as much as we enjoy dazzling audiences with motion graphics. In the cases below, we were blessed to do both. The productions were short and sweet, destined for great things – and social media.
 
 section1: |
   At Fully, many of us are dedicated foodies and, as such, we truly appreciate a sandwich done with precision and love. One day, we were in the middle of devouring a delicious Bahn Mi when the phone rang (true story!). It was our favorite advertising agency DDB asking us if we could produce a series of sandwich videos for a renown Swedish bakery brand, Pågen. We got cracking immediately, clearing the office kitchen table to make way for the sandwich shoot.
 
   The films were made specifically for social media, with recipes included in the descriptions.
 
-youtube_IDs: 
-  - "caX9zmb5bc8"
-  - "t7ntKj11REs"
-  - "GYpO-QjOKzo"
+video_IDs:
+  - "289837071"
+  - "289837085"
+  - "289837098"
 
 section2: |
   ## Swedes at the breakfast table
   A couple of months earlier we helped DDB and Pågen with another campaign, celebrating Swedish breakfast habits. Again, the platform for the videos was Facebook and Instagram and the campaign theme was “breakfast trivia.” Fully did all the animation work and DDB wrote the copy for the caption.
 
-trivia: 
+trivia:
   - video: "trivia/frukosttrivia_fisk-v2.mp4"
     text: "Visste du att på Gustav Vasas tid bestod frukosten oftast av salt sill, fläsk, bröd och ett stop öl?"
-  
+
   - video: "trivia/frukosttrivia_hand-v2.mp4"
     text: "På medeltiden talade man tyst om sin frukost, då frosseri ansågs vara en dödssynd och ett tecken på svaghet."
-  
+
   - video: "trivia/frukosttrivia_johnny-v2.mp4"
     text: "När Johnny Wahlqvist förberedde sig inför VM i bänkpress 2012 åt han: 20 frallor, tolv ägg, en liter fil, två tallrikar med gröt, en liter kaffe och en liter mjölk."
-  
+
   - video: "trivia/frukosttrivia_klocka-v2.mp4"
     text: "Visste du att snittfrukosten i Sverige är 13,8 minuter på vardagar? Ok, men nu vet du."
-  
+
   - video: "trivia/frukosttrivia_sang-v2.mp4"
     text: "Världsrekordet när flest åt frukost i sängen samtidigt sattes av 388 personer på ett hotell i Shanghai 2014."
 
@@ -83,6 +83,4 @@ frames:
     large: "tortilla_chips.jpg"
 
 ---
-We love an old fashion film shoot just as much as we enjoy dazzling audiences with motion graphics. In the cases below, we were blessed to do both. The productions were short and sweet, destined for great things – and social media. 
-
-
+We love an old fashion film shoot just as much as we enjoy dazzling audiences with motion graphics. In the cases below, we were blessed to do both. The productions were short and sweet, destined for great things – and social media.
