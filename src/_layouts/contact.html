@@ -16,12 +16,12 @@ layout: page
     {% for people in page.peoples %}
         <figure class="boxgrid__box">
             <div class="boxgrid__image image-loader" style="background: #FFC1B4">
-                <img src="/assets/people/{{ people.image }}" alt="{{ people.name }}">	
+                <img src="/assets/people/{{ people.image }}" alt="{{ people.name }}">
             </div>
             <figcaption class="boxgrid__caption">
                 <h3 class="contact-name">{{ people.name }}</h3>
                 <p class="contact-title">{{ people.title }}</p>
-                <p class="contact-details">{% unless people.email == nil %}<a class="hyphenate" href="mailto:{{people.email}}">{{people.email}}</a><br>{% endunless %}{% unless people.tel == nil %}<a href="tel:{{people.tel}}">{{people.tel}}</a>{% endunless %}</p> 
+                <p class="contact-details">{% unless people.email == nil %}<a class="hyphenate" href="mailto:{{people.email}}">{{people.email}}</a><br>{% endunless %}{% unless people.tel == nil %}<a href="tel:{{people.tel}}">{{people.tel}}</a>{% endunless %}</p>
             </figcaption>
         </figure>
     {% endfor %}
@@ -37,18 +37,18 @@ layout: page
         Gothenburg:
         <a href="{{site.navigate-url-gbg}}">
             {{site.adress-gbg}}
-        </a> 
+        </a>
         Stockholm:
         <a href="{{site.navigate-url-sthlm}}">
             {{site.adress-sthlm}}
         </a>
     </div>
-    
+
     <script>
         var g_map;
         function initMap() {
-        fully_gbg = {lat: 57.703229, lng: 11.965552};
-        fully_sthlm = {lat: 59.3189606, lng: 18.0575086}
+        fully_gbg = {lat: {{site.fully_gbg-lat}}, lng: {{site.fully_gbg-lng}}}
+        fully_sthlm = {lat: {{site.fully_sthlm-lat}}, lng: {{site.fully_sthlm-lng}}}
         g_map = new google.maps.Map(document.getElementById('g_map'), {
 
             center: {lat: 58.5390591, lng: 14.9173849},
@@ -60,7 +60,7 @@ layout: page
             streetViewControl: true,
             rotateControl: true,
             fullscreenControl: false,
-            styles: 
+            styles:
             [
                 {
                     "featureType": "all",
@@ -194,7 +194,7 @@ layout: page
             icon: marker_icon
         });
 
-        function contentString(site_adress, site_navigate_url) { 
+        function contentString(site_adress, site_navigate_url) {
             return '<div id="content">'+
             '<div id="bodyContent"><p><strong>Visit us at:</strong><br>'+
             site_adress +
@@ -206,7 +206,7 @@ layout: page
             '</div>'+
             '</div>';
         };
-        
+
         var infowindow_gbg = new google.maps.InfoWindow({
             content: contentString("{{site.adress-gbg}}", "{{site.navigate-url-gbg}}")
         });
