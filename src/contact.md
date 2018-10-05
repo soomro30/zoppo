@@ -29,9 +29,15 @@ peoples:
 
   - name: Jonathan Asp
     image: jonathan-davis-asp.jpg
-    title: Developer & Production Manager
+    title: Digital Producer & Production Manager
     email: jonathan.asp@fullystudios.se
     tel: +46 739 48 07 05
+
+  - name: Frida Netzén
+    image: frida-netzen.jpg
+    title: Account Manager
+    email: frida.netzen@fullystudios.se
+    tel: +46 707 77 72 07
 
   - name: Chelsea Milojkovic
     image: chelsea-milojkovic.jpg
@@ -82,6 +88,11 @@ peoples:
     image: anders-tibbling.jpg
     title: DevOps Engineer
     email: anders.tibbling@fullystudios.se
+
+  - name: Markus Boberg
+    image: markus-boberg.jpg
+    title: Gameplay & Multiplayer programmer
+    email: markus-boberg@fullystudios.se
 
   - name: Oskar Eriksson
     image: oskar-eriksson.jpg
