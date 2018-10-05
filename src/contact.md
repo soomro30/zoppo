@@ -92,7 +92,7 @@ peoples:
   - name: Markus Boberg
     image: markus-boberg.jpg
     title: Gameplay & Multiplayer programmer
-    email: markus-boberg@fullystudios.se
+    email: markus.boberg@fullystudios.se
 
   - name: Oskar Eriksson
     image: oskar-eriksson.jpg
