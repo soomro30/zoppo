@@ -37,7 +37,7 @@ peoples:
     image: frida-netzen.jpg
     title: Account Manager
     email: frida.netzen@fullystudios.se
-    tel: +46 707 77 72 07
+    tel: +46 703 77 72 07
 
   - name: Chelsea Milojkovic
     image: chelsea-milojkovic.jpg
