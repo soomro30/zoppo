@@ -56,13 +56,13 @@ peoples:
     title: UX & Design Director
     email: alexander.tengner@fullystudios.se
     tel: +46 721 71 50 32
-  
+
   - name: Malin Wirdheim Wincrantz
     image: malin-wincrantz.jpg
     title: UI/UX Designer
     email: malin.wincrantz@fullystudios.se
-  
-  - name: Josef Carlsson 
+
+  - name: Josef Carlsson
     image: josef-carlsson.jpg
     title: Creative Technologist
     email: josef.carlsson@fullystudios.se
@@ -99,15 +99,15 @@ peoples:
     title: Web Developer
     email: oskar.eriksson@fullystudios.se
 
-  - name: Pontus Karlsson
-    image: pontus-karlsson.jpg
-    title: Web Developer
-    email: pontus.karlsson@fullystudios.se
-
   - name: Maria Arvidsson
     image: maria-arvidsson.jpg
     title: Motion Intern
     email: maria.arvidsson@fullystudios.se
+
+  - name: Emil Gradén
+    image: emil-graden.jpg
+    title: Motion Intern
+    email: emil.graden@fullystudios.se
 
 
   #- name: Mattias Larson
