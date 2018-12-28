@@ -4,7 +4,7 @@ type: work
 title:  "Owd Bob"
 subtitle: "The most elusive print shop in the world"
 author: "Robin Kollberg"
-author-email: r@fullyflared.se
+author-email: robin.kollberg@fullystudios.se
 button-text: View case
 date:   2017-04-18 12:00:00 +0100
 categories: back-end, ui, web
