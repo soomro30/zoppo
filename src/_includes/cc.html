@@ -1,17 +1,40 @@
 {% assign items = site.curious-about | sort: 'date' | reverse %}
 {% for cc in items limit:1 %}
-<section class="hero hero--{{ cc.slug }}" id="{{ cc.slug }}"{% unless cc.background-image_color == nil %} style="background-color: {{cc.background-image_color}}"{% endunless %}>
+<section class="hero hero--{{ cc.slug }} background-image" id="{{ cc.slug }}"{% unless cc.background-image_color == nil %} style="background-color: {{cc.background-image_color}}"{% endunless %}>
     <!-- Get all cc-about posts and revers them -->
     <!-- Get only the latest post -->
+    {% unless cc.background-image_2880 == nil %}
+    <style>
+        .hero--{{ cc.slug }} {
+            background-image: url({{site.baseurl}}/assets/curious-about/{{cc.slug}}/{{ cc.background-image_1440 }});
+        }
+    
+        @media (min-width: 1600px),
+        (min-width: 1200px) and (min-resolution: 2dppx) {
+            .hero--{{ cc.slug }} {
+                background-image: url({{site.baseurl}}/assets/curious-about/{{cc.slug}}/{{ cc.background-image_2880 }});
+            }
+        }
+    </style>
+    {% endunless %}
+
+    {% assign hero_textcolor = 'c-dark' %}
+    {% assign hero_linkcolor = 'link--dark' %}
+
+    {% if cc.background-text_light == true %}
+        {% assign hero_textcolor = 'c-light' %}
+        {% assign hero_linkcolor = 'link--invert' %}
+    {% endif %}
+    
     <header class="hero__header">
-        <h2 class="pre-header c-dark">Current Curiosity</h2>
+        <h2 class="pre-header {{ hero_textcolor }}">Current Curiosity</h2>
         <h1 class="hero__header-element" itemprop="name headline">
             {{ cc.title }}
         </h1>
         {% comment %}<p class="page-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} {% endcomment %}
         {% comment %}<span class="categories">{{ page.categories }}<span></p>{% endcomment %}
         <a class="button" href="{{ cc.url | prepend: site.baseurl }}"><span>Read all about it</span></a>
-        <a href="{{ site.curiosities | prepend: site.baseurl }}" class="link link--next link--dark"><span>View all curiosities</span><svg class="link--icon"><use xlink:href="#icon-arrow-right"></use></svg></a>
+        <a href="{{ site.curiosities | prepend: site.baseurl }}" class="link link--next {{hero_linkcolor}}"><span>View all curiosities</span><svg class="link--icon"><use xlink:href="#icon-arrow-right"></use></svg></a>
         
         
     </header>

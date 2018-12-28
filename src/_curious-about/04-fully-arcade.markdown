@@ -11,6 +11,7 @@ background-image_1440: "hero.jpg"
 background-image_2880: "hero@2x.jpg"
 background-image_color: "#000000"
 shareimage: curious-about/fully-arcade/shareimage.png
+background-text_light: true
 
 ingress: |
   We are adding a gaming wing to our studio.

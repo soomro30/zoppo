@@ -6,6 +6,13 @@ layout: default
 {% assign root = 'js/' %}
     
 {% for curiosity in items limit:1 %}
+    
+    {% assign hero_textcolor = 'c-dark' %}
+    
+    {% if curiosity.background-text_light == true %}
+    {% assign hero_textcolor = 'c-light' %}
+    {% endif %}
+
     {% unless curiosity.background-image_2880 == nil %}
         {% if curiosity.background == nil %}
             <style>
@@ -22,7 +29,7 @@ layout: default
     {% endunless %}
     <div class="hero hero--{{ curiosity.slug }}{% unless curiosity.background-image_2880 == nil %} background-image{% endunless %} {{curiosity.bg-color}}" id="work_{{ curiosity.slug }}">
         <header class="hero__header hyphenate">
-            <h6 class="c-light"><strong>Current Curiosity</strong></h6>
+            <h6 class="{{hero_textcolor}}"><strong>Current Curiosity</strong></h6>
             {% if curiosity.pagetitle != nil %}
                 {{ curiosity.pagetitle | markdownify }}
             {% else %}
