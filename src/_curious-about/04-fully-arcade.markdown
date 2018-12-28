@@ -18,16 +18,16 @@ ingress: |
 
 section1: |
   ### Fundamentals first, gameplay second
-  We’ve already gotten to work designing our first game. Of course the gameplay is the exciting bit, but we’ll keep this a spoiler-free read for now. 
-  
-  While it’s plenty easy to get swept away in gameplay, we don’t plan to waste the rare opportunity of starting something from scratch. There are some structural elements that are hard to incorporate if you get too far down the road with building a game, so we’re doing them upfront – multiplayer programming being one of them. 
+  We’ve already gotten to work designing our first game. Of course the gameplay is the exciting bit, but we’ll keep this a spoiler-free read for now.
+
+  While it’s plenty easy to get swept away in gameplay, we don’t plan to waste the rare opportunity of starting something from scratch. There are some structural elements that are hard to incorporate if you get too far down the road with building a game, so we’re doing them upfront – multiplayer programming being one of them.
 
 section1_image1_2880: "section1_image1@2x.jpg"
 section1_image1_1440: "section1_image1.jpg"
 section1_image1_alt: "Concept art of an arena"
 
 section2: |
-  Keep in mind we’re coming at this as digital service designers and developers. Since we see from such different eyes, there is a lot about gaming systems and features that we’re excited to revamp, upturn and reimagine as we go along. 
+  ##### Keep in mind we’re coming at this as digital service designers and developers. Since we see from such different eyes, there is a lot about gaming systems and features that we’re excited to revamp, upturn and reimagine as we go along.
 
 section2_image1_alt: "Concept art of a robot bird character"
 section2_image2_alt: "Concept art of a character with a planet as a head"
@@ -48,8 +48,10 @@ section4: |
 
 section4_image1_large: "section4_image1@2x.jpg"
 section4_image1_medium: "section4_image1.jpg"
-section1_image1_alt: "4 persons sitting in a sofa with hand controllers and testing a game"
+section4_image1_alt: "4 persons sitting in a sofa with hand controllers and testing a game"
 
+section5: |
+  It’s also just straight-up fun (we think). In the development of our first game, our Gothenburg and Stockholm offices will be prototype-playing against each other to test the game. The inclusiveness and ruckus energy of multiplayer really fits us perfectly.
 
 ---
 
@@ -58,4 +60,3 @@ You can create entire worlds without having to pick up a pen.
 [Launch site][motion-link]
 
 [motion-link]: http://fullystudios.se
-

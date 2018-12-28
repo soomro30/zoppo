@@ -2,14 +2,14 @@
 layout: curious
 ---
 
-<!-- 
+<!--
 ###################################
 ## Get all content (sections) from
 ## the current curious-about post
 -->
 
 <div class="grid">
-    
+
     <div class="grid__fullwidth">
         <img class="image" alt="{{page.section1_image1_alt}}" width="1440" height="643"
             src="{{site.baseurl}}/assets/curious-about/{{page.slug}}/{{page.section1_image1_1440}}"
@@ -25,7 +25,7 @@ layout: curious
 </div>
 
 <div class="grid sectionspacing-small">
-    
+
     <section class="grid__fullwidth flexcenter">
         <div class="imageline c-light-bg">
             <div class="imageline__image">
@@ -82,17 +82,4 @@ layout: curious
 </div>
 
 
-<div class="sectionspacing-small box box--curiosities box--center">{{ page.section3 | markdownify }}</div>
-
-
-{% unless page.section8 == nil %}
-<div class="section section--8">
-    {{ page.section8 | markdownify }}
-    {% unless page.cta == nil %}
-    <p>
-        <a href="{{site.baseurl}}/contact" class="button"><span>{{page.cta}}</span></a>
-    </p>
-    {% endunless %}    
-</div>
-{% endunless %}
- 
+<div class="sectionspacing-small box box--curiosities box--center">{{ page.section5 | markdownify }}</div>
