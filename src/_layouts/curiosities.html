@@ -22,7 +22,7 @@ layout: default
     {% endunless %}
     <div class="hero hero--{{ curiosity.slug }}{% unless curiosity.background-image_2880 == nil %} background-image{% endunless %} {{curiosity.bg-color}}" id="work_{{ curiosity.slug }}">
         <header class="hero__header hyphenate">
-            <h6 class="c-dark"><strong>Current Curiosity</strong></h6>
+            <h6 class="c-light"><strong>Current Curiosity</strong></h6>
             {% if curiosity.pagetitle != nil %}
                 {{ curiosity.pagetitle | markdownify }}
             {% else %}
@@ -51,7 +51,7 @@ layout: default
 
 <div class="grid grid--curiosities">
 
-{% for curiosity in items limit:2 offset:1 %}
+{% for curiosity in items offset:1 %}
     
     {% unless curiosity.background-image_2880 == nil %}
         {% if curiosity.background == nil %}
@@ -67,7 +67,7 @@ layout: default
             </style>
         {% endif %}
     {% endunless %}
-    <div class="bgimage bgimage--{{ curiosity.slug }}{% unless curiosity.background-image_2880 == nil %} background-image{% endunless %}" id="work_{{ curiosity.slug }}" style="background-color: {{curiosity.background-color}}">
+    <div class="bgimage bgimage--{{ curiosity.slug }}{% unless curiosity.background-image_2880 == nil %} background-image{% endunless %}" id="work_{{ curiosity.slug }}" style="background-color: {{curiosity.background-image_color}}">
         {% comment %}
         ###################################
         ## Get code for the background set

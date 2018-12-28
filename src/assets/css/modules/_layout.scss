@@ -367,6 +367,48 @@ $grh: 5vh;
         }
     }
 
+    .bgimage:nth-of-type(3) {
+        grid-column: 1 / span 12;
+        grid-row: 41 / span 8;
+        @include media-query($on-laptop) {
+            grid-column: 5 / span 8;
+            grid-row: 40 / span 17;
+            min-height: (17*$grh); // IE Edge fix
+        }
+    }
+
+    .boxtext:nth-of-type(3) {
+        z-index: 1;
+        grid-column: 1 / span 12;
+        grid-row: 49 / span 10;
+        @include media-query($on-laptop) {
+            grid-column: 1 / span 5;
+            grid-row: 49 / span 10;
+            min-height: (10*$grh); // IE Edge fix
+        }
+    }
+
+    .bgimage:nth-of-type(4) {
+        grid-column: 1 / span 12;
+        grid-row: 61 / span 8;
+        @include media-query($on-laptop) {
+            grid-column: 1 / span 8;
+            grid-row: 62 / span 17;
+            min-height: (17*$grh); // IE Edge fix
+        }
+    }
+
+    .boxtext:nth-of-type(4) {
+        z-index: 1;
+        grid-column: 1 / span 12;
+        grid-row: 69 / span 10;
+        @include media-query($on-laptop) {
+            grid-column: 8 / span 5;
+            grid-row: 60 / span 10;
+            min-height: (10*$grh); // IE Edge fix
+        }
+    }
+
 }
 
 /**
