@@ -1,0 +1,20 @@
+@media (orientation: landscape) {
+  .background-image {
+    display: block;
+  }
+  .background-image-mobile {
+    display: none;
+  }
+}
+
+@media (orientation: portrait) {
+  .background-image {
+    display: none;
+  }
+  .background-image-mobile {
+    display: block;
+  }
+  .hero__header-wrap {
+    font-size: 1.6vh;
+  }
+}
