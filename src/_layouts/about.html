@@ -2,7 +2,8 @@
 layout: page
 ---
 
-<!-- {% unless page.section1 == nil %}
+
+{% unless page.section1 == nil %}
     <section class="grid">
         <div class="grid__column1-2 boxtext h4">
             {{ page.section1 | markdownify }}
@@ -13,95 +14,85 @@ layout: page
             </div>
         </div>
     </section>
-{% endunless %} -->
+{% endunless %}
+
 
 {% unless page.section2 == nil %}
-    <section>
+    <section class="sectionspacing invert responsive-animation">
+
         {{page.script}}
         <style>
+            .responsive-animation {
+                overflow: hidden;
+                width: 100%;
+            }
             .anim-container {
-              position: relative;
-              overflow: hidden;
-              background-color: #ffffff;
-              width: 100%;
+                position: relative;
+                overflow: hidden;
             }
             #morphanim__text {
-              text-align: center;
-              max-width: calc(20em + 60px);
-              padding: 0;
-              padding-left: 30px;
-              padding-right: 30px;
-              margin-top: 12vh;
-              margin-bottom: 12vh;
-              font-size: 3.6vh;
+                position: absolute;
+                top: 17%;
+                left: 15%;
+                width: 70%;
+                height: 80%;
+                text-align: center;
+                font-size: 6vw;
+                max-width: none;
+                padding: 0;
+                transition: transform 1s 0s cubic-bezier(0.645, 0.045, 0.355, 1.000);
             }
             #morphanim__text.tablet {
-              transform: scale(0.5) translateY(-1em);
+                transform: scale(0.5) translateY(-1em);
             }
             #morphanim__text.mobile {
-              transform: scale(0.22) translateY(-2em);
+                transform: scale(0.22) translateY(-2em);
             }
-            #bm {
-              width: 100%;
-              height: 100%;
-              display: block;
-              margin-left: auto;
-              margin-right: auto;
+            #morphanim {
+                display: block;
+                width: 90vw;
+                height: 59.3vw;
+                margin: 0 auto;
             }
-            #under_text {
-              text-align: center;
-              margin-top: 12vh;
-              margin-bottom: 12vh;
-              max-width: calc(20em + 60px);
-              font-size: 3.6vh;
-            }
-            .curiosity_text {
-              color: #0A2A4F;
-            }
-            .sectionpadding.invert {
-              background-color: #ffde7f;
-            }
-
-
             @media (min-width: 40em) {
-                #bm {
-                  width: 100%;
-                  margin: auto;
-                }
                 #morphanim__text {
-                  font-size: 2.5em;
-                  margin-bottom: 0px;
+                    top: 15%;
+                    left: 30%;
+                    width: 40%;
+                    font-size: 3.5vw;
                 }
-                #under_text {
-                  font-size: 2.5em;
-                  text-align: left;
-                  margin: auto;
-                  width: 100%;
-                }
-                .bm-text {
-                  display: flex;
-                  padding: 120px;
+                #morphanim {
+                    width: 50vw;
+                    height: 32.8vw;
                 }
             }
-        </style>
 
+        </style>
         <div class="anim-container">
-            <h2 id="morphanim__text">{{ page.section1 }}</h2>
-            <div class="bm-text">
-            <script src="/../assets/about/bodymovin/lottie.js"></script>
-            <div id="bm"> </div>
-            <script>
-            var anim = bodymovin.loadAnimation({
-                container: document.getElementById('bm'),
-                renderer: 'svg',
-                autoplay: true,
-                loop: true,
-                path: '/../assets/about/bodymovin/Fully_services_animation.json'
-            });
-            </script>
-          <h2 id="under_text">{{ page.section2 }}</h2>
-          </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="557" height="366" viewBox="0 0 557 366" id="morphanim">
+                <title>{{ page.section2 | markdownify }}</title>
+                <g id="icon-mobile">
+                    <rect class="morphanim__frame" fill="#fff" x="219.33" y="72" width="118.33" height="222" rx="15" ry="15"/>
+                    <rect class="morphanim__screen" fill="#7bd85e" x="227.33" y="99" width="102.33" height="170"/>
+                    <rect class="morphanim__bottom" fill="#7bd85e" x="272.67" y="274.9" width="11.67" height="11.67" rx="5.75" ry="5.75"/>
+                </g>
+                <g id="icon-tablet">
+                    <rect class="morphanim__frame" fill="#fff" x="154.67" y="10" width="247.67" height="346" rx="15" ry="15"/>
+                    <rect class="morphanim__screen" fill="#7bd85e" x="170.67" y="32" width="215.67" height="292"/>
+                    <rect class="morphanim__bottom" fill="#7bd85e" x="272.67" y="333.9" width="11.67" height="11.67" rx="5.75" ry="5.75"/>
+                </g>
+                <g id="icon-desktop">
+                    <rect class="morphanim__frame" fill="#fff" x="29" width="499.67" height="356" rx="15" ry="15"/>
+                    <rect class="morphanim__screen" fill="#7bd85e" x="48.67" y="24" width="460.33" height="300"/>
+                    <rect class="morphanim__bottom" fill="#fff" x="10" y="323" width="540" height="35" rx="5.75" ry="5.75"/>
+                </g>                    
+            </svg>
+
+            
+            <h2 id="morphanim__text">{{ page.section2 }}</h2>
+            
         </div>
+
 
     </section>
 {% endunless %}
@@ -110,7 +101,7 @@ layout: page
     <section class="background-image sectionpadding">
         <iframe style="width: 100%; height: 100%; position:absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden;" src="../assets/about/partiklar/index.html" frameborder="0"></iframe>
         <div style="position: relative; z-index: 1; pointer-events: none;">
-            <div class="box box--center box--curiosities" style="max-width: 45em">
+            <div class="box box--invert box--center c-business-bg" style="max-width: 45em">
                 {{ page.section3 | markdownify }}
             </div>
         </div>
@@ -118,7 +109,7 @@ layout: page
 {% endunless %}
 
 {% unless page.section4 == nil %}
-    <section class="sectionpadding invert center curiosity_text">
+    <section class="sectionpadding invert center">
         {{ page.section4 | markdownify }}
         <a href="{{page.button-url | prepend: site.baseurl }}" class="button"><span>{{page.button-text}}</span></a>
     </section>

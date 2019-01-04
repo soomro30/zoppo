@@ -2,20 +2,15 @@
 layout: about
 title: About
 pagetitle: |
-  ## Fully Studios is an award-winning Swedish studio composed of programmers, designers, filmmakers, and game developers.
+  # Fully Studios is a Swedish web and film studio, specializing in motion on the web.
 permalink: /about/
 slug: about
 background-color: "#7BD75E"
-background: <div class="hero__background"><img class="about-background-image" style="width:100%;height:100%;opacity:0.3" src="/assets/about/images/fully_about.svg" /><img class="about-background-image-mobile" style="width:100%;height:100%;opacity:0.3" src="/assets/about/images/fully_about_mobile.svg" /></div>
-
 section1: |
-  Together we create<br>
-  <span style="color:#7BD75E">technical and visual identities</span><br>
-  for brands and services around<br>
-  the world.  
+  Basically, we’re interested in making the web more vibrant. Through websites, illustration and film, vivid narratives and animated web design.
 
 section2: |
-  Whether it's a website, film, app, or game, the things we make are solidly and thoughtfully crafted.
+  Above all else, we like to make digital products that are solidly and thoughtfully built.
 
 section3: |
   ### With the fundamentals nailed down, we can explore and carry out the more dazzling experiments at the intersection of art and code.
@@ -30,4 +25,4 @@ script: "<script src='https://cdnjs.cloudflare.com/ajax/libs/mo-js/0.288.1/mo.mi
 
 ---
 
-Fully Studios creates technical and visual identities for brands and services around the world.
+Fully Studios is a Swedish web and film studio, specializing in motion on the web.

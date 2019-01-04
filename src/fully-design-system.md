@@ -7,7 +7,7 @@ author: Jonas Sandstedt
 date: 2017-04-24
 background-image_1440: '../assets/hero/introfilmen-poster.jpg'
 background-image_2880: '../assets/hero/introfilmen-poster.jpg'
-vimeo_IDs:
+vimeo_IDs: 
   - "211438822"
   - "205372936"
   - "162523357"
@@ -241,10 +241,10 @@ a grid with images and texts. Used in "other projects"
 <h2 class="boxgrid__header h4">Check out our other projects</h2>
 <figure class="boxgrid__box">
     {% comment %}Change this color to an average color from the image{% endcomment %}
-    <div class="image-loader" style="background: #ccc">
-        <img
+    <div class="image-loader" style="background: #ccc"> 
+        <img 
         src=" https://placekitten.com/g/1440/830"
-        alt="A beautiful cat">
+        alt="A beautiful cat">	
     </div>
     <figcaption class="boxgrid__caption">
         <h3>A beautiful cat</h3>
@@ -254,9 +254,9 @@ a grid with images and texts. Used in "other projects"
 
 <figure class="boxgrid__box">
     <div class="image-loader" style="background: #c1c1c1">
-        <img
+        <img 
         src="https://placekitten.com/g/1440/830"
-        alt="A beautiful cat">
+        alt="A beautiful cat">	
     </div>
     <figcaption class="boxgrid__caption">
         <h3>Another beautiful cat</h3>
@@ -271,7 +271,7 @@ a grid with images and texts. Used in "other projects"
 
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1"> <!--Change this color to an average color from the image-->
-            <img src="" alt="Fig title">
+            <img src="" alt="Fig title">	
         </div>
         <figcaption class="boxgrid__caption">
             <h3>Fig title</h3>
@@ -287,10 +287,10 @@ a grid with images and texts. Used in "other projects"
 <h2 class="boxgrid__header h4">Recent work</h2>
     <figure class="boxgrid__box">
         {% comment %}Change this color to an average color from the image{% endcomment %}
-        <div class="image-loader" style="background: #ccc">
-            <img
+        <div class="image-loader" style="background: #ccc"> 
+            <img 
             src=" https://placekitten.com/g/1440/830"
-            alt="A beautiful cat">
+            alt="A beautiful cat">	
         </div>
         <figcaption class="boxgrid__caption">
             <h3 class="h4">A beautiful cat</h3>
@@ -300,9 +300,9 @@ a grid with images and texts. Used in "other projects"
     </figure>
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1">
-            <img
+            <img 
             src="https://placekitten.com/g/1440/830"
-            alt="A beautiful cat">
+            alt="A beautiful cat">	
         </div>
         <figcaption class="boxgrid__caption">
             <h3 class="h4">Another beautiful cat</h3>
@@ -312,9 +312,9 @@ a grid with images and texts. Used in "other projects"
     </figure>
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1">
-            <img
+            <img 
             src="https://placekitten.com/g/1440/830"
-            alt="A beautiful cat">
+            alt="A beautiful cat">	
         </div>
         <figcaption class="boxgrid__caption">
             <h3 class="h4">Another beautiful cat</h3>
@@ -324,9 +324,9 @@ a grid with images and texts. Used in "other projects"
     </figure>
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1">
-            <img
+            <img 
             src="https://placekitten.com/g/1440/830"
-            alt="A beautiful cat">
+            alt="A beautiful cat">	
         </div>
         <figcaption class="boxgrid__caption">
             <h3 class="h4">Another beautiful cat</h3>
@@ -336,9 +336,9 @@ a grid with images and texts. Used in "other projects"
     </figure>
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1">
-            <img
+            <img 
             src="https://placekitten.com/g/1440/830"
-            alt="A beautiful cat">
+            alt="A beautiful cat">	
         </div>
         <figcaption class="boxgrid__caption">
             <h3 class="h4">Lorem ipsum</h3>
@@ -348,9 +348,9 @@ a grid with images and texts. Used in "other projects"
     </figure>
     <figure class="boxgrid__box">
         <div class="image-loader" style="background: #c1c1c1">
-            <img
+            <img 
             src="https://placekitten.com/g/1440/830"
-            alt="A beautiful cat">
+            alt="A beautiful cat">	
         </div>
         <figcaption class="boxgrid__caption">
             <h3 class="h4">Another beautiful cat</h3>
@@ -374,16 +374,16 @@ Load images with style
 <h3 id="backgrund-image">Fixed ratio image loader</h3>
 
 <div class="image-loader" style="background: #c1c1c1">
-    <img
+    <img 
     src="https://placekitten.com/g/1440/830"
-    alt="A beautiful cat">
+    alt="A beautiful cat">	
 </div>
 
 ``` html
 <div class="image-loader" style="background: #c1c1c1">
-    <img
+    <img 
     src="https://placekitten.com/g/1440/830"
-    alt="A beautiful cat">
+    alt="A beautiful cat">	
 </div>
 
 ```
@@ -438,7 +438,7 @@ Load images with style
 			<iframe src="https://player.vimeo.com/video/{{video}}" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</div>
 	</div>
-
+        
 {% endfor %}
     <div class="imagegrid__image imagegrid__image--two">
         <img src="../assets/introfilmen-poster.jpg">
@@ -491,7 +491,7 @@ grid-row: 4 / span 13;
 ### div #exampletext
 ``` scss
 grid-column: 2 / span 13;
-grid-row: 1 / span 4;
+grid-row: 1 / span 4; 
 @include media-query($on-laptop) {
     grid-column: 8 / span 5;
     grid-row: 1 / span 8;
@@ -525,7 +525,7 @@ grid-row: 1 / span 4;
         <img class="image"
             alt="{{page.section3_image_alt}}"
             width="1440" height="1653"
-            src="../assets/introfilmen-poster.jpg"
+            src="../assets/introfilmen-poster.jpg" 
             srcset="../assets/introfilmen-poster.jpg 1440w,
                     ../assets/introfilmen-poster.jpg 720w"
             sizes="(min-width: 580px) 50vw,
@@ -543,7 +543,7 @@ grid-row: 1 / span 4;
         <img class="image"
             alt="{{page.section3_image_alt}}"
             width="1440" height="1653"
-            src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3_image_small }}"
+            src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3_image_small }}" 
             srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3_image_medium }} 1440w,
                     {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section3_image_small }} 720w"
            sizes="(min-width: 580px) 50vw,
