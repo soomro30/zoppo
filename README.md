@@ -62,7 +62,7 @@ export LANG=sv_SE.UTF-8
 4. run `locale` and confirm the changes.
 
 Error: ```jekyll 3.5.0 | Error:  undefined method `registers' for nil:NilClass```
-1. gem install jekyll -v 3.5.2
+1. gem install jekyll -v 3.8.5
 2. bundle update jekyll
 
 
