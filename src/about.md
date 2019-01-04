@@ -30,4 +30,4 @@ script: "<script src='https://cdnjs.cloudflare.com/ajax/libs/mo-js/0.288.1/mo.mi
 
 ---
 
-Fully Studios is a Swedish web and film studio, specializing in motion on the web.
+Fully Studios creates technical and visual identities for brands and services around the world.
