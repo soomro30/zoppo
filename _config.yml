@@ -99,8 +99,8 @@ sass:
   style: compressed
 
 # live reload
-# livereload: false # false on production
-# reload_port: 5678
+livereload: true # false on production
+reload_port: 5678
 
 # gems
 plugins_dir:

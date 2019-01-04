@@ -19,6 +19,7 @@ document.body.appendChild(transitionOverlay);
 
 ready(function(){
 
+
 	// Fade images when loaded if they are inside an image-loader container
 	// Transition using CSS in base.scss
 	var imageLoaders = document.querySelectorAll('.image-loader img');
@@ -50,7 +51,7 @@ ready(function(){
         autoplay: false,
 		autoloadSegments: false,
         path: '../../assets/javascript/pagetransition.json',
-		rendererSettings: { 
+		rendererSettings: {
         	preserveAspectRatio:'none'
     	}
     };
@@ -98,7 +99,7 @@ ready(function(){
 		 * This function is automatically called as soon the Transition starts
 		 * this.newContainerLoading is a Promise for the loading of the new container
 		 * (Barba.js also comes with an handy Promise polyfill!)
-	
+
 		 */
 		start: function() {
 			// As soon the loading is finished and the old page is faded out, let's fade the new page
@@ -129,7 +130,7 @@ ready(function(){
 
 			// play the out transition
 			pagetransition.playSegments([[25,54]],true);
-			
+
 			// immediately clear the old DOM
 			this.done();
 		}
@@ -150,14 +151,14 @@ ready(function(){
 	// lory js ( image slider )
 
     var js_slider 		  = document.querySelector('.js_slider');
-    var js_slides 		  = document.querySelector('.js_slides');  
+    var js_slides 		  = document.querySelector('.js_slides');
 	var dot_count         = js_slider.querySelectorAll('.js_slide').length;
 	var dot_container     = js_slider.querySelector('.js_dots');
 	var dot_list_item     = document.createElement('li');
 
 
 	function handleDotEvent(e) {
-	   	
+
 	   console.log('handleDotEvent');
 
 	   if (e.type === 'before.lory.init') {
@@ -191,7 +192,7 @@ ready(function(){
 	       dot_container.childNodes[0].classList.add('active');
 	   }
 	}
-	
+
 	js_slider.addEventListener('before.lory.init', handleDotEvent);
 	js_slider.addEventListener('after.lory.init', handleDotEvent);
 	js_slider.addEventListener('after.lory.slide', handleDotEvent);
