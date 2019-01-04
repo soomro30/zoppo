@@ -1,17 +1,17 @@
 @media (orientation: landscape) {
-  .background-image {
+  .about-background-image {
     display: block;
   }
-  .background-image-mobile {
+  .about-background-image-mobile {
     display: none;
   }
 }
 
 @media (orientation: portrait) {
-  .background-image {
+  .about-background-image {
     display: none;
   }
-  .background-image-mobile {
+  .about-background-image-mobile {
     display: block;
   }
   .hero__header-wrap {

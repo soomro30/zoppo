@@ -6,7 +6,7 @@ pagetitle: |
 permalink: /about/
 slug: about
 background-color: "#7BD75E"
-background: <div class="hero__background"><img class="background-image" style="width:100%;height:100%;opacity:0.3" src="/assets/about/images/fully_about.svg" /><img class="background-image-mobile" style="width:100%;height:100%;opacity:0.3" src="/assets/about/images/fully_about_mobile.svg" /></div>
+background: <div class="hero__background"><img class="about-background-image" style="width:100%;height:100%;opacity:0.3" src="/assets/about/images/fully_about.svg" /><img class="about-background-image-mobile" style="width:100%;height:100%;opacity:0.3" src="/assets/about/images/fully_about_mobile.svg" /></div>
 
 section1: |
   Together we create<br>
