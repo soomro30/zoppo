@@ -12,7 +12,7 @@ section1: |
   Together we create<br>
   <span style="color:#7BD75E">technical and visual identities</span><br>
   for brands and services around<br>
-  the world.  
+  the world.
 
 section2: |
   Whether it's a website, film, app, or game, the things we make are solidly and thoughtfully crafted.
@@ -30,4 +30,4 @@ script: "<script src='https://cdnjs.cloudflare.com/ajax/libs/mo-js/0.288.1/mo.mi
 
 ---
 
-Fully Studios is a Swedish web and film studio, specializing in motion on the web.
+Fully Studios creates technical and visual identities for brands and services around the world.

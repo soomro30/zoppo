@@ -23,6 +23,11 @@ layout: page
         }
         #about-bm-animation {
             margin: auto;
+            width: 100%;
+            height: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         #under_text {
             text-align: center;
@@ -40,31 +45,42 @@ layout: page
 
         @media (min-width: 40em) {
             #about-bm-animation {
-                width: 50%;
+                width: 100%;
+                margin: auto;
             }
             .about-header {
                 font-size: 2.5em;
+                margin-bottom: 0px;
             }
             #under_text {
                 font-size: 2.5em;
+                text-align: left;
+                margin: auto;
+                width: 100%;
+            }
+            .bm-text {
+                display: flex;
+                padding: 120px;
             }
         }
     </style>
 
     <div class="anim-container">
         <h2 class="about-header">{{ page.section1 }}</h2>
-        <script src="/../assets/about/bodymovin/lottie.js"></script>
-        <div id="about-bm-animation"></div>
-        <script>
-        var anim = lottie.loadAnimation({
-            container: document.getElementById('about-bm-animation'),
-            renderer: 'svg',
-            autoplay: true,
-            loop: true,
-            path: '/../assets/about/bodymovin/Fully_services_animation.json'
-        });
-        </script>
-        <h2 id="under_text">{{ page.section2 }}</h2>
+        <div class="bm-text">
+            <script src="/../assets/about/bodymovin/lottie.js"></script>
+            <div id="about-bm-animation"></div>
+            <script>
+            var anim = lottie.loadAnimation({
+                container: document.getElementById('about-bm-animation'),
+                renderer: 'svg',
+                autoplay: true,
+                loop: true,
+                path: '/../assets/about/bodymovin/Fully_services_animation.json'
+            });
+            </script>
+            <h2 id="under_text">{{ page.section2 }}</h2>
+        </div>
     </div>
 
 </section>
