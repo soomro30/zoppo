@@ -76,7 +76,7 @@ This color is used for backgrounds and such. This light grey gives a small contr
 
 ### white - `#ffffff`
 
-Just whit. Not much to say here. A very usefull color in many situations.
+Just white. Not much to say here. A very usefull color in many situations.
 
 </div>
 

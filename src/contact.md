@@ -99,11 +99,6 @@ peoples:
     title: Web Developer
     email: oskar.eriksson@fullystudios.se
 
-  - name: Maria Arvidsson
-    image: maria-arvidsson.jpg
-    title: Motion Intern
-    email: maria.arvidsson@fullystudios.se
-
   - name: Emil Gradén
     image: emil-graden.jpg
     title: Motion Intern
