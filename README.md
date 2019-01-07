@@ -41,6 +41,13 @@ To build for deployment: `rake build`
 
 
 ## Error?
+If you don't have ruby -v 2.5.1 and cant install due to permissions error in homebrew. Check this out:
+https://github.com/rvm/rvm/issues/4402
+Steps:
+1. rvm get master
+2. rvm install 2.5.1
+3. rvm use 2.5.1
+
 If your js file does not compile, it´s probably a js error. Try running webpack with `--verbose` and see if you have any errors:
 ```npm run webpack --verbose```
 
