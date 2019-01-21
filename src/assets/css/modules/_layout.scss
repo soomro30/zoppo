@@ -33,7 +33,7 @@ $grh: 5vh;
         margin-bottom: $s-small;
         grid-column: 1 / span 12;        
         grid-row: 2;
-        justify-self: center;
+        // justify-self: center;
         @include media-query($on-laptop) {
             grid-column: 7 / span 6;
             grid-row: 1;
@@ -120,6 +120,11 @@ $grh: 5vh;
             grid-row: 7 / span 8;
             min-height: (8*$grh); // IE Edge fix
         }
+        &--small {
+            grid-row: 11;
+            min-height: auto;
+            margin-top: -$s-small*2;
+        }
     }
 
     // Typographic fixes
@@ -127,6 +132,41 @@ $grh: 5vh;
         margin-left: 0;
     }
     
+}
+
+// Imageline - place as many images as you want, and they will align in a nice oneliner (down to mobile)
+.imageline {
+    background-color: $c-dark;
+    overflow: auto;
+    max-width: 1300px;
+    padding: $s-small*0.5;
+    @include media-query($on-palm) {
+        display: flex;
+        flex-wrap: wrap;
+        padding: $s-small;
+    }
+
+    &__image {
+        flex: 1 0 calc(50% - #{$s-small*0.5});
+        @include media-query($on-palm) {
+            flex: 1;
+        }
+        margin: $s-small*0.25;
+        // display: inline-block;
+        // background: #fff;
+        // width: 100%;
+        // grid-column: auto;
+        // grid-row: auto;
+        // padding: $s-small*0.5;
+        // height: 40vh;
+        // width: auto;
+        // img {
+        // }
+    }
+    // display: grid;
+    // grid-gap: 10px;
+    // grid-template-columns: repeat(auto-fill, 100px ) ;
+    // // grid-template-rows: 40vh;
 }
 
 
@@ -327,6 +367,48 @@ $grh: 5vh;
         }
     }
 
+    .bgimage:nth-of-type(3) {
+        grid-column: 1 / span 12;
+        grid-row: 41 / span 8;
+        @include media-query($on-laptop) {
+            grid-column: 5 / span 8;
+            grid-row: 40 / span 17;
+            min-height: (17*$grh); // IE Edge fix
+        }
+    }
+
+    .boxtext:nth-of-type(3) {
+        z-index: 1;
+        grid-column: 1 / span 12;
+        grid-row: 49 / span 10;
+        @include media-query($on-laptop) {
+            grid-column: 1 / span 5;
+            grid-row: 49 / span 10;
+            min-height: (10*$grh); // IE Edge fix
+        }
+    }
+
+    .bgimage:nth-of-type(4) {
+        grid-column: 1 / span 12;
+        grid-row: 61 / span 8;
+        @include media-query($on-laptop) {
+            grid-column: 1 / span 8;
+            grid-row: 62 / span 17;
+            min-height: (17*$grh); // IE Edge fix
+        }
+    }
+
+    .boxtext:nth-of-type(4) {
+        z-index: 1;
+        grid-column: 1 / span 12;
+        grid-row: 69 / span 10;
+        @include media-query($on-laptop) {
+            grid-column: 8 / span 5;
+            grid-row: 60 / span 10;
+            min-height: (10*$grh); // IE Edge fix
+        }
+    }
+
 }
 
 /**
@@ -400,39 +482,6 @@ $grh: 5vh;
 //     }
 // }
 
-.imageline {
-    background-color: $c-dark;
-    overflow: auto;
-    max-width: 1300px;
-    padding: $s-small*0.5;
-    @include media-query($on-palm) {
-        display: flex;
-        flex-wrap: wrap;
-        padding: $s-small;
-    }
-
-    &__image {
-        flex: 1 0 calc(50% - #{$s-small*0.5});
-        @include media-query($on-palm) {
-            flex: 1;
-        }
-        margin: $s-small*0.25;
-        // display: inline-block;
-        // background: #fff;
-        // width: 100%;
-        // grid-column: auto;
-        // grid-row: auto;
-        // padding: $s-small*0.5;
-        // height: 40vh;
-        // width: auto;
-        // img {
-        // }
-    }
-    // display: grid;
-    // grid-gap: 10px;
-    // grid-template-columns: repeat(auto-fill, 100px ) ;
-    // // grid-template-rows: 40vh;
-}
 
 
 /**

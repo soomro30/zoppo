@@ -61,10 +61,11 @@ layout: default
 </article>
 
 
-
 <div class="boxgrid boxgrid--curiosity">
 	<h2 class="boxgrid__header h4">Check out our other curiosities</h2>
-	{% for curious in site.curious-about limit:3 %}
+	{% assign items = site.curious-about | sort: 'date' | reverse %}
+
+	{% for curious in items %}
 		{% if curious.title == page.title %}
 			{% continue %}
 		{% endif %}

@@ -2,120 +2,98 @@
 layout: page
 ---
 
+<section>
+    {{page.script}}
+    <style>
+        .anim-container {
+            position: relative;
+            overflow: hidden;
+            background-color: #ffffff;
+            width: 100%;
+        }
+        .about-header {
+            text-align: center;
+            max-width: calc(20em + 60px);
+            padding: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-top: 12vh;
+            margin-bottom: 12vh;
+            font-size: 3.6vh;
+        }
+        #about-bm-animation {
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #under_text {
+            text-align: center;
+            margin-top: 12vh;
+            margin-bottom: 12vh;
+            max-width: calc(20em + 60px);
+            font-size: 3.6vh;
+        }
+        .curiosity_text {
+            color: #0A2A4F;
+        }
+        .sectionpadding.invert {
+            background-color: #ffde7f;
+        }
 
-{% unless page.section1 == nil %}
-    <section class="grid">
-        <div class="grid__column1-2 boxtext h4">
-            {{ page.section1 | markdownify }}
-        </div>
-        <div class="grid__column2-2 anim-wrapper">
-            <div>
-                <iframe src="{{ site.baseurl }}/assets/about/experiment.html" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
-            </div>
-        </div>
-    </section>
-{% endunless %}
-
-
-{% unless page.section2 == nil %}
-    <section class="sectionspacing invert responsive-animation">
-
-        {{page.script}}
-        <style>
-            .responsive-animation {
-                overflow: hidden;
+        @media (min-width: 40em) {
+            #about-bm-animation {
+                width: 100%;
+                margin: auto;
+            }
+            .about-header {
+                font-size: 2.5em;
+                margin-bottom: 0px;
+            }
+            #under_text {
+                font-size: 2.5em;
+                text-align: left;
+                margin: auto;
                 width: 100%;
             }
-            .anim-container {
-                position: relative;
-                overflow: hidden;
+            .bm-text {
+                display: flex;
+                padding: 120px;
             }
-            #morphanim__text {
-                position: absolute;
-                top: 17%;
-                left: 15%;
-                width: 70%;
-                height: 80%;
-                text-align: center;
-                font-size: 6vw;
-                max-width: none;
-                padding: 0;
-                transition: transform 1s 0s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-            }
-            #morphanim__text.tablet {
-                transform: scale(0.5) translateY(-1em);
-            }
-            #morphanim__text.mobile {
-                transform: scale(0.22) translateY(-2em);
-            }
-            #morphanim {
-                display: block;
-                width: 90vw;
-                height: 59.3vw;
-                margin: 0 auto;
-            }
-            @media (min-width: 40em) {
-                #morphanim__text {
-                    top: 15%;
-                    left: 30%;
-                    width: 40%;
-                    font-size: 3.5vw;
-                }
-                #morphanim {
-                    width: 50vw;
-                    height: 32.8vw;
-                }
-            }
+        }
+    </style>
 
-        </style>
-        <div class="anim-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="557" height="366" viewBox="0 0 557 366" id="morphanim">
-                <title>{{ page.section2 | markdownify }}</title>
-                <g id="icon-mobile">
-                    <rect class="morphanim__frame" fill="#fff" x="219.33" y="72" width="118.33" height="222" rx="15" ry="15"/>
-                    <rect class="morphanim__screen" fill="#7bd85e" x="227.33" y="99" width="102.33" height="170"/>
-                    <rect class="morphanim__bottom" fill="#7bd85e" x="272.67" y="274.9" width="11.67" height="11.67" rx="5.75" ry="5.75"/>
-                </g>
-                <g id="icon-tablet">
-                    <rect class="morphanim__frame" fill="#fff" x="154.67" y="10" width="247.67" height="346" rx="15" ry="15"/>
-                    <rect class="morphanim__screen" fill="#7bd85e" x="170.67" y="32" width="215.67" height="292"/>
-                    <rect class="morphanim__bottom" fill="#7bd85e" x="272.67" y="333.9" width="11.67" height="11.67" rx="5.75" ry="5.75"/>
-                </g>
-                <g id="icon-desktop">
-                    <rect class="morphanim__frame" fill="#fff" x="29" width="499.67" height="356" rx="15" ry="15"/>
-                    <rect class="morphanim__screen" fill="#7bd85e" x="48.67" y="24" width="460.33" height="300"/>
-                    <rect class="morphanim__bottom" fill="#fff" x="10" y="323" width="540" height="35" rx="5.75" ry="5.75"/>
-                </g>                    
-            </svg>
-
-            
-            <h2 id="morphanim__text">{{ page.section2 }}</h2>
-            
+    <div class="anim-container">
+        <h2 class="about-header">{{ page.section1 }}</h2>
+        <div class="bm-text">
+            <script src="/../assets/about/bodymovin/lottie.js"></script>
+            <div id="about-bm-animation"></div>
+            <script>
+            var anim = lottie.loadAnimation({
+                container: document.getElementById('about-bm-animation'),
+                renderer: 'svg',
+                autoplay: true,
+                loop: true,
+                path: '/../assets/about/bodymovin/Fully_services_animation.json'
+            });
+            </script>
+            <h2 id="under_text">{{ page.section2 }}</h2>
         </div>
+    </div>
 
+</section>
 
-    </section>
-{% endunless %}
-
-{% unless page.section3 == nil %}
-    <section class="background-image sectionpadding">
-        <iframe style="width: 100%; height: 100%; position:absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden;" src="../assets/about/partiklar/index.html" frameborder="0"></iframe>
-        <div style="position: relative; z-index: 1; pointer-events: none;">
-            <div class="box box--invert box--center c-business-bg" style="max-width: 45em">
-                {{ page.section3 | markdownify }}
-            </div>
+<section class="background-image sectionpadding" style="background-color: #0A2A4F">
+    <div style="position: relative; z-index: 1; pointer-events: none;">
+        <div class="box box--center box--curiosities" style="max-width: 45em">
+            {{ page.section3 | markdownify }}
         </div>
-    </section>
-{% endunless %}
+    </div>
+</section>
 
-{% unless page.section4 == nil %}
-    <section class="sectionpadding invert center">
-        {{ page.section4 | markdownify }}
-        <a href="{{page.button-url | prepend: site.baseurl }}" class="button"><span>{{page.button-text}}</span></a>
-    </section>
-{% endunless %}
-
-
-<script type="text/javascript">
-    {% include {{ root | append: 'js/page/about.js' }} %}
-</script>
+<section class="sectionpadding invert center curiosity_text">
+    {{ page.section4 | markdownify }}
+    <a href="{{page.button-url | prepend: site.baseurl }}" class="button"><span>{{page.button-text}}</span></a>
+</section>

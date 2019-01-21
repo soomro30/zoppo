@@ -1,0 +1,85 @@
+---
+layout: curious
+---
+
+<!--
+###################################
+## Get all content (sections) from
+## the current curious-about post
+-->
+
+<div class="grid">
+
+    <div class="grid__fullwidth">
+        <img class="image" alt="{{page.section1_image1_alt}}" width="1440" height="643"
+            src="{{site.baseurl}}/assets/curious-about/{{page.slug}}/{{page.section1_image1_1440}}"
+            srcset="{{site.baseurl}}/assets/curious-about/{{page.slug}}/{{page.section1_image1_2880}} 2880w,
+                        {{site.baseurl}}/assets/curious-about/{{page.slug}}/{{page.section1_image1_1440}} 1440w"
+            sizes="100vw">
+    </div>
+
+    <div class="grid__boxunder boxtext">
+        {{ page.section1 | markdownify }}
+    </div>
+
+</div>
+
+<div class="grid sectionspacing-small">
+
+    <section class="grid__fullwidth flexcenter">
+        <div class="imageline c-light-bg">
+            <div class="imageline__image">
+                <img class="image" alt="{{section2_image1_alt}}" width="1440" height="960"
+                    src="{{site.baseurl}}/assets/curious-about/{{page.slug}}/section2_image1.jpg"
+                    srcset="{{site.baseurl}}/assets/curious-about/{{page.slug}}/section2_image1@3x.jpg 1234w,
+                            {{site.baseurl}}/assets/curious-about/{{page.slug}}/section2_image1@2x.jpg 822w,
+                            {{site.baseurl}}/assets/curious-about/{{page.slug}}/section2_image1.jpg 411w"
+                    sizes="(max-width: 620px) 30vw, 100vw">
+            </div>
+            <div class="imageline__image">
+                <img class="image" alt="{{section2_image2_alt}}" width="1440" height="960"
+                    src="{{site.baseurl}}/assets/curious-about/{{page.slug}}/section2_image2.jpg"
+                    srcset="{{site.baseurl}}/assets/curious-about/{{page.slug}}/section2_image2@3x.jpg 1234w,
+                            {{site.baseurl}}/assets/curious-about/{{page.slug}}/section2_image2@2x.jpg 822w,
+                            {{site.baseurl}}/assets/curious-about/{{page.slug}}/section2_image2.jpg 411w"
+                    sizes="(max-width: 620px) 30vw, 100vw">
+            </div>
+            <div class="imageline__image">
+                <img class="image" alt="{{section2_image3_alt}}" width="1440" height="960"
+                    src="{{site.baseurl}}/assets/curious-about/{{page.slug}}/section2_image3.jpg"
+                    srcset="{{site.baseurl}}/assets/curious-about/{{page.slug}}/section2_image3@3x.jpg 1234w,
+                            {{site.baseurl}}/assets/curious-about/{{page.slug}}/section2_image3@2x.jpg 822w,
+                            {{site.baseurl}}/assets/curious-about/{{page.slug}}/section2_image3.jpg 411w"
+                    sizes="(max-width: 620px) 30vw, 100vw">
+            </div>
+        </div>
+    </section>
+
+    <div class="grid__boxunder grid__boxunder--small boxtext boxtext--texttop">
+        {{ page.section2 | markdownify }}
+    </div>
+
+</div>
+
+<div class="grid grid--space">
+    <div class="background-image grid__offsetcolumn1-2" style="background-image: url({{site.baseurl}}/assets/curious-about/{{page.slug}}/{{page.section3-image1_medium}}); background-position: center left"></div>
+    <div class="grid__offsetcolumn2-2 bring-to-front">
+        <div class="box box--business box--right box--up">{{ page.section3 | markdownify }}</div>
+    </div>
+</div>
+
+<div class="grid grid--space">
+    <div class="grid__column1-2 flexcenter">
+        {{ page.section4 | markdownify }}
+    </div>
+    <div class="grid__column2-2">
+        <img class="image" alt="{{section4_image1_alt}}" width="1440" height="960"
+            src="{{site.baseurl}}/assets/curious-about/{{page.slug}}/section4_image1_medium.jpg"
+            srcset="{{site.baseurl}}/assets/curious-about/{{page.slug}}/section4_image1_large.jpg 1234w,
+                    {{site.baseurl}}/assets/curious-about/{{page.slug}}/section4_image1_medium.jpg 822w"
+            sizes="(max-width: 620px) 30vw, 100vw">
+    </div>
+</div>
+
+
+<div class="sectionspacing-small box box--curiosities box--center">{{ page.section5 | markdownify }}</div>
