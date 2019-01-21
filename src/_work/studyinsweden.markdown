@@ -2,8 +2,6 @@
 layout: work/studyinsweden
 title:  "Study in Sweden"
 subtitle: "Redesign of the student blog"
-author: Edīte
-author-email: edite.garjane@fullystudios.se
 author2: Alexander
 author2-email: alexander.tengner@fullystudios.se
 button-text: View case
@@ -58,4 +56,3 @@ section4: |
 ---
 
 Every year, new students from all over the world are recruited to be digital ambassadors and bloggers for Study In Sweden—a website that promotes Sweden as a top-notch destination for studying abroad. Knowing our penchant for bold and clear UX, the lovely people at Study in Sweden engaged us to redesign their blog.
-
