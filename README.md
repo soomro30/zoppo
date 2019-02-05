@@ -41,6 +41,7 @@ To build for deployment: `rake build`
 
 
 ## Error?
+
 If you don't have ruby -v 2.5.1 and cant install due to permissions error in homebrew. Check this out:
 https://github.com/rvm/rvm/issues/4402
 Steps:
@@ -72,6 +73,9 @@ Error: ```jekyll 3.5.0 | Error:  undefined method `registers' for nil:NilClass``
 1. gem install jekyll -v 3.8.5
 2. bundle update jekyll
 
+Error: `rvm not found`
+[https://stackoverflow.com/questions/11677771/rvm-command-not-found-mac-ox](Sourcepath)
+You need to add path to bash
 
 ## Tips and tricks
 * Break browser cache: simple add this string appending to a file url: `?{{site.time | date: '%s%N'}}` eg `<script src="{{ boundle_src | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>`
