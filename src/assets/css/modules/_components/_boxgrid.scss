@@ -77,9 +77,9 @@ $bgMqMedium: 800px;
             width: 100%;
         }
     }
-    
+
     &__caption {
-        @extend .hyphenate;
+        // @extend .hyphenate;
         flex: 1 0 100%;
         min-width: 100%;
         color: $c-dark;
@@ -97,7 +97,7 @@ $bgMqMedium: 800px;
         transform: translate($s-small*0.5, -$s-small*0.5);
         @media (min-width: $bgMqMedium) {
             transform: translate($s-small, -$s-small);
-        }                
+        }
     }
 
     // The box border effect
@@ -125,7 +125,7 @@ $bgMqMedium: 800px;
             color: $c-curiosities;
         }
         .boxgrid__box {
-            margin-top: $s-small;
+            margin-top: $s-small*2;
         }
         &:before {
             border-color: $c-curiosities;

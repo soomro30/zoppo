@@ -2,8 +2,6 @@
 layout: work/qgroup
 title:  "Qgroup"
 subtitle: "A tunnel and a website"
-author: "Edīte Garjāne"
-author-email: edite.garjane@fullystudios.se
 button-text: View case
 date:   2018-04-15 12:00:00 +0100
 categories: design, branding, web
@@ -23,11 +21,11 @@ background: |
     <p>You found Fullys secret place!</p>
     <h2>🤫</h2>
   </div>
-  
-  
+
+
   <div class="tunnel" id="tunnel"></div>
-  
-  
+
+
 background-image_2880: "hero@2x.jpg"
 background-image_1440: "hero.jpg"
 background-image_720: "hero_720.jpg"
@@ -58,8 +56,8 @@ section2: |
   When we were commissioned to update Qgroup's website, we came to the conclusion pretty quickly that the tunnel experience needed to be emphasized. It’s a defining experience that every employee, new and experienced, shares.
 
 section3: |
-  One slight problem, though. The real tunnel isn't exactly finished. They are renovating as we speak. Nevertheless, we heard their vision and were handed the blueprints, CAD models and everything else we needed to get to work. Which led us to the deep and ancient question:  
-  Who is quicker? Fully, or a construction crew? 
+  One slight problem, though. The real tunnel isn't exactly finished. They are renovating as we speak. Nevertheless, we heard their vision and were handed the blueprints, CAD models and everything else we needed to get to work. Which led us to the deep and ancient question:
+  Who is quicker? Fully, or a construction crew?
 
   The verdict is in. We are.
 
@@ -70,7 +68,7 @@ section4: |
 section4-video: "qgroup_tunnel.mp4"
 
 section5: |
-  #### The rest of the site is quite spectacularly dynamic too, but you should [go traverse it](https://q.group) on your own. Because, to paraphrase Qgroup – everything begins with the tunnel.  
+  #### The rest of the site is quite spectacularly dynamic too, but you should [go traverse it](https://q.group) on your own. Because, to paraphrase Qgroup – everything begins with the tunnel.
 
 # section5_videos:
 #   - 221886184
@@ -82,4 +80,3 @@ cssfile: cases/qgroup.css
 ---
 
 Qgroup is a global technology company that offers pretty much everything in the digital realm. They have offices all around the world, but their heart and head(quarters) remain in their beloved Malmö.
-

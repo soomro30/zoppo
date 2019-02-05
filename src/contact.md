@@ -61,6 +61,7 @@ peoples:
     image: malin-wincrantz.jpg
     title: UI/UX Designer
     email: malin.wincrantz@fullystudios.se
+    tel: +46 709 70 06 30
 
   - name: Josef Carlsson
     image: josef-carlsson.jpg
@@ -88,6 +89,7 @@ peoples:
     image: anders-tibbling.jpg
     title: DevOps Engineer
     email: anders.tibbling@fullystudios.se
+    tel: +46 709 70 08 26
 
   - name: Markus Boberg
     image: markus-boberg.jpg
@@ -114,7 +116,7 @@ peoples:
     title: Developer Intern
     email: linn.tunberg@fullystudios.se
 
-  - name: Sebastian Palm  
+  - name: Sebastian Palm
     image: sebastian-palm.jpg
     title: Developer Intern
     email: sebastian.palm@fullystudios.se

@@ -3,7 +3,7 @@ layout: work/malbaren
 title:  "Målbaren"
 subtitle: "Fitness meets #foodgoals"
 author: "Jonas Sandstedt"
-author-email: jonas@fullyflared.se
+author-email: jonas.sandstedt@fullystudios.se
 button-text: View case
 date:   2017-04-27 12:00:00 +0100
 categories: design, branding, web

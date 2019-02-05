@@ -8,7 +8,7 @@ categories: art, design, web
 slug: the-internet-by-hand
 background-image_720: "hero_720.jpg"
 background-image_color: "#ffde7f"
-background: '<div class="hero__bgcenter"><img style="width: 100%; max-width: 20em; height: auto" class="image" src="https://fullystudios.se/assets/curious-about/the-internet-by-hand/tomte-sequence.gif"></div>'
+background: '<div class="hero__bgcenter"><img style="width: 100%; max-width: 20em; height: 100%; object-fit: contain; padding: 10px" class="image" src="https://fullystudios.se/assets/curious-about/the-internet-by-hand/tomte-sequence.gif"></div>'
 shareimage: curious-about/the-internet-by-hand/shareimage.png
 
 ingress: |
@@ -18,7 +18,7 @@ section1: |
   This being said, we’re pretty fascinated by the old arts and things crafted by human hands. We have two properly educated illustrators at Fully, which is a larger number than most agencies have at all. The twist is that one of them is our back-end coder and the other is our filmmaker.
 
 slider:
-  - slide: 
+  - slide:
     image: "slider/draw.jpg"
   - slide:
     image: "slider/gbg.jpg"
@@ -79,4 +79,3 @@ You can create entire worlds without having to pick up a pen.
 [Launch site][motion-link]
 
 [motion-link]: http://fullystudios.se
-
