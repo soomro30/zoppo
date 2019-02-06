@@ -27,6 +27,9 @@
 .c-dark { color: $c-dark; }
 .c-dark-bg { background-color: $c-dark; color: $c-white; }
 
+.no-bg {
+  background-color: transparent;
+}
 
 .sectionspacing {
     margin-top: $s-small*3;

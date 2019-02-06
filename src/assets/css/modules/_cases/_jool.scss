@@ -1,0 +1,45 @@
+.flex-container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  @media(min-width: 699px){
+    flex-direction: row;
+    &__left {
+      flex-basis: 33%;
+      display: flex;
+      align-items: center;
+    }
+    &__right {
+      flex-basis: 67%;
+      margin: 0;
+      transform: translateX(100px);
+      margin-top: 0;
+    }
+  }
+  &__right {
+    margin-top: 50px;
+  }
+}
+
+.flex-imageline {
+  display: flex;
+  @media(max-width: 700px){
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  &__image {
+    margin: 30px;
+    @media(max-width: 700px){
+      margin: 20px;
+      width: 70%;
+      flex: 0 0 auto;
+    }
+  }
+  &.flex-imageline--tight {
+    .flex-imageline__image {
+      margin: 10px;
+    }
+  }
+}
