@@ -7,6 +7,7 @@ import OptimizedResize from "../OptimizedResize";
 module.exports =
 class ScrollAnimations {
 	constructor () {
+			if(document.getElementById("work-cases")){
         this._hasBeenCreated = false;
         this._asWidth = 130; // number of vw to be moved
         this._asDuration = 0.8;
@@ -20,7 +21,7 @@ class ScrollAnimations {
             this._checkMediaQuery();
         });
         document.body.classList.add('start-animations');
-
+			}
     }
 
     _checkMediaQuery () {
@@ -55,7 +56,7 @@ class ScrollAnimations {
 				this._controller = new ScrollMagic.Controller();
 
 				// snap the mobile scroll
-				this._trigger = new ScrollMagic.Scene({triggerElement: '#så-funkar-det', duration: this._sceneHeight })
+				this._trigger = new ScrollMagic.Scene({triggerElement: '#work-cases', duration: this._sceneHeight })
 				.setPin('#sidecroll-screens')
 				.triggerHook('onLeave')
 				.addTo(this._controller);
@@ -85,7 +86,6 @@ class ScrollAnimations {
     }
 
     destroy () {
-				console.log('destroy');
         // destroy controller
 				if(this.controller){
 					this._controller = this._controller.destroy(true);
@@ -101,7 +101,7 @@ class ScrollAnimations {
 
     // use a function to automatically adjust the duration to the window height.
     _updateDuration () {
-        return this._sceneHeight = document.getElementById("så-funkar-det").offsetHeight * 1;
+        return this._sceneHeight = document.getElementById("work-cases").offsetHeight * 1;
     }
 
 }
