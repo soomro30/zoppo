@@ -56,3 +56,6 @@ function runScripts(pos) {
         break;
   }
 }
+
+runScripts(0);
+console.log('include me');

@@ -3,9 +3,9 @@ layout: curious/fully-arcade
 type: curious-about
 title:  "Fully Arcade"
 subtitle: "We are adding a gaming wing to our studio."
-date:   2018-12-28 10:00:00 +0100
+date:   2019-02-06 10:00:00 +0100
 categories: art, design, web
-slug: fully-arcade
+slug: fully-arcade4
 background-image_720: "hero_720.jpg"
 background-image_1440: "hero.jpg"
 background-image_2880: "hero@2x.jpg"
@@ -14,7 +14,7 @@ shareimage: curious-about/fully-arcade/shareimage.png
 background-text_light: true
 
 ingress: |
-  We are adding a gaming wing to our studio.
+  W1111e are adding a gaming wing to our studio.
 
 section1: |
   ### Fundamentals first, gameplay second

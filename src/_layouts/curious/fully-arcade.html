@@ -73,13 +73,167 @@ layout: curious
         {{ page.section4 | markdownify }}
     </div>
     <div class="grid__column2-2">
-        <img class="image" alt="{{section4_image1_alt}}" width="1440" height="960"
+        <style>
+            body {
+                background: #f8f8f8;
+            }
+        
+            .terminal-window {
+                text-align: left;
+                width: 100%;
+                max-width: 67.5rem;
+                border-radius: 10px 0 0 10px;
+                margin: 30px auto 60px;
+                position: relative;
+                overflow: hidden;
+            }
+        
+            .terminal-window header {
+                background: #eeeeee;
+                height: 30px;
+                border-radius: 8px 0 0 0;
+                padding-left: 20px;
+            }
+        
+            .terminal-window header .term-button {
+                width: 12px;
+                height: 12px;
+                margin: 10px 1px 0 0;
+                display: inline-block;
+                border-radius: 8px;
+            }
+        
+            .terminal-window header .term-button.term-green {
+                background: #3BB662;
+            }
+        
+            .terminal-window header .term-button.term-yellow {
+                background: #E5C30F;
+            }
+        
+            .terminal-window header .term-button.term-red {
+                background: #E75448;
+            }
+        
+            .terminal-window .terminal__wrapper {
+                width: 100%;
+                overflow: auto;
+            }
+        
+            .terminal-window .terminal {
+                color: #0a2a4f;
+                font-family: "Roboto Mono", monospace;
+                font-size: 11pt;
+                background: #eeeeee;
+                padding: 10px 20px;
+                box-sizing: border-box;
+                width: 100%;
+                overflow: auto;
+                height: auto;
+                min-height: 32em;
+                max-height: 32em;
+                min-width: 60em;
+            }
+        
+            .terminal-window section.terminal .typed-cursor {
+                opacity: 1;
+                -webkit-animation: blink 0.7s infinite;
+                -moz-animation: blink 0.7s infinite;
+                animation: blink 0.7s infinite;
+            }
+        
+            @keyframes blink {
+                0% {
+                    opacity: 1;
+                }
+        
+                50% {
+                    opacity: 0;
+                }
+        
+                100% {
+                    opacity: 1;
+                }
+            }
+        
+            @-webkit-keyframes blink {
+                0% {
+                    opacity: 1;
+                }
+        
+                50% {
+                    opacity: 0;
+                }
+        
+                100% {
+                    opacity: 1;
+                }
+            }
+        
+            @-moz-keyframes blink {
+                0% {
+                    opacity: 1;
+                }
+        
+                50% {
+                    opacity: 0;
+                }
+        
+                100% {
+                    opacity: 1;
+                }
+            }
+        
+            .terminal-data {
+                display: none;
+            }
+        
+            .terminal-window .term-gray {
+                color: gray;
+            }
+        
+            .terminal-window .lg {
+                color: #7BD75E;
+            }
+            .terminal-window .g {
+                color: gray;
+            }
+            .terminal-window .b {
+                color: #5F11E8;
+            }
+            .terminal-window .p {
+                color: #FFC1B4;
+            }
+        </style>
+        <script type="text/javascript">
+            {% include {{ root | append: 'js/typed_v2.js' }} %}
+        </script>
+        <script type="text/javascript">
+            {% include {{ root | append: 'js/curious/fully-arcade.js' }} %}
+        </script>
+        
+        
+        <div class="terminal-window" id="fs_terminal" data-scroll data-scroll-showCallback="runScripts(0);">
+            <header>
+                <div class="term-button term-green"></div>
+                <div class="term-button term-yellow"></div>
+                <div class="term-button term-red"></div>
+            </header>
+            <div class="terminal__wrapper">
+                <section class="terminal">
+                    <div class="history"></div>
+                    <span class="prompt" id="das_terminal"></span>
+                    <span class="typed-cursor"></span>
+                </section>
+            </div>
+        </div>
+        
+        <!-- <img class="image" alt="{{section4_image1_alt}}" width="1440" height="960"
             src="{{site.baseurl}}/assets/curious-about/{{page.slug}}/section4_image1_medium.jpg"
             srcset="{{site.baseurl}}/assets/curious-about/{{page.slug}}/section4_image1_large.jpg 1234w,
                     {{site.baseurl}}/assets/curious-about/{{page.slug}}/section4_image1_medium.jpg 822w"
-            sizes="(max-width: 620px) 30vw, 100vw">
+            sizes="(max-width: 620px) 30vw, 100vw"> -->
     </div>
 </div>
-
 
 <div class="sectionspacing-small box box--curiosities box--center">{{ page.section5 | markdownify }}</div>
