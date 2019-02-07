@@ -5,7 +5,7 @@ title:  "Fully Arcade"
 subtitle: "We are adding a gaming wing to our studio."
 date:   2019-02-06 10:00:00 +0100
 categories: art, design, web
-slug: fully-arcade4
+slug: fully-arcade
 background-image_720: "hero_720.jpg"
 background-image_1440: "hero.jpg"
 background-image_2880: "hero@2x.jpg"
