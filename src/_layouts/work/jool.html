@@ -8,6 +8,12 @@ layout: case
     </section>
 {% endunless %}
 
+<style media="screen">
+  .special-case-p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+</style>
 
 <section class="grid sectionspacing">
   <div class="grid__fullwidth">
@@ -39,8 +45,8 @@ layout: case
       <img class="image" src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image_3_4 }}" alt="{{page.image_3_4_alt}}">
     </div>
   </div>
-  <div class="sectionspacing-small">
-    {{page.section_3 | markdownify}}
+  <div class="sectionspacing-small special-case-p">
+    <p class="special-case-p">{{page.section_3}}</p>
   </div>
 </section>
 <section class="flex-container">
