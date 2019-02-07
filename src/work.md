@@ -2,7 +2,8 @@
 layout: work
 title: Work
 pagetitle: |
-  # What we make
+  # We make
+  ## digital services, film & games
 permalink: /work/
 slug: work
 background-color: "#f8f8f8"
