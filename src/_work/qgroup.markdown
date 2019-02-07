@@ -14,6 +14,7 @@ background-image_2880: "hero@2x.jpg"
 background-image_1440: "hero.jpg"
 background-image_720: "hero_720.jpg"
 background-image_color: "#333"
+promo-image: "promo.png"
 background: |
   <div class="tunnel__modal tunnel__modal--hidden box box--center" id="loginModal">
     <a id="closeModal" class="button button--invert" href="#"><span>Close</span></a>
