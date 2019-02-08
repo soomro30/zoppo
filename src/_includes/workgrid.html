@@ -1,26 +1,31 @@
-<!-- 
+<!--
 ####################
 ## Loop through the latest work
+
+add this if feautered cases shouldnt be displayed inside workgrid
+
+{% if work.title == page.title or work.title == work1.title or work.title == work2.title or work.title == work3.title %}
+  {% continue %}
+{% endif %}
+
 -->
 <section class="boxgrid boxgrid--compact">
     <h2 class="boxgrid__header h4">Recent work</h2>
     <!-- Get all work posts and revers them -->
     {% assign items = site.work | sort: 'date' | reverse %}
-    
+
     {% for work in items %}
 
-		{% if work.title == page.title or work.title == work1.title or work.title == work2.title or work.title == work3.title %}
-			{% continue %}
-		{% endif %}
+
 
         <a href="{{work.url | prepend: site.baseurl}}" class="boxgrid__box">
-            
+
             <div class="boxgrid__image" style="background-color: {{work.background-color}}">
                 {% unless work.background-image_720 == nil %}
-                    <img src="{{site.baseurl}}/assets/work/{{work.slug}}/{{work.background-image_720}}" alt="{{work.title}}">	
+                    <img src="{{site.baseurl}}/assets/work/{{work.slug}}/{{work.background-image_720}}" alt="{{work.title}}">
                 {% endunless %}
             </div>
-        
+
             <div class="boxgrid__caption">
                 <div>
                     <h3>{{work.title}}</h3>
@@ -29,7 +34,7 @@
                 <div class="button"><span>{{work.button-text}}</span></div>
             </div>
         </a>
-        
+
     {% endfor %}
 
 </section>

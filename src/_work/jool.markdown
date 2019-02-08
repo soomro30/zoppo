@@ -6,7 +6,7 @@ button-text: View case
 date:   2019-02-04 11:00:00 +0100
 categories: film
 slug: jool
-client: JOOL Capital
+client: JOOL Markets
 project: Digital Service
 background-image_2880: "hero3.png"
 background-image_1440: "hero2.png"
