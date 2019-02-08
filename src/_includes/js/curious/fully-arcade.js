@@ -67,4 +67,3 @@ function runScripts(pos) {
 }
 
 runScripts(0);
-console.log('include me');

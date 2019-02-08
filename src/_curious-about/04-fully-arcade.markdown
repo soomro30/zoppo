@@ -8,10 +8,81 @@ categories: art, design, web
 slug: fully-arcade
 background-image_720: "hero_720.jpg"
 background-image_1440: "hero.jpg"
-background-image_2880: "hero@2x.jpg"
+# background-image_2880: "hero@2x.jpg"
 background-image_color: "#000000"
 shareimage: curious-about/fully-arcade/shareimage.png
 background-text_light: true
+
+background: |
+  <div class="fa-bg">
+    <div class="fa-bg__cg1"></div>
+    <div class="fa-bg__cg2"></div>
+    <div class="fa-bg__cg3"></div>
+    <div class="fa-bg__cg4"></div>
+    <div class="fa-bg__stars" id="stars">
+    </div>
+    <div class="fa-bg__gt"></div>
+    <script>
+      // Particles
+      // Credits: https://codepen.io/ddstuff/pen/KoLLPZ
+      var masterSpeed = 4;
+      var dd = document.createElement("canvas");
+      var cv = dd.getContext("2d");
+      var sw = window.screen.width;
+      var sh = window.screen.height;
+      var vcx = document.body.clientWidth/2;
+      var vcy = document.body.clientHeight/2;
+      var rv = 1000;
+      var rot = 0;
+      var dim = Math.sqrt((sw*sw)+(sh*sh));
+      var w = dd.width = dim;
+      var h = dd.height = dim;
+      var strs = [];
+      var nstrs = 2000;
+      dd.setAttribute("style", "transform:translate(-50%,-50%) rotate(120deg);");
+      var wrapper = document.getElementById('stars');
+      console.log('wrapper', wrapper);
+      wrapper.appendChild(dd);
+      function rInt(s,b) {
+      min=Math.ceil(s);max=Math.floor(b);
+      return Math.floor(Math.random()*(b-s+1))+s;
+      }
+      function Star(x,y,sz,s,o) {
+        this.x = parseInt(x);
+        this.y = parseInt(y);
+        this.radius = parseInt(sz);
+        this.speed = parseInt(s);
+        this.opacity = o;
+        this.draw = function(){
+          cv.beginPath();
+          cv.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
+          cv.closePath();
+          cv.fillStyle = "rgba(255,255,255,"+this.opacity+")";
+          cv.fill();
+        }
+      }
+      function draw() {
+        cv.clearRect(0,0,w,h);
+        for(i=0; i<nstrs;i++){
+          strs[i].draw();
+          strs[i].x -= strs[i].speed/masterSpeed;
+          if(strs[i].x <= 0){
+          strs[i] = new Star(w,rInt(0,h),rInt(1,6)/3,rInt(1,2),rInt(4,10)/10);
+          }
+        }
+        window.requestAnimationFrame(draw);
+      }
+
+      function init() {
+        for(i=0; i<nstrs;i++) {
+          strs[i] = new Star(rInt(0,w),rInt(0,h),rInt(1,6)/3,rInt(1,5),rInt(4,10)/10);
+        }
+        draw();
+      }
+      init();
+
+    </script>
+  </div>
 
 ingress: |
   W1111e are adding a gaming wing to our studio.
