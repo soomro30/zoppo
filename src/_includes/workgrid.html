@@ -2,12 +2,6 @@
 ####################
 ## Loop through the latest work
 
-add this if feautered cases shouldnt be displayed inside workgrid
-
-{% if work.title == page.title or work.title == work1.title or work.title == work2.title or work.title == work3.title %}
-  {% continue %}
-{% endif %}
-
 -->
 <section class="boxgrid boxgrid--compact">
     <h2 class="boxgrid__header h4">Recent work</h2>
@@ -16,6 +10,11 @@ add this if feautered cases shouldnt be displayed inside workgrid
 
     {% for work in items %}
 
+    {% comment %}
+    {% if work.title == page.title or work.title == work1.title or work.title == work2.title or work.title == work3.title %}
+      {% continue %}
+    {% endif %}
+    {% endcomment %}
 
 
         <a href="{{work.url | prepend: site.baseurl}}" class="boxgrid__box">
