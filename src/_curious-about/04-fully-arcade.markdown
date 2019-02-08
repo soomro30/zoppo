@@ -85,7 +85,7 @@ background: |
   </div>
 
 ingress: |
-  W1111e are adding a gaming wing to our studio.
+  We are adding a gaming wing to our studio.
 
 section1: |
   ### Fundamentals first, gameplay second
