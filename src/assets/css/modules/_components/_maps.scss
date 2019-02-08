@@ -1,27 +1,76 @@
 .map {
-    height: 60vh;
+    height: auto;
     min-height: 400px;
     width: 100%;
-    margin: 0 auto;
-
     &__container {
-        position: relative;
+        display: flex;
         margin-top: $s-small*2;
         margin-bottom: $s-small*4;
-        &:after {
-            content: "";
-            display: block;
-            border: 4px solid $c-dark;
-            left: $s-small*0.5;
-            width: calc(100% - #{$s-small} - 8px);
-            @include media-query($on-laptop) {
-                left: $s-small*2;
-                width: calc(100% - #{$s-small*4} - 8px);
+        .map-wrapper {
+          position: relative;
+          &:hover {
+            .office-overlay{
+              opacity: 0;
             }
-            position: absolute;
-            top: -$s-small; 
-            bottom: -$s-small*2;
+          }
+          .office-overlay {
             pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-position: center center;
+            background-repeat: no-repeat;
+            z-index: 1;
+            background-size: cover;
+            opacity: 1;
+            transition: opacity .2s linear;
+          }
+        }
+
+        @media(max-width: 870px){
+          flex-direction: column;
+        }
+        // &:after {
+        //     content: "";
+        //     display: block;
+        //     border: 4px solid $c-dark;
+        //     left: $s-small*0.5;
+        //     width: calc(100% - #{$s-small} - 8px);
+        //     @include media-query($on-laptop) {
+        //         left: $s-small*2;
+        //         width: calc(100% - #{$s-small*4} - 8px);
+        //     }
+        //     position: absolute;
+        //     top: -$s-small;
+        //     bottom: -$s-small*2;
+        //     pointer-events: none;
+        // }
+        &--city {
+          flex: 1;
+          @media(min-width: 800px){
+            margin: $s-small;
+          }
+        }
+        &--info {
+          @media(min-width: 800px){
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+          }
+          margin: 30px 0;
+          display: flex;
+          flex-direction: column;
+          p {
+            margin-top: 0;
+          }
+          h3 {
+            margin: 0;
+            margin-left: 30px;
+            padding-left: 0;
+          }
         }
     }
     & > div {
