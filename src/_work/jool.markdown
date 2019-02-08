@@ -51,19 +51,19 @@ image_3_2: |
   Frame2.png
 
 image_3_2_alt: |
-  Progress badge with icon and name based on registration step  
+  Progress badge with icon and name based on registration step
 
 image_3_3: |
   Frame3.png
 
 image_3_3_alt: |
-  Progress badge with icon and name based on registration step  
+  Progress badge with icon and name based on registration step
 
 image_3_4: |
   Frame4.png
 
 image_3_4_alt: |
-  Progress badge with icon and name based on registration step    
+  Progress badge with icon and name based on registration step
 
 section_3: |
   Onboarding needed to balance ease and thoroughness, both for the sake of potential investors and for JOOL. High-risk, high-reward investments aren’t for everyone, after all. In addition to a series of watertight verification measures, we architected a sorting process that uses questions and quizzes to gauge an investor’s experience level, as well as their aversion to risk.
@@ -115,10 +115,10 @@ section6_title: |
   ## The many beauties of digitalization
 
 section6: |
-  JOOL saw the truth that many businesses are recognizing, and some are acting on. That information, when hoarded, becomes stagnant. It’s the very nature of information to be constantly moving, updating, changing – and shared.  
+  JOOL saw the truth that many businesses are recognizing, and some are acting on. That information, when hoarded, becomes stagnant. It’s the very nature of information to be constantly moving, updating, changing – and shared.
 
   Digital portals like the one we built for JOOL open up direct, real-time channels for communication and changing information. For example, when JOOL brokers send an investment recommendation to a client through the portal, they can use automatic fields to fill in numerical information, pulled from the database. Their message remains updated and accurate down the krona, regardless of when it’s viewed.
 
 section7: |
-  From here? So much is possible. Having taken this massive step in digitalization, JOOL has opened the floodgates of opportunity and possibilities for itself. A few of the portal expansions currently in the works are a robot advisory scheme, multiplayer online investing, and e-learning modules.  
+  From here? So much is possible. Having taken this massive step in digitalization, JOOL has opened the floodgates of opportunity and possibilities for itself.
 ---
