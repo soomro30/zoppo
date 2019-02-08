@@ -201,6 +201,8 @@ video.hero__background {
 
 // Page specific changes
 .hero--contact {
+    min-height: 80vh;
+    background-color: #FFC1B4;
     h2 {
         width: 100%;
         // max-width: none;

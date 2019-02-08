@@ -12,7 +12,10 @@ sublink-text: Looking for someone special?
 
 permalink: /contact/
 slug: contact
-background-color: "#FFC1B4"
+background-color: "#f8f8f8"
+
+image-gbg: "office_gbg.jpg"
+image-sthlm: "office_sthlm.jpg"
 
 peoples:
   - name: Robin Kollberg
@@ -38,12 +41,6 @@ peoples:
     title: Account Manager
     email: frida.netzen@fullystudios.se
     tel: +46 703 77 72 07
-
-  - name: Chelsea Milojkovic
-    image: chelsea-milojkovic.jpg
-    title: Copywriter (US English)
-    email: chelsea.milojkovic@fullystudios.se
-    tel: +46 721 89 49 89
 
   - name: Jakob Åhl
     image: jakob-ahl.jpg

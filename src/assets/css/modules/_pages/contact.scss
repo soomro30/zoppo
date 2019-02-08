@@ -7,3 +7,38 @@
         font-size: inherit;
     }
 }
+
+.contact-boxes {
+  background-color: #FFC1B4;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 20vh;
+  flex-direction: column;
+  @media(min-width: 660px){
+    flex-direction: row;
+    justify-content: center;
+  }
+  &__box {
+    background-color: #fff;
+    padding: $s-small 0;
+    margin: $s-small;
+    align-items: center;
+    flex: 1;
+    @media(min-width: 660px){
+      flex-basis: 25%;
+    }
+    // margin: 0 $s-small / 2 $s-small / 2 $s-small / 2;
+    margin: 0 $s-small $s-small $s-small;
+    // // flex-basis: 50%;
+    // @media(min-width: 900px){
+    // }
+    // @media(min-width: 1100px){
+    // }
+    .subject-msg {
+      margin-top: 0;
+    }
+    a {
+      color: $c-dark;
+    }
+  }
+}
