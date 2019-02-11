@@ -38,14 +38,14 @@ background: |
       var w = dd.width = dim;
       var h = dd.height = dim;
       var strs = [];
-      var nstrs = 2000;
-      dd.setAttribute("style", "transform:translate(-50%,-50%) rotate(120deg);");
+      var nstrs = 1.2 * w;
+      console.log('nstrs', nstrs);
       var wrapper = document.getElementById('stars');
       console.log('wrapper', wrapper);
       wrapper.appendChild(dd);
       function rInt(s,b) {
-      min=Math.ceil(s);max=Math.floor(b);
-      return Math.floor(Math.random()*(b-s+1))+s;
+        min=Math.ceil(s);max=Math.floor(b);
+        return Math.floor(Math.random()*(b-s+1))+s;
       }
       function Star(x,y,sz,s,o) {
         this.x = parseInt(x);
@@ -65,9 +65,11 @@ background: |
         cv.clearRect(0,0,w,h);
         for(i=0; i<nstrs;i++){
           strs[i].draw();
-          strs[i].x -= strs[i].speed/masterSpeed;
-          if(strs[i].x <= 0){
-          strs[i] = new Star(w,rInt(0,h),rInt(1,6)/3,rInt(1,2),rInt(4,10)/10);
+          strs[i].x += strs[i].speed/masterSpeed;
+          strs[i].y -= strs[i].speed/masterSpeed;
+          //console.log('w', w, strs[i].x);
+          if(strs[i].x >= w || strs[i].y <= 0){
+            strs[i] = new Star(-10,rInt(0,h*1.5),rInt(1,6)/3,rInt(1,2),rInt(4,10)/10);
           }
         }
         window.requestAnimationFrame(draw);
