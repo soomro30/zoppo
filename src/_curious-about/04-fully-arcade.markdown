@@ -140,8 +140,4 @@ section5: |
 
 ---
 
-You can create entire worlds without having to pick up a pen.
-
-[Launch site][motion-link]
-
-[motion-link]: http://fullystudios.se
+We are adding a gaming wing to our studio.
