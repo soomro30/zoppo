@@ -11,13 +11,14 @@ defaultHero();
 document.addEventListener("DOMContentLoaded", () => {
     // Scroll reveal animations
     // Usage: add data-scroll on an html element to toggle the classes visible and invisible
+    // If you wanna just use it once, add data-scroll="once". See more at https://github.com/terwanerik/ScrollTrigger/
     var trigger = new ScrollTrigger({
         offset: {
             x: 0,
             y: 100
         },
         centerVertical: true,
-        once: true
+        once: false
     });
 
     // Activate SweetScroll

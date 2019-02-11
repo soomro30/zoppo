@@ -31,7 +31,7 @@ $grh: 5vh;
     }
     &__column2-2 {
         margin-bottom: $s-small;
-        grid-column: 1 / span 12;        
+        grid-column: 1 / span 12;
         grid-row: 2;
         // justify-self: center;
         @include media-query($on-laptop) {
@@ -52,7 +52,7 @@ $grh: 5vh;
     }
     &__column-small {
         margin-bottom: $s-small;
-        grid-column: 1 / span 12;        
+        grid-column: 1 / span 12;
         grid-row: 2;
         justify-self: center;
         @include media-query($on-laptop) {
@@ -72,7 +72,7 @@ $grh: 5vh;
         }
         &--small {
             grid-column: 1 / span 12;
-            grid-row: 4 / span 8;        
+            grid-row: 4 / span 8;
             @include media-query($on-laptop) {
                 grid-column: 1 / span 8;
                 grid-row: 2 / span 8;
@@ -88,7 +88,7 @@ $grh: 5vh;
             grid-row: 1 / span 8;
             min-height: (8*$grh); // IE Edge fix
         }
-        
+
         &--owd-bob {
             grid-row: 11 / span 7;
             @include media-query($on-laptop) {
@@ -106,7 +106,7 @@ $grh: 5vh;
     // Fullwidth image with box underneath
     &__fullwidth {
         grid-column: 1 / span 12;
-        grid-row: 1 / span 10; 
+        grid-row: 1 / span 10;
         min-height: (10*$grh); // IE Edge fix
     }
 
@@ -114,7 +114,7 @@ $grh: 5vh;
         grid-column: 1 / span 12;
         margin-left: 10px;
         margin-right: 10px;
-        grid-row: 7 / span 4; 
+        grid-row: 7 / span 4;
         @include media-query($on-laptop) {
             grid-column: 2 / span 10;
             grid-row: 7 / span 8;
@@ -131,13 +131,14 @@ $grh: 5vh;
     p {
         margin-left: 0;
     }
-    
+
 }
 
 // Imageline - place as many images as you want, and they will align in a nice oneliner (down to mobile)
 .imageline {
     background-color: $c-dark;
     overflow: auto;
+    width: 100%;
     max-width: 1300px;
     padding: $s-small*0.5;
     @include media-query($on-palm) {
@@ -192,7 +193,7 @@ $grh: 5vh;
 .footer {
     background-color: $c-white;
     color: $c-dark;
-    
+
     @include media-query($on-laptop) {
         font-size: 80%;
     }
@@ -254,12 +255,12 @@ $grh: 5vh;
 }
 
 .reelgrid {
-    display: flex;    
+    display: flex;
     flex-flow: column-reverse;
 
     // SAVE to when we add a video player that can hide the text field
     // margin-top: $s-small*2;
-    
+
     @include media-query($on-laptop) {
         display: block;
         position: relative;
@@ -472,13 +473,13 @@ $grh: 5vh;
     // animation: slideleft 0.6s $easeout forwards;
 }
 // @keyframes slideleft {
-//     0% { 
+//     0% {
 //         opacity: 0;
 //         transform: translate3D(100px,0,0);
 //     }
-// 	100% { 
+// 	100% {
 //         opacity: 1;
-//         transform: translate3D(0,0,0);        
+//         transform: translate3D(0,0,0);
 //     }
 // }
 

@@ -13,7 +13,7 @@
     }
 
     .terminal-window header {
-        background: #eeeeee;
+        background: #0A2A4F;
         height: 30px;
         padding-left: 20px;
     }
@@ -44,18 +44,18 @@
     }
 
     .terminal-window .terminal {
-        color: #0a2a4f;
+        color: #ffffff;
         font-family: "Roboto Mono", monospace;
         font-size: 11pt;
-        background: #eeeeee;
+        background: #0A2A4F;
         padding: 10px 20px;
         box-sizing: border-box;
-        width: 100%;
         overflow: auto;
         height: auto;
+        width: auto;
         min-height: 32em;
         max-height: 32em;
-        min-width: 60em;
+        min-width: 74em;
     }
 
     .terminal-window section.terminal .typed-cursor {
@@ -127,6 +127,9 @@
     .terminal-window .p {
         color: #FFC1B4;
     }
+    .terminal-window .h {
+        color: #0A2A4F;
+    }
 </style>
 <script type="text/javascript">
     {% include {{ root | append: 'js/typed_v2.js' }} %}
@@ -136,7 +139,7 @@
 </script>
 
 
-<div class="terminal-window" id="fs_terminal" data-scroll data-scroll-showCallback="runScripts(0);">
+<div class="terminal-window" id="fs_terminal" data-scroll="once" data-scroll-showCallback="runScripts(0);">
     <header>
         <div class="term-button term-green"></div>
         <div class="term-button term-yellow"></div>

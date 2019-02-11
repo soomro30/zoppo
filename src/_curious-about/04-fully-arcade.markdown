@@ -14,7 +14,7 @@ shareimage: curious-about/fully-arcade/shareimage.png
 background-text_light: true
 
 background: |
-  <div class="fa-bg">
+  <div class="fa-bg" data-scroll data-scroll-showCallback="runStars(true)" data-scroll-hideCallback="runStars(false)">
     <div class="fa-bg__cg1"></div>
     <div class="fa-bg__cg2"></div>
     <div class="fa-bg__cg3"></div>
@@ -23,6 +23,14 @@ background: |
     </div>
     <div class="fa-bg__gt"></div>
     <script>
+      var runAnim = 'false';
+      function runStars(bool) {
+        runAnim = bool;
+        console.log('runAnim', runAnim);
+        console.log('___', runAnim === 'true');
+        if (runAnim === 'true') draw();
+      }
+
       // Particles
       // Credits: https://codepen.io/ddstuff/pen/KoLLPZ
       var masterSpeed = 4;
@@ -39,9 +47,7 @@ background: |
       var h = dd.height = dim;
       var strs = [];
       var nstrs = 1.2 * w;
-      console.log('nstrs', nstrs);
       var wrapper = document.getElementById('stars');
-      console.log('wrapper', wrapper);
       wrapper.appendChild(dd);
       function rInt(s,b) {
         min=Math.ceil(s);max=Math.floor(b);
@@ -62,12 +68,18 @@ background: |
         }
       }
       function draw() {
+        console.log('draw runAnim', runAnim);
+        if (runAnim === 'false') {
+          window.cancelAnimationFrame(draw);
+          console.log('draw cancel');
+          return;
+        }
+
         cv.clearRect(0,0,w,h);
-        for(i=0; i<nstrs;i++){
+        for(var i=0; i<nstrs;i++){
           strs[i].draw();
           strs[i].x += strs[i].speed/masterSpeed;
           strs[i].y -= strs[i].speed/masterSpeed;
-          //console.log('w', w, strs[i].x);
           if(strs[i].x >= w || strs[i].y <= 0){
             strs[i] = new Star(-10,rInt(0,h*1.5),rInt(1,6)/3,rInt(1,2),rInt(4,10)/10);
           }
@@ -76,7 +88,7 @@ background: |
       }
 
       function init() {
-        for(i=0; i<nstrs;i++) {
+        for(var i=0; i<nstrs;i++) {
           strs[i] = new Star(rInt(0,w),rInt(0,h),rInt(1,6)/3,rInt(1,5),rInt(4,10)/10);
         }
         draw();
