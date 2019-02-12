@@ -14,6 +14,19 @@ permalink: /contact/
 slug: contact
 background-color: "#f8f8f8"
 
+join_header: Join the clan?
+join_text: We always try to make room for talent
+join_email: career@fullystudios.se
+
+general_title: Chat about a project
+general_text: General inquiries & hellos 
+general_email: hello@fullystudios.se
+
+# hiring_active: yeeeezx
+# hiring_title: We’re hiring!
+# hiring_position: Temporary Account Manager
+# hiring_url: '#'
+
 image-gbg: "office_gbg.jpg"
 image-sthlm: "office_sthlm.jpg"
 

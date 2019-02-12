@@ -12,20 +12,20 @@ layout: page
 {% endunless %}
 <div class="contact-boxes">
   <div class="contact-boxes__box">
-    <h3>Join our team?</h3>
-    <p class="subject-msg">Make a spontanious application!</p>
-    <p><a target="_blank" href="mailto:career@fullystudios.se">career@fullystudios.se</a></p>
+    <h3>{{page.join_header}}</h3>
+    <p class="subject-msg">{{page.join_text}}</p>
+    <p><a target="_blank" href="mailto:{{page.join_email}}">{{page.join_email}}</a></p>
   </div>
   <div class="contact-boxes__box">
-    <h3>Just talk with us</h3>
-    <p class="subject-msg">Enquiries and new projects</p>
-    <p><a target="_blank" href="mailto:hello@fullystudios.se">hello@fullystudios.se</a></p>
+    <h3>{{page.general_title}}</h3>
+    <p class="subject-msg">{{page.general_text}}</p>
+    <p><a target="_blank" href="mailto:{{page.general_email}}">{{page.general_email}}</a></p>
   </div>
-  {% unless page.hire-case-id == nil %}
+  {% unless page.hiring_active == nil %}
   <div class="contact-boxes__box">
-    <h3>We’re hiring!</h3>
-    <p class="subject-msg">Temporary Account Manager</p>
-    <p><a href="">Read more</a></p>
+    <h3>{{page.hiring_title}}</h3>
+    <p class="subject-msg">{{page.hiring_position}}</p>
+    <p><a href="{{page.hiring_url}}">Read more</a></p>
   </div>
   {% endunless %}
 </div>
