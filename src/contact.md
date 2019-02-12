@@ -22,101 +22,137 @@ peoples:
     image: robin-kollberg.jpg
     title: Creative Director
     email: robin.kollberg@fullystudios.se
+    email_name: robin.kollberg
+    email_domain: fullystudios.se
     tel: +46 702 53 54 60
 
   - name: Joakim Hanner
     image: joakim-hanner.jpg
     title: Motion & Film Director
     email: joakim.hanner@fullystudios.se
+    email_name: joakim.hanner
+    email_domain: fullystudios.se
     tel: +46 738 07 30 72
 
   - name: Jonathan Asp
     image: jonathan-davis-asp.jpg
     title: Digital Producer & Production Manager
     email: jonathan.asp@fullystudios.se
+    email_name: jonathan.asp
+    email_domain: fullystudios.se
     tel: +46 739 48 07 05
 
   - name: Frida Netzén
     image: frida-netzen.jpg
     title: Account Manager
     email: frida.netzen@fullystudios.se
+    email_name: frida.netzen
+    email_domain: fullystudios.se
     tel: +46 703 77 72 07
 
   - name: Jakob Åhl
     image: jakob-ahl.jpg
     title: Head of Film
     email: jakob.ahl@fullystudios.se
+    email_name: jakob.ahl
+    email_domain: fullystudios.se
     tel: +46 723 09 62 04
 
   - name: Alexander Tengner
     image: alexander-tengner.jpg
     title: UX & Design Director
     email: alexander.tengner@fullystudios.se
+    email_name: alexander.tengner
+    email_domain: fullystudios.se
     tel: +46 721 71 50 32
 
   - name: Malin Wirdheim Wincrantz
     image: malin-wincrantz.jpg
     title: UI/UX Designer
     email: malin.wincrantz@fullystudios.se
+    email_name: malin.wincrantz
+    email_domain: fullystudios.se
     tel: +46 709 70 06 30
 
   - name: Josef Carlsson
     image: josef-carlsson.jpg
     title: Creative Technologist
     email: josef.carlsson@fullystudios.se
+    email_name: josef.carlsson
+    email_domain: fullystudios.se
     tel: +46 702 08 11 99
 
   - name: Mikael Biström
     image: mikael-bistrom.jpg
     title: Technical Director
     email: mikael.bistrom@fullystudios.se
+    email_name: mikael.bistrom
+    email_domain: fullystudios.se
     tel: +46 733 60 12 62
 
   - name: Jonas Sandstedt
     image: jonas-sandstedt.jpg
     title: Web & UI Animator
     email: jonas.sandstedt@fullystudios.se
+    email_name: jonas.sandstedt
+    email_domain: fullystudios.se
 
   - name: Jörgen Hansson
     image: jorgen-hansson.jpg
     title: Front-end Developer
     email: jorgen.hansson@fullystudios.se
+    email_name: jorgen.hansson
+    email_domain: fullystudios.se
 
   - name: Anders Tibbling
     image: anders-tibbling.jpg
     title: DevOps Engineer
     email: anders.tibbling@fullystudios.se
+    email_name: anders.tibbling
+    email_domain: fullystudios.se
     tel: +46 709 70 08 26
 
   - name: Markus Boberg
     image: markus-boberg.jpg
     title: Gameplay & Multiplayer programmer
     email: markus.boberg@fullystudios.se
+    email_name: markus.boberg
+    email_domain: fullystudios.se
 
   - name: Oskar Eriksson
     image: oskar-eriksson.jpg
     title: Web Developer
     email: oskar.eriksson@fullystudios.se
+    email_name: oskar.eriksson
+    email_domain: fullystudios.se
 
   - name: Emil Gradén
     image: emil-graden.jpg
     title: Motion Intern
     email: emil.graden@fullystudios.se
+    email_name: emil.graden
+    email_domain: fullystudios.se
 
   - name: Amanda Fässberg
     image: amanda-fassberg.jpg
     title: Design Intern
     email: amanda.fassberg@fullystudios.se
+    email_name: amanda.fassberg
+    email_domain: fullystudios.se
 
   - name: Linn Tunberg
     image: linn-tunberg.jpg
     title: Developer Intern
     email: linn.tunberg@fullystudios.se
+    email_name: linn.tunberg
+    email_domain: fullystudios.se
 
   - name: Sebastian Palm
     image: sebastian-palm.jpg
     title: Developer Intern
     email: sebastian.palm@fullystudios.se
+    email_name: sebastian.palm
+    email_domain: fullystudios.se
 
   #- name: Mattias Larson
   #  image: mattias-larson.jpg
