@@ -47,6 +47,29 @@
   a {
     span {
       display: block;
+      padding: 0;
     }
+  }
+
+  .email__correct {
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .email__emailified {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+
+  .email {
+    position: relative;
+  }
+  .email:hover {
+    .email__correct { opacity: 0 }
+    .email__emailified { opacity: 1 }
   }
 }

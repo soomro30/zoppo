@@ -22,6 +22,7 @@ peoples:
     image: robin-kollberg.jpg
     title: Creative Director
     email: robin.kollberg@fullystudios.se
+    email_name_correct: robin.kollberg
     email_name: robin.kollberg
     email_domain: fullystudios.se
     tel: +46 702 53 54 60
@@ -30,6 +31,7 @@ peoples:
     image: joakim-hanner.jpg
     title: Motion & Film Director
     email: joakim.hanner@fullystudios.se
+    email_name_correct: joakim.hanner
     email_name: joakim.hanner
     email_domain: fullystudios.se
     tel: +46 738 07 30 72
@@ -38,6 +40,7 @@ peoples:
     image: jonathan-davis-asp.jpg
     title: Digital Producer & Production Manager
     email: jonathan.asp@fullystudios.se
+    email_name_correct: jonathan.asp
     email_name: jonathan.asp
     email_domain: fullystudios.se
     tel: +46 739 48 07 05
@@ -46,6 +49,7 @@ peoples:
     image: frida-netzen.jpg
     title: Account Manager
     email: frida.netzen@fullystudios.se
+    email_name_correct: frida.netzén
     email_name: frida.netzen
     email_domain: fullystudios.se
     tel: +46 703 77 72 07
@@ -54,6 +58,7 @@ peoples:
     image: jakob-ahl.jpg
     title: Head of Film
     email: jakob.ahl@fullystudios.se
+    email_name_correct: jakob.åhl
     email_name: jakob.ahl
     email_domain: fullystudios.se
     tel: +46 723 09 62 04
@@ -62,6 +67,7 @@ peoples:
     image: alexander-tengner.jpg
     title: UX & Design Director
     email: alexander.tengner@fullystudios.se
+    email_name_correct: alexander.tengner
     email_name: alexander.tengner
     email_domain: fullystudios.se
     tel: +46 721 71 50 32
@@ -70,6 +76,7 @@ peoples:
     image: malin-wincrantz.jpg
     title: UI/UX Designer
     email: malin.wincrantz@fullystudios.se
+    email_name_correct: malin.wirdheim.wincrantz
     email_name: malin.wincrantz
     email_domain: fullystudios.se
     tel: +46 709 70 06 30
@@ -78,6 +85,7 @@ peoples:
     image: josef-carlsson.jpg
     title: Creative Technologist
     email: josef.carlsson@fullystudios.se
+    email_name_correct: josef.carlsson
     email_name: josef.carlsson
     email_domain: fullystudios.se
     tel: +46 702 08 11 99
@@ -86,6 +94,7 @@ peoples:
     image: mikael-bistrom.jpg
     title: Technical Director
     email: mikael.bistrom@fullystudios.se
+    email_name_correct: mikael.biström
     email_name: mikael.bistrom
     email_domain: fullystudios.se
     tel: +46 733 60 12 62
@@ -94,6 +103,7 @@ peoples:
     image: jonas-sandstedt.jpg
     title: Web & UI Animator
     email: jonas.sandstedt@fullystudios.se
+    email_name_correct: jonas.sandstedt
     email_name: jonas.sandstedt
     email_domain: fullystudios.se
 
@@ -101,6 +111,7 @@ peoples:
     image: jorgen-hansson.jpg
     title: Front-end Developer
     email: jorgen.hansson@fullystudios.se
+    email_name_correct: jörgen.hansson
     email_name: jorgen.hansson
     email_domain: fullystudios.se
 
@@ -108,6 +119,7 @@ peoples:
     image: anders-tibbling.jpg
     title: DevOps Engineer
     email: anders.tibbling@fullystudios.se
+    email_name_correct: anders.tibbling
     email_name: anders.tibbling
     email_domain: fullystudios.se
     tel: +46 709 70 08 26
@@ -116,6 +128,7 @@ peoples:
     image: markus-boberg.jpg
     title: Gameplay & Multiplayer programmer
     email: markus.boberg@fullystudios.se
+    email_name_correct: markus.boberg
     email_name: markus.boberg
     email_domain: fullystudios.se
 
@@ -123,6 +136,7 @@ peoples:
     image: oskar-eriksson.jpg
     title: Web Developer
     email: oskar.eriksson@fullystudios.se
+    email_name_correct: oskar.eriksson
     email_name: oskar.eriksson
     email_domain: fullystudios.se
 
@@ -130,6 +144,7 @@ peoples:
     image: emil-graden.jpg
     title: Motion Intern
     email: emil.graden@fullystudios.se
+    email_name_correct: emil.gradén
     email_name: emil.graden
     email_domain: fullystudios.se
 
@@ -137,6 +152,7 @@ peoples:
     image: amanda-fassberg.jpg
     title: Design Intern
     email: amanda.fassberg@fullystudios.se
+    email_name_correct: amanda.fässberg
     email_name: amanda.fassberg
     email_domain: fullystudios.se
 
@@ -144,6 +160,7 @@ peoples:
     image: linn-tunberg.jpg
     title: Developer Intern
     email: linn.tunberg@fullystudios.se
+    email_name_correct: linn.tunberg
     email_name: linn.tunberg
     email_domain: fullystudios.se
 
@@ -151,6 +168,7 @@ peoples:
     image: sebastian-palm.jpg
     title: Developer Intern
     email: sebastian.palm@fullystudios.se
+    email_name_correct: sebastian.palm
     email_name: sebastian.palm
     email_domain: fullystudios.se
 

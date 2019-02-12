@@ -38,9 +38,17 @@ layout: page
                 <img src="/assets/people/{{ people.image }}" alt="{{ people.name }}">
             </div>
             <figcaption class="boxgrid__caption">
-                <h3 class="contact-name">{{ people.name }}</h3>
-                <p class="contact-title">{{ people.title }}</p>
-                <p class="contact-details">{% unless people.email == nil %}<a class="email" href="mailto:{{people.email}}"><span>{{people.email_name}}</span><span>@{{people.email_domain}}</span></a><br>{% endunless %}{% unless people.tel == nil %}<a href="tel:{{people.tel}}">{{people.tel}}</a>{% endunless %}</p>
+                <p class="contact-details">
+                    <a class="email" href="mailto:{{people.email}}">
+                        <span class="h3 email__correct">{{people.email_name_correct}}</span>
+                        <span class="h3 email__emailified">{{people.email_name}}</span>
+                        <span>@{{people.email_domain}}</span>
+                    </a>
+                </p>
+                <p>
+                    <span class="contact-title">{{ people.title }}</span>
+                    <br>{% unless people.tel == nil %}<a href="tel:{{people.tel}}">{{people.tel}}</a>{% endunless %}
+                </p>
             </figcaption>
         </figure>
     {% endfor %}
