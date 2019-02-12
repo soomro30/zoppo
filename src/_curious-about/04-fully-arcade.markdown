@@ -2,7 +2,7 @@
 layout: curious/fully-arcade
 type: curious-about
 title:  "Fully Arcade"
-subtitle: "We are adding a gaming wing to our studio."
+subtitle: "We are adding a gaming wing to our studio!"
 date:   2019-02-06 10:00:00 +0100
 categories: art, design, web
 slug: fully-arcade
@@ -99,7 +99,7 @@ background: |
   </div>
 
 ingress: |
-  We are adding a gaming wing to our studio.
+  We are adding a gaming wing to our studio!
 
 section1: |
   ### Fundamentals first, gameplay second
@@ -112,7 +112,7 @@ section1_image1_1440: "section1_image1.jpg"
 section1_image1_alt: "Concept art of an arena"
 
 section2: |
-  ##### Keep in mind we’re coming at this as digital service designers and developers. Since we see from such different eyes, there is a lot about gaming systems and features that we’re excited to revamp, upturn and reimagine as we go along.
+  ##### Keep in mind we’re coming at this as digital service designers and developers. Since we see from such different eyes, there is a lot about gaming systems and features that we’re excited to revamp, upturn, and reimagine as we go along.
 
 section2_image1_alt: "Concept art of a robot bird character"
 section2_image2_alt: "Concept art of a character with a planet as a head"
@@ -140,4 +140,4 @@ section5: |
 
 ---
 
-We are adding a gaming wing to our studio.
+We are adding a gaming wing to our studio!
