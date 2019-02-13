@@ -20,7 +20,7 @@ casetop-bg_640: bg-top.jpg
 casetop-bg_1440: bg-top.jpg
 casetop-video: jool_slider_640x360.mp4
 
-shareimage: work/tanumstrand/shareimage.png
+shareimage: work/jool/shareimage.jpg
 
 ingress: |
   The Scandinavian investment bank JOOL called us in to help them build a comprehensive online platform for investing in high-yield bonds. Working closely together over the course of a year, we did just that.
@@ -122,3 +122,4 @@ section6: |
 section7: |
   From here? So much is possible. Having taken this massive step in digitalization, JOOL has opened the floodgates of opportunity and possibilities for itself.
 ---
+The Scandinavian investment bank JOOL called us in to help them build a comprehensive online platform for investing in high-yield bonds. Working closely together over the course of a year, we did just that.

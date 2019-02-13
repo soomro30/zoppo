@@ -1,0 +1,59 @@
+---
+layout: case
+---
+
+{% unless page.section1 == nil %}
+    <section class="sectionspacing box box--center">
+        {{ page.section1 | markdownify }}
+    </section>
+{% endunless %}
+
+
+<div class="sectionspacing">
+
+    <div class="video">
+        <iframe src="https://player.vimeo.com/video/{{page.section2_video}}?autoplay=1&autopause=0&muted=1" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    <div class="sectionspacing-small">
+        {{ page.section2 | markdownify }}
+    </div>
+
+</div>
+<div class="sectionspacing">
+
+    <div class="video">
+        <iframe src="https://player.vimeo.com/video/{{page.section3_video}}" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    <div class="sectionspacing-small">
+        {{ page.section3 | markdownify }}
+    </div>
+
+</div>
+<div class="sectionspacing">
+
+    <div class="video">
+        <iframe src="https://player.vimeo.com/video/{{page.section4_video}}" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    <div class="sectionspacing-small">
+        {{ page.section4 | markdownify }}
+    </div>
+
+</div>
+<div class="sectionspacing">
+  <div class="brooklyn-image-grid">
+    <div class="brooklyn-image-grid__left">
+      <img src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image1 }}" alt="{{ page.section5_image1_alt }}">
+      <div class="sectionspacing-small">
+          {{ page.section5 | markdownify }}
+      </div>
+    </div>
+    <div class="brooklyn-image-grid__right">
+      <div class="">
+        <img src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image2 }}" alt="{{ page.section5_image2_alt }}">
+      </div>
+      <div class="">
+        <img src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image3 }}" alt="{{ page.section5_image3_alt }}">
+      </div>
+    </div>
+  </div>
+</div>
