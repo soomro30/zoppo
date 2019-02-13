@@ -2,15 +2,11 @@
 layout: page
 ---
 
-<div class="grid sectionspacing-small" id="projects">
 
-    <!-- 
+    <!--
     ###################################################
     ## Get specific highlight posts set in _config.yml
     -->
-    {% assign work1 = site.work[site.case_highlight1_id] %}
-
-    {% unless work1.background-image_2880 == nil %}
         <style>
             .work1-image {
                 background-image: url({{site.baseurl}}/assets/work/{{work1.slug}}/{{ work1.background-image_1440 }});
@@ -20,99 +16,106 @@ layout: page
                     background-image: url({{site.baseurl}}/assets/work/{{work1.slug}}/{{ work1.background-image_2880 }});
                 }
             }
+            .overlapping-content {
+              position: relative;
+              padding-top: 90px;
+              background-color: #F8F8F8;
+            }
         </style>
-    {% endunless %}
 
-    <div class="background-image work1-image"></div>
+<!-- Sidescroll workCases component -->
 
-    <div class="boxtext work1-text bring-to-front">
-        <h2>{{work1.title}}</h2>
-        <p class="center">{{work1.subtitle}}</p>
-        <a href="{{ work1.url | prepend: site.baseurl }}" class="button"><span>{{work1.button-text}}</span></a>
+{% assign work1 = site.work[site.case_highlight1_id] %}
+{% assign work2 = site.work[site.case_highlight2_id] %}
+{% assign work3 = site.work[site.case_highlight3_id] %}
+
+<section class="wc-section wc-section--2 sidescroll" id="work-cases">
+  <div class="sidescroll__side" id="projects" >
+
+    <div>
+      <ol>
+
+        <li class="sidescroll__item active" id="sidescroll-1">
+          <div class="scroll-content">
+            <p>{{work1.project}}</p>
+            <h2>{{work1.title}}</h2>
+            <p class="work-case-subtitle">{{work1.subtitle}}</p>
+            <div><a href="{{ work1.url | prepend: site.baseurl }}" class="button"><span>{{work1.button-text}}</span></a></div>
+          </div>
+          <div class="image-container" style="background-color: {{work1.background-image_color}};">
+            <img
+            src="{{site.baseurl}}/assets/work/{{work1.slug}}/{{ work1.promo-image }}"
+            alt=""
+            draggable="false">
+          </div>
+        </li>
+
+        <li class="sidescroll__item" id="sidescroll-2">
+          <div class="scroll-content right">
+            <p>{{work2.project}}</p>
+            <h2>{{work2.title}}</h2>
+            <p class="work-case-subtitle">{{work2.subtitle}}</p>
+            <div><a href="{{ work2.url | prepend: site.baseurl }}" class="button"><span>{{work1.button-text}}</span></a></div>
+          </div>
+          <div class="image-container" style="background-color: {{work2.background-image_color}};">
+            <img
+            src="{{site.baseurl}}/assets/work/{{work2.slug}}/{{ work2.promo-image }}"
+            alt=""
+            draggable="false">
+          </div>
+        </li>
+
+        <li class="sidescroll__item" id="sidescroll-3">
+          <div class="scroll-content">
+            <p>{{work3.project}}</p>
+            <h2>{{work3.title}}</h2>
+            <p class="work-case-subtitle">{{work3.subtitle}}</p>
+            <div><a href="{{ work3.url | prepend: site.baseurl }}" class="button"><span>{{work3.button-text}}</span></a></div>
+          </div>
+          <div class="image-container" style="background-color: {{work3.background-image_color}};">
+            <img
+            src="{{site.baseurl}}/assets/work/{{work3.slug}}/{{ work3.promo-image }}"
+            alt=""
+            draggable="false">
+          </div>
+        </li>
+
+      </ol>
     </div>
-</div>
+  </div>
 
-<section class="reelgrid" id="reel">
+  <div class="sidescroll__scroll">
+    <div class="sidescroll__scrollwrap" id="sidecroll-screens">
 
-    <div class="boxtext reelgrid__text">
-        <h2>{{page.reel-text}}</h2>
-        <p>{{page.reel-sub}}</p>
-    </div>
-    <div class="reelgrid__videowrap">
-        <div class="reelgrid__video video">
-            <iframe src="https://player.vimeo.com/video/{{page.reel-vimeo-id}}" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <div class="sidescroll__screens" style="background: linear-gradient(90deg, {{work1.background-image_color}}, {{work1.background-image_color}}, {{work2.background-image_color}}, {{work2.background-image_color}}, {{work3.background-image_color}}, {{work3.background-image_color}});">
+          <div class="sidescroll__screen">
+            <img
+            src="{{site.baseurl}}/assets/work/{{work1.slug}}/{{ work1.promo-image }}"
+            alt=""
+            draggable="false">
+          </div>
+          <div class="sidescroll__screen">
+            <img
+            src="{{site.baseurl}}/assets/work/{{work2.slug}}/{{ work2.promo-image }}"
+            alt=""
+            draggable="false">
+          </div>
+          <div class="sidescroll__screen">
+            <img
+            src="{{site.baseurl}}/assets/work/{{work3.slug}}/{{ work3.promo-image }}"
+            alt=""
+            draggable="false">
+          </div>
         </div>
+      </div>
     </div>
-
-</section>
-
-<section class="grid">
-    <!-- 
-    ###################################################
-    ## Get specific highlight posts set in _config.yml
-    -->
-    {% assign work2 = site.work[site.case_highlight2_id] %}
-
-    {% unless work2.background-image_2880 == nil %}
-        <style>
-            .work2-image {
-                background-image: url({{site.baseurl}}/assets/work/{{work2.slug}}/{{ work2.background-image_1440 }});
-            }
-            @media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
-                .work2-image {
-                    background-image: url({{site.baseurl}}/assets/work/{{work2.slug}}/{{ work2.background-image_2880 }});
-                }
-            }
-        </style>
-    {% endunless %}
-
-    <div class="background-image work2-image">
-        {% unless work2.background == nil %}
-            {{ work2.background }}
-        {% endunless %}
-    </div>
-
-    <div class="boxtext work2-text bring-to-front">
-        <h2>{{work2.title}}</h2>
-        <p>{{work2.subtitle}}</p>
-        <a href="{{ work2.url | prepend: site.baseurl }}" class="button"><span>{{work2.button-text}}</span></a>
-    </div>
-</section>
+  </section>
 
 
-<section class="grid space-after">
-    <!-- 
-    ###################################################
-    ## Get specific highlight posts set in _config.yml
-    -->
-    {% assign work3 = site.work[site.case_highlight3_id] %}
-
-    {% unless work3.background-image_2880 == nil %}
-        <style>
-            .work3-image {
-                background-image: url({{site.baseurl}}/assets/work/{{work3.slug}}/{{ work3.background-image_1440 }});
-            }
-            @media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
-                .work3-image {
-                    background-image: url({{site.baseurl}}/assets/work/{{work3.slug}}/{{ work3.background-image_2880 }});
-                }
-            }
-        </style>
-    {% endunless %}
-
-    <div class="background-image work3-image">
-        {% unless work3.background == nil %}
-            {{ work3.background }}
-        {% endunless %}
-    </div>
 
 
-    <div class="boxtext work3-text center bring-to-front">
-        <h2>{{work3.title}}</h2>
-        <p>{{work3.subtitle}}</p>
-        <a href="{{ work3.url | prepend: site.baseurl }}" class="button"><span>{{work3.button-text}}</span></a>
-    </div>
-</section>
+<div class="overlapping-content" >
+<section
 
 {% include workgrid.html %}
-
+</div>

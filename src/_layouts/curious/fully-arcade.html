@@ -62,7 +62,9 @@ layout: curious
 </div>
 
 <div class="grid grid--space">
-    <div class="background-image grid__offsetcolumn1-2" style="background-image: url({{site.baseurl}}/assets/curious-about/{{page.slug}}/{{page.section3-image1_medium}}); background-position: center left"></div>
+    <div class="grid__offsetcolumn1-2">
+        {% include {{ root | append: 'curious-about/fully-arcade/terminal.html' }} %}
+    </div>
     <div class="grid__offsetcolumn2-2 bring-to-front">
         <div class="box box--business box--right box--up">{{ page.section3 | markdownify }}</div>
     </div>
@@ -80,6 +82,5 @@ layout: curious
             sizes="(max-width: 620px) 30vw, 100vw">
     </div>
 </div>
-
 
 <div class="sectionspacing-small box box--curiosities box--center">{{ page.section5 | markdownify }}</div>

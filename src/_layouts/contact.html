@@ -10,168 +10,237 @@ layout: page
         </div>
     </section>
 {% endunless %}
-
-<section id="we-are-fully" class="boxgrid boxgrid--offset">
+<div class="contact-boxes">
+  <div class="contact-boxes__box">
+    <h3>{{page.join_header}}</h3>
+    <p class="subject-msg">{{page.join_text}}</p>
+    <p><a target="_blank" href="mailto:{{page.join_email}}">{{page.join_email}}</a></p>
+  </div>
+  <div class="contact-boxes__box">
+    <h3>{{page.general_title}}</h3>
+    <p class="subject-msg">{{page.general_text}}</p>
+    <p><a target="_blank" href="mailto:{{page.general_email}}">{{page.general_email}}</a></p>
+  </div>
+  {% unless page.hiring_active == nil %}
+  <div class="contact-boxes__box">
+    <h3>{{page.hiring_title}}</h3>
+    <p class="subject-msg">{{page.hiring_position}}</p>
+    <p><a href="{{page.hiring_url}}">Read more</a></p>
+  </div>
+  {% endunless %}
+</div>
+<div class="contact-wrapper">
+  <section id="we-are-fully" class="boxgrid boxgrid--contact">
 
     {% for people in page.peoples %}
         <figure class="boxgrid__box">
-            <div class="boxgrid__image image-loader" style="background: #FFC1B4">
+            <div class="boxgrid__image image-loader">
                 <img src="/assets/people/{{ people.image }}" alt="{{ people.name }}">
             </div>
             <figcaption class="boxgrid__caption">
-                <h3 class="contact-name">{{ people.name }}</h3>
-                <p class="contact-title">{{ people.title }}</p>
-                <p class="contact-details">{% unless people.email == nil %}<a class="hyphenate" href="mailto:{{people.email}}">{{people.email}}</a><br>{% endunless %}{% unless people.tel == nil %}<a href="tel:{{people.tel}}">{{people.tel}}</a>{% endunless %}</p>
+                <p class="contact-details">
+                    <a class="email" href="mailto:{{people.email}}">
+                        <span class="h3 email__correct">{{people.email_name_correct}}</span>
+                        <span class="h3 email__emailified">{{people.email_name}}</span><span class="email__domain">@{{people.email_domain}}</span>
+                    </a>
+                </p>
+                <p>
+                    <span class="contact-title">{{ people.title }}</span>
+                    <br>{% unless people.tel == nil %}<a href="tel:{{people.tel}}">{{people.tel}}</a>{% endunless %}
+                </p>
             </figcaption>
         </figure>
     {% endfor %}
 
-</section>
+  </section>
+</div>
 
 
+<h3 class="map__header center">Here are our offices. Swing by!</h3>
 <div class="map__container">
-    <h3 class="map__header center">Here are our offices, swing by!</h3>
-    <div class="map flexcenter center" id="g_map">
-        {% comment %}fallback text{% endcomment %}
-        Visit us at:<br>
-        Gothenburg:
-        <a href="{{site.navigate-url-gbg}}">
-            {{site.adress-gbg}}
-        </a>
-        Stockholm:
-        <a href="{{site.navigate-url-sthlm}}">
-            {{site.adress-sthlm}}
-        </a>
+  <div class="map__container--city">
+    <div class="map-wrapper">
+      <div  class="office-overlay" style="background-image: url({{site.baseurl}}/assets/contact/{{page.image-gbg}})"></div>
+      <div class="map" id="g_map_gbg">
+          {% comment %}fallback text{% endcomment %}
+          Visit us at:<br>
+          Gothenburg:
+          <a href="{{site.navigate-url-gbg}}">
+              {{site.adress-gbg}}
+          </a>
+          Stockholm:
+          <a href="{{site.navigate-url-sthlm}}">
+              {{site.adress-sthlm}}
+          </a>
+      </div>
     </div>
+    <div class="map__container--info">
+      <h3>Göteborg</h3>
+      <div class="office_address">
+        <p> Victoriapassagen,</p>
+        <p>Södra Larmgatan 14, </p>
+        <p>411 16 Göteborg </p>
+      </div>
+    </div>
+  </div>
+  <div class="map__container--city">
+    <div class="map-wrapper">
+      <div  class="office-overlay" style="background-image: url({{site.baseurl}}/assets/contact/{{page.image-sthlm}})"></div>
+      <div class="map" id="g_map_sthlm">
+          Visit us at:<br>
+          Gothenburg:
+          <a href="{{site.navigate-url-gbg}}">
+              {{site.adress-gbg}}
+          </a>
+          Stockholm:
+          <a href="{{site.navigate-url-sthlm}}">
+              {{site.adress-sthlm}}
+          </a>
+
+      </div>
+    </div>
+    <div class="map__container--info">
+      <h3>Stockholm</h3>
+      <div class="office_address">
+        <p>Högbergsgatan 33,</p>
+        <p>116 20 Stockholm</p>
+      </div>
+    </div>
+  </div>
 
     <script>
         var g_map;
+
+        const mapParams = (pos) => {
+          return {
+              center: {...pos},
+              zoom: 14,
+              scrollwheel: false,
+              zoomControl: true,
+              mapTypeControl: false,
+              scaleControl: true,
+              streetViewControl: true,
+              rotateControl: true,
+              fullscreenControl: false,
+              styles:
+              [
+                  {
+                      "featureType": "all",
+                      "elementType": "geometry.fill",
+                      "stylers": [
+                          {
+                              "color": "#ffc1b4"
+                          },
+                          {
+                              "visibility": "on"
+                          }
+                      ]
+                  },
+                  {
+                      "featureType": "all",
+                      "elementType": "geometry.stroke",
+                      "stylers": [
+                          {
+                              "color": "#ffffff"
+                          },
+                          {
+                              "visibility": "on"
+                          }
+                      ]
+                  },
+                  {
+                      "featureType": "all",
+                      "elementType": "labels",
+                      "stylers": [
+                          {
+                              "saturation": "100"
+                          },
+                          {
+                              "visibility": "off"
+                          }
+                      ]
+                  },
+                  {
+                      "featureType": "all",
+                      "elementType": "labels.text",
+                      "stylers": [
+                          {
+                              "visibility": "off"
+                          }
+                      ]
+                  },
+                  {
+                      "featureType": "all",
+                      "elementType": "labels.text.stroke",
+                      "stylers": [
+                          {
+                              "visibility": "off"
+                          },
+                          {
+                              "weight": "1.00"
+                          }
+                      ]
+                  },
+                  {
+                      "featureType": "all",
+                      "elementType": "labels.icon",
+                      "stylers": [
+                          {
+                              "visibility": "off"
+                          }
+                      ]
+                  },
+                  {
+                      "featureType": "road",
+                      "elementType": "all",
+                      "stylers": [
+                          {
+                              "color": "#ffffff"
+                          },
+                          {
+                              "visibility": "on"
+                          }
+                      ]
+                  },
+                  {
+                      "featureType": "road",
+                      "elementType": "labels",
+                      "stylers": [
+                          {
+                              "color": "#0a2a4f"
+                          }
+                      ]
+                  },
+                  {
+                      "featureType": "road",
+                      "elementType": "labels.text.stroke",
+                      "stylers": [
+                          {
+                              "visibility": "on"
+                          },
+                          {
+                              "weight": "0.53"
+                          }
+                      ]
+                  },
+                  {
+                      "featureType": "water",
+                      "elementType": "all",
+                      "stylers": [
+                          {
+                              "color": "#f8f8f8"
+                          }
+                      ]
+                  }
+              ]
+          }
+        }
+
         function initMap() {
         fully_gbg = {lat: {{site.fully_gbg-lat}}, lng: {{site.fully_gbg-lng}}}
         fully_sthlm = {lat: {{site.fully_sthlm-lat}}, lng: {{site.fully_sthlm-lng}}}
-        g_map = new google.maps.Map(document.getElementById('g_map'), {
-
-            center: {lat: 58.5390591, lng: 14.9173849},
-            zoom: 6,
-            scrollwheel: false,
-            zoomControl: true,
-            mapTypeControl: false,
-            scaleControl: true,
-            streetViewControl: true,
-            rotateControl: true,
-            fullscreenControl: false,
-            styles:
-            [
-                {
-                    "featureType": "all",
-                    "elementType": "geometry.fill",
-                    "stylers": [
-                        {
-                            "color": "#ffc1b4"
-                        },
-                        {
-                            "visibility": "on"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "all",
-                    "elementType": "geometry.stroke",
-                    "stylers": [
-                        {
-                            "color": "#ffffff"
-                        },
-                        {
-                            "visibility": "on"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "all",
-                    "elementType": "labels",
-                    "stylers": [
-                        {
-                            "saturation": "100"
-                        },
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "all",
-                    "elementType": "labels.text",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "all",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        },
-                        {
-                            "weight": "1.00"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "all",
-                    "elementType": "labels.icon",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "color": "#ffffff"
-                        },
-                        {
-                            "visibility": "on"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "labels",
-                    "stylers": [
-                        {
-                            "color": "#0a2a4f"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [
-                        {
-                            "visibility": "on"
-                        },
-                        {
-                            "weight": "0.53"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "water",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "color": "#f8f8f8"
-                        }
-                    ]
-                }
-            ]
-        });
+        g_map_gbg = new google.maps.Map(document.getElementById('g_map_gbg'), mapParams(fully_gbg));
+        g_map_sthlm = new google.maps.Map(document.getElementById('g_map_sthlm'), mapParams(fully_sthlm));
 
         var marker_icon = {
             path: 'M0,27.62A27.23,27.23,0,0,1,2.19,16.88,27.07,27.07,0,0,1,16.88,2.19,26.87,26.87,0,0,1,27.62,0,26.6,26.6,0,0,1,38.4,2.19,27.36,27.36,0,0,1,47.19,8a26.93,26.93,0,0,1,5.94,8.83,27.47,27.47,0,0,1,0,21.48,29.84,29.84,0,0,1-2.89,5.23L32,71.37q-1.8,2.73-4.3,2.73t-4.34-2.73L5.08,43.59a24.62,24.62,0,0,1-2.89-5.23A27.23,27.23,0,0,1,0,27.62Zm17.38,0A10.27,10.27,0,0,0,27.62,37.93a9.8,9.8,0,0,0,7.3-3,9.74,9.74,0,0,0,3-7.27,9.9,9.9,0,0,0-3-7.27,9.8,9.8,0,0,0-7.3-3,9.92,9.92,0,0,0-7.27,3A10.05,10.05,0,0,0,17.38,27.62Z',
@@ -185,12 +254,12 @@ layout: page
 
         var g_marker_gothenburg = new google.maps.Marker({
             position: fully_gbg,
-            map: g_map,
+            map: g_map_gbg,
             icon: marker_icon
         });
         var g_marker_stockholm = new google.maps.Marker({
             position: fully_sthlm,
-            map: g_map,
+            map: g_map_sthlm,
             icon: marker_icon
         });
 

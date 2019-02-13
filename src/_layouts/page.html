@@ -18,7 +18,7 @@ layout: default
 		{% endif %}
 	{% endunless %}
 	<div class="hero hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %} {{page.bg-color}}" id="work_{{ page.slug }}">
-		<header class="hero__header hyphenate">
+		<header class="hero__header">
 			<div class="hero__header-wrap">
 			{% if page.pagetitle != nil %}
 				{{ page.pagetitle | markdownify }}

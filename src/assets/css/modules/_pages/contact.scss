@@ -1,9 +1,89 @@
-.contact-title {
-    margin-top: 0;
-}
-.contact-details {
-    font-size: 0.9em;
-    @include media-query($on-palm) {
-        font-size: inherit;
+.page-contact {
+
+  .contact-title {
+      margin-top: 0;
+  }
+  .contact-details {
+      font-size: 0.9em;
+      @include media-query($on-palm) {
+          font-size: inherit;
+      }
+  }
+
+  .contact-boxes {
+    background-color: #FFC1B4;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 20vh;
+    flex-direction: column;
+    @media(min-width: 660px){
+      flex-direction: row;
+      justify-content: center;
     }
+    &__box {
+      background-color: #fff;
+      padding: $s-small 0;
+      margin: $s-small;
+      align-items: center;
+      flex: 1;
+      @media(min-width: 660px){
+        flex-basis: 25%;
+      }
+      // margin: 0 $s-small / 2 $s-small / 2 $s-small / 2;
+      margin: 0 $s-small $s-small $s-small;
+      // // flex-basis: 50%;
+      // @media(min-width: 900px){
+      // }
+      // @media(min-width: 1100px){
+      // }
+      .subject-msg {
+        margin-top: 0;
+      }
+      a {
+        color: $c-dark;
+      }
+    }
+  }
+
+  .contact-wrapper {
+    a {
+      span {
+        display: inline-block;
+        padding: 0;
+      }
+    }
+
+    .email__correct {
+      pointer-events: none;
+      user-select: none;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+
+    .email__emailified {
+      opacity: 0;
+      transition: opacity 0.3s;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .email__domain {
+      display: block;
+    }
+
+    .email {
+      display: block;
+      position: relative;
+      width: 100%;
+    }
+    .email:hover {
+      .email__correct { opacity: 0 }
+      .email__emailified { opacity: 1 }
+    }
+
+  }
+
+  .office_address {
+    margin-left: $s-small / 2
+  }
 }

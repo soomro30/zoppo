@@ -1,7 +1,9 @@
 $bgShadow: $s-small * 0.5;
 
 $bgMqSmall: 400px;
+$bgMqSmallMedium: 500px;
 $bgMqMedium: 800px;
+$bgMqLarge: 1100px;
 
 .boxgrid {
     display: flex;
@@ -94,6 +96,7 @@ $bgMqMedium: 800px;
         }
     }
     .boxgrid__image {
+        width: 100%; // IE fix
         transform: translate($s-small*0.5, -$s-small*0.5);
         @media (min-width: $bgMqMedium) {
             transform: translate($s-small, -$s-small);
@@ -134,6 +137,63 @@ $bgMqMedium: 800px;
     }
 
     // The compact version used in ex the case grid under page Work
+
+    &--contact {
+      &:before {
+          top: 0;
+      }
+      .boxgrid__box {
+          margin-top: $s-small*2;
+          @media (min-width: $bgMqSmallMedium) {
+              flex: 1 0 calc(50% - #{$s-small});
+              max-width: calc(50% - #{$s-small});
+              display: flex;
+              flex-direction: column;
+          }
+          @media (min-width: $bgMqMedium) {
+              flex: 1 0 calc(33% - #{$s-small});
+              max-width: calc(33% - #{$s-small});
+              margin-right: $s-small*0.5;
+              margin-left: $s-small*0.5;
+          }
+
+          @media (min-width: $bgMqLarge) {
+              flex: 1 0 calc(25% - #{$s-small});
+              max-width: calc(25% - #{$s-small});
+              margin-right: $s-small*0.5;
+              margin-left: $s-small*0.5;
+          }
+
+          .boxgrid__caption {
+              display: block;
+              display: flex;
+              justify-content: space-between;
+              flex-direction: column;
+              min-width: auto;
+              width: 100%;
+              padding-top: $s-small*0.5;
+              padding-left: $s-small*0.5;
+              padding-right: $s-small*0.5;
+              flex-grow: 1;
+              flex-shrink: 0;
+              flex-basis: auto;
+              .email {
+                color: $c-signal;
+              }
+              h3, p {
+                  padding: 0;
+                  margin-left: 0;
+              }
+              .button {
+                  align-self: center;
+              }
+          }
+          .boxgrid__image {
+              transform: none;
+          }
+      }
+    }
+
     &--compact {
         &:before {
             top: 0;

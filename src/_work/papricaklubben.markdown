@@ -16,6 +16,7 @@ background-image_2880: "hero@2x.jpg"
 background-image_1440: "hero.jpg"
 background-image_720: "hero_720.jpg"
 background-image_color: "#80b568"
+promo-image: "promo.png"
 
 casetop-bg_640: casetop_bg.jpg
 casetop-bg_1440: casetop_bg@2x.jpg
@@ -29,7 +30,7 @@ casetop-image3_medium: casetop_image3@2x.jpg
 shareimage: work/papricaklubben/shareimage.png
 
 ingress: |
-  Recently ICA Kvantum has been increasing its efforts in the education space, trying to get kids to care about fresh-grown foods. And in particular, to know more about the concept of eating fruits and vegetables according to the season. 
+  Recently ICA Kvantum has been increasing its efforts in the education space, trying to get kids to care about fresh-grown foods. And in particular, to know more about the concept of eating fruits and vegetables according to the season.
 
 section1: |
 
@@ -50,7 +51,7 @@ section3: |
 section3_video: "221886014"
 
 section4: |
-  Jonas made the brilliant call of building it on an isometric grid. This let us represent significant depth, range and 3D characters on the 2D surface of a digital screen. All while remaining within reasonable bandwidth parameters. 
+  Jonas made the brilliant call of building it on an isometric grid. This let us represent significant depth, range and 3D characters on the 2D surface of a digital screen. All while remaining within reasonable bandwidth parameters.
 
 section4-image_alt: "Lorem ipsum example"
 section4-image_large: "process@2x.jpg"
@@ -66,11 +67,10 @@ section5_videos:
   - 221886271
 
 section6: |
-  #### The colors, sound, characters, widely explorable world and numerous opportunities for interaction all conspire to keep kids hangin’ around, both passively and actively learning. 
-  
+  #### The colors, sound, characters, widely explorable world and numerous opportunities for interaction all conspire to keep kids hangin’ around, both passively and actively learning.
+
   #### The end goal here is for kids to regard the fruit & veg on their plate with curiosity and interest, rather than as a banal yet sinister enemy that sprang from the dirt.
 
 ---
 
 Recently ICA Kvantum has been increasing its efforts in the education space, trying to get kids to care about fresh-grown foods. And in particular, to know more about the concept of eating fruits and vegetables according to the season.
-

@@ -16,6 +16,7 @@ background-image_2880: "hero@2x.jpg"
 background-image_1440: "hero.jpg"
 background-image_720: "hero_720.jpg"
 background-image_color: "#e9d2b0"
+promo-image: "promo.png"
 
 casetop-bgcolor: "#342971"
 casetop-video: casetop.mp4

@@ -4,13 +4,13 @@ function runScripts(pos) {
   if (hasRun) return;
 
   var data = [
-    { 
+    {
       action: 'type',
       strings: ["npm install happiness-index -g^400"],
       output: '<span class="term-gray">> happiness-index@1.8.4 install /Users/fullystudios/node_modules/happiness-index<br>> node install<br><br>[happiness-index] Success: "/Users/fullystudios/node_modules/happiness-index" installed</span><br>&nbsp;',
       postDelay: 1000
     },
-    { 
+    {
       action: 'type',
       strings: ['happiness-index --generate^400'],
       output: $('.mimik-run-output').html()
@@ -19,7 +19,7 @@ function runScripts(pos) {
   var prompt = $('.prompt'),
       script = data[pos];
   if(script.clear === true) {
-    $('.history').html(''); 
+    $('.history').html('');
   }
   switch(script.action) {
       case 'type':
@@ -56,3 +56,5 @@ function runScripts(pos) {
         break;
   }
 }
+
+runScripts(0);

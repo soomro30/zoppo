@@ -44,7 +44,7 @@
 
     &__header {
         position: relative;
-        z-index: 3;
+        z-index: 4;
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: auto;
@@ -184,6 +184,13 @@ video.hero__background {
 }
 
 // Custom heros
+
+.hero--work {
+  h1 {
+    margin: 0;
+  }
+}
+
 .hero--about {
 
     h1 {
@@ -194,6 +201,8 @@ video.hero__background {
 
 // Page specific changes
 .hero--contact {
+    min-height: 80vh;
+    background-color: #FFC1B4;
     h2 {
         width: 100%;
         // max-width: none;

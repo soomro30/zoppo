@@ -2,7 +2,7 @@
 layout: curious
 ---
 
-<!-- 
+<!--
 ###################################
 ## Get all content (sections) from
 ## the current curious-about post
@@ -91,7 +91,7 @@ layout: curious
             <p>Jonas</p>
         </div>
     </div>
-    
+
 </div>
 {% endunless %}
 
@@ -387,7 +387,7 @@ layout: curious
 
     .terminal-window .terminal__wrapper {
        width: 100%;
-       overflow: auto; 
+       overflow: auto;
     }
     .terminal-window .terminal {
         color: #0a2a4f;
@@ -464,7 +464,7 @@ layout: curious
         {% include {{ root | append: 'js/curious/developer-experience.js' }} %}
     </script>
 
-    <div class="terminal-window" id="fs_terminal" data-scroll data-scroll-showCallback="runScripts(0);">
+    <div class="terminal-window" id="fs_terminal" data-scroll="once" data-scroll-showCallback="runScripts(0);">
         <header>
             <div class="term-button term-green"></div>
             <div class="term-button term-yellow"></div>
@@ -484,8 +484,8 @@ layout: curious
         └─┬ We’re happy:<br>
         &nbsp;&nbsp;└─┬ <span class="term-green">✓</span> When stuff works<br>
         &nbsp;&nbsp;&nbsp;&nbsp;├ <span class="term-green">✓</span> When it keeps working<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;└ <span class="term-green">✓</span> When it’s easy to fix<br> 
-            
+        &nbsp;&nbsp;&nbsp;&nbsp;└ <span class="term-green">✓</span> When it’s easy to fix<br>
+
         ----------------------------------------------<br>
         <br><span class="term-gray">Generated in 0.20ms</span><br>
     </div>
@@ -496,4 +496,3 @@ layout: curious
     <div class="center">{{ page.section6_2 | markdownify }}</div>
 </div>
 {% endunless %}
-

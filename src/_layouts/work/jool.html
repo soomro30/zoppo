@@ -1,0 +1,102 @@
+---
+layout: case
+---
+
+{% unless page.section1 == nil %}
+    <section class="sectionspacing box box--center">
+        {{ page.section1 | markdownify }}
+    </section>
+{% endunless %}
+
+<style media="screen">
+  .special-case-p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+</style>
+
+<section class="grid sectionspacing">
+  <div class="grid__fullwidth">
+      <img class="image"
+          alt="{{image2_alt}}"
+          width="1440" height="643"
+          src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image2 }}"
+          srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image2 }} 2880w,
+                  {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image2 }} 1440w"
+          sizes="100vw">
+  </div>
+  <div class="grid__boxunder boxtext">
+    {{ page.section2 | markdownify }}
+  </div>
+</section>
+<section class="center">
+  {{page.section_3_title | markdownify}}
+  <div class="flex-imageline">
+    <div class="flex-imageline__image">
+      <img class="image" src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image_3_1 }}" alt="{{page.image_3_1_alt}}" >
+    </div>
+    <div class="flex-imageline__image">
+      <img class="image" src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image_3_2 }}" alt="{{page.image_3_2_alt}}">
+    </div>
+    <div class="flex-imageline__image">
+      <img class="image" src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image_3_3 }}" alt="{{page.image_3_3_alt}}">
+    </div>
+    <div class="flex-imageline__image">
+      <img class="image" src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image_3_4 }}" alt="{{page.image_3_4_alt}}">
+    </div>
+  </div>
+  <div class="sectionspacing-small special-case-p">
+    <p class="special-case-p">{{page.section_3}}</p>
+  </div>
+</section>
+<section class="flex-container">
+    <div class="flex-container__left">
+      {{ page.section3 | markdownify }}
+    </div>
+    <div class="flex-container__right flex-imageline flex-imageline--tight">
+      <div class="flex-imageline__image">
+        <img class="image" src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image3_1 }}" alt="{{page.image3_1_alt}}">
+      </div>
+      <div class="flex-imageline__image">
+        <img class="image" src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image3_2 }}" alt="{{page.image3_2_alt}}">
+      </div>
+      <div class="flex-imageline__image">
+        <img class="image" src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image3_3 }}" alt="{{page.image3_3_alt}}">
+      </div>
+    </div>
+</section>
+<section class="sectionspacing">
+  <div class="video">
+      <iframe src="https://player.vimeo.com/video/{{page.video4}}?autoplay=1&loop=1&color=5F11E8&title=0&byline=0&portrait=0&autopause=0&muted=1" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+  <div class="grid__boxunder boxtext" style="z-index: 1;">
+    {{ page.section4 | markdownify }}
+  </div>
+</section>
+<section class="flexcenter">
+      <!-- <img class="image"
+          alt="{{image5_alt}}"
+          width="1440" height="643"
+          src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image5_small }}"
+          srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image5 }} 2880w,
+                  {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image5_small }} 1440w"
+          sizes="100vw"> -->
+      <picture>
+        <source media="(min-width: 500px)" srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image5 }}">
+        <img src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.image5_small }}" alt="{{page.image5_alt}}">
+    </picture>
+</section>
+<p>{{page.section5 | markdownify}}</p>
+
+
+<div class="grid grid--space grid--padding sectionspacing">
+    <div class="grid__column1-2">
+        {{ page.section6_title | markdownify }}
+    </div>
+    <div class="grid__column2-2 box box--business">
+        {{ page.section6 | markdownify }}
+    </div>
+</div>
+<section class="sectionspacing box box--noshadow box--center">
+  {{ page.section7 | markdownify }}
+</section>
