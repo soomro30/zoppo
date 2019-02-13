@@ -28,7 +28,7 @@ section1: |
   To help them promote their new non-alcoholic beer 'Special Effects', as well as their collaboration with Göteborg Film Festival, we produced a branded content mini-series that went behind the scenes of Swedish space odyssey 'Aniara' to learn the tools of the trade of the film industry. Together with the agency Pronto, we developed the concept based on that simple question we all have sometimes - how did they do that?
 
 section2: |
-  Andreas Wicklund, VFX Supervisor for Aniara, walks us through how the Aniara ship is actually sort of based on a cruise ship, and how the film's AI character is based on a lamp.
+  Andreas Wicklund, VFX Supervisor for Aniara, walks us through how the Aniara ship is actually sort of based on a cruise ship, and how inspiration for the film’s AI came from a lamp.
 
 section2_video: "312121941"
 
@@ -50,7 +50,7 @@ section5_image1: grid-left.png
 section5_image1_alt: |
   VFX Supervisor Andreas Wicklund gathering inspiration in his home studio.
 
-section5_image2: grid-right1.png  
+section5_image2: grid-right1.png
 
 section5_image2_alt: |
   Production Designer Maja-Stina Åsberg shows us around her creative nest.

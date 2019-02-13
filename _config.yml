@@ -37,12 +37,13 @@ morenews: "More news"
 # Pågen: 8
 # Svenska skolan: 9
 # Qgroup: 10
+# Brooklyn 12
 
 case_highlight1_id: 11
 
 case_highlight2_id: 5
 
-case_highlight3_id: 12
+case_highlight3_id: 8
 
 # Links
 works: "/work"
