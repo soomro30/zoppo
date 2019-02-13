@@ -14,7 +14,7 @@ permalink: /contact/
 slug: contact
 background-color: "#f8f8f8"
 
-join_header: Join the clan?
+join_header: Work with us
 join_text: We always try to make room for talent
 join_email: career@fullystudios.se
 
