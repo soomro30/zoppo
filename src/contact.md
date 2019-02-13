@@ -19,7 +19,7 @@ join_text: We always try to make room for talent
 join_email: career@fullystudios.se
 
 general_title: Chat about a project
-general_text: General inquiries & hellos 
+general_text: General inquiries & hellos
 general_email: hello@fullystudios.se
 
 # hiring_active: yeeeezx
@@ -89,7 +89,7 @@ peoples:
     image: malin-wincrantz.jpg
     title: UI/UX Designer
     email: malin.wincrantz@fullystudios.se
-    email_name_correct: malin.wirdheim.wincrantz
+    email_name_correct: malin.wirdheim.<span>wincrantz</span>
     email_name: malin.wincrantz
     email_domain: fullystudios.se
     tel: +46 709 70 06 30

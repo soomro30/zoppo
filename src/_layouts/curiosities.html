@@ -4,11 +4,11 @@ layout: default
 
 {% assign items = site.curious-about | sort: 'date' | reverse %}
 {% assign root = 'js/' %}
-    
+
 {% for curiosity in items limit:1 %}
-    
+
     {% assign hero_textcolor = 'c-dark' %}
-    
+
     {% if curiosity.background-text_light == true %}
     {% assign hero_textcolor = 'c-light' %}
     {% endif %}
@@ -28,7 +28,7 @@ layout: default
         {% endif %}
     {% endunless %}
     <div class="hero hero--{{ curiosity.slug }}{% unless curiosity.background-image_2880 == nil %} background-image{% endunless %} {{curiosity.bg-color}}" id="work_{{ curiosity.slug }}">
-        <header class="hero__header hyphenate">
+        <header class="hero__header">
             <h6 class="{{hero_textcolor}}"><strong>Current Curiosity</strong></h6>
             {% if curiosity.pagetitle != nil %}
                 {{ curiosity.pagetitle | markdownify }}
@@ -59,7 +59,7 @@ layout: default
 <div class="grid grid--curiosities">
 
 {% for curiosity in items offset:1 %}
-    
+
     {% unless curiosity.background-image_2880 == nil %}
         {% if curiosity.background == nil %}
             <style>
@@ -84,7 +84,7 @@ layout: default
             {{ curiosity.background }}
         {% endunless %}
     </div>
-    <header class="boxtext boxtext--texttop center hyphenate bring-to-front">
+    <header class="boxtext boxtext--texttop center bring-to-front">
         <p class="c-dark boxtext__texttop">Constant Curiosity</p>
         <div>
         {% if curiosity.pagetitle != nil %}

@@ -108,12 +108,11 @@
 }
 
 // text
-// .hyphenate {
-
-    // -webkit-hyphens: auto;
-    // -moz-hyphens: auto;
-    //         hyphens: auto;
-// }
+.hyphenate {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+            hyphens: auto;
+}
 
 .hidden {
     display: none;
@@ -131,7 +130,7 @@
     }
 }
 
-.fullwidth{
+.fullwidth {
   width: 100%;
   max-width: 100%;
 }
