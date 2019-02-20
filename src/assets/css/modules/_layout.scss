@@ -180,8 +180,11 @@ $grh: 5vh;
     .kappahl-logo {
         margin-top: 8px;
     }
-    .ssl-logo {
-        max-width: 80%;
+    .logowall__medium {
+        max-width: 85%;
+    }
+    .logowall__small {
+        max-width: 65%;
     }
     .column {
         margin-bottom: $s-small;
