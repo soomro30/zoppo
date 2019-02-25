@@ -137,9 +137,18 @@ peoples:
     email_domain: fullystudios.se
     tel: +46 709 70 08 26
 
+  - name: Mattias Ivarsson
+    image: mattias-ivarsson.jpg
+    title: Lead Game Programmer
+    email: mattias.ivarsson@fullystudios.se
+    email_name_correct: mattias.ivarsson
+    email_name: mattias.ivarsson
+    email_domain: fullystudios.se
+    tel: +46 733 66 30 15
+
   - name: Markus Boberg
     image: markus-boberg.jpg
-    title: Gameplay & Multiplayer programmer
+    title: Gameplay & Multiplayer Programmer
     email: markus.boberg@fullystudios.se
     email_name_correct: markus.boberg
     email_name: markus.boberg
