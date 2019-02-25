@@ -21,29 +21,33 @@ casetop-video: casetop.mp4
 shareimage: work/brooklyn/shareimage.jpg
 
 ingress: |
-  Brooklyn Brewery is a brewery based in New York, that in 2013 opened a branch in Stockholm - their second biggest market after New York itself. Since then it's been virtually impossible to go to a bar in Stockholm and not being able to enjoy their wide selection of refreshments.
+  To promote Brooklyn Brewery’s new non-alcoholic beer ‘Special Effects’, as well as their collaboration with the Göteborg Film Festival, we produced a branded content mini-series for the iconic NYC beer purveyor. The series explores the making-of the festival’s headlining film, ‘Aniara’ – Sweden’s first real space odyssey film.
 
 section1: |
-  ### A space oddyssey
-  To help them promote their new non-alcoholic beer 'Special Effects', as well as their collaboration with Göteborg Film Festival, we produced a branded content mini-series that went behind the scenes of Swedish space odyssey 'Aniara' to learn the tools of the trade of the film industry. Together with the agency Pronto, we developed the concept based on that simple question we all have sometimes - how did they do that?
+  ### It takes a village to build a spaceship
+  Like all the best space films, Aniara features some stunningly imaginative sets and special effects. Together with the agency Pronto, we developed a concept for the mini-series based on the simple head-scratching question we all have sometimes – “how did they do that?”
 
 section2: |
-  Andreas Wicklund, VFX Supervisor for Aniara, walks us through how the Aniara ship is actually sort of based on a cruise ship, and how inspiration for the film’s AI came from a lamp.
+  #### Sound mixing
+  Calle Wachtmeister, Sound Supervisor, guides us through the smoke and mirrors of layering normal sounds to otherworldly effect. Flapping leather gloves become butterfly wings. A vigorous shake of a recycling bin becomes the menacing rumble of a spaceship. 
 
-section2_video: "312121941"
+section2_video: "313375709"
 
 section3: |
-  Calle Wachtmeister, Sound Supervisor Extraordinaire, shows us the smoke and mirrors of making a glove into butterflies, and how designing sound effects is sort of like being on stage.
+  #### Visual effects
+  Andreas Wicklund, VFX Supervisor for Aniara, explains how the visual inspiration for the Aniara ship was partly taken from the lights of a cruise ship at night, and how the lamp in his living room gave him the spark he needed to design the ship’s pulsating AI. 
 
-section3_video: "313375709"
+section3_video: "312121941"
 
 section4: |
-  Maja-Stina Åsberg, one of the grand architects of production design for Aniara, takes us to her studio and talks about creativity and to be part of her dream project.
+  #### Set design
+  Maja-Stina Åsberg, one of two production designers for Aniara, brings us to her studio and talks about the wonders and nuances of bringing an iconic piece of Swedish literature to life on film. 
+
 
 section4_video: "314512729"
 
 section5: |
-  The films were published on social media throughout the Göteborg Film Festival, reaching approximately 50k people per episode.
+  The films were published on social media during the Göteborg Film Festival and reached approximately 50,000 people per episode. And as for how many people sampled Brooklyn’s non-alcoholic ambrosia as a result? Well, we’re still waiting for the figures on that front.
 
 section5_image1: grid-left.png
 
@@ -61,4 +65,4 @@ section5_image3_alt: |
   Sound Designer Dennis Filatov turning a glove into butterly sounds.
 
 ---
-Brooklyn Brewery is a brewery based in New York, that in 2013 opened a branch in Stockholm - their second biggest market after New York itself. Since then it's been virtually impossible to go to a bar in Stockholm and not being able to enjoy their wide selection of refreshments.
+To promote Brooklyn Brewery’s new non-alcoholic beer ‘Special Effects’, as well as their collaboration with the Göteborg Film Festival, we produced a branded content mini-series for the iconic NYC beer purveyor. The series explores the making-of the festival’s headlining film, ‘Aniara’ – Sweden’s first real space odyssey film.
