@@ -1,0 +1,61 @@
+// Edited on 1920x1080 screen
+.lottie-scenes {
+  &__scene {
+    canvas, svg {
+      opacity: 0;
+    }
+    &.loaded {
+      canvas, svg {
+        animation: fadeIn 0.6s linear forwards;
+      }
+    }
+  }
+}
+
+.lottie-scenes {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #091a4f; //#f1be93
+  display: flex;
+  flex-wrap: wrap;
+
+  &__scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &.fallback {
+    background-color: $c-signal; // replace with a fallback image of the finish illustration
+  }
+
+  &__mall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    object-fit: cover;
+    object-position: top left;
+    width:100%;
+    height:100%;
+    pointer-events: none;
+    opacity: 0.5;
+    // display: none;
+  }
+
+}
+
+// falback-image
+.lottie-scenes {
+  .lottie-scenes__scene.fallback {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-image: url(../../assets/news/lottie-scenes/fallback-scene1.svg);
+  }
+}
