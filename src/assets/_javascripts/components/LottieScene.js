@@ -1,11 +1,12 @@
 // import "babel-polyfill";
 import lottie from 'lottie-web';
-
+import OptimizedResize from "./OptimizedResize";
 /**
  * Create a Lottie scene from data-attributes: data-scene, data-path and data-preserveaspectratio
  *
  * @param {object} node - The lottie DOM container:
  * @param {bool} limitFps - Set to true if you wanna run the animation in AE comp framerate (ex 30fps)
+ * @param {bool} canvas - Set to true if you wanna render with canvas instead of svg
  *
  * @method init [frame = 0] - Plays the scene, adds classes and limit framerate
  * @method pause - Pauses the scene
@@ -16,7 +17,7 @@ import lottie from 'lottie-web';
  * @method hoverPlayFrom [frame = 0] - Start the animation on hover from a certain frame
  */
 export class LottieScene {
-  constructor(node, limitFps, canvas) {
+  constructor(node, limitFps = false, canvas = false) {
     this.node = node;
     const dataset = node.dataset;
     this.path = dataset.path;
@@ -33,9 +34,15 @@ export class LottieScene {
         loop: true,
         autoplay: false,
         path: `../../assets/news/${this.path}`,
-        rendererSettings: { preserveAspectRatio: this.preserveaspectratio }
+        rendererSettings: {
+          preserveAspectRatio: this.preserveaspectratio,
+        }
       }
     );
+
+    if (canvas) {
+      this.initResize();
+    }
   }
 
   init(frame = 0) {
@@ -54,7 +61,21 @@ export class LottieScene {
     this.node.classList.add('fallback');
   }
 
+  initResize() {
+    // create a resize event
+    const optimizedResize = new OptimizedResize;
+    optimizedResize.add( () => {
+        this.resize();
+    });
+  }
+
   resize() {
+      // const mq_m = window.matchMedia( "(min-width: 768px)" );
+      // // CREATE:
+      // if (mq_m.matches && !this._hasBeenCreated) {
+      //     this.create();
+      //     this._hasBeenCreated = true;
+      // }
     this.anim.resize();
   }
 
