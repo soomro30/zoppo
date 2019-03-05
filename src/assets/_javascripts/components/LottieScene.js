@@ -7,6 +7,7 @@ import OptimizedResize from "./OptimizedResize";
  * @param {object} node - The lottie DOM container:
  * @param {bool} limitFps - Set to true if you wanna run the animation in AE comp framerate (ex 30fps)
  * @param {bool} canvas - Set to true if you wanna render with canvas instead of svg
+ * @param {string} changeOnMedia - If you wana change json data and preserve aspect ratio on mobile (or any other media query) set a data-pathmobile and data-preserveaspectratiomobile on the html elements, and a correct match media string in the 4th parameter then you init the LottieScene class, ex "(min-aspect-ratio: 8/9)"
  *
  * @method init [frame = 0] - Plays the scene, adds classes and limit framerate
  * @method pause - Pauses the scene
@@ -17,32 +18,61 @@ import OptimizedResize from "./OptimizedResize";
  * @method hoverPlayFrom [frame = 0] - Start the animation on hover from a certain frame
  */
 export class LottieScene {
-  constructor(node, limitFps = false, canvas = false) {
+  constructor(node, limitFps = false, canvas = false, changeOnMedia = false) {
     this.node = node;
-    const dataset = node.dataset;
-    this.path = dataset.path;
-    this.scene = dataset.scene
-    this.preserveaspectratio = dataset.preserveaspectratio;
-    this.loaded = false;
     this.limitFps = limitFps;
+    this.canvas = canvas;
+    this.changeOnMedia = changeOnMedia;
+
+    this.loaded = false;
+    const initMatchMedia = window.matchMedia(changeOnMedia).matches;
+
+    const dataset = node.dataset;
+
+    this.dataDefault = {
+      mode: 'default',
+      scene: dataset.scene,
+      path: dataset.path,
+      preserveaspectratio: dataset.preserveaspectratio
+    }
+
+    this.dataMobile = {
+      mode: 'mobile',
+      scene: dataset.scene,
+      path: dataset.pathmobile,
+      preserveaspectratio: dataset.preserveaspectratiomobile
+    }
+
+    this.data = initMatchMedia ? this.dataMobile : this.dataDefault
+
+    // The lottie animation instance
+    this.anim = false;
+    this.createAnim(this.data, this.node, this.canvas);
+
+    if (canvas || changeOnMedia) {
+      this.initResize();
+    }
+  }
+
+  createAnim(data) {
+    // Destroy old animation
+    if (this.anim) {
+      this.anim.destroy();
+    }
 
     // The lottie animation instance
     this.anim = lottie.loadAnimation(
       {
         container: this.node,
-        renderer: canvas ? 'canvas' : 'svg', // canvas works better on firefox
+        renderer: this.canvas ? 'canvas' : 'svg', // canvas works better on firefox
         loop: true,
         autoplay: false,
-        path: `../../assets/news/${this.path}`,
+        path: `../../assets/news/${data.path}`,
         rendererSettings: {
-          preserveAspectRatio: this.preserveaspectratio,
+          preserveAspectRatio: data.preserveaspectratio,
         }
       }
     );
-
-    if (canvas) {
-      this.initResize();
-    }
   }
 
   init(frame = 0) {
@@ -70,13 +100,25 @@ export class LottieScene {
   }
 
   resize() {
-      // const mq_m = window.matchMedia( "(min-width: 768px)" );
-      // // CREATE:
-      // if (mq_m.matches && !this._hasBeenCreated) {
-      //     this.create();
-      //     this._hasBeenCreated = true;
-      // }
-    this.anim.resize();
+    // If changeOnMedia option is set, check if we need to recreate the animation or not
+    if (this.changeOnMedia) {
+      if (window.matchMedia( this.changeOnMedia ).matches) {
+        if (this.data.mode !== this.dataMobile.mode) {
+          this.data = this.dataMobile;
+          this.createAnim(this.data);
+          this.init();
+        }
+      } else {
+        if (this.data.mode !== this.dataDefault.mode) {
+          this.data = this.dataDefault;
+          this.createAnim(this.data);
+          this.init();
+        }
+      }
+    }
+
+    // Resize the animation only if it's loaded
+    this.anim.isLoaded && this.anim.resize();
   }
 
   // Slow motion feature
