@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="navigation__wrapper">
-  <nav class="navigation" id="startmenu">
+  <nav class="navigation" id="startmenu" {% unless page.background-image_color == nil %} style="background-color: {{ page.background-image_color }}" {% endunless %}>
     {% include menu.html %}
     {% unless page.htmlfile == nil %}
         {% include news/{{ page.htmlfile }} newsflash="visible" %}

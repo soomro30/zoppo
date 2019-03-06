@@ -16,7 +16,7 @@ hide-newsflash: true
 
 # newsflash_buttontext: Let's go!
 # newsflash_buttonurl: mailto:hello@fullystudios.se
-
+background-image_color: "#0e141b"
 htmlfile: "three-houses.html"
 cssfile: ""
 # jsfile: "fully-hero.js"
