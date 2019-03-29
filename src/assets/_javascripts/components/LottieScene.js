@@ -33,17 +33,20 @@ export class LottieScene {
       mode: 'default',
       scene: dataset.scene,
       path: dataset.path,
-      preserveaspectratio: dataset.preserveaspectratio
+      preserveaspectratio: dataset.preserveaspectratio,
+      hoverandstop: dataset.hoverandstop ? Number(dataset.hoverandstop) : false,
     }
 
     this.dataMobile = {
       mode: 'mobile',
       scene: dataset.scene,
       path: dataset.pathmobile,
-      preserveaspectratio: dataset.preserveaspectratiomobile
+      preserveaspectratio: dataset.preserveaspectratiomobile,
+      hoverandstop: dataset.hoverandstop ? Number(dataset.hoverandstop) : false,
     }
 
-    this.data = initMatchMedia ? this.dataMobile : this.dataDefault
+    this.data = initMatchMedia ? this.dataMobile : this.dataDefault;
+
 
     // The lottie animation instance
     this.anim = false;
@@ -59,6 +62,7 @@ export class LottieScene {
     if (this.anim) {
       this.anim.destroy();
     }
+    console.log('data', data);
 
     // The lottie animation instance
     this.anim = lottie.loadAnimation(
@@ -76,7 +80,17 @@ export class LottieScene {
   }
 
   init(frame = 0) {
-    this.anim.goToAndPlay(frame, true);
+    // list all options where it should autoplay
+    const shouldAutoplay = !this.data.hoverandstop;
+    if (shouldAutoplay) {
+      this.anim.goToAndPlay(frame, true);
+    } else {
+      this.anim.goToAndStop(frame, true); // doesnt work
+    }
+
+    // Set special init functions
+    this.data.hoverandstop && this.hoverPlayFrom(this.data.hoverandstop);
+
     this.node.classList.remove('fallback');
     this.node.classList.add('loaded');
     this.limitFps && this.anim.setSubframe(false); // run in 30fps
