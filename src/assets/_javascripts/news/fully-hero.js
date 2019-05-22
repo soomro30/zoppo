@@ -65,9 +65,9 @@ export const defaultHero = () => {
         anims.push(scene2);
 
         // TODO: Make a button to hide navigation and show this scene
-        // const scene4 = new LottieScene(scenes[3], limitFps);
-        // scene4.init();
-        // anims.push(scene4);
+        const scene4 = new LottieScene(hero.querySelector('[data-scene="4"]'), limitFps);
+        scene4.init();
+        anims.push(scene4);
 
         const scene4_2 = new LottieScene(hero.querySelector('[data-scene="4_2"]'), limitFps);
         scene4_2.init();

@@ -35,6 +35,7 @@ export class LottieScene {
       path: dataset.path,
       preserveaspectratio: dataset.preserveaspectratio,
       hoverandstop: dataset.hoverandstop ? Number(dataset.hoverandstop) : false,
+      loopdelay: dataset.loopdelay ? Number(dataset.loopdelay) : false
     }
 
     this.dataMobile = {
@@ -43,6 +44,7 @@ export class LottieScene {
       path: dataset.pathmobile,
       preserveaspectratio: dataset.preserveaspectratiomobile,
       hoverandstop: dataset.hoverandstop ? Number(dataset.hoverandstop) : false,
+      loopdelay: dataset.loopdelay ? Number(dataset.loopdelay) : false
     }
 
     this.data = initMatchMedia ? this.dataMobile : this.dataDefault;
@@ -58,18 +60,19 @@ export class LottieScene {
   }
 
   createAnim(data) {
+    console.log('createAnim', data);
+    
     // Destroy old animation
     if (this.anim) {
       this.anim.destroy();
     }
-    console.log('data', data);
 
     // The lottie animation instance
     this.anim = lottie.loadAnimation(
       {
         container: this.node,
         renderer: this.canvas ? 'canvas' : 'svg', // canvas works better on firefox
-        loop: true,
+        loop: data.loopdelay ? false : true,
         autoplay: false,
         path: `../../assets/news/${data.path}`,
         rendererSettings: {
@@ -86,6 +89,13 @@ export class LottieScene {
       this.anim.goToAndPlay(frame, true);
     } else {
       this.anim.goToAndStop(frame, true); // doesnt work
+    }
+    if (this.data.loopdelay) {
+      this.anim.addEventListener('complete', () => {
+        this.anim.loopTimeout = setTimeout( () => {
+          this.anim.goToAndPlay(0);
+        }, this.data.loopdelay);
+      })
     }
 
     // Set special init functions
@@ -116,23 +126,38 @@ export class LottieScene {
   resize() {
     // If changeOnMedia option is set, check if we need to recreate the animation or not
     if (this.changeOnMedia) {
+
       if (window.matchMedia( this.changeOnMedia ).matches) {
         if (this.data.mode !== this.dataMobile.mode) {
+          console.log('RESIZE');
           this.data = this.dataMobile;
           this.createAnim(this.data);
           this.init();
         }
       } else {
         if (this.data.mode !== this.dataDefault.mode) {
+          console.log('RESIZE');
           this.data = this.dataDefault;
           this.createAnim(this.data);
           this.init();
         }
+        // else {
+        //   return false; // prevent resizing on mobile
+        // }
       }
     }
 
     // Resize the animation only if it's loaded
-    this.anim.isLoaded && this.anim.resize();
+    
+    if (this.anim.isLoaded) {
+      this.anim.resize()
+      this.init();
+
+      // if (this.data.loopdelay) { 
+      //   clearTimeout(this.anim.loopTimeout);
+      // }
+    }
+    
   }
 
   // Slow motion feature
