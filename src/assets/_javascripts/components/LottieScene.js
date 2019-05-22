@@ -79,6 +79,31 @@ export class LottieScene {
         }
       }
     );
+
+    // Pause anim when it's not vissible
+    var observerCallback = (entries, observer) => {      
+      
+      entries.forEach(entry => {
+        
+        // Check if the target is visible (more than 25%)
+        if (entry.isIntersecting && entry.intersectionRatio > 0.25) {
+          this.anim.play();
+        }
+        // Else pause
+        else {
+          this.pause();
+
+        }
+      });
+    };
+
+    var options = {
+      threshold: [0, 0.25, 0.75, 1]
+    }
+
+    var observer = new IntersectionObserver(observerCallback, options);
+
+    observer.observe(this.node);
   }
 
   init(frame = 0) {

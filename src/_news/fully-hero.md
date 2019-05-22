@@ -8,6 +8,7 @@ slug: fully-hero
 thumbnail: "thumbnail_720.jpg"
 
 hide-newsflash: true
+hide-menu: true
 
 # newsflash: |
 #    ### Headline
