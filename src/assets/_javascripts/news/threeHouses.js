@@ -7,7 +7,6 @@ export const threeHouses = () => {
 
   // Get both hero in firstpage / news and menu
   const sceneElements = document.querySelectorAll('[data-news="three-houses"]');
-  console.log('sceneElements', sceneElements);
 
   if (!sceneElements) return;
 
@@ -20,11 +19,13 @@ export const threeHouses = () => {
     fallbacks = [...sceneElements[0].querySelectorAll('[data-scene]')];
   }
 
+  // return if the only scene element is only used on the menu.
+  if (sceneElements.length <= 1 && sceneElements[0].dataset.ismenu) return false;
+
   fallbacks.map(fallback => {
-    fallback.classList.add('fallback');
+    fallback.classList.add('fallback'); // TODO: read a fallback image directly from the dataset instead
   });
 
-  // console.log('sceneElements.length <= 1', sceneElements.length <= 1)
   // if (sceneElements.length <= 1) return;
   let changeOnMedia = '(max-aspect-ratio: 8/9)'; // @media (min-aspect-ratio: 8/9) // 1514x1706
 

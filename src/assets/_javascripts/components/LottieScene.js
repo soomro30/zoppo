@@ -60,7 +60,6 @@ export class LottieScene {
   }
 
   createAnim(data) {
-    console.log('createAnim', data);
     
     // Destroy old animation
     if (this.anim) {
@@ -129,14 +128,12 @@ export class LottieScene {
 
       if (window.matchMedia( this.changeOnMedia ).matches) {
         if (this.data.mode !== this.dataMobile.mode) {
-          console.log('RESIZE');
           this.data = this.dataMobile;
           this.createAnim(this.data);
           this.init();
         }
       } else {
         if (this.data.mode !== this.dataDefault.mode) {
-          console.log('RESIZE');
           this.data = this.dataDefault;
           this.createAnim(this.data);
           this.init();

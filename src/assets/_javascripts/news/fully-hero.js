@@ -7,7 +7,10 @@ export const defaultHero = () => {
 
   // Get both hero in firstpage / news and menu
   const fullyheros = document.querySelectorAll('[data-news="fully-hero"]');
+  
   if (!fullyheros) return;
+
+  
 
   // only animate the one hero for performence reasons
   // and set fallback on the other on (if there is two)
@@ -35,7 +38,8 @@ export const defaultHero = () => {
     fallback.classList.add('fallback');
   });
 
-  if (fullyheros.length <= 1) return;
+  if (fullyheros[0].dataset.frontpage && fullyheros.length <= 1) return;
+
 
   // Use fallbacks images instead of animations
   // in case the user preferes a reduced motion experience
@@ -134,4 +138,9 @@ export const defaultHero = () => {
 
 
 }
+
+
+// Always, runs, but returns false when not needed to run
+defaultHero();
+
 export default defaultHero;

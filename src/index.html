@@ -12,7 +12,7 @@ cssfile: ""
   <nav class="navigation" id="startmenu">
     {% include menu.html %}
     {% unless site.herofile == nil %}
-        {% include news/{{ site.herofile }} newsflash="visible" %}
+        {% include news/{{ site.herofile }} newsflash="visible" menu="false" %}
     {% endunless %}
   </nav>
 </div>

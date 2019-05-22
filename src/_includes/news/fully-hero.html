@@ -1,4 +1,6 @@
-<div class="navigation__layerimage fully-hero" data-news="fully-hero">
+<p>{{site.herofile}}</p>
+<p>{{page.htmlfile}}</p>
+<div class="navigation__layerimage fully-hero" data-news="fully-hero" {% if site.herofile == page.htmlfile %}data-frontpage="true" {% endif %}>
   <div
     class="fully-hero__scene fully-hero__scene--1 fully-hero__floor"
     data-scene="1"
