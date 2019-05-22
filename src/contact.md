@@ -49,14 +49,14 @@ peoples:
     email_domain: fullystudios.se
     tel: +46 738 07 30 72
 
-  - name: Jonathan Asp
-    image: jonathan-davis-asp.jpg
-    title: Digital Producer & Production Manager
-    email: jonathan.asp@fullystudios.se
-    email_name_correct: jonathan.asp
-    email_name: jonathan.asp
+  - name: John Rejnäs
+    image: john-rejnas.jpg
+    title: Account Manager
+    email: john.rejnas@fullystudios.se
+    email_name_correct: john.rejnäs
+    email_name: john.rejnas
     email_domain: fullystudios.se
-    tel: +46 739 48 07 05
+    tel: +46 704 68 97 03
 
   - name: Frida Netzén
     image: frida-netzen.jpg
@@ -66,6 +66,15 @@ peoples:
     email_name: frida.netzen
     email_domain: fullystudios.se
     tel: +46 703 77 72 07
+
+  - name: Jonathan Asp
+    image: jonathan-davis-asp.jpg
+    title: Digital Producer & Production Manager
+    email: jonathan.asp@fullystudios.se
+    email_name_correct: jonathan.asp
+    email_name: jonathan.asp
+    email_domain: fullystudios.se
+    tel: +46 739 48 07 05
 
   - name: Jakob Åhl
     image: jakob-ahl.jpg
