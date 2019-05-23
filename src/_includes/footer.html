@@ -50,6 +50,7 @@
 <script src="{{ boundle_src | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
 
 {% unless page.jsfile == '' or page.jsfile == nil %}
+    <p>Ey jsfile included {{page.jsfile}}</p>
     <script src="{{ "/assets/bundles/" | relative_url }}{{page.jsfile}}?{{site.time | date: '%s%N'}}"></script>
 {% endunless %}
 

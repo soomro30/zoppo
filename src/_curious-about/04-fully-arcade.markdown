@@ -26,8 +26,6 @@ background: |
       var runAnim = 'false';
       function runStars(bool) {
         runAnim = bool;
-        console.log('runAnim', runAnim);
-        console.log('___', runAnim === 'true');
         if (runAnim === 'true') draw();
       }
 
@@ -68,10 +66,8 @@ background: |
         }
       }
       function draw() {
-        console.log('draw runAnim', runAnim);
         if (runAnim === 'false') {
           window.cancelAnimationFrame(draw);
-          console.log('draw cancel');
           return;
         }
 

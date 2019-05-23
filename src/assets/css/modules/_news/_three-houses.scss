@@ -1,0 +1,29 @@
+.three-houses {
+  // svg g:first-of-type:hover {
+  //   opacity: 0.5;
+  // }
+  .scene1 {
+    svg g:first-of-type {
+      @media (max-aspect-ratio: 1/1) {
+        transform-origin: center center;
+        transform: translate(0, 10%) scale(0.9);
+      }
+    }
+  }
+  .scene2 {
+    svg g:first-of-type {
+      @media (max-aspect-ratio: 1/1) {
+        transform-origin: center center;
+        transform: translate(-4%, 4%) scale(0.9);
+      }
+    }
+  }
+  .scene3 {
+    svg g:first-of-type {
+      @media (max-aspect-ratio: 1/1) {
+        transform-origin: center center;
+        transform: translate(-5%, -5%) scale(0.9);
+      }
+    }
+  }
+}

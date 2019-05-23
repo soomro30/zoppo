@@ -15,6 +15,6 @@
     <div class="navigation__bg"></div>
     {% include menu.html %}
     {% unless site.herofile == nil %}
-        {% include news/{{ site.herofile }} newsflash="hidden" %}
+        {% include news/{{ site.herofile }} newsflash="hidden" menu="true" %}
     {% endunless %}
 </nav>
