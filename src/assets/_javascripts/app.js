@@ -5,10 +5,13 @@ import SweetScroll from "sweet-scroll";
 import ScrollTrigger from 'scrolltrigger-classes';
 import enableInlineVideo from 'iphone-inline-video';
 
-import defaultHero from './news/fully-hero.js';
-defaultHero();
+// import defaultHero from './news/fully-hero.js';
+import threeHouses from './news/threeHouses.js';
 
 document.addEventListener("DOMContentLoaded", () => {
+    // defaultHero();
+    threeHouses();
+
     // Scroll reveal animations
     // Usage: add data-scroll on an html element to toggle the classes visible and invisible
     // If you wanna just use it once, add data-scroll="once". See more at https://github.com/terwanerik/ScrollTrigger/

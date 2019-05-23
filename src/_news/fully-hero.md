@@ -8,6 +8,7 @@ slug: fully-hero
 thumbnail: "thumbnail_720.jpg"
 
 hide-newsflash: true
+hide-menu: true
 
 # newsflash: |
 #    ### Headline
@@ -19,7 +20,7 @@ hide-newsflash: true
 
 htmlfile: "fully-hero.html"
 cssfile: ""
-# jsfile: "fully-hero.js"
+jsfile: "fully-hero.js"
 
 ---
 Fully Studios hero

@@ -1,22 +1,24 @@
-<div class="navigation__layerimage fully-hero" data-news="fully-hero">
+<p>{{site.herofile}}</p>
+<p>{{page.htmlfile}}</p>
+<div class="navigation__layerimage fully-hero" data-news="fully-hero" {% if site.herofile == page.htmlfile %}data-frontpage="true" {% endif %}>
   <div
     class="fully-hero__scene fully-hero__scene--1 fully-hero__floor"
     data-scene="1"
-    data-path="room_1_v010.json"
+    data-path="fully-hero/room_1_v010.json"
     data-preserveaspectratio="xMaxYMax slice"
   ></div>
 
   <div
     class="fully-hero__scene fully-hero__scene--2 fully-hero__floor"
     data-scene="2"
-    data-path="room_2_v012.json"
+    data-path="fully-hero/room_2_v012.json"
     data-preserveaspectratio="xMidYMax slice"
   ></div>
 
   <div
     class="fully-hero__scene fully-hero__scene--3 fully-hero__floor"
     data-scene="3"
-    data-path="room_3_v010.json"
+    data-path="fully-hero/room_3_v010.json"
     data-preserveaspectratio="xMinYMax slice"
   ></div>
 
@@ -25,28 +27,28 @@
   <div
     class="fully-hero__scene fully-hero__scene--4"
     data-scene="4"
-    data-path="room_4_v010.json"
+    data-path="fully-hero/room_4_v010.json"
     data-preserveaspectratio="xMaxYMax meet"
   ></div>
 
   <div
     class="fully-hero__scene fully-hero__scene--4_2"
     data-scene="4_2"
-    data-path="room_42_v010.json"
+    data-path="fully-hero/room_42_v010.json"
     data-preserveaspectratio="xMidYMax meet"
   ></div>
 
   <div
     class="fully-hero__scene fully-hero__scene--5"
     data-scene="5"
-    data-path="room_5_v013.json"
+    data-path="fully-hero/room_5_v013.json"
     data-preserveaspectratio="xMinYMid slice"
   ></div>
 
   <div
     class="fully-hero__scene fully-hero__scene--6"
     data-scene="6"
-    data-path="room_6_v010.json"
+    data-path="fully-hero/room_6_v010.json"
     data-preserveaspectratio="xMinYMax slice"
   ></div>
 
