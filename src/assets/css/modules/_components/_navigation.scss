@@ -91,7 +91,7 @@ $animTime: .3s;
         @media (min-width: $on-laptop) and (min-height: 445px) {
            // bottom: 0;
             ///top: auto;
-            margin: 0 0 $s-small*3;
+            margin: 0 0 $s-small*2;
         }
     }
     &__item {
@@ -102,7 +102,7 @@ $animTime: .3s;
         color: $c-white;
         padding: $s-small*0.25 $s-small;
         @include media-query($on-laptop) {
-            padding: $s-small*0.5 $s-small*2;
+            padding: $s-small*0.4 $s-small*2;
         }
         @media (max-height: 445px) {
             padding: 0.2em $s-small;
