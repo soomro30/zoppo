@@ -1,6 +1,7 @@
 // import "babel-polyfill";
 import lottie from 'lottie-web';
 import OptimizedResize from "./OptimizedResize";
+require('intersection-observer');
 /**
  * Create a Lottie scene from data-attributes: data-scene, data-path and data-preserveaspectratio
  *
@@ -60,7 +61,7 @@ export class LottieScene {
   }
 
   createAnim(data) {
-    
+
     // Destroy old animation
     if (this.anim) {
       this.anim.destroy();
@@ -81,10 +82,10 @@ export class LottieScene {
     );
 
     // Pause anim when it's not vissible
-    var observerCallback = (entries, observer) => {      
-      
+    var observerCallback = (entries, observer) => {
+
       entries.forEach(entry => {
-        
+
         // Check if the target is visible (more than 25%)
         if (entry.isIntersecting && entry.intersectionRatio > 0.25) {
           this.anim.play();
@@ -170,16 +171,16 @@ export class LottieScene {
     }
 
     // Resize the animation only if it's loaded
-    
+
     if (this.anim.isLoaded) {
       this.anim.resize()
       this.init();
 
-      // if (this.data.loopdelay) { 
+      // if (this.data.loopdelay) {
       //   clearTimeout(this.anim.loopTimeout);
       // }
     }
-    
+
   }
 
   // Slow motion feature

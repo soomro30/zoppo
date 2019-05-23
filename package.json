@@ -42,6 +42,7 @@
     "babel-polyfill": "^6.26.0",
     "gsap": "^2.0.2",
     "install": "^0.12.1",
+    "intersection-observer": "^0.7.0",
     "iphone-inline-video": "^2.2.2",
     "lottie-web": "^5.2.1",
     "npm": "^6.4.0",
