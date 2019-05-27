@@ -39,17 +39,20 @@ section5: |
 
 section5_image1: image3.jpg
 
-section5_image1_alt: |
+section5_image1_alt: | 
+  Amelia sitting in a comfortable chair outside in the sun, pouring herself some tea.
   
 
 section5_image2: image2.jpg
 
 section5_image2_alt: |
+  Close up of Amelia's hands as she plants potatoes in the soil. 
   
 
 section5_image3: image1.jpg
 
 section5_image3_alt: |
+  A small pile of potatoes, and three Weibulls gardening tools, placed on the floor of Amelia's wooden deck outside.  
   
 ---
 
