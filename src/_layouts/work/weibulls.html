@@ -1,0 +1,59 @@
+---
+layout: case
+---
+
+<!-- {% unless page.section1 == nil %}
+    <section class="sectionspacing box box--center">
+        {{ page.section1 | markdownify }}
+    </section>
+{% endunless %} -->
+
+
+{% unless page.video_IDs == nil %}
+    <section class="imagegrid imagegrid--firstlarge">
+        {% for video in page.video_IDs %}
+        <div class="imagegrid__image imagegrid__image--two">
+            <div class="video">
+                <iframe src="https://player.vimeo.com/video/{{video}}?color=5F11E8&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+{% endunless %}
+
+
+<section class="sectionspacing-small marginbottom-none">
+  <div class="video">
+      <iframe src="https://player.vimeo.com/video/{{page.video4}}?autoplay=1&loop=1&color=5F11E8&title=0&byline=0&portrait=0&autopause=0&muted=1" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+</section>
+
+
+<div class="grid grid--padding section sectionspacing-custom aligncenter">
+    <div class="grid__column1-2">
+        {{ page.section1_title | markdownify }}
+    </div>
+    <div class="grid__column2-2 box box--business">
+        {{ page.section1 | markdownify }}
+    </div>
+</div>
+
+
+<div class="sectionspacing-small grid--padding">
+    <div class="weibulls-image-grid">
+      <div class="weibulls-image-grid__left">
+        <div class="">
+          <img src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image3 }}" alt="{{ page.section5_image3_alt }}">
+        </div>
+        <div class="">
+          <img src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image2 }}" alt="{{ page.section5_image2_alt }}">
+        </div>
+      </div>
+      <div class="weibulls-image-grid__right">
+        <img src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image1 }}" alt="{{ page.section5_image1_alt }}">
+        <div class="">
+            {{ page.section5 | markdownify }}
+        </div>
+      </div>
+    </div>
+  </div>

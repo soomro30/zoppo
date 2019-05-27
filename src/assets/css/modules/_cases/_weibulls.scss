@@ -1,0 +1,40 @@
+.page-weibulls {
+    .weibulls-image-grid {
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      padding-right: 20px;
+      @media(max-width: 800px - 1){
+        flex-direction: column;
+        padding: 0;
+      }
+      img {
+        padding: 10px;
+        width: 100%;
+      }
+      &__right {
+        flex-basis: 60%;
+      }
+      &__left {
+        flex-basis: 40%;
+        @media(max-width: 800px - 1){
+          display: flex;
+        }
+      }
+      p {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .sectionspacing-custom {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.aligncenter {
+    align-items: center;
+    justify-content: center;
+}
