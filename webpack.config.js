@@ -17,7 +17,7 @@ module.exports = {
     news_svenskaskolan: './src/assets/_javascripts/news/svenskaskolan.js',
     'first-news-flash': './src/assets/_javascripts/news/first-news-flash.js',
     'summer-2018': './src/assets/_javascripts/news/summer-2018.js',
-    'fully-hero': './src/assets/_javascripts/news/fully-hero.js',
+    // 'fully-hero': './src/assets/_javascripts/news/fully-hero.js',
     'qgroup': './src/assets/_javascripts/cases/qgroup.js',
   },
   output: {

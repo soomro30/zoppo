@@ -7,10 +7,10 @@ export const defaultHero = () => {
 
   // Get both hero in firstpage / news and menu
   const fullyheros = document.querySelectorAll('[data-news="fully-hero"]');
-  
+
   if (!fullyheros) return;
 
-  
+
 
   // only animate the one hero for performence reasons
   // and set fallback on the other on (if there is two)
@@ -69,9 +69,9 @@ export const defaultHero = () => {
         anims.push(scene2);
 
         // TODO: Make a button to hide navigation and show this scene
-        const scene4 = new LottieScene(hero.querySelector('[data-scene="4"]'), limitFps);
-        scene4.init();
-        anims.push(scene4);
+        // const scene4 = new LottieScene(hero.querySelector('[data-scene="4"]'), limitFps);
+        // scene4.init();
+        // anims.push(scene4);
 
         const scene4_2 = new LottieScene(hero.querySelector('[data-scene="4_2"]'), limitFps);
         scene4_2.init();
@@ -141,6 +141,6 @@ export const defaultHero = () => {
 
 
 // Always, runs, but returns false when not needed to run
-defaultHero();
+// defaultHero();
 
 export default defaultHero;

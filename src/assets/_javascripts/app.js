@@ -5,11 +5,11 @@ import SweetScroll from "sweet-scroll";
 import ScrollTrigger from 'scrolltrigger-classes';
 import enableInlineVideo from 'iphone-inline-video';
 
-// import defaultHero from './news/fully-hero.js';
+import defaultHero from './news/fully-hero.js';
 import threeHouses from './news/threeHouses.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-    // defaultHero();
+    defaultHero();
     threeHouses();
 
     // Scroll reveal animations

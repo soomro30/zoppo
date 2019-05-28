@@ -8,7 +8,7 @@ export const threeHouses = () => {
   // Get both hero in firstpage / news and menu
   const sceneElements = document.querySelectorAll('[data-news="three-houses"]');
 
-  if (!sceneElements) return;
+  if (sceneElements.length === 0) return;
 
   // only animate the one hero for performence reasons
   // and set fallback on the other on (if there is two)

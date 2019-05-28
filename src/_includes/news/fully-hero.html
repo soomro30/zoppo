@@ -1,5 +1,3 @@
-<p>{{site.herofile}}</p>
-<p>{{page.htmlfile}}</p>
 <div class="navigation__layerimage fully-hero" data-news="fully-hero" {% if site.herofile == page.htmlfile %}data-frontpage="true" {% endif %}>
   <div
     class="fully-hero__scene fully-hero__scene--1 fully-hero__floor"
@@ -24,12 +22,14 @@
 
   <div class="fully-hero__scene fully-hero__scene--4_bg"></div>
 
+  {% comment %} TODO: Show this when clicking a button, or something :)
   <div
     class="fully-hero__scene fully-hero__scene--4"
     data-scene="4"
     data-path="fully-hero/room_4_v010.json"
     data-preserveaspectratio="xMaxYMax meet"
   ></div>
+  {% endcomment %}
 
   <div
     class="fully-hero__scene fully-hero__scene--4_2"

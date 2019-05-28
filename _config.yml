@@ -25,8 +25,8 @@ vimeo: "https://vimeo.com/fullystudios"
 instagram: "https://www.instagram.com/fullystudios/"
 
 # Current news
-herofile: three-houses.html
-# herofile: fully-hero.html
+# herofile: three-houses.html
+herofile: fully-hero.html
 
 # herojsfile: fully-hero.js
 
