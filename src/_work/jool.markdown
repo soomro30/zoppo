@@ -8,9 +8,9 @@ categories: film
 slug: jool
 client: JOOL Markets
 project: Digital Service
-background-image_2880: "hero3.png"
-background-image_1440: "hero2.png"
-background-image_720: "hero1.png"
+background-image_2880: "hero3.jpg"
+background-image_1440: "hero2.jpg"
+background-image_720: "hero1.jpg"
 background-image_color: "#f29200"
 author: Alexander Tengner
 author-email: joakim.hanner@fullystudios.se
@@ -29,8 +29,8 @@ section1: |
   ### The investment portal takes shape.
   Previously, JOOL’s bond investment process was intensely paper-based. Faxing forms, emailing specs, keeping investors updated, and ensuring compliance all conspired to overload inboxes and filing cabinets.
 
-image2: |
- images-group.jpg
+image2: images-group.jpg
+image2_1440: images-group_1440.jpg
 
 image2_alt: |
  Multiple screenshots from the jool webbsite.
@@ -78,14 +78,14 @@ image3_1_alt: |
   A investment card showing information about the investment
 
 image3_2: |
-  investment_card2.png
+  investment_card2.jpg
 
 image3_2_alt: |
   A investment card showing information about the investment
 
 
 image3_3: |
-  investment_card3.png
+  investment_card3.jpg
 
 image3_3_alt: |
   A investment card showing information about the investment

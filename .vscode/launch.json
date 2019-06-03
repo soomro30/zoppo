@@ -1,20 +1,31 @@
 {
   "version": "0.2.0",
   "configurations": [
-      {
-          "name": "Launch localhost:4000",
-          "type": "chrome",
-          "request": "launch",
-          "url": "http://localhost:4000",
-          "webRoot": "${workspaceFolder}",
-          "userDataDir": false,
-          "runtimeExecutable": "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary",
-          "skipFiles": [
-            "node_modules/**/*.js",
-            "react-hot-loader.development.js",
-            "react.development.js",
-            "boundle.js"
-          ]
-      }
+    {
+      "name": "Launch localhost:4000",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:4000",
+      "webRoot": "${workspaceFolder}",
+      "userDataDir": false,
+      "runtimeExecutable": "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary",
+      "skipFiles": [
+        "node_modules/**/*.js",
+        "react-hot-loader.development.js",
+        "react.development.js",
+        "boundle.js"
+      ]
+    },
+    {
+      "type": "browser-preview",
+      "request": "attach",
+      "name": "Browser Preview: Attach"
+    },
+    {
+      "type": "browser-preview",
+      "request": "launch",
+      "name": "Browser Preview: Launch",
+      "url": "http://localhost:4000"
+    }
   ]
 }

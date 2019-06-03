@@ -43,14 +43,35 @@ layout: case
     <div class="weibulls-image-grid">
       <div class="weibulls-image-grid__left">
         <div class="">
-          <img src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image3 }}" alt="{{ page.section5_image3_alt }}">
+            <img
+              alt="{{page.section5_image1_alt}}"
+              width="1440" height="643"
+              src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image1_1440 }}"
+              srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image1 }} 2274w,
+                      {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image1_1440 }} 1440w,
+                      {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image1_640 }} 640w"
+              sizes="(max-width: 800px) 50vw, 33vw">
         </div>
         <div class="">
-          <img src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image2 }}" alt="{{ page.section5_image2_alt }}">
+            <img
+              alt="{{page.section5_image2_alt}}"
+              width="1440" height="643"
+              src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image2_1440 }}"
+              srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image2 }} 2274w,
+                      {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image2_1440 }} 1440w,
+                      {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image2_640 }} 640w"
+              sizes="(max-width: 800px) 50vw, 33vw">
         </div>
       </div>
       <div class="weibulls-image-grid__right">
-        <img src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image1 }}" alt="{{ page.section5_image1_alt }}">
+        <img
+          alt="{{page.section5_image3_alt}}"
+          width="1440" height="643"
+          src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image3_1440 }}"
+          srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image3 }} 2274w,
+                  {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image3_1440 }} 1440w,
+                  {{site.baseurl}}/assets/work/{{page.slug}}/{{ page.section5_image3_640 }} 640w"
+          sizes="(max-width: 800px) 100vw, 50vw">
         <div class="">
             {{ page.section5 | markdownify }}
         </div>

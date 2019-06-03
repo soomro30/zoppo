@@ -173,35 +173,19 @@ peoples:
 
   - name: Emil Gradén
     image: emil-graden.jpg
-    title: Motion Intern
+    title: Motion Designer
     email: emil.graden@fullystudios.se
     email_name_correct: emil.gradén
     email_name: emil.graden
     email_domain: fullystudios.se
 
-  - name: Amanda Fässberg
-    image: amanda-fassberg.jpg
-    title: Design Intern
-    email: amanda.fassberg@fullystudios.se
-    email_name_correct: amanda.fässberg
-    email_name: amanda.fassberg
-    email_domain: fullystudios.se
-
-  - name: Linn Tunberg
-    image: linn-tunberg.jpg
-    title: Developer Intern
-    email: linn.tunberg@fullystudios.se
-    email_name_correct: linn.tunberg
-    email_name: linn.tunberg
-    email_domain: fullystudios.se
-
-  - name: Sebastian Palm
-    image: sebastian-palm.jpg
-    title: Developer Intern
-    email: sebastian.palm@fullystudios.se
-    email_name_correct: sebastian.palm
-    email_name: sebastian.palm
-    email_domain: fullystudios.se
+  # - name: Amanda Fässberg
+  #   image: amanda-fassberg.jpg
+  #   title: Design Intern
+  #   email: amanda.fassberg@fullystudios.se
+  #   email_name_correct: amanda.fässberg
+  #   email_name: amanda.fassberg
+  #   email_domain: fullystudios.se
 
   #- name: Mattias Larson
   #  image: mattias-larson.jpg
