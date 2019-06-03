@@ -15,7 +15,10 @@ $bgMqLarge: 1100px;
     max-width: 68.7em; //magic number to align the border to the content on large displays
     margin-left: auto;
     margin-right: auto;
-    @include media-query($on-laptop) {
+    @media (min-width: $bgMqSmall) {
+        padding: 0 $s-small*0.25 $s-small*0.25;
+    }
+    @media (min-width: $bgMqLarge) {
         padding: 0 $s-small $s-small*0.5;
         margin-top: $s-small*3;
         margin-bottom: $s-small*3;
@@ -50,9 +53,15 @@ $bgMqLarge: 1100px;
         flex-direction: column;
         align-items: flex-start;
         background-color: $c-white;
-        @media (min-width: $bgMqMedium) {
+        @media (min-width: $bgMqSmall) {
             margin-top: $s-small*3;
             width: auto;
+            flex: 1 0 calc(50% - #{$s-small*0.5});
+            max-width: calc(50% - #{$s-small*0.5});
+            margin-right: $s-small*0.25;
+            margin-left: $s-small*0.25;
+        }
+        @media (min-width: $bgMqMedium) {
             flex: 1 0 calc(50% - #{$s-small*3});
             max-width: calc(50% - #{$s-small*3});
             margin-right: $s-small*1.5;
@@ -201,8 +210,8 @@ $bgMqLarge: 1100px;
         .boxgrid__box {
             margin-top: $s-small*2;
             @media (min-width: $bgMqSmall) {
-                flex: 1 0 calc(50% - #{$s-small});
-                max-width: calc(50% - #{$s-small});
+                flex: 1 0 calc(50% - #{$s-small*0.5});
+                max-width: calc(50% - #{$s-small*0.5});
                 display: flex;
                 flex-direction: column;
             }
