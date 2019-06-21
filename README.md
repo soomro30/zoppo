@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [fullystudios.se](https://fullystudios.se)
 =============================
 Website for the Swedish agency Fully Studios
@@ -102,3 +103,7 @@ Get highlighting in markdown files in Sublime:
 ## CREDITS:
 
 based on [jekyll-webpack-react-starter](https://github.com/mdxprograms/jekyll-webpack-react) by mdxprograms
+=======
+# zoppo
+Zoppo website
+>>>>>>> d70b9606e65c372156868d317d4648be81997281
